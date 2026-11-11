@@ -1,5 +1,9 @@
 # So sánh OpenCode, Pi và Codex CLI; OpenCode v1 và v2
 
+**Người thực hiện:** Đinh Văn Bình  
+**Đơn vị:** VSF – Data & AI  
+**Thời gian nghiên cứu:** 06/11/2026 – 11/11/2026
+
 **Bản tổng hợp hoàn tất ngày 2026-11-11.** Benchmark OpenAI trực tiếp đã chạy **48/48 lượt hợp lệ**, đạt **46 success, 2 failure, không timeout/infra error**. Cả bốn CLI qua native smoke thật; snapshot của cả 48 lượt qua scope/public/hidden tests. Hai failure vẫn được giữ vì native error, không bị nâng thành success chỉ do snapshot đúng.
 
 Đọc nhanh: [phương pháp](#2-phạm-vi-và-phương-pháp), [so sánh ba tool](#3-so-sánh-ba-tool), [v1/v2](#4-opencode-v1-so-với-v2), [kết quả benchmark](#6-kết-quả-benchmark), [hạn chế](#7-hạn-chế), [khuyến nghị](#8-kết-luận-và-khuyến-nghị), [bằng chứng đi kèm](#9-phụ-lục-và-bằng-chứng). Đã có đầu ra cho 8/8 hạng mục trong [phạm vi nghiệm thu](research/REQUIREMENTS_ACCEPTANCE.md); không có nghĩa mọi tính năng đều pass hoặc không còn giới hạn nghiên cứu.
@@ -341,6 +345,8 @@ Caller bổ sung: embedded SDK `host.ts` fork sweep trong managed runtime trư�
 | Schema/output mẫu | `args: {}` / string | JSON Schema input / `{ content }` |
 | Lifecycle đã quan sát | Log load | Log load và cleanup |
 | Native test | Load/call trên v1 đạt; nguyên bytes trên v2 bị loader reject | Active và marker call trên v2 đạt |
+
+*Lưu ý bản PDF: các dòng dài trong hai block dưới có thể tự ngắt để vừa khổ giấy; hãy mở source GitHub được liên kết để copy code đầy đủ, không coi ngắt dòng hiển thị là thay đổi mã nguồn.*
 
 **Before**, nguyên fixture [plugin_v1.js](demos/fixtures/plugin_v1.js):
 

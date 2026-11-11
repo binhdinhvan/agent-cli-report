@@ -22,7 +22,9 @@ Repository public: [binhdinhvan/agent-cli-report](https://github.com/binhdinhvan
 
 ## Xuất lại bản tổng hợp
 
-Chạy `python3 -B research/build_appendix.py`, sau đó `python3 -B research/export_final_report.py`. Script xuất `REPORT.md` qua markdown-it-py, in hai phần bằng Chrome headless trong namespace riêng rồi ghép bằng Poppler `pdfunite`. Dùng dependencies đã có trên máy, không install thêm. Receipt của bản tổng hợp ở `research/artifacts/FINAL-SUBMISSION-20261111-01/`; không chạy lại native demo/model/benchmark. Số trang được kiểm sau export, không ép layout bằng cách cắt bỏ nội dung.
+Chạy `python3 -B research/build_appendix.py`, sau đó `python3 -B research/export_final_report.py`. Script xuất `REPORT.md` qua markdown-it-py, in hai phần bằng Chrome headless trong namespace riêng, ghép bằng Poppler `pdfunite` và thêm bookmarks/metadata bằng pypdf. Bản hiện tại có tên/đơn vị/thời gian dưới tiêu đề, không thêm bìa, vẫn 19 trang; code PDF có chú thích tự ngắt dòng và link copy source đầy đủ.
+
+markdown-it-py/Chrome/bwrap/Poppler dùng bản sẵn có. Riêng pypdf 4.0.2 được tải package Ubuntu, kiểm SHA-256 và extract dưới `.local/pdf-export-deps`, không install hệ thống; cần chuẩn bị pypdf tương ứng khi tái tạo trên máy khác. Script export tự nó không tải/cài dependency. Nếu HTML/PDF phụ lục không đổi so với Git HEAD, exporter giữ nguyên PDF phụ lục thay vì in lại timestamp không cần thiết. Receipt revision hiện tại ở `research/artifacts/FINAL-SUBMISSION-20261111-02/`; receipt revision 01 vẫn giữ lịch sử. Không chạy lại native demo/model/benchmark. Số trang và tọa độ bookmarks được lấy từ PDF thực sau layout, không hard-code hoặc cắt nội dung để ép số trang.
 
 PDF được in từ HTML bằng Chrome headless trong bwrap network/PID namespace riêng; HOME/profile/tmp mới, root filesystem read-only, không dùng profile Chrome hoặc service/session thật. Chrome dùng `--no-sandbox` **bên trong namespace cách ly**, không phải phép nghiệm thu security của browser. Lượt in đầu không tạo được socket do `/tmp` read-only; lượt sau bind private tmp và thành công, không đổi dữ liệu để sửa kết quả.
 

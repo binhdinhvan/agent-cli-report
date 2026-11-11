@@ -1,7 +1,7 @@
 """Export REPORT.md plus linked APPENDIX.html into one portable, public-evidence PDF.
 
 Only document rendering: no native agent, model request, key read or benchmark rerun.
-Uses installed markdown-it-py, Chrome, bwrap and Poppler; installs nothing.
+Uses markdown-it-py, Chrome, bwrap, Poppler and pypdf; installs nothing itself.
 """
 import base64
 import hashlib
@@ -10,7 +10,10 @@ import json
 import mimetypes
 import re
 import subprocess
+import sys
 import tempfile
+import unicodedata
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import quote, unquote, urlsplit
 
@@ -18,7 +21,15 @@ from markdown_it import MarkdownIt
 
 from build_appendix import EVIDENCE_COMMIT, REPOSITORY, ROOT
 
-ARTIFACT = ROOT / "research/artifacts/FINAL-SUBMISSION-20261111-01"
+try:
+    from pypdf import PdfReader, PdfWriter
+    from pypdf.generic import Fit
+except ModuleNotFoundError:
+    sys.path.insert(0, str(ROOT / ".local/pdf-export-deps/payload/usr/lib/python3/dist-packages"))
+    from pypdf import PdfReader, PdfWriter
+    from pypdf.generic import Fit
+
+ARTIFACT = ROOT / "research/artifacts/FINAL-SUBMISSION-20261111-02"
 PUBLIC_LINKS = set()
 
 
@@ -117,6 +128,48 @@ def pages(path):
     return int(re.search(r"^Pages:\s+(\d+)$", run(["pdfinfo", str(path)]).stdout, re.M)[1])
 
 
+def add_bookmarks(source, output, report_pages):
+    """Use actual heading coordinates, never hard-code page positions after reflow."""
+    xml = ET.fromstring(run(["pdftotext", "-bbox-layout", str(source), "-"]).stdout)
+    ns = {"x": "http://www.w3.org/1999/xhtml"}
+
+    def normalize(text):
+        return " ".join(unicodedata.normalize("NFC", text).split())
+
+    lines = []
+    for index, page in enumerate(xml.findall(".//x:page", ns)):
+        for line in page.findall(".//x:line", ns):
+            text = normalize(" ".join(w.text or "" for w in line.findall("x:word", ns)))
+            lines.append((text, index, float(page.attrib["height"]) - float(line.attrib["yMin"])))
+    tokens = MarkdownIt("commonmark").parse((ROOT / "REPORT.md").read_text())
+    headings = [tokens[i + 1].content for i, token in enumerate(tokens)
+                if token.type == "heading_open" and token.tag == "h2"]
+    assert len(headings) == 9
+    reader, writer = PdfReader(source), PdfWriter()
+    writer.clone_document_from_reader(reader)
+    bookmarks = []
+    for title in headings:
+        match = next((entry for entry in lines if entry[0] == normalize(title) and entry[1] < report_pages), None)
+        assert match, ("PDF chapter heading not found", title)
+        _, page, top = match
+        writer.add_outline_item(title, page, fit=Fit.xyz(top=top + 8))
+        bookmarks.append({"title": title, "page": page + 1})
+    parent = writer.add_outline_item("Phụ lục minh chứng", report_pages, bold=True)
+    bookmarks.append({"title": "Phụ lục minh chứng", "page": report_pages + 1})
+    for index, title in enumerate(["A. Kiến trúc và shared service", "B. API/SDK, permission và plugin", "C. Benchmark OpenAI48"]):
+        writer.add_outline_item(title, report_pages + index, parent=parent)
+        bookmarks.append({"title": title, "page": report_pages + index + 1})
+    writer.page_mode = "/UseOutlines"
+    writer.add_metadata({
+        "/Title": "So sánh OpenCode, Pi và Codex CLI; OpenCode v1 và v2",
+        "/Author": "Đinh Văn Bình",
+        "/Subject": "VSF – Data & AI | Thời gian nghiên cứu: 06/11/2026 – 11/11/2026",
+    })
+    with output.open("wb") as target:
+        writer.write(target)
+    return bookmarks
+
+
 def main():
     temp = Path(tempfile.mkdtemp(prefix="final-report-", dir="/tmp/opencode"))
     (temp / "home").mkdir()
@@ -124,17 +177,27 @@ def main():
     work.mkdir(parents=True, exist_ok=True)
     source = work / "REPORT_PRINT.html"
     source.write_text(report_html())
-    report, appendix, combined = [temp / name for name in ("REPORT.pdf", "APPENDIX.pdf", "OpenCode_Comparison_Report.pdf")]
+    report, appendix, merged, combined = [temp / name for name in ("REPORT.pdf", "APPENDIX.pdf", "MERGED.pdf", "OpenCode_Comparison_Report.pdf")]
     render(source, report, temp)
-    render(ROOT / "APPENDIX.html", appendix, temp)
+    # Reuse the published appendix when both its HTML and PDF are byte-unchanged.
+    # This avoids changing an unrelated artifact's PDF timestamp/hash on every export.
+    unchanged = all(subprocess.run(["git", "diff", "--quiet", "HEAD", "--", name]).returncode == 0
+                    for name in ("APPENDIX.html", "APPENDIX.pdf"))
+    if unchanged and (ROOT / "APPENDIX.pdf").exists():
+        appendix.write_bytes((ROOT / "APPENDIX.pdf").read_bytes())
+    else:
+        render(ROOT / "APPENDIX.html", appendix, temp)
     assert pages(appendix) == 3
-    run(["pdfunite", str(report), str(appendix), str(combined)])
+    run(["pdfunite", str(report), str(appendix), str(merged)])
+    bookmarks = add_bookmarks(merged, combined, pages(report))
     assert pages(combined) == pages(report) + 3
+    assert run(["pdfinfo", "-url", str(merged)]).stdout == run(["pdfinfo", "-url", str(combined)]).stdout
     uris = run(["pdfinfo", "-url", str(combined)]).stdout
     assert "file:" not in uris and "/mnt/data/" not in uris, "Nonportable PDF hyperlink"
     assert EVIDENCE_COMMIT in uris and UI_REVIEW_SUFFIX in uris
     pdf_text = run(["pdftotext", "-layout", str(combined), "-"]).stdout
-    for text in ["1. Tóm tắt kết quả", "8. Kết luận và khuyến nghị", "9. Phụ lục và bằng chứng",
+    for text in ["Người thực hiện: Đinh Văn Bình", "Đơn vị: VSF", "06/11/2026", "11/11/2026",
+                 "1. Tóm tắt kết quả", "8. Kết luận và khuyến nghị", "9. Phụ lục và bằng chứng",
                  "Một session, nhiều giao diện", "Ba góc nhìn, cùng một cohort", "638.403"]:
         assert text in pdf_text, text
     (ROOT / "APPENDIX.pdf").write_bytes(appendix.read_bytes())
@@ -145,6 +208,10 @@ def main():
         "status": "pass_pending_visual_review", "scope": "document rendering and merge, no new experiments",
         "repository": REPOSITORY, "evidence_commit": EVIDENCE_COMMIT,
         "report_pages": pages(report), "appendix_pages": 3, "total_pages": pages(combined),
+        "bookmarks": bookmarks,
+        "author": "Đinh Văn Bình", "organization": "VSF – Data & AI",
+        "study_period": "06/11/2026 – 11/11/2026",
+        "appendix_reused_unchanged": unchanged,
         "report_markdown_sha256": hashlib.sha256((ROOT / "REPORT.md").read_bytes()).hexdigest(),
         "appendix_html_sha256": hashlib.sha256((ROOT / "APPENDIX.html").read_bytes()).hexdigest(),
         "combined_pdf_sha256": hashlib.sha256(final.read_bytes()).hexdigest(),

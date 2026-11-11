@@ -1,0 +1,77 @@
+{
+  "status": "pass",
+  "scope": "author identification, code-copy note, PDF metadata/bookmark and retained-evidence review; no new experiments",
+  "pages": 19,
+  "identity": {
+    "author": "Đinh Văn Bình",
+    "organization": "VSF – Data & AI",
+    "study_period": "06/11/2026 – 11/11/2026",
+    "position": "under title on first page; no separate cover"
+  },
+  "outline_count": 13,
+  "bookmarks": [
+    {
+      "title": "1. Tóm tắt kết quả",
+      "page": 1
+    },
+    {
+      "title": "2. Phạm vi và phương pháp",
+      "page": 2
+    },
+    {
+      "title": "3. So sánh ba tool",
+      "page": 2
+    },
+    {
+      "title": "4. OpenCode v1 so với v2",
+      "page": 6
+    },
+    {
+      "title": "5. Thiết kế thực nghiệm",
+      "page": 13
+    },
+    {
+      "title": "6. Kết quả benchmark",
+      "page": 13
+    },
+    {
+      "title": "7. Hạn chế",
+      "page": 14
+    },
+    {
+      "title": "8. Kết luận và khuyến nghị",
+      "page": 15
+    },
+    {
+      "title": "9. Phụ lục và bằng chứng",
+      "page": 15
+    },
+    {
+      "title": "Phụ lục minh chứng",
+      "page": 17
+    },
+    {
+      "title": "A. Kiến trúc và shared service",
+      "page": 17
+    },
+    {
+      "title": "B. API/SDK, permission và plugin",
+      "page": 18
+    },
+    {
+      "title": "C. Benchmark OpenAI48",
+      "page": 19
+    }
+  ],
+  "outline_destination_verification": "all destinations resolve to expected chapter/appendix pages; chapter XYZ coordinates measured from actual rendered headings",
+  "pdf_metadata_author_verified": true,
+  "page_mode": "UseOutlines",
+  "code_copy_note": "visible before plugin blocks on page 12; linked source remains exact fixture text",
+  "hyperlinks": "URI annotation listing identical before and after adding outlines; no file:// links",
+  "appendix_pdf_hash_unchanged": true,
+  "original_raw_input_hashes_verified": 60,
+  "visual_review": "first page and plugin page 12 checked at rendered size; automated bounding-box check found zero words outside page on all 19 pages",
+  "pdf_sha256": "14fd14c496bd81966c70dd1becaca7a874a159c190c7671ce983be3662f243dd",
+  "evidence_commit": "f2becc501cfc1b980b888402458bac81b8193370",
+  "limitations": "bookmarks improve PDF navigation, not independent audit of runtime; no API/provider calls or benchmark reruns"
+}

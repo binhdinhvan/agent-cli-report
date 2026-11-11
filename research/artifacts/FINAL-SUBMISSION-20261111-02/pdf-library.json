@@ -1,0 +1,7 @@
+{
+  "package": "python3-pypdf",
+  "version": "4.0.2-1",
+  "url": "https://archive.ubuntu.com/ubuntu/pool/universe/p/pypdf/python3-pypdf_4.0.2-1_all.deb",
+  "sha256": "6dc2c1efe774882527fff7ed60a34172021b51a9e2ef0c17719a2b5127a5e3b3",
+  "operation": "download, hash verify and extract only; no global installation"
+}
