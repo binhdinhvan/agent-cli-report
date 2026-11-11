@@ -2,6 +2,10 @@
 
 Workspace để nghiên cứu source, chạy demo và benchmark, sau đó viết báo cáo.
 
+## Bản nộp hoàn chỉnh
+
+**[OpenCode_Comparison_Report.pdf](OpenCode_Comparison_Report.pdf)** — **19 trang**, gồm 16 trang báo cáo chính và 3 trang phụ lục. Các link source/bằng chứng có thể nhấp; artifact nghiên cứu được pin tại commit `f2becc501cfc1b980b888402458bac81b8193370`, không trỏ về filesystem của máy xuất PDF. Đây là file duy nhất cần gửi mentor để đọc báo cáo; repository vẫn đi kèm để kiểm chứng raw/code.
+
 **Repository public:** [binhdinhvan/agent-cli-report](https://github.com/binhdinhvan/agent-cli-report). Đọc [REPORT.md](REPORT.md), tải [APPENDIX.pdf](APPENDIX.pdf) và xem [hướng dẫn kiểm chứng](SUBMISSION.md). Credentials/binary/dependencies cục bộ không nằm trong Git; một raw lịch sử >100 MiB được lưu gzip lossless, xem [PUBLISHING.md](PUBLISHING.md).
 
 **Phụ lục để nộp mentor:** [APPENDIX.pdf](APPENDIX.pdf) — 3 trang A4 với [ảnh mới Desktop/Chrome/TUI](demos/UI_RECAPTURE_RESULTS.md), log chức năng và biểu đồ benchmark. [HTML tự chứa](APPENDIX.html), [nguồn/cách tái tạo](research/APPENDIX_GUIDE.md). Chỉ chạy thêm lượt UI cách ly đã duyệt; không gọi model hoặc chạy lại benchmark, chưa ghép vào PDF chính.

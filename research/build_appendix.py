@@ -13,9 +13,12 @@ import json
 import statistics
 from collections import defaultdict
 from pathlib import Path
+from urllib.parse import quote
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
+REPOSITORY = "https://github.com/binhdinhvan/agent-cli-report"
+EVIDENCE_COMMIT = "f2becc501cfc1b980b888402458bac81b8193370"
 UI = "demos/artifacts/NATIVE-VISIBLE-UI-20261111-07/"
 UI_REVIEW = "research/artifacts/NATIVE-VISIBLE-UI-REVIEW-20261111-01/validation.json"
 CLIENT = "demos/artifacts/NATIVE-CLIENT-20261111-01/client-result.json"
@@ -59,8 +62,15 @@ def image(name, box=None):
 
 
 def source(name):
-    # Paths are visible text, not file:// links that break on another machine.
-    return '<p class="source">Nguồn: <code>' + esc(name) + "</code></p>"
+    return '<p class="source">Nguồn: ' + public_link(name) + "</p>"
+
+
+def public_link(name, label=None):
+    path = ROOT / name
+    assert path.exists() and path.resolve().is_relative_to(ROOT), name
+    kind = "tree" if path.is_dir() else "blob"
+    url = f"{REPOSITORY}/{kind}/{EVIDENCE_COMMIT}/{quote(name, safe='/')}"
+    return f'<a href="{esc(url)}"><code>{esc(label or name)}</code></a>'
 
 
 def chart(title, values, maximum, ticks, labels, unit):
@@ -157,6 +167,7 @@ p {{ line-height: 1.35; margin: 2mm 0; }}
 .lead {{ color: #526676; font-size: 9pt; }}
 .note {{ background: #eef6f8; border-left: 3px solid #147d92; padding: 2.5mm 3mm; font-size: 8.5pt; line-height: 1.35; }}
 .source {{ font-size: 7pt; color: #586b78; line-height: 1.3; overflow-wrap: anywhere; margin: 1mm 0 2mm; }}
+a {{ color: #14627d; text-decoration: underline; text-underline-offset: 1px; }}
 code, pre {{ font-family: "DejaVu Sans Mono", monospace; }}
 pre {{ font-size: 8pt; background: #f3f5f7; padding: 2.5mm; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.4; margin: 2mm 0; }}
 figure {{ margin: 2mm 0; text-align: center; }}
@@ -195,9 +206,9 @@ svg text {{ font-family: Arial, sans-serif; fill: #263f51; }}
 <p>Service PID trước: <b>{pid}</b> &nbsp; | &nbsp; sau cả ba client: <b>{ui['service_after_all']['pid']}</b> &nbsp; | &nbsp; <b>Shared-service checks: PASS</b></p>
 <p>Endpoint: <code>{esc(ui['service_before']['urls'][0])}</code>. Raw controller: <code>checks_passed_pending_review</code>; review ảnh/raw riêng xác nhận PASS.</p>
 </div>
-<p class="source"><b>Review ảnh/raw riêng — <code>status=pass</code>:</b><br><code>{esc(UI_REVIEW)}</code><br>Receipt đối chiếu ảnh, session/PID, hashes và cleanup; raw controller giữ nguyên trạng thái pending review.</p>
+<p class="source"><b>Review ảnh/raw riêng — <code>status=pass</code>:</b><br>{public_link(UI_REVIEW)}<br>Receipt đối chiếu ảnh, session/PID, hashes và cleanup; raw controller giữ nguyên trạng thái pending review.</p>
 <p class="source">Ảnh gốc 1600 × 1050 giữ riêng; A1/A2 chỉ cắt pixel để phóng chi tiết, không sửa nội dung. Cảnh báo Chrome <code>--no-sandbox</code> giữ nguyên; có bwrap bên ngoài, không phải security verdict. PID chỉ có ý nghĩa trong namespace này.</p>
-{source(UI + 'ui-visible-result.json / desktop-window.png / web-browser.png / tui-terminal.png / tui-pty.ansi')}
+<p class="source">Nguồn cùng lượt: {public_link(UI + 'ui-visible-result.json', 'raw ID/PID/checks')} · {public_link(UI + 'desktop-window.png', 'ảnh Desktop gốc')} · {public_link(UI + 'web-browser.png', 'ảnh Chrome gốc')} · {public_link(UI + 'tui-terminal.png', 'ảnh TUI gốc')} · {public_link(UI + 'tui-pty.ansi', 'raw PTY')}.<br>Permalink bằng chứng cố định theo commit <code>{EVIDENCE_COMMIT[:12]}</code>.</p>
 <div class="footer"><span>Phạm vi: Linux headless, không service/session người dùng</span><span>A · 1/3</span></div>
 </section>
 <section class="page">
@@ -221,7 +232,7 @@ svg text {{ font-family: Arial, sans-serif; fill: #263f51; }}
 <pre>ported_plugin_active: true
 ported_plugin_tool_invoked: true
 {esc(cleanup)}</pre>
-<p class="source">Nguồn: <code>{esc(NEGATIVE)}</code><br><code>{esc(PORTED)}</code><br><code>{esc(CLEANUP)}</code></p>
+<p class="source">Nguồn: {public_link(NEGATIVE)}<br>{public_link(PORTED)}<br>{public_link(CLEANUP)}</p>
 <div class="footer"><span>Trích log có chọn lọc; đầy đủ failure/retry ở bộ artifact đi kèm</span><span>B · 2/3</span></div>
 </section>
 <section class="page">
@@ -231,7 +242,7 @@ ported_plugin_tool_invoked: true
 {charts}
 <div class="note"><b>Cách đọc:</b> completion là agent hoàn tất theo protocol, không chỉ snapshot đúng (48/48 snapshot pass). Median dùng cả 12 lượt/CLI, gồm failure, startup/teardown và <b>pacing ≥ 30 giây</b>. Token là usage input tích lũy, có cache; không phải context duy nhất hoặc hóa đơn. Không suy winner tổng quát từ bốn fixture Python nhỏ.</div>
 {source(CSV)}
-<p class="source">Input token được cộng từ <code>{esc(RAW)}D48-*/result.json → requests[].cost.usage.input_tokens</code>. Vẽ biểu đồ từ dữ liệu gốc, không dùng số đã làm tròn để tính median.</p>
+<p class="source">Input token được cộng từ {public_link(RAW.rstrip('/'), '48 raw result.json')} → <code>requests[].cost.usage.input_tokens</code>. Vẽ biểu đồ từ dữ liệu gốc, không dùng số đã làm tròn để tính median.</p>
 <div class="footer"><span>46/48 end-to-end success · 278 upstream · không benchmark mới</span><span>C · 3/3</span></div>
 </section></html>"""
     out = ROOT / "APPENDIX.html"
@@ -239,12 +250,14 @@ ported_plugin_tool_invoked: true
     manifest = {
         "scope": "appendix uses new authorized VISIBLE-UI07 screenshots, selected earlier feature logs and unchanged benchmark charts; generator runs no experiments",
         "input_sha256": HASHES,
+        "repository": REPOSITORY,
+        "evidence_commit": EVIDENCE_COMMIT,
         "derived_image_crops": DERIVED_IMAGES,
         "html_sha256": hashlib.sha256(out.read_bytes()).hexdigest(),
         "success": counts, "median_seconds": medians, "total_input_tokens": tokens,
         "limitations": "not a new capture, full raw audit, model-quality test, or published evidence bundle",
     }
-    target = ROOT / "research/artifacts/APPENDIX-20261111-04"
+    target = ROOT / "research/artifacts/APPENDIX-20261111-05"
     target.mkdir(parents=True, exist_ok=True)
     (target / "manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n")
     print(json.dumps({"html": str(out.relative_to(ROOT)), "input_files": len(HASHES), "metrics": {k: manifest[k] for k in ("success", "median_seconds", "total_input_tokens")}},ensure_ascii=False))

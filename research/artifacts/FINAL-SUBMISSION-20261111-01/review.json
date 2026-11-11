@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "scope": "final PDF hyperlink/layout/unchanged-evidence review; no new experiments",
+  "report_pages": 16,
+  "appendix_pages": 3,
+  "total_pages": 19,
+  "url_annotations": 202,
+  "unique_urls": 132,
+  "unique_pinned_repository_targets_verified_in_git": 51,
+  "anonymous_http200_sample_targets": [
+    "research/versions.md",
+    "research/evidence.csv",
+    "research/artifacts/NATIVE-VISIBLE-UI-REVIEW-20261111-01/validation.json",
+    "demos/artifacts/NATIVE-CLIENT-20261111-01/client-result.json",
+    "demos/artifacts/NATIVE-VISIBLE-UI-20261111-07/web-browser.png",
+    "benchmark/suite48/artifacts/OPENAI48-R3-SUMMARY-20261111-01/runs48.csv"
+  ],
+  "file_url_links": 0,
+  "text_outside_page": 0,
+  "all_19_pages_visual_review": "contact sheets reviewed; final render pixels match reviewed layout",
+  "raw_input_hashes_unchanged": 60,
+  "screenshots_and_crops_unchanged": true,
+  "benchmark_metrics_unchanged": true,
+  "evidence_commit": "f2becc501cfc1b980b888402458bac81b8193370",
+  "pdf_sha256": "e0cbc5314e3189b448e3eb06cd8387f4c9f04e0a0929382e44b85cb67597d4a4",
+  "appendix_pdf_sha256": "b0e9eaaa69744fde79aafb80a690e4cd61c81db8967e88071bafcd07a87003a8",
+  "notes": "artifact evidence links are pinned; latest PDF navigation may use main; not revalidation of all upstream source links or execution of all 48 runs"
+}

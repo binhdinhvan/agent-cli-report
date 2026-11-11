@@ -2,10 +2,11 @@
 
 ## File để gửi
 
+- **[OpenCode_Comparison_Report.pdf](../OpenCode_Comparison_Report.pdf): bản nộp hoàn chỉnh 19 trang**, đã ghép báo cáo chính và phụ lục. Chỉ cần gửi PDF này kèm repository.
 - [APPENDIX.pdf](../APPENDIX.pdf): **3 trang A4**, có thể gửi riêng hoặc ghép sau PDF báo cáo chính.
 - [APPENDIX.html](../APPENDIX.html): bản tự chứa ảnh PNG và biểu đồ SVG, mở bằng browser để xem/in; không cần thư mục ảnh đi kèm để hiển thị.
 
-Không có PDF báo cáo 16 trang trong workspace tại thời điểm tạo phụ lục, nên chưa ghép hoặc sửa link trong PDF chính. Phụ lục ghi đường dẫn artifact dưới dạng văn bản, không tạo `file://` link hoặc giả URL repository chưa publish. PDF/HTML này không thay bộ source/evidence đi kèm.
+PDF báo cáo 16 trang người dùng từng review không có trong workspace. Bản hoàn chỉnh hiện tại được xuất lại trực tiếp từ `REPORT.md` thành 16 trang rồi ghép 3 trang phụ lục; không tuyên bố đã sửa file PDF cũ không có sẵn. Link tương đối trong bản in được chuyển sang URL GitHub cố định theo commit; không còn `file://` hoặc đường dẫn môi trường xuất. PDF/HTML không thay bộ source/evidence đi kèm.
 
 ## Nội dung và tính xác thực
 
@@ -13,11 +14,15 @@ Không có PDF báo cáo 16 trang trong workspace tại thời điểm tạo ph�
 2. **B — Chức năng:** trích trường/log có thật từ Client, SDK, permission và plugin port. Đây là trình bày lại raw, **không phải ảnh chụp terminal thật**. Script kiểm check/witness và loader error trước khi xuất. Inference scripted local, không đo model quality.
 3. **C — Benchmark:** success và median từ CSV 48 lượt, input token cộng từ request usage trong 48 raw result. Giữ hai failures trong median, ghi rõ pacing và giới hạn cohort. Không chạy lại model để lấy số đẹp.
 
-Nguồn và SHA-256 của 60 input files trong bản hiện tại ở [manifest revision 4](artifacts/APPENDIX-20261111-04/manifest.json), gồm metadata crop pixel và hash ảnh dẫn xuất. Revision 4 chỉ thêm đường dẫn receipt review ngay dưới khung xác minh trên trang A; ảnh và cảnh báo Chrome giữ nguyên. Source dựng phụ lục: [build_appendix.py](build_appendix.py); chạy từ workspace bằng `python3 -B research/build_appendix.py` để tái tạo HTML và manifest, không gọi API hoặc native agent.
+Nguồn và SHA-256 của 60 input files trong bản hiện tại ở [manifest revision 5](artifacts/APPENDIX-20261111-05/manifest.json), gồm metadata crop pixel và hash ảnh dẫn xuất. Revision 5 thêm hyperlink nguồn/raw/ảnh/review/CSV theo commit cố định; ảnh và cảnh báo Chrome giữ nguyên. Source dựng phụ lục: [build_appendix.py](build_appendix.py); chạy từ workspace bằng `python3 -B research/build_appendix.py` để tái tạo HTML và manifest, không gọi API hoặc native agent.
 
 **Trạng thái hiện tại:** trang A có khung Session ID mới, PID `12 → 12` và shared-service checks PASS; raw status `checks_passed_pending_review` giữ nguyên, [review ảnh/raw độc lập](artifacts/NATIVE-VISIBLE-UI-REVIEW-20261111-01/validation.json) xác nhận đạt. Trang B tách Before/After port; chart/data không đổi. [PDF revision 1](artifacts/APPENDIX-20261111-01/APPENDIX.pdf) và [revision 2](artifacts/APPENDIX-20261111-02/APPENDIX.pdf) được giữ riêng, không sửa ngược receipts/raw cũ.
 
-Repository public để mở các đường dẫn artifact: [binhdinhvan/agent-cli-report](https://github.com/binhdinhvan/agent-cli-report). PDF hiện tại vẫn giữ đường dẫn dạng văn bản, chưa tự đổi thành hyperlinks; gửi kèm URL repository. Các receipt cũ ghi trạng thái chưa publish là ghi nhận lịch sử, không sửa hash/receipt để khớp trạng thái công bố mới.
+Repository public: [binhdinhvan/agent-cli-report](https://github.com/binhdinhvan/agent-cli-report). PDF hiện tại có hyperlinks tới artifact thực sự đã công bố tại commit `f2becc501cfc1b980b888402458bac81b8193370`; việc đổi nhánh `main` sau này không thay bằng chứng tại các link này. Các receipt cũ ghi chưa publish/chưa ghép là ghi nhận lịch sử, không sửa hash/receipt để khớp trạng thái mới.
+
+## Xuất lại bản tổng hợp
+
+Chạy `python3 -B research/build_appendix.py`, sau đó `python3 -B research/export_final_report.py`. Script xuất `REPORT.md` qua markdown-it-py, in hai phần bằng Chrome headless trong namespace riêng rồi ghép bằng Poppler `pdfunite`. Dùng dependencies đã có trên máy, không install thêm. Receipt của bản tổng hợp ở `research/artifacts/FINAL-SUBMISSION-20261111-01/`; không chạy lại native demo/model/benchmark. Số trang được kiểm sau export, không ép layout bằng cách cắt bỏ nội dung.
 
 PDF được in từ HTML bằng Chrome headless trong bwrap network/PID namespace riêng; HOME/profile/tmp mới, root filesystem read-only, không dùng profile Chrome hoặc service/session thật. Chrome dùng `--no-sandbox` **bên trong namespace cách ly**, không phải phép nghiệm thu security của browser. Lượt in đầu không tạo được socket do `/tmp` read-only; lượt sau bind private tmp và thành công, không đổi dữ liệu để sửa kết quả.
 

@@ -1,0 +1,111 @@
+{
+  "scope": "appendix uses new authorized VISIBLE-UI07 screenshots, selected earlier feature logs and unchanged benchmark charts; generator runs no experiments",
+  "input_sha256": {
+    "demos/artifacts/NATIVE-VISIBLE-UI-20261111-07/ui-visible-result.json": "ce85f2912aed62f2f3f4fd854e9e341598cebb1462d9af09514c93dd821af58f",
+    "demos/artifacts/NATIVE-CLIENT-20261111-01/client-result.json": "c9a2f65cd15a0e7f0ec95832fb2f438743ec4fd191c4604e058679f85f549b3b",
+    "demos/artifacts/NATIVE-SDK-20261111-01/sdk-result.json": "9bfc8a8efc354e3d84ef0c1cb0bbf2f095d11c610e14dbddcf3fc0f9db2b250a",
+    "research/artifacts/NATIVE-VISIBLE-UI-REVIEW-20261111-01/validation.json": "edc1da5a78425a6632a820e575b73b458b2e2e3c4f6670dd30df62aafb8c9c77",
+    "demos/artifacts/NATIVE-CLIENT-V1PLUGIN-20261111-02/client-result.json": "65e04c9488460b53ee041d9111de52e2a0e0ad90318e6d5efa9214e5c2345e9b",
+    "demos/artifacts/NATIVE-PLUGIN-PORT-20261111-03/client-result.json": "6f84f87a33fab46ee0a770d1586cdbd915209f5e9aaf6fbac708798c76ee355d",
+    "demos/artifacts/NATIVE-PLUGIN-PORT-20261111-03/client-server.log": "0fb09aceb3ec454536489a5736684360a60969c518bce92de78445606bd3e9c8",
+    "demos/artifacts/NATIVE-DEMO-PERMISSION-20261111-02/summary.json": "347e06dfe631b332a95c08ff79d77025a378e4f776f70557f9d2b665c5bf1256",
+    "benchmark/suite48/artifacts/OPENAI48-R3-SUMMARY-20261111-01/runs48.csv": "3d97842d0eb883af9a55024567fe0b70a89207794d8be0b91b588181c87069cd",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-001/result.json": "badea003edd3d87dcc0e27c490f0192132d66637d80b1e70f0393c348e47f2a7",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-008/result.json": "e015edd051dd1abadbfc23d0f58173c696730cae44a0931333b27aa56c2c762f",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-011/result.json": "b631039153bfaf3d69667e050956dab487a0a11da00266ef97612b7b5b231fd4",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-014/result.json": "a6786d637aed291bb39426177f9b78ee09783ce9c4bff8c52fca606f492c83d1",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-017/result.json": "34cf589830b4d69a563d5833ec8671b4ea5a30c1d0cf5d9d68697efc0950f2f3",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-024/result.json": "bd068ace1ba0adfe2edb638b5ac9ef7435c2937de52875afbe067afbbb0bcd97",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-027/result.json": "f2d691df2402b502b8b9e97498d1caee0d617dbf584bd93296b403df685aec89",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-030/result.json": "abc4b17d8e0449fb7f0322dbc7aa0293c697d1b9f06ca44110cbd8e3270e130c",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-035/result.json": "2bba66673f951b55ff0647e5c0f691ed4d9880584cbf533cb679950b0ba49815",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-038/result.json": "2e8174eb295616390ac79d73fbb39e19cefe88f72dbfa99cc9c27ca68c4574ac",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-041/result.json": "167b269ef5dc0b5258f1470ed565795583833780891e5ad6ec952783e02f426c",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-048/result.json": "072315a25c7fe3010300c6ccbc47b5ae0813293a9dfa5bb48c636585008fefb9",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-004/result.json": "55d1278d67c0b0b6fe43cf48e50fc8b317ba2a211b42885dd243aa33a96e25c1",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-007/result.json": "404d66618d16090a1fdb291d6815af076b78294f30f76273ef7c402ae31dc623",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-010/result.json": "c6c1b96177676272122a6326cc86818f211285c31a379b8bbbcbac1ac07ecb9f",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-013/result.json": "de95d5ce0bdfbd6d98e23e300f559ebe59841ca88dfd5505e32c62d3e9beb90b",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-019/result.json": "2841852231dee6d0e90b4a98d0275441eb4f38d6a77eae4d7d84cd85d633c3f1",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-022/result.json": "0b2a41c5f2120f8c65f9175a99e1771c66f8d648e3906cb6e53c00c1b9dcff28",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-025/result.json": "7115d084abe0b202c57b61d1c37ba56e506405eb25fa9b18c03cf57a958991f2",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-032/result.json": "195a8139f10d0f20bb0e2ae2b86b2c1a72b331f9887182b36713cca7455ce31c",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-034/result.json": "227121ecad5a399d62ef3064ba97827934ba033079e561fbe5e25f516a178cef",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-037/result.json": "c7130abb342b82bfec1c10dc4216fab1e4d606de22b1880ca16d481c07a903a2",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-044/result.json": "9b9df6f0ccf3758079d92a55d6167590ff1f4d52c11dbc636fc33ce843ab6652",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-047/result.json": "c75c2a0fe4abe9eaf96a202b5fa96f3ef7dd176dffa1fa1c1ca42d1bdc3a5eba",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-003/result.json": "367101ec3e08cd63d9d4071e0eef341e998a923bbf86675fb8bc961704fcdbef",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-006/result.json": "fdaba7b5282ff06032b3169bf39f77866533fcf93a34054dbe0eba82dc6996e1",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-009/result.json": "a3fc12150c00609bdd793ad39fdeff88a829ae71f21419d1858118b7299ee218",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-016/result.json": "23c0273982930457490bc5957b6248dbda168431e3cdb8682e20cc91c280f386",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-018/result.json": "97be646ab08b257407caf522959f2ba75f7e2f6403e05d0e4ccc8afe91ee4899",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-021/result.json": "c3fa2b9dd5187e8aea0e8884c1034faa25cc035ae972fb0293abb2a0c398f8ef",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-028/result.json": "0e754ca768a5a7b1e591701696a0afd398ebe2dac73233f4aad0800eeaf448ef",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-031/result.json": "a3eb000363f67f3d7c61c2da9c491a485267dc86a94fda9d9e3217b775dd4517",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-036/result.json": "e74ef1635d3f6f79e75665a848414b1de8c7432cd447d0cfc626dee82a58f89e",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-039/result.json": "19e531681d77b2df05d6a010bd78fde8ab0eba3c08ae0ccdebb51f52749752b7",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-042/result.json": "c0386254b3ad09791dbe5c06f8642288d8dfcb4cae57cab6f9e747f54bc1a3c4",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-045/result.json": "0a4fb317058c9be8a5c4f69ecd70134f587db62e10d2ec0a343e34823e65d771",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-002/result.json": "04501484b87cdc61d22f0ff50a75824d6cf594e070cd0599bcd69d4631cb0a26",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-005/result.json": "d08a85eff59b3c410bf834054603eb2e579d817222dc5174afc5025d4cb795e4",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-012/result.json": "24839e9bb4856119834bed0af7d32043ef9a9e432354b9251f6084fbdd437a75",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-015/result.json": "a58331bd543a716a794ad02b8e71cf8dfd2bec28702e6b06f66fed27903758fb",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-020/result.json": "ef58a49325852d9b1ba0a38ed876f460a437f77e23cd8681cbebd56b22b0b04c",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-023/result.json": "887f347a9fb79a4df67622a750817d08cb07acdd53fcf3f69375bec834298f56",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-026/result.json": "03e9658b459b5e329c8cd14b5e41704b03d6e81d42bac3b2594e957340ec5c68",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-029/result.json": "0a5b289d0e4a006823e1eb7a5f8dad424041d446ace8a5479ea43f0aa03c4988",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-033/result.json": "38aeebeacbaa700392f9bad1debece9318417f2a760253f6740ebb57bfbd83a5",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-040/result.json": "78706bbcf5a03b4b3267ff130e9d6c61ed00cad392f3753559515aac5cf52f59",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-043/result.json": "56a1174c3ef4695ec74488753eca520e4832d784ab0be278be1fe7811bc750ce",
+    "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-046/result.json": "9260e45010cddb3999c5b2f2ba0cce73b6795dd3776c95a22b87a7c070af4389",
+    "demos/artifacts/NATIVE-VISIBLE-UI-20261111-07/desktop-window.png": "8cba4a407594d1ee9b28ab4620ec80070441550121c03d894c10690cb2e2d2a4",
+    "demos/artifacts/NATIVE-VISIBLE-UI-20261111-07/web-browser.png": "c102edcfb3629f69200333d0cc5d6fd158701abdb24ddd1605bb507ac55cf9db",
+    "demos/artifacts/NATIVE-VISIBLE-UI-20261111-07/tui-terminal.png": "8061ea90d4ac52d5b721de8397c7c4f5d1f91898f5e46d1b3387a6b84c90f4f9"
+  },
+  "repository": "https://github.com/binhdinhvan/agent-cli-report",
+  "evidence_commit": "f2becc501cfc1b980b888402458bac81b8193370",
+  "derived_image_crops": [
+    {
+      "source": "demos/artifacts/NATIVE-VISIBLE-UI-20261111-07/desktop-window.png",
+      "crop_box": [
+        40,
+        24,
+        1340,
+        235
+      ],
+      "png_sha256": "be2aeb461bc079ad76e511b293f8c8004f55225f0b68368076a333338c7d2c37",
+      "operation": "exact pixel crop; no added frame, text, or generated UI"
+    },
+    {
+      "source": "demos/artifacts/NATIVE-VISIBLE-UI-20261111-07/web-browser.png",
+      "crop_box": [
+        40,
+        24,
+        1558,
+        300
+      ],
+      "png_sha256": "0ba1a74078e7e98e54255c3e3d81472170c58491418d0af615135bd84962f2d8",
+      "operation": "exact pixel crop; no added frame, text, or generated UI"
+    }
+  ],
+  "html_sha256": "12759d98f57d5760cabf4f8868504478fc7da3b5f1fb8d1956547b0a396bb32b",
+  "success": [
+    11,
+    12,
+    11,
+    12
+  ],
+  "median_seconds": [
+    228.15249999999997,
+    200.1995,
+    164.2305,
+    139.62900000000002
+  ],
+  "total_input_tokens": [
+    306163,
+    234202,
+    136527,
+    638403
+  ],
+  "limitations": "not a new capture, full raw audit, model-quality test, or published evidence bundle"
+}

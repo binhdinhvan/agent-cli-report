@@ -1,8 +1,10 @@
 # Hướng dẫn bàn giao và kiểm chứng
 
+**File nộp chính:** [OpenCode_Comparison_Report.pdf](OpenCode_Comparison_Report.pdf), 19 trang (16 trang báo cáo + 3 trang phụ lục). PDF có hyperlink nguồn/artifact GitHub theo commit bằng chứng `f2becc501cfc1b980b888402458bac81b8193370`; không chứa link `file://`. Có thể gửi file này kèm URL repository, không cần gửi report và phụ lục thành hai PDF riêng.
+
 ## 1. Đọc theo chuỗi bằng chứng
 
-**Phụ lục trực quan:** [APPENDIX.pdf](APPENDIX.pdf) (3 trang) và [HTML tự chứa](APPENDIX.html), gồm ảnh native có sẵn, trích log và biểu đồ từ raw/CSV. [Nguồn và giới hạn](research/APPENDIX_GUIDE.md). Không thay bộ artifact đầy đủ; chưa ghép vào PDF báo cáo chính.
+**Phụ lục riêng nếu cần:** [APPENDIX.pdf](APPENDIX.pdf) (3 trang) và [HTML tự chứa](APPENDIX.html), gồm ảnh native thật, trích log và biểu đồ từ raw/CSV. [Nguồn và giới hạn](research/APPENDIX_GUIDE.md). Phần này đã có trong ba trang cuối của bản nộp hoàn chỉnh, không cần gửi lặp lại.
 
 1. [REPORT.md](REPORT.md): kết luận, source permalinks, code minh họa và bảng kết quả.
 2. [research/REQUIREMENTS_ACCEPTANCE.md](research/REQUIREMENTS_ACCEPTANCE.md): tám yêu cầu và phạm vi nghiệm thu.

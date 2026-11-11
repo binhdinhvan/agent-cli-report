@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "revision": 5,
+  "scope": "appendix link-only revision and rendering",
+  "pages": 3,
+  "raw_input_hashes_unchanged": 60,
+  "images_and_crops_unchanged": true,
+  "evidence_commit": "f2becc501cfc1b980b888402458bac81b8193370",
+  "pdf_sha256": "b0e9eaaa69744fde79aafb80a690e4cd61c81db8967e88071bafcd07a87003a8",
+  "full_review": "research/artifacts/FINAL-SUBMISSION-20261111-01/review.json"
+}
