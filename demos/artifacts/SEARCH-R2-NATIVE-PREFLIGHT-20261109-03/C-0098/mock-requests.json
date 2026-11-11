@@ -1,0 +1,361 @@
+[
+  {
+    "model": "gpt-6.1-sol",
+    "input": [
+      {
+        "role": "developer",
+        "content": "You are a title generator. You output ONLY a thread title. Nothing else.\n\n<task>\nGenerate a brief title that would help the user find this conversation later.\n\nFollow all rules in <rules>\nUse the <examples> so you know what a good title looks like.\nYour output must be:\n- A single line\n- ≤50 characters\n- No explanations\n</task>\n\n<rules>\n- you MUST use the same language as the user message you are summarizing\n- Title must be grammatically correct and read naturally - no word salad\n- Never include tool names in the title (e.g. \"read tool\", \"bash tool\", \"edit tool\")\n- Focus on the main topic or question the user needs to retrieve\n- Vary your phrasing - avoid repetitive patterns like always starting with \"Analyzing\"\n- When a file is mentioned, focus on WHAT the user wants to do WITH the file, not just that they shared it\n- Keep exact: technical terms, numbers, filenames, HTTP codes\n- Remove: the, this, my, a, an\n- Never assume tech stack\n- Never use tools\n- NEVER respond to questions, just generate a title for the conversation\n- The title should NEVER include \"summarizing\" or \"generating\" when generating a title\n- DO NOT SAY YOU CANNOT GENERATE A TITLE OR COMPLAIN ABOUT THE INPUT\n- Always output something meaningful, even if the input is minimal.\n- If the user message is short or conversational (e.g. \"hello\", \"lol\", \"what's up\", \"hey\"):\n  → create a title that reflects the user's tone or intent (such as Greeting, Quick check-in, Light chat, Intro message, etc.)\n</rules>\n\n<examples>\n\"debug 500 errors in production\" → Debugging production 500 errors\n\"refactor user service\" → Refactoring user service\n\"why is app.js failing\" → app.js failure investigation\n\"implement rate limiting\" → Rate limiting implementation\n\"how do I connect postgres to my API\" → Postgres API connection\n\"best practices for React hooks\" → React hooks best practices\n\"@src/auth.ts can you add refresh token support\" → Auth refresh token support\n\"@utils/parser.ts this is broken\" → Parser bug fix\n\"look at @config.json\" → Config review\n\"@App.tsx add dark mode toggle\" → Dark mode toggle in App\n</examples>\n"
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "Generate a title for this conversation:\n"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "\"Offline synthetic tool audit. Only inspect files/environment, do not modify files.\""
+          }
+        ]
+      }
+    ],
+    "store": false,
+    "include": [
+      "reasoning.encrypted_content"
+    ],
+    "reasoning": {
+      "effort": "low",
+      "summary": "auto"
+    },
+    "stream": true
+  },
+  {
+    "model": "gpt-6.1-sol",
+    "input": [
+      {
+        "role": "developer",
+        "content": "You are an AI agent powered by OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available.\n\n# Harness\n- Responses are rendered as GitHub-flavored Markdown.\n- `<system-reminder>` blocks are harness instructions, not user-authored content. Read and follow them.\n- Prefer parallelizing independent tool calls.\n- Do not use a skill based solely on keywords, superficial relevance, or its availability. Avoid re-reading skills already available in the conversation unless needed.\n- Prefer dedicated tools over shell commands; fall back to the shell when a tool cannot do what you need.\n- Do not chain shell commands with separators like `echo \"====\";` or `printf '---'`; the output becomes noisy in a way that makes the user's side of the conversation worse.\n\n# Communication\n\nState the main point clearly and early. Keep responses clear and concise, and avoid unnecessary technical jargon. Use only as much structure as needed, and include technical detail only when it helps the conversation. Use clear file paths when referring to files.\n\nWhen describing your work, avoid adding what you won't do, what will remain unchanged, or how you'll separate or categorize results. Do not introduce unprompted alternatives through framing such as \"X, not Y\" or \"This isn't about X. It's about Y.\"\n\n## Autonomy\n\nInfer the user's intent and your task scope from their instructions and the prior conversation context. You should bias towards action and carry out the user's intended task until it is completed. If the intent is unclear, progress towards the goal using the available information and ask for clarification while continuing independent work when possible.\n\nWhen the user's prompt indicates a request for action, such as \"can you...\", \"I want to...\", \"help me...\" and similar expressions, treat these as instructions to take action. Do not stop at acknowledging capability (e.g. \"Yes…\"), proposing a plan, or offering to continue. Do not settle for a partial or \"helpful enough\" solution to save time, effort, or tokens. Continue until the user's intended goal is fulfilled, even when it requires sustained work.\n\n## Intermediate Commentary\n\nAs you work, you send messages to the commentary channel. These are how you collaborate with the user while you work: stating assumptions and providing updates. Keep them concise and quickly scannable, and send them only when they add real information, such as a discovery, a tradeoff, or a blocker. Do not narrate routine reads, searches, or edits.\n\nBy default, treat new messages received during ongoing work as steering the active task rather than replacing it. Incorporate corrections and constraints, and answer questions briefly in commentary before continuing. Replace the task only when the user clearly cancels it or requests an incompatible objective.\n\nDo not put a final response, such as a blocking or clarifying question, in the commentary channel. The final answer must always be fully self-contained.\n\n## Final Answer\n\nIn your final answer back to the user, focus on the most important information.\n\n# Working in codebases\n\n- Keep changes consistent with the structure, naming, style, and patterns of the surrounding code.\n- Treat unfamiliar files or changes as potential user work and investigate before deleting or overwriting them.\n- Do not introduce unsolicited warnings, disclaimers, approval flows, or safety/compliance checklists due to hypothetical risk.\n- Do not write tests for reversible, low-impact changes or that mirror the implementation. If you do choose to verify your work with tests, make sure that the tests are meaningful and necessary to verify implementation.\n- Run tests appropriate to the change and complete required checks. Once those pass, broaden or repeat testing only when new changes, failures, or unresolved concerns justify it; otherwise, continue toward completing the task.\n\n\n# Delegation\n\nDo not spawn subagents unless the user or applicable AGENTS.md/skill instructions explicitly ask for subagents, delegation, or parallel agent work.\n\nYou are powered by the model named gpt-6.1-sol. The exact model ID is openai/gpt-6.1-sol\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/C-0098/project\n  Workspace root folder: /\n  Is directory a git repo: no\n  Platform: linux\n  Today's date: Mon Nov 09 2026\n</env>"
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "\"Offline synthetic tool audit. Only inspect files/environment, do not modify files.\""
+          }
+        ]
+      }
+    ],
+    "store": false,
+    "include": [
+      "reasoning.encrypted_content"
+    ],
+    "prompt_cache_key": "ses_e41ce701cffevK1SumYHc33Ibh",
+    "tools": [
+      {
+        "type": "function",
+        "name": "apply_patch",
+        "description": "Use the `apply_patch` tool to edit files. Your patch language is a stripped‑down, file‑oriented diff format designed to be easy to parse and safe to apply. You can think of it as a high‑level envelope:\n\n*** Begin Patch\n[ one or more file sections ]\n*** End Patch\n\nWithin that envelope, you get a sequence of file operations.\nYou MUST include a header to specify the action you are taking.\nEach operation starts with one of three headers:\n\n*** Add File: <path> - create a new file. Every following line is a + line (the initial contents).\n*** Delete File: <path> - remove an existing file. Nothing follows.\n*** Update File: <path> - patch an existing file in place (optionally with a rename).\n\nExample patch:\n\n```\n*** Begin Patch\n*** Add File: hello.txt\n+Hello world\n*** Update File: src/app.py\n*** Move to: src/main.py\n@@ def greet():\n-print(\"Hi\")\n+print(\"Hello, world!\")\n*** Delete File: obsolete.txt\n*** End Patch\n```\n\nIt is important to remember:\n\n- You must include a header with your intended action (Add/Delete/Update)\n- You must prefix new lines with `+` even when creating a new file\n",
+        "parameters": {
+          "properties": {
+            "patchText": {
+              "description": "The full patch text that describes all changes to be made",
+              "type": "string"
+            }
+          },
+          "required": [
+            "patchText"
+          ],
+          "type": "object"
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "bash",
+        "description": "Executes a given bash command in a persistent shell session with optional timeout, ensuring proper handling and security measures.\n\nBe aware: OS: linux, Shell: sh\n\nAll commands run in the current working directory by default. Use the `workdir` parameter if you need to run a command in a different directory. AVOID using `cd <directory> && <command>` patterns - use `workdir` instead.\n\nUse `/tmp/opencode/agent-cli-report/smoke/C-0098/tmp/opencode` for temporary work outside the workspace. This directory has already been created, already exists, and is pre-approved for external directory access.\n\nIMPORTANT: This tool is for terminal operations like git, npm, docker, etc. DO NOT use it for file operations (reading, writing, editing, searching, finding files) - use the specialized tools for this instead.\n\nBefore executing the command, please follow these steps:\n\n1. Directory Verification:\n   - If the command will create new directories or files, first use `ls` to verify the parent directory exists and is the correct location\n   - For example, before running \"mkdir foo/bar\", first use `ls foo` to check that \"foo\" exists and is the intended parent directory\n\n2. Command Execution:\n   - Always quote file paths that contain spaces with double quotes (e.g., rm \"path with spaces/file.txt\")\n   - Examples of proper quoting:\n     - mkdir \"/Users/name/My Documents\" (correct)\n     - mkdir /Users/name/My Documents (incorrect - will fail)\n     - python \"/path/with spaces/script.py\" (correct)\n     - python /path/with spaces/script.py (incorrect - will fail)\n   - After ensuring proper quoting, execute the command.\n   - Capture the output of the command.\n\nUsage notes:\n  - The command argument is required.\n  - You can specify an optional timeout in milliseconds. If not specified, commands will time out after 120000ms.\n  - If the output exceeds 2000 lines or 51200 bytes, it will be truncated and the full output will be written to a file. You can use Read with offset/limit to read specific sections or Grep to search the full content. Do NOT use `head`, `tail`, or other truncation commands to limit output; the full output will already be captured to a file for more precise searching.\n\n  - Avoid using Bash with the `find`, `grep`, `cat`, `head`, `tail`, `sed`, `awk`, or `echo` commands, unless explicitly instructed or when these commands are truly necessary for the task. Instead, always prefer using the dedicated tools for these commands:\n    - File search: Use Glob (NOT find or ls)\n    - Content search: Use Grep (NOT grep or rg)\n    - Read files: Use Read (NOT cat/head/tail)\n    - Edit files: Use Edit (NOT sed/awk)\n    - Write files: Use Write (NOT echo >/cat <<EOF)\n    - Communication: Output text directly (NOT echo/printf)\n  - When issuing multiple commands:\n    - If the commands are independent and can run in parallel, make multiple bash tool calls in a single message. For example, if you need to run \"git status\" and \"git diff\", send a single message with two bash tool calls in parallel.\n    - If the commands depend on each other and must run sequentially, use a single Bash call with '&&' to chain them together (e.g., `git add . && git commit -m \"message\" && git push`). For instance, if one operation must complete before another starts (like mkdir before cp, Write before Bash for git operations, or git add before git commit), run these operations sequentially instead.\n    - Use ';' only when you need to run commands sequentially but don't care if earlier commands fail\n    - DO NOT use newlines to separate commands (newlines are ok in quoted strings)\n  - AVOID using `cd <directory> && <command>`. Use the `workdir` parameter to change directories instead.\n    <good-example>\n    Use workdir=\"/foo/bar\" with command: pytest tests\n    </good-example>\n    <bad-example>\n    cd /foo/bar && pytest tests\n    </bad-example>\n\n# Git and GitHub\n- Only commit, amend, push, or create PRs when explicitly requested.\n- Before committing, inspect `git status`, `git diff`, and `git log --oneline -10`; stage only intended files and never commit secrets.\n- Write a concise commit message that matches the repo style.\n- Do not update git config, skip hooks, use interactive `-i`, force-push, or create empty commits unless explicitly requested.\n- If a commit fails or hooks reject it, fix the issue and create a new commit; do not amend the failed commit.\n- Before creating a PR, inspect status, diff, remote tracking, recent commits, and the diff from the base branch.\n- Review all commits included in the PR, not just the latest commit.\n- Use `gh` for GitHub tasks, including PRs, issues, checks, and releases; return the PR URL when done.\n",
+        "parameters": {
+          "properties": {
+            "command": {
+              "description": "The command to execute",
+              "type": "string"
+            },
+            "timeout": {
+              "description": "Optional timeout in milliseconds",
+              "type": "integer"
+            },
+            "workdir": {
+              "description": "The working directory to run the command in. Defaults to the current directory. Use this instead of 'cd' commands.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "command"
+          ],
+          "type": "object"
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "glob",
+        "description": "- Fast file pattern matching tool that works with any codebase size\n- Supports glob patterns like \"**/*.js\" or \"src/**/*.ts\"\n- Returns matching file paths\n- Use this tool when you need to find files by name patterns\n- When you are doing an open-ended search that may require multiple rounds of globbing and grepping, use the Task tool instead\n- You have the capability to call multiple tools in a single response. It is always better to speculatively perform multiple searches as a batch that are potentially useful.\n",
+        "parameters": {
+          "properties": {
+            "pattern": {
+              "description": "The glob pattern to match files against",
+              "type": "string"
+            },
+            "path": {
+              "description": "The directory to search in. If not specified, the current working directory will be used. IMPORTANT: Omit this field to use the default directory. DO NOT enter \"undefined\" or \"null\" - simply omit it for the default behavior. Must be a valid directory path if provided.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "pattern"
+          ],
+          "type": "object"
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "grep",
+        "description": "- Fast content search tool that works with any codebase size\n- Searches file contents using regular expressions\n- Supports full regex syntax (eg. \"log.*Error\", \"function\\s+\\w+\", etc.)\n- Filter files by pattern with the include parameter (eg. \"*.js\", \"*.{ts,tsx}\")\n- Returns file paths and line numbers with matching lines\n- Use this tool when you need to find files containing specific patterns\n- If you need to identify/count the number of matches within files, use the Bash tool with `rg` (ripgrep) directly. Do NOT use `grep`.\n- When you are doing an open-ended search that may require multiple rounds of globbing and grepping, use the Task tool instead\n",
+        "parameters": {
+          "properties": {
+            "pattern": {
+              "description": "The regex pattern to search for in file contents",
+              "type": "string"
+            },
+            "path": {
+              "description": "The directory to search in. Defaults to the current working directory.",
+              "type": "string"
+            },
+            "include": {
+              "description": "File pattern to include in the search (e.g. \"*.js\", \"*.{ts,tsx}\")",
+              "type": "string"
+            }
+          },
+          "required": [
+            "pattern"
+          ],
+          "type": "object"
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "read",
+        "description": "Read a file or directory from the local filesystem. If the path does not exist, an error is returned.\n\nUsage:\n- The filePath parameter should be an absolute path.\n- By default, this tool returns up to 2000 lines from the start of the file.\n- The offset parameter is the line number to start from (1-indexed).\n- To read later sections, call this tool again with a larger offset.\n- Use the grep tool to find specific content in large files or files with long lines.\n- If you are unsure of the correct file path, use the glob tool to look up filenames by glob pattern.\n- Contents are returned with each line prefixed by its line number as `<line>: <content>`. For example, if a file has contents \"foo\\n\", you will receive \"1: foo\\n\". For directories, entries are returned one per line (without line numbers) with a trailing `/` for subdirectories.\n- Any line longer than 2000 characters is truncated.\n- Call this tool in parallel when you know there are multiple files you want to read.\n- Avoid tiny repeated slices (30 line chunks). If you need more context, read a larger window.\n- This tool can read image files and PDFs and return them as file attachments.\n",
+        "parameters": {
+          "properties": {
+            "filePath": {
+              "description": "The absolute path to the file or directory to read",
+              "type": "string"
+            },
+            "offset": {
+              "description": "The line number to start reading from (1-indexed)",
+              "type": "integer"
+            },
+            "limit": {
+              "description": "The maximum number of lines to read (defaults to 2000)",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "filePath"
+          ],
+          "type": "object"
+        },
+        "strict": false
+      }
+    ],
+    "tool_choice": "auto",
+    "stream": true
+  },
+  {
+    "model": "gpt-6.1-sol",
+    "input": [
+      {
+        "role": "developer",
+        "content": "You are an AI agent powered by OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available.\n\n# Harness\n- Responses are rendered as GitHub-flavored Markdown.\n- `<system-reminder>` blocks are harness instructions, not user-authored content. Read and follow them.\n- Prefer parallelizing independent tool calls.\n- Do not use a skill based solely on keywords, superficial relevance, or its availability. Avoid re-reading skills already available in the conversation unless needed.\n- Prefer dedicated tools over shell commands; fall back to the shell when a tool cannot do what you need.\n- Do not chain shell commands with separators like `echo \"====\";` or `printf '---'`; the output becomes noisy in a way that makes the user's side of the conversation worse.\n\n# Communication\n\nState the main point clearly and early. Keep responses clear and concise, and avoid unnecessary technical jargon. Use only as much structure as needed, and include technical detail only when it helps the conversation. Use clear file paths when referring to files.\n\nWhen describing your work, avoid adding what you won't do, what will remain unchanged, or how you'll separate or categorize results. Do not introduce unprompted alternatives through framing such as \"X, not Y\" or \"This isn't about X. It's about Y.\"\n\n## Autonomy\n\nInfer the user's intent and your task scope from their instructions and the prior conversation context. You should bias towards action and carry out the user's intended task until it is completed. If the intent is unclear, progress towards the goal using the available information and ask for clarification while continuing independent work when possible.\n\nWhen the user's prompt indicates a request for action, such as \"can you...\", \"I want to...\", \"help me...\" and similar expressions, treat these as instructions to take action. Do not stop at acknowledging capability (e.g. \"Yes…\"), proposing a plan, or offering to continue. Do not settle for a partial or \"helpful enough\" solution to save time, effort, or tokens. Continue until the user's intended goal is fulfilled, even when it requires sustained work.\n\n## Intermediate Commentary\n\nAs you work, you send messages to the commentary channel. These are how you collaborate with the user while you work: stating assumptions and providing updates. Keep them concise and quickly scannable, and send them only when they add real information, such as a discovery, a tradeoff, or a blocker. Do not narrate routine reads, searches, or edits.\n\nBy default, treat new messages received during ongoing work as steering the active task rather than replacing it. Incorporate corrections and constraints, and answer questions briefly in commentary before continuing. Replace the task only when the user clearly cancels it or requests an incompatible objective.\n\nDo not put a final response, such as a blocking or clarifying question, in the commentary channel. The final answer must always be fully self-contained.\n\n## Final Answer\n\nIn your final answer back to the user, focus on the most important information.\n\n# Working in codebases\n\n- Keep changes consistent with the structure, naming, style, and patterns of the surrounding code.\n- Treat unfamiliar files or changes as potential user work and investigate before deleting or overwriting them.\n- Do not introduce unsolicited warnings, disclaimers, approval flows, or safety/compliance checklists due to hypothetical risk.\n- Do not write tests for reversible, low-impact changes or that mirror the implementation. If you do choose to verify your work with tests, make sure that the tests are meaningful and necessary to verify implementation.\n- Run tests appropriate to the change and complete required checks. Once those pass, broaden or repeat testing only when new changes, failures, or unresolved concerns justify it; otherwise, continue toward completing the task.\n\n\n# Delegation\n\nDo not spawn subagents unless the user or applicable AGENTS.md/skill instructions explicitly ask for subagents, delegation, or parallel agent work.\n\nYou are powered by the model named gpt-6.1-sol. The exact model ID is openai/gpt-6.1-sol\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/C-0098/project\n  Workspace root folder: /\n  Is directory a git repo: no\n  Platform: linux\n  Today's date: Mon Nov 09 2026\n</env>"
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "\"Offline synthetic tool audit. Only inspect files/environment, do not modify files.\""
+          }
+        ]
+      },
+      {
+        "type": "function_call",
+        "call_id": "call_offline_0",
+        "name": "glob",
+        "arguments": "{\"pattern\":\"**/*\",\"path\":\"/tmp/opencode/agent-cli-report/smoke/C-0098/project\"}"
+      },
+      {
+        "type": "function_call",
+        "call_id": "call_offline_1",
+        "name": "grep",
+        "arguments": "{\"pattern\":\"OFFLINE_SEARCH_FIXTURE\",\"path\":\"/tmp/opencode/agent-cli-report/smoke/C-0098/project\"}"
+      },
+      {
+        "type": "function_call",
+        "call_id": "call_offline_2",
+        "name": "bash",
+        "arguments": "{\"command\":\"python3 -B -c 'import os,shutil,json,subprocess,hashlib\\nnames=[\\\"rg\\\",\\\"python\\\",\\\"python3\\\",\\\"bash\\\",\\\"find\\\",\\\"ls\\\"]\\npaths={n:shutil.which(n) for n in names}\\nrg=paths[\\\"rg\\\"]\\nchecks={}\\nif rg:\\n    for name,args in {\\\"files\\\":[\\\"--files\\\"],\\\"search\\\":[\\\"-n\\\",\\\"OFFLINE_SEARCH_FIXTURE\\\",\\\"audit.txt\\\"]}.items():\\n        run=subprocess.run([rg,*args],capture_output=True,text=True)\\n        checks[name]={\\\"exit_code\\\":run.returncode,\\\"stdout\\\":run.stdout,\\\"stderr\\\":run.stderr}\\n    try:\\n        with open(rg,\\\"r+b\\\"): pass\\n        checks[\\\"rg_read_only\\\"]=False\\n    except OSError:\\n        checks[\\\"rg_read_only\\\"]=True\\nprint(json.dumps({\\\"PATH\\\":os.environ.get(\\\"PATH\\\"),\\\"which\\\":paths,\\\"checks\\\":checks,\\\"rg_sha256\\\":hashlib.sha256(open(rg,\\\"rb\\\").read()).hexdigest() if rg else None,\\\"rg_version\\\":subprocess.run([rg,\\\"--version\\\"],capture_output=True,text=True).stdout if rg else None}))'\"}"
+      },
+      {
+        "type": "function_call_output",
+        "call_id": "call_offline_0",
+        "output": "/tmp/opencode/agent-cli-report/smoke/C-0098/project/audit.txt"
+      },
+      {
+        "type": "function_call_output",
+        "call_id": "call_offline_1",
+        "output": "Found 1 matches\n/tmp/opencode/agent-cli-report/smoke/C-0098/project/audit.txt:\n  Line 1: OFFLINE_SEARCH_FIXTURE\n"
+      },
+      {
+        "type": "function_call_output",
+        "call_id": "call_offline_2",
+        "output": "{\"PATH\": \"/opt/agent-cli-report-deps/search-r2/bin:/usr/bin:/bin\", \"which\": {\"rg\": \"/opt/agent-cli-report-deps/search-r2/bin/rg\", \"python\": null, \"python3\": \"/usr/bin/python3\", \"bash\": \"/usr/bin/bash\", \"find\": \"/usr/bin/find\", \"ls\": \"/usr/bin/ls\"}, \"checks\": {\"files\": {\"exit_code\": 0, \"stdout\": \"audit.txt\\n\", \"stderr\": \"\"}, \"search\": {\"exit_code\": 0, \"stdout\": \"1:OFFLINE_SEARCH_FIXTURE\\n\", \"stderr\": \"\"}, \"rg_read_only\": true}, \"rg_sha256\": \"e62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849\", \"rg_version\": \"ripgrep 15.2.0 (rev e89fff89ac)\\n\\nfeatures:+pcre2\\nsimd(compile):+SSE2,-SSSE3,-AVX2\\nsimd(runtime):+SSE2,+SSSE3,+AVX2\\n\\nPCRE2 10.45 is available (JIT is available)\\n\"}\n"
+      }
+    ],
+    "store": false,
+    "include": [
+      "reasoning.encrypted_content"
+    ],
+    "prompt_cache_key": "ses_e41ce701cffevK1SumYHc33Ibh",
+    "tools": [
+      {
+        "type": "function",
+        "name": "apply_patch",
+        "description": "Use the `apply_patch` tool to edit files. Your patch language is a stripped‑down, file‑oriented diff format designed to be easy to parse and safe to apply. You can think of it as a high‑level envelope:\n\n*** Begin Patch\n[ one or more file sections ]\n*** End Patch\n\nWithin that envelope, you get a sequence of file operations.\nYou MUST include a header to specify the action you are taking.\nEach operation starts with one of three headers:\n\n*** Add File: <path> - create a new file. Every following line is a + line (the initial contents).\n*** Delete File: <path> - remove an existing file. Nothing follows.\n*** Update File: <path> - patch an existing file in place (optionally with a rename).\n\nExample patch:\n\n```\n*** Begin Patch\n*** Add File: hello.txt\n+Hello world\n*** Update File: src/app.py\n*** Move to: src/main.py\n@@ def greet():\n-print(\"Hi\")\n+print(\"Hello, world!\")\n*** Delete File: obsolete.txt\n*** End Patch\n```\n\nIt is important to remember:\n\n- You must include a header with your intended action (Add/Delete/Update)\n- You must prefix new lines with `+` even when creating a new file\n",
+        "parameters": {
+          "properties": {
+            "patchText": {
+              "description": "The full patch text that describes all changes to be made",
+              "type": "string"
+            }
+          },
+          "required": [
+            "patchText"
+          ],
+          "type": "object"
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "bash",
+        "description": "Executes a given bash command in a persistent shell session with optional timeout, ensuring proper handling and security measures.\n\nBe aware: OS: linux, Shell: sh\n\nAll commands run in the current working directory by default. Use the `workdir` parameter if you need to run a command in a different directory. AVOID using `cd <directory> && <command>` patterns - use `workdir` instead.\n\nUse `/tmp/opencode/agent-cli-report/smoke/C-0098/tmp/opencode` for temporary work outside the workspace. This directory has already been created, already exists, and is pre-approved for external directory access.\n\nIMPORTANT: This tool is for terminal operations like git, npm, docker, etc. DO NOT use it for file operations (reading, writing, editing, searching, finding files) - use the specialized tools for this instead.\n\nBefore executing the command, please follow these steps:\n\n1. Directory Verification:\n   - If the command will create new directories or files, first use `ls` to verify the parent directory exists and is the correct location\n   - For example, before running \"mkdir foo/bar\", first use `ls foo` to check that \"foo\" exists and is the intended parent directory\n\n2. Command Execution:\n   - Always quote file paths that contain spaces with double quotes (e.g., rm \"path with spaces/file.txt\")\n   - Examples of proper quoting:\n     - mkdir \"/Users/name/My Documents\" (correct)\n     - mkdir /Users/name/My Documents (incorrect - will fail)\n     - python \"/path/with spaces/script.py\" (correct)\n     - python /path/with spaces/script.py (incorrect - will fail)\n   - After ensuring proper quoting, execute the command.\n   - Capture the output of the command.\n\nUsage notes:\n  - The command argument is required.\n  - You can specify an optional timeout in milliseconds. If not specified, commands will time out after 120000ms.\n  - If the output exceeds 2000 lines or 51200 bytes, it will be truncated and the full output will be written to a file. You can use Read with offset/limit to read specific sections or Grep to search the full content. Do NOT use `head`, `tail`, or other truncation commands to limit output; the full output will already be captured to a file for more precise searching.\n\n  - Avoid using Bash with the `find`, `grep`, `cat`, `head`, `tail`, `sed`, `awk`, or `echo` commands, unless explicitly instructed or when these commands are truly necessary for the task. Instead, always prefer using the dedicated tools for these commands:\n    - File search: Use Glob (NOT find or ls)\n    - Content search: Use Grep (NOT grep or rg)\n    - Read files: Use Read (NOT cat/head/tail)\n    - Edit files: Use Edit (NOT sed/awk)\n    - Write files: Use Write (NOT echo >/cat <<EOF)\n    - Communication: Output text directly (NOT echo/printf)\n  - When issuing multiple commands:\n    - If the commands are independent and can run in parallel, make multiple bash tool calls in a single message. For example, if you need to run \"git status\" and \"git diff\", send a single message with two bash tool calls in parallel.\n    - If the commands depend on each other and must run sequentially, use a single Bash call with '&&' to chain them together (e.g., `git add . && git commit -m \"message\" && git push`). For instance, if one operation must complete before another starts (like mkdir before cp, Write before Bash for git operations, or git add before git commit), run these operations sequentially instead.\n    - Use ';' only when you need to run commands sequentially but don't care if earlier commands fail\n    - DO NOT use newlines to separate commands (newlines are ok in quoted strings)\n  - AVOID using `cd <directory> && <command>`. Use the `workdir` parameter to change directories instead.\n    <good-example>\n    Use workdir=\"/foo/bar\" with command: pytest tests\n    </good-example>\n    <bad-example>\n    cd /foo/bar && pytest tests\n    </bad-example>\n\n# Git and GitHub\n- Only commit, amend, push, or create PRs when explicitly requested.\n- Before committing, inspect `git status`, `git diff`, and `git log --oneline -10`; stage only intended files and never commit secrets.\n- Write a concise commit message that matches the repo style.\n- Do not update git config, skip hooks, use interactive `-i`, force-push, or create empty commits unless explicitly requested.\n- If a commit fails or hooks reject it, fix the issue and create a new commit; do not amend the failed commit.\n- Before creating a PR, inspect status, diff, remote tracking, recent commits, and the diff from the base branch.\n- Review all commits included in the PR, not just the latest commit.\n- Use `gh` for GitHub tasks, including PRs, issues, checks, and releases; return the PR URL when done.\n",
+        "parameters": {
+          "properties": {
+            "command": {
+              "description": "The command to execute",
+              "type": "string"
+            },
+            "timeout": {
+              "description": "Optional timeout in milliseconds",
+              "type": "integer"
+            },
+            "workdir": {
+              "description": "The working directory to run the command in. Defaults to the current directory. Use this instead of 'cd' commands.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "command"
+          ],
+          "type": "object"
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "glob",
+        "description": "- Fast file pattern matching tool that works with any codebase size\n- Supports glob patterns like \"**/*.js\" or \"src/**/*.ts\"\n- Returns matching file paths\n- Use this tool when you need to find files by name patterns\n- When you are doing an open-ended search that may require multiple rounds of globbing and grepping, use the Task tool instead\n- You have the capability to call multiple tools in a single response. It is always better to speculatively perform multiple searches as a batch that are potentially useful.\n",
+        "parameters": {
+          "properties": {
+            "pattern": {
+              "description": "The glob pattern to match files against",
+              "type": "string"
+            },
+            "path": {
+              "description": "The directory to search in. If not specified, the current working directory will be used. IMPORTANT: Omit this field to use the default directory. DO NOT enter \"undefined\" or \"null\" - simply omit it for the default behavior. Must be a valid directory path if provided.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "pattern"
+          ],
+          "type": "object"
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "grep",
+        "description": "- Fast content search tool that works with any codebase size\n- Searches file contents using regular expressions\n- Supports full regex syntax (eg. \"log.*Error\", \"function\\s+\\w+\", etc.)\n- Filter files by pattern with the include parameter (eg. \"*.js\", \"*.{ts,tsx}\")\n- Returns file paths and line numbers with matching lines\n- Use this tool when you need to find files containing specific patterns\n- If you need to identify/count the number of matches within files, use the Bash tool with `rg` (ripgrep) directly. Do NOT use `grep`.\n- When you are doing an open-ended search that may require multiple rounds of globbing and grepping, use the Task tool instead\n",
+        "parameters": {
+          "properties": {
+            "pattern": {
+              "description": "The regex pattern to search for in file contents",
+              "type": "string"
+            },
+            "path": {
+              "description": "The directory to search in. Defaults to the current working directory.",
+              "type": "string"
+            },
+            "include": {
+              "description": "File pattern to include in the search (e.g. \"*.js\", \"*.{ts,tsx}\")",
+              "type": "string"
+            }
+          },
+          "required": [
+            "pattern"
+          ],
+          "type": "object"
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "read",
+        "description": "Read a file or directory from the local filesystem. If the path does not exist, an error is returned.\n\nUsage:\n- The filePath parameter should be an absolute path.\n- By default, this tool returns up to 2000 lines from the start of the file.\n- The offset parameter is the line number to start from (1-indexed).\n- To read later sections, call this tool again with a larger offset.\n- Use the grep tool to find specific content in large files or files with long lines.\n- If you are unsure of the correct file path, use the glob tool to look up filenames by glob pattern.\n- Contents are returned with each line prefixed by its line number as `<line>: <content>`. For example, if a file has contents \"foo\\n\", you will receive \"1: foo\\n\". For directories, entries are returned one per line (without line numbers) with a trailing `/` for subdirectories.\n- Any line longer than 2000 characters is truncated.\n- Call this tool in parallel when you know there are multiple files you want to read.\n- Avoid tiny repeated slices (30 line chunks). If you need more context, read a larger window.\n- This tool can read image files and PDFs and return them as file attachments.\n",
+        "parameters": {
+          "properties": {
+            "filePath": {
+              "description": "The absolute path to the file or directory to read",
+              "type": "string"
+            },
+            "offset": {
+              "description": "The line number to start reading from (1-indexed)",
+              "type": "integer"
+            },
+            "limit": {
+              "description": "The maximum number of lines to read (defaults to 2000)",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "filePath"
+          ],
+          "type": "object"
+        },
+        "strict": false
+      }
+    ],
+    "tool_choice": "auto",
+    "stream": true
+  }
+]

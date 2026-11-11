@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/opt/agent-cli-report/BP48-VIS-e9ab03f36ae44108f6bb/opencode",
+    "--session",
+    "ses_e34f0f1dcffeGBNrK27IkYW0eR"
+  ],
+  "sessionID": "ses_e34f0f1dcffeGBNrK27IkYW0eR",
+  "session_title_observed": true,
+  "pid": 327,
+  "exit_code": 130,
+  "process_stopped": true,
+  "bytes": 21001,
+  "scope": "actual PTY bytes displayed by xterm on private Xvfb; no prompt"
+}

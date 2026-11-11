@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0079",
+    "comparison_axis": "tools",
+    "tool": "Pi",
+    "version": "1.5.0",
+    "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+    "claim": "createCodingTools trả read/bash/edit/write; createReadOnlyTools trả read/grep/find/ls; createAllTools là tập factory khác",
+    "file": "packages/coding-agent/src/core/tools/index.ts",
+    "line_start": "195",
+    "line_end": "223",
+    "symbol": "createCodingTools/createReadOnlyTools/createAllTools",
+    "permalink": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/tools/index.ts#L195-L223",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Factory không đồng nghĩa inventory hiệu lực trong mọi CLI/session; không suy read-only factory là OS sandbox"
+  },
+  "source_sha256": "3c66ea1e03530fb85436ee639f35add8bf72718ac6e76b738a1f41be58a2b472",
+  "excerpt": "export function createCodingTools(cwd: string, options?: ToolsOptions): Tool[] {\n\treturn [\n\t\tcreateReadTool(cwd, options?.read),\n\t\tcreateBashTool(cwd, options?.bash),\n\t\tcreateEditTool(cwd, options?.edit),\n\t\tcreateWriteTool(cwd, options?.write),\n\t];\n}\n\nexport function createReadOnlyTools(cwd: string, options?: ToolsOptions): Tool[] {\n\treturn [\n\t\tcreateReadTool(cwd, options?.read),\n\t\tcreateGrepTool(cwd, options?.grep),\n\t\tcreateFindTool(cwd, options?.find),\n\t\tcreateLsTool(cwd, options?.ls),\n\t];\n}\n\nexport function createAllTools(cwd: string, options?: ToolsOptions): Record<ToolName, Tool> {\n\treturn {\n\t\tread: createReadTool(cwd, options?.read),\n\t\tbash: createBashTool(cwd, options?.bash),\n\t\tpowershell: createPowerShellTool(cwd, options?.powershell),\n\t\tedit: createEditTool(cwd, options?.edit),\n\t\twrite: createWriteTool(cwd, options?.write),\n\t\tgrep: createGrepTool(cwd, options?.grep),\n\t\tfind: createFindTool(cwd, options?.find),\n\t\tls: createLsTool(cwd, options?.ls),\n\t};"
+}

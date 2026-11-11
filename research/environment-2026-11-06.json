@@ -1,0 +1,14 @@
+{
+  "observed_at_utc": "2026-11-06T03:52:39.269009+00:00",
+  "system": "Linux",
+  "kernel": "6.17.0-1033-oem",
+  "architecture": "x86_64",
+  "glibc": "2.39",
+  "cpu_model": "Intel(R) Core(TM) 7 240H",
+  "memory_total_kib": 15845056,
+  "logical_cpus": 16,
+  "python": "3.12.3",
+  "host_runtime_version_status": "Bun present on PATH but not executed; node/npm/cargo/rustc not found on this shell PATH",
+  "model_provider": null,
+  "notes": "Host metadata only. No provider or tool runtime measured by this snapshot. logical_cpus also observed in the initial inventory."
+}

@@ -1,0 +1,8 @@
+{
+  "status": "download_verified",
+  "url": "https://github.com/anomalyco/opencode/releases/download/v2.2.5/opencode-desktop-linux-amd64.deb",
+  "path": ".local/demo-desktop-2.2.5/opencode-desktop-linux-amd64.deb",
+  "sha256": "c827e714220de744c829fdea55540ed814b1372061e7a905fde0978f9f819de8",
+  "bytes": 245853968,
+  "installed_globally": false
+}

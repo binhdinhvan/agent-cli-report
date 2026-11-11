@@ -1,0 +1,239 @@
+{
+  "scope": "fresh isolated Xvfb; real Desktop window, standalone Chrome toolbar and xterm TUI; no prompt",
+  "checks": {
+    "private_xvfb_ready": true,
+    "owned_service_registration": true,
+    "private_service_ready": true,
+    "desktop-boot-diagnostic_screen_capture": true,
+    "desktop_shared_session": true,
+    "desktop-window_screen_capture": true,
+    "desktop_keeps_service_pid": true,
+    "failure-screen_screen_capture": true
+  },
+  "screenshots": {
+    "desktop-boot-diagnostic": {
+      "method": "Pillow ImageGrab / XCB root screen, not CDP viewport or fabricated chrome",
+      "display": ":91",
+      "at": "2026-11-11T14:41:21.909Z"
+    },
+    "desktop-window": {
+      "method": "Pillow ImageGrab / XCB root screen, not CDP viewport or fabricated chrome",
+      "display": ":91",
+      "at": "2026-11-11T14:41:23.343Z"
+    },
+    "failure-screen": {
+      "method": "Pillow ImageGrab / XCB root screen, not CDP viewport or fabricated chrome",
+      "display": ":91",
+      "at": "2026-11-11T14:41:33.479Z"
+    }
+  },
+  "timeline": [
+    {
+      "stage": "spawn",
+      "name": "xvfb",
+      "pid": 7,
+      "args": [
+        "/opt/research/ui-tools/usr/bin/Xvfb",
+        ":91",
+        "-screen",
+        "0",
+        "1600x1050x24",
+        "-nolisten",
+        "tcp",
+        "-ac"
+      ],
+      "at": "2026-11-11T14:41:20.343Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "twm",
+      "pid": 11,
+      "args": [
+        "/opt/research/ui-tools/usr/bin/twm",
+        "-f",
+        "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-2eab3407312573633ab9/twmrc"
+      ],
+      "at": "2026-11-11T14:41:20.366Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "service",
+      "pid": 12,
+      "args": [
+        "/opt/agent-cli-report/BP48-VIS-2eab3407312573633ab9/opencode",
+        "serve",
+        "--service",
+        "--hostname",
+        "127.0.0.1",
+        "--port",
+        "0"
+      ],
+      "at": "2026-11-11T14:41:20.366Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "desktop",
+      "pid": 35,
+      "args": [
+        "/opt/research/desktop/ai.opencode",
+        "--ozone-platform=x11",
+        "--no-sandbox",
+        "--disable-gpu",
+        "--disable-dev-shm-usage",
+        "--password-store=basic",
+        "--remote-debugging-port=9333"
+      ],
+      "at": "2026-11-11T14:41:21.026Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "chrome",
+      "pid": 153,
+      "args": [
+        "/opt/google/chrome/chrome",
+        "--ozone-platform=x11",
+        "--no-sandbox",
+        "--disable-gpu",
+        "--disable-dev-shm-usage",
+        "--disable-background-networking",
+        "--disable-sync",
+        "--disable-extensions",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--password-store=basic",
+        "--user-data-dir=/tmp/opencode/agent-cli-report/smoke/BP48-VIS-2eab3407312573633ab9/chrome-profile",
+        "--remote-debugging-port=9444",
+        "--window-position=35,30",
+        "--window-size=1500,950",
+        "about:blank"
+      ],
+      "at": "2026-11-11T14:41:23.351Z"
+    }
+  ],
+  "health": [
+    503,
+    200
+  ],
+  "service_before": {
+    "version": "2.2.5",
+    "pid": 12,
+    "hostname": "VSF-PF64PCNX-L",
+    "urls": [
+      "http://127.0.0.1:38605"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-2eab3407312573633ab9/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "session": {
+    "data": {
+      "id": "ses_e34f1998cffelyoKJDiWr2F2Hs",
+      "projectID": "b9bb031781f24314fe98b28351f2649f4db81f6a",
+      "cost": 0,
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794408081018,
+        "updated": 1794408081018
+      },
+      "title": "REPORT_SHARED_UI_MARKER",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-2eab3407312573633ab9/project"
+      }
+    }
+  },
+  "last_cdp": {
+    "port": 9333,
+    "method": "Runtime.evaluate",
+    "at": "2026-11-11T14:41:22.551Z"
+  },
+  "desktop_boot_document": {
+    "result": {
+      "type": "string",
+      "value": "{\"url\":\"oc://renderer/index.html\",\"ready\":\"interactive\",\"windowID\":\"999fe0f4-0380-4b17-9877-57039664a4a3\"}"
+    }
+  },
+  "browser_errors": [
+    {
+      "port": 9333,
+      "method": "Network.loadingFailed",
+      "params": {
+        "requestId": "102.302",
+        "timestamp": 3443.022438,
+        "type": "Fetch",
+        "errorText": "net::ERR_INTERNET_DISCONNECTED",
+        "canceled": false
+      }
+    },
+    {
+      "port": 9333,
+      "method": "Network.loadingFailed",
+      "params": {
+        "requestId": "102.335",
+        "timestamp": 3443.430069,
+        "type": "Fetch",
+        "errorText": "net::ERR_ABORTED",
+        "canceled": true
+      }
+    }
+  ],
+  "desktop_document": {
+    "result": {
+      "type": "object",
+      "value": {
+        "url": "oc://renderer/index.html",
+        "title": "REPORT_SHARED_UI_MARKER · OpenCode",
+        "text": "P\nREPORT_SHARED_UI_MARKER\nP\nproject\nREPORT_SHARED_UI_MARKER\nAsk anything, / for commands, @ for context…"
+      }
+    }
+  },
+  "desktop_route": "/server/c2lkZWNhcg/session/ses_e34f1998cffelyoKJDiWr2F2Hs",
+  "service_after_desktop": {
+    "version": "2.2.5",
+    "pid": 12,
+    "hostname": "VSF-PF64PCNX-L",
+    "urls": [
+      "http://127.0.0.1:38605"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-2eab3407312573633ab9/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "status": "error",
+  "error": "Error: no page target on private port 9444",
+  "cleanup": [
+    {
+      "pid": 153,
+      "exit": 133
+    },
+    {
+      "pid": 35,
+      "exit": 130
+    },
+    {
+      "pid": 12,
+      "exit": 130
+    },
+    {
+      "pid": 11,
+      "exit": 0
+    },
+    {
+      "pid": 7,
+      "exit": 0
+    }
+  ]
+}

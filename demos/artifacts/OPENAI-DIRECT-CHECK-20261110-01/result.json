@@ -1,0 +1,502 @@
+{
+  "scope": "openai-direct-one-catalog-one-responses-no-retry",
+  "provider": "https://api.openai.com/v1",
+  "model": "gpt-6.1-sol",
+  "started_at_utc": "2026-11-10T15:54:06.167544+00:00",
+  "requests": [
+    {
+      "stage": "catalog",
+      "started_at_utc": "2026-11-10T15:54:06.167570+00:00",
+      "started_monotonic": 7743.766378956,
+      "estimated_cost_usd": null,
+      "http_status": 200,
+      "content_type": "application/json",
+      "provider_request_id": "850a8b8d-8d8b-4924-94e1-570f7e99b441",
+      "model_count": 96,
+      "exact_model_present": true,
+      "pass": true,
+      "status": "pass",
+      "finished_at_utc": "2026-11-10T15:54:07.455375+00:00",
+      "finished_monotonic": 7745.054200273,
+      "duration_ms": 1288
+    },
+    {
+      "stage": "generation",
+      "started_at_utc": "2026-11-10T15:54:37.455537+00:00",
+      "started_monotonic": 7775.05438114,
+      "estimated_cost_usd": null,
+      "payload": {
+        "model": "gpt-6.1-sol",
+        "store": false,
+        "stream": true,
+        "max_output_tokens": 1024,
+        "reasoning": {
+          "effort": "low"
+        },
+        "service_tier": "default",
+        "input": [
+          {
+            "role": "user",
+            "content": "Return exactly REPORT_OPENAI_DIRECT_OK without explanation."
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 16,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 9,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 25
+      },
+      "http_status": 200,
+      "content_type": "text/event-stream; charset=utf-8",
+      "provider_request_id": "req_b9fb7c340e604c28857bec24e8b98723",
+      "events": [
+        {
+          "observed_at_utc": "2026-11-10T15:54:40.940875+00:00",
+          "event": {
+            "type": "response.created",
+            "response": {
+              "id": "resp_0e277a9230b8d817016af33e3f755c87d2a20106e1c9e6c0d3",
+              "object": "response",
+              "created_at": 1794326079,
+              "status": "in_progress",
+              "access_programs": {
+                "cyber": "standard"
+              },
+              "background": false,
+              "completed_at": null,
+              "error": null,
+              "frequency_penalty": 0.0,
+              "image": {
+                "context_compression": "disabled"
+              },
+              "incomplete_details": null,
+              "instructions": null,
+              "max_output_tokens": 1024,
+              "max_tool_calls": null,
+              "model": "gpt-6.1-sol",
+              "moderation": null,
+              "output": [],
+              "parallel_tool_calls": true,
+              "presence_penalty": 0.0,
+              "previous_response_id": null,
+              "prompt_cache_key": null,
+              "prompt_cache_retention": "24h",
+              "reasoning": {
+                "context": "all_turns",
+                "effort": "low",
+                "mode": "standard",
+                "summary": null
+              },
+              "safety_identifier": null,
+              "service_tier": "default",
+              "store": false,
+              "temperature": 1.0,
+              "text": {
+                "format": {
+                  "type": "text"
+                },
+                "verbosity": "medium"
+              },
+              "tool_choice": "auto",
+              "tool_usage": {
+                "image_gen": {
+                  "input_tokens": 0,
+                  "input_tokens_details": {
+                    "image_tokens": 0,
+                    "text_tokens": 0
+                  },
+                  "output_tokens": 0,
+                  "output_tokens_details": {
+                    "image_tokens": 0,
+                    "text_tokens": 0
+                  },
+                  "total_tokens": 0
+                },
+                "web_search": {
+                  "num_requests": 0
+                }
+              },
+              "tools": [],
+              "top_logprobs": 0,
+              "top_p": 0.98,
+              "truncation": "disabled",
+              "usage": null,
+              "user": null,
+              "metadata": {}
+            },
+            "sequence_number": 0
+          }
+        },
+        {
+          "observed_at_utc": "2026-11-10T15:54:40.941035+00:00",
+          "event": {
+            "type": "response.in_progress",
+            "response": {
+              "id": "resp_0e277a9230b8d817016af33e3f755c87d2a20106e1c9e6c0d3",
+              "object": "response",
+              "created_at": 1794326079,
+              "status": "in_progress",
+              "access_programs": {
+                "cyber": "standard"
+              },
+              "background": false,
+              "completed_at": null,
+              "error": null,
+              "frequency_penalty": 0.0,
+              "image": {
+                "context_compression": "disabled"
+              },
+              "incomplete_details": null,
+              "instructions": null,
+              "max_output_tokens": 1024,
+              "max_tool_calls": null,
+              "model": "gpt-6.1-sol",
+              "moderation": null,
+              "output": [],
+              "parallel_tool_calls": true,
+              "presence_penalty": 0.0,
+              "previous_response_id": null,
+              "prompt_cache_key": null,
+              "prompt_cache_retention": "24h",
+              "reasoning": {
+                "context": "all_turns",
+                "effort": "low",
+                "mode": "standard",
+                "summary": null
+              },
+              "safety_identifier": null,
+              "service_tier": "default",
+              "store": false,
+              "temperature": 1.0,
+              "text": {
+                "format": {
+                  "type": "text"
+                },
+                "verbosity": "medium"
+              },
+              "tool_choice": "auto",
+              "tool_usage": {
+                "image_gen": {
+                  "input_tokens": 0,
+                  "input_tokens_details": {
+                    "image_tokens": 0,
+                    "text_tokens": 0
+                  },
+                  "output_tokens": 0,
+                  "output_tokens_details": {
+                    "image_tokens": 0,
+                    "text_tokens": 0
+                  },
+                  "total_tokens": 0
+                },
+                "web_search": {
+                  "num_requests": 0
+                }
+              },
+              "tools": [],
+              "top_logprobs": 0,
+              "top_p": 0.98,
+              "truncation": "disabled",
+              "usage": null,
+              "user": null,
+              "metadata": {}
+            },
+            "sequence_number": 1
+          }
+        },
+        {
+          "observed_at_utc": "2026-11-10T15:54:41.761555+00:00",
+          "event": {
+            "type": "response.output_item.added",
+            "item": {
+              "id": "msg_0e277a9230b8d817016af33e4190f087d2bb09264fb179a826",
+              "type": "message",
+              "status": "in_progress",
+              "content": [],
+              "phase": "final_answer",
+              "role": "assistant"
+            },
+            "output_index": 0,
+            "sequence_number": 2
+          }
+        },
+        {
+          "observed_at_utc": "2026-11-10T15:54:41.761677+00:00",
+          "event": {
+            "type": "response.content_part.added",
+            "content_index": 0,
+            "item_id": "msg_0e277a9230b8d817016af33e4190f087d2bb09264fb179a826",
+            "output_index": 0,
+            "part": {
+              "type": "output_text",
+              "annotations": [],
+              "logprobs": [],
+              "text": ""
+            },
+            "sequence_number": 3
+          }
+        },
+        {
+          "observed_at_utc": "2026-11-10T15:54:41.761735+00:00",
+          "event": {
+            "type": "response.output_text.delta",
+            "content_index": 0,
+            "delta": "REPORT",
+            "item_id": "msg_0e277a9230b8d817016af33e4190f087d2bb09264fb179a826",
+            "logprobs": [],
+            "obfuscation": "GV6eiaIiVr",
+            "output_index": 0,
+            "sequence_number": 4
+          }
+        },
+        {
+          "observed_at_utc": "2026-11-10T15:54:41.761783+00:00",
+          "event": {
+            "type": "response.output_text.delta",
+            "content_index": 0,
+            "delta": "_OPEN",
+            "item_id": "msg_0e277a9230b8d817016af33e4190f087d2bb09264fb179a826",
+            "logprobs": [],
+            "obfuscation": "nhVGCdcaxY1",
+            "output_index": 0,
+            "sequence_number": 5
+          }
+        },
+        {
+          "observed_at_utc": "2026-11-10T15:54:41.761826+00:00",
+          "event": {
+            "type": "response.output_text.delta",
+            "content_index": 0,
+            "delta": "AI",
+            "item_id": "msg_0e277a9230b8d817016af33e4190f087d2bb09264fb179a826",
+            "logprobs": [],
+            "obfuscation": "5cIsGQF8mYGXPk",
+            "output_index": 0,
+            "sequence_number": 6
+          }
+        },
+        {
+          "observed_at_utc": "2026-11-10T15:54:41.761872+00:00",
+          "event": {
+            "type": "response.output_text.delta",
+            "content_index": 0,
+            "delta": "_DIRECT",
+            "item_id": "msg_0e277a9230b8d817016af33e4190f087d2bb09264fb179a826",
+            "logprobs": [],
+            "obfuscation": "4CAxVc6T3",
+            "output_index": 0,
+            "sequence_number": 7
+          }
+        },
+        {
+          "observed_at_utc": "2026-11-10T15:54:41.764120+00:00",
+          "event": {
+            "type": "response.output_text.delta",
+            "content_index": 0,
+            "delta": "_OK",
+            "item_id": "msg_0e277a9230b8d817016af33e4190f087d2bb09264fb179a826",
+            "logprobs": [],
+            "obfuscation": "jg9GOyRno2jhe",
+            "output_index": 0,
+            "sequence_number": 8
+          }
+        },
+        {
+          "observed_at_utc": "2026-11-10T15:54:41.814320+00:00",
+          "event": {
+            "type": "response.output_text.done",
+            "content_index": 0,
+            "item_id": "msg_0e277a9230b8d817016af33e4190f087d2bb09264fb179a826",
+            "logprobs": [],
+            "output_index": 0,
+            "sequence_number": 9,
+            "text": "REPORT_OPENAI_DIRECT_OK"
+          }
+        },
+        {
+          "observed_at_utc": "2026-11-10T15:54:41.831436+00:00",
+          "event": {
+            "type": "response.content_part.done",
+            "content_index": 0,
+            "item_id": "msg_0e277a9230b8d817016af33e4190f087d2bb09264fb179a826",
+            "output_index": 0,
+            "part": {
+              "type": "output_text",
+              "annotations": [],
+              "logprobs": [],
+              "text": "REPORT_OPENAI_DIRECT_OK"
+            },
+            "sequence_number": 10
+          }
+        },
+        {
+          "observed_at_utc": "2026-11-10T15:54:41.831614+00:00",
+          "event": {
+            "type": "response.output_item.done",
+            "item": {
+              "id": "msg_0e277a9230b8d817016af33e4190f087d2bb09264fb179a826",
+              "type": "message",
+              "status": "completed",
+              "content": [
+                {
+                  "type": "output_text",
+                  "annotations": [],
+                  "logprobs": [],
+                  "text": "REPORT_OPENAI_DIRECT_OK"
+                }
+              ],
+              "phase": "final_answer",
+              "role": "assistant"
+            },
+            "output_index": 0,
+            "sequence_number": 11
+          }
+        },
+        {
+          "observed_at_utc": "2026-11-10T15:54:41.831807+00:00",
+          "event": {
+            "type": "response.completed",
+            "response": {
+              "id": "resp_0e277a9230b8d817016af33e3f755c87d2a20106e1c9e6c0d3",
+              "object": "response",
+              "created_at": 1794326079,
+              "status": "completed",
+              "access_programs": {
+                "cyber": "standard"
+              },
+              "background": false,
+              "completed_at": 1794326081,
+              "error": null,
+              "frequency_penalty": 0.0,
+              "image": {
+                "context_compression": "disabled"
+              },
+              "incomplete_details": null,
+              "instructions": null,
+              "max_output_tokens": 1024,
+              "max_tool_calls": null,
+              "model": "gpt-6.1-sol",
+              "moderation": null,
+              "output": [
+                {
+                  "id": "msg_0e277a9230b8d817016af33e4190f087d2bb09264fb179a826",
+                  "type": "message",
+                  "status": "completed",
+                  "content": [
+                    {
+                      "type": "output_text",
+                      "annotations": [],
+                      "logprobs": [],
+                      "text": "REPORT_OPENAI_DIRECT_OK"
+                    }
+                  ],
+                  "phase": "final_answer",
+                  "role": "assistant"
+                }
+              ],
+              "parallel_tool_calls": true,
+              "presence_penalty": 0.0,
+              "previous_response_id": null,
+              "prompt_cache_key": null,
+              "prompt_cache_retention": "24h",
+              "reasoning": {
+                "context": "all_turns",
+                "effort": "low",
+                "mode": "standard",
+                "summary": null
+              },
+              "safety_identifier": null,
+              "service_tier": "default",
+              "store": false,
+              "temperature": 1.0,
+              "text": {
+                "format": {
+                  "type": "text"
+                },
+                "verbosity": "medium"
+              },
+              "tool_choice": "auto",
+              "tool_usage": {
+                "image_gen": {
+                  "input_tokens": 0,
+                  "input_tokens_details": {
+                    "image_tokens": 0,
+                    "text_tokens": 0
+                  },
+                  "output_tokens": 0,
+                  "output_tokens_details": {
+                    "image_tokens": 0,
+                    "text_tokens": 0
+                  },
+                  "total_tokens": 0
+                },
+                "web_search": {
+                  "num_requests": 0
+                }
+              },
+              "tools": [],
+              "top_logprobs": 0,
+              "top_p": 0.98,
+              "truncation": "disabled",
+              "usage": {
+                "input_tokens": 16,
+                "input_tokens_details": {
+                  "cache_write_tokens": 0,
+                  "cached_tokens": 0
+                },
+                "output_tokens": 9,
+                "output_tokens_details": {
+                  "reasoning_tokens": 0
+                },
+                "total_tokens": 25
+              },
+              "user": null,
+              "metadata": {}
+            },
+            "sequence_number": 12
+          }
+        }
+      ],
+      "captured_response_bytes": 6883,
+      "partial_sse_frame": [],
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "text": "REPORT_OPENAI_DIRECT_OK",
+      "checks": {
+        "response_completed": true,
+        "marker_matches": true,
+        "usage_input_output_present": true
+      },
+      "pass": true,
+      "status": "pass",
+      "finished_at_utc": "2026-11-10T15:54:41.832167+00:00",
+      "finished_monotonic": 7779.430985597,
+      "duration_ms": 4377
+    }
+  ],
+  "plan": [
+    {
+      "stage": "catalog",
+      "status": "pass"
+    },
+    {
+      "stage": "generation",
+      "status": "pass"
+    }
+  ],
+  "estimated_cost_usd": null,
+  "measured_charge_usd": null,
+  "native_cli_execution": false,
+  "cost_note": "published OpenAI rates recorded separately; raw usage retained; cachewrite/tier invoice not reconciled",
+  "finished_at_utc": "2026-11-10T15:54:41.835047+00:00",
+  "provider_http_requests": 2,
+  "generation_requests": 1,
+  "status": "pass"
+}

@@ -1,0 +1,33 @@
+{
+  "task_id": "B-03",
+  "scope_ok": true,
+  "changed_files": [
+    "cache.py"
+  ],
+  "invalid_paths": [],
+  "snapshot_sha256": {
+    "test_public.py": "0bd741a682765b9d049ef3f590897e7f3dd24368f4bee00ef30a4056ae7a31bb",
+    "cache.py": "b3e87ff732cd8c02f8f69793ca2b40069e5a445a8f2a2bb82372ba9fd07633c7"
+  },
+  "suites": {
+    "public": {
+      "exit_code": 0,
+      "timed_out": false,
+      "output_limit_exceeded": false,
+      "duration_ms": 64,
+      "stdout": "",
+      "stderr": "test_basic_api (test_public.PublicTests.test_basic_api) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+    },
+    "hidden": {
+      "exit_code": 1,
+      "timed_out": false,
+      "output_limit_exceeded": false,
+      "duration_ms": 64,
+      "stdout": "",
+      "stderr": "test_deadline_replaced_and_zero_ttl (__main__.AcceptanceTests.test_deadline_replaced_and_zero_ttl) ... ok\ntest_expired_purged_before_eviction (__main__.AcceptanceTests.test_expired_purged_before_eviction) ... FAIL\ntest_expiry_boundary (__main__.AcceptanceTests.test_expiry_boundary) ... FAIL\ntest_len_miss_do_not_refresh (__main__.AcceptanceTests.test_len_miss_do_not_refresh) ... ok\ntest_lru_hit_and_overwrite (__main__.AcceptanceTests.test_lru_hit_and_overwrite) ... ok\ntest_none_default_delete_and_instances (__main__.AcceptanceTests.test_none_default_delete_and_instances) ... ok\ntest_state_machine (__main__.AcceptanceTests.test_state_machine) ... FAIL\n\n======================================================================\nFAIL: test_expired_purged_before_eviction (__main__.AcceptanceTests.test_expired_purged_before_eviction)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 53, in test_expired_purged_before_eviction\n    self.assertEqual(self.cache.get(\"a\"), 1)\nAssertionError: None != 1\n\n======================================================================\nFAIL: test_expiry_boundary (__main__.AcceptanceTests.test_expiry_boundary)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 24, in test_expiry_boundary\n    self.assertEqual(self.cache.get(\"a\", \"expired\"), \"expired\")\nAssertionError: 1 != 'expired'\n\n======================================================================\nFAIL: test_state_machine (__main__.AcceptanceTests.test_state_machine)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 110, in test_state_machine\n    self.assertEqual(len(self.cache), len(expected))\nAssertionError: 2 != 1\n\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nFAILED (failures=3)\n"
+    }
+  },
+  "rubric": null,
+  "grader_duration_ms": 131,
+  "pass": false
+}

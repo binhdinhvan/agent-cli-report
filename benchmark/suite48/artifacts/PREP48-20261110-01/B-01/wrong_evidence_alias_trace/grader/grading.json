@@ -1,0 +1,46 @@
+{
+  "task_id": "B-01",
+  "scope_ok": true,
+  "changed_files": [
+    "answer.json"
+  ],
+  "invalid_paths": [],
+  "snapshot_sha256": {
+    "resolver.py": "f38fa2ca2b30092f9a2f2147376274237009b3104c44baf058ce6ca3dcd07613",
+    "aliases.py": "4fa0637ab55f32469c101d45d1a23d110e95e1f890a4dd3398e4d70c861f5da6",
+    "test_public.py": "1c8f8eec89298be555ea8aa30b57e8e7e58ca9ef4244fdca4db5d2af1e3de04e",
+    "answer.json": "232b77f2f28c5a522c0f7fbc9970fe127fdada35d4fc52b18495923b134c8a25",
+    "defaults.py": "dee8dba860bf81ba208cad957eaeb64ab897b475cc00990c94e7a93fde7816e0"
+  },
+  "suites": {
+    "public": {
+      "exit_code": 0,
+      "timed_out": false,
+      "output_limit_exceeded": false,
+      "duration_ms": 65,
+      "stdout": "",
+      "stderr": "test_schema (test_public.PublicTests.test_schema) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+    },
+    "hidden": {
+      "exit_code": 1,
+      "timed_out": false,
+      "output_limit_exceeded": false,
+      "duration_ms": 64,
+      "stdout": "RUBRIC_JSON={\"scores\": {\"default\": 2, \"precedence\": 2, \"alias_trace\": 1, \"cycle_error\": 2, \"mutation\": 2}, \"total\": 9, \"maximum\": 10}\n",
+      "stderr": "test_rubric (__main__.AcceptanceTests.test_rubric) ... FAIL\n\n======================================================================\nFAIL: test_rubric (__main__.AcceptanceTests.test_rubric)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 25, in test_rubric\n    self.assertEqual(sum(scores.values()), 10)\nAssertionError: 9 != 10\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (failures=1)\n"
+    }
+  },
+  "rubric": {
+    "scores": {
+      "default": 2,
+      "precedence": 2,
+      "alias_trace": 1,
+      "cycle_error": 2,
+      "mutation": 2
+    },
+    "total": 9,
+    "maximum": 10
+  },
+  "grader_duration_ms": 133,
+  "pass": false
+}

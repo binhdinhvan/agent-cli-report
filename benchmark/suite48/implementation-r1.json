@@ -1,0 +1,31 @@
+{
+  "implementation_revision": "suite48-fixture-v1-grader-r2-20261110",
+  "status": "fixture_and_offline_grader_acceptance_passed",
+  "suite_design_reference": "benchmark/suite48/manifest.json",
+  "fixture_version": 1,
+  "tasks": ["B-01", "B-02", "B-03", "B-04"],
+  "seal": "benchmark/suite48/artifacts/PREP48-20261110-02/preparation.json",
+  "seal_sha256": "c764030de720d528fad2e6ae8e5ccfaacad776786fb3fe22f843c3531cfad3c6",
+  "offline_variant_checks_passed": 44,
+  "positive_cases": 6,
+  "baseline_negative_cases": 4,
+  "mutant_negative_cases": 34,
+  "additional_sandbox_scope_regression_tests": 7,
+  "agent_visible": "Only each B-*/fixture tree and that task prompt; public tests read-only",
+  "supervisor_only": "hidden acceptance/oracle, suite48_solutions.py, snapshots, logs and implementation artifacts",
+  "grading": "CLI completion is required in a future paid runner; current self-tests only run trusted stdlib writers",
+  "b01_success": "10/10 structured rubric, valid schema and file scope; partial scores not success",
+  "b04_delegation": "Actual call trace accepts module imports, from-import aliases and cached handler registry; no single required import style",
+  "distribution_license": "pending user decision; synthetic workspace-authored code, no upstream license assigned",
+  "native_paid_runner_integration_ready": false,
+  "benchmark_protocol_approved": false,
+  "budget_approved_usd": null,
+  "paid_runs_authorized": false,
+  "run_ids_reserved": false,
+  "remaining_gates": [
+    "Integrate task preparation/grading adapter with the four native CLI launch/config/broker paths and check offline",
+    "Verify model/provider guard, usage/classification, duration boundary and slot-to-R/C mapping in that adapter",
+    "Record fresh host resource snapshot/limits and launch config hashes",
+    "Review final task/protocol and approve new estimated budget explicitly before inference"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "task_id": "B-03",
+  "scope_ok": true,
+  "changed_files": [
+    "cache.py"
+  ],
+  "invalid_paths": [],
+  "snapshot_sha256": {
+    "test_public.py": "0bd741a682765b9d049ef3f590897e7f3dd24368f4bee00ef30a4056ae7a31bb",
+    "cache.py": "940c4504c6ca45821637aa67a0922890917eab699e7d5b4f7d1adce1a6c9dddf"
+  },
+  "suites": {
+    "public": {
+      "exit_code": 0,
+      "timed_out": false,
+      "output_limit_exceeded": false,
+      "duration_ms": 64,
+      "stdout": "",
+      "stderr": "test_basic_api (test_public.PublicTests.test_basic_api) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+    },
+    "hidden": {
+      "exit_code": 0,
+      "timed_out": false,
+      "output_limit_exceeded": false,
+      "duration_ms": 64,
+      "stdout": "",
+      "stderr": "test_deadline_replaced_and_zero_ttl (__main__.AcceptanceTests.test_deadline_replaced_and_zero_ttl) ... ok\ntest_expired_purged_before_eviction (__main__.AcceptanceTests.test_expired_purged_before_eviction) ... ok\ntest_expiry_boundary (__main__.AcceptanceTests.test_expiry_boundary) ... ok\ntest_len_miss_do_not_refresh (__main__.AcceptanceTests.test_len_miss_do_not_refresh) ... ok\ntest_lru_hit_and_overwrite (__main__.AcceptanceTests.test_lru_hit_and_overwrite) ... ok\ntest_none_default_delete_and_instances (__main__.AcceptanceTests.test_none_default_delete_and_instances) ... ok\ntest_state_machine (__main__.AcceptanceTests.test_state_machine) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nOK\n"
+    }
+  },
+  "rubric": null,
+  "grader_duration_ms": 132,
+  "pass": true
+}

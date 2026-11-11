@@ -1,0 +1,71 @@
+{
+  "scope": "offline summary/freeze audit; no key read or CLI/provider calls",
+  "tests": [
+    {
+      "suite": "demos/test_timing_policy.py",
+      "tests_passed": 6,
+      "exit_code": 0,
+      "log": "test_timing_policy.txt"
+    },
+    {
+      "suite": "demos/test_environment_profile.py",
+      "tests_passed": 4,
+      "exit_code": 0,
+      "log": "test_environment_profile.txt"
+    },
+    {
+      "suite": "benchmark/test_pilot.py",
+      "tests_passed": 19,
+      "exit_code": 0,
+      "log": "test_pilot.txt"
+    },
+    {
+      "suite": "demos/test_provider_stop.py",
+      "tests_passed": 4,
+      "exit_code": 0,
+      "log": "test_provider_stop.txt"
+    },
+    {
+      "suite": "demos/test_pacing.py",
+      "tests_passed": 5,
+      "exit_code": 0,
+      "log": "test_pacing.txt"
+    },
+    {
+      "suite": "demos/test_model_smoke.py",
+      "tests_passed": 7,
+      "exit_code": 0,
+      "log": "test_model_smoke.txt"
+    },
+    {
+      "suite": "demos/test_provider_pricing.py",
+      "tests_passed": 5,
+      "exit_code": 0,
+      "log": "test_provider_pricing.txt"
+    },
+    {
+      "suite": "benchmark/test_freeze_pilot.py",
+      "tests_passed": 3,
+      "exit_code": 0,
+      "log": "test_freeze_pilot.txt"
+    }
+  ],
+  "tests_passed": 53,
+  "freeze_verify": "pass",
+  "documentation_links": "pass",
+  "new_artifact_secret_pattern_scan": "pass; heuristic, not a publication safety guarantee",
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "paid_runs_ready": false,
+  "new_inference_authorized": false,
+  "frozen_output_sha256": {
+    "SUMMARY.md": "369824a7f3671a1a8551b74caf1784b0b2c360449bcce22149d8a6dce255e9fd",
+    "baseline.json": "f430dfa96d231d1c26728d57e0602147f7caf4a1fd969254677b31d86e5ecba2",
+    "summary.json": "ace207bcac065b772c7b4b0c1148980a944d3bdeff2f52c3cfbc2d4e4f5675d9"
+  },
+  "unchanged_inputs_count": 201
+}

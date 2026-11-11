@@ -1,0 +1,96 @@
+{
+  "suite": "suite48-draft-r1",
+  "status": "specification_only_not_ready_for_paid_runs",
+  "design_selected": "4 tasks x 4 CLIs x 3 repetitions = 48 planned slots",
+  "fixture_origin": "Proposed supervisor-authored synthetic Python stdlib fixtures; not third-party source",
+  "distribution_license": "pending user decision",
+  "fixture_version_proposed": 1,
+  "fixture_seal": null,
+  "acceptance_selftest": "pending",
+  "tools": ["opencode-v1", "opencode-v2", "codex", "pi"],
+  "repetitions": 3,
+  "tasks": [
+    {
+      "id": "B-01",
+      "category": "code_understanding",
+      "prompt": "B-01/prompt.txt",
+      "fixture_proposed": ["resolver.py", "aliases.py", "defaults.py", "test_public.py"],
+      "allowed_changes": ["answer.json"],
+      "grading": "10-point structured oracle; success requires 10/10, valid JSON, scope and CLI completion",
+      "answer_schema": {
+        "default": {"value": "JSON value", "evidence": ["path.py:symbol"]},
+        "precedence": {"value": ["source names highest to lowest"], "evidence": ["path.py:symbol"]},
+        "alias_trace": {"value": ["names in processing order"], "evidence": ["path.py:symbol"]},
+        "cycle_error": {"type": "exception class", "message": "exact text", "evidence": ["path.py:symbol"]},
+        "mutation": {"value": "boolean", "evidence": ["path.py:symbol"]}
+      },
+      "rubric": [
+        "default: correct value 1 point; valid evidence reference 1 point",
+        "precedence: correct complete order 1 point; valid evidence reference 1 point",
+        "alias_trace: correct complete trace 1 point; valid evidence reference 1 point",
+        "cycle_error: correct type AND message 1 point; valid evidence reference 1 point",
+        "mutation: correct boolean 1 point; valid evidence reference 1 point"
+      ],
+      "acceptance_matrix": [
+        "Missing/malformed JSON, duplicate keys, missing/unknown fields and wrong JSON types rejected",
+        "Exact expected values/trace/error from pinned fixture; array order significant",
+        "References validated against per-question allowlist of real path:symbol; not free-text keyword matching",
+        "Partial scores reported but not counted as success",
+        "No modification of source/public tests; answer-only scope enforced"
+      ],
+      "pending": ["fixture behavior and actual oracle values", "public schema validator", "hidden rubric/reference/mutants", "grader integration"]
+    },
+    {
+      "id": "B-02",
+      "category": "bug_fix",
+      "prompt": "B-02/prompt.txt",
+      "fixture_proposed": ["pagination.py", "test_public.py"],
+      "allowed_changes": ["pagination.py"],
+      "grading": "scope + public + hidden + CLI completion",
+      "acceptance_matrix": [
+        "Empty outer iterable and empty pages",
+        "List and one-shot generator inputs; consume each exactly once",
+        "First appearance determines output position; last duplicate supplies full record",
+        "Replacement is not a merge of old and new fields",
+        "No mutation of pages/records; output dictionaries are independent shallow copies",
+        "Repeated calls do not share state; duplicate IDs within and across pages"
+      ],
+      "pending": ["fixture implementation", "public/hidden tests", "reference/mutants", "seal"]
+    },
+    {
+      "id": "B-03",
+      "category": "feature",
+      "prompt": "B-03/prompt.txt",
+      "fixture_proposed": ["cache.py", "test_public.py"],
+      "allowed_changes": ["cache.py"],
+      "grading": "scope + public + hidden + CLI completion",
+      "acceptance_matrix": [
+        "No-TTL entries persist; expiry at now >= deadline including equality",
+        "Injected nondecreasing clock only; no real sleeping/time dependence",
+        "LRU eviction; hit and set refresh recency, miss and len do not",
+        "Expired entries purged before capacity enforcement and len",
+        "Overwrite updates value/deadline/recency without increasing live size",
+        "ttl <= 0 removes existing key and stores nothing",
+        "None value, custom default, delete hit/miss/expired and independent instances"
+      ],
+      "pending": ["fixture implementation", "public/hidden tests", "reference/mutants", "seal"]
+    },
+    {
+      "id": "B-04",
+      "category": "multi_file_refactor",
+      "prompt": "B-04/prompt.txt",
+      "fixture_proposed": ["router.py", "models.py", "service.py", "test_public.py"],
+      "allowed_changes": ["router.py", "routing/__init__.py", "routing/validation.py", "routing/handlers.py"],
+      "grading": "scope + behavior regression + structural contract + CLI completion",
+      "acceptance_matrix": [
+        "Existing router.dispatch signature/import path preserved",
+        "create/update/delete success, validation failures and unknown command match frozen old behavior",
+        "Returned values, exception types/messages, mutation and independent-call behavior preserved",
+        "routing.validation.validate_payload and routing.handlers.handle_create/handle_update/handle_delete callable directly",
+        "Dispatcher delegates to new functions; not unused duplicate modules or behavior left entirely in old dispatcher",
+        "No module import side effects or new dependencies"
+      ],
+      "pending": ["fixture behavior/API of new functions", "public/hidden behavioral corpus", "AST/delegation checks without style bias", "reference/mutants", "runner supports allowed new files", "seal"]
+    }
+  ]
+}

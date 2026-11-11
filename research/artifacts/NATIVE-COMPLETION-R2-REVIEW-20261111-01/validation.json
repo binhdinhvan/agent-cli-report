@@ -1,0 +1,280 @@
+{
+  "status": "pass",
+  "accepted_native_checks": {
+    "NATIVE-BG-SERVICE-RECOVERY-20261111-04": {
+      "managed_service_authenticated_info": true,
+      "subscribed_before_prompt": true,
+      "native_background_tool_returned": true,
+      "parent_marker_before_wait": true,
+      "background_private_server_pid_changed": true,
+      "native_cancelled_notice_after_restart": true
+    },
+    "NATIVE-SUBAGENT-RECOVERY-20261111-01": {
+      "managed_service_authenticated_info": true,
+      "subscribed_before_prompt": true,
+      "background_subagent_session_returned": true,
+      "subagent_parent_lineage": true,
+      "subagent_private_service_pid_changed": true,
+      "subagent_lineage_survives_restart": true,
+      "child_marker_returned": true,
+      "child_inference_requested_again_after_crash": true,
+      "child_completion_delivered_to_parent": true
+    },
+    "NATIVE-V1-PERMISSION-API-20261111-01": {
+      "subscribed_before_prompt": true,
+      "turn_0_witness": true,
+      "turn_0_ask_scope": true,
+      "turn_1_witness": true,
+      "turn_1_ask_scope": true,
+      "turn_2_witness": true,
+      "turn_2_ask_scope": true,
+      "turn_3_witness": true,
+      "turn_3_ask_scope": true,
+      "turn_4_witness": true,
+      "turn_4_ask_scope": true,
+      "turn_5_witness": true,
+      "turn_5_ask_scope": true,
+      "all_pending_settled": true
+    },
+    "NATIVE-V1-SUBAGENT-20261111-03": {
+      "subscribed_before_prompt": true,
+      "native_background_task_returned": true,
+      "child_completion_in_parent": true,
+      "parent_continues_before_child": true
+    },
+    "NATIVE-CLIENT-FAILURES-20261111-01": {
+      "subscribed_before_prompt": true,
+      "scripted_http400_native_terminal_failed": true,
+      "provider_error_marker_retained": true,
+      "wait_timeout_rejects_request": true,
+      "wait_timeout_does_not_finish_execution": true,
+      "native_interrupt_reaches_idle": true,
+      "native_interrupt_not_success": true,
+      "client_missing_auth_rejected": true
+    },
+    "NATIVE-SDK-FAILURES-20261111-01": {
+      "real_home_hidden": true,
+      "provider_key_absent": true,
+      "scripted_http400_native_terminal_failed": true,
+      "provider_error_marker_retained": true,
+      "wait_timeout_rejects_request": true,
+      "wait_timeout_does_not_finish_execution": true,
+      "native_interrupt_reaches_idle": true,
+      "native_interrupt_not_success": true,
+      "explicit_host_close_returned": true
+    },
+    "NATIVE-UNMATCHED-PERMISSION-20261111-02": {
+      "subscribed_before_prompt": true,
+      "test_action_has_no_configured_match": true,
+      "unmatched_fallback_ask": true,
+      "once_does_not_persist": true,
+      "unmatched_pending_settled": true
+    },
+    "NATIVE-SHARED-UI-20261111-05": {
+      "private_service_ready": true,
+      "native_desktop_renderer_created": true,
+      "desktop_renders_shared_session": true,
+      "desktop_did_not_replace_private_service": true,
+      "web_renders_same_session": true,
+      "tui_renders_same_session": true,
+      "all_clients_use_original_service_pid": true
+    }
+  },
+  "legacy_v1_permission_config_on_v2_cases": 5,
+  "v1_subagent_lineage_verified": true,
+  "resume_budget_review": "research/artifacts/NATIVE-RESUME-BUDGET-REVIEW-20261111-01/validation.json",
+  "budget_claim_released_and_counter_reset": true,
+  "native_screenshots": [
+    "desktop.png",
+    "web.png"
+  ],
+  "shared_ui_limits": "Web app rendered by native Electron Chromium navigating to service URL; desktop headless; TUI raw PTY, not an emulator screenshot; no live-user display or service accessed",
+  "raw_artifact_sha256": {
+    "demos/artifacts/NATIVE-BG-SERVICE-RECOVERY-20261111-04/manifest.json": "9154a1c248ed5f2f2a0226b80756b199695418b893f0377b4eb6818ae168b309",
+    "demos/artifacts/NATIVE-BG-SERVICE-RECOVERY-20261111-04/client-server.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-BG-SERVICE-RECOVERY-20261111-04/client-result.json": "8f50804b0025beb2361b176b3a65c44b61ace3998dfad7b315aedb8236f57537",
+    "demos/artifacts/NATIVE-BG-SERVICE-RECOVERY-20261111-04/stdout.txt": "c07f6766fd766b78ee7d364576a09748be6ada7c6b074c53bf3b8fd2a1003337",
+    "demos/artifacts/NATIVE-BG-SERVICE-RECOVERY-20261111-04/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-BG-SERVICE-RECOVERY-20261111-04/demo-progress.json": "8401deb50cf302b7401940420b67f7e4efb5b58ae6d0d8aca30f75be10d82a08",
+    "demos/artifacts/NATIVE-BG-SERVICE-RECOVERY-20261111-04/source/client_runtime.py": "2ff9e6c00b9a2c735a4bdd299494e234c46bda737d7a9ddc551720ed6e254f1d",
+    "demos/artifacts/NATIVE-BG-SERVICE-RECOVERY-20261111-04/source/client_runtime_inside.ts": "2a405f6cfae9d45f03f008bbfb0d747da0f492fda4c02f9e2c8003e72856a5c3",
+    "demos/artifacts/NATIVE-V1-SUBAGENT-20261111-03/manifest.json": "32981c65dfbf479f4b551789d7347064ad4e86e097816eb0550ba67f1e1107c2",
+    "demos/artifacts/NATIVE-V1-SUBAGENT-20261111-03/v1-server.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-V1-SUBAGENT-20261111-03/stdout.txt": "64209d50a27b003bc536343d9b4fe3a37d3e27233d9d50c556e2f21554dff713",
+    "demos/artifacts/NATIVE-V1-SUBAGENT-20261111-03/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-V1-SUBAGENT-20261111-03/v1-result.json": "4e347cdd4876f060c96781efc663458af1c790d36c5b338f8361fab365acdab0",
+    "demos/artifacts/NATIVE-V1-SUBAGENT-20261111-03/source/v1_runtime.py": "6848c356d30dac52b3f6b546b79cf67cc2a8d9bdf6ff015e2fecbe8ec586fbba",
+    "demos/artifacts/NATIVE-V1-SUBAGENT-20261111-03/source/v1_runtime_inside.ts": "3639e4cebe108f96834ed9adb15bc36e4c63fcbbc76bcee8f1835852809f14e3",
+    "demos/artifacts/NATIVE-UNMATCHED-PERMISSION-20261111-02/manifest.json": "da9939df05bb4f5616092c4d9a2e304dd3db4fe434e19ab5a6a53c40752be74c",
+    "demos/artifacts/NATIVE-UNMATCHED-PERMISSION-20261111-02/client-server.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-UNMATCHED-PERMISSION-20261111-02/client-result.json": "50b05cc2f31c8cf7d2a973b4098ef33913873f7b28a5f165e9dae259b646fc45",
+    "demos/artifacts/NATIVE-UNMATCHED-PERMISSION-20261111-02/stdout.txt": "b9289103d13a6d671bd639571700c87a92ef77b744992c644760368b88dedf90",
+    "demos/artifacts/NATIVE-UNMATCHED-PERMISSION-20261111-02/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-UNMATCHED-PERMISSION-20261111-02/source/client_runtime.py": "29c8810500a689a07380cbe9bcb98673a3822f6fbc5187b94af5a8db26fd62ca",
+    "demos/artifacts/NATIVE-UNMATCHED-PERMISSION-20261111-02/source/unmatched_permissions_v2.js": "8b17817822a2c2387948a814bf95f5a5bf3504696bd64a2f6aae8eb6efc43eb8",
+    "demos/artifacts/NATIVE-UNMATCHED-PERMISSION-20261111-02/source/client_runtime_inside.ts": "c8f4cc28471e67fc1024421bd47ad40f870e79b116d9110ad73831aaeecfa8d7",
+    "demos/artifacts/NATIVE-UNMATCHED-PERMISSION-20261111-02/source/failure_matrix.ts": "28e2cad82ea39a57c020708f7c905f9c88c9dd2c78a2bfe51b4fff9179788db9",
+    "demos/artifacts/NATIVE-V1-PERMISSION-API-20261111-01/manifest.json": "f5cf4f1092db45d0ea123548e6f8d9533e497b8d3b99ea0b05ce6062594b76d0",
+    "demos/artifacts/NATIVE-V1-PERMISSION-API-20261111-01/v1-server.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-V1-PERMISSION-API-20261111-01/stdout.txt": "de8597ea3631b0fba725da453b00b9dc296fd5d70b235c317e0833855a6ff2de",
+    "demos/artifacts/NATIVE-V1-PERMISSION-API-20261111-01/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-V1-PERMISSION-API-20261111-01/v1-result.json": "2b2e9464a620176b4e19af3317ba6a358dd18f6b938548092df6a99e634f91d5",
+    "demos/artifacts/NATIVE-V1-PERMISSION-API-20261111-01/source/v1_runtime.py": "6848c356d30dac52b3f6b546b79cf67cc2a8d9bdf6ff015e2fecbe8ec586fbba",
+    "demos/artifacts/NATIVE-V1-PERMISSION-API-20261111-01/source/v1_runtime_inside.ts": "473cbe2c317a6dbf7a68862fd1c42fbe604989ad76bb7cf36d327cd12fddbe84",
+    "demos/artifacts/NATIVE-SUBAGENT-RECOVERY-20261111-01/manifest.json": "71e435489718c7e474eaed9225b9e0dbba6a6025152c671f26b59b742ddd3ad4",
+    "demos/artifacts/NATIVE-SUBAGENT-RECOVERY-20261111-01/client-server.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-SUBAGENT-RECOVERY-20261111-01/client-result.json": "05ebc2fcf565fc52297ec69c1b272be8e68f31393338cb15b1ae85e2f5fbad8c",
+    "demos/artifacts/NATIVE-SUBAGENT-RECOVERY-20261111-01/stdout.txt": "b025bf9a53963e9abac9686c3a386b3b6d63fc9292b1b30c82012aa21a29da62",
+    "demos/artifacts/NATIVE-SUBAGENT-RECOVERY-20261111-01/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-SUBAGENT-RECOVERY-20261111-01/demo-progress.json": "7b92183641c904a6fe49ea4aaba18c6d11e0b715e1f0dfafef4de6d4cd32401a",
+    "demos/artifacts/NATIVE-SUBAGENT-RECOVERY-20261111-01/source/client_runtime.py": "5ded9f19ddf00704096eb7630640f50bf8ceeef73f496417fc56d3917dc18a3e",
+    "demos/artifacts/NATIVE-SUBAGENT-RECOVERY-20261111-01/source/client_runtime_inside.ts": "08d0889b66be436296baae0fcf6f4aec5f02995d9c78e85e9e764d33356de19a",
+    "demos/artifacts/NATIVE-SDK-FAILURES-20261111-01/manifest.json": "631cd203e377841a5601b8c56c8a9a0e4167601d27f1544d4bb3d3e6fcc92aa3",
+    "demos/artifacts/NATIVE-SDK-FAILURES-20261111-01/sdk-result.json": "223e58fbfee00f1883fa9b021078b72266dc09e814413727010d38c2a69d4a53",
+    "demos/artifacts/NATIVE-SDK-FAILURES-20261111-01/stdout.txt": "ee0050e9da22d81b88f2954d3221037bfffa9fdc1260aa1447b7d03e50206b14",
+    "demos/artifacts/NATIVE-SDK-FAILURES-20261111-01/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-SDK-FAILURES-20261111-01/source/sdk_runtime.py": "1dc2b990aaf6ab25803da62ce90a8f48bcacfda3a0888caeb0cc6b45417f6b08",
+    "demos/artifacts/NATIVE-SDK-FAILURES-20261111-01/source/sdk_runtime_inside.ts": "9a613f67892d9ae17319843cddafb998e0e9c25e4df7caa28dfe1322790c9b02",
+    "demos/artifacts/NATIVE-SDK-FAILURES-20261111-01/source/failure_matrix.ts": "28e2cad82ea39a57c020708f7c905f9c88c9dd2c78a2bfe51b4fff9179788db9",
+    "demos/artifacts/NATIVE-SHARED-UI-20261111-05/tui-result.json": "ee56c4c985768f063bd0366f8624a2e3fc617ebaa9e5b6c6ed189099d83aace3",
+    "demos/artifacts/NATIVE-SHARED-UI-20261111-05/tui-pty.ansi": "007cac684d3ae73fd7e5430aed7fcf0d465d4e0d411989b7a42d23e918250575",
+    "demos/artifacts/NATIVE-SHARED-UI-20261111-05/manifest.json": "919ced47de54e04c34b596e19f797f834f482bda2e322b36736a8cf8ede423ca",
+    "demos/artifacts/NATIVE-SHARED-UI-20261111-05/web.png": "63f0a76ffaf38f844f12c6c29a998fda4755f8e972614ac46999e51e569761a4",
+    "demos/artifacts/NATIVE-SHARED-UI-20261111-05/desktop-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-SHARED-UI-20261111-05/ui-result.json": "ba8f794fc32ce187cddea9659c755a03e82e867ec4647518ad2bb6c9e2bdee5b",
+    "demos/artifacts/NATIVE-SHARED-UI-20261111-05/desktop.png": "4c0f4d5e3ef3d394377d4c33fe50c9d3df24952562d7df3695b44673040cc352",
+    "demos/artifacts/NATIVE-SHARED-UI-20261111-05/desktop-stderr.txt": "3ab84860c091a9b8e33c2e7616e885d8d9d0953a644c507d933161b794197411",
+    "demos/artifacts/NATIVE-SHARED-UI-20261111-05/stdout.txt": "504176664b5896a9609f0e3b7ed5ac12be7f92b528cfb794b03f4313ce183a2c",
+    "demos/artifacts/NATIVE-SHARED-UI-20261111-05/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-SHARED-UI-20261111-05/ui-server.log": "e6e7354b396bd5cf537a1448da85099d7e99deaf1ab6d2518c8d892388ad2f17",
+    "demos/artifacts/NATIVE-SHARED-UI-20261111-05/source/tui_pty_inside.py": "f089211768dd4c3b2cf03ddf31819e9739377f251e5a4db3bc7e0913bbc84de3",
+    "demos/artifacts/NATIVE-SHARED-UI-20261111-05/source/ui_runtime.py": "3902e7af2aabcfa340373e96cd9fbfef3c4f8f9cfb0b8b02e84b7245c61d71e6",
+    "demos/artifacts/NATIVE-SHARED-UI-20261111-05/source/ui_runtime_inside.ts": "00a0f2fad1ef37dc4f24a359ef3b368f38ce91800a05b87a6175ec7c75071312",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/summary.json": "fbc3bae71eef8b682c0440fbb5b3566d5d3c52adb5a87aab4c5fea2ae450e1e9",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-ask/stdout.jsonl": "762b4561e3a884b9494e76c0a094cfeb8d34820b6e068ea0fc675f8d8debb766",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-ask/isolated-server.log": "4f4cf98a414e2c097bf088902902afdd45e272d5b15740cbd0a1368b630fd6f8",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-ask/result.json": "47ee8d97d53d67c2ec5cb042ae6d9289d266f8f04389f83b3a7e5cff39205185",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-ask/stderr.txt": "215a2cead14cdfaad21e942b69dc41e767a7539ddb605d3e0c8620d30b1088d1",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-overlap-allow/stdout.jsonl": "bb415125661cae0366b31b2fc416a597976cf810c688924eceba7a51989c6341",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-overlap-allow/isolated-server.log": "a47e43d81a5090936bdac6b77e2c17bc289c69094f8613ed191d1d7a2ebe87bf",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-overlap-allow/result.json": "ad9749479f695287e359a8457a0c827dea097ed2dae150469abef99ef37b0e20",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-overlap-allow/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-deny/stdout.jsonl": "3610e71fc0e34ccd1339b67a78c719471062938cf0a207de89c3182c50f43a21",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-deny/isolated-server.log": "f82d1905bc27db1cb95dd3fe39085fe565eae3d1b97cd45c270b4d81012f4471",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-deny/result.json": "5e4e7bda45ace86b4e3cca29f36c71eb6fcfc28f95371bd48003f4129db7d60c",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-deny/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-allow/stdout.jsonl": "888c52c20d0fbee61899c2df59bd143a45e2c130cbae93038e940289059fb8c5",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-allow/isolated-server.log": "3713f1cda9cd76bce7d04b2e5826ea17b6c5a69ce1dfe01f19c8599539570f9e",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-allow/result.json": "1e628419a159ed02053da50b1d8ce1c4c3a18f1e4e44df729e22df7926d9c90b",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-allow/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-overlap-deny/stdout.jsonl": "f233c40e0e4e874fe57844270878d6b31734284f44ceccfdfa0a2e3647728812",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-overlap-deny/isolated-server.log": "c38fc5feac4d0ee5f3291d0a37d28fa8151610f5221970ec6e8c5fff571e2190",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-overlap-deny/result.json": "fe2e8da5d934e0d4ca7726b71c7192f73faa73ae8eb7e991acc4cc0a89478b91",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/PM-opencode-v2-overlap-deny/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/source/demos/native_demo_round1.py": "5231e57bf606e08f329d4c5db52a88caf1cd29e04b2ba7e7502912c3efab4840",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/source/demos/NATIVE_DEMO_ROUND1.md": "48baeeefe339bc0efc5448d4ff35aa2cee9c3c37ca45f0fdd527ee1078d6641a",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/source/demos/fixtures/plugin_v2.js": "5112e664e0d6fc80239e9df33b3953e72a8dc05f074a9530008825d2099a84ef",
+    "demos/artifacts/NATIVE-V1CONFIG-ON-V2-20261111-01/source/demos/fixtures/plugin_v1.js": "7b69d3b4194368b92f7da37537efbadb5be42c7a7d7e38675a18a1a55fc40c58",
+    "demos/artifacts/NATIVE-CLIENT-FAILURES-20261111-01/manifest.json": "6a5bdd295eb314bbaeaca68eeee5194a694f956d98baa6915cb88781851080f8",
+    "demos/artifacts/NATIVE-CLIENT-FAILURES-20261111-01/client-server.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-CLIENT-FAILURES-20261111-01/client-result.json": "7d2e5de1f2705837fa50598ad8e4adc9003e6d0c1773d166e2d6cef81a55f2fd",
+    "demos/artifacts/NATIVE-CLIENT-FAILURES-20261111-01/stdout.txt": "a7f9f79cb174cedd64251d51e9d416c9505a15498b2a468a190222e090ce14e5",
+    "demos/artifacts/NATIVE-CLIENT-FAILURES-20261111-01/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-CLIENT-FAILURES-20261111-01/source/client_runtime.py": "d0624399464d7f95677356ef89c78e9d50029198727e7e602ebb28fdf54e99ea",
+    "demos/artifacts/NATIVE-CLIENT-FAILURES-20261111-01/source/client_runtime_inside.ts": "6b4a2ada825001608889220837ba457ef363264ad97498c0e12ac716a3da8e21",
+    "demos/artifacts/NATIVE-CLIENT-FAILURES-20261111-01/source/failure_matrix.ts": "28e2cad82ea39a57c020708f7c905f9c88c9dd2c78a2bfe51b4fff9179788db9",
+    "demos/artifacts/NATIVE-RESUME-BUDGET-20261111-01/manifest.json": "5b717815f958f41b0d1447dd8a21da14de4fac7011a0b805f637b8f3669c8a92",
+    "demos/artifacts/NATIVE-RESUME-BUDGET-20261111-01/client-server.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-RESUME-BUDGET-20261111-01/client-result.json": "07d738357685d184a663302d31fb4e3efcf99a764cd268b3799f9bad309fad2b",
+    "demos/artifacts/NATIVE-RESUME-BUDGET-20261111-01/stdout.txt": "e72c43d7f1038b15a3d1c4c3a17c4ab662d653146f9cd00493bc46568f28e66f",
+    "demos/artifacts/NATIVE-RESUME-BUDGET-20261111-01/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "demos/artifacts/NATIVE-RESUME-BUDGET-20261111-01/demo-progress.json": "e65a8685a8e4f4bff570502a4649b706e6a67f8b8acf14f65f89f290d5b240da",
+    "demos/artifacts/NATIVE-RESUME-BUDGET-20261111-01/source/client_runtime.py": "6b1ce44dcf38b93b982a422ac405655aeb56b48ec84eee25f6ddd98d574d3ae3",
+    "demos/artifacts/NATIVE-RESUME-BUDGET-20261111-01/source/client_runtime_inside.ts": "c236f6bdf63c501ec720d4143140de6ed1ce9e861f3307fcc786e1fd3c3aad50"
+  },
+  "attempts_retained": [
+    {
+      "artifact": "NATIVE-BG-SERVICE-RECOVERY-20261111-01",
+      "accepted": false
+    },
+    {
+      "artifact": "NATIVE-BG-SERVICE-RECOVERY-20261111-02",
+      "accepted": false
+    },
+    {
+      "artifact": "NATIVE-BG-SERVICE-RECOVERY-20261111-03",
+      "accepted": false
+    },
+    {
+      "artifact": "NATIVE-BG-SERVICE-RECOVERY-20261111-04",
+      "accepted": true
+    },
+    {
+      "artifact": "NATIVE-CLIENT-FAILURES-20261111-01",
+      "accepted": true
+    },
+    {
+      "artifact": "NATIVE-RESUME-BUDGET-20261111-01",
+      "accepted": true
+    },
+    {
+      "artifact": "NATIVE-SDK-FAILURES-20261111-01",
+      "accepted": true
+    },
+    {
+      "artifact": "NATIVE-SHARED-UI-20261111-01",
+      "accepted": false
+    },
+    {
+      "artifact": "NATIVE-SHARED-UI-20261111-02",
+      "accepted": false
+    },
+    {
+      "artifact": "NATIVE-SHARED-UI-20261111-03",
+      "accepted": false
+    },
+    {
+      "artifact": "NATIVE-SHARED-UI-20261111-04",
+      "accepted": false
+    },
+    {
+      "artifact": "NATIVE-SHARED-UI-20261111-05",
+      "accepted": true
+    },
+    {
+      "artifact": "NATIVE-SUBAGENT-RECOVERY-20261111-01",
+      "accepted": true
+    },
+    {
+      "artifact": "NATIVE-UNMATCHED-PERMISSION-20261111-01",
+      "accepted": false
+    },
+    {
+      "artifact": "NATIVE-UNMATCHED-PERMISSION-20261111-02",
+      "accepted": true
+    },
+    {
+      "artifact": "NATIVE-V1-PERMISSION-API-20261111-01",
+      "accepted": true
+    },
+    {
+      "artifact": "NATIVE-V1-SUBAGENT-20261111-01",
+      "accepted": false
+    },
+    {
+      "artifact": "NATIVE-V1-SUBAGENT-20261111-02",
+      "accepted": false
+    },
+    {
+      "artifact": "NATIVE-V1-SUBAGENT-20261111-03",
+      "accepted": true
+    }
+  ],
+  "benchmark48_and_round1_raw_unchanged": true,
+  "registry": [
+    "R-0378",
+    "C-0479"
+  ],
+  "real_provider_requests": 0,
+  "credential_file_reads": 0
+}

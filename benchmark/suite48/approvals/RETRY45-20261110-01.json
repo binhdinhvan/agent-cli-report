@@ -1,0 +1,16 @@
+{
+  "launch_authorized": true,
+  "plan_sha256": "0f03f47e77b7e7b3325ec71a0357fe78f9987e7e2b3ce608bb356fa1cf392a99",
+  "scope": "one-retry-R0089-then44-not-run-no-auto-retry-rubric-r2",
+  "budget_estimate_usd": "16",
+  "prior_unpriced_acknowledged": true,
+  "retry_of": "R-0089",
+  "rubric_revision": "b01-evidence-r2",
+  "approved_by": "user explicit request: retry chạy tiếp",
+  "approved_at_utc": "2026-11-10T14:16:34.222176+00:00",
+  "prior_known_usd": "0.21341376",
+  "prior_unpriced_requests": 2,
+  "remaining_known_guard_usd": "15.78658624",
+  "offline_acceptance_sha256": "2cfc96866949cc33854d59e02a8ef7fcd9c706db5a51f5cf3aeb28de6af54f7d",
+  "no_further_auto_retry_or_resume": true
+}

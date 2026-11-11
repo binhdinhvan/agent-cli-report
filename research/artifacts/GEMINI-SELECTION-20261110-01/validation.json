@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "scope": "Gemini selection/profile preparation only; no config/runtime migration accepted",
+  "selected_model": "gemini-3.8-flash",
+  "pending": [
+    "provider/model-id/protocol verification",
+    "new model pricing",
+    "cohort scope and budget",
+    "new adapter offline/native preflight/smoke"
+  ],
+  "provider_requests": 0,
+  "network_probes": 0,
+  "paid_gates": false,
+  "prior_sol_raw_retained": true,
+  "frozen_sol_pilot": "PASS: frozen outputs, ledger, review, fixture/dependency/binary and source hashes; offline only\n",
+  "registry_unchanged": [
+    "R-0222",
+    "C-0323"
+  ],
+  "snapshots_sha256": {
+    "research/model-profiles/gemini-3.8-flash.json": "330c1ae77139f65ad58a83cf8f4ddf8f475fc44b63c576cafa5dd3eaa8d4311f",
+    "research/GEMINI_MIGRATION.md": "32a94fae6b472ee328b547b3083a319c0855b77f5a151de242a19812429a717c",
+    "research/experiment-state.json": "133a7cd4dbc1f84d45f41ff3bd0f7f79acbafafad49b034235e8561dc14b1526",
+    "PLAN.md": "489d4a126a6cdb1cba0ca848fa5a974f00c5bd6f5e6527ae17d5c852ea77ab7c",
+    "README.md": "b05110a167829fd55ce9256d902f48429766e866115a064a5027b5abff544a03",
+    "REPORT.md": "b14ef7489e3ecc3fe6071d029649e9dd840d31ecaa2cd4f22e8e04594bcd86ca"
+  }
+}

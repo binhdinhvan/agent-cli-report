@@ -1,0 +1,34 @@
+{
+  "scope": "offline/read-only launch gates; no provider/key reads",
+  "tests": "30 pass; current source matches saved tested hashes",
+  "fixture_seal": "pass",
+  "binary_hash": "pass",
+  "fresh_run_id": "R-0017",
+  "fresh_config_id": "C-0069",
+  "remaining_known_estimate_guard_usd": "2.9719128",
+  "prior_unpriced_requests": 1,
+  "tools_inventory_same_sandbox_profile": {
+    "python3": "/usr/bin/python3",
+    "bash": "/usr/bin/bash",
+    "rg": null,
+    "find": "/usr/bin/find",
+    "ls": "/usr/bin/ls"
+  },
+  "environment_decision": "Keep unchanged for single retry; rg unavailable remains documented, not installed",
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "source_sha256": {
+    "benchmark/pilot.py": "c53b074d86d80d34002bbc68d2a039533a61cdf3679ca02e379fcb563143ab42",
+    "benchmark/pilot_inside.py": "db91620643437070de1cec3eae0b3b25c27a3e09d6265a86fed5a0b9c3ffd29c",
+    "demos/model_smoke.py": "ca759a9909c7652dd03660570a3553b68ab9261a3d1ca63ac755f2d9e8834822",
+    "demos/model_smoke_inside.py": "476636ec1d7d029c4b6306831074c7cc83bc0ea71937b19c976613f39fcda29e",
+    "demos/proxy_headers.py": "b3896d199fd807902d8bccb105d1feb1f7755fb00816577c3c0e7949a678048d",
+    "benchmark/verify_pilot_fixtures.py": "f8a4e20b4bec596a2ef7338184ec96ef8d7e5dd057235c1739e8591d67cad3e0",
+    "benchmark/PILOT_SOL_RETRY.md": "be03037ca910c0f5711e91cea7998d9e9f5a0febb96e9cde417633efaddc5b6d",
+    "research/provider-pricing.json": "0a779dd0480a5703d7e3668f613f6d2139186dd86ef2aebb55b5ff0e4ec7dd1f"
+  }
+}

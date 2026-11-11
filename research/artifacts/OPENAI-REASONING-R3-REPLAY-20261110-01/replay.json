@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "scope": "offline replay only;0API/credential-read",
+  "raw": "benchmark/suite48/artifacts/OPENAI48-R2-20261110-01/result.json",
+  "raw_sha256": "b36749932570ffc820b557ba9dbe311a1d2b3ce85e75aa3f46c3c79b153ee316",
+  "request_run_id": "R-0277",
+  "original_native_reasoning": {
+    "effort": "low",
+    "context": "all_turns"
+  },
+  "original_effective_reasoning": {
+    "effort": "low"
+  },
+  "derived_r3_effective_reasoning": {
+    "effort": "low",
+    "context": "all_turns"
+  },
+  "responses_lite_header_retained": true,
+  "original_status_retained": "infra_error/pending_review;HTTP400;usageunknown",
+  "provider_acceptance": "unverified after fix; replay does not call provider",
+  "raw_unchanged": true,
+  "implementation": "benchmark/openai48_reasoning_r3.py:reasoning_fields/context"
+}

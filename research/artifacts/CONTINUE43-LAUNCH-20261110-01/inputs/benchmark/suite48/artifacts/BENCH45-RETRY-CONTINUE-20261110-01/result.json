@@ -1,0 +1,2523 @@
+{
+  "mode": "benchmark48",
+  "started_at_utc": "2026-11-10T14:17:00.194108+00:00",
+  "budget_estimate_usd": "16",
+  "measured_charge_usd": null,
+  "synthetic_usage": false,
+  "provider_requests": 7,
+  "plan": [
+    {
+      "slot": "D48-004",
+      "repetition": "1",
+      "block": "1",
+      "task_id": "B-01",
+      "position_in_block": "4",
+      "tool": "opencode-v2",
+      "status": "success",
+      "continuation_of": {
+        "slot": "D48-004",
+        "run_id": "R-0089",
+        "config_id": "C-0190"
+      },
+      "retry_of": "R-0089",
+      "attempt_kind": "explicit_retry",
+      "run_id": "R-0134",
+      "config_id": "C-0235"
+    },
+    {
+      "slot": "D48-005",
+      "repetition": "1",
+      "block": "2",
+      "task_id": "B-02",
+      "position_in_block": "1",
+      "tool": "codex",
+      "status": "infra_error",
+      "continuation_of": {
+        "slot": "D48-005",
+        "run_id": "R-0090",
+        "config_id": "C-0191"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0135",
+      "config_id": "C-0236"
+    },
+    {
+      "slot": "D48-006",
+      "repetition": "1",
+      "block": "2",
+      "task_id": "B-02",
+      "position_in_block": "2",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-006",
+        "run_id": "R-0091",
+        "config_id": "C-0192"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0136",
+      "config_id": "C-0237"
+    },
+    {
+      "slot": "D48-007",
+      "repetition": "1",
+      "block": "2",
+      "task_id": "B-02",
+      "position_in_block": "3",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-007",
+        "run_id": "R-0092",
+        "config_id": "C-0193"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0137",
+      "config_id": "C-0238"
+    },
+    {
+      "slot": "D48-008",
+      "repetition": "1",
+      "block": "2",
+      "task_id": "B-02",
+      "position_in_block": "4",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-008",
+        "run_id": "R-0093",
+        "config_id": "C-0194"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0138",
+      "config_id": "C-0239"
+    },
+    {
+      "slot": "D48-009",
+      "repetition": "1",
+      "block": "3",
+      "task_id": "B-03",
+      "position_in_block": "1",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-009",
+        "run_id": "R-0094",
+        "config_id": "C-0195"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0139",
+      "config_id": "C-0240"
+    },
+    {
+      "slot": "D48-010",
+      "repetition": "1",
+      "block": "3",
+      "task_id": "B-03",
+      "position_in_block": "2",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-010",
+        "run_id": "R-0095",
+        "config_id": "C-0196"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0140",
+      "config_id": "C-0241"
+    },
+    {
+      "slot": "D48-011",
+      "repetition": "1",
+      "block": "3",
+      "task_id": "B-03",
+      "position_in_block": "3",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-011",
+        "run_id": "R-0096",
+        "config_id": "C-0197"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0141",
+      "config_id": "C-0242"
+    },
+    {
+      "slot": "D48-012",
+      "repetition": "1",
+      "block": "3",
+      "task_id": "B-03",
+      "position_in_block": "4",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-012",
+        "run_id": "R-0097",
+        "config_id": "C-0198"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0142",
+      "config_id": "C-0243"
+    },
+    {
+      "slot": "D48-013",
+      "repetition": "1",
+      "block": "4",
+      "task_id": "B-04",
+      "position_in_block": "1",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-013",
+        "run_id": "R-0098",
+        "config_id": "C-0199"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0143",
+      "config_id": "C-0244"
+    },
+    {
+      "slot": "D48-014",
+      "repetition": "1",
+      "block": "4",
+      "task_id": "B-04",
+      "position_in_block": "2",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-014",
+        "run_id": "R-0099",
+        "config_id": "C-0200"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0144",
+      "config_id": "C-0245"
+    },
+    {
+      "slot": "D48-015",
+      "repetition": "1",
+      "block": "4",
+      "task_id": "B-04",
+      "position_in_block": "3",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-015",
+        "run_id": "R-0100",
+        "config_id": "C-0201"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0145",
+      "config_id": "C-0246"
+    },
+    {
+      "slot": "D48-016",
+      "repetition": "1",
+      "block": "4",
+      "task_id": "B-04",
+      "position_in_block": "4",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-016",
+        "run_id": "R-0101",
+        "config_id": "C-0202"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0146",
+      "config_id": "C-0247"
+    },
+    {
+      "slot": "D48-017",
+      "repetition": "2",
+      "block": "5",
+      "task_id": "B-04",
+      "position_in_block": "1",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-017",
+        "run_id": "R-0102",
+        "config_id": "C-0203"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0147",
+      "config_id": "C-0248"
+    },
+    {
+      "slot": "D48-018",
+      "repetition": "2",
+      "block": "5",
+      "task_id": "B-04",
+      "position_in_block": "2",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-018",
+        "run_id": "R-0103",
+        "config_id": "C-0204"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0148",
+      "config_id": "C-0249"
+    },
+    {
+      "slot": "D48-019",
+      "repetition": "2",
+      "block": "5",
+      "task_id": "B-04",
+      "position_in_block": "3",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-019",
+        "run_id": "R-0104",
+        "config_id": "C-0205"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0149",
+      "config_id": "C-0250"
+    },
+    {
+      "slot": "D48-020",
+      "repetition": "2",
+      "block": "5",
+      "task_id": "B-04",
+      "position_in_block": "4",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-020",
+        "run_id": "R-0105",
+        "config_id": "C-0206"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0150",
+      "config_id": "C-0251"
+    },
+    {
+      "slot": "D48-021",
+      "repetition": "2",
+      "block": "6",
+      "task_id": "B-02",
+      "position_in_block": "1",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-021",
+        "run_id": "R-0106",
+        "config_id": "C-0207"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0151",
+      "config_id": "C-0252"
+    },
+    {
+      "slot": "D48-022",
+      "repetition": "2",
+      "block": "6",
+      "task_id": "B-02",
+      "position_in_block": "2",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-022",
+        "run_id": "R-0107",
+        "config_id": "C-0208"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0152",
+      "config_id": "C-0253"
+    },
+    {
+      "slot": "D48-023",
+      "repetition": "2",
+      "block": "6",
+      "task_id": "B-02",
+      "position_in_block": "3",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-023",
+        "run_id": "R-0108",
+        "config_id": "C-0209"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0153",
+      "config_id": "C-0254"
+    },
+    {
+      "slot": "D48-024",
+      "repetition": "2",
+      "block": "6",
+      "task_id": "B-02",
+      "position_in_block": "4",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-024",
+        "run_id": "R-0109",
+        "config_id": "C-0210"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0154",
+      "config_id": "C-0255"
+    },
+    {
+      "slot": "D48-025",
+      "repetition": "2",
+      "block": "7",
+      "task_id": "B-03",
+      "position_in_block": "1",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-025",
+        "run_id": "R-0110",
+        "config_id": "C-0211"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0155",
+      "config_id": "C-0256"
+    },
+    {
+      "slot": "D48-026",
+      "repetition": "2",
+      "block": "7",
+      "task_id": "B-03",
+      "position_in_block": "2",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-026",
+        "run_id": "R-0111",
+        "config_id": "C-0212"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0156",
+      "config_id": "C-0257"
+    },
+    {
+      "slot": "D48-027",
+      "repetition": "2",
+      "block": "7",
+      "task_id": "B-03",
+      "position_in_block": "3",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-027",
+        "run_id": "R-0112",
+        "config_id": "C-0213"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0157",
+      "config_id": "C-0258"
+    },
+    {
+      "slot": "D48-028",
+      "repetition": "2",
+      "block": "7",
+      "task_id": "B-03",
+      "position_in_block": "4",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-028",
+        "run_id": "R-0113",
+        "config_id": "C-0214"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0158",
+      "config_id": "C-0259"
+    },
+    {
+      "slot": "D48-029",
+      "repetition": "2",
+      "block": "8",
+      "task_id": "B-01",
+      "position_in_block": "1",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-029",
+        "run_id": "R-0114",
+        "config_id": "C-0215"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0159",
+      "config_id": "C-0260"
+    },
+    {
+      "slot": "D48-030",
+      "repetition": "2",
+      "block": "8",
+      "task_id": "B-01",
+      "position_in_block": "2",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-030",
+        "run_id": "R-0115",
+        "config_id": "C-0216"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0160",
+      "config_id": "C-0261"
+    },
+    {
+      "slot": "D48-031",
+      "repetition": "2",
+      "block": "8",
+      "task_id": "B-01",
+      "position_in_block": "3",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-031",
+        "run_id": "R-0116",
+        "config_id": "C-0217"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0161",
+      "config_id": "C-0262"
+    },
+    {
+      "slot": "D48-032",
+      "repetition": "2",
+      "block": "8",
+      "task_id": "B-01",
+      "position_in_block": "4",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-032",
+        "run_id": "R-0117",
+        "config_id": "C-0218"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0162",
+      "config_id": "C-0263"
+    },
+    {
+      "slot": "D48-033",
+      "repetition": "3",
+      "block": "9",
+      "task_id": "B-04",
+      "position_in_block": "1",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-033",
+        "run_id": "R-0118",
+        "config_id": "C-0219"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0163",
+      "config_id": "C-0264"
+    },
+    {
+      "slot": "D48-034",
+      "repetition": "3",
+      "block": "9",
+      "task_id": "B-04",
+      "position_in_block": "2",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-034",
+        "run_id": "R-0119",
+        "config_id": "C-0220"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0164",
+      "config_id": "C-0265"
+    },
+    {
+      "slot": "D48-035",
+      "repetition": "3",
+      "block": "9",
+      "task_id": "B-04",
+      "position_in_block": "3",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-035",
+        "run_id": "R-0120",
+        "config_id": "C-0221"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0165",
+      "config_id": "C-0266"
+    },
+    {
+      "slot": "D48-036",
+      "repetition": "3",
+      "block": "9",
+      "task_id": "B-04",
+      "position_in_block": "4",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-036",
+        "run_id": "R-0121",
+        "config_id": "C-0222"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0166",
+      "config_id": "C-0267"
+    },
+    {
+      "slot": "D48-037",
+      "repetition": "3",
+      "block": "10",
+      "task_id": "B-02",
+      "position_in_block": "1",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-037",
+        "run_id": "R-0122",
+        "config_id": "C-0223"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0167",
+      "config_id": "C-0268"
+    },
+    {
+      "slot": "D48-038",
+      "repetition": "3",
+      "block": "10",
+      "task_id": "B-02",
+      "position_in_block": "2",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-038",
+        "run_id": "R-0123",
+        "config_id": "C-0224"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0168",
+      "config_id": "C-0269"
+    },
+    {
+      "slot": "D48-039",
+      "repetition": "3",
+      "block": "10",
+      "task_id": "B-02",
+      "position_in_block": "3",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-039",
+        "run_id": "R-0124",
+        "config_id": "C-0225"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0169",
+      "config_id": "C-0270"
+    },
+    {
+      "slot": "D48-040",
+      "repetition": "3",
+      "block": "10",
+      "task_id": "B-02",
+      "position_in_block": "4",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-040",
+        "run_id": "R-0125",
+        "config_id": "C-0226"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0170",
+      "config_id": "C-0271"
+    },
+    {
+      "slot": "D48-041",
+      "repetition": "3",
+      "block": "11",
+      "task_id": "B-01",
+      "position_in_block": "1",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-041",
+        "run_id": "R-0126",
+        "config_id": "C-0227"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0171",
+      "config_id": "C-0272"
+    },
+    {
+      "slot": "D48-042",
+      "repetition": "3",
+      "block": "11",
+      "task_id": "B-01",
+      "position_in_block": "2",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-042",
+        "run_id": "R-0127",
+        "config_id": "C-0228"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0172",
+      "config_id": "C-0273"
+    },
+    {
+      "slot": "D48-043",
+      "repetition": "3",
+      "block": "11",
+      "task_id": "B-01",
+      "position_in_block": "3",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-043",
+        "run_id": "R-0128",
+        "config_id": "C-0229"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0173",
+      "config_id": "C-0274"
+    },
+    {
+      "slot": "D48-044",
+      "repetition": "3",
+      "block": "11",
+      "task_id": "B-01",
+      "position_in_block": "4",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-044",
+        "run_id": "R-0129",
+        "config_id": "C-0230"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0174",
+      "config_id": "C-0275"
+    },
+    {
+      "slot": "D48-045",
+      "repetition": "3",
+      "block": "12",
+      "task_id": "B-03",
+      "position_in_block": "1",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-045",
+        "run_id": "R-0130",
+        "config_id": "C-0231"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0175",
+      "config_id": "C-0276"
+    },
+    {
+      "slot": "D48-046",
+      "repetition": "3",
+      "block": "12",
+      "task_id": "B-03",
+      "position_in_block": "2",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-046",
+        "run_id": "R-0131",
+        "config_id": "C-0232"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0176",
+      "config_id": "C-0277"
+    },
+    {
+      "slot": "D48-047",
+      "repetition": "3",
+      "block": "12",
+      "task_id": "B-03",
+      "position_in_block": "3",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-047",
+        "run_id": "R-0132",
+        "config_id": "C-0233"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0177",
+      "config_id": "C-0278"
+    },
+    {
+      "slot": "D48-048",
+      "repetition": "3",
+      "block": "12",
+      "task_id": "B-03",
+      "position_in_block": "4",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-048",
+        "run_id": "R-0133",
+        "config_id": "C-0234"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0178",
+      "config_id": "C-0279"
+    }
+  ],
+  "runs": [
+    {
+      "slot": "D48-004",
+      "repetition": "1",
+      "block": "1",
+      "task_id": "B-01",
+      "position_in_block": "4",
+      "tool": "opencode-v2",
+      "status": "success",
+      "continuation_of": {
+        "slot": "D48-004",
+        "run_id": "R-0089",
+        "config_id": "C-0190"
+      },
+      "retry_of": "R-0089",
+      "attempt_kind": "explicit_retry",
+      "run_id": "R-0134",
+      "config_id": "C-0235",
+      "spec": {
+        "tool": "opencode-v2",
+        "version": "2.2.5",
+        "config_id": "C-0235",
+        "repository": "anomalyco/opencode",
+        "tag": "v2.2.5",
+        "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+        "asset": "opencode-linux-x64-baseline.tar.gz",
+        "size": 119196162,
+        "sha256": "09f44302c10fd036912f59c81fd1aef5df45dd06f649197f9dfc9bbe2a79614e",
+        "binary_names": [
+          "opencode"
+        ],
+        "started_at_utc": "2026-11-06T03:49:40.824386+00:00",
+        "status": "prepared_not_executed",
+        "release_api": "https://api.github.com/repos/anomalyco/opencode/releases/tags/v2.2.5",
+        "release_url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
+        "asset_url": "https://github.com/anomalyco/opencode/releases/download/v2.2.5/opencode-linux-x64-baseline.tar.gz",
+        "archive_sha256_verified": "09f44302c10fd036912f59c81fd1aef5df45dd06f649197f9dfc9bbe2a79614e",
+        "archive_members": [
+          {
+            "name": "opencode",
+            "size": 252713136,
+            "type": "0",
+            "linkname": ""
+          }
+        ],
+        "binary": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v2-2.2.5/payload/opencode",
+        "binary_sha256": "8d060e1d2fbb9bb44cf09ae6ed1f3f6a7cff070b5227e2f90970132b23a92050",
+        "payload": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v2-2.2.5/payload",
+        "runtime_root": "/tmp/opencode/agent-cli-report/smoke/C-0235",
+        "finished_at_utc": "2026-11-06T03:51:23.412267+00:00",
+        "environment_revision": "search-r2"
+      },
+      "cli": [
+        "/opt/agent-cli-report/C-0235/opencode",
+        "run",
+        "--standalone",
+        "--format",
+        "json",
+        "--model",
+        "shopaikey/gpt-6.1-sol",
+        "Đọc code của resolver cấu hình trong workspace. Không sửa code nguồn hoặc test. Chỉ được tạo answer.json ở thư mục gốc; không thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh).\n\nTrả lời năm câu hỏi từ implementation hiện có, không suy từ tên hàm:\n1. Khi gọi resolve(\"timeout\", cli={}, env={}, config={}), giá trị mặc định là gì?\n2. Khi cả cli, env, config và defaults đều có cùng key, thứ tự ưu tiên cao xuống thấp là gì? Dùng tên \"cli\", \"env\", \"config\", \"defaults\".\n3. Khi canonical_name(\"quick\") được gọi, chuỗi tên nào được duyệt theo thứ tự, gồm cả tên ban đầu và tên canonical cuối?\n4. Khi canonical_name(\"loop_a\") được gọi, exception class và message chính xác là gì?\n5. resolve có sửa dictionary config được truyền vào không? Ghi boolean.\n\nanswer.json phải là JSON object đúng năm trường sau, không Markdown hoặc lời giải ngoài schema:\n{\n  \"default\": {\"value\": <giá trị JSON>, \"evidence\": [\"path.py:symbol\"]},\n  \"precedence\": {\"value\": [<tên nguồn theo thứ tự>], \"evidence\": [\"path.py:symbol\"]},\n  \"alias_trace\": {\"value\": [<tên theo thứ tự>], \"evidence\": [\"path.py:symbol\"]},\n  \"cycle_error\": {\"type\": <tên class dạng string>, \"message\": <string>, \"evidence\": [\"path.py:symbol\"]},\n  \"mutation\": {\"value\": <boolean>, \"evidence\": [\"path.py:symbol\"]}\n}\n\nMỗi evidence là đường dẫn tương đối và symbol có thật trong code hỗ trợ câu trả lời đó; không dùng số dòng. Mỗi câu đúng nội dung được 1 điểm và có evidence phù hợp được 1 điểm, tổng10. Success cần10/10, đúng phạm vi và CLI hoàn tất. Không cài package hoặc truy cập Internet. Dùng python3/stdlib nếu cần. Public schema check dự kiến: python3 -B -m unittest -v test_public.\n"
+      ],
+      "validity": "valid",
+      "reasons": [],
+      "execution": {
+        "supervisor_host_pid": 40392,
+        "exit_code": 0,
+        "timed_out": false,
+        "output_limit_exceeded": false,
+        "duration_ms": 224706,
+        "outer_started_monotonic": 1918.082421577,
+        "outer_finished_monotonic": 2142.788491463,
+        "broker_deadline_monotonic": 2818.082421577,
+        "outer_watchdog_deadline_monotonic": 2818.082421577,
+        "native_clock": {
+          "started_monotonic": 1918.173045042,
+          "finished_monotonic": 2142.416639431,
+          "duration_ms": 224244
+        },
+        "witness": {
+          "project_writable": true,
+          "immutable_readonly": {
+            "aliases.py": true,
+            "defaults.py": true,
+            "resolver.py": true,
+            "test_public.py": true
+          },
+          "hidden_absent": true,
+          "home_hidden": true,
+          "net_namespace": "net:[4026532632]",
+          "provider_key_env_absent": true
+        }
+      },
+      "grading": {
+        "task_id": "B-01",
+        "scope_ok": true,
+        "changed_files": [
+          "answer.json"
+        ],
+        "invalid_paths": [],
+        "snapshot_sha256": {
+          "resolver.py": "f38fa2ca2b30092f9a2f2147376274237009b3104c44baf058ce6ca3dcd07613",
+          "aliases.py": "4fa0637ab55f32469c101d45d1a23d110e95e1f890a4dd3398e4d70c861f5da6",
+          "test_public.py": "1c8f8eec89298be555ea8aa30b57e8e7e58ca9ef4244fdca4db5d2af1e3de04e",
+          "answer.json": "6c30f535ccc19e7382d00f55d581faf4d2784f89e6663508768ad516aadf7e3c",
+          "defaults.py": "dee8dba860bf81ba208cad957eaeb64ab897b475cc00990c94e7a93fde7816e0"
+        },
+        "suites": {
+          "public": {
+            "exit_code": 0,
+            "timed_out": false,
+            "output_limit_exceeded": false,
+            "duration_ms": 116,
+            "stdout": "",
+            "stderr": "test_schema (test_public.PublicTests.test_schema) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+          },
+          "hidden": {
+            "exit_code": 0,
+            "timed_out": false,
+            "output_limit_exceeded": false,
+            "duration_ms": 116,
+            "stdout": "RUBRIC_JSON={\"scores\": {\"default\": 2, \"precedence\": 2, \"alias_trace\": 2, \"cycle_error\": 2, \"mutation\": 2}, \"total\": 10, \"maximum\": 10}\n",
+            "stderr": "test_rubric (__main__.AcceptanceTests.test_rubric) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+          }
+        },
+        "rubric": {
+          "scores": {
+            "default": 2,
+            "precedence": 2,
+            "alias_trace": 2,
+            "cycle_error": 2,
+            "mutation": 2
+          },
+          "total": 10,
+          "maximum": 10
+        },
+        "grader_duration_ms": 240,
+        "pass": true
+      },
+      "requests": [
+        {
+          "started_at_utc": "2026-11-10T14:17:01.814583+00:00",
+          "request_index": 1,
+          "original_body_sha256": "291a9fc59f18129c93517e89cfd1db8e616066c7cce49d0cb5c43be95d21475d",
+          "requested_max_output_tokens": null,
+          "model": "gpt-6.1-sol",
+          "tool_names": [],
+          "forwarded_protocol_header_names": [
+            "user-agent"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            "message"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "minimum_request_window_seconds": 60,
+          "deadline_remaining_seconds_at_dispatch": 898.668924,
+          "pacing_wait_seconds": 0.0,
+          "effective_max_output_tokens": 2048,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "msg_0670fbfdbcde59b1016af327894d5c87d1a16c38a429a6a06e": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  },
+                  "msg_0670fbfdbcde59b1016af327894d5c87d1b22f9efdc47fbbc5": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 490,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 490,
+                    "output_tokens": 0
+                  },
+                  "msg_0670fbfdbcde59b1016af3278a6f7487d1b78576d819f52b8d": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 2,
+                        "output_tokens": 10
+                      }
+                    ],
+                    "input_tokens": 2,
+                    "output_tokens": 10
+                  }
+                },
+                "request_fields": {
+                  "instructions": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 408,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 939,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0
+              },
+              "output_tokens": 10,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 949
+            },
+            "uncached_input_tokens": 939,
+            "components": {
+              "uncached_input_usd": "0.0045072",
+              "cached_input_usd": "0.00",
+              "output_usd": "0.00018"
+            },
+            "estimated_cost_usd": "0.0046872",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 14929,
+          "finished_at_utc": "2026-11-10T14:17:47.492077+00:00"
+        },
+        {
+          "started_at_utc": "2026-11-10T14:18:17.493129+00:00",
+          "request_index": 2,
+          "original_body_sha256": "cd512c6c2519048bde5cfb92220904038b110d67560d19cdd73e187442fef067",
+          "requested_max_output_tokens": 2048,
+          "model": "gpt-6.1-sol",
+          "tool_names": [
+            "glob",
+            "grep",
+            "patch",
+            "read",
+            "shell",
+            "skill",
+            "execute"
+          ],
+          "forwarded_protocol_header_names": [
+            "user-agent"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            "message"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "minimum_request_window_seconds": 60,
+          "deadline_remaining_seconds_at_dispatch": 822.99004,
+          "pacing_wait_seconds": 30.000035,
+          "effective_max_output_tokens": 2048,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "fc_0e65cfa27961df42016af327acd6e887d0829ef947ed2dde94": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 2,
+                    "output_tokens": 17
+                  },
+                  "msg_0e65cfa27961df42016af327ab211c87d08c982556271476d0": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  },
+                  "msg_0e65cfa27961df42016af327ab211c87d08fd682b78ad6ecb5": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 469,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 469,
+                    "output_tokens": 0
+                  }
+                },
+                "request_fields": {
+                  "instructions": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 971,
+                    "output_tokens": 0
+                  },
+                  "tools": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 1305,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 2786,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0
+              },
+              "output_tokens": 17,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 2803
+            },
+            "uncached_input_tokens": 2786,
+            "components": {
+              "uncached_input_usd": "0.0133728",
+              "cached_input_usd": "0.00",
+              "output_usd": "0.000306"
+            },
+            "estimated_cost_usd": "0.0136788",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 44789,
+          "finished_at_utc": "2026-11-10T14:18:21.053093+00:00"
+        },
+        {
+          "started_at_utc": "2026-11-10T14:18:51.054275+00:00",
+          "request_index": 3,
+          "original_body_sha256": "67d0b2cc3ad5c6a1cf34163d1cc5ef08257deb669d798327e9d499c232c0454e",
+          "requested_max_output_tokens": 2048,
+          "model": "gpt-6.1-sol",
+          "tool_names": [
+            "glob",
+            "grep",
+            "patch",
+            "read",
+            "shell",
+            "skill",
+            "execute"
+          ],
+          "forwarded_protocol_header_names": [
+            "user-agent"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            "message",
+            "function_call",
+            "function_call_output"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "minimum_request_window_seconds": 60,
+          "deadline_remaining_seconds_at_dispatch": 789.428903,
+          "pacing_wait_seconds": 29.96799,
+          "effective_max_output_tokens": 2048,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "fc_0e65cfa27961df42016af327acd6e887d0829ef947ed2dde94": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 19,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327cc144487d0a4f8ad04abec75be": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 29,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 29,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327cde78887d09c3c6151d4f22055": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 2,
+                    "output_tokens": 33
+                  },
+                  "fc_0e65cfa27961df42016af327cf1ac887d099b75bbcf8a64003": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 0,
+                    "output_tokens": 16
+                  },
+                  "fc_0e65cfa27961df42016af327cf1ac887d09cdc4b3791598de3": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 0,
+                    "output_tokens": 14
+                  },
+                  "fc_0e65cfa27961df42016af327cf1ac887d0b2fa74a18aca900f": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 0,
+                    "output_tokens": 14
+                  },
+                  "msg_0e65cfa27961df42016af327cc144087d0adcbec2cff7d4c68": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 373,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 373,
+                        "input_tokens": 469,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 469,
+                    "output_tokens": 0
+                  },
+                  "msg_0e65cfa27961df42016af327cc144087d0b9183b4744581a8d": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 39,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 39,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  }
+                },
+                "request_fields": {
+                  "instructions": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 971,
+                    "input_tokens": 971,
+                    "output_tokens": 0
+                  },
+                  "tools": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 1305,
+                    "input_tokens": 1305,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 2834,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 2688
+              },
+              "output_tokens": 77,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 2911
+            },
+            "uncached_input_tokens": 146,
+            "components": {
+              "uncached_input_usd": "0.0007008",
+              "cached_input_usd": "0.00064512",
+              "output_usd": "0.001386"
+            },
+            "estimated_cost_usd": "0.00273192",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 47670,
+          "finished_at_utc": "2026-11-10T14:18:55.443596+00:00"
+        },
+        {
+          "started_at_utc": "2026-11-10T14:19:25.444775+00:00",
+          "request_index": 4,
+          "original_body_sha256": "f6ada93bb75b935268786d45cbf2b6f8679dd704601393a56dcc7534028264be",
+          "requested_max_output_tokens": 2048,
+          "model": "gpt-6.1-sol",
+          "tool_names": [
+            "glob",
+            "grep",
+            "patch",
+            "read",
+            "shell",
+            "skill",
+            "execute"
+          ],
+          "forwarded_protocol_header_names": [
+            "user-agent"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            "message",
+            "function_call",
+            "function_call_output",
+            "function_call",
+            "function_call",
+            "function_call",
+            "function_call",
+            "function_call_output",
+            "function_call_output",
+            "function_call_output",
+            "function_call_output"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "minimum_request_window_seconds": 60,
+          "deadline_remaining_seconds_at_dispatch": 755.038353,
+          "pacing_wait_seconds": 29.97253,
+          "effective_max_output_tokens": 2048,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "fc_0e65cfa27961df42016af327acd6e887d0829ef947ed2dde94": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 19,
+                    "input_tokens": 19,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327cde78887d09c3c6151d4f22055": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 35,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327cf1ac887d099b75bbcf8a64003": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 16,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327cf1ac887d09cdc4b3791598de3": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 14,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327cf1ac887d0b2fa74a18aca900f": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 14,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327efe6c887d0808294308c87b818": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 13,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 13,
+                        "input_tokens": 29,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 29,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327efe6c887d08349bbf0d407a952": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 112,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 112,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327efe6c887d09b77936de8f24cab": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 46,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 46,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327efe6c887d0a6419054e08072d5": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 137,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 137,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327efe6c887d0acba68cf3a0d545f": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 575,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 575,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327f1c1d087d09b586eb5dbd0d2b6": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 2,
+                    "output_tokens": 276
+                  },
+                  "msg_0e65cfa27961df42016af327efe6c887d0b2b914eaf556da23": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 469,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 469,
+                        "input_tokens": 469,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 469,
+                    "output_tokens": 0
+                  },
+                  "msg_0e65cfa27961df42016af327efe6c887d0bf49ef6a45d62b3e": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 39,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 39,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  }
+                },
+                "request_fields": {
+                  "instructions": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 971,
+                    "input_tokens": 971,
+                    "output_tokens": 0
+                  },
+                  "tools": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 1305,
+                    "input_tokens": 1305,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 3783,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 2816
+              },
+              "output_tokens": 276,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 4059
+            },
+            "uncached_input_tokens": 967,
+            "components": {
+              "uncached_input_usd": "0.0046416",
+              "cached_input_usd": "0.00067584",
+              "output_usd": "0.004968"
+            },
+            "estimated_cost_usd": "0.01028544",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 114722,
+          "finished_at_utc": "2026-11-10T14:19:35.315726+00:00"
+        },
+        {
+          "started_at_utc": "2026-11-10T14:20:05.317652+00:00",
+          "request_index": 5,
+          "original_body_sha256": "08518e59bc0d0ef9572733f60c8512f1311001ef8ab96d776446497d342537de",
+          "requested_max_output_tokens": 2048,
+          "model": "gpt-6.1-sol",
+          "tool_names": [
+            "glob",
+            "grep",
+            "patch",
+            "read",
+            "shell",
+            "skill",
+            "execute"
+          ],
+          "forwarded_protocol_header_names": [
+            "user-agent"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            "message",
+            "function_call",
+            "function_call_output",
+            "function_call",
+            "function_call",
+            "function_call",
+            "function_call",
+            "function_call_output",
+            "function_call_output",
+            "function_call_output",
+            "function_call_output",
+            "function_call",
+            "function_call_output"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "minimum_request_window_seconds": 60,
+          "deadline_remaining_seconds_at_dispatch": 715.165323,
+          "pacing_wait_seconds": 29.954502,
+          "effective_max_output_tokens": 2048,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "fc_0e65cfa27961df42016af327acd6e887d0829ef947ed2dde94": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 19,
+                    "input_tokens": 19,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327cde78887d09c3c6151d4f22055": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 35,
+                    "input_tokens": 35,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327cf1ac887d099b75bbcf8a64003": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 16,
+                    "input_tokens": 16,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327cf1ac887d09cdc4b3791598de3": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 14,
+                    "input_tokens": 14,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327cf1ac887d0b2fa74a18aca900f": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 14,
+                    "input_tokens": 14,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327f1c1d087d09b586eb5dbd0d2b6": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 187,
+                    "input_tokens": 278,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af32816836c87d097268b1711a50463": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 29,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 29,
+                        "input_tokens": 29,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 29,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af32816837087d0832b553d692b1207": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 137,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 137,
+                        "input_tokens": 137,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 137,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af32816837087d08a9a2aef194c2cbb": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 46,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 46,
+                        "input_tokens": 46,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 46,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af32816837087d09328e96e1ce3fa0b": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 575,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 575,
+                        "input_tokens": 575,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 575,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af32816837087d09b8e90cc7529456c": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 18,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 18,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af32816837087d0b1bfbd9a8a7a197a": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 112,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 112,
+                        "input_tokens": 112,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 112,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af328186d7c87d0969e9d8f874faa86": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 2,
+                    "output_tokens": 27
+                  },
+                  "msg_0e65cfa27961df42016af32816836c87d0a15c20b69bb00e0b": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 469,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 469,
+                        "input_tokens": 469,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 469,
+                    "output_tokens": 0
+                  },
+                  "msg_0e65cfa27961df42016af32816836c87d0b09926c1330f390f": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 39,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 39,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  }
+                },
+                "request_fields": {
+                  "instructions": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 971,
+                    "input_tokens": 971,
+                    "output_tokens": 0
+                  },
+                  "tools": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 1305,
+                    "input_tokens": 1305,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 4079,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 3968
+              },
+              "output_tokens": 27,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 4106
+            },
+            "uncached_input_tokens": 111,
+            "components": {
+              "uncached_input_usd": "0.0005328",
+              "cached_input_usd": "0.00095232",
+              "output_usd": "0.000486"
+            },
+            "estimated_cost_usd": "0.00197112",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 49629,
+          "finished_at_utc": "2026-11-10T14:20:09.006880+00:00"
+        },
+        {
+          "started_at_utc": "2026-11-10T14:20:39.008331+00:00",
+          "request_index": 6,
+          "original_body_sha256": "1dda5ac96b167d6e83026003aef4d5a8ae7ad3c0480c876c7ede8e45314bcdaa",
+          "requested_max_output_tokens": 2048,
+          "model": "gpt-6.1-sol",
+          "tool_names": [
+            "glob",
+            "grep",
+            "patch",
+            "read",
+            "shell",
+            "skill",
+            "execute"
+          ],
+          "forwarded_protocol_header_names": [
+            "user-agent"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            "message",
+            "function_call",
+            "function_call_output",
+            "function_call",
+            "function_call",
+            "function_call",
+            "function_call",
+            "function_call_output",
+            "function_call_output",
+            "function_call_output",
+            "function_call_output",
+            "function_call",
+            "function_call_output",
+            "function_call",
+            "function_call_output"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "minimum_request_window_seconds": 60,
+          "deadline_remaining_seconds_at_dispatch": 681.474727,
+          "pacing_wait_seconds": 29.87566,
+          "effective_max_output_tokens": 2048,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "fc_0e65cfa27961df42016af327acd6e887d0829ef947ed2dde94": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 19,
+                    "input_tokens": 19,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327cde78887d09c3c6151d4f22055": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 35,
+                    "input_tokens": 35,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327cf1ac887d099b75bbcf8a64003": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 16,
+                    "input_tokens": 16,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327cf1ac887d09cdc4b3791598de3": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 14,
+                    "input_tokens": 14,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327cf1ac887d0b2fa74a18aca900f": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 14,
+                    "input_tokens": 14,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af327f1c1d087d09b586eb5dbd0d2b6": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 187,
+                    "input_tokens": 278,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af328186d7c87d0969e9d8f874faa86": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 29,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af32837ebb487d08a3ed0d83d3c17a6": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 36,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 36,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af32837ebb487d0915a0f45f96ce7c9": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 18,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 18,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af32837ebb487d093e96d8fa188fdfe": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 575,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 575,
+                        "input_tokens": 575,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 575,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af32837ebb487d0966c6e9f42628c9d": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 29,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 29,
+                        "input_tokens": 29,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 29,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af32837ebb487d09ecb401747972820": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 112,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 112,
+                        "input_tokens": 112,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 112,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af32837ebb487d0b6169f36b7c19932": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 46,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 46,
+                        "input_tokens": 46,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 46,
+                    "output_tokens": 0
+                  },
+                  "fc_0e65cfa27961df42016af32837ebb487d0bec2bf394df1a928": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 137,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 137,
+                        "input_tokens": 137,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 137,
+                    "output_tokens": 0
+                  },
+                  "msg_0e65cfa27961df42016af32837ebb487d086f2b67b203f6310": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 39,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 39,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  },
+                  "msg_0e65cfa27961df42016af32837ebb487d0b38800f6a7efd183": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 469,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 469,
+                        "input_tokens": 469,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 469,
+                    "output_tokens": 0
+                  },
+                  "msg_0e65cfa27961df42016af3283931ac87d0a08d4fccfa322fcc": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 2,
+                        "output_tokens": 183
+                      }
+                    ],
+                    "input_tokens": 2,
+                    "output_tokens": 183
+                  }
+                },
+                "request_fields": {
+                  "instructions": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 971,
+                    "input_tokens": 971,
+                    "output_tokens": 0
+                  },
+                  "tools": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 1305,
+                    "input_tokens": 1305,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 4144,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 3968
+              },
+              "output_tokens": 183,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 4327
+            },
+            "uncached_input_tokens": 176,
+            "components": {
+              "uncached_input_usd": "0.0008448",
+              "cached_input_usd": "0.00095232",
+              "output_usd": "0.003294"
+            },
+            "estimated_cost_usd": "0.00509112",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 100642,
+          "finished_at_utc": "2026-11-10T14:20:44.703809+00:00"
+        }
+      ],
+      "synthetic_usage": false,
+      "preflight_events": null,
+      "provider_requests": 6,
+      "supervisor_pid_absent": true,
+      "broker_socket_absent": true
+    },
+    {
+      "slot": "D48-005",
+      "repetition": "1",
+      "block": "2",
+      "task_id": "B-02",
+      "position_in_block": "1",
+      "tool": "codex",
+      "status": "infra_error",
+      "continuation_of": {
+        "slot": "D48-005",
+        "run_id": "R-0090",
+        "config_id": "C-0191"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0135",
+      "config_id": "C-0236",
+      "spec": {
+        "tool": "codex",
+        "version": "0.167.0",
+        "config_id": "C-0236",
+        "repository": "openai/codex",
+        "tag": "rust-v0.167.0",
+        "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+        "asset": "codex-package-x86_64-unknown-linux-musl.tar.gz",
+        "size": 200178910,
+        "sha256": "3bbf75e83de6b58aed28f2cf6e33ad423ec31fd4700a1457b94be557ea5a7c6e",
+        "binary_names": [
+          "codex",
+          "codex-x86_64-unknown-linux-musl"
+        ],
+        "started_at_utc": "2026-11-06T03:49:40.826312+00:00",
+        "status": "prepared_not_executed",
+        "release_api": "https://api.github.com/repos/openai/codex/releases/tags/rust-v0.167.0",
+        "release_url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
+        "asset_url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-x86_64-unknown-linux-musl.tar.gz",
+        "archive_sha256_verified": "3bbf75e83de6b58aed28f2cf6e33ad423ec31fd4700a1457b94be557ea5a7c6e",
+        "archive_members": [
+          {
+            "name": "bin",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "bin/codex",
+            "size": 320575976,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "bin/codex-code-mode-host",
+            "size": 79209744,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "bin/codex-exec-server",
+            "size": 81940392,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-package.json",
+            "size": 246,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-path",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "codex-path/rg",
+            "size": 5408904,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/bwrap",
+            "size": 529776,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/NOTICE.md",
+            "size": 2403,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/bin",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/bin/codex-voice-host",
+            "size": 40487744,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0/libgstapp.so",
+            "size": 6488,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0/libgstaudioconvert.so",
+            "size": 41040,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0/libgstaudioresample.so",
+            "size": 35264,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0/libgstcoreelements.so",
+            "size": 479848,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0/libgstopus.so",
+            "size": 73464,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0/libgstrtp.so",
+            "size": 757800,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0/libgstrtpmanager.so",
+            "size": 564072,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libffi.so.8",
+            "size": 63096,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgio-2.0.so.0",
+            "size": 2338512,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libglib-2.0.so.0",
+            "size": 1521616,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgmodule-2.0.so.0",
+            "size": 15720,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgobject-2.0.so.0",
+            "size": 454720,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstallocators-1.0.so.0",
+            "size": 30416,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstapp-1.0.so.0",
+            "size": 106144,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstaudio-1.0.so.0",
+            "size": 636544,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstbase-1.0.so.0",
+            "size": 573072,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstnet-1.0.so.0",
+            "size": 74192,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstpbutils-1.0.so.0",
+            "size": 321880,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstreamer-1.0.so.0",
+            "size": 1582088,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstrtp-1.0.so.0",
+            "size": 211744,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgsttag-1.0.so.0",
+            "size": 273976,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstvideo-1.0.so.0",
+            "size": 1004720,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libintl.so.8",
+            "size": 6304,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libopus.so.0",
+            "size": 565744,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libpcre2-8.so.0",
+            "size": 442424,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libz.so.1",
+            "size": 109296,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses/LGPL-2.1.txt",
+            "size": 26431,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses/Opus.txt",
+            "size": 1945,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses/PCRE2.md",
+            "size": 4011,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses/libffi.txt",
+            "size": 1132,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses/proxy-libintl.txt",
+            "size": 25292,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses/sljit.txt",
+            "size": 1444,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses/zlib.txt",
+            "size": 1002,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/manifest.json",
+            "size": 4768,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/runtime.json",
+            "size": 13941,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/sources.json",
+            "size": 4911,
+            "type": "0",
+            "linkname": ""
+          }
+        ],
+        "binary": "/home/tts/Project/agent-cli-report/.local/binaries/codex-0.167.0/payload/bin/codex",
+        "binary_sha256": "cdcb45aaa01d0f14e298985e09465aebccd47f64ecd298aea44814af7b62bbda",
+        "payload": "/home/tts/Project/agent-cli-report/.local/binaries/codex-0.167.0/payload",
+        "runtime_root": "/tmp/opencode/agent-cli-report/smoke/C-0236",
+        "finished_at_utc": "2026-11-06T03:52:54.962622+00:00",
+        "environment_revision": "search-r2"
+      },
+      "cli": [
+        "/opt/agent-cli-report/C-0236/bin/codex",
+        "exec",
+        "--json",
+        "--skip-git-repo-check",
+        "Sửa merge_pages(pages) trong pagination.py. Chỉ sửa pagination.py; không sửa test hoặc thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh).\n\nContract: pages là iterable các page; mỗi page là iterable các dict, mỗi dict có id kiểu string. Cả hai mức có thể là generator chỉ duyệt một lần. Chỉ cần xử lý input đúng contract, không cần thêm validation cho kiểu khác.\n\nTrả list các dict, một dict cho mỗi id. Thứ tự đầu ra theo lần đầu id xuất hiện trong toàn bộ input; nếu id xuất hiện lại, toàn bộ record cuối cùng thay thế record cũ nhưng giữ vị trí đầu tiên. Không merge các field của record cũ với record mới. Empty input/pages hợp lệ.\n\nKhông thay đổi input hoặc dictionary gốc. Mỗi output record phải là shallow copy độc lập với dict input; không yêu cầu deep-copy giá trị nested. Không giữ state giữa các lần gọi. Giữ nguyên tên hàm/signature/API hiện có. Public tests phải tiếp tục pass; kiểm cả duplicate trong cùng page và khác page.\n\nChạy test bằng python3 -B -m unittest -v test_public. Chỉ dùng standard library, không cài package hoặc truy cập Internet. Hoàn tất bằng code đã sửa, không chỉ mô tả giải pháp.\n"
+      ],
+      "validity": "pending_review",
+      "reasons": [
+        "provider_failure",
+        "usage_missing",
+        "provider_or_usage"
+      ],
+      "execution": {
+        "supervisor_host_pid": 42869,
+        "exit_code": 1,
+        "timed_out": false,
+        "output_limit_exceeded": false,
+        "duration_ms": 73499,
+        "outer_started_monotonic": 2144.235321558,
+        "outer_finished_monotonic": 2217.73447594,
+        "broker_deadline_monotonic": 3044.235321558,
+        "outer_watchdog_deadline_monotonic": 3044.235321558,
+        "native_clock": {
+          "started_monotonic": 2144.314527341,
+          "finished_monotonic": 2217.439075983,
+          "duration_ms": 73125
+        },
+        "witness": {
+          "project_writable": true,
+          "immutable_readonly": {
+            "test_public.py": true
+          },
+          "hidden_absent": true,
+          "home_hidden": true,
+          "net_namespace": "net:[4026532634]",
+          "provider_key_env_absent": true
+        }
+      },
+      "grading": {
+        "task_id": "B-02",
+        "scope_ok": true,
+        "changed_files": [],
+        "invalid_paths": [],
+        "snapshot_sha256": {
+          "test_public.py": "18f4ea89162fcfc9762a059b4de6f9d01fbf22adf158393cde6cde316ddbf8e9",
+          "pagination.py": "539d4697695b7ccc77317f032199cff92832a115bf4392622ffff474502a2801"
+        },
+        "suites": {
+          "public": {
+            "exit_code": 0,
+            "timed_out": false,
+            "output_limit_exceeded": false,
+            "duration_ms": 116,
+            "stdout": "",
+            "stderr": "test_distinct_records (test_public.PublicTests.test_distinct_records) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+          },
+          "hidden": {
+            "exit_code": 1,
+            "timed_out": false,
+            "output_limit_exceeded": false,
+            "duration_ms": 116,
+            "stdout": "",
+            "stderr": "test_duplicate_replaces_not_merges (__main__.AcceptanceTests.test_duplicate_replaces_not_merges) ... FAIL\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_no_mutation_and_shallow_copy (__main__.AcceptanceTests.test_no_mutation_and_shallow_copy) ... FAIL\ntest_one_shot (__main__.AcceptanceTests.test_one_shot) ... FAIL\ntest_randomized_contract (__main__.AcceptanceTests.test_randomized_contract) ... FAIL\n\n======================================================================\nFAIL: test_duplicate_replaces_not_merges (__main__.AcceptanceTests.test_duplicate_replaces_not_merges)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 13, in test_duplicate_replaces_not_merges\n    self.assertEqual(merge_pages([[{\"id\": \"b\", \"old\": 0}, {\"id\": \"a\"}, {\"id\": \"b\", \"new\": 1}],\nAssertionError: Lists differ: [{'id': 'b', 'old': 0}, {'id': 'a'}, {'id': 'c'}] != [{'id': 'b', 'new': 1}, {'id': 'a', 'v': 3}, {'id': 'c'}]\n\nFirst differing element 0:\n{'id': 'b', 'old': 0}\n{'id': 'b', 'new': 1}\n\n- [{'id': 'b', 'old': 0}, {'id': 'a'}, {'id': 'c'}]\n?               ^^^   ^\n\n+ [{'id': 'b', 'new': 1}, {'id': 'a', 'v': 3}, {'id': 'c'}]\n?               ^^^   ^             ++++++++\n\n\n======================================================================\nFAIL: test_no_mutation_and_shallow_copy (__main__.AcceptanceTests.test_no_mutation_and_shallow_copy)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 29, in test_no_mutation_and_shallow_copy\n    self.assertIsNot(result[0], data[0][0])\nAssertionError: unexpectedly identical: {'id': 'b', 'nested': []}\n\n======================================================================\nFAIL: test_one_shot (__main__.AcceptanceTests.test_one_shot)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 21, in test_one_shot\n    self.assertEqual(merge_pages(pages()), [{\"id\": \"a\", \"v\": 2}, {\"id\": \"b\"}])\nAssertionError: Lists differ: [{'id': 'a', 'v': 1}, {'id': 'b'}] != [{'id': 'a', 'v': 2}, {'id': 'b'}]\n\nFirst differing element 0:\n{'id': 'a', 'v': 1}\n{'id': 'a', 'v': 2}\n\n- [{'id': 'a', 'v': 1}, {'id': 'b'}]\n?                   ^\n\n+ [{'id': 'a', 'v': 2}, {'id': 'b'}]\n?                   ^\n\n\n======================================================================\nFAIL: test_randomized_contract (__main__.AcceptanceTests.test_randomized_contract)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 49, in test_randomized_contract\n    self.assertEqual(merge_pages(pages), expected)\nAssertionError: Lists differ: [{'id': 'e', 'v': 13}, {'id': 'd', 'v': 12}, {'id': 'c', 'v[46 chars] 33}] != [{'id': 'e', 'v': 72}, {'id': 'd', 'v': 33}, {'id': 'c', 'v[46 chars] 33}]\n\nFirst differing element 0:\n{'id': 'e', 'v': 13}\n{'id': 'e', 'v': 72}\n\n- [{'id': 'e', 'v': 13},\n?                   ^^\n\n+ [{'id': 'e', 'v': 72},\n?                   ^^\n\n+  {'id': 'd', 'v': 33},\n-  {'id': 'd', 'v': 12},\n?          ^\n\n+  {'id': 'c', 'v': 12},\n?          ^\n\n-  {'id': 'c', 'v': 35},\n?          ^        ^\n\n+  {'id': 'a', 'v': 45},\n?          ^        ^\n\n-  {'id': 'a', 'v': 81},\n   {'id': 'b', 'v': 33}]\n\n----------------------------------------------------------------------\nRan 5 tests in 0.003s\n\nFAILED (failures=4)\n"
+          }
+        },
+        "rubric": null,
+        "grader_duration_ms": 236,
+        "pass": false
+      },
+      "requests": [
+        {
+          "started_at_utc": "2026-11-10T14:21:14.705702+00:00",
+          "request_index": 1,
+          "original_body_sha256": "c9a21ddc5dc4ad99c50c13f24c83f6040641045c25775dba3312185fb2cff6f7",
+          "requested_max_output_tokens": null,
+          "model": "gpt-6.1-sol",
+          "tool_names": [],
+          "forwarded_protocol_header_names": [
+            "originator",
+            "session-id",
+            "thread-id",
+            "user-agent",
+            "x-client-request-id",
+            "x-codex-beta-features",
+            "x-codex-turn-metadata",
+            "x-codex-window-id",
+            "x-openai-internal-codex-responses-lite"
+          ],
+          "responses_lite": "true",
+          "input_types": [
+            "additional_tools",
+            "message",
+            "message",
+            "message",
+            "message",
+            "message",
+            "message"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {
+            "reasoning": {
+              "effort": "none",
+              "context": "all_turns"
+            },
+            "text": {
+              "verbosity": "low"
+            }
+          },
+          "min_interval_seconds": 30,
+          "minimum_request_window_seconds": 60,
+          "deadline_remaining_seconds_at_dispatch": 871.929949,
+          "pacing_wait_seconds": 27.67274,
+          "effective_max_output_tokens": 2048,
+          "error_type": "TimeoutError"
+        }
+      ],
+      "synthetic_usage": false,
+      "preflight_events": null,
+      "provider_requests": 1,
+      "supervisor_pid_absent": true,
+      "broker_socket_absent": true
+    }
+  ],
+  "stop_reason": "infra_error_no_automatic_retry",
+  "finished_at_utc": "2026-11-10T14:22:01.353588+00:00",
+  "synthetic_exchanges": 0,
+  "known_usage_estimate_usd": "0.03844560",
+  "unpriced_requests": 1,
+  "estimated_total_usd": null,
+  "all_slots_executed": false,
+  "protocol": "benchmark/PROTOCOL_RETRY45_R2.md",
+  "rubric_revision": "b01-evidence-r2",
+  "prior_known_usd": "0.21341376",
+  "prior_unpriced_requests": 2,
+  "remaining_known_guard_usd": "15.78658624",
+  "benchmark_known_cumulative_usd": "0.25185936",
+  "benchmark_estimated_total_usd": null,
+  "cost_scope": "continuation_only; benchmark cumulative includes predecessor; total unknown"
+}

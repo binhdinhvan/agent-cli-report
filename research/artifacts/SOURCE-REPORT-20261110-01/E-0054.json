@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0054",
+    "comparison_axis": "lifecycle",
+    "tool": "OpenCode v2",
+    "version": "2.2.5",
+    "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+    "claim": "Promise Service.discover không spawn còn ensure có nhánh spawn serve --service",
+    "file": "packages/client/src/promise/service.ts",
+    "line_start": "18",
+    "line_end": "48",
+    "symbol": "discover/ensure",
+    "permalink": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/client/src/promise/service.ts#L18-L48",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Chưa gọi discover/ensure; không dùng API này trên service đang làm việc"
+  },
+  "source_sha256": "1ef755d6f42257b8bea855c1fd359b68e2736d9a2f3fb015066d155a37191868",
+  "excerpt": "/** Discover a healthy, compatible local service without starting one. */\nexport async function discover(options: DiscoverOptions = {}) {\n  const found = (await registered(options.file)).service\n  if (found?.state !== \"ready\") return undefined\n  if (!found.compatible) return undefined\n  if (!matchesVersion(found.version, options)) return undefined\n  return found.endpoint\n}\n\n/** Ensure a healthy, compatible local service is running. */\nexport async function ensure(options: EnsureOptions = {}): Promise<Endpoint> {\n  const timing = ensureTiming(options)\n  const deadline = Date.now() + timing.promiseTimeout\n  const pool = contenderPool(timing)\n  let timeouts: { readonly info: Info; readonly count: number } | undefined\n  let announced = false\n\n  const announce = (reason: \"missing\" | \"version-mismatch\", previousVersion?: string) => {\n    if (announced) return\n    announced = true\n    options.onStart?.(reason, previousVersion)\n  }\n  const spawnContender = async () => {\n    const [command, ...args] = options.command ?? [\"opencode\", \"serve\", \"--service\"]\n    if (command === undefined) throw new Error(\"Missing service command\")\n    try {\n      return spawnServiceContender(command, args, await PtyHandoff.environment(options.file ?? fallback(), options.env))\n    } catch (cause) {\n      throw new Error(\"Failed to start server\", { cause })\n    }\n  }"
+}

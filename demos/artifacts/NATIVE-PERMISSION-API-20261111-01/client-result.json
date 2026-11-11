@@ -1,0 +1,516 @@
+{
+  "scope": "native TypeScript Client/private server with scripted SSE, not embedded SDK or model quality",
+  "checks": {
+    "subscribed_before_prompt": true,
+    "permission_allow": true,
+    "permission_deny": true,
+    "permission_overlap-allow": true,
+    "permission_overlap-deny": true,
+    "permission_ask_once": true,
+    "permission_pending_once": true,
+    "permission_reply_once": true,
+    "permission_ask_reject": true,
+    "permission_pending_reject": true,
+    "permission_reply_reject": true,
+    "permission_ask_always": true,
+    "permission_pending_always": true,
+    "permission_reply_always": true,
+    "saved_approval_same_resource": true,
+    "saved_approval_not_other_resource": true,
+    "configured_deny_beats_saved_allow": true
+  },
+  "events": [
+    {
+      "id": "evt_1c84601ea001nQH5fcIDx4VpuE",
+      "type": "server.connected",
+      "data": {}
+    },
+    {
+      "id": "evt_1c84601f1001ZGCwWs5Y17BDzr",
+      "created": 1794361393649,
+      "type": "session.created",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "slug": "clever-circuit",
+        "version": "2.2.5",
+        "projectID": "73de69eae94d7f423e3697b7e8c1ef3cecf9edb1",
+        "location": {
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+        },
+        "subpath": "",
+        "title": "native-client-demo"
+      },
+      "durable": {
+        "aggregateID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "seq": 0,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84601f900152nZ7jOT9dmFlT",
+      "created": 1794361393657,
+      "type": "project.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {
+        "id": "73de69eae94d7f423e3697b7e8c1ef3cecf9edb1",
+        "canonical": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project",
+        "time": {
+          "created": 1794361393648,
+          "updated": 1794361393648,
+          "active": 1794361393657
+        },
+        "sandboxes": []
+      }
+    },
+    {
+      "id": "evt_1c846034e001raGWgdXOmIcKQm",
+      "created": 1794361393998,
+      "type": "session.permissions",
+      "data": {
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "permissions": [
+          {
+            "action": "report_permission",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      "durable": {
+        "aggregateID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "seq": 1,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c846039b001xbrjz22BK7mf4Z",
+      "created": 1794361394075,
+      "type": "session.permissions",
+      "data": {
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "permissions": [
+          {
+            "action": "report_permission",
+            "resource": "*",
+            "effect": "deny"
+          }
+        ]
+      },
+      "durable": {
+        "aggregateID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "seq": 2,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84603a80016s1GiEoxI4nFWP",
+      "created": 1794361394088,
+      "type": "session.permissions",
+      "data": {
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "permissions": [
+          {
+            "action": "report_permission",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "report_permission",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      "durable": {
+        "aggregateID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "seq": 3,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84603af001TBlHH0vSyr61CT",
+      "created": 1794361394095,
+      "type": "session.permissions",
+      "data": {
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "permissions": [
+          {
+            "action": "report_permission",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "report_permission",
+            "resource": "*",
+            "effect": "deny"
+          }
+        ]
+      },
+      "durable": {
+        "aggregateID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "seq": 4,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84603b7001VSLi5WBNDKuMwr",
+      "created": 1794361394103,
+      "type": "integration.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84603ba001w0vjCWorkK60VP",
+      "created": 1794361394106,
+      "type": "provider.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84603c0001QxfBCM1WEgcdXb",
+      "created": 1794361394112,
+      "type": "model.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84603c2001YVrsJ7MCvF5W1d",
+      "created": 1794361394114,
+      "type": "agent.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84603c2002j744XOU3IJgtpR",
+      "created": 1794361394114,
+      "type": "command.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84603c20032xl7JbETgegRuc",
+      "created": 1794361394114,
+      "type": "skill.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84603c4001nTEmYBFs5byDBK",
+      "created": 1794361394116,
+      "type": "websearch.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84603d5002a3XndMgOa34uAN",
+      "created": 1794361394133,
+      "type": "reference.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84603d6001JyKgJ9zkznYHib",
+      "created": 1794361394134,
+      "type": "plugin.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84603da001UWEId6HUfUJ4EL",
+      "created": 1794361394138,
+      "type": "session.permissions",
+      "data": {
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "permissions": [
+          {
+            "action": "report_permission",
+            "resource": "*",
+            "effect": "ask"
+          }
+        ]
+      },
+      "durable": {
+        "aggregateID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "seq": 5,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84603e5002XDYafStTTTVTjT",
+      "created": 1794361394149,
+      "type": "permission.asked",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {
+        "id": "per_1c84603e5001bjpsIyl7pBr61V",
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "action": "report_permission",
+        "resources": [
+          "fixture"
+        ],
+        "save": [
+          "fixture"
+        ]
+      }
+    },
+    {
+      "id": "evt_1c84603e8001u5crcofv5CGWdM",
+      "created": 1794361394152,
+      "type": "permission.replied",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "requestID": "per_1c84603e5001bjpsIyl7pBr61V",
+        "reply": "once"
+      }
+    },
+    {
+      "id": "evt_1c84603ea002tVLUBnV1xWJgM9",
+      "created": 1794361394154,
+      "type": "permission.asked",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {
+        "id": "per_1c84603ea001jie9gSRiftHSv1",
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "action": "report_permission",
+        "resources": [
+          "fixture"
+        ],
+        "save": [
+          "fixture"
+        ]
+      }
+    },
+    {
+      "id": "evt_1c84603ed001dL6QJCZwh8K6S0",
+      "created": 1794361394157,
+      "type": "permission.replied",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "requestID": "per_1c84603ea001jie9gSRiftHSv1",
+        "reply": "reject"
+      }
+    },
+    {
+      "id": "evt_1c84603ef002VaOUs4Skvp5dqA",
+      "created": 1794361394159,
+      "type": "permission.asked",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {
+        "id": "per_1c84603ef001MuzhOAh731xj4c",
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "action": "report_permission",
+        "resources": [
+          "fixture"
+        ],
+        "save": [
+          "fixture"
+        ]
+      }
+    },
+    {
+      "id": "evt_1c84603f1001qE9rhrunkZLZTj",
+      "created": 1794361394161,
+      "type": "permission.replied",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "requestID": "per_1c84603ef001MuzhOAh731xj4c",
+        "reply": "always"
+      }
+    },
+    {
+      "id": "evt_1c84603f5002zInpT0zUjWpfpv",
+      "created": 1794361394165,
+      "type": "permission.asked",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {
+        "id": "per_1c84603f50017F19Wx9cIwLt9P",
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "action": "report_permission",
+        "resources": [
+          "different-fixture"
+        ]
+      }
+    },
+    {
+      "id": "evt_1c84603f6001hvCnjQykkOPsPc",
+      "created": 1794361394166,
+      "type": "permission.replied",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "requestID": "per_1c84603f50017F19Wx9cIwLt9P",
+        "reply": "reject"
+      }
+    },
+    {
+      "id": "evt_1c84603f70017ZBwWLP8CP3bUj",
+      "created": 1794361394167,
+      "type": "session.permissions",
+      "data": {
+        "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "permissions": [
+          {
+            "action": "report_permission",
+            "resource": "fixture",
+            "effect": "deny"
+          }
+        ]
+      },
+      "durable": {
+        "aggregateID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+        "seq": 6,
+        "version": 1
+      }
+    }
+  ],
+  "requests": [],
+  "cycles": [
+    {
+      "pid": 18,
+      "url": "http://127.0.0.1:45949",
+      "exit": 0
+    }
+  ],
+  "sessionID": "ses_e37b9fe11ffeW6tQeaaW7A5BRQ",
+  "plugin_list": {
+    "location": {
+      "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/project"
+    },
+    "data": []
+  },
+  "config_plugins": [
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2ac2b4aa2598c59eb0f4/xdg-config/opencode/opencode.json"
+    }
+  ],
+  "permission_cases": [
+    {
+      "name": "allow",
+      "effects": [
+        "allow"
+      ],
+      "evaluated": {
+        "id": "per_1c846037f001w2L0Qy8Vz5ZGHW",
+        "effect": "allow"
+      }
+    },
+    {
+      "name": "deny",
+      "effects": [
+        "deny"
+      ],
+      "evaluated": {
+        "id": "per_1c84603a1001tGMlerJyMKpjAW",
+        "effect": "deny"
+      }
+    },
+    {
+      "name": "overlap-allow",
+      "effects": [
+        "deny",
+        "allow"
+      ],
+      "evaluated": {
+        "id": "per_1c84603ad001PC149d9YRrL1Tp",
+        "effect": "allow"
+      }
+    },
+    {
+      "name": "overlap-deny",
+      "effects": [
+        "allow",
+        "deny"
+      ],
+      "evaluated": {
+        "id": "per_1c84603d8001lZSfL0MB8MZFOp",
+        "effect": "deny"
+      }
+    },
+    {
+      "name": "ask-once",
+      "request": {
+        "id": "per_1c84603e5001bjpsIyl7pBr61V",
+        "effect": "ask"
+      },
+      "decision": "once",
+      "pending_before": 1,
+      "pending_after": 0
+    },
+    {
+      "name": "ask-reject",
+      "request": {
+        "id": "per_1c84603ea001jie9gSRiftHSv1",
+        "effect": "ask"
+      },
+      "decision": "reject",
+      "pending_before": 1,
+      "pending_after": 0
+    },
+    {
+      "name": "ask-always",
+      "request": {
+        "id": "per_1c84603ef001MuzhOAh731xj4c",
+        "effect": "ask"
+      },
+      "decision": "always",
+      "pending_before": 1,
+      "pending_after": 0
+    }
+  ],
+  "permission_saved_scope": {
+    "saved": {
+      "id": "per_1c84603f3001DM8KlyKJQAWmzi",
+      "effect": "allow"
+    },
+    "other": {
+      "id": "per_1c84603f50017F19Wx9cIwLt9P",
+      "effect": "ask"
+    },
+    "denied": {
+      "id": "per_1c84603fa0017ZyQu0k2X93D2g",
+      "effect": "deny"
+    }
+  },
+  "status": "pass"
+}

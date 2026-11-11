@@ -1,0 +1,107 @@
+{
+  "created_at_utc": "2026-11-06T09:53:04.065107+00:00",
+  "scope": "offline launch gates, no key/provider access",
+  "suites": [
+    {
+      "suite": "demos/test_provider_stop.py",
+      "exit_code": 0,
+      "log": "test_provider_stop.txt"
+    },
+    {
+      "suite": "benchmark/test_pilot.py",
+      "exit_code": 0,
+      "log": "test_pilot.txt"
+    },
+    {
+      "suite": "demos/test_pacing.py",
+      "exit_code": 0,
+      "log": "test_pacing.txt"
+    },
+    {
+      "suite": "demos/test_model_smoke.py",
+      "exit_code": 0,
+      "log": "test_model_smoke.txt"
+    },
+    {
+      "suite": "demos/test_provider_pricing.py",
+      "exit_code": 0,
+      "log": "test_provider_pricing.txt"
+    }
+  ],
+  "tests_passed": 32,
+  "plan": [
+    [
+      "P-01",
+      "codex"
+    ],
+    [
+      "P-01",
+      "opencode-v2"
+    ],
+    [
+      "P-01",
+      "opencode-v1"
+    ],
+    [
+      "P-02",
+      "opencode-v2"
+    ],
+    [
+      "P-02",
+      "opencode-v1"
+    ],
+    [
+      "P-02",
+      "codex"
+    ],
+    [
+      "P-02",
+      "pi"
+    ]
+  ],
+  "prior_known_usage_estimated_cost_usd": "0.10501200",
+  "prior_unpriced_requests": 1,
+  "remaining_known_estimate_guard_usd": "2.89498800",
+  "continuation_source": "benchmark/artifacts/PILOT-SOL-RETRY-20261106-01/result.json",
+  "continuation_source_sha256": "d364136e9a3bcdb1d3a39ab5370ae027e7f44d8672b2af7baa67224f3fce0734",
+  "fixture_seal_binary_hashes": "pass",
+  "fresh_run_ids": [
+    "R-0018",
+    "R-0019",
+    "R-0020",
+    "R-0021",
+    "R-0022",
+    "R-0023",
+    "R-0024"
+  ],
+  "fresh_config_ids": [
+    "C-0070",
+    "C-0071",
+    "C-0072",
+    "C-0073",
+    "C-0074",
+    "C-0075",
+    "C-0076"
+  ],
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "source_sha256": {
+    "benchmark/pilot.py": "2ac772ec8ecab55ac9c80a1a91a3357e0f28d7de278adfc1b7eed6ead987f1ab",
+    "demos/proxy_headers.py": "b3896d199fd807902d8bccb105d1feb1f7755fb00816577c3c0e7949a678048d",
+    "research/provider-pricing.json": "0a779dd0480a5703d7e3668f613f6d2139186dd86ef2aebb55b5ff0e4ec7dd1f",
+    "demos/test_pacing.py": "2411b54a7f514d939a1a1d2080816bdc791c7ea0942508c9fb8dab60f568e6fd",
+    "demos/model_smoke.py": "ca759a9909c7652dd03660570a3553b68ab9261a3d1ca63ac755f2d9e8834822",
+    "demos/test_model_smoke.py": "82b694976334abc815e1010a54cd65b396509ea96b3a50678bac23df76ec9341",
+    "demos/model_smoke_inside.py": "476636ec1d7d029c4b6306831074c7cc83bc0ea71937b19c976613f39fcda29e",
+    "benchmark/test_pilot.py": "02bb3b879e100cc53fb4271478bd4f735719569c9dff902a4ca8485222189eb6",
+    "demos/test_provider_pricing.py": "da8796a4c53284ad220b4a50d61e0f550930c2cf85f96ceeded85831732c4cf5",
+    "benchmark/PILOT_SOL_CONTINUE.md": "cf3afbaa2dce248bc8cbe45c527f785df9091032c87ec71f7cfe596df06a0746",
+    "benchmark/verify_pilot_fixtures.py": "f8a4e20b4bec596a2ef7338184ec96ef8d7e5dd057235c1739e8591d67cad3e0",
+    "demos/test_provider_stop.py": "9fea00e33e85d851929b269c19d23b980079244dc26d2a05b3825a7d2176ea83",
+    "benchmark/pilot_inside.py": "db91620643437070de1cec3eae0b3b25c27a3e09d6265a86fed5a0b9c3ffd29c"
+  }
+}

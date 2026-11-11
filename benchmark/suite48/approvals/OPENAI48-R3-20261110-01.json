@@ -1,0 +1,11 @@
+{
+  "authorized": true,
+  "scope": "openai-r3-explicit-4smoke-rerun-then48fresh-no-auto-retry",
+  "artifact": "benchmark/suite48/artifacts/OPENAI48-R3-20261110-01",
+  "plan_sha256": "2ef3782284418fa8372d82393fbefaadf58f3172bdd381c3a673c9e13e9f001e",
+  "budget_estimate_usd": "16",
+  "prior_unknown_and_upper_estimate_acknowledged": true,
+  "automatic_retries_authorized": false,
+  "approved_by": "user: chạy lại benchmark; repeated continue messages steer same single launch, not multiple jobs;4native smoke then48fresh with reasoningr3, existing16USDguard/noauto retrytopup",
+  "approved_at_utc": "2026-11-10T16:55:23.644923+00:00"
+}

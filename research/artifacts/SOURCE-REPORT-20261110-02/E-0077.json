@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0077",
+    "comparison_axis": "architecture",
+    "tool": "Pi",
+    "version": "1.5.0",
+    "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+    "claim": "SDK dựng Agent với messages từ existingSession và modelRuntime stream rồi ghép vào AgentSession cùng sessionManager/settings/resourceLoader",
+    "file": "packages/coding-agent/src/core/sdk.ts",
+    "line_start": "403",
+    "line_end": "468",
+    "symbol": "createAgentSession/Agent/AgentSession",
+    "permalink": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/sdk.ts#L403-L468",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Chỉ nhánh SDK đã đọc; không kết luận Pi không có server hoặc giao diện khác; chưa chạy SDK"
+  },
+  "source_sha256": "f0f6f2b14a61c5c3ebb31d40c97b3f73296a2f0334d582072383302d693714c8",
+  "excerpt": "\tconst agent = new Agent({\n\t\tinitialState: {\n\t\t\tsystemPrompt: \"\",\n\t\t\tmodel,\n\t\t\tthinkingLevel,\n\t\t\ttools: [],\n\t\t\tmessages: existingSession.messages,\n\t\t},\n\t\tconvertToLlm: convertToLlmWithBlockImages,\n\t\tstreamFn: async (model, context, options) => {\n\t\t\tconst requestOptions = buildRequestOptions(options);\n\t\t\t// Compaction and summaries use their own routing ids; only session requests\n\t\t\t// replace the cache entry, so warming restarts from them. Keep warming while\n\t\t\t// the current transcript still extends the request's prefix. Agent state may\n\t\t\t// shallow-copy the messages array or refresh the model object without changing\n\t\t\t// the provider request, so top-level object identity is not a valid cache key.\n\t\t\tif (options?.sessionId === sessionManager.getSessionId()) {\n\t\t\t\tcacheWarmer.start({ model, context, options: requestOptions }, cacheContextIsCurrent(model));\n\t\t\t}\n\t\t\treturn modelRuntime.streamSimple(model, context, requestOptions);\n\t\t},\n\t\tonPayload: transformProviderPayload,\n\t\tonResponse: handleProviderResponse,\n\t\tonProviderStreamEvent: handleProviderStreamEvent,\n\t\tsessionId: sessionManager.getSessionId(),\n\t\ttransformContext: async (messages) => {\n\t\t\tconst runner = extensionRunnerRef.current;\n\t\t\tif (!runner) return messages;\n\t\t\treturn runner.emitContext(messages);\n\t\t},\n\t\tsteeringMode: settingsManager.getSteeringMode(),\n\t\tfollowUpMode: settingsManager.getFollowUpMode(),\n\t\ttransport: settingsManager.getTransport(),\n\t\tthinkingBudgets: settingsManager.getThinkingBudgets(),\n\t\tmaxRetryDelayMs: settingsManager.getProviderRetrySettings().maxRetryDelayMs,\n\t});\n\t// This stream resolves auth through modelRuntime, so summaries must not pre-resolve it (#11520).\n\tmarkRuntimeStreamFunction(agent.streamFunction, modelRuntime);\n\n\t// Restore missing settings metadata for older sessions.\n\tif (hasExistingSession) {\n\t\tif (!hasThinkingEntry) {\n\t\t\tsessionManager.appendThinkingLevelChange(thinkingLevel);\n\t\t}\n\t} else {\n\t\t// Save initial model and thinking level for new sessions so they can be restored on resume\n\t\tif (model) {\n\t\t\tsessionManager.appendModelChange(model.provider, model.id);\n\t\t}\n\t\tsessionManager.appendThinkingLevelChange(thinkingLevel);\n\t}\n\n\tconst session = new AgentSession({\n\t\tagent,\n\t\tsessionManager,\n\t\tsettingsManager,\n\t\tcwd,\n\t\tscopedModels: options.scopedModels,\n\t\tresourceLoader,\n\t\tcustomTools: options.customTools,\n\t\tmodelRuntime,\n\t\tcacheWarmer,\n\t\tinitialActiveToolNames,\n\t\tusesDefaultTools: (options.tools === undefined || toolModifiers !== undefined) && !options.noTools,\n\t\tdefaultToolModifiers: toolModifiers,\n\t\tallowedToolNames,"
+}

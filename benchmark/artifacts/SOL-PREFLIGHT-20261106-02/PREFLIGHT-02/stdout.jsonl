@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1b02f-8801-7483-9c3a-394054c5273f"}
+{"type":"turn.started"}
+{"type":"error","message":"{\"error\":{\"message\":\"Intentional offline preflight stop\"}}"}
+{"type":"turn.failed","error":{"message":"{\"error\":{\"message\":\"Intentional offline preflight stop\"}}"}}

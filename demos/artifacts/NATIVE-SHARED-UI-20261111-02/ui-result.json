@@ -1,0 +1,94 @@
+{
+  "scope": "native packaged UI2.2.5/headless isolated service; not live user desktop",
+  "checks": {
+    "private_service_ready": true,
+    "native_desktop_renderer_created": true,
+    "desktop_did_not_replace_private_service": true
+  },
+  "health": [
+    503,
+    200
+  ],
+  "cdpAttempts": [
+    {
+      "error": "TypeError: ECONNREFUSED: Unable to connect. Is the computer able to access the url?"
+    },
+    {
+      "error": "TypeError: ECONNREFUSED: Unable to connect. Is the computer able to access the url?"
+    },
+    {
+      "error": "TypeError: ECONNREFUSED: Unable to connect. Is the computer able to access the url?"
+    },
+    {
+      "error": "TypeError: ECONNREFUSED: Unable to connect. Is the computer able to access the url?"
+    },
+    {
+      "status": 200,
+      "targets": [
+        {
+          "type": "page",
+          "url": "oc://renderer/index.html"
+        }
+      ]
+    }
+  ],
+  "server_info": {
+    "version": "2.2.5",
+    "pid": 5,
+    "hostname": "VSF-PF64PCNX-L",
+    "urls": [
+      "http://127.0.0.1:33683"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode/agent-cli-report/smoke/BP48-UI-e2c2858f726da4bcb43f/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "session": {
+    "data": {
+      "id": "ses_e378b3c56ffepJKjs6339lJS5t",
+      "projectID": "9d2e7dacb1f218ee732f6d484c3a8abe2af6ee01",
+      "cost": 0,
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794364457900,
+        "updated": 1794364457900
+      },
+      "title": "REPORT_SHARED_UI_MARKER",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-UI-e2c2858f726da4bcb43f/project"
+      }
+    }
+  },
+  "desktop_document": {
+    "result": {
+      "type": "string",
+      "value": "{\"url\":\"oc://renderer/index.html\",\"title\":\"OpenCode\",\"text\":\"\"}"
+    }
+  },
+  "service_after_desktop": {
+    "version": "2.2.5",
+    "pid": 5,
+    "hostname": "VSF-PF64PCNX-L",
+    "urls": [
+      "http://127.0.0.1:33683"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode/agent-cli-report/smoke/BP48-UI-e2c2858f726da4bcb43f/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "status": "observed_pending_review"
+}

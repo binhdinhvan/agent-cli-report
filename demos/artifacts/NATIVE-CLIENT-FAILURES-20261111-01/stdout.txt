@@ -1,0 +1,1 @@
+{"status":"pass","checks":{"subscribed_before_prompt":true,"scripted_http400_native_terminal_failed":true,"provider_error_marker_retained":true,"wait_timeout_rejects_request":true,"wait_timeout_does_not_finish_execution":true,"native_interrupt_reaches_idle":true,"native_interrupt_not_success":true,"client_missing_auth_rejected":true}}

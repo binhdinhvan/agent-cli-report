@@ -1,0 +1,1 @@
+{"status":"pass","checks":{"subscribed_before_prompt":true,"test_action_has_no_configured_match":true,"unmatched_fallback_ask":true,"once_does_not_persist":true,"unmatched_pending_settled":true}}

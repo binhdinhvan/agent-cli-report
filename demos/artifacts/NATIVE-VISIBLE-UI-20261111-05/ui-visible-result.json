@@ -1,0 +1,351 @@
+{
+  "scope": "fresh isolated Xvfb; real Desktop window, standalone Chrome toolbar and xterm TUI; no prompt",
+  "checks": {
+    "private_xvfb_ready": true,
+    "owned_service_registration": true,
+    "private_service_ready": true,
+    "desktop-boot-diagnostic_screen_capture": true,
+    "desktop_shared_session": true,
+    "desktop-window_screen_capture": true,
+    "desktop_keeps_service_pid": true,
+    "standalone_browser_shared_session": true,
+    "web-browser_screen_capture": true,
+    "tui_shared_session": true,
+    "tui-terminal_screen_capture": true,
+    "all_clients_keep_service_pid": true,
+    "same_endpoint": true
+  },
+  "screenshots": {
+    "desktop-boot-diagnostic": {
+      "method": "Pillow ImageGrab / XCB root screen, not CDP viewport or fabricated chrome",
+      "display": ":91",
+      "at": "2026-11-11T14:42:04.840Z"
+    },
+    "desktop-window": {
+      "method": "Pillow ImageGrab / XCB root screen, not CDP viewport or fabricated chrome",
+      "display": ":91",
+      "at": "2026-11-11T14:42:06.303Z"
+    },
+    "web-browser": {
+      "method": "Pillow ImageGrab / XCB root screen, not CDP viewport or fabricated chrome",
+      "display": ":91",
+      "at": "2026-11-11T14:42:08.074Z"
+    },
+    "tui-terminal": {
+      "method": "Pillow ImageGrab / XCB root screen, not CDP viewport or fabricated chrome",
+      "display": ":91",
+      "at": "2026-11-11T14:42:10.254Z"
+    }
+  },
+  "timeline": [
+    {
+      "stage": "spawn",
+      "name": "xvfb",
+      "pid": 7,
+      "args": [
+        "/opt/research/ui-tools/usr/bin/Xvfb",
+        ":91",
+        "-screen",
+        "0",
+        "1600x1050x24",
+        "-nolisten",
+        "tcp",
+        "-ac"
+      ],
+      "at": "2026-11-11T14:42:03.271Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "twm",
+      "pid": 11,
+      "args": [
+        "/opt/research/ui-tools/usr/bin/twm",
+        "-f",
+        "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-e9ab03f36ae44108f6bb/twmrc"
+      ],
+      "at": "2026-11-11T14:42:03.287Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "service",
+      "pid": 12,
+      "args": [
+        "/opt/agent-cli-report/BP48-VIS-e9ab03f36ae44108f6bb/opencode",
+        "serve",
+        "--service",
+        "--hostname",
+        "127.0.0.1",
+        "--port",
+        "0"
+      ],
+      "at": "2026-11-11T14:42:03.288Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "desktop",
+      "pid": 34,
+      "args": [
+        "/opt/research/desktop/ai.opencode",
+        "--ozone-platform=x11",
+        "--no-sandbox",
+        "--disable-gpu",
+        "--disable-dev-shm-usage",
+        "--password-store=basic",
+        "--remote-debugging-port=9333"
+      ],
+      "at": "2026-11-11T14:42:03.953Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "chrome",
+      "pid": 148,
+      "args": [
+        "/opt/google/chrome/chrome",
+        "--ozone-platform=x11",
+        "--no-sandbox",
+        "--disable-gpu",
+        "--disable-dev-shm-usage",
+        "--disable-background-networking",
+        "--disable-sync",
+        "--disable-extensions",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--password-store=basic",
+        "--user-data-dir=/tmp/opencode/agent-cli-report/smoke/BP48-VIS-e9ab03f36ae44108f6bb/chrome-profile",
+        "--remote-debugging-port=9444",
+        "--window-position=35,30",
+        "--window-size=1500,950",
+        "about:blank"
+      ],
+      "at": "2026-11-11T14:42:06.313Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "terminal",
+      "pid": 325,
+      "args": [
+        "/opt/research/ui-tools/usr/bin/xterm",
+        "-geometry",
+        "148x42+35+30",
+        "-fa",
+        "DejaVu Sans Mono",
+        "-fs",
+        "12",
+        "-bg",
+        "#0d1b2a",
+        "-fg",
+        "#e6edf3",
+        "-title",
+        "OpenCode TUI - isolated capture",
+        "-e",
+        "/usr/bin/python3",
+        "-B",
+        "/opt/research/tui_visible_inside.py",
+        "/opt/agent-cli-report/BP48-VIS-e9ab03f36ae44108f6bb/opencode",
+        "ses_e34f0f1dcffeGBNrK27IkYW0eR"
+      ],
+      "at": "2026-11-11T14:42:08.074Z"
+    }
+  ],
+  "health": [
+    503,
+    200
+  ],
+  "service_before": {
+    "version": "2.2.5",
+    "pid": 12,
+    "hostname": "VSF-PF64PCNX-L",
+    "urls": [
+      "http://127.0.0.1:33617"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-e9ab03f36ae44108f6bb/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "session": {
+    "data": {
+      "id": "ses_e34f0f1dcffeGBNrK27IkYW0eR",
+      "projectID": "7c02e9311c075ab93449206556abb782bbecb4b2",
+      "cost": 0,
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794408123946,
+        "updated": 1794408123946
+      },
+      "title": "REPORT_SHARED_UI_MARKER",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-e9ab03f36ae44108f6bb/project"
+      }
+    }
+  },
+  "last_cdp": {
+    "port": 9444,
+    "method": "Page.bringToFront",
+    "at": "2026-11-11T14:42:07.317Z"
+  },
+  "desktop_boot_document": {
+    "result": {
+      "type": "string",
+      "value": "{\"url\":\"oc://renderer/index.html\",\"ready\":\"interactive\",\"windowID\":\"67584ca8-0ca9-40bc-aa33-b6656a42efab\"}"
+    }
+  },
+  "browser_errors": [
+    {
+      "port": 9333,
+      "method": "Network.loadingFailed",
+      "params": {
+        "requestId": "99.280",
+        "timestamp": 3485.950707,
+        "type": "Fetch",
+        "errorText": "net::ERR_INTERNET_DISCONNECTED",
+        "canceled": false
+      }
+    },
+    {
+      "port": 9333,
+      "method": "Network.loadingFailed",
+      "params": {
+        "requestId": "99.313",
+        "timestamp": 3486.34439,
+        "type": "Fetch",
+        "errorText": "net::ERR_ABORTED",
+        "canceled": true
+      }
+    },
+    {
+      "port": 9444,
+      "method": "Network.loadingFailed",
+      "params": {
+        "requestId": "244.355",
+        "timestamp": 3487.837503,
+        "type": "Fetch",
+        "errorText": "net::ERR_ABORTED",
+        "canceled": true
+      }
+    },
+    {
+      "port": 9333,
+      "method": "Network.loadingFailed",
+      "params": {
+        "requestId": "99.326",
+        "timestamp": 3488.726748,
+        "type": "Fetch",
+        "errorText": "net::ERR_INTERNET_DISCONNECTED",
+        "canceled": false
+      }
+    }
+  ],
+  "desktop_document": {
+    "result": {
+      "type": "object",
+      "value": {
+        "url": "oc://renderer/index.html",
+        "title": "REPORT_SHARED_UI_MARKER · OpenCode",
+        "text": "P\nREPORT_SHARED_UI_MARKER\nP\nproject\nREPORT_SHARED_UI_MARKER\nAsk anything, / for commands, @ for context…"
+      }
+    }
+  },
+  "desktop_route": "/server/c2lkZWNhcg/session/ses_e34f0f1dcffeGBNrK27IkYW0eR",
+  "service_after_desktop": {
+    "version": "2.2.5",
+    "pid": 12,
+    "hostname": "VSF-PF64PCNX-L",
+    "urls": [
+      "http://127.0.0.1:33617"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-e9ab03f36ae44108f6bb/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "web_document": {
+    "result": {
+      "type": "object",
+      "value": {
+        "url": "http://127.0.0.1:33617/server/aHR0cDovLzEyNy4wLjAuMTozMzYxNw/session/ses_e34f0f1dcffeGBNrK27IkYW0eR",
+        "title": "REPORT_SHARED_UI_MARKER · OpenCode",
+        "text": "P\nREPORT_SHARED_UI_MARKER\nP\nproject\nREPORT_SHARED_UI_MARKER\n0\n·\n$0.00\nAsk anything, / for commands, @ for context…\nSmoke broker\n/\ngpt-6.1-sol"
+      }
+    }
+  },
+  "web_route": "http://127.0.0.1:33617/server/aHR0cDovLzEyNy4wLjAuMTozMzYxNw/session/ses_e34f0f1dcffeGBNrK27IkYW0eR",
+  "tui_ready": {
+    "sessionID": "ses_e34f0f1dcffeGBNrK27IkYW0eR",
+    "command": [
+      "/opt/agent-cli-report/BP48-VIS-e9ab03f36ae44108f6bb/opencode",
+      "--session",
+      "ses_e34f0f1dcffeGBNrK27IkYW0eR"
+    ],
+    "session_title_observed": true,
+    "pid": 327
+  },
+  "tui": {
+    "command": [
+      "/opt/agent-cli-report/BP48-VIS-e9ab03f36ae44108f6bb/opencode",
+      "--session",
+      "ses_e34f0f1dcffeGBNrK27IkYW0eR"
+    ],
+    "sessionID": "ses_e34f0f1dcffeGBNrK27IkYW0eR",
+    "session_title_observed": true,
+    "pid": 327,
+    "exit_code": 130,
+    "process_stopped": true,
+    "bytes": 21001,
+    "scope": "actual PTY bytes displayed by xterm on private Xvfb; no prompt"
+  },
+  "service_after_all": {
+    "version": "2.2.5",
+    "pid": 12,
+    "hostname": "VSF-PF64PCNX-L",
+    "urls": [
+      "http://127.0.0.1:33617"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-e9ab03f36ae44108f6bb/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "no_prompt_submitted": true,
+  "status": "checks_passed_pending_review",
+  "cleanup": [
+    {
+      "pid": 325,
+      "exit": 0
+    },
+    {
+      "pid": 148,
+      "exit": 0
+    },
+    {
+      "pid": 34,
+      "exit": 130
+    },
+    {
+      "pid": 12,
+      "exit": 130
+    },
+    {
+      "pid": 11,
+      "exit": 0
+    },
+    {
+      "pid": 7,
+      "exit": 0
+    }
+  ]
+}

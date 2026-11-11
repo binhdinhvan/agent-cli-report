@@ -1,0 +1,106 @@
+{
+  "runs": [
+    {
+      "tool": "opencode-v1",
+      "config_id": "C-0045",
+      "status": "pass",
+      "requests": 3,
+      "estimated_cost_usd": "0.05590704",
+      "duration_ms": 91843,
+      "stderr_bytes": 0
+    },
+    {
+      "tool": "opencode-v2",
+      "config_id": "C-0046",
+      "status": "pass",
+      "requests": 3,
+      "estimated_cost_usd": "0.0272580",
+      "duration_ms": 137036,
+      "stderr_bytes": 0
+    },
+    {
+      "tool": "codex",
+      "config_id": "C-0047",
+      "status": "pass",
+      "requests": 2,
+      "estimated_cost_usd": "0.00857112",
+      "duration_ms": 82424,
+      "stderr_bytes": 39
+    }
+  ],
+  "total_requests": 8,
+  "estimated_total_usd": "0.09173616",
+  "measured_charge_usd": null,
+  "gaps": [
+    {
+      "previous_config": "C-0045",
+      "next_config": "C-0045",
+      "seconds": 30.00135
+    },
+    {
+      "previous_config": "C-0045",
+      "next_config": "C-0045",
+      "seconds": 30.000914
+    },
+    {
+      "previous_config": "C-0045",
+      "next_config": "C-0046",
+      "seconds": 1.571132
+    },
+    {
+      "previous_config": "C-0046",
+      "next_config": "C-0046",
+      "seconds": 30.001971
+    },
+    {
+      "previous_config": "C-0046",
+      "next_config": "C-0046",
+      "seconds": 30.001427
+    },
+    {
+      "previous_config": "C-0046",
+      "next_config": "C-0047",
+      "seconds": 1.271972
+    },
+    {
+      "previous_config": "C-0047",
+      "next_config": "C-0047",
+      "seconds": 30.002289
+    }
+  ],
+  "protocol_deviations": [
+    {
+      "previous_config": "C-0045",
+      "next_config": "C-0046",
+      "seconds": 1.571132
+    },
+    {
+      "previous_config": "C-0046",
+      "next_config": "C-0047",
+      "seconds": 1.271972
+    }
+  ],
+  "raw_hashes_match": true,
+  "binary_hashes_match": true,
+  "acceptance_recomputed": true,
+  "key_scan_pass": true,
+  "supervisor_pids_absent": true,
+  "broker_sockets_absent": true,
+  "matching_runtime_process_pids": [],
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "raw_artifact_sha256": {
+    "C-0046.stdout.jsonl": "0689eddbba95e03ebe8cdd53e1c2f5522b1edd15d425c26d6a21925489d8236d",
+    "C-0045.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "result.json": "c2d508be6ce2c5be6c65a5b6f64a95943f8be1617eacdebaddb9915df67b2fa4",
+    "C-0047.stdout.jsonl": "8e0081f61dbf15279077a201e222f64976788125d25fcd4ab8f91778ae546c6f",
+    "protocol.json": "8d41a8b8edf208286cb56ea2956e916b564ae77542e9a2cc53268ac1a4fd90d9",
+    "C-0045.stdout.jsonl": "66a429f0173e3b32d3d37f8acf006209ecec1bb9437027eb2133c29cd26c637b",
+    "C-0047.stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+    "C-0046.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

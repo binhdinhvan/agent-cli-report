@@ -1,0 +1,116 @@
+{
+  "scope": "Native offline LOCAL preflight audit only; no credential read/provider or paid inference",
+  "regression_tests": [
+    {
+      "suite": "demos/test_timing_policy.py",
+      "tests_passed": 6,
+      "exit_code": 0,
+      "log": "test_timing_policy.txt"
+    },
+    {
+      "suite": "demos/test_environment_profile.py",
+      "tests_passed": 4,
+      "exit_code": 0,
+      "log": "test_environment_profile.txt"
+    },
+    {
+      "suite": "benchmark/test_pilot.py",
+      "tests_passed": 19,
+      "exit_code": 0,
+      "log": "test_pilot.txt"
+    },
+    {
+      "suite": "demos/test_provider_stop.py",
+      "tests_passed": 4,
+      "exit_code": 0,
+      "log": "test_provider_stop.txt"
+    },
+    {
+      "suite": "demos/test_pacing.py",
+      "tests_passed": 5,
+      "exit_code": 0,
+      "log": "test_pacing.txt"
+    },
+    {
+      "suite": "demos/test_model_smoke.py",
+      "tests_passed": 7,
+      "exit_code": 0,
+      "log": "test_model_smoke.txt"
+    },
+    {
+      "suite": "demos/test_provider_pricing.py",
+      "tests_passed": 5,
+      "exit_code": 0,
+      "log": "test_provider_pricing.txt"
+    },
+    {
+      "suite": "benchmark/test_freeze_pilot.py",
+      "tests_passed": 3,
+      "exit_code": 0,
+      "log": "test_freeze_pilot.txt"
+    },
+    {
+      "suite": "benchmark/test_plan48.py",
+      "tests_passed": 5,
+      "exit_code": 0,
+      "log": "test_plan48.txt"
+    },
+    {
+      "suite": "benchmark/test_suite48.py",
+      "tests_passed": 7,
+      "exit_code": 0,
+      "log": "test_suite48.txt"
+    },
+    {
+      "suite": "benchmark/test_suite48_native.py",
+      "tests_passed": 9,
+      "exit_code": 0,
+      "log": "test_suite48_native.txt"
+    }
+  ],
+  "regression_tests_passed": 74,
+  "native_task_cli_pairs_passed": 16,
+  "synthetic_exchanges_in_accepted_cohort": 40,
+  "all_history_native_attempts": 18,
+  "all_history_status_counts": {
+    "offline_preflight_pass": 17,
+    "offline_preflight_failure": 1
+  },
+  "all_history_synthetic_exchanges": 44,
+  "mock_failure_cause": "missing synthetic usage.total_tokens, fixed with regression; first raw/source retained",
+  "provider_requests": 0,
+  "synthetic_costs_not_real_money": true,
+  "virtual_pacing_not_real_wall_proof": true,
+  "primary_duration_proposal": "outer launcher; native subprocess secondary; final protocol approval pending",
+  "frozen_pilot_and_fixture_seal_and_order_verify": "pass",
+  "native_artifact_and_inventory_tamper_rejected": true,
+  "old_native_mock_failure_raw_source_unchanged": true,
+  "supervisor_pids_and_broker_sockets_absent": true,
+  "documentation_links": "pass",
+  "secret_pattern_scan": "pass; heuristic only, not publication safety guarantee",
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "paid_runs_authorized": false,
+  "budget_approved_usd": null,
+  "paid_orchestrator_enabled": false,
+  "run_ids_reserved": false,
+  "next_run_config_ids_unchanged": [
+    "R-0039",
+    "C-0140"
+  ],
+  "accepted_preflight_result_sha256": "c42165cf97d6e28242426cf64b5a6eb632a6784764082c70bbb94492e5f50532",
+  "source_sha256": {
+    "benchmark/suite48_native.py": "5cdc9e5df8322bc635cfe82ccdb4bf8fd7b635fef9bdfe3b21697fc09360bca1",
+    "benchmark/suite48_native_inside.py": "29453886be41ffd99ef262d69a90f579fe0d0450addb08fb14c74e6f97399883",
+    "benchmark/test_suite48_native.py": "2c6ee78a968182fc1de7d47c4fe5738fe21cae14fba676c1bf545e5b5f9b69bb",
+    "benchmark/verify_native48.py": "274c4537c9a9c865fa4ef713bd8ca00e3e2f8d90c09e6a7dfecc903da01b68f3",
+    "benchmark/suite48/NATIVE_PREFLIGHT.md": "6226695c65ffb977291db670b6a21cb94f451c545f1f25cdc13662df49dfb687",
+    "demos/estimate_provider_cost.py": "2c9ef821fed00b7443f4fd5419f68cfb9be194a299c3fcabdbbcb26e5a869158",
+    "demos/provider_probe.py": "92507bfc713c543d8f056523ff115e35bfb42f92683b1aa40cb6df65aec9f5c8"
+  },
+  "host_resource_snapshot_sha256": "3f4e314f6de9cc3fc3406a119ffee661e04711e9c5558b3d7bdc567c451400fc"
+}

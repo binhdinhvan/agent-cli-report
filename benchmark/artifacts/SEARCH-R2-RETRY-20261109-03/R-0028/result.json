@@ -1,0 +1,542 @@
+{
+  "run_id": "R-0028",
+  "task_id": "P-01",
+  "tool": "opencode-v2",
+  "spec": {
+    "tool": "opencode-v2",
+    "version": "2.2.5",
+    "config_id": "C-0117",
+    "repository": "anomalyco/opencode",
+    "tag": "v2.2.5",
+    "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+    "asset": "opencode-linux-x64-baseline.tar.gz",
+    "size": 119196162,
+    "sha256": "09f44302c10fd036912f59c81fd1aef5df45dd06f649197f9dfc9bbe2a79614e",
+    "binary_names": [
+      "opencode"
+    ],
+    "started_at_utc": "2026-11-06T03:49:40.824386+00:00",
+    "status": "prepared_not_executed",
+    "release_api": "https://api.github.com/repos/anomalyco/opencode/releases/tags/v2.2.5",
+    "release_url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
+    "asset_url": "https://github.com/anomalyco/opencode/releases/download/v2.2.5/opencode-linux-x64-baseline.tar.gz",
+    "archive_sha256_verified": "09f44302c10fd036912f59c81fd1aef5df45dd06f649197f9dfc9bbe2a79614e",
+    "archive_members": [
+      {
+        "name": "opencode",
+        "size": 252713136,
+        "type": "0",
+        "linkname": ""
+      }
+    ],
+    "binary": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v2-2.2.5/payload/opencode",
+    "binary_sha256": "8d060e1d2fbb9bb44cf09ae6ed1f3f6a7cff070b5227e2f90970132b23a92050",
+    "payload": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v2-2.2.5/payload",
+    "runtime_root": "/tmp/opencode/agent-cli-report/smoke/C-0117",
+    "finished_at_utc": "2026-11-06T03:51:23.412267+00:00",
+    "environment_revision": "search-r2"
+  },
+  "cli": [
+    "/opt/agent-cli-report/C-0117/opencode",
+    "run",
+    "--standalone",
+    "--format",
+    "json",
+    "--model",
+    "shopaikey/gpt-6.1-sol",
+    "Fix merge_intervals in intervals.py. Intervals are half-open [start, end), so intervals that only touch must stay separate. Accept an iterable of pairs of integers with start < end; reject invalid pairs with ValueError. Return a sorted list of tuples that merges overlapping intervals, including nested intervals. Handle empty input and do not mutate the input or its nested lists. Keep the existing API. Only modify intervals.py; do not add or remove files or modify test files. Automatically generated __pycache__ files are allowed. Use only the Python standard library. Run the available tests and summarize the change."
+  ],
+  "environment_revision": "search-r2",
+  "environment_manifest_sha256": "a4ab709b8fd82afc2225c5895ea551333964234d4e28f1ddbaca5699765d8913",
+  "started_at_utc": "2026-11-09T14:03:02.714258+00:00",
+  "finished_at_utc": "2026-11-09T14:06:40.452130+00:00",
+  "status": "success",
+  "validity": "valid",
+  "generation_group": "capability-reasoning-off-no-forced-wire-value",
+  "execution": {
+    "supervisor_host_pid": 24067,
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_ms": 217097,
+    "witness": {
+      "project_writable": true,
+      "public_test_read_only": true,
+      "hidden_grader_absent": true,
+      "real_home_hidden": true,
+      "net_namespace": "net:[4026532756]"
+    }
+  },
+  "isolation_ok": true,
+  "grading": {
+    "scope_ok": true,
+    "changed_files": [
+      "intervals.py"
+    ],
+    "invalid_paths": [],
+    "snapshot_sha256": {
+      "intervals.py": "ff24fb29a8225b46c96ee00196b5e593f70f610fb8a215fe3c3a140bd7acaf5f",
+      "test_public.py": "8eb40ed38a8653c191c77eefa3a269efbd90a123775a9adb12d24cdd062661d6"
+    },
+    "suites": {
+      "public": {
+        "exit_code": 0,
+        "timed_out": false,
+        "stdout": "",
+        "stderr": "test_overlap (test_public.PublicTests.test_overlap) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+      },
+      "hidden": {
+        "exit_code": 0,
+        "timed_out": false,
+        "stdout": "",
+        "stderr": "test_duplicates (__main__.AcceptanceTests.test_duplicates) ... ok\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_invalid (__main__.AcceptanceTests.test_invalid) ... ok\ntest_iterator_and_tuples (__main__.AcceptanceTests.test_iterator_and_tuples) ... ok\ntest_nested_and_unsorted (__main__.AcceptanceTests.test_nested_and_unsorted) ... ok\ntest_no_mutation (__main__.AcceptanceTests.test_no_mutation) ... ok\ntest_touching_is_not_overlap (__main__.AcceptanceTests.test_touching_is_not_overlap) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nOK\n"
+      }
+    },
+    "duration_ms": 148,
+    "pass": true
+  },
+  "provider_requests": [
+    {
+      "started_at_utc": "2026-11-09T14:03:03.856173+00:00",
+      "request_index": 1,
+      "original_body_sha256": "c71f43967d61bf71ef9cdd90fb9aacb970b691d4b1fe5e102f7beb8040c8a099",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [],
+      "forwarded_protocol_header_names": [
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        "message"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "pacing_wait_seconds": 0.0,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "input_tokens": 1616,
+          "input_tokens_details": {
+            "cache_write_tokens": 1613,
+            "cached_tokens": 0
+          },
+          "output_tokens": 11,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1627
+        },
+        "uncached_input_tokens": 1616,
+        "components": {
+          "uncached_input_usd": "0.0077568",
+          "cached_input_usd": "0.00",
+          "output_usd": "0.000198"
+        },
+        "estimated_cost_usd": "0.0079548",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 13162,
+      "finished_at_utc": "2026-11-09T14:03:07.618450+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-09T14:03:37.619241+00:00",
+      "request_index": 2,
+      "original_body_sha256": "eb1bd57baf6448b93de75cea8546b8c05f205b0430b6d3045b5d31d9bd55b26a",
+      "requested_max_output_tokens": 2048,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "glob",
+        "grep",
+        "patch",
+        "read",
+        "shell",
+        "skill",
+        "execute"
+      ],
+      "forwarded_protocol_header_names": [
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        "message"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "pacing_wait_seconds": 30.000054,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "input_tokens": 3462,
+          "input_tokens_details": {
+            "cache_write_tokens": 3459,
+            "cached_tokens": 0
+          },
+          "output_tokens": 17,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3479
+        },
+        "uncached_input_tokens": 3462,
+        "components": {
+          "uncached_input_usd": "0.0166176",
+          "cached_input_usd": "0.00",
+          "output_usd": "0.000306"
+        },
+        "estimated_cost_usd": "0.0169236",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 42674,
+      "finished_at_utc": "2026-11-09T14:03:40.536233+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-09T14:04:10.537490+00:00",
+      "request_index": 3,
+      "original_body_sha256": "0589c3965bfc755a6311dfbb8e46c623365b76960d55dbd45275525716b1e169",
+      "requested_max_output_tokens": 2048,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "glob",
+        "grep",
+        "patch",
+        "read",
+        "shell",
+        "skill",
+        "execute"
+      ],
+      "forwarded_protocol_header_names": [
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        "message",
+        "function_call",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "pacing_wait_seconds": 29.969017,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "input_tokens": 3505,
+          "input_tokens_details": {
+            "cache_write_tokens": 43,
+            "cached_tokens": 3459
+          },
+          "output_tokens": 50,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3555
+        },
+        "uncached_input_tokens": 46,
+        "components": {
+          "uncached_input_usd": "0.0002208",
+          "cached_input_usd": "0.00083016",
+          "output_usd": "0.0009"
+        },
+        "estimated_cost_usd": "0.00195096",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 43080,
+      "finished_at_utc": "2026-11-09T14:04:13.669506+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-09T14:04:43.670864+00:00",
+      "request_index": 4,
+      "original_body_sha256": "5f4d4ac7ea92f77c123b3d163c2502e58c6a89b27e528def97dbcb0c4fa30129",
+      "requested_max_output_tokens": 2048,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "glob",
+        "grep",
+        "patch",
+        "read",
+        "shell",
+        "skill",
+        "execute"
+      ],
+      "forwarded_protocol_header_names": [
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        "message",
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "pacing_wait_seconds": 29.973044,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "input_tokens": 3827,
+          "input_tokens_details": {
+            "cache_write_tokens": 322,
+            "cached_tokens": 3502
+          },
+          "output_tokens": 521,
+          "output_tokens_details": {
+            "reasoning_tokens": 69
+          },
+          "total_tokens": 4348
+        },
+        "uncached_input_tokens": 325,
+        "components": {
+          "uncached_input_usd": "0.00156",
+          "cached_input_usd": "0.00084048",
+          "output_usd": "0.009378"
+        },
+        "estimated_cost_usd": "0.01177848",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 167004,
+      "finished_at_utc": "2026-11-09T14:04:52.596457+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-09T14:05:22.597957+00:00",
+      "request_index": 5,
+      "original_body_sha256": "cdb52a029fd00a89efe99ad437bd224eeee5207fa463b02f7d433e24b31a246b",
+      "requested_max_output_tokens": 2048,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "glob",
+        "grep",
+        "patch",
+        "read",
+        "shell",
+        "skill",
+        "execute"
+      ],
+      "forwarded_protocol_header_names": [
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        "message",
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output",
+        "reasoning",
+        "message",
+        "function_call",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "pacing_wait_seconds": 29.951855,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "input_tokens": 4368,
+          "input_tokens_details": {
+            "cache_write_tokens": 541,
+            "cached_tokens": 3824
+          },
+          "output_tokens": 450,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4818
+        },
+        "uncached_input_tokens": 544,
+        "components": {
+          "uncached_input_usd": "0.0026112",
+          "cached_input_usd": "0.00091776",
+          "output_usd": "0.0081"
+        },
+        "estimated_cost_usd": "0.01162896",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 47039,
+      "finished_at_utc": "2026-11-09T14:05:28.468455+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-09T14:05:58.469870+00:00",
+      "request_index": 6,
+      "original_body_sha256": "9b6cca80895dfe56e59a85b7c9604352a7560d0f631ebeadae2220be485cee79",
+      "requested_max_output_tokens": 2048,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "glob",
+        "grep",
+        "patch",
+        "read",
+        "shell",
+        "skill",
+        "execute"
+      ],
+      "forwarded_protocol_header_names": [
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        "message",
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output",
+        "reasoning",
+        "message",
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "pacing_wait_seconds": 29.941553,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "input_tokens": 4868,
+          "input_tokens_details": {
+            "cache_write_tokens": 500,
+            "cached_tokens": 4365
+          },
+          "output_tokens": 452,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5320
+        },
+        "uncached_input_tokens": 503,
+        "components": {
+          "uncached_input_usd": "0.0024144",
+          "cached_input_usd": "0.0010476",
+          "output_usd": "0.008136"
+        },
+        "estimated_cost_usd": "0.0115980",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 47045,
+      "finished_at_utc": "2026-11-09T14:06:05.700709+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-09T14:06:35.701760+00:00",
+      "request_index": 7,
+      "original_body_sha256": "4e3b826b8161c37b3a62d39c96fe35f7b00e332d71e35a4544df1c8ce40d2886",
+      "requested_max_output_tokens": 2048,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "glob",
+        "grep",
+        "patch",
+        "read",
+        "shell",
+        "skill",
+        "execute"
+      ],
+      "forwarded_protocol_header_names": [
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        "message",
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output",
+        "reasoning",
+        "message",
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "pacing_wait_seconds": 29.954373,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "input_tokens": 5372,
+          "input_tokens_details": {
+            "cache_write_tokens": 504,
+            "cached_tokens": 4865
+          },
+          "output_tokens": 96,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5468
+        },
+        "uncached_input_tokens": 507,
+        "components": {
+          "uncached_input_usd": "0.0024336",
+          "cached_input_usd": "0.0011676",
+          "output_usd": "0.001728"
+        },
+        "estimated_cost_usd": "0.0053292",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 67798,
+      "finished_at_utc": "2026-11-09T14:06:39.610947+00:00"
+    }
+  ],
+  "offline_request_metadata": [],
+  "retry_of": "R-0026"
+}

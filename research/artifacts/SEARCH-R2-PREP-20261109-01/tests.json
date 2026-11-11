@@ -1,0 +1,36 @@
+{
+  "verified_at_utc": "2026-11-09T02:46:49.427664+00:00",
+  "scope": "offline tests; no provider/key/installer",
+  "suites": [
+    {
+      "suite": "demos/test_environment_profile.py",
+      "exit_code": 0,
+      "log": "test_environment_profile.txt"
+    },
+    {
+      "suite": "benchmark/test_pilot.py",
+      "exit_code": 0,
+      "log": "test_pilot.txt"
+    },
+    {
+      "suite": "demos/test_provider_stop.py",
+      "exit_code": 0,
+      "log": "test_provider_stop.txt"
+    },
+    {
+      "suite": "demos/test_pacing.py",
+      "exit_code": 0,
+      "log": "test_pacing.txt"
+    },
+    {
+      "suite": "demos/test_model_smoke.py",
+      "exit_code": 0,
+      "log": "test_model_smoke.txt"
+    },
+    {
+      "suite": "demos/test_provider_pricing.py",
+      "exit_code": 0,
+      "log": "test_provider_pricing.txt"
+    }
+  ]
+}

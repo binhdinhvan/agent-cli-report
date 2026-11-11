@@ -1,0 +1,27 @@
+{
+  "scope_ok": true,
+  "changed_files": [
+    "scheduler.py"
+  ],
+  "invalid_paths": [],
+  "snapshot_sha256": {
+    "test_public.py": "cdb577452e0e2f399f00c8766787fa7974583cff9e386cfc1d62db728bb09931",
+    "scheduler.py": "4d3b58e3cdc5a3d61560eed09fb772c49c5f911c69cdc2ba0290e1408ad2706b"
+  },
+  "suites": {
+    "public": {
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": "",
+      "stderr": "test_task_names (test_public.PublicTests.test_task_names) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+    },
+    "hidden": {
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": "",
+      "stderr": "test_available_tie_break (__main__.AcceptanceTests.test_available_tie_break) ... ok\ntest_chain (__main__.AcceptanceTests.test_chain) ... ok\ntest_cycles (__main__.AcceptanceTests.test_cycles) ... ok\ntest_diamond (__main__.AcceptanceTests.test_diamond) ... ok\ntest_duplicates (__main__.AcceptanceTests.test_duplicates) ... ok\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_existing_api (__main__.AcceptanceTests.test_existing_api) ... ok\ntest_no_mutation (__main__.AcceptanceTests.test_no_mutation) ... ok\ntest_unknown (__main__.AcceptanceTests.test_unknown) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.001s\n\nOK\n"
+    }
+  },
+  "duration_ms": 150,
+  "pass": true
+}

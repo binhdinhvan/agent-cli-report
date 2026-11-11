@@ -1,0 +1,38 @@
+{
+  "revision": "gemini-3.8-flash-preparation-r1",
+  "selected_model": "gemini-3.8-flash",
+  "selection_source": "user request after sol benchmark timeout batches",
+  "provider_base_url": "https://api.shopaikey.com/v1",
+  "provider_status": "user confirmed Shopaikey; actualPOST/responses returnedHTTP500/internal_error; no catalog request",
+  "api_model_id_status": "exact user alias submitted;HTTP500 returns no model identity, alias/backend compatibility still unverified",
+  "api_protocol": null,
+  "protocol_status": "ResponsesSSE trial returnedHTTP500/internal_error before stream; compatibility unverified, no automatic fallback",
+  "capabilities": {
+    "tools": null,
+    "streaming": null,
+    "reasoning_parameters": null,
+    "context_window": null,
+    "max_output_tokens": null
+  },
+  "pricing": {
+    "currency": "USD",
+    "unit_tokens": 1000000,
+    "input_uncached": null,
+    "input_cache_read": null,
+    "output": null,
+    "verification_status": "pending user/provider rates; never inherit sol prices",
+    "additional_fees": null
+  },
+  "paid_runs_ready": false,
+  "generation_authorized": false,
+  "benchmark_scope": "user selected restart/newcohort, never continue41solsuffix; full benchmark dispatch not yet authorized",
+  "smoke5_authorized": false,
+  "smoke5_scope": "At most5provider-only Responses SSE requests,256output/request,no retry; explicit user allows pricing later; no48benchmark authorization",
+  "prior_sol_retention": "Preserve all protocols, raw attempts/failures/retries, usage unknown and IDs",
+  "prior_sol_benchmark_known_usd": "0.28485816",
+  "prior_sol_benchmark_unpriced_requests": 4,
+  "prior_sol_total_charge_usd": null,
+  "budget_status": "Explicit unpriced exception only for smoke5; costs null and no sol rates; full benchmark budget remains unapproved",
+  "runtime_preflight_status": "provider-only smoke stopped1of5HTTP500;4not_run; native4CLI/toolcalling/benchmark still unverified",
+  "smoke5_result": "demos/artifacts/GEMINI-SMOKE5-20261110-01/result.json"
+}

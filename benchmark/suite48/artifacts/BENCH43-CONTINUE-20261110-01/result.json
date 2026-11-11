@@ -1,0 +1,3340 @@
+{
+  "mode": "benchmark48",
+  "started_at_utc": "2026-11-10T14:33:54.140354+00:00",
+  "budget_estimate_usd": "16",
+  "measured_charge_usd": null,
+  "synthetic_usage": false,
+  "provider_requests": 6,
+  "plan": [
+    {
+      "slot": "D48-006",
+      "repetition": "1",
+      "block": "2",
+      "task_id": "B-02",
+      "position_in_block": "2",
+      "tool": "pi",
+      "status": "success",
+      "continuation_of": {
+        "slot": "D48-006",
+        "run_id": "R-0136",
+        "config_id": "C-0237"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0179",
+      "config_id": "C-0280"
+    },
+    {
+      "slot": "D48-007",
+      "repetition": "1",
+      "block": "2",
+      "task_id": "B-02",
+      "position_in_block": "3",
+      "tool": "opencode-v2",
+      "status": "infra_error",
+      "continuation_of": {
+        "slot": "D48-007",
+        "run_id": "R-0137",
+        "config_id": "C-0238"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0180",
+      "config_id": "C-0281"
+    },
+    {
+      "slot": "D48-008",
+      "repetition": "1",
+      "block": "2",
+      "task_id": "B-02",
+      "position_in_block": "4",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-008",
+        "run_id": "R-0138",
+        "config_id": "C-0239"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0181",
+      "config_id": "C-0282"
+    },
+    {
+      "slot": "D48-009",
+      "repetition": "1",
+      "block": "3",
+      "task_id": "B-03",
+      "position_in_block": "1",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-009",
+        "run_id": "R-0139",
+        "config_id": "C-0240"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0182",
+      "config_id": "C-0283"
+    },
+    {
+      "slot": "D48-010",
+      "repetition": "1",
+      "block": "3",
+      "task_id": "B-03",
+      "position_in_block": "2",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-010",
+        "run_id": "R-0140",
+        "config_id": "C-0241"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0183",
+      "config_id": "C-0284"
+    },
+    {
+      "slot": "D48-011",
+      "repetition": "1",
+      "block": "3",
+      "task_id": "B-03",
+      "position_in_block": "3",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-011",
+        "run_id": "R-0141",
+        "config_id": "C-0242"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0184",
+      "config_id": "C-0285"
+    },
+    {
+      "slot": "D48-012",
+      "repetition": "1",
+      "block": "3",
+      "task_id": "B-03",
+      "position_in_block": "4",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-012",
+        "run_id": "R-0142",
+        "config_id": "C-0243"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0185",
+      "config_id": "C-0286"
+    },
+    {
+      "slot": "D48-013",
+      "repetition": "1",
+      "block": "4",
+      "task_id": "B-04",
+      "position_in_block": "1",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-013",
+        "run_id": "R-0143",
+        "config_id": "C-0244"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0186",
+      "config_id": "C-0287"
+    },
+    {
+      "slot": "D48-014",
+      "repetition": "1",
+      "block": "4",
+      "task_id": "B-04",
+      "position_in_block": "2",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-014",
+        "run_id": "R-0144",
+        "config_id": "C-0245"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0187",
+      "config_id": "C-0288"
+    },
+    {
+      "slot": "D48-015",
+      "repetition": "1",
+      "block": "4",
+      "task_id": "B-04",
+      "position_in_block": "3",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-015",
+        "run_id": "R-0145",
+        "config_id": "C-0246"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0188",
+      "config_id": "C-0289"
+    },
+    {
+      "slot": "D48-016",
+      "repetition": "1",
+      "block": "4",
+      "task_id": "B-04",
+      "position_in_block": "4",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-016",
+        "run_id": "R-0146",
+        "config_id": "C-0247"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0189",
+      "config_id": "C-0290"
+    },
+    {
+      "slot": "D48-017",
+      "repetition": "2",
+      "block": "5",
+      "task_id": "B-04",
+      "position_in_block": "1",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-017",
+        "run_id": "R-0147",
+        "config_id": "C-0248"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0190",
+      "config_id": "C-0291"
+    },
+    {
+      "slot": "D48-018",
+      "repetition": "2",
+      "block": "5",
+      "task_id": "B-04",
+      "position_in_block": "2",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-018",
+        "run_id": "R-0148",
+        "config_id": "C-0249"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0191",
+      "config_id": "C-0292"
+    },
+    {
+      "slot": "D48-019",
+      "repetition": "2",
+      "block": "5",
+      "task_id": "B-04",
+      "position_in_block": "3",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-019",
+        "run_id": "R-0149",
+        "config_id": "C-0250"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0192",
+      "config_id": "C-0293"
+    },
+    {
+      "slot": "D48-020",
+      "repetition": "2",
+      "block": "5",
+      "task_id": "B-04",
+      "position_in_block": "4",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-020",
+        "run_id": "R-0150",
+        "config_id": "C-0251"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0193",
+      "config_id": "C-0294"
+    },
+    {
+      "slot": "D48-021",
+      "repetition": "2",
+      "block": "6",
+      "task_id": "B-02",
+      "position_in_block": "1",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-021",
+        "run_id": "R-0151",
+        "config_id": "C-0252"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0194",
+      "config_id": "C-0295"
+    },
+    {
+      "slot": "D48-022",
+      "repetition": "2",
+      "block": "6",
+      "task_id": "B-02",
+      "position_in_block": "2",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-022",
+        "run_id": "R-0152",
+        "config_id": "C-0253"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0195",
+      "config_id": "C-0296"
+    },
+    {
+      "slot": "D48-023",
+      "repetition": "2",
+      "block": "6",
+      "task_id": "B-02",
+      "position_in_block": "3",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-023",
+        "run_id": "R-0153",
+        "config_id": "C-0254"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0196",
+      "config_id": "C-0297"
+    },
+    {
+      "slot": "D48-024",
+      "repetition": "2",
+      "block": "6",
+      "task_id": "B-02",
+      "position_in_block": "4",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-024",
+        "run_id": "R-0154",
+        "config_id": "C-0255"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0197",
+      "config_id": "C-0298"
+    },
+    {
+      "slot": "D48-025",
+      "repetition": "2",
+      "block": "7",
+      "task_id": "B-03",
+      "position_in_block": "1",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-025",
+        "run_id": "R-0155",
+        "config_id": "C-0256"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0198",
+      "config_id": "C-0299"
+    },
+    {
+      "slot": "D48-026",
+      "repetition": "2",
+      "block": "7",
+      "task_id": "B-03",
+      "position_in_block": "2",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-026",
+        "run_id": "R-0156",
+        "config_id": "C-0257"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0199",
+      "config_id": "C-0300"
+    },
+    {
+      "slot": "D48-027",
+      "repetition": "2",
+      "block": "7",
+      "task_id": "B-03",
+      "position_in_block": "3",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-027",
+        "run_id": "R-0157",
+        "config_id": "C-0258"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0200",
+      "config_id": "C-0301"
+    },
+    {
+      "slot": "D48-028",
+      "repetition": "2",
+      "block": "7",
+      "task_id": "B-03",
+      "position_in_block": "4",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-028",
+        "run_id": "R-0158",
+        "config_id": "C-0259"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0201",
+      "config_id": "C-0302"
+    },
+    {
+      "slot": "D48-029",
+      "repetition": "2",
+      "block": "8",
+      "task_id": "B-01",
+      "position_in_block": "1",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-029",
+        "run_id": "R-0159",
+        "config_id": "C-0260"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0202",
+      "config_id": "C-0303"
+    },
+    {
+      "slot": "D48-030",
+      "repetition": "2",
+      "block": "8",
+      "task_id": "B-01",
+      "position_in_block": "2",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-030",
+        "run_id": "R-0160",
+        "config_id": "C-0261"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0203",
+      "config_id": "C-0304"
+    },
+    {
+      "slot": "D48-031",
+      "repetition": "2",
+      "block": "8",
+      "task_id": "B-01",
+      "position_in_block": "3",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-031",
+        "run_id": "R-0161",
+        "config_id": "C-0262"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0204",
+      "config_id": "C-0305"
+    },
+    {
+      "slot": "D48-032",
+      "repetition": "2",
+      "block": "8",
+      "task_id": "B-01",
+      "position_in_block": "4",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-032",
+        "run_id": "R-0162",
+        "config_id": "C-0263"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0205",
+      "config_id": "C-0306"
+    },
+    {
+      "slot": "D48-033",
+      "repetition": "3",
+      "block": "9",
+      "task_id": "B-04",
+      "position_in_block": "1",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-033",
+        "run_id": "R-0163",
+        "config_id": "C-0264"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0206",
+      "config_id": "C-0307"
+    },
+    {
+      "slot": "D48-034",
+      "repetition": "3",
+      "block": "9",
+      "task_id": "B-04",
+      "position_in_block": "2",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-034",
+        "run_id": "R-0164",
+        "config_id": "C-0265"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0207",
+      "config_id": "C-0308"
+    },
+    {
+      "slot": "D48-035",
+      "repetition": "3",
+      "block": "9",
+      "task_id": "B-04",
+      "position_in_block": "3",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-035",
+        "run_id": "R-0165",
+        "config_id": "C-0266"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0208",
+      "config_id": "C-0309"
+    },
+    {
+      "slot": "D48-036",
+      "repetition": "3",
+      "block": "9",
+      "task_id": "B-04",
+      "position_in_block": "4",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-036",
+        "run_id": "R-0166",
+        "config_id": "C-0267"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0209",
+      "config_id": "C-0310"
+    },
+    {
+      "slot": "D48-037",
+      "repetition": "3",
+      "block": "10",
+      "task_id": "B-02",
+      "position_in_block": "1",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-037",
+        "run_id": "R-0167",
+        "config_id": "C-0268"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0210",
+      "config_id": "C-0311"
+    },
+    {
+      "slot": "D48-038",
+      "repetition": "3",
+      "block": "10",
+      "task_id": "B-02",
+      "position_in_block": "2",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-038",
+        "run_id": "R-0168",
+        "config_id": "C-0269"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0211",
+      "config_id": "C-0312"
+    },
+    {
+      "slot": "D48-039",
+      "repetition": "3",
+      "block": "10",
+      "task_id": "B-02",
+      "position_in_block": "3",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-039",
+        "run_id": "R-0169",
+        "config_id": "C-0270"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0212",
+      "config_id": "C-0313"
+    },
+    {
+      "slot": "D48-040",
+      "repetition": "3",
+      "block": "10",
+      "task_id": "B-02",
+      "position_in_block": "4",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-040",
+        "run_id": "R-0170",
+        "config_id": "C-0271"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0213",
+      "config_id": "C-0314"
+    },
+    {
+      "slot": "D48-041",
+      "repetition": "3",
+      "block": "11",
+      "task_id": "B-01",
+      "position_in_block": "1",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-041",
+        "run_id": "R-0171",
+        "config_id": "C-0272"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0214",
+      "config_id": "C-0315"
+    },
+    {
+      "slot": "D48-042",
+      "repetition": "3",
+      "block": "11",
+      "task_id": "B-01",
+      "position_in_block": "2",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-042",
+        "run_id": "R-0172",
+        "config_id": "C-0273"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0215",
+      "config_id": "C-0316"
+    },
+    {
+      "slot": "D48-043",
+      "repetition": "3",
+      "block": "11",
+      "task_id": "B-01",
+      "position_in_block": "3",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-043",
+        "run_id": "R-0173",
+        "config_id": "C-0274"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0216",
+      "config_id": "C-0317"
+    },
+    {
+      "slot": "D48-044",
+      "repetition": "3",
+      "block": "11",
+      "task_id": "B-01",
+      "position_in_block": "4",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-044",
+        "run_id": "R-0174",
+        "config_id": "C-0275"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0217",
+      "config_id": "C-0318"
+    },
+    {
+      "slot": "D48-045",
+      "repetition": "3",
+      "block": "12",
+      "task_id": "B-03",
+      "position_in_block": "1",
+      "tool": "pi",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-045",
+        "run_id": "R-0175",
+        "config_id": "C-0276"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0218",
+      "config_id": "C-0319"
+    },
+    {
+      "slot": "D48-046",
+      "repetition": "3",
+      "block": "12",
+      "task_id": "B-03",
+      "position_in_block": "2",
+      "tool": "codex",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-046",
+        "run_id": "R-0176",
+        "config_id": "C-0277"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0219",
+      "config_id": "C-0320"
+    },
+    {
+      "slot": "D48-047",
+      "repetition": "3",
+      "block": "12",
+      "task_id": "B-03",
+      "position_in_block": "3",
+      "tool": "opencode-v2",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-047",
+        "run_id": "R-0177",
+        "config_id": "C-0278"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0220",
+      "config_id": "C-0321"
+    },
+    {
+      "slot": "D48-048",
+      "repetition": "3",
+      "block": "12",
+      "task_id": "B-03",
+      "position_in_block": "4",
+      "tool": "opencode-v1",
+      "status": "not_run",
+      "continuation_of": {
+        "slot": "D48-048",
+        "run_id": "R-0178",
+        "config_id": "C-0279"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0221",
+      "config_id": "C-0322"
+    }
+  ],
+  "runs": [
+    {
+      "slot": "D48-006",
+      "repetition": "1",
+      "block": "2",
+      "task_id": "B-02",
+      "position_in_block": "2",
+      "tool": "pi",
+      "status": "success",
+      "continuation_of": {
+        "slot": "D48-006",
+        "run_id": "R-0136",
+        "config_id": "C-0237"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0179",
+      "config_id": "C-0280",
+      "spec": {
+        "tool": "pi",
+        "version": "1.5.0",
+        "config_id": "C-0280",
+        "repository": "earendil-works/pi",
+        "tag": "v1.5.0",
+        "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+        "asset": "pi-linux-x64.tar.gz",
+        "size": 58876253,
+        "sha256": "df870ba0e344cb7b3358d8d8f19397b8b8d225a8669784736ad68a5c2169d53b",
+        "binary_names": [
+          "pi"
+        ],
+        "started_at_utc": "2026-11-06T03:49:40.825563+00:00",
+        "status": "prepared_not_executed",
+        "release_api": "https://api.github.com/repos/earendil-works/pi/releases/tags/v1.5.0",
+        "release_url": "https://github.com/earendil-works/pi/releases/tag/v1.5.0",
+        "asset_url": "https://github.com/earendil-works/pi/releases/download/v1.5.0/pi-linux-x64.tar.gz",
+        "archive_sha256_verified": "df870ba0e344cb7b3358d8d8f19397b8b8d225a8669784736ad68a5c2169d53b",
+        "archive_members": [
+          {
+            "name": "pi",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/theme",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/theme/dark.json",
+            "size": 2250,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/theme/light.json",
+            "size": 2248,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/native",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/native/linux",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/native/linux/prebuilds",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/native/linux/prebuilds/linux-x64",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/native/linux/prebuilds/linux-x64/linux-platform-x11.node",
+            "size": 18008,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/ansi-to-html.js.map",
+            "size": 15056,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/tool-renderer.js.map",
+            "size": 9949,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/template.css",
+            "size": 23131,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/tool-renderer.d.ts",
+            "size": 1457,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/index.js",
+            "size": 9942,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/tool-renderer.js",
+            "size": 4731,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/index.d.ts.map",
+            "size": 1107,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/index.d.ts",
+            "size": 1541,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/ansi-to-html.d.ts",
+            "size": 771,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/vendor",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/vendor/highlight.min.js",
+            "size": 121727,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/vendor/marked-cjk-friendly.min.js",
+            "size": 4754,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/vendor/marked.min.js",
+            "size": 44640,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/ansi-to-html.d.ts.map",
+            "size": 296,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/index.js.map",
+            "size": 21262,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/template.js",
+            "size": 86652,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/tool-renderer.d.ts.map",
+            "size": 1017,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/ansi-to-html.js",
+            "size": 7711,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/export-html/template.html",
+            "size": 2271,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/package.json",
+            "size": 3935,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/assets",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/assets/clankolas.png",
+            "size": 539053,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/README.md",
+            "size": 4080,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/pi",
+            "size": 122726576,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/keybindings.md",
+            "size": 10952,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/termux.md",
+            "size": 3590,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/sdk.md",
+            "size": 10147,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/shell-aliases.md",
+            "size": 3172,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/themes.md",
+            "size": 8069,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/cli-integration.md",
+            "size": 6285,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/virtual-models.md",
+            "size": 8177,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/llama-cpp.md",
+            "size": 7531,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/extensions.md",
+            "size": 156365,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/json.md",
+            "size": 11106,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/docs.json",
+            "size": 5134,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/cli.md",
+            "size": 18212,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/windows.md",
+            "size": 5918,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/tui.md",
+            "size": 12105,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/rpc-extension-ui.md",
+            "size": 6174,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/codemode.md",
+            "size": 14585,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/quickstart.md",
+            "size": 4860,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/providers.md",
+            "size": 9681,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/mcp.md",
+            "size": 20459,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/settings.md",
+            "size": 14305,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/prompt-templates.md",
+            "size": 2490,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/configuration.md",
+            "size": 3239,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/session-format.md",
+            "size": 15766,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/rpc-commands.md",
+            "size": 21482,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/skills.md",
+            "size": 4793,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/rpc.md",
+            "size": 8897,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/packages.md",
+            "size": 8171,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/containerization.md",
+            "size": 7589,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/terminal-setup.md",
+            "size": 9420,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/slash-commands.md",
+            "size": 2762,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/custom-provider.md",
+            "size": 12737,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/message-types.md",
+            "size": 7569,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/environment-variables.md",
+            "size": 6046,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/models-configuration.md",
+            "size": 20716,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/index.md",
+            "size": 2507,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/compaction.md",
+            "size": 24093,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/usage.md",
+            "size": 5381,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/security.md",
+            "size": 6542,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/models.md",
+            "size": 13992,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/how-pi-works.md",
+            "size": 3300,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/sessions.md",
+            "size": 5457,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/tmux.md",
+            "size": 2058,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/nvidia-rtx-llama-cpp.md",
+            "size": 4290,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/images",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/images/doom-extension.png",
+            "size": 171987,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/images/exy.png",
+            "size": 1510779,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/images/tree-view.png",
+            "size": 281981,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/docs/images/interactive-mode.png",
+            "size": 519083,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/CHANGELOG.md",
+            "size": 682079,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/photon_rs_bg.wasm",
+            "size": 1881634,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/04-skills.ts",
+            "size": 1452,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/01-minimal.ts",
+            "size": 689,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/11-sessions.ts",
+            "size": 1825,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/08-prompt-templates.ts",
+            "size": 1374,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/10-settings.ts",
+            "size": 1705,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/README.md",
+            "size": 4790,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/13-session-runtime.ts",
+            "size": 1889,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/05-tools.ts",
+            "size": 1611,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/12-full-control.ts",
+            "size": 2031,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/03-custom-prompt.ts",
+            "size": 1923,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/14-codemode-mcp.ts",
+            "size": 1991,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/06-extensions.ts",
+            "size": 2673,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/07-context-files.ts",
+            "size": 1175,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/02-custom-model.ts",
+            "size": 1378,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/sdk/09-api-keys-and-oauth.ts",
+            "size": 1092,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/commands.ts",
+            "size": 2594,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/tool-override.ts",
+            "size": 4821,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/message-renderer.ts",
+            "size": 1929,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/trigger-compact.ts",
+            "size": 1350,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/auto-commit-on-exit.ts",
+            "size": 1571,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/snake.ts",
+            "size": 9421,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/timed-confirm.ts",
+            "size": 2238,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/reload-runtime.ts",
+            "size": 1645,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/built-in-tool-renderer.ts",
+            "size": 7455,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/custom-provider-anthropic",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/custom-provider-anthropic/index.ts",
+            "size": 20094,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/custom-provider-anthropic/.gitignore",
+            "size": 14,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/custom-provider-anthropic/package-lock.json",
+            "size": 651,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/custom-provider-anthropic/package.json",
+            "size": 374,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/file-trigger.ts",
+            "size": 1033,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/custom-compaction.ts",
+            "size": 3971,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/event-bus.ts",
+            "size": 1348,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/inline-bash.ts",
+            "size": 2958,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/subagent",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/subagent/agents",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/subagent/agents/worker.md",
+            "size": 664,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/subagent/agents/scout.md",
+            "size": 1255,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/subagent/agents/planner.md",
+            "size": 896,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/subagent/agents/reviewer.md",
+            "size": 933,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/subagent/index.ts",
+            "size": 35523,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/subagent/agents.ts",
+            "size": 4562,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/subagent/README.md",
+            "size": 6298,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/subagent/prompts",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/subagent/prompts/implement-and-review.md",
+            "size": 494,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/subagent/prompts/scout-and-plan.md",
+            "size": 496,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/subagent/prompts/implement.md",
+            "size": 579,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/questionnaire.ts",
+            "size": 13565,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/model-status.ts",
+            "size": 957,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/doom-overlay",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/doom-overlay/doom",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/doom-overlay/doom/doomgeneric_pi.c",
+            "size": 1709,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/doom-overlay/doom/build.sh",
+            "size": 3366,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/doom-overlay/doom/build",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/doom-overlay/doom/build/doom.js",
+            "size": 64607,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/doom-overlay/doom/build/doom.wasm",
+            "size": 380169,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/doom-overlay/doom-engine.ts",
+            "size": 4914,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/doom-overlay/index.ts",
+            "size": 2117,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/doom-overlay/.gitignore",
+            "size": 41,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/doom-overlay/doom-component.ts",
+            "size": 3645,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/doom-overlay/README.md",
+            "size": 1322,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/doom-overlay/wad-finder.ts",
+            "size": 1719,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/doom-overlay/doom-keys.ts",
+            "size": 3495,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/ssh.ts",
+            "size": 7293,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/debug-provider.ts",
+            "size": 2736,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/jev-router.ts",
+            "size": 4800,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/custom-provider-gitlab-duo",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/custom-provider-gitlab-duo/index.ts",
+            "size": 12148,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/custom-provider-gitlab-duo/.gitignore",
+            "size": 14,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/custom-provider-gitlab-duo/package.json",
+            "size": 316,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/custom-provider-gitlab-duo/test.ts",
+            "size": 2681,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/overlay-test.ts",
+            "size": 5517,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/structured-output.ts",
+            "size": 2187,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/dynamic-tools.ts",
+            "size": 2211,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/tic-tac-toe.ts",
+            "size": 35382,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/border-status-editor.ts",
+            "size": 4444,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/pirate.ts",
+            "size": 1461,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/send-user-message.ts",
+            "size": 2832,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/working-message-test.ts",
+            "size": 904,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/tools.ts",
+            "size": 4023,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/git-checkpoint.ts",
+            "size": 1485,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/notify.ts",
+            "size": 2073,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/status-line.ts",
+            "size": 937,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/plan-mode",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/plan-mode/utils.ts",
+            "size": 4129,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/plan-mode/index.ts",
+            "size": 12403,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/plan-mode/README.md",
+            "size": 2009,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/entry-renderer.ts",
+            "size": 1288,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/hello.ts",
+            "size": 640,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/qna.ts",
+            "size": 3501,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/rainbow-editor.ts",
+            "size": 2386,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/modal-editor.ts",
+            "size": 2417,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/bash-spawn-hook.ts",
+            "size": 696,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/git-merge-and-resolve.ts",
+            "size": 4108,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/shutdown-command.ts",
+            "size": 2045,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/widget-placement.ts",
+            "size": 367,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/session-name.ts",
+            "size": 785,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/space-invaders.ts",
+            "size": 15174,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/README.md",
+            "size": 10211,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/confirm-destructive.ts",
+            "size": 1680,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/custom-header.ts",
+            "size": 2408,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/provider-payload.ts",
+            "size": 764,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/dirty-repo-guard.ts",
+            "size": 1479,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/minimal-mode.ts",
+            "size": 10806,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/dynamic-resources",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/dynamic-resources/index.ts",
+            "size": 457,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/dynamic-resources/dynamic.json",
+            "size": 2007,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/dynamic-resources/dynamic.md",
+            "size": 160,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/dynamic-resources/SKILL.md",
+            "size": 177,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/handoff.ts",
+            "size": 5973,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/claude-rules.ts",
+            "size": 2488,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/truncated-tool.ts",
+            "size": 6490,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/question.ts",
+            "size": 8494,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/working-indicator.ts",
+            "size": 3426,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/overlay-qa-tests.ts",
+            "size": 46148,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/with-deps",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/with-deps/index.ts",
+            "size": 1012,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/with-deps/.gitignore",
+            "size": 14,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/with-deps/package-lock.json",
+            "size": 892,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/with-deps/package.json",
+            "size": 395,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/hidden-thinking-label.ts",
+            "size": 1451,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/mac-system-theme.ts",
+            "size": 1197,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/github-issue-autocomplete.ts",
+            "size": 5282,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/input-transform-streaming.ts",
+            "size": 1213,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/gondolin",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/gondolin/index.ts",
+            "size": 16647,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/gondolin/.gitignore",
+            "size": 14,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/gondolin/package-lock.json",
+            "size": 5675,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/gondolin/package.json",
+            "size": 339,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/interactive-shell.ts",
+            "size": 4788,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/custom-footer.ts",
+            "size": 2149,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/preset.ts",
+            "size": 14601,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/project-trust.ts",
+            "size": 2131,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/prompt-customizer.ts",
+            "size": 1691,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/input-transform.ts",
+            "size": 1444,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/permission-gate.ts",
+            "size": 1019,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/system-prompt-header.ts",
+            "size": 528,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/titlebar-spinner.ts",
+            "size": 1623,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/rpc-demo.ts",
+            "size": 3632,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/todo.ts",
+            "size": 9001,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/protected-paths.ts",
+            "size": 808,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/bookmark.ts",
+            "size": 1555,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/extensions/summarize.ts",
+            "size": 5072,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/README.md",
+            "size": 1282,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/rpc-client.ts",
+            "size": 1057,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/rpc-extension-ui.ts",
+            "size": 17330,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "pi/examples/tsconfig.json",
+            "size": 5940,
+            "type": "0",
+            "linkname": ""
+          }
+        ],
+        "binary": "/home/tts/Project/agent-cli-report/.local/binaries/pi-1.5.0/payload/pi/pi",
+        "binary_sha256": "61a84400938da652ed69aac9c1ad2ca23af3c9bd8cc2f46ce571ed84ae6a35e5",
+        "payload": "/home/tts/Project/agent-cli-report/.local/binaries/pi-1.5.0/payload",
+        "runtime_root": "/tmp/opencode/agent-cli-report/smoke/C-0280",
+        "finished_at_utc": "2026-11-06T03:50:49.415959+00:00",
+        "environment_revision": "search-r2"
+      },
+      "cli": [
+        "/opt/agent-cli-report/C-0280/pi/pi",
+        "--print",
+        "--mode",
+        "json",
+        "--provider",
+        "shopaikey",
+        "--model",
+        "gpt-6.1-sol",
+        "--tools",
+        "read,bash,edit,write",
+        "--no-extensions",
+        "--no-mcp",
+        "--no-skills",
+        "--no-prompt-templates",
+        "--no-themes",
+        "--no-context-files",
+        "--thinking",
+        "off",
+        "Sửa merge_pages(pages) trong pagination.py. Chỉ sửa pagination.py; không sửa test hoặc thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh).\n\nContract: pages là iterable các page; mỗi page là iterable các dict, mỗi dict có id kiểu string. Cả hai mức có thể là generator chỉ duyệt một lần. Chỉ cần xử lý input đúng contract, không cần thêm validation cho kiểu khác.\n\nTrả list các dict, một dict cho mỗi id. Thứ tự đầu ra theo lần đầu id xuất hiện trong toàn bộ input; nếu id xuất hiện lại, toàn bộ record cuối cùng thay thế record cũ nhưng giữ vị trí đầu tiên. Không merge các field của record cũ với record mới. Empty input/pages hợp lệ.\n\nKhông thay đổi input hoặc dictionary gốc. Mỗi output record phải là shallow copy độc lập với dict input; không yêu cầu deep-copy giá trị nested. Không giữ state giữa các lần gọi. Giữ nguyên tên hàm/signature/API hiện có. Public tests phải tiếp tục pass; kiểm cả duplicate trong cùng page và khác page.\n\nChạy test bằng python3 -B -m unittest -v test_public. Chỉ dùng standard library, không cài package hoặc truy cập Internet. Hoàn tất bằng code đã sửa, không chỉ mô tả giải pháp.\n"
+      ],
+      "validity": "valid",
+      "reasons": [],
+      "execution": {
+        "supervisor_host_pid": 50201,
+        "exit_code": 0,
+        "timed_out": false,
+        "output_limit_exceeded": false,
+        "duration_ms": 157222,
+        "outer_started_monotonic": 2931.883590887,
+        "outer_finished_monotonic": 3089.105760707,
+        "broker_deadline_monotonic": 3831.883590887,
+        "outer_watchdog_deadline_monotonic": 3831.883590887,
+        "native_clock": {
+          "started_monotonic": 2931.973853923,
+          "finished_monotonic": 3089.052798344,
+          "duration_ms": 157079
+        },
+        "witness": {
+          "project_writable": true,
+          "immutable_readonly": {
+            "test_public.py": true
+          },
+          "hidden_absent": true,
+          "home_hidden": true,
+          "net_namespace": "net:[4026532632]",
+          "provider_key_env_absent": true
+        }
+      },
+      "grading": {
+        "task_id": "B-02",
+        "scope_ok": true,
+        "changed_files": [
+          "pagination.py"
+        ],
+        "invalid_paths": [],
+        "snapshot_sha256": {
+          "test_public.py": "18f4ea89162fcfc9762a059b4de6f9d01fbf22adf158393cde6cde316ddbf8e9",
+          "pagination.py": "ebe5a7877052854d04620952259d2dabb4d07802c904995c2f9a3fdacd90d4e1"
+        },
+        "suites": {
+          "public": {
+            "exit_code": 0,
+            "timed_out": false,
+            "output_limit_exceeded": false,
+            "duration_ms": 116,
+            "stdout": "",
+            "stderr": "test_distinct_records (test_public.PublicTests.test_distinct_records) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+          },
+          "hidden": {
+            "exit_code": 0,
+            "timed_out": false,
+            "output_limit_exceeded": false,
+            "duration_ms": 116,
+            "stdout": "",
+            "stderr": "test_duplicate_replaces_not_merges (__main__.AcceptanceTests.test_duplicate_replaces_not_merges) ... ok\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_no_mutation_and_shallow_copy (__main__.AcceptanceTests.test_no_mutation_and_shallow_copy) ... ok\ntest_one_shot (__main__.AcceptanceTests.test_one_shot) ... ok\ntest_randomized_contract (__main__.AcceptanceTests.test_randomized_contract) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.003s\n\nOK\n"
+          }
+        },
+        "rubric": null,
+        "grader_duration_ms": 237,
+        "pass": true
+      },
+      "requests": [
+        {
+          "started_at_utc": "2026-11-10T14:33:54.889648+00:00",
+          "request_index": 1,
+          "original_body_sha256": "dd7054043d7a35f584c24978071b37ae355b8080bd5c75a579a675011f524290",
+          "requested_max_output_tokens": 2048,
+          "model": "gpt-6.1-sol",
+          "tool_names": [
+            "read",
+            "bash",
+            "edit",
+            "write"
+          ],
+          "forwarded_protocol_header_names": [
+            "user-agent",
+            "x-client-request-id"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            null,
+            null
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "minimum_request_window_seconds": 60,
+          "deadline_remaining_seconds_at_dispatch": 899.394991,
+          "pacing_wait_seconds": 0.0,
+          "effective_max_output_tokens": 2048,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "fc_055c60177e76fc92016af32b55e93487d0adcb7329f9506c9f": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 2,
+                    "output_tokens": 31
+                  },
+                  "msg_055c60177e76fc92016af32b54b03487d09614b31f55773c35": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  },
+                  "msg_055c60177e76fc92016af32b54b03487d0b33795cef08b574e": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 281,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 281,
+                    "output_tokens": 0
+                  },
+                  "msg_055c60177e76fc92016af32b54b03487d0b5ce5ccb66ce1173": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 501,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 501,
+                    "output_tokens": 0
+                  }
+                },
+                "request_fields": {
+                  "tools": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 479,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 1302,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0
+              },
+              "output_tokens": 31,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1333
+            },
+            "uncached_input_tokens": 1302,
+            "components": {
+              "uncached_input_usd": "0.0062496",
+              "cached_input_usd": "0.00",
+              "output_usd": "0.000558"
+            },
+            "estimated_cost_usd": "0.0068076",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 21099,
+          "finished_at_utc": "2026-11-10T14:33:59.675060+00:00"
+        },
+        {
+          "started_at_utc": "2026-11-10T14:34:29.676237+00:00",
+          "request_index": 2,
+          "original_body_sha256": "ff763ad7610da90b75d9d515cf200961efa9d2759b991cb1bb753801d634e336",
+          "requested_max_output_tokens": 2048,
+          "model": "gpt-6.1-sol",
+          "tool_names": [
+            "read",
+            "bash",
+            "edit",
+            "write"
+          ],
+          "forwarded_protocol_header_names": [
+            "user-agent",
+            "x-client-request-id"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            null,
+            null,
+            "function_call",
+            "function_call_output"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "minimum_request_window_seconds": 60,
+          "deadline_remaining_seconds_at_dispatch": 864.608269,
+          "pacing_wait_seconds": 29.963249,
+          "effective_max_output_tokens": 2048,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "fc_055c60177e76fc92016af32b55e93487d0adcb7329f9506c9f": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 33,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32b78776087d0bc45e1a1be7d76de": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 182,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 182,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32b79e91487d08b8f71fcb431003c": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 2,
+                    "output_tokens": 41
+                  },
+                  "fc_055c60177e76fc92016af32b7adf0087d094b08cf56d45e3f5": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 0,
+                    "output_tokens": 24
+                  },
+                  "msg_055c60177e76fc92016af32b78776087d092dee2dc6ac663df": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 39,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 39,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  },
+                  "msg_055c60177e76fc92016af32b78776087d0982421a54342afb8": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 133,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 133,
+                        "input_tokens": 281,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 281,
+                    "output_tokens": 0
+                  },
+                  "msg_055c60177e76fc92016af32b78776087d0b29415a217d79864": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 501,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 501,
+                        "input_tokens": 501,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 501,
+                    "output_tokens": 0
+                  }
+                },
+                "request_fields": {
+                  "tools": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 479,
+                    "input_tokens": 479,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 1517,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 1152
+              },
+              "output_tokens": 65,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1582
+            },
+            "uncached_input_tokens": 365,
+            "components": {
+              "uncached_input_usd": "0.001752",
+              "cached_input_usd": "0.00027648",
+              "output_usd": "0.00117"
+            },
+            "estimated_cost_usd": "0.00319848",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 18193,
+          "finished_at_utc": "2026-11-10T14:34:35.208061+00:00"
+        },
+        {
+          "started_at_utc": "2026-11-10T14:35:05.208761+00:00",
+          "request_index": 3,
+          "original_body_sha256": "bd623a442706a14728e47bcd24ae9848fd0762f61e3a6c3987ee89b5f093ebb4",
+          "requested_max_output_tokens": 2048,
+          "model": "gpt-6.1-sol",
+          "tool_names": [
+            "read",
+            "bash",
+            "edit",
+            "write"
+          ],
+          "forwarded_protocol_header_names": [
+            "user-agent",
+            "x-client-request-id"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            null,
+            null,
+            "function_call",
+            "function_call_output",
+            "function_call",
+            "function_call",
+            "function_call_output",
+            "function_call_output"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "minimum_request_window_seconds": 60,
+          "deadline_remaining_seconds_at_dispatch": 829.075838,
+          "pacing_wait_seconds": 29.985004,
+          "effective_max_output_tokens": 2048,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "fc_055c60177e76fc92016af32b55e93487d0adcb7329f9506c9f": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 33,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32b79e91487d08b8f71fcb431003c": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 43,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32b7adf0087d094b08cf56d45e3f5": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 24,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32b9a925c87d087850024a575a1d6": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 66,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 66,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32b9a925c87d093c1a1a108174efc": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 182,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 182,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32b9a925c87d09a8710f46ca5b1a7": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 104,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 104,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32b9c0c9087d09388ad1253a2dff2": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 2,
+                    "output_tokens": 173
+                  },
+                  "msg_055c60177e76fc92016af32b9a925c87d08cfa140f33c24c4d": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  },
+                  "msg_055c60177e76fc92016af32b9a925c87d0abbb55e6d780ac9d": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 501,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 501,
+                    "output_tokens": 0
+                  },
+                  "msg_055c60177e76fc92016af32b9a925c87d0bad1e30d9d7825a6": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 281,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 281,
+                    "output_tokens": 0
+                  }
+                },
+                "request_fields": {
+                  "tools": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 479,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 1754,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0
+              },
+              "output_tokens": 173,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1927
+            },
+            "uncached_input_tokens": 1754,
+            "components": {
+              "uncached_input_usd": "0.0084192",
+              "cached_input_usd": "0.00",
+              "output_usd": "0.003114"
+            },
+            "estimated_cost_usd": "0.0115332",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 60019,
+          "finished_at_utc": "2026-11-10T14:35:11.458386+00:00"
+        },
+        {
+          "started_at_utc": "2026-11-10T14:35:41.459730+00:00",
+          "request_index": 4,
+          "original_body_sha256": "8d9ee53754e9e58923b4c1ef6a8489a4a773c7854bb0e82a962cab0c6a8f666a",
+          "requested_max_output_tokens": 2048,
+          "model": "gpt-6.1-sol",
+          "tool_names": [
+            "read",
+            "bash",
+            "edit",
+            "write"
+          ],
+          "forwarded_protocol_header_names": [
+            "user-agent",
+            "x-client-request-id"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            null,
+            null,
+            "function_call",
+            "function_call_output",
+            "function_call",
+            "function_call",
+            "function_call_output",
+            "function_call_output",
+            "function_call",
+            "function_call_output"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "minimum_request_window_seconds": 60,
+          "deadline_remaining_seconds_at_dispatch": 792.824705,
+          "pacing_wait_seconds": 29.986391,
+          "effective_max_output_tokens": 2048,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "fc_055c60177e76fc92016af32b55e93487d0adcb7329f9506c9f": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 33,
+                    "input_tokens": 33,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32b79e91487d08b8f71fcb431003c": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 43,
+                    "input_tokens": 43,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32b7adf0087d094b08cf56d45e3f5": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 24,
+                    "input_tokens": 24,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32b9c0c9087d09388ad1253a2dff2": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 40,
+                    "input_tokens": 175,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32bbeac3487d08117de1f5f5b3f37": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 104,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 104,
+                        "input_tokens": 104,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 104,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32bbeac3487d09670c64aa04e5e87": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 66,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 66,
+                        "input_tokens": 66,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 66,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32bbeac3487d0a57cb0d01cd0c0fb": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 182,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 182,
+                        "input_tokens": 182,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 182,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32bbeac3487d0ba01294c6aaec222": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 19,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 19,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32bbffc6887d0b1235a34e238bb6e": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 2,
+                    "output_tokens": 353
+                  },
+                  "msg_055c60177e76fc92016af32bbeac3487d09056a551938e43d7": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 281,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 281,
+                        "input_tokens": 281,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 281,
+                    "output_tokens": 0
+                  },
+                  "msg_055c60177e76fc92016af32bbeac3487d0934dfda211e2377f": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 501,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 501,
+                        "input_tokens": 501,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 501,
+                    "output_tokens": 0
+                  },
+                  "msg_055c60177e76fc92016af32bbeac3487d0b15782b4575bbd55": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 39,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 39,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  }
+                },
+                "request_fields": {
+                  "tools": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 479,
+                    "input_tokens": 479,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 1948,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 1792
+              },
+              "output_tokens": 353,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 2301
+            },
+            "uncached_input_tokens": 156,
+            "components": {
+              "uncached_input_usd": "0.0007488",
+              "cached_input_usd": "0.00043008",
+              "output_usd": "0.006354"
+            },
+            "estimated_cost_usd": "0.00753288",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 106607,
+          "finished_at_utc": "2026-11-10T14:35:50.842959+00:00"
+        },
+        {
+          "started_at_utc": "2026-11-10T14:36:20.844325+00:00",
+          "request_index": 5,
+          "original_body_sha256": "0e8b7e892fe2198853f1458d6b0f8bc5857bcc5ab4e84ad20787e9b560c45275",
+          "requested_max_output_tokens": 2048,
+          "model": "gpt-6.1-sol",
+          "tool_names": [
+            "read",
+            "bash",
+            "edit",
+            "write"
+          ],
+          "forwarded_protocol_header_names": [
+            "user-agent",
+            "x-client-request-id"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            null,
+            null,
+            "function_call",
+            "function_call_output",
+            "function_call",
+            "function_call",
+            "function_call_output",
+            "function_call_output",
+            "function_call",
+            "function_call_output",
+            "function_call",
+            "function_call_output"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "minimum_request_window_seconds": 60,
+          "deadline_remaining_seconds_at_dispatch": 753.439768,
+          "pacing_wait_seconds": 29.901159,
+          "effective_max_output_tokens": 2048,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "fc_055c60177e76fc92016af32b55e93487d0adcb7329f9506c9f": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 33,
+                    "input_tokens": 33,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32b79e91487d08b8f71fcb431003c": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 43,
+                    "input_tokens": 43,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32b7adf0087d094b08cf56d45e3f5": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 24,
+                    "input_tokens": 24,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32b9c0c9087d09388ad1253a2dff2": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 175,
+                    "input_tokens": 175,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32bbffc6887d0b1235a34e238bb6e": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 230,
+                    "input_tokens": 355,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32be9d9e487d08394efc0701c864d": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 104,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 104,
+                        "input_tokens": 104,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 104,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32be9d9e487d09aee66c27d271bf4": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 19,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 19,
+                        "input_tokens": 19,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 19,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32be9d9e487d09e284a14e596cb42": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 66,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 66,
+                        "input_tokens": 66,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 66,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32be9d9e487d0a56a1e5df44c9e80": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 182,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 182,
+                        "input_tokens": 182,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 182,
+                    "output_tokens": 0
+                  },
+                  "fc_055c60177e76fc92016af32be9d9e487d0bfae9ba2b7f68e76": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 46,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 46,
+                    "output_tokens": 0
+                  },
+                  "msg_055c60177e76fc92016af32be9d9e487d09178c85f4e07acf4": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 281,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 281,
+                        "input_tokens": 281,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 281,
+                    "output_tokens": 0
+                  },
+                  "msg_055c60177e76fc92016af32be9d9e487d0937494225856bb97": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 501,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 501,
+                        "input_tokens": 501,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 501,
+                    "output_tokens": 0
+                  },
+                  "msg_055c60177e76fc92016af32be9d9e487d0aa19d5e97a28bb96": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 39,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 39,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  },
+                  "msg_055c60177e76fc92016af32beba44887d0b5816c0f6b5e7c3b": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 2,
+                        "output_tokens": 143
+                      }
+                    ],
+                    "input_tokens": 2,
+                    "output_tokens": 143
+                  }
+                },
+                "request_fields": {
+                  "tools": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 479,
+                    "input_tokens": 479,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 2349,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 2176
+              },
+              "output_tokens": 143,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 2492
+            },
+            "uncached_input_tokens": 173,
+            "components": {
+              "uncached_input_usd": "0.0008304",
+              "cached_input_usd": "0.00052224",
+              "output_usd": "0.002574"
+            },
+            "estimated_cost_usd": "0.00392664",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 61091,
+          "finished_at_utc": "2026-11-10T14:36:31.440789+00:00"
+        }
+      ],
+      "synthetic_usage": false,
+      "preflight_events": null,
+      "provider_requests": 5,
+      "supervisor_pid_absent": true,
+      "broker_socket_absent": true
+    },
+    {
+      "slot": "D48-007",
+      "repetition": "1",
+      "block": "2",
+      "task_id": "B-02",
+      "position_in_block": "3",
+      "tool": "opencode-v2",
+      "status": "infra_error",
+      "continuation_of": {
+        "slot": "D48-007",
+        "run_id": "R-0137",
+        "config_id": "C-0238"
+      },
+      "attempt_kind": "first_attempt_of_unrun_slot",
+      "run_id": "R-0180",
+      "config_id": "C-0281",
+      "spec": {
+        "tool": "opencode-v2",
+        "version": "2.2.5",
+        "config_id": "C-0281",
+        "repository": "anomalyco/opencode",
+        "tag": "v2.2.5",
+        "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+        "asset": "opencode-linux-x64-baseline.tar.gz",
+        "size": 119196162,
+        "sha256": "09f44302c10fd036912f59c81fd1aef5df45dd06f649197f9dfc9bbe2a79614e",
+        "binary_names": [
+          "opencode"
+        ],
+        "started_at_utc": "2026-11-06T03:49:40.824386+00:00",
+        "status": "prepared_not_executed",
+        "release_api": "https://api.github.com/repos/anomalyco/opencode/releases/tags/v2.2.5",
+        "release_url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
+        "asset_url": "https://github.com/anomalyco/opencode/releases/download/v2.2.5/opencode-linux-x64-baseline.tar.gz",
+        "archive_sha256_verified": "09f44302c10fd036912f59c81fd1aef5df45dd06f649197f9dfc9bbe2a79614e",
+        "archive_members": [
+          {
+            "name": "opencode",
+            "size": 252713136,
+            "type": "0",
+            "linkname": ""
+          }
+        ],
+        "binary": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v2-2.2.5/payload/opencode",
+        "binary_sha256": "8d060e1d2fbb9bb44cf09ae6ed1f3f6a7cff070b5227e2f90970132b23a92050",
+        "payload": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v2-2.2.5/payload",
+        "runtime_root": "/tmp/opencode/agent-cli-report/smoke/C-0281",
+        "finished_at_utc": "2026-11-06T03:51:23.412267+00:00",
+        "environment_revision": "search-r2"
+      },
+      "cli": [
+        "/opt/agent-cli-report/C-0281/opencode",
+        "run",
+        "--standalone",
+        "--format",
+        "json",
+        "--model",
+        "shopaikey/gpt-6.1-sol",
+        "Sửa merge_pages(pages) trong pagination.py. Chỉ sửa pagination.py; không sửa test hoặc thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh).\n\nContract: pages là iterable các page; mỗi page là iterable các dict, mỗi dict có id kiểu string. Cả hai mức có thể là generator chỉ duyệt một lần. Chỉ cần xử lý input đúng contract, không cần thêm validation cho kiểu khác.\n\nTrả list các dict, một dict cho mỗi id. Thứ tự đầu ra theo lần đầu id xuất hiện trong toàn bộ input; nếu id xuất hiện lại, toàn bộ record cuối cùng thay thế record cũ nhưng giữ vị trí đầu tiên. Không merge các field của record cũ với record mới. Empty input/pages hợp lệ.\n\nKhông thay đổi input hoặc dictionary gốc. Mỗi output record phải là shallow copy độc lập với dict input; không yêu cầu deep-copy giá trị nested. Không giữ state giữa các lần gọi. Giữ nguyên tên hàm/signature/API hiện có. Public tests phải tiếp tục pass; kiểm cả duplicate trong cùng page và khác page.\n\nChạy test bằng python3 -B -m unittest -v test_public. Chỉ dùng standard library, không cài package hoặc truy cập Internet. Hoàn tất bằng code đã sửa, không chỉ mô tả giải pháp.\n"
+      ],
+      "validity": "pending_review",
+      "reasons": [
+        "provider_failure",
+        "usage_missing",
+        "provider_or_usage"
+      ],
+      "execution": {
+        "supervisor_host_pid": 51782,
+        "exit_code": 1,
+        "timed_out": false,
+        "output_limit_exceeded": false,
+        "duration_ms": 159194,
+        "outer_started_monotonic": 3090.305901092,
+        "outer_finished_monotonic": 3249.499440003,
+        "broker_deadline_monotonic": 3990.305901092,
+        "outer_watchdog_deadline_monotonic": 3990.305901092,
+        "native_clock": {
+          "started_monotonic": 3090.386621206,
+          "finished_monotonic": 3249.10273383,
+          "duration_ms": 158716
+        },
+        "witness": {
+          "project_writable": true,
+          "immutable_readonly": {
+            "test_public.py": true
+          },
+          "hidden_absent": true,
+          "home_hidden": true,
+          "net_namespace": "net:[4026532634]",
+          "provider_key_env_absent": true
+        }
+      },
+      "grading": {
+        "task_id": "B-02",
+        "scope_ok": true,
+        "changed_files": [],
+        "invalid_paths": [],
+        "snapshot_sha256": {
+          "test_public.py": "18f4ea89162fcfc9762a059b4de6f9d01fbf22adf158393cde6cde316ddbf8e9",
+          "pagination.py": "539d4697695b7ccc77317f032199cff92832a115bf4392622ffff474502a2801"
+        },
+        "suites": {
+          "public": {
+            "exit_code": 0,
+            "timed_out": false,
+            "output_limit_exceeded": false,
+            "duration_ms": 116,
+            "stdout": "",
+            "stderr": "test_distinct_records (test_public.PublicTests.test_distinct_records) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+          },
+          "hidden": {
+            "exit_code": 1,
+            "timed_out": false,
+            "output_limit_exceeded": false,
+            "duration_ms": 116,
+            "stdout": "",
+            "stderr": "test_duplicate_replaces_not_merges (__main__.AcceptanceTests.test_duplicate_replaces_not_merges) ... FAIL\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_no_mutation_and_shallow_copy (__main__.AcceptanceTests.test_no_mutation_and_shallow_copy) ... FAIL\ntest_one_shot (__main__.AcceptanceTests.test_one_shot) ... FAIL\ntest_randomized_contract (__main__.AcceptanceTests.test_randomized_contract) ... FAIL\n\n======================================================================\nFAIL: test_duplicate_replaces_not_merges (__main__.AcceptanceTests.test_duplicate_replaces_not_merges)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 13, in test_duplicate_replaces_not_merges\n    self.assertEqual(merge_pages([[{\"id\": \"b\", \"old\": 0}, {\"id\": \"a\"}, {\"id\": \"b\", \"new\": 1}],\nAssertionError: Lists differ: [{'id': 'b', 'old': 0}, {'id': 'a'}, {'id': 'c'}] != [{'id': 'b', 'new': 1}, {'id': 'a', 'v': 3}, {'id': 'c'}]\n\nFirst differing element 0:\n{'id': 'b', 'old': 0}\n{'id': 'b', 'new': 1}\n\n- [{'id': 'b', 'old': 0}, {'id': 'a'}, {'id': 'c'}]\n?               ^^^   ^\n\n+ [{'id': 'b', 'new': 1}, {'id': 'a', 'v': 3}, {'id': 'c'}]\n?               ^^^   ^             ++++++++\n\n\n======================================================================\nFAIL: test_no_mutation_and_shallow_copy (__main__.AcceptanceTests.test_no_mutation_and_shallow_copy)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 29, in test_no_mutation_and_shallow_copy\n    self.assertIsNot(result[0], data[0][0])\nAssertionError: unexpectedly identical: {'id': 'b', 'nested': []}\n\n======================================================================\nFAIL: test_one_shot (__main__.AcceptanceTests.test_one_shot)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 21, in test_one_shot\n    self.assertEqual(merge_pages(pages()), [{\"id\": \"a\", \"v\": 2}, {\"id\": \"b\"}])\nAssertionError: Lists differ: [{'id': 'a', 'v': 1}, {'id': 'b'}] != [{'id': 'a', 'v': 2}, {'id': 'b'}]\n\nFirst differing element 0:\n{'id': 'a', 'v': 1}\n{'id': 'a', 'v': 2}\n\n- [{'id': 'a', 'v': 1}, {'id': 'b'}]\n?                   ^\n\n+ [{'id': 'a', 'v': 2}, {'id': 'b'}]\n?                   ^\n\n\n======================================================================\nFAIL: test_randomized_contract (__main__.AcceptanceTests.test_randomized_contract)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 49, in test_randomized_contract\n    self.assertEqual(merge_pages(pages), expected)\nAssertionError: Lists differ: [{'id': 'e', 'v': 13}, {'id': 'd', 'v': 12}, {'id': 'c', 'v[46 chars] 33}] != [{'id': 'e', 'v': 72}, {'id': 'd', 'v': 33}, {'id': 'c', 'v[46 chars] 33}]\n\nFirst differing element 0:\n{'id': 'e', 'v': 13}\n{'id': 'e', 'v': 72}\n\n- [{'id': 'e', 'v': 13},\n?                   ^^\n\n+ [{'id': 'e', 'v': 72},\n?                   ^^\n\n+  {'id': 'd', 'v': 33},\n-  {'id': 'd', 'v': 12},\n?          ^\n\n+  {'id': 'c', 'v': 12},\n?          ^\n\n-  {'id': 'c', 'v': 35},\n?          ^        ^\n\n+  {'id': 'a', 'v': 45},\n?          ^        ^\n\n-  {'id': 'a', 'v': 81},\n   {'id': 'b', 'v': 33}]\n\n----------------------------------------------------------------------\nRan 5 tests in 0.003s\n\nFAILED (failures=4)\n"
+          }
+        },
+        "rubric": null,
+        "grader_duration_ms": 237,
+        "pass": false
+      },
+      "requests": [
+        {
+          "started_at_utc": "2026-11-10T14:37:01.441566+00:00",
+          "request_index": 1,
+          "original_body_sha256": "bf3cd956aebbdbef6499c893086dda1277ec34e222a88fb6ef8f1ad5b0ef2ece",
+          "requested_max_output_tokens": null,
+          "model": "gpt-6.1-sol",
+          "tool_names": [],
+          "forwarded_protocol_header_names": [
+            "user-agent"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            "message"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "minimum_request_window_seconds": 60,
+          "deadline_remaining_seconds_at_dispatch": 871.26536,
+          "pacing_wait_seconds": 27.598363,
+          "effective_max_output_tokens": 2048,
+          "error_type": "TimeoutError"
+        }
+      ],
+      "synthetic_usage": false,
+      "preflight_events": null,
+      "provider_requests": 1,
+      "supervisor_pid_absent": true,
+      "broker_socket_absent": true
+    }
+  ],
+  "stop_reason": "infra_error_no_automatic_retry",
+  "finished_at_utc": "2026-11-10T14:39:13.008696+00:00",
+  "synthetic_exchanges": 0,
+  "known_usage_estimate_usd": "0.03299880",
+  "unpriced_requests": 1,
+  "estimated_total_usd": null,
+  "all_slots_executed": false,
+  "protocol": "benchmark/PROTOCOL_CONTINUE43_R2.md",
+  "rubric_revision": "b01-evidence-r2",
+  "prior_known_usd": "0.25185936",
+  "prior_unpriced_requests": 3,
+  "remaining_known_guard_usd": "15.74814064",
+  "benchmark_known_cumulative_usd": "0.28485816",
+  "benchmark_estimated_total_usd": null,
+  "cost_scope": "continuation_only; benchmark cumulative includes predecessor; total unknown"
+}

@@ -1,0 +1,1 @@
+{"status":"error","checks":{"managed_service_authenticated_info":false},"error":"Error: managed_service_authenticated_info"}

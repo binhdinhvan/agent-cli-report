@@ -1,0 +1,1 @@
+{"status":"error","checks":{"subscribed_before_prompt":true,"native_background_tool_returned":true,"parent_marker_before_wait":true,"background_private_server_pid_changed":true,"native_cancelled_notice_after_restart":false},"error":"Error: native_cancelled_notice_after_restart"}

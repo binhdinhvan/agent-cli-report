@@ -1,0 +1,178 @@
+{
+  "scope": "fresh isolated Xvfb; real Desktop window, standalone Chrome toolbar and xterm TUI; no prompt",
+  "checks": {
+    "private_xvfb_ready": true,
+    "owned_service_registration": true,
+    "private_service_ready": true,
+    "desktop-boot-diagnostic_screen_capture": true,
+    "desktop_shared_session": true,
+    "failure-screen_screen_capture": true
+  },
+  "screenshots": {
+    "desktop-boot-diagnostic": {
+      "method": "Pillow ImageGrab / XCB root screen, not CDP viewport or fabricated chrome",
+      "display": ":91",
+      "at": "2026-11-11T14:40:52.930Z"
+    },
+    "failure-screen": {
+      "method": "Pillow ImageGrab / XCB root screen, not CDP viewport or fabricated chrome",
+      "display": ":91",
+      "at": "2026-11-11T14:40:53.671Z"
+    }
+  },
+  "timeline": [
+    {
+      "stage": "spawn",
+      "name": "xvfb",
+      "pid": 7,
+      "args": [
+        "/opt/research/ui-tools/usr/bin/Xvfb",
+        ":91",
+        "-screen",
+        "0",
+        "1600x1050x24",
+        "-nolisten",
+        "tcp",
+        "-ac"
+      ],
+      "at": "2026-11-11T14:40:51.364Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "twm",
+      "pid": 10,
+      "args": [
+        "/opt/research/ui-tools/usr/bin/twm",
+        "-f",
+        "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-6300514fc9a6cc036932/twmrc"
+      ],
+      "at": "2026-11-11T14:40:51.380Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "service",
+      "pid": 12,
+      "args": [
+        "/opt/agent-cli-report/BP48-VIS-6300514fc9a6cc036932/opencode",
+        "serve",
+        "--service",
+        "--hostname",
+        "127.0.0.1",
+        "--port",
+        "0"
+      ],
+      "at": "2026-11-11T14:40:51.380Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "desktop",
+      "pid": 35,
+      "args": [
+        "/opt/research/desktop/ai.opencode",
+        "--ozone-platform=x11",
+        "--no-sandbox",
+        "--disable-gpu",
+        "--disable-dev-shm-usage",
+        "--password-store=basic",
+        "--remote-debugging-port=9333"
+      ],
+      "at": "2026-11-11T14:40:52.040Z"
+    }
+  ],
+  "health": [
+    503,
+    200
+  ],
+  "service_before": {
+    "version": "2.2.5",
+    "pid": 12,
+    "hostname": "VSF-PF64PCNX-L",
+    "urls": [
+      "http://127.0.0.1:33107"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-6300514fc9a6cc036932/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "session": {
+    "data": {
+      "id": "ses_e34f20ac3ffepH3TGgE6J1mTF0",
+      "projectID": "dba5da43cd8a3c9a7525488ddd938adcf6c70fa6",
+      "cost": 0,
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794408052033,
+        "updated": 1794408052033
+      },
+      "title": "REPORT_SHARED_UI_MARKER",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-6300514fc9a6cc036932/project"
+      }
+    }
+  },
+  "last_cdp": {
+    "port": 9333,
+    "method": "Browser.getWindowForTarget",
+    "at": "2026-11-11T14:40:53.568Z"
+  },
+  "desktop_boot_document": {
+    "result": {
+      "type": "string",
+      "value": "{\"url\":\"oc://renderer/index.html\",\"ready\":\"interactive\",\"windowID\":\"aeece57b-c777-4b22-80bd-808485c609b5\"}"
+    }
+  },
+  "browser_errors": [
+    {
+      "port": 9333,
+      "method": "Network.loadingFailed",
+      "params": {
+        "requestId": "101.224",
+        "timestamp": 3413.893142,
+        "type": "Fetch",
+        "errorText": "net::ERR_INTERNET_DISCONNECTED",
+        "canceled": false
+      }
+    }
+  ],
+  "desktop_document": {
+    "result": {
+      "type": "object",
+      "value": {
+        "url": "oc://renderer/index.html",
+        "title": "REPORT_SHARED_UI_MARKER · OpenCode",
+        "text": "P\nproject\nREPORT_SHARED_UI_MARKER\nAsk anything, / for commands, @ for context…"
+      }
+    }
+  },
+  "status": "error",
+  "error": "Error: {\"code\":-32601,\"message\":\"'Browser.getWindowForTarget' wasn't found\"}",
+  "cleanup": [
+    {
+      "pid": 35,
+      "exit": 130
+    },
+    {
+      "pid": 12,
+      "exit": 130
+    },
+    {
+      "pid": 10,
+      "exit": 0
+    },
+    {
+      "pid": 7,
+      "exit": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "default": {
+    "value": 12,
+    "evidence": ["defaults.py:DEFAULTS", "resolver.py:resolve"]
+  },
+  "precedence": {
+    "value": ["cli", "env", "config", "defaults"],
+    "evidence": ["resolver.py:resolve"]
+  },
+  "alias_trace": {
+    "value": ["quick", "short", "timeout"],
+    "evidence": ["aliases.py:ALIASES", "aliases.py:canonical_name"]
+  },
+  "cycle_error": {
+    "type": "ValueError",
+    "message": "alias cycle: loop_a",
+    "evidence": ["aliases.py:ALIASES", "aliases.py:canonical_name"]
+  },
+  "mutation": {
+    "value": false,
+    "evidence": ["resolver.py:resolve"]
+  }
+}

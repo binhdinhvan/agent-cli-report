@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0051",
+    "comparison_axis": "persistence",
+    "tool": "OpenCode v2",
+    "version": "2.2.5",
+    "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+    "claim": "Session rỗng giữ ID/title khi GET lại từ process mới cùng DB sau EOF child trước",
+    "file": "packages/core/src/session.ts",
+    "line_start": "288",
+    "line_end": "338",
+    "symbol": "Session.create",
+    "permalink": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session.ts#L288-L338",
+    "evidence_status": "runtime-confirmed",
+    "runtime_artifact": "demos/artifacts/OFFLINE-API-20261106-01/opencode-v2/result.json",
+    "limitations": "Chỉ persistence metadata; không phải resume transcript hoặc khôi phục LLM execution"
+  },
+  "source_sha256": "e221f3800c065c2ec8c834e6e91b6f1b624120a52d5f3da3711ee1877cd9b2d1",
+  "excerpt": "      create: Effect.fn(\"Session.create\")(function* (input) {\n        const sessionID = input.id ?? SessionSchema.ID.create()\n        const recorded = yield* store.get(sessionID)\n        if (recorded) return recorded\n        const parent = input.parentID ? yield* store.get(input.parentID) : undefined\n        if (input.parentID && parent === undefined) return yield* new NotFoundError({ sessionID: input.parentID })\n        const location = parent?.location ?? (input.location && LocationServiceMap.canonical(input.location))\n        if (location === undefined)\n          return yield* Effect.die(new Error(\"Session.create requires either location or an existing parentID\"))\n        const project = yield* projects.resolve(location.directory)\n        const projected = yield* bus\n          .publish(\n            SessionEvent.Created,\n            {\n              sessionID,\n              slug: Slug.create(),\n              version: app.version,\n              projectID: project.id,\n              parentID: input.parentID,\n              location,\n              subpath: RelativePath.make(path.relative(project.directory, location.directory).replaceAll(\"\\\\\", \"/\")),\n              title: input.title,\n              agent: input.agent,\n              // Children inherit metadata and permissions the way they inherit\n              // location, so host policies that read them treat the family uniformly.\n              metadata: input.metadata ?? parent?.metadata,\n              permissions: input.permissions ?? parent?.permissions,\n              model: input.model,\n            },\n            { location },\n          )\n          .pipe(\n            Effect.as({ type: \"created\" } as const),\n            Effect.catchDefect((defect) => {\n              if (!(defect instanceof SessionProjector.SessionAlreadyProjected)) {\n                return Effect.die(defect)\n              }\n              // Concurrent creation lost the projection race. The existing Session identity wins.\n              return store\n                .get(sessionID)\n                .pipe(\n                  Effect.flatMap((session) =>\n                    session ? Effect.succeed({ type: \"existing\", session } as const) : Effect.die(defect),\n                  ),\n                )\n            }),\n          )\n        if (projected.type === \"existing\") return projected.session\n        // TODO: Restore recorded sessions onto replacement synchronized workspaces in a future API slice.\n        return yield* result.get(sessionID).pipe(Effect.orDie)\n      }),"
+}

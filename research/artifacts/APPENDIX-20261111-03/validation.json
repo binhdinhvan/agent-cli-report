@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "revision": 3,
+  "pages": 3,
+  "pdf_sha256": "05ab39caf18c3d4f58c3094d8f5afc18344783f8264416626e825ae735bba32d",
+  "html_sha256": "a10da17e9d62a16e57d1c30827aa4a286c73be1200d652b7af27391faa564272",
+  "raw_input_hashes_verified": 60,
+  "source_ui": "NATIVE-VISIBLE-UI-20261111-07",
+  "native_ui_review": "research/artifacts/NATIVE-VISIBLE-UI-REVIEW-20261111-01/validation.json",
+  "screenshots": "3 actual X root captures; desktop/browser detail crops pixel-exact and labeled; TUI embedded unchanged",
+  "layout": "page A visually reviewed; pages B/C preview pixels identical to revision 2",
+  "benchmark_metrics": "unchanged",
+  "limitations": "new UI-only experiment authorized; no inference/benchmark rerun; no source/binary/user service changes; PDF main report not merged"
+}

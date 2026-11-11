@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "offline_variant_checks": 44,
+  "paid_runs_authorized": false,
+  "native_paid_runner_integration": "pending; this runner only applies trusted stdlib writers offline"
+}

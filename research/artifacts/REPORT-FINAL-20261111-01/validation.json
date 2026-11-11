@@ -1,0 +1,35 @@
+{
+  "status": "pass",
+  "scope": "offline final-report audit;0extraAPI/keyread",
+  "benchmark_valid_attempts": 48,
+  "benchmark_success": 46,
+  "benchmark_failure": 2,
+  "snapshot_passes": 48,
+  "smoke_passes": 4,
+  "regression_tests_passed": 185,
+  "benchmark_tests": 118,
+  "demo_tests": 67,
+  "local_markdown_links_checked": 150,
+  "evidence_ids_structurally_valid": 124,
+  "pinned_source_current_hashes_match": true,
+  "raw_retained": true,
+  "generation_authorized": false,
+  "registry": [
+    "R-0378",
+    "C-0479"
+  ],
+  "report_status": "final synthesis complete within measured/pinned-source scope; unperformed native demos explicitly unverified",
+  "documents_sha256": {
+    "REPORT.md": "2b7257c1775f241eea1e7c528e91eb2c6d4a5943253eeb674d441fbb74087fb7",
+    "README.md": "69add54ac080a81df2a125f620151ea383b8f9ae833bc446b2a1ead415602c4a",
+    "PLAN.md": "91ececeb55a349c9a4a0b902805837c11bcfb9d37649bfe816beccba551543ba",
+    "benchmark/suite48/OPENAI_BENCHMARK_FINAL.md": "c4fba41533f5418f0b9d18aa3361625f260459fc1d510a1eed146b35e451bcac"
+  },
+  "secret_scan": "heuristic for document key patterns only, not publication/PII audit",
+  "runtime_audit": "research/artifacts/OPENAI48-R3-FINAL-20261111-01/validation.json",
+  "limitations": [
+    "Guard estimates include unknownTTLupperbounds, not invoice",
+    "6historicalunpriced retained; totalchargeunknown",
+    "Client/SDKprompt, permissionmatrix, nativebackgroundrecovery/pluginport/compaction remainunverified"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/opt/agent-cli-report/BP48-UI-cfcfcf6c2b4002bd7200/opencode",
+    "--session",
+    "ses_e37868d48ffe5NECni0TQSaLhK"
+  ],
+  "pid": 158,
+  "exit_code": 130,
+  "session_title_observed": true,
+  "bytes": 11862,
+  "process_stopped": true,
+  "scope": "native TUI default managed-service discovery in isolated PTY; no prompt"
+}

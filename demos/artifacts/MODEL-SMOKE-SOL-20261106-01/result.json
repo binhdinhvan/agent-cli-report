@@ -1,0 +1,1696 @@
+{
+  "protocol": "MODEL_SMOKE.md sol rev1",
+  "started_at_utc": "2026-11-06T09:09:51.882682+00:00",
+  "prompt": "Use a local tool to read smoke-marker.txt in the current working directory. Do not modify any file. Reply with only the complete marker found in that file.",
+  "marker": "SMOKE_LOCAL_READ_7c28e36bd41a",
+  "model": "gpt-6.1-sol",
+  "provider": "https://api.shopaikey.com/v1",
+  "budget_guard_usd_estimate": "0.50",
+  "pricing_sha256": "0a779dd0480a5703d7e3668f613f6d2139186dd86ef2aebb55b5ff0e4ec7dd1f",
+  "protocol_sha256": "b0662e686956291d840f06e0851dea2e2f354089b746e55f8afee96861e003ae",
+  "request_gap_seconds_after_response": 30,
+  "plan": [
+    {
+      "tool": "opencode-v1",
+      "status": "pass"
+    },
+    {
+      "tool": "opencode-v2",
+      "status": "pass"
+    },
+    {
+      "tool": "codex",
+      "status": "pass"
+    }
+  ],
+  "script_sha256": {
+    "model_smoke.py": "d0e83edd48b44607059bd92412dc5280dd31ec75e58ba1fbe11d02ebc69c121b",
+    "model_smoke_inside.py": "476636ec1d7d029c4b6306831074c7cc83bc0ea71937b19c976613f39fcda29e",
+    "proxy_headers.py": "b3896d199fd807902d8bccb105d1feb1f7755fb00816577c3c0e7949a678048d"
+  },
+  "runs": [
+    {
+      "run_id": "MODEL-SMOKE-41",
+      "spec": {
+        "tool": "opencode-v1",
+        "version": "1.19.5",
+        "config_id": "C-0045",
+        "repository": "anomalyco/opencode",
+        "tag": "v1.19.5",
+        "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+        "asset": "opencode-linux-x64-baseline.tar.gz",
+        "size": 79651821,
+        "sha256": "17c200fd4b2289954cc01552559f9b6d03ec157b2ddfb5eb54144f491656333d",
+        "binary_names": [
+          "opencode"
+        ],
+        "started_at_utc": "2026-11-06T03:49:40.824147+00:00",
+        "status": "prepared_not_executed",
+        "release_api": "https://api.github.com/repos/anomalyco/opencode/releases/tags/v1.19.5",
+        "release_url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.5",
+        "asset_url": "https://github.com/anomalyco/opencode/releases/download/v1.19.5/opencode-linux-x64-baseline.tar.gz",
+        "archive_sha256_verified": "17c200fd4b2289954cc01552559f9b6d03ec157b2ddfb5eb54144f491656333d",
+        "archive_members": [
+          {
+            "name": "opencode",
+            "size": 214386864,
+            "type": "0",
+            "linkname": ""
+          }
+        ],
+        "binary": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v1-1.19.5/payload/opencode",
+        "binary_sha256": "7df4e4136301f16589b0f30bf91a61380fca5f8ef22dd36570f5ebe1d4ec802c",
+        "payload": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v1-1.19.5/payload",
+        "runtime_root": "/tmp/opencode/agent-cli-report/smoke/C-0045",
+        "finished_at_utc": "2026-11-06T03:51:02.265910+00:00"
+      },
+      "cli": [
+        "/opt/agent-cli-report/C-0045/opencode",
+        "run",
+        "--format",
+        "json",
+        "--model",
+        "openai/gpt-6.1-sol",
+        "Use a local tool to read smoke-marker.txt in the current working directory. Do not modify any file. Reply with only the complete marker found in that file."
+      ],
+      "started_at_utc": "2026-11-06T09:09:52.019220+00:00",
+      "provider_requests": [
+        {
+          "started_at_utc": "2026-11-06T09:09:53.339291+00:00",
+          "request_index": 1,
+          "original_body_sha256": "5898c5fa4ca27312d6bdead563ef09fd5ccdc11d9bd48d0f7b8c42e9dad303c5",
+          "requested_max_output_tokens": null,
+          "model": "gpt-6.1-sol",
+          "tool_names": [],
+          "forwarded_protocol_header_names": [
+            "originator",
+            "session-id",
+            "user-agent"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            null,
+            null,
+            null
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {
+            "reasoning": {
+              "effort": "low",
+              "summary": "auto"
+            }
+          },
+          "min_interval_seconds": 30,
+          "pacing_wait_seconds": 0.0,
+          "effective_max_output_tokens": 512,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "msg_01e5365c877ab8aa016aed996e8d3087d196284bf19728d3df": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 507,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 507,
+                    "output_tokens": 0
+                  },
+                  "msg_01e5365c877ab8aa016aed996e8d7087d1ae900c5d354a72ef": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  },
+                  "msg_01e5365c877ab8aa016aed996e8d8087d1a3178ab66f3ee1a7": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 11,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 11,
+                    "output_tokens": 0
+                  },
+                  "msg_01e5365c877ab8aa016aed996e8d8887d1a493feffca37d7c7": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 37,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 37,
+                    "output_tokens": 0
+                  },
+                  "msg_01e5365c877ab8aa016aed9970b74887d18548d5ba992db19d": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 2,
+                        "output_tokens": 11
+                      }
+                    ],
+                    "input_tokens": 2,
+                    "output_tokens": 11
+                  }
+                }
+              },
+              "input_tokens": 596,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0
+              },
+              "output_tokens": 11,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 607
+            },
+            "uncached_input_tokens": 596,
+            "components": {
+              "uncached_input_usd": "0.0028608",
+              "cached_input_usd": "0.00",
+              "output_usd": "0.000198"
+            },
+            "estimated_cost_usd": "0.0030588",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 9965,
+          "finished_at_utc": "2026-11-06T09:10:11.577730+00:00"
+        },
+        {
+          "started_at_utc": "2026-11-06T09:10:41.579080+00:00",
+          "request_index": 2,
+          "original_body_sha256": "95812caff3371225e16bb4bc40d10ab51eca1f9a65e4b703c26b07f572b5ddbb",
+          "requested_max_output_tokens": null,
+          "model": "gpt-6.1-sol",
+          "tool_names": [
+            "apply_patch",
+            "bash",
+            "glob",
+            "grep",
+            "read",
+            "skill",
+            "task",
+            "todowrite",
+            "webfetch"
+          ],
+          "forwarded_protocol_header_names": [
+            "originator",
+            "session-id",
+            "user-agent"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            null,
+            null
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "pacing_wait_seconds": 29.999961,
+          "effective_max_output_tokens": 512,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "input_tokens": 10179,
+              "input_tokens_details": {
+                "cache_write_tokens": 10176,
+                "cached_tokens": 0
+              },
+              "output_tokens": 38,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 10217
+            },
+            "uncached_input_tokens": 10179,
+            "components": {
+              "uncached_input_usd": "0.0488592",
+              "cached_input_usd": "0.00",
+              "output_usd": "0.000684"
+            },
+            "estimated_cost_usd": "0.0495432",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 134339,
+          "finished_at_utc": "2026-11-06T09:10:49.299107+00:00"
+        },
+        {
+          "started_at_utc": "2026-11-06T09:11:19.300021+00:00",
+          "request_index": 3,
+          "original_body_sha256": "4a6c203bb446346c6b3e9a0ad78620eff7c1c34b249d38e92efd807b6342736d",
+          "requested_max_output_tokens": null,
+          "model": "gpt-6.1-sol",
+          "tool_names": [
+            "apply_patch",
+            "bash",
+            "glob",
+            "grep",
+            "read",
+            "skill",
+            "task",
+            "todowrite",
+            "webfetch"
+          ],
+          "forwarded_protocol_header_names": [
+            "originator",
+            "session-id",
+            "user-agent"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            null,
+            null,
+            "function_call",
+            "function_call_output"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "pacing_wait_seconds": 29.973289,
+          "effective_max_output_tokens": 512,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "input_tokens": 10292,
+              "input_tokens_details": {
+                "cache_write_tokens": 113,
+                "cached_tokens": 10176
+              },
+              "output_tokens": 17,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 10309
+            },
+            "uncached_input_tokens": 116,
+            "components": {
+              "uncached_input_usd": "0.0005568",
+              "cached_input_usd": "0.00244224",
+              "output_usd": "0.000306"
+            },
+            "estimated_cost_usd": "0.00330504",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 131661,
+          "finished_at_utc": "2026-11-06T09:11:23.143519+00:00"
+        }
+      ],
+      "supervisor_host_pid": 147766,
+      "timed_out": false,
+      "exit_code": 0,
+      "duration_ms": 91843,
+      "finished_at_utc": "2026-11-06T09:11:23.862206+00:00",
+      "checks": {
+        "json_event_count": 6,
+        "successful_local_read_observed": true,
+        "final_exact_marker": true,
+        "cli_error_event_observed": false,
+        "final_text": "SMOKE_LOCAL_READ_7c28e36bd41a",
+        "successful_read_events": [
+          {
+            "type": "tool_use",
+            "timestamp": 1793956249196,
+            "sessionID": "ses_e4fe0ddd6ffeUgNfGPPRvW7cSJ",
+            "part": {
+              "type": "tool",
+              "tool": "read",
+              "callID": "call_F9bqhsE6Nnj1zA0uFP8i5c2a",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "filePath": "/tmp/opencode/agent-cli-report/smoke/C-0045/project/smoke-marker.txt"
+                },
+                "output": "<path>/tmp/opencode/agent-cli-report/smoke/C-0045/project/smoke-marker.txt</path>\n<type>file</type>\n<content>\n1: SMOKE_LOCAL_READ_7c28e36bd41a\n\n(End of file - total 1 lines)\n</content>",
+                "metadata": {
+                  "preview": "SMOKE_LOCAL_READ_7c28e36bd41a",
+                  "truncated": false,
+                  "loaded": [],
+                  "display": {
+                    "type": "file",
+                    "path": "/tmp/opencode/agent-cli-report/smoke/C-0045/project/smoke-marker.txt",
+                    "text": "SMOKE_LOCAL_READ_7c28e36bd41a",
+                    "lineStart": 1,
+                    "lineEnd": 1,
+                    "totalLines": 1,
+                    "truncated": false
+                  }
+                },
+                "title": "tmp/opencode/agent-cli-report/smoke/C-0045/project/smoke-marker.txt",
+                "time": {
+                  "start": 1793956249187,
+                  "end": 1793956249194
+                }
+              },
+              "metadata": {
+                "openai": {
+                  "itemId": "fc_072a25537446dedf016aed999635bc87d19d51bec3a12f4216"
+                }
+              },
+              "id": "prt_1b01ffe4c0014dPzUqiX3R2C65",
+              "sessionID": "ses_e4fe0ddd6ffeUgNfGPPRvW7cSJ",
+              "messageID": "msg_1b01f2419001aS2X5hASpjspOc"
+            }
+          }
+        ],
+        "fixture_unchanged": true,
+        "isolated_network": true,
+        "real_home_hidden": true,
+        "provider_completed": true,
+        "all_provider_requests_completed": true
+      },
+      "isolation": {
+        "net_namespace": "net:[4026533418]",
+        "cwd": "/tmp/opencode/agent-cli-report/smoke/C-0045/project",
+        "real_home_hidden": true,
+        "provider_key_absent": true
+      },
+      "status": "pass",
+      "failure_layer": null
+    },
+    {
+      "run_id": "MODEL-SMOKE-42",
+      "spec": {
+        "tool": "opencode-v2",
+        "version": "2.2.5",
+        "config_id": "C-0046",
+        "repository": "anomalyco/opencode",
+        "tag": "v2.2.5",
+        "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+        "asset": "opencode-linux-x64-baseline.tar.gz",
+        "size": 119196162,
+        "sha256": "09f44302c10fd036912f59c81fd1aef5df45dd06f649197f9dfc9bbe2a79614e",
+        "binary_names": [
+          "opencode"
+        ],
+        "started_at_utc": "2026-11-06T03:49:40.824386+00:00",
+        "status": "prepared_not_executed",
+        "release_api": "https://api.github.com/repos/anomalyco/opencode/releases/tags/v2.2.5",
+        "release_url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
+        "asset_url": "https://github.com/anomalyco/opencode/releases/download/v2.2.5/opencode-linux-x64-baseline.tar.gz",
+        "archive_sha256_verified": "09f44302c10fd036912f59c81fd1aef5df45dd06f649197f9dfc9bbe2a79614e",
+        "archive_members": [
+          {
+            "name": "opencode",
+            "size": 252713136,
+            "type": "0",
+            "linkname": ""
+          }
+        ],
+        "binary": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v2-2.2.5/payload/opencode",
+        "binary_sha256": "8d060e1d2fbb9bb44cf09ae6ed1f3f6a7cff070b5227e2f90970132b23a92050",
+        "payload": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v2-2.2.5/payload",
+        "runtime_root": "/tmp/opencode/agent-cli-report/smoke/C-0046",
+        "finished_at_utc": "2026-11-06T03:51:23.412267+00:00"
+      },
+      "cli": [
+        "/opt/agent-cli-report/C-0046/opencode",
+        "run",
+        "--standalone",
+        "--format",
+        "json",
+        "--model",
+        "shopaikey/gpt-6.1-sol",
+        "Use a local tool to read smoke-marker.txt in the current working directory. Do not modify any file. Reply with only the complete marker found in that file."
+      ],
+      "started_at_utc": "2026-11-06T09:11:24.030259+00:00",
+      "provider_requests": [
+        {
+          "started_at_utc": "2026-11-06T09:11:24.714651+00:00",
+          "request_index": 1,
+          "original_body_sha256": "27f3af30bed45bfdaf3c0db5762a4c7580e4fb306f67dd52544b37725933fa16",
+          "requested_max_output_tokens": null,
+          "model": "gpt-6.1-sol",
+          "tool_names": [],
+          "forwarded_protocol_header_names": [
+            "user-agent"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            "message"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "pacing_wait_seconds": 0.0,
+          "effective_max_output_tokens": 512,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "msg_0235d076f2fdd2b8016aed99d5061c87d09e362126445671b6": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  },
+                  "msg_0235d076f2fdd2b8016aed99d5062c87d08e4982da35b2dbeb": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 58,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 58,
+                    "output_tokens": 0
+                  },
+                  "msg_0235d076f2fdd2b8016aed99deaa8c87d09a3b8920727cd725": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 2,
+                        "output_tokens": 9
+                      }
+                    ],
+                    "input_tokens": 2,
+                    "output_tokens": 9
+                  }
+                },
+                "request_fields": {
+                  "instructions": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 408,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 507,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0
+              },
+              "output_tokens": 9,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 516
+            },
+            "uncached_input_tokens": 507,
+            "components": {
+              "uncached_input_usd": "0.0024336",
+              "cached_input_usd": "0.00",
+              "output_usd": "0.000162"
+            },
+            "estimated_cost_usd": "0.0025956",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 15703,
+          "finished_at_utc": "2026-11-06T09:11:58.843218+00:00"
+        },
+        {
+          "started_at_utc": "2026-11-06T09:12:28.845189+00:00",
+          "request_index": 2,
+          "original_body_sha256": "74acdbef70991810aaf8b0b785829ea39207c0db9ce19002b0798a9758984258",
+          "requested_max_output_tokens": 512,
+          "model": "gpt-6.1-sol",
+          "tool_names": [
+            "glob",
+            "grep",
+            "patch",
+            "question",
+            "read",
+            "shell",
+            "skill",
+            "subagent",
+            "webfetch",
+            "websearch",
+            "execute"
+          ],
+          "forwarded_protocol_header_names": [
+            "user-agent"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            "message"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "pacing_wait_seconds": 30.00011,
+          "effective_max_output_tokens": 512,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "fc_08e4e615d9fb2ec0016aed9a16c4f087d09ebb9424a80442f3": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 0,
+                    "output_tokens": 22
+                  },
+                  "msg_08e4e615d9fb2ec0016aed9a0c40fc87d0ac7811bccdecef0f": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  },
+                  "msg_08e4e615d9fb2ec0016aed9a0c410c87d08d640afc5302456b": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 37,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 37,
+                    "output_tokens": 0
+                  },
+                  "rs_08e4e615d9fb2ec0016aed9a15db8c87d0a6fb4a29b8b176fc": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 2,
+                    "output_tokens": 13
+                  }
+                },
+                "request_fields": {
+                  "instructions": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 2273,
+                    "output_tokens": 0
+                  },
+                  "tools": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 2220,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 4571,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0
+              },
+              "output_tokens": 35,
+              "output_tokens_details": {
+                "reasoning_tokens": 13
+              },
+              "total_tokens": 4606
+            },
+            "uncached_input_tokens": 4571,
+            "components": {
+              "uncached_input_usd": "0.0219408",
+              "cached_input_usd": "0.00",
+              "output_usd": "0.00063"
+            },
+            "estimated_cost_usd": "0.0225708",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 86140,
+          "finished_at_utc": "2026-11-06T09:12:55.486225+00:00"
+        },
+        {
+          "started_at_utc": "2026-11-06T09:13:25.487652+00:00",
+          "request_index": 3,
+          "original_body_sha256": "166f403625639579f50fb886f714c7a7b3fdc5a53ae5b8007ab78db09c1e7a5b",
+          "requested_max_output_tokens": 512,
+          "model": "gpt-6.1-sol",
+          "tool_names": [
+            "glob",
+            "grep",
+            "patch",
+            "question",
+            "read",
+            "shell",
+            "skill",
+            "subagent",
+            "webfetch",
+            "websearch",
+            "execute"
+          ],
+          "forwarded_protocol_header_names": [
+            "user-agent"
+          ],
+          "responses_lite": null,
+          "input_types": [
+            "message",
+            "reasoning",
+            "function_call",
+            "function_call_output"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {},
+          "min_interval_seconds": 30,
+          "pacing_wait_seconds": 29.981383,
+          "effective_max_output_tokens": 512,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "fc_08e4e615d9fb2ec0016aed9a16c4f087d09ebb9424a80442f3": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 22,
+                    "output_tokens": 0
+                  },
+                  "fc_08e4e615d9fb2ec0016aed9a3dc0ac87d09951c029e8a92ba4": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 35,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 35,
+                    "output_tokens": 0
+                  },
+                  "msg_08e4e615d9fb2ec0016aed9a3dc3a887d08e86ef91b59de514": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 39,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  },
+                  "msg_08e4e615d9fb2ec0016aed9a3dc3bc87d09797b24d64e9ea53": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 37,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 37,
+                    "output_tokens": 0
+                  },
+                  "msg_08e4e615d9fb2ec0016aed9a43c2c087d0b85f9b1a746764c9": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 2,
+                        "output_tokens": 17
+                      }
+                    ],
+                    "input_tokens": 2,
+                    "output_tokens": 17
+                  }
+                },
+                "request_fields": {
+                  "instructions": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 2260,
+                    "input_tokens": 2273,
+                    "output_tokens": 0
+                  },
+                  "tools": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 2220,
+                    "input_tokens": 2220,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 4628,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 4480
+              },
+              "output_tokens": 17,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 4645
+            },
+            "uncached_input_tokens": 148,
+            "components": {
+              "uncached_input_usd": "0.0007104",
+              "cached_input_usd": "0.0010752",
+              "output_usd": "0.000306"
+            },
+            "estimated_cost_usd": "0.0020916",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 82942,
+          "finished_at_utc": "2026-11-06T09:13:40.248689+00:00"
+        }
+      ],
+      "supervisor_host_pid": 148612,
+      "timed_out": false,
+      "exit_code": 0,
+      "duration_ms": 137036,
+      "finished_at_utc": "2026-11-06T09:13:41.066325+00:00",
+      "checks": {
+        "json_event_count": 6,
+        "successful_local_read_observed": true,
+        "final_exact_marker": true,
+        "cli_error_event_observed": false,
+        "final_text": "SMOKE_LOCAL_READ_7c28e36bd41a",
+        "successful_read_events": [
+          {
+            "type": "tool_use",
+            "timestamp": 1793956375056,
+            "sessionID": "ses_e4fdf7844ffeNgi5CU8gZZDInk",
+            "part": {
+              "partID": "prt_1b021e8f3001cbzAI8gmZ0JJFM",
+              "sessionID": "ses_e4fdf7844ffeNgi5CU8gZZDInk",
+              "messageID": "msg_1b020892a001w4uxkISFPJqMju",
+              "type": "tool",
+              "id": "call_rCG8aSHA3ReSICFvWtAG9zlx",
+              "tool": "read",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "path": "smoke-marker.txt"
+                },
+                "output": "Read file smoke-marker.txt, lines 1-1\n1: SMOKE_LOCAL_READ_7c28e36bd41a",
+                "title": "read",
+                "metadata": {
+                  "metadata": {
+                    "truncated": false
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Read file smoke-marker.txt, lines 1-1\n1: SMOKE_LOCAL_READ_7c28e36bd41a"
+                    }
+                  ],
+                  "providerCall": {
+                    "executed": false,
+                    "state": {
+                      "itemId": "fc_08e4e615d9fb2ec0016aed9a16c4f087d09ebb9424a80442f3"
+                    }
+                  },
+                  "providerResult": {
+                    "executed": false
+                  },
+                  "rawInput": "{\"path\":\"smoke-marker.txt\"}"
+                },
+                "time": {
+                  "start": 1793956374771,
+                  "end": 1793956375056
+                }
+              }
+            }
+          }
+        ],
+        "fixture_unchanged": true,
+        "isolated_network": true,
+        "real_home_hidden": true,
+        "provider_completed": true,
+        "all_provider_requests_completed": true
+      },
+      "isolation": {
+        "net_namespace": "net:[4026533419]",
+        "cwd": "/tmp/opencode/agent-cli-report/smoke/C-0046/project",
+        "real_home_hidden": true,
+        "provider_key_absent": true
+      },
+      "status": "pass",
+      "failure_layer": null
+    },
+    {
+      "run_id": "MODEL-SMOKE-43",
+      "spec": {
+        "tool": "codex",
+        "version": "0.167.0",
+        "config_id": "C-0047",
+        "repository": "openai/codex",
+        "tag": "rust-v0.167.0",
+        "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+        "asset": "codex-package-x86_64-unknown-linux-musl.tar.gz",
+        "size": 200178910,
+        "sha256": "3bbf75e83de6b58aed28f2cf6e33ad423ec31fd4700a1457b94be557ea5a7c6e",
+        "binary_names": [
+          "codex",
+          "codex-x86_64-unknown-linux-musl"
+        ],
+        "started_at_utc": "2026-11-06T03:49:40.826312+00:00",
+        "status": "prepared_not_executed",
+        "release_api": "https://api.github.com/repos/openai/codex/releases/tags/rust-v0.167.0",
+        "release_url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
+        "asset_url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-x86_64-unknown-linux-musl.tar.gz",
+        "archive_sha256_verified": "3bbf75e83de6b58aed28f2cf6e33ad423ec31fd4700a1457b94be557ea5a7c6e",
+        "archive_members": [
+          {
+            "name": "bin",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "bin/codex",
+            "size": 320575976,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "bin/codex-code-mode-host",
+            "size": 79209744,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "bin/codex-exec-server",
+            "size": 81940392,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-package.json",
+            "size": 246,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-path",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "codex-path/rg",
+            "size": 5408904,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/bwrap",
+            "size": 529776,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/NOTICE.md",
+            "size": 2403,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/bin",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/bin/codex-voice-host",
+            "size": 40487744,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0/libgstapp.so",
+            "size": 6488,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0/libgstaudioconvert.so",
+            "size": 41040,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0/libgstaudioresample.so",
+            "size": 35264,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0/libgstcoreelements.so",
+            "size": 479848,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0/libgstopus.so",
+            "size": 73464,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0/libgstrtp.so",
+            "size": 757800,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/gstreamer-1.0/libgstrtpmanager.so",
+            "size": 564072,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libffi.so.8",
+            "size": 63096,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgio-2.0.so.0",
+            "size": 2338512,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libglib-2.0.so.0",
+            "size": 1521616,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgmodule-2.0.so.0",
+            "size": 15720,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgobject-2.0.so.0",
+            "size": 454720,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstallocators-1.0.so.0",
+            "size": 30416,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstapp-1.0.so.0",
+            "size": 106144,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstaudio-1.0.so.0",
+            "size": 636544,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstbase-1.0.so.0",
+            "size": 573072,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstnet-1.0.so.0",
+            "size": 74192,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstpbutils-1.0.so.0",
+            "size": 321880,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstreamer-1.0.so.0",
+            "size": 1582088,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstrtp-1.0.so.0",
+            "size": 211744,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgsttag-1.0.so.0",
+            "size": 273976,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libgstvideo-1.0.so.0",
+            "size": 1004720,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libintl.so.8",
+            "size": 6304,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libopus.so.0",
+            "size": 565744,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libpcre2-8.so.0",
+            "size": 442424,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/lib/libz.so.1",
+            "size": 109296,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses",
+            "size": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses/LGPL-2.1.txt",
+            "size": 26431,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses/Opus.txt",
+            "size": 1945,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses/PCRE2.md",
+            "size": 4011,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses/libffi.txt",
+            "size": 1132,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses/proxy-libintl.txt",
+            "size": 25292,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses/sljit.txt",
+            "size": 1444,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/licenses/zlib.txt",
+            "size": 1002,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/manifest.json",
+            "size": 4768,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/runtime.json",
+            "size": 13941,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "codex-resources/voice/sources.json",
+            "size": 4911,
+            "type": "0",
+            "linkname": ""
+          }
+        ],
+        "binary": "/home/tts/Project/agent-cli-report/.local/binaries/codex-0.167.0/payload/bin/codex",
+        "binary_sha256": "cdcb45aaa01d0f14e298985e09465aebccd47f64ecd298aea44814af7b62bbda",
+        "payload": "/home/tts/Project/agent-cli-report/.local/binaries/codex-0.167.0/payload",
+        "runtime_root": "/tmp/opencode/agent-cli-report/smoke/C-0047",
+        "finished_at_utc": "2026-11-06T03:52:54.962622+00:00"
+      },
+      "cli": [
+        "/opt/agent-cli-report/C-0047/bin/codex",
+        "exec",
+        "--json",
+        "--skip-git-repo-check",
+        "Use a local tool to read smoke-marker.txt in the current working directory. Do not modify any file. Reply with only the complete marker found in that file."
+      ],
+      "started_at_utc": "2026-11-06T09:13:41.270481+00:00",
+      "provider_requests": [
+        {
+          "started_at_utc": "2026-11-06T09:13:41.520661+00:00",
+          "request_index": 1,
+          "original_body_sha256": "a5074c3488160cb7b6e14708219cfd0db998421973c4d9089ed1921c79b71a50",
+          "requested_max_output_tokens": null,
+          "model": "gpt-6.1-sol",
+          "tool_names": [],
+          "forwarded_protocol_header_names": [
+            "originator",
+            "session-id",
+            "thread-id",
+            "user-agent",
+            "x-client-request-id",
+            "x-codex-beta-features",
+            "x-codex-turn-metadata",
+            "x-codex-window-id",
+            "x-openai-internal-codex-responses-lite"
+          ],
+          "responses_lite": "true",
+          "input_types": [
+            "additional_tools",
+            "message",
+            "message",
+            "message",
+            "message",
+            "message",
+            "message"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {
+            "reasoning": {
+              "effort": "none",
+              "context": "all_turns"
+            },
+            "text": {
+              "verbosity": "low"
+            }
+          },
+          "min_interval_seconds": 30,
+          "pacing_wait_seconds": 0.0,
+          "effective_max_output_tokens": 512,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "at_01a1b022-9f7d-7342-be29-20e5dfda009b": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 5096,
+                    "input_tokens": 5096,
+                    "output_tokens": 0
+                  },
+                  "ctc_0aff56acdb857854016aed9a5e0c7887d1bf7c2efa67164591": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 2,
+                    "output_tokens": 62
+                  },
+                  "msg_01a1b022-9f7d-7342-be29-20f6ba63836e": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 4216,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 4216,
+                        "input_tokens": 4216,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 4216,
+                    "output_tokens": 0
+                  },
+                  "msg_01a1b022-9f7d-7342-be29-2100a0f801f4": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 714,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 472,
+                        "input_tokens": 472,
+                        "output_tokens": 0
+                      },
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 63,
+                        "input_tokens": 63,
+                        "output_tokens": 0
+                      },
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 179,
+                        "input_tokens": 179,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 714,
+                    "output_tokens": 0
+                  },
+                  "msg_01a1b022-9f7d-7342-be29-211a403f337a": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 534,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 534,
+                        "input_tokens": 534,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 534,
+                    "output_tokens": 0
+                  },
+                  "msg_01a1b022-9f7d-7342-be29-21251d1d6171": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 56,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 56,
+                        "input_tokens": 56,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 56,
+                    "output_tokens": 0
+                  },
+                  "msg_01a1b022-9f7d-7342-be29-2137047dc644": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 8,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 8,
+                        "input_tokens": 134,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 134,
+                    "output_tokens": 0
+                  },
+                  "msg_01a1b022-9f85-7d71-8020-4189412e070a": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 36,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 36,
+                    "output_tokens": 0
+                  }
+                }
+              },
+              "input_tokens": 10788,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 10624
+              },
+              "output_tokens": 62,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 10850
+            },
+            "uncached_input_tokens": 164,
+            "components": {
+              "uncached_input_usd": "0.0007872",
+              "cached_input_usd": "0.00254976",
+              "output_usd": "0.001116"
+            },
+            "estimated_cost_usd": "0.00445296",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 97278,
+          "finished_at_utc": "2026-11-06T09:14:07.591518+00:00"
+        },
+        {
+          "started_at_utc": "2026-11-06T09:14:37.593807+00:00",
+          "request_index": 2,
+          "original_body_sha256": "f56d117454450f26a8e435fbccc5bd42cca223dfe99013ce2ff8c030cf24e11b",
+          "requested_max_output_tokens": null,
+          "model": "gpt-6.1-sol",
+          "tool_names": [],
+          "forwarded_protocol_header_names": [
+            "originator",
+            "session-id",
+            "thread-id",
+            "user-agent",
+            "x-client-request-id",
+            "x-codex-beta-features",
+            "x-codex-turn-metadata",
+            "x-codex-window-id",
+            "x-openai-internal-codex-responses-lite"
+          ],
+          "responses_lite": "true",
+          "input_types": [
+            "additional_tools",
+            "message",
+            "message",
+            "message",
+            "message",
+            "message",
+            "message",
+            "custom_tool_call",
+            "custom_tool_call_output"
+          ],
+          "previous_response_id_present": false,
+          "generation_settings": {
+            "reasoning": {
+              "effort": "none",
+              "context": "all_turns"
+            },
+            "text": {
+              "verbosity": "low"
+            }
+          },
+          "min_interval_seconds": 30,
+          "pacing_wait_seconds": 29.984628,
+          "effective_max_output_tokens": 512,
+          "http_status": 200,
+          "response_protocol_header_names": [],
+          "provider_request_id": null,
+          "terminal_type": "response.completed",
+          "response_model": "gpt-6.1-sol",
+          "cost": {
+            "usage": {
+              "attribution": {
+                "items": {
+                  "at_01a1b022-9f7d-7342-be29-20e5dfda009b": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 5096,
+                    "input_tokens": 5096,
+                    "output_tokens": 0
+                  },
+                  "ctc_0aff56acdb857854016aed9a5e0c7887d1bf7c2efa67164591": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 64,
+                    "output_tokens": 0
+                  },
+                  "ctco_01a1b023-056c-75c3-bcde-d7045d397e8c": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 20,
+                        "output_tokens": 0
+                      },
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 15,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 35,
+                    "output_tokens": 0
+                  },
+                  "msg_01a1b022-9f7d-7342-be29-20f6ba63836e": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 4216,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 4216,
+                        "input_tokens": 4216,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 4216,
+                    "output_tokens": 0
+                  },
+                  "msg_01a1b022-9f7d-7342-be29-2100a0f801f4": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 714,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 472,
+                        "input_tokens": 472,
+                        "output_tokens": 0
+                      },
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 63,
+                        "input_tokens": 63,
+                        "output_tokens": 0
+                      },
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 179,
+                        "input_tokens": 179,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 714,
+                    "output_tokens": 0
+                  },
+                  "msg_01a1b022-9f7d-7342-be29-211a403f337a": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 534,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 534,
+                        "input_tokens": 534,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 534,
+                    "output_tokens": 0
+                  },
+                  "msg_01a1b022-9f7d-7342-be29-21251d1d6171": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 56,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 56,
+                        "input_tokens": 56,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 56,
+                    "output_tokens": 0
+                  },
+                  "msg_01a1b022-9f7d-7342-be29-2137047dc644": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 8,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 8,
+                        "input_tokens": 134,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 134,
+                    "output_tokens": 0
+                  },
+                  "msg_01a1b022-9f85-7d71-8020-4189412e070a": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 36,
+                        "output_tokens": 0
+                      }
+                    ],
+                    "input_tokens": 36,
+                    "output_tokens": 0
+                  },
+                  "msg_0aff56acdb857854016aed9a910cac87d189477eabe057aa2d": {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "content": [
+                      {
+                        "cache_write_tokens": 0,
+                        "cached_tokens": 0,
+                        "input_tokens": 2,
+                        "output_tokens": 17
+                      }
+                    ],
+                    "input_tokens": 2,
+                    "output_tokens": 17
+                  }
+                }
+              },
+              "input_tokens": 10887,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 10624
+              },
+              "output_tokens": 17,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 10904
+            },
+            "uncached_input_tokens": 263,
+            "components": {
+              "uncached_input_usd": "0.0012624",
+              "cached_input_usd": "0.00254976",
+              "output_usd": "0.000306"
+            },
+            "estimated_cost_usd": "0.00411816",
+            "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+          },
+          "captured_response_bytes": 88390,
+          "finished_at_utc": "2026-11-06T09:14:57.731375+00:00"
+        }
+      ],
+      "supervisor_host_pid": 149271,
+      "timed_out": false,
+      "exit_code": 0,
+      "duration_ms": 82424,
+      "finished_at_utc": "2026-11-06T09:15:03.694298+00:00",
+      "checks": {
+        "json_event_count": 6,
+        "successful_local_read_observed": true,
+        "final_exact_marker": true,
+        "cli_error_event_observed": false,
+        "final_text": "SMOKE_LOCAL_READ_7c28e36bd41a",
+        "successful_read_events": [
+          {
+            "type": "item.completed",
+            "item": {
+              "id": "item_0",
+              "type": "command_execution",
+              "command": "/usr/bin/bash -lc 'cat smoke-marker.txt'",
+              "aggregated_output": "SMOKE_LOCAL_READ_7c28e36bd41a\n",
+              "exit_code": 0,
+              "status": "completed"
+            }
+          }
+        ],
+        "fixture_unchanged": true,
+        "isolated_network": true,
+        "real_home_hidden": true,
+        "provider_completed": true,
+        "all_provider_requests_completed": true
+      },
+      "isolation": {
+        "net_namespace": "net:[4026533419]",
+        "cwd": "/tmp/opencode/agent-cli-report/smoke/C-0047/project",
+        "real_home_hidden": true,
+        "provider_key_absent": true
+      },
+      "status": "pass",
+      "failure_layer": null
+    }
+  ],
+  "finished_at_utc": "2026-11-06T09:15:03.700834+00:00",
+  "estimated_total_usd": "0.09173616",
+  "known_usage_estimated_cost_usd": "0.09173616",
+  "all_planned_runs_completed": true,
+  "measured_charge_usd": null
+}

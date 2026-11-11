@@ -1,0 +1,43 @@
+{
+  "status": "pass",
+  "scope": "Google-direct offline preparation only; no generation/catalog/network calls or actual key content reads",
+  "selected_model": "gemini-3.8-flash",
+  "provider": "https://generativelanguage.googleapis.com/v1beta/openai/",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+  "credential_metadata": {
+    "regular_owner_file": true,
+    "permissions_observed_before_fix": "0664",
+    "permissions_after_fix": "0600",
+    "content_read": false
+  },
+  "offline_tests_passed": 58,
+  "native4cli_and_google_runtime": "unverified",
+  "google_generation_requests": 0,
+  "google_catalog_requests": 0,
+  "approval_template_authorized": false,
+  "rates": null,
+  "prior_raw_retention": {
+    "CONTINUE43-REVIEW-20261110-01": "all raw hashes match",
+    "GEMINI-SMOKE5-REVIEW-20261110-01": "all raw hashes match"
+  },
+  "sol_frozen_pilot": "PASS: frozen outputs, ledger, review, fixture/dependency/binary and source hashes; offline only\n",
+  "registry_unchanged": [
+    "R-0222",
+    "C-0323"
+  ],
+  "workspace_snapshots_sha256": {
+    "demos/google_gemini_smoke5.py": "0c574f9fab0057282e92d9162a96ff22cf2407a6a1e7a1eb0d481c618fdaef91",
+    "demos/test_google_gemini_smoke5.py": "b3977105d69a288942a8f80bbb9925e45bfe8023ac6710c1c3e78a1ebea1ab3d",
+    "demos/GOOGLE_GEMINI.md": "aa9ee16abe1c4b5bd71f3e9685f6e08fb12ed3e4037b7d8148d84b83594aac2d",
+    "demos/provider_probe.py": "92507bfc713c543d8f056523ff115e35bfb42f92683b1aa40cb6df65aec9f5c8",
+    "research/model-profiles/google-gemini-3.8-flash.json": "2eb07b3a7f49f0bb6dad7fad1dbab394f1a41aab19be4d5dbf1ad9b2528234a1",
+    "research/experiment-state.json": "cb191bc55658a837e504e0fa4f3429b743729c6a61c0b3c820ac2d0a5955dafd",
+    "PLAN.md": "6b1b5b8d174e8b18416cc726d3d6cecdab807e4d8e790a6b36cd7890220d0ec0",
+    "README.md": "db09547c8ef85731a8c2e9082ee8c9f04f8f2c767dc400b19e70b25d01d2c6e7",
+    "REPORT.md": "6fb7a7ac77996784b284811691d4b689774f4faad362fb635baa8600b87bcb1f",
+    "demos/README.md": "ed32f2dc791456ec54856181e59696f4485b65f322b525810606c13bcab10c59",
+    "demos/artifacts/GOOGLE-GEMINI-PREP-20261110-01/plan.json": "8e979dde0c533d6b5cba3dad7a9d29669ef6ce417146ed9b985808adf75e54fe",
+    "demos/artifacts/GOOGLE-GEMINI-PREP-20261110-01/approval-template.json": "3a0440f8f006ea61b511ec4bb8691358c6cde3e82f6540703baa89c5e2631aae"
+  },
+  "publication_privacy_review": "not full publication audit; key file excluded from snapshots"
+}

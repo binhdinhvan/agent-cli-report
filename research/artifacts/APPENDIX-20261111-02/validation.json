@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "revision": 2,
+  "pages": 3,
+  "pdf_sha256": "6092607e984da3359b0320914f464228a59be17a3154081496d90fa0d5bbeda4",
+  "html_sha256": "a290ae500fe55cdd9bc827959ebacaba9f613729cde0dc65da1fc64a90d3b1cf",
+  "raw_input_hashes_unchanged": 58,
+  "original_images_unchanged": true,
+  "verification": "shared-service box values/checks read from UI05 raw; raw status not modified",
+  "plugin_labels": "separate Before port and After port",
+  "benchmark_metrics_unchanged": true,
+  "benchmark_page_preview_pixel_identical_to_revision1": true,
+  "layout_review": "pages A and B visually reviewed; page C identical to previous preview",
+  "render_isolation": "fresh HOME/profile/tmp; bwrap network and PID namespaces; read-only root",
+  "limitations": "no new screenshots/native execution; no published repository URL; no artifact hyperlinks fabricated; no main PDF merge"
+}

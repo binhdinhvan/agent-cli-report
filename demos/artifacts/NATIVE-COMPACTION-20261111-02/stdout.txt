@@ -1,0 +1,1 @@
+{"status":"pass","checks":{"subscribed_before_prompt":true,"native_compaction_requested_fixture_summary":true,"post_compaction_input_uses_summary":true}}

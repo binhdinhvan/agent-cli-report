@@ -1,0 +1,79 @@
+{
+  "revision": "suite48-draft-r1",
+  "status": "draft_not_approved_no_inference",
+  "selected_design": "4 tasks x4 CLIs x3 repetitions",
+  "planned_slots": 48,
+  "run_ids_reserved": false,
+  "paid_runs_authorized": false,
+  "fixture_acceptance_ready": false,
+  "protocol_frozen": false,
+  "order_algorithm": "SHA-256-sort seed|tasks-N|id and seed|tools-N|id; rotate tool permutation by task block offset0..3 each round",
+  "order_seed": "agent-cli-report-suite48-draft-r1-20261109",
+  "cache_policy": "uncontrolled, including repetitions; sessions/workspaces fresh",
+  "position_balance": "each CLI appears3times in each position across12blocks; per-task balance not exact with3reps",
+  "estimate": {
+    "source": "benchmark/artifacts/PILOT-FREEZE-20261109-01/summary.json",
+    "source_run_ids": [
+      "R-0035",
+      "R-0036",
+      "R-0037",
+      "R-0038"
+    ],
+    "source_cohort_cost_usd": "0.41671632",
+    "observed_mean_cost_per_run_usd": "0.10417908",
+    "method": "12 runs per CLI times its single observed P-02 cost; algebraically cohort mean x48",
+    "scenarios": [
+      {
+        "multiplier": 1,
+        "estimated_usd": "5.00059584"
+      },
+      {
+        "multiplier": 2,
+        "estimated_usd": "10.00119168"
+      },
+      {
+        "multiplier": 3,
+        "estimated_usd": "15.00178752"
+      }
+    ],
+    "proposed_new_estimate_guard_usd": "16",
+    "budget_approved_usd": null,
+    "measured_benchmark_cost_usd": null,
+    "historical_pilot_known_cost_usd_not_in_new_budget": "1.10640264",
+    "historical_pilot_unpriced_requests": 6,
+    "historical_total_charge_usd": null,
+    "maximum_planned_upstream_requests": 384,
+    "requested_output_token_cap_sum": 786432,
+    "output_only_cost_if_every_request_hits_cap_usd": "14.155776",
+    "input_cost_included_in_output_only_illustration": false,
+    "agent_wall_caps_sum_seconds": 43200,
+    "limitations": [
+      "Scenarios are planning arithmetic, NOT measured benchmark results or confidence bounds",
+      "n=1 priced P-02/tool; new tasks, native settings, cache and provider latency differ",
+      "Includes neither guaranteed upper cost bound nor invoice cap; input cost can exceed proposal",
+      "Unknown historical usage is not extrapolated or set to zero; pilot and new budget separate",
+      "Soft guard may stop before48slots; completion is not guaranteed; no automatic top-up/retry",
+      "12 hours is sum of agent caps, excludes grader/setup/operator pauses, not predicted runtime"
+    ]
+  },
+  "input_sha256": {
+    "benchmark/suite48/manifest.json": "71a5392951294d1b469b5cbc228646d3bc15dd310f05674197856a6cf949a90f",
+    "benchmark/artifacts/PILOT-FREEZE-20261109-01/summary.json": "ace207bcac065b772c7b4b0c1148980a944d3bdeff2f52c3cfbc2d4e4f5675d9",
+    "benchmark/artifacts/PILOT-FREEZE-20261109-01/baseline.json": "f430dfa96d231d1c26728d57e0602147f7caf4a1fd969254677b31d86e5ecba2",
+    "research/provider-pricing.json": "0a779dd0480a5703d7e3668f613f6d2139186dd86ef2aebb55b5ff0e4ec7dd1f",
+    "benchmark/plan48.py": "e664f6d5d9ef2b9771d2096ed3a438c334fc3a7100eb75c564de2226f8f05944",
+    "benchmark/test_plan48.py": "a7f5c6ee276c17106b9eff266a2dedd8efe0792a00f1314dd5b2d71b22e0a94b",
+    "benchmark/PROTOCOL_48_DRAFT.md": "715d7e1b3fc67b1acf876d7177c314e0b42c5b5fd7be44eb1e1c9662c291020d",
+    "benchmark/suite48/README.md": "10501fcb30c150d9cb9fca0ceeefe557f1e90bfe2b6a46ad79abae8e27ed109b",
+    "benchmark/suite48/B-01/prompt.txt": "ad7713320df724e0bede0ea39d42d3263667888a092905f85363be52eef66d04",
+    "benchmark/suite48/B-02/prompt.txt": "ff075958a70ce29228138ae5c3caa0cabc0aa2b0454aa1ae455418b7e53547f6",
+    "benchmark/suite48/B-03/prompt.txt": "b847ebc3353340c78cabeec2dafbd45fc8dd6a6a39a659e922f0628d42c5f554",
+    "benchmark/suite48/B-04/prompt.txt": "a1bc0d06b22a33957c1fa5babab4df289ddbc069e77364f7d823b57f422b5ae3"
+  },
+  "pending": [
+    "fixture/reference/mutant implementation and offline acceptance/seal",
+    "grader and isolated runner integration; readonly/source scope for all four task types",
+    "host resource snapshot before launch; no real session/service",
+    "review/approve budget and final protocol; assign fresh R/C IDs only at launch"
+  ]
+}

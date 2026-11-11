@@ -1,0 +1,21 @@
+{
+  "scope": "native TypeScript Client/private server with scripted SSE, not embedded SDK or model quality",
+  "checks": {
+    "managed_service_authenticated_info": false
+  },
+  "events": [],
+  "requests": [],
+  "cycles": [
+    {
+      "pid": 18,
+      "url": "http://127.0.0.1:44777",
+      "exit": 130
+    }
+  ],
+  "service_health": {
+    "status": 503,
+    "body": "{\"version\":\"2.2.5\",\"pid\":18,\"urls\":[\"http://127.0.0.1:44777\"],\"paths\":{\"tmp\":\"/tmp/opencode/agent-cli-report/smoke/BP48-CL-828d91ecbfdb46b37b6a/tmp/opencode\"}}"
+  },
+  "status": "error",
+  "error": "Error: managed_service_authenticated_info"
+}

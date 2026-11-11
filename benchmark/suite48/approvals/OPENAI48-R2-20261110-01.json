@@ -1,0 +1,13 @@
+{
+  "authorized": true,
+  "scope": "openai-r2-explicit-4smoke-rerun-then48fresh-no-auto-retry",
+  "artifact": "benchmark/suite48/artifacts/OPENAI48-R2-20261110-01",
+  "plan_sha256": "1e473fe3a65b92b0c50bf5d6692bcd7d46e26f739c94d248089f2afc550e992b",
+  "budget_estimate_usd": "16",
+  "prior_unknown_and_upper_estimate_acknowledged": true,
+  "automatic_retries_authorized": false,
+  "approved_by": "user: chạy lại benmark after cache-costr2 fix;4native smoke rerun then48fresh, existing16USDguard/unknownhistoricalcharges retained, noauto topup/retry",
+  "approved_at_utc": "2026-11-10T16:27:15.762724+00:00",
+  "reasoning_effort": "low",
+  "service_tier": "default"
+}

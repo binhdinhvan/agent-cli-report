@@ -1,0 +1,15 @@
+{
+  "task_id": "P-02",
+  "fixture_version": 1,
+  "origin": "self-authored synthetic fixture",
+  "upstream_commit": null,
+  "license": "workspace distribution license not yet selected",
+  "group": "feature",
+  "prompt": "prompt.txt",
+  "agent_workspace": "fixture",
+  "allowed_modified_files": ["scheduler.py"],
+  "public_test": "python3 -B -m unittest -v test_public",
+  "hidden_test": "python3 -B /grader/acceptance.py -v",
+  "grader_timeout_seconds_per_suite": 15,
+  "pilot_protocol": "../../PILOT.md"
+}

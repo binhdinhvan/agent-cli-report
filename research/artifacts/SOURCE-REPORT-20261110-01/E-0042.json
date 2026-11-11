@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0042",
+    "comparison_axis": "api",
+    "tool": "OpenCode v1",
+    "version": "1.19.5",
+    "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+    "claim": "Create session POST /session trả trực tiếp Session.Info",
+    "file": "packages/opencode/src/server/routes/instance/httpapi/groups/session.ts",
+    "line_start": "203",
+    "line_end": "207",
+    "symbol": "SessionApi create",
+    "permalink": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/server/routes/instance/httpapi/groups/session.ts#L203-L207",
+    "evidence_status": "both",
+    "runtime_artifact": "demos/artifacts/OFFLINE-API-20261106-01/opencode-v1/result.json",
+    "limitations": "Chỉ create session rỗng offline; chưa gửi prompt"
+  },
+  "source_sha256": "3fd2ae22b6bbc211adc45011243a42fa869862355ad08c086c591792d8fa91dc",
+  "excerpt": "        HttpApiEndpoint.post(\"create\", SessionPaths.create, {\n          query: WorkspaceRoutingQuery,\n          payload: [HttpApiSchema.NoContent, Session.CreateInput],\n          success: described(Session.Info, \"Successfully created session\"),\n          error: HttpApiError.BadRequest,"
+}

@@ -1,0 +1,66 @@
+{
+  "scope": "offline launch gates; no key/provider read",
+  "tests": [
+    {
+      "suite": "demos/test_environment_profile.py",
+      "exit_code": 0,
+      "log": "test_environment_profile.txt"
+    },
+    {
+      "suite": "benchmark/test_pilot.py",
+      "exit_code": 0,
+      "log": "test_pilot.txt"
+    },
+    {
+      "suite": "demos/test_provider_stop.py",
+      "exit_code": 0,
+      "log": "test_provider_stop.txt"
+    },
+    {
+      "suite": "demos/test_pacing.py",
+      "exit_code": 0,
+      "log": "test_pacing.txt"
+    },
+    {
+      "suite": "demos/test_model_smoke.py",
+      "exit_code": 0,
+      "log": "test_model_smoke.txt"
+    },
+    {
+      "suite": "demos/test_provider_pricing.py",
+      "exit_code": 0,
+      "log": "test_provider_pricing.txt"
+    }
+  ],
+  "tests_passed": 38,
+  "new_group": "search-r2-environment-recheck",
+  "source_run": "R-0019",
+  "source_run_sha256": "be1557f0677c40c3bc0885903723bd417ab6bce9d03dce50aec489c54267013e",
+  "environment_manifest_sha256": "a4ab709b8fd82afc2225c5895ea551333964234d4e28f1ddbaca5699765d8913",
+  "prior_known_usage_estimated_cost_usd": "0.40389912",
+  "prior_unpriced_requests": 2,
+  "remaining_known_estimate_guard_usd": "2.59610088",
+  "fresh_run": "R-0025",
+  "fresh_config": "C-0114",
+  "legacy_raw_unchanged": true,
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "source_sha256": {
+    "demos/model_smoke.py": "ca759a9909c7652dd03660570a3553b68ab9261a3d1ca63ac755f2d9e8834822",
+    "demos/model_smoke_inside.py": "476636ec1d7d029c4b6306831074c7cc83bc0ea71937b19c976613f39fcda29e",
+    "benchmark/pilot.py": "d438a71e68ccf718f230b2ec2489d15652fd4b32e38c08f2d9dc40afff17afe0",
+    "benchmark/test_pilot.py": "06ba3a20a910b1ec44fbe8f0b89140e29302e3f27b391747fb0488c9a245a4df",
+    "research/environment-profiles/search-r2.json": "a4ab709b8fd82afc2225c5895ea551333964234d4e28f1ddbaca5699765d8913",
+    "demos/preflight.py": "38205244a47a9d65568827fd95050408ecccf0e9c59616187fcc48175bc2f95f",
+    "benchmark/PILOT_SEARCH_R2_RECHECK.md": "f4a0ea92ef120c62213449633000d2e5d5d37bbc405d97543a63f0b82c61c0ec",
+    "benchmark/verify_pilot_fixtures.py": "f8a4e20b4bec596a2ef7338184ec96ef8d7e5dd057235c1739e8591d67cad3e0",
+    "research/provider-pricing.json": "0a779dd0480a5703d7e3668f613f6d2139186dd86ef2aebb55b5ff0e4ec7dd1f",
+    "benchmark/pilot_inside.py": "db91620643437070de1cec3eae0b3b25c27a3e09d6265a86fed5a0b9c3ffd29c",
+    "demos/environment_profile.py": "7df32c7e4c1e5042e3fcf1778ee3ffcd9e5505e1ffc551cfec9ea1d1fee4d4f3",
+    "demos/proxy_headers.py": "b3896d199fd807902d8bccb105d1feb1f7755fb00816577c3c0e7949a678048d"
+  }
+}

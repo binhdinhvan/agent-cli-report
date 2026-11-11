@@ -1,0 +1,455 @@
+{
+  "created_at_utc": "2026-11-06T08:54:17.199609+00:00",
+  "scope": "Offline estimate from existing sol diagnostic; no extra provider requests or key reads",
+  "model": "gpt-6.1-sol",
+  "provider": "https://api.shopaikey.com/v1",
+  "source_result": "benchmark/artifacts/MODEL-COMPARE-GPT61-20261106-01/result.json",
+  "source_sha256": "028555fcc59227d727af208f06aefe66e8a5aedf2d97212a0d0d9e3240283173",
+  "pricing_manifest": "research/provider-pricing.json",
+  "pricing_sha256": "0a779dd0480a5703d7e3668f613f6d2139186dd86ef2aebb55b5ff0e4ec7dd1f",
+  "pricing": {
+    "provider_base_url": "https://api.shopaikey.com/v1",
+    "model": "gpt-6.1-sol",
+    "currency": "USD",
+    "unit_tokens": 1000000,
+    "input_uncached": "4.8",
+    "input_cache_read": "0.24",
+    "output": "18",
+    "source": "Giá gpt-6.1-sol do người dùng cung cấp ngày 2026-11-06 sau chuyển đổi",
+    "verification_status": "user-reported; chưa đối soát invoice hoặc dashboard bằng quyền truy cập riêng",
+    "calculation_assumption": "cached_tokens là subset của input_tokens; reasoning đã nằm trong output_tokens khi provider báo như vậy",
+    "formula": "((input_tokens-cached_tokens)*input_uncached + cached_tokens*input_cache_read + output_tokens*output)/unit_tokens",
+    "additional_fees": null,
+    "notes": "Chỉ áp dụng đúng model/provider. Chi phí suy từ usage là estimate, không phải charge đã đối soát. Đủ giá không tự khởi chạy smoke/pilot hoặc nạp tiền."
+  },
+  "estimator_sha256": "d0379fdafaf787bdbf5a3e8fc45798fdf2dbe7b2d53b3681f268448c504fa957",
+  "arithmetic_helper_sha256": "2c9ef821fed00b7443f4fd5419f68cfb9be194a299c3fcabdbbcb26e5a869158",
+  "entries": [
+    {
+      "request_index": 1,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 23644,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 80,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 23724
+      },
+      "uncached_input_tokens": 23644,
+      "components": {
+        "uncached_input_usd": "0.1134912",
+        "cached_input_usd": "0.00",
+        "output_usd": "0.00144"
+      },
+      "estimated_cost_usd": "0.1149312",
+      "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+    },
+    {
+      "request_index": 2,
+      "http_status": 200,
+      "usage": {
+        "attribution": {
+          "items": {
+            "msg_0ef1c725e648d6a7016aed8c9ca29087d28686d46b0776d45a": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "content": [
+                {
+                  "cache_write_tokens": 0,
+                  "cached_tokens": 0,
+                  "input_tokens": 501,
+                  "output_tokens": 0
+                }
+              ],
+              "input_tokens": 501,
+              "output_tokens": 0
+            },
+            "msg_0ef1c725e648d6a7016aed8c9ca2f487d287f136e1c313b322": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "content": [
+                {
+                  "cache_write_tokens": 0,
+                  "cached_tokens": 0,
+                  "input_tokens": 126,
+                  "output_tokens": 0
+                }
+              ],
+              "input_tokens": 126,
+              "output_tokens": 0
+            },
+            "msg_0ef1c725e648d6a7016aed8c6e8cac87d2a9da81c383608963": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "content": [
+                {
+                  "cache_write_tokens": 0,
+                  "cached_tokens": 0,
+                  "input_tokens": 25,
+                  "output_tokens": 0
+                }
+              ],
+              "input_tokens": 25,
+              "output_tokens": 0
+            },
+            "fc_0ef1c725e648d6a7016aed8c6eeb4887d2a2f8cf07017f6515": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "input_tokens": 57,
+              "output_tokens": 0
+            },
+            "fc_0ef1c725e648d6a7016aed8c9ca2dc87d2a412c0ade4fa831e": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "content": [
+                {
+                  "cache_write_tokens": 0,
+                  "cached_tokens": 0,
+                  "input_tokens": 151,
+                  "output_tokens": 0
+                }
+              ],
+              "input_tokens": 151,
+              "output_tokens": 0
+            },
+            "fc_0ef1c725e648d6a7016aed8ca88fd087d2bea72c80d1cf47df": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "input_tokens": 2,
+              "output_tokens": 60
+            },
+            "fc_0ef1c725e648d6a7016aed8ca88fe487d2a9a348a60aae216d": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "input_tokens": 0,
+              "output_tokens": 41
+            }
+          },
+          "request_fields": {
+            "tools": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "input_tokens": 479,
+              "output_tokens": 0
+            }
+          }
+        },
+        "input_tokens": 1341,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 101,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1442
+      },
+      "uncached_input_tokens": 1341,
+      "components": {
+        "uncached_input_usd": "0.0064368",
+        "cached_input_usd": "0.00",
+        "output_usd": "0.001818"
+      },
+      "estimated_cost_usd": "0.0082548",
+      "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+    },
+    {
+      "request_index": 3,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 24175,
+        "input_tokens_details": {
+          "cached_tokens": 23641
+        },
+        "output_tokens": 485,
+        "output_tokens_details": {
+          "reasoning_tokens": 85
+        },
+        "total_tokens": 24660
+      },
+      "uncached_input_tokens": 534,
+      "components": {
+        "uncached_input_usd": "0.0025632",
+        "cached_input_usd": "0.00567384",
+        "output_usd": "0.00873"
+      },
+      "estimated_cost_usd": "0.01696704",
+      "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+    },
+    {
+      "request_index": 4,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 24699,
+        "input_tokens_details": {
+          "cached_tokens": 24172
+        },
+        "output_tokens": 508,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 25207
+      },
+      "uncached_input_tokens": 527,
+      "components": {
+        "uncached_input_usd": "0.0025296",
+        "cached_input_usd": "0.00580128",
+        "output_usd": "0.009144"
+      },
+      "estimated_cost_usd": "0.01747488",
+      "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+    },
+    {
+      "request_index": 5,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 25347,
+        "input_tokens_details": {
+          "cached_tokens": 24696
+        },
+        "output_tokens": 506,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 25853
+      },
+      "uncached_input_tokens": 651,
+      "components": {
+        "uncached_input_usd": "0.0031248",
+        "cached_input_usd": "0.00592704",
+        "output_usd": "0.009108"
+      },
+      "estimated_cost_usd": "0.01815984",
+      "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+    },
+    {
+      "request_index": 6,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 7738,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 113,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7851,
+        "attribution": {
+          "items": {
+            "fc_0ef1c725e648d6a7016aed8c6eeb4887d2a2f8cf07017f6515": {
+              "input_tokens": 57,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            "fc_0ef1c725e648d6a7016aed8ca88fd087d2bea72c80d1cf47df": {
+              "input_tokens": 62,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            "fc_0ef1c725e648d6a7016aed8ca88fe487d2a9a348a60aae216d": {
+              "input_tokens": 41,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            "fc_0ef1c725e648d6a7016aed8ccebc1c87d2bcb8a0fa6e2f94ca": {
+              "input_tokens": 400,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            "fc_0ef1c725e648d6a7016aed8cf5275487d2900f3d30df56b855": {
+              "input_tokens": 510,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            "fc_0ef1c725e648d6a7016aed8d1aba6087d2952dd86d0e5d0688": {
+              "input_tokens": 508,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            "fc_0ef1c725e648d6a7016aed8d4247f887d297a2d5c9f0042c8e": {
+              "input_tokens": 112,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0,
+              "content": [
+                {
+                  "input_tokens": 112,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 0
+                }
+              ]
+            },
+            "fc_0ef1c725e648d6a7016aed8d4247f887d2990201a8431c0764": {
+              "input_tokens": 37,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0,
+              "content": [
+                {
+                  "input_tokens": 37,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 0
+                }
+              ]
+            },
+            "fc_0ef1c725e648d6a7016aed8d4247f887d29d488f78a0cbcf14": {
+              "input_tokens": 43,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0,
+              "content": [
+                {
+                  "input_tokens": 43,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 0
+                }
+              ]
+            },
+            "fc_0ef1c725e648d6a7016aed8d4247f887d2a08106032268ad26": {
+              "input_tokens": 151,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0,
+              "content": [
+                {
+                  "input_tokens": 151,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 0
+                }
+              ]
+            },
+            "fc_0ef1c725e648d6a7016aed8d4247f887d2ada7e23173e2f28b": {
+              "input_tokens": 138,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0,
+              "content": [
+                {
+                  "input_tokens": 138,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 0
+                }
+              ]
+            },
+            "fc_0ef1c725e648d6a7016aed8d4247f887d2b900e135bacaa6e5": {
+              "input_tokens": 83,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0,
+              "content": [
+                {
+                  "input_tokens": 83,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 0
+                }
+              ]
+            },
+            "msg_0ef1c725e648d6a7016aed8c6e8cac87d2a9da81c383608963": {
+              "input_tokens": 25,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0,
+              "content": [
+                {
+                  "input_tokens": 25,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 0
+                }
+              ]
+            },
+            "msg_0ef1c725e648d6a7016aed8d4247f887d2bcdbc62a3ec42f8c": {
+              "input_tokens": 126,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0,
+              "content": [
+                {
+                  "input_tokens": 126,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 0
+                }
+              ]
+            },
+            "msg_0ef1c725e648d6a7016aed8d447e4887d28aa967b28e3cc2a5": {
+              "input_tokens": 2,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 113,
+              "content": [
+                {
+                  "input_tokens": 2,
+                  "cached_tokens": 0,
+                  "cache_write_tokens": 0,
+                  "output_tokens": 113
+                }
+              ]
+            },
+            "rs_0ef1c725e648d6a7016aed8d4247f887d29d35f133f9aa9d4d": {
+              "input_tokens": 87,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          },
+          "request_fields": {
+            "instructions": {
+              "input_tokens": 4877,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            "tools": {
+              "input_tokens": 479,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          }
+        }
+      },
+      "uncached_input_tokens": 7738,
+      "components": {
+        "uncached_input_usd": "0.0371424",
+        "cached_input_usd": "0.00",
+        "output_usd": "0.002034"
+      },
+      "estimated_cost_usd": "0.0391764",
+      "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+    }
+  ],
+  "all_entries_estimable": true,
+  "usage_totals": {
+    "input_tokens": 106944,
+    "cached_input_tokens": 72509,
+    "uncached_input_tokens": 34435,
+    "output_tokens": 1793
+  },
+  "estimated_total_usd": "0.21496416",
+  "measured_charge_usd": null,
+  "limitations": [
+    "user-reported; chưa đối soát invoice hoặc dashboard bằng quyền truy cập riêng",
+    "cached_tokens là subset của input_tokens; reasoning đã nằm trong output_tokens khi provider báo như vậy",
+    "No account balance, surcharges or billing token accounting independently verified"
+  ]
+}

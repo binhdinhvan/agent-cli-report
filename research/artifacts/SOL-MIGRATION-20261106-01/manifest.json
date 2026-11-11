@@ -1,0 +1,435 @@
+{
+  "scope": "User-authorized removal of luna result artifacts and isolated experiment runtimes; no credential/binary/source repos/session harness history removal",
+  "preserved_sol_artifact": "benchmark/artifacts/MODEL-COMPARE-GPT61-20261106-01",
+  "preserved_sol_files_sha256": {
+    "run.py": "78221f1f91cd337941cc289080e627104c90427ff31f050ea55f7a623a9bfae7",
+    "stdout.jsonl": "b3c0401ebc4cc5e9146eecebb85514f66e9505eab25fee5321f6b38d0d4a8077",
+    "result.json": "028555fcc59227d727af208f06aefe66e8a5aedf2d97212a0d0d9e3240283173",
+    "config.json": "6e719b648e2736191ad4a532200059be6734029e42f2d8f642b34186c87144a3",
+    "protocol.json": "4725dd76272b3356b51f2e2b8afc07a0bc4cf033aadedb0cf44828abb95249f4",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "grader/grading.json": "3066fcd8b035f377fd0f09964dba96ecb984f2bfabb5a3b45e6f2b69e78bd10e",
+    "grader/patch.diff": "33a8a8717db16c61c5d796b4b08df5b63e4633b8b2124c74bf61b50c85a66253",
+    "grader/snapshot/intervals.py": "631bb2c338d780d3ea1a0c4a29b9486d478fc9a8e035ad58e73403d15dc99a50",
+    "grader/snapshot/test_public.py": "8eb40ed38a8653c191c77eefa3a269efbd90a123775a9adb12d24cdd062661d6"
+  },
+  "delete_targets": [
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/MODEL-SMOKE-20261106-06",
+      "kind": "directory",
+      "file_count": 4,
+      "bytes": 22683,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/PROVIDER-COST-20261106-02",
+      "kind": "directory",
+      "file_count": 1,
+      "bytes": 4560,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/PROVIDER-STREAM-20261106-01",
+      "kind": "directory",
+      "file_count": 1,
+      "bytes": 62925,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/PROVIDER-RESPONSES-20261106-01",
+      "kind": "directory",
+      "file_count": 1,
+      "bytes": 49529,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/MODEL-SMOKE-20261106-07-EVAL-02",
+      "kind": "directory",
+      "file_count": 1,
+      "bytes": 1681,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/MODEL-SMOKE-20261106-02",
+      "kind": "directory",
+      "file_count": 6,
+      "bytes": 31607,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/MODEL-SMOKE-20261106-05",
+      "kind": "directory",
+      "file_count": 4,
+      "bytes": 20925,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/PROVIDER-COST-20261106-01",
+      "kind": "directory",
+      "file_count": 1,
+      "bytes": 4560,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/MODEL-SMOKE-20261106-04",
+      "kind": "directory",
+      "file_count": 4,
+      "bytes": 20882,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/CODEX-TRACE-OFFLINE-20261106-03",
+      "kind": "directory",
+      "file_count": 5,
+      "bytes": 137665,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/CODEX-TRACE-OFFLINE-20261106-02",
+      "kind": "directory",
+      "file_count": 5,
+      "bytes": 136649,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/MODEL-SMOKE-20261106-03",
+      "kind": "directory",
+      "file_count": 4,
+      "bytes": 13920,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/PROVIDER-CATALOG-20261106-01",
+      "kind": "directory",
+      "file_count": 1,
+      "bytes": 1350,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/MODEL-SMOKE-20261106-07",
+      "kind": "directory",
+      "file_count": 4,
+      "bytes": 30839,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/CODEX-TRACE-OFFLINE-20261106-01",
+      "kind": "directory",
+      "file_count": 4,
+      "bytes": 135044,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/demos/artifacts/MODEL-SMOKE-20261106-01",
+      "kind": "directory",
+      "file_count": 10,
+      "bytes": 135685,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/benchmark/artifacts/PILOT-PACED-20261106-01-SUMMARY-01",
+      "kind": "directory",
+      "file_count": 1,
+      "bytes": 1636,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/benchmark/artifacts/PILOT-20261106-01",
+      "kind": "directory",
+      "file_count": 10,
+      "bytes": 228639,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/benchmark/artifacts/PILOT-LUNA-ABA-20261106-01-SUMMARY-01",
+      "kind": "directory",
+      "file_count": 1,
+      "bytes": 1639,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/benchmark/artifacts/PI-CONTEXT-TRACE-20261106-01",
+      "kind": "directory",
+      "file_count": 1,
+      "bytes": 5289,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/benchmark/artifacts/PILOT-LUNA-ABA-20261106-01",
+      "kind": "directory",
+      "file_count": 10,
+      "bytes": 136077,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/benchmark/artifacts/PILOT-PACED-20261106-02-SUMMARY-01",
+      "kind": "directory",
+      "file_count": 1,
+      "bytes": 2030,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/benchmark/artifacts/PILOT-RETRY-20261106-01-SUMMARY-01",
+      "kind": "directory",
+      "file_count": 1,
+      "bytes": 1453,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/benchmark/artifacts/PILOT-RETRY-20261106-01",
+      "kind": "directory",
+      "file_count": 10,
+      "bytes": 271729,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/benchmark/artifacts/PILOT-PREFLIGHT-20261106-01",
+      "kind": "directory",
+      "file_count": 34,
+      "bytes": 254050,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/benchmark/artifacts/PILOT-PREFLIGHT-20261106-02",
+      "kind": "directory",
+      "file_count": 34,
+      "bytes": 254026,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/benchmark/artifacts/PILOT-PACED-20261106-02",
+      "kind": "directory",
+      "file_count": 10,
+      "bytes": 262278,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/benchmark/artifacts/PILOT-PACED-20261106-01",
+      "kind": "directory",
+      "file_count": 10,
+      "bytes": 135915,
+      "deleted": true
+    },
+    {
+      "path": "/home/tts/Project/agent-cli-report/benchmark/artifacts/PILOT-20261106-01-SUMMARY-01",
+      "kind": "directory",
+      "file_count": 1,
+      "bytes": 1433,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0005",
+      "kind": "directory",
+      "file_count": 11,
+      "bytes": 13654242,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0006",
+      "kind": "directory",
+      "file_count": 9,
+      "bytes": 18885858,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0007",
+      "kind": "directory",
+      "file_count": 7,
+      "bytes": 10152,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0008",
+      "kind": "directory",
+      "file_count": 78,
+      "bytes": 3930980,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0009",
+      "kind": "directory",
+      "file_count": 9,
+      "bytes": 18884677,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0010",
+      "kind": "directory",
+      "file_count": 78,
+      "bytes": 3930445,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0011",
+      "kind": "directory",
+      "file_count": 77,
+      "bytes": 3702028,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0012",
+      "kind": "directory",
+      "file_count": 78,
+      "bytes": 3930767,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0013",
+      "kind": "directory",
+      "file_count": 78,
+      "bytes": 3909842,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0014",
+      "kind": "directory",
+      "file_count": 78,
+      "bytes": 3827637,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0015",
+      "kind": "directory",
+      "file_count": 79,
+      "bytes": 3828464,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0016",
+      "kind": "directory",
+      "file_count": 81,
+      "bytes": 3831359,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0017",
+      "kind": "directory",
+      "file_count": 80,
+      "bytes": 3912595,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0018",
+      "kind": "directory",
+      "file_count": 69,
+      "bytes": 1385488,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0019",
+      "kind": "directory",
+      "file_count": 11,
+      "bytes": 13337,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0020",
+      "kind": "directory",
+      "file_count": 81,
+      "bytes": 3730809,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0021",
+      "kind": "directory",
+      "file_count": 13,
+      "bytes": 18886102,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0022",
+      "kind": "directory",
+      "file_count": 15,
+      "bytes": 13631368,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0023",
+      "kind": "directory",
+      "file_count": 11,
+      "bytes": 24893,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0031",
+      "kind": "directory",
+      "file_count": 11,
+      "bytes": 13337,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0032",
+      "kind": "directory",
+      "file_count": 81,
+      "bytes": 3730809,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0033",
+      "kind": "directory",
+      "file_count": 13,
+      "bytes": 18886103,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0034",
+      "kind": "directory",
+      "file_count": 15,
+      "bytes": 13631388,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0035",
+      "kind": "directory",
+      "file_count": 11,
+      "bytes": 24380,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0036",
+      "kind": "directory",
+      "file_count": 11,
+      "bytes": 28215,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0037",
+      "kind": "directory",
+      "file_count": 11,
+      "bytes": 14691,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0038",
+      "kind": "directory",
+      "file_count": 11,
+      "bytes": 25817,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/C-0040",
+      "kind": "directory",
+      "file_count": 11,
+      "bytes": 14714,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/codex-trace-offline-02-summary.txt",
+      "kind": "file",
+      "file_count": 1,
+      "bytes": 11775,
+      "deleted": true
+    },
+    {
+      "path": "/tmp/opencode/codex-trace-offline-03-summary.txt",
+      "kind": "file",
+      "file_count": 1,
+      "bytes": 12301,
+      "deleted": true
+    }
+  ],
+  "status": "completed",
+  "paid_requests": 0,
+  "deleted_at_utc": "2026-11-06T08:33:10.528525+00:00",
+  "validation_artifact": "validation.json"
+}

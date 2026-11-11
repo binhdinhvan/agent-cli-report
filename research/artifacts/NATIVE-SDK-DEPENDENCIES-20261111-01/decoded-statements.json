@@ -1,0 +1,66 @@
+[
+  {
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "subject": [
+      {
+        "name": "pkg:npm/%40opencode/sdk@2.2.5",
+        "digest": {
+          "sha512": "ba4fcbed73d08360e2cb2ad834fc8ef59fc1b4ceda32128c31f206293fa6fc89a851a6ca12fbeda15e505e3abc3e09273abc52e201c0c508dba1c08a975217cf"
+        }
+      }
+    ],
+    "predicateType": "https://github.com/npm/attestation/tree/main/specs/publish/v0.1",
+    "predicate": {
+      "name": "@opencode/sdk",
+      "version": "2.2.5",
+      "registry": "https://registry.npmjs.org"
+    }
+  },
+  {
+    "_type": "https://in-toto.io/Statement/v1",
+    "subject": [
+      {
+        "name": "pkg:npm/%40opencode/sdk@2.2.5",
+        "digest": {
+          "sha512": "ba4fcbed73d08360e2cb2ad834fc8ef59fc1b4ceda32128c31f206293fa6fc89a851a6ca12fbeda15e505e3abc3e09273abc52e201c0c508dba1c08a975217cf"
+        }
+      }
+    ],
+    "predicateType": "https://slsa.dev/provenance/v1",
+    "predicate": {
+      "buildDefinition": {
+        "buildType": "https://slsa-framework.github.io/github-actions-buildtypes/workflow/v1",
+        "externalParameters": {
+          "workflow": {
+            "ref": "refs/heads/dev",
+            "repository": "https://github.com/anomalyco/opencode",
+            "path": ".github/workflows/release.yml"
+          }
+        },
+        "internalParameters": {
+          "github": {
+            "event_name": "workflow_dispatch",
+            "repository_id": "975734319",
+            "repository_owner_id": "66570915"
+          }
+        },
+        "resolvedDependencies": [
+          {
+            "uri": "git+https://github.com/anomalyco/opencode@refs/heads/dev",
+            "digest": {
+              "gitCommit": "958f965d35ed44d32b018fd55b02a5357a7748fd"
+            }
+          }
+        ]
+      },
+      "runDetails": {
+        "builder": {
+          "id": "https://github.com/actions/runner/github-hosted"
+        },
+        "metadata": {
+          "invocationId": "https://github.com/anomalyco/opencode/actions/runs/41135857908/attempts/1"
+        }
+      }
+    }
+  }
+]

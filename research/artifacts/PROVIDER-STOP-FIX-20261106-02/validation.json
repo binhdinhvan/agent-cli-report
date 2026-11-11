@@ -1,0 +1,44 @@
+{
+  "verified_at_utc": "2026-11-06T09:37:37.936251+00:00",
+  "scope": "offline HTTP mocks, synthetic keys, no provider requests",
+  "provider_requests": 0,
+  "suites": [
+    {
+      "suite": "demos/test_provider_stop.py",
+      "exit_code": 0,
+      "log": "test_provider_stop.txt"
+    },
+    {
+      "suite": "benchmark/test_pilot.py",
+      "exit_code": 0,
+      "log": "test_pilot.txt"
+    },
+    {
+      "suite": "demos/test_pacing.py",
+      "exit_code": 0,
+      "log": "test_pacing.txt"
+    },
+    {
+      "suite": "demos/test_model_smoke.py",
+      "exit_code": 0,
+      "log": "test_model_smoke.txt"
+    },
+    {
+      "suite": "demos/test_provider_pricing.py",
+      "exit_code": 0,
+      "log": "test_provider_pricing.txt"
+    }
+  ],
+  "source_sha256": {
+    "demos/model_smoke.py": "ca759a9909c7652dd03660570a3553b68ab9261a3d1ca63ac755f2d9e8834822",
+    "benchmark/pilot.py": "c53b074d86d80d34002bbc68d2a039533a61cdf3679ca02e379fcb563143ab42",
+    "demos/test_provider_stop.py": "9fea00e33e85d851929b269c19d23b980079244dc26d2a05b3825a7d2176ea83",
+    "benchmark/test_pilot.py": "4e35dd918d107fd7783297477d21c2f80bb152c8dcde5f26ba9a1884962529c3",
+    "demos/test_pacing.py": "2411b54a7f514d939a1a1d2080816bdc791c7ea0942508c9fb8dab60f568e6fd",
+    "demos/test_model_smoke.py": "82b694976334abc815e1010a54cd65b396509ea96b3a50678bac23df76ec9341",
+    "demos/test_provider_pricing.py": "da8796a4c53284ad220b4a50d61e0f550930c2cf85f96ceeded85831732c4cf5"
+  },
+  "old_pilot_raw_and_protocol_unchanged": true,
+  "previous_attempt": "PROVIDER-STOP-FIX-20261106-01 retained: early HTTP rejection raced client body send (BrokenPipe); fixed with bounded drain and 5s timeout",
+  "new_live_run": "not_run"
+}

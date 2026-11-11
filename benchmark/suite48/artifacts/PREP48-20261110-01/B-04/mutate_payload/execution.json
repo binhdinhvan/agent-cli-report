@@ -1,0 +1,19 @@
+{
+  "exit_code": 0,
+  "timed_out": false,
+  "output_limit_exceeded": false,
+  "duration_ms": 65,
+  "stdout": "WITNESS_JSON={\"readonly\": {\"models.py\": true, \"service.py\": true, \"test_public.py\": true}, \"hidden_absent\": true, \"real_home_absent\": true, \"net_namespace\": \"net:[4026533362]\"}\n",
+  "stderr": "",
+  "witness": {
+    "readonly": {
+      "models.py": true,
+      "service.py": true,
+      "test_public.py": true
+    },
+    "hidden_absent": true,
+    "real_home_absent": true,
+    "net_namespace": "net:[4026533362]"
+  },
+  "host_net_namespace": "net:[4026531833]"
+}

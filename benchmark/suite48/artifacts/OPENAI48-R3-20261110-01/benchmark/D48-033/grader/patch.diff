@@ -1,0 +1,85 @@
+--- before/router.py
++++ after/router.py
+@@ -8,26 +8,13 @@
+ """
+ from models import PayloadError
+ import service
++from routing import handlers, validation
+ 
+ 
+ def dispatch(command, payload):
+-    if command not in ("create", "update", "delete"):
+-        raise ValueError("unknown command: " + command)
+-    if not isinstance(payload, dict):
+-        raise PayloadError("payload must be a dictionary")
+-    normalized = {}
+-    if command in ("update", "delete"):
+-        identifier = payload.get("id")
+-        if type(identifier) is not int or identifier <= 0:
+-            raise PayloadError("id must be positive integer")
+-        normalized["id"] = identifier
+-    if command in ("create", "update"):
+-        name = payload.get("name")
+-        if not isinstance(name, str) or not name.strip():
+-            raise PayloadError("name must be nonempty string")
+-        normalized["name"] = name.strip()
++    normalized = validation.validate_payload(command, payload)
+     if command == "create":
+-        return service.create(normalized["name"])
++        return handlers.handle_create(normalized)
+     if command == "update":
+-        return service.update(normalized["id"], normalized["name"])
+-    return service.delete(normalized["id"])
++        return handlers.handle_update(normalized)
++    return handlers.handle_delete(normalized)
+--- before/routing/__init__.py
++++ after/routing/__init__.py
+@@ -0,0 +1 @@
++"""Command validation and service handlers."""
+--- before/routing/handlers.py
++++ after/routing/handlers.py
+@@ -0,0 +1,18 @@
++"""Service handlers accepting validated payloads."""
++
++import service
++
++
++def handle_create(normalized):
++    """Create from a validated dict and return the service result."""
++    return service.create(normalized["name"])
++
++
++def handle_update(normalized):
++    """Update from a validated dict and return the service result."""
++    return service.update(normalized["id"], normalized["name"])
++
++
++def handle_delete(normalized):
++    """Delete from a validated dict and return the service result."""
++    return service.delete(normalized["id"])
+--- before/routing/validation.py
++++ after/routing/validation.py
+@@ -0,0 +1,23 @@
++"""Payload validation for supported commands."""
++
++from models import PayloadError
++
++
++def validate_payload(command, payload):
++    """Return a normalized new dict with id/name as needed."""
++    if command not in ("create", "update", "delete"):
++        raise ValueError("unknown command: " + command)
++    if not isinstance(payload, dict):
++        raise PayloadError("payload must be a dictionary")
++    normalized = {}
++    if command in ("update", "delete"):
++        identifier = payload.get("id")
++        if type(identifier) is not int or identifier <= 0:
++            raise PayloadError("id must be positive integer")
++        normalized["id"] = identifier
++    if command in ("create", "update"):
++        name = payload.get("name")
++        if not isinstance(name, str) or not name.strip():
++            raise PayloadError("name must be nonempty string")
++        normalized["name"] = name.strip()
++    return normalized

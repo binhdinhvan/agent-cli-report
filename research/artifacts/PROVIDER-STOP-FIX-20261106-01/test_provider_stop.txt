@@ -1,0 +1,26 @@
+E...
+======================================================================
+ERROR: test_failed_incomplete_missing_terminal_and_http_errors_latch_batch (__main__.ProviderStopTests.test_failed_incomplete_missing_terminal_and_http_errors_latch_batch) (terminal='response.incomplete', status=200)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tts/Project/agent-cli-report/demos/test_provider_stop.py", line 81, in test_failed_incomplete_missing_terminal_and_http_errors_latch_batch
+    self.assertEqual(call(second), 503)  # New CLI cannot bypass stop.
+                     ^^^^^^^^^^^^
+  File "/home/tts/Project/agent-cli-report/demos/test_provider_stop.py", line 53, in call
+    conn.request("POST", "/v1/responses", json.dumps({"model": MODEL, "stream": True}),
+  File "/usr/lib/python3.12/http/client.py", line 1365, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1411, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1360, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1159, in _send_output
+    self.send(chunk)
+  File "/usr/lib/python3.12/http/client.py", line 1084, in send
+    self.sock.sendall(data)
+BrokenPipeError: [Errno 32] Broken pipe
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.058s
+
+FAILED (errors=1)

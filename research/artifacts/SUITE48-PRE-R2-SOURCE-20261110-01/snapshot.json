@@ -1,0 +1,32 @@
+{
+  "scope": "Preserve first offline source revision before fairness refinement; no inference",
+  "source_seal": "benchmark/suite48/artifacts/PREP48-20261110-01/preparation.json",
+  "file_sha256": {
+    "benchmark/verify_suite48.py": "f37dd55b6b9c61bfd2b8435ec6ebc7234c07ca1d66b92ab674b8d01df913519f",
+    "benchmark/suite48_runtime.py": "c974b406132f8ae49ed9348a49cbd48d3e46e9837a1a84966125c788e1b95d81",
+    "benchmark/suite48_entry.py": "ead50a0bd92ed834f54d93df04bc44ab971e828990b9755ef782c39479dc4027",
+    "benchmark/suite48_solutions.py": "7a306195b6f011623e31530b33335ddc9ad7119a5c2862cea8098b7ae57aea64",
+    "benchmark/test_suite48.py": "687d78ccdd4101e5c8edacc6f3cb83bb9d4d9446e63e5401b1d7dea3b438fad2",
+    "benchmark/suite48/B-01/fixture/aliases.py": "4fa0637ab55f32469c101d45d1a23d110e95e1f890a4dd3398e4d70c861f5da6",
+    "benchmark/suite48/B-01/fixture/defaults.py": "dee8dba860bf81ba208cad957eaeb64ab897b475cc00990c94e7a93fde7816e0",
+    "benchmark/suite48/B-01/fixture/resolver.py": "f38fa2ca2b30092f9a2f2147376274237009b3104c44baf058ce6ca3dcd07613",
+    "benchmark/suite48/B-01/fixture/test_public.py": "1c8f8eec89298be555ea8aa30b57e8e7e58ca9ef4244fdca4db5d2af1e3de04e",
+    "benchmark/suite48/B-01/hidden/acceptance.py": "2b07961911d46c1401ef3eb60f17fe6595afd9b7df79b1f1f6a40bc6944eff29",
+    "benchmark/suite48/B-01/prompt.txt": "ad7713320df724e0bede0ea39d42d3263667888a092905f85363be52eef66d04",
+    "benchmark/suite48/B-02/fixture/pagination.py": "539d4697695b7ccc77317f032199cff92832a115bf4392622ffff474502a2801",
+    "benchmark/suite48/B-02/fixture/test_public.py": "18f4ea89162fcfc9762a059b4de6f9d01fbf22adf158393cde6cde316ddbf8e9",
+    "benchmark/suite48/B-02/hidden/acceptance.py": "551994ed3e132d5caff968734814bd43f1e5c65fc14413e77ac23abe5eef8759",
+    "benchmark/suite48/B-02/prompt.txt": "ff075958a70ce29228138ae5c3caa0cabc0aa2b0454aa1ae455418b7e53547f6",
+    "benchmark/suite48/B-03/fixture/cache.py": "78ff0a8c3cd69dfa812f341218b4598336615e6b333ea075905c5e18a4294ca2",
+    "benchmark/suite48/B-03/fixture/test_public.py": "0bd741a682765b9d049ef3f590897e7f3dd24368f4bee00ef30a4056ae7a31bb",
+    "benchmark/suite48/B-03/hidden/acceptance.py": "1ddb05b0376cfa279c6cb0d601baf9acd34ffa416889d683a988f3a04d13824f",
+    "benchmark/suite48/B-03/prompt.txt": "b847ebc3353340c78cabeec2dafbd45fc8dd6a6a39a659e922f0628d42c5f554",
+    "benchmark/suite48/B-04/fixture/models.py": "3bac8b1c1cc5d4ac5f93d9399e514c88949c2b58fd38b05b568e30842026b78d",
+    "benchmark/suite48/B-04/fixture/router.py": "91c6fac9d1548fb6e086f9b444ec04d61d0b159aa876454e5f19997836669a1d",
+    "benchmark/suite48/B-04/fixture/service.py": "5a207c28e902611a16b1aebcdc862bc4432193fcd05549f99b432a9d9457b7a8",
+    "benchmark/suite48/B-04/fixture/test_public.py": "26b690f8646bc983bb0970d52749dafab6071ea7cce5ceed96fe9e5658616a07",
+    "benchmark/suite48/B-04/hidden/acceptance.py": "3a5439b30bef2b1f2962f913d91ee9f658de7c813e2e2a15e3ccef34681a0e0d",
+    "benchmark/suite48/B-04/hidden/original_router.py": "2982ab1ba091fbdf174e3c70d67c161cd3fcba81d8e5575013395f9c5e05a54c",
+    "benchmark/suite48/B-04/prompt.txt": "a1bc0d06b22a33957c1fa5babab4df289ddbc069e77364f7d823b57f422b5ae3"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "source_snapshot_hashes_match": true,
+  "fixture_seal_unchanged": true,
+  "old_pilot_raw_unchanged": true,
+  "reclassified_run_id": "R-0009",
+  "reclassified_status": "infra_error",
+  "reclassified_validity": "pending_review",
+  "raw_status_preserved": "failure",
+  "raw_validity_preserved": "valid",
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "new_generation_requests": 0
+}

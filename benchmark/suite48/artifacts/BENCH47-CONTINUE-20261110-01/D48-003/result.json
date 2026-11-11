@@ -1,0 +1,2587 @@
+{
+  "slot": "D48-003",
+  "repetition": "1",
+  "block": "1",
+  "task_id": "B-01",
+  "position_in_block": "3",
+  "tool": "pi",
+  "status": "failure",
+  "continuation_of": {
+    "slot": "D48-003",
+    "run_id": "R-0041",
+    "config_id": "C-0142"
+  },
+  "run_id": "R-0088",
+  "config_id": "C-0189",
+  "spec": {
+    "tool": "pi",
+    "version": "1.5.0",
+    "config_id": "C-0189",
+    "repository": "earendil-works/pi",
+    "tag": "v1.5.0",
+    "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+    "asset": "pi-linux-x64.tar.gz",
+    "size": 58876253,
+    "sha256": "df870ba0e344cb7b3358d8d8f19397b8b8d225a8669784736ad68a5c2169d53b",
+    "binary_names": [
+      "pi"
+    ],
+    "started_at_utc": "2026-11-06T03:49:40.825563+00:00",
+    "status": "prepared_not_executed",
+    "release_api": "https://api.github.com/repos/earendil-works/pi/releases/tags/v1.5.0",
+    "release_url": "https://github.com/earendil-works/pi/releases/tag/v1.5.0",
+    "asset_url": "https://github.com/earendil-works/pi/releases/download/v1.5.0/pi-linux-x64.tar.gz",
+    "archive_sha256_verified": "df870ba0e344cb7b3358d8d8f19397b8b8d225a8669784736ad68a5c2169d53b",
+    "archive_members": [
+      {
+        "name": "pi",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/theme",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/theme/dark.json",
+        "size": 2250,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/theme/light.json",
+        "size": 2248,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/native",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/native/linux",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/native/linux/prebuilds",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/native/linux/prebuilds/linux-x64",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/native/linux/prebuilds/linux-x64/linux-platform-x11.node",
+        "size": 18008,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/ansi-to-html.js.map",
+        "size": 15056,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/tool-renderer.js.map",
+        "size": 9949,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/template.css",
+        "size": 23131,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/tool-renderer.d.ts",
+        "size": 1457,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/index.js",
+        "size": 9942,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/tool-renderer.js",
+        "size": 4731,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/index.d.ts.map",
+        "size": 1107,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/index.d.ts",
+        "size": 1541,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/ansi-to-html.d.ts",
+        "size": 771,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/vendor",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/vendor/highlight.min.js",
+        "size": 121727,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/vendor/marked-cjk-friendly.min.js",
+        "size": 4754,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/vendor/marked.min.js",
+        "size": 44640,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/ansi-to-html.d.ts.map",
+        "size": 296,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/index.js.map",
+        "size": 21262,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/template.js",
+        "size": 86652,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/tool-renderer.d.ts.map",
+        "size": 1017,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/ansi-to-html.js",
+        "size": 7711,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/export-html/template.html",
+        "size": 2271,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/package.json",
+        "size": 3935,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/assets",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/assets/clankolas.png",
+        "size": 539053,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/README.md",
+        "size": 4080,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/pi",
+        "size": 122726576,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/keybindings.md",
+        "size": 10952,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/termux.md",
+        "size": 3590,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/sdk.md",
+        "size": 10147,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/shell-aliases.md",
+        "size": 3172,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/themes.md",
+        "size": 8069,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/cli-integration.md",
+        "size": 6285,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/virtual-models.md",
+        "size": 8177,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/llama-cpp.md",
+        "size": 7531,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/extensions.md",
+        "size": 156365,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/json.md",
+        "size": 11106,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/docs.json",
+        "size": 5134,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/cli.md",
+        "size": 18212,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/windows.md",
+        "size": 5918,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/tui.md",
+        "size": 12105,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/rpc-extension-ui.md",
+        "size": 6174,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/codemode.md",
+        "size": 14585,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/quickstart.md",
+        "size": 4860,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/providers.md",
+        "size": 9681,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/mcp.md",
+        "size": 20459,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/settings.md",
+        "size": 14305,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/prompt-templates.md",
+        "size": 2490,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/configuration.md",
+        "size": 3239,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/session-format.md",
+        "size": 15766,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/rpc-commands.md",
+        "size": 21482,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/skills.md",
+        "size": 4793,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/rpc.md",
+        "size": 8897,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/packages.md",
+        "size": 8171,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/containerization.md",
+        "size": 7589,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/terminal-setup.md",
+        "size": 9420,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/slash-commands.md",
+        "size": 2762,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/custom-provider.md",
+        "size": 12737,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/message-types.md",
+        "size": 7569,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/environment-variables.md",
+        "size": 6046,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/models-configuration.md",
+        "size": 20716,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/index.md",
+        "size": 2507,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/compaction.md",
+        "size": 24093,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/usage.md",
+        "size": 5381,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/security.md",
+        "size": 6542,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/models.md",
+        "size": 13992,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/how-pi-works.md",
+        "size": 3300,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/sessions.md",
+        "size": 5457,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/tmux.md",
+        "size": 2058,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/nvidia-rtx-llama-cpp.md",
+        "size": 4290,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/images",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/images/doom-extension.png",
+        "size": 171987,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/images/exy.png",
+        "size": 1510779,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/images/tree-view.png",
+        "size": 281981,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/docs/images/interactive-mode.png",
+        "size": 519083,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/CHANGELOG.md",
+        "size": 682079,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/photon_rs_bg.wasm",
+        "size": 1881634,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/04-skills.ts",
+        "size": 1452,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/01-minimal.ts",
+        "size": 689,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/11-sessions.ts",
+        "size": 1825,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/08-prompt-templates.ts",
+        "size": 1374,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/10-settings.ts",
+        "size": 1705,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/README.md",
+        "size": 4790,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/13-session-runtime.ts",
+        "size": 1889,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/05-tools.ts",
+        "size": 1611,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/12-full-control.ts",
+        "size": 2031,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/03-custom-prompt.ts",
+        "size": 1923,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/14-codemode-mcp.ts",
+        "size": 1991,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/06-extensions.ts",
+        "size": 2673,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/07-context-files.ts",
+        "size": 1175,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/02-custom-model.ts",
+        "size": 1378,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/sdk/09-api-keys-and-oauth.ts",
+        "size": 1092,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/commands.ts",
+        "size": 2594,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/tool-override.ts",
+        "size": 4821,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/message-renderer.ts",
+        "size": 1929,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/trigger-compact.ts",
+        "size": 1350,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/auto-commit-on-exit.ts",
+        "size": 1571,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/snake.ts",
+        "size": 9421,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/timed-confirm.ts",
+        "size": 2238,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/reload-runtime.ts",
+        "size": 1645,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/built-in-tool-renderer.ts",
+        "size": 7455,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/custom-provider-anthropic",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/custom-provider-anthropic/index.ts",
+        "size": 20094,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/custom-provider-anthropic/.gitignore",
+        "size": 14,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/custom-provider-anthropic/package-lock.json",
+        "size": 651,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/custom-provider-anthropic/package.json",
+        "size": 374,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/file-trigger.ts",
+        "size": 1033,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/custom-compaction.ts",
+        "size": 3971,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/event-bus.ts",
+        "size": 1348,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/inline-bash.ts",
+        "size": 2958,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/subagent",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/subagent/agents",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/subagent/agents/worker.md",
+        "size": 664,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/subagent/agents/scout.md",
+        "size": 1255,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/subagent/agents/planner.md",
+        "size": 896,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/subagent/agents/reviewer.md",
+        "size": 933,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/subagent/index.ts",
+        "size": 35523,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/subagent/agents.ts",
+        "size": 4562,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/subagent/README.md",
+        "size": 6298,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/subagent/prompts",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/subagent/prompts/implement-and-review.md",
+        "size": 494,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/subagent/prompts/scout-and-plan.md",
+        "size": 496,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/subagent/prompts/implement.md",
+        "size": 579,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/questionnaire.ts",
+        "size": 13565,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/model-status.ts",
+        "size": 957,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/doom-overlay",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/doom-overlay/doom",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/doom-overlay/doom/doomgeneric_pi.c",
+        "size": 1709,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/doom-overlay/doom/build.sh",
+        "size": 3366,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/doom-overlay/doom/build",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/doom-overlay/doom/build/doom.js",
+        "size": 64607,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/doom-overlay/doom/build/doom.wasm",
+        "size": 380169,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/doom-overlay/doom-engine.ts",
+        "size": 4914,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/doom-overlay/index.ts",
+        "size": 2117,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/doom-overlay/.gitignore",
+        "size": 41,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/doom-overlay/doom-component.ts",
+        "size": 3645,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/doom-overlay/README.md",
+        "size": 1322,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/doom-overlay/wad-finder.ts",
+        "size": 1719,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/doom-overlay/doom-keys.ts",
+        "size": 3495,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/ssh.ts",
+        "size": 7293,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/debug-provider.ts",
+        "size": 2736,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/jev-router.ts",
+        "size": 4800,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/custom-provider-gitlab-duo",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/custom-provider-gitlab-duo/index.ts",
+        "size": 12148,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/custom-provider-gitlab-duo/.gitignore",
+        "size": 14,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/custom-provider-gitlab-duo/package.json",
+        "size": 316,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/custom-provider-gitlab-duo/test.ts",
+        "size": 2681,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/overlay-test.ts",
+        "size": 5517,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/structured-output.ts",
+        "size": 2187,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/dynamic-tools.ts",
+        "size": 2211,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/tic-tac-toe.ts",
+        "size": 35382,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/border-status-editor.ts",
+        "size": 4444,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/pirate.ts",
+        "size": 1461,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/send-user-message.ts",
+        "size": 2832,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/working-message-test.ts",
+        "size": 904,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/tools.ts",
+        "size": 4023,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/git-checkpoint.ts",
+        "size": 1485,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/notify.ts",
+        "size": 2073,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/status-line.ts",
+        "size": 937,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/plan-mode",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/plan-mode/utils.ts",
+        "size": 4129,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/plan-mode/index.ts",
+        "size": 12403,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/plan-mode/README.md",
+        "size": 2009,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/entry-renderer.ts",
+        "size": 1288,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/hello.ts",
+        "size": 640,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/qna.ts",
+        "size": 3501,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/rainbow-editor.ts",
+        "size": 2386,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/modal-editor.ts",
+        "size": 2417,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/bash-spawn-hook.ts",
+        "size": 696,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/git-merge-and-resolve.ts",
+        "size": 4108,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/shutdown-command.ts",
+        "size": 2045,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/widget-placement.ts",
+        "size": 367,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/session-name.ts",
+        "size": 785,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/space-invaders.ts",
+        "size": 15174,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/README.md",
+        "size": 10211,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/confirm-destructive.ts",
+        "size": 1680,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/custom-header.ts",
+        "size": 2408,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/provider-payload.ts",
+        "size": 764,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/dirty-repo-guard.ts",
+        "size": 1479,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/minimal-mode.ts",
+        "size": 10806,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/dynamic-resources",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/dynamic-resources/index.ts",
+        "size": 457,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/dynamic-resources/dynamic.json",
+        "size": 2007,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/dynamic-resources/dynamic.md",
+        "size": 160,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/dynamic-resources/SKILL.md",
+        "size": 177,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/handoff.ts",
+        "size": 5973,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/claude-rules.ts",
+        "size": 2488,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/truncated-tool.ts",
+        "size": 6490,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/question.ts",
+        "size": 8494,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/working-indicator.ts",
+        "size": 3426,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/overlay-qa-tests.ts",
+        "size": 46148,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/with-deps",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/with-deps/index.ts",
+        "size": 1012,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/with-deps/.gitignore",
+        "size": 14,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/with-deps/package-lock.json",
+        "size": 892,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/with-deps/package.json",
+        "size": 395,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/hidden-thinking-label.ts",
+        "size": 1451,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/mac-system-theme.ts",
+        "size": 1197,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/github-issue-autocomplete.ts",
+        "size": 5282,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/input-transform-streaming.ts",
+        "size": 1213,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/gondolin",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/gondolin/index.ts",
+        "size": 16647,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/gondolin/.gitignore",
+        "size": 14,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/gondolin/package-lock.json",
+        "size": 5675,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/gondolin/package.json",
+        "size": 339,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/interactive-shell.ts",
+        "size": 4788,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/custom-footer.ts",
+        "size": 2149,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/preset.ts",
+        "size": 14601,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/project-trust.ts",
+        "size": 2131,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/prompt-customizer.ts",
+        "size": 1691,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/input-transform.ts",
+        "size": 1444,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/permission-gate.ts",
+        "size": 1019,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/system-prompt-header.ts",
+        "size": 528,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/titlebar-spinner.ts",
+        "size": 1623,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/rpc-demo.ts",
+        "size": 3632,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/todo.ts",
+        "size": 9001,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/protected-paths.ts",
+        "size": 808,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/bookmark.ts",
+        "size": 1555,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/extensions/summarize.ts",
+        "size": 5072,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/README.md",
+        "size": 1282,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/rpc-client.ts",
+        "size": 1057,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/rpc-extension-ui.ts",
+        "size": 17330,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "pi/examples/tsconfig.json",
+        "size": 5940,
+        "type": "0",
+        "linkname": ""
+      }
+    ],
+    "binary": "/home/tts/Project/agent-cli-report/.local/binaries/pi-1.5.0/payload/pi/pi",
+    "binary_sha256": "61a84400938da652ed69aac9c1ad2ca23af3c9bd8cc2f46ce571ed84ae6a35e5",
+    "payload": "/home/tts/Project/agent-cli-report/.local/binaries/pi-1.5.0/payload",
+    "runtime_root": "/tmp/opencode/agent-cli-report/smoke/C-0189",
+    "finished_at_utc": "2026-11-06T03:50:49.415959+00:00",
+    "environment_revision": "search-r2"
+  },
+  "cli": [
+    "/opt/agent-cli-report/C-0189/pi/pi",
+    "--print",
+    "--mode",
+    "json",
+    "--provider",
+    "shopaikey",
+    "--model",
+    "gpt-6.1-sol",
+    "--tools",
+    "read,bash,edit,write",
+    "--no-extensions",
+    "--no-mcp",
+    "--no-skills",
+    "--no-prompt-templates",
+    "--no-themes",
+    "--no-context-files",
+    "--thinking",
+    "off",
+    "Đọc code của resolver cấu hình trong workspace. Không sửa code nguồn hoặc test. Chỉ được tạo answer.json ở thư mục gốc; không thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh).\n\nTrả lời năm câu hỏi từ implementation hiện có, không suy từ tên hàm:\n1. Khi gọi resolve(\"timeout\", cli={}, env={}, config={}), giá trị mặc định là gì?\n2. Khi cả cli, env, config và defaults đều có cùng key, thứ tự ưu tiên cao xuống thấp là gì? Dùng tên \"cli\", \"env\", \"config\", \"defaults\".\n3. Khi canonical_name(\"quick\") được gọi, chuỗi tên nào được duyệt theo thứ tự, gồm cả tên ban đầu và tên canonical cuối?\n4. Khi canonical_name(\"loop_a\") được gọi, exception class và message chính xác là gì?\n5. resolve có sửa dictionary config được truyền vào không? Ghi boolean.\n\nanswer.json phải là JSON object đúng năm trường sau, không Markdown hoặc lời giải ngoài schema:\n{\n  \"default\": {\"value\": <giá trị JSON>, \"evidence\": [\"path.py:symbol\"]},\n  \"precedence\": {\"value\": [<tên nguồn theo thứ tự>], \"evidence\": [\"path.py:symbol\"]},\n  \"alias_trace\": {\"value\": [<tên theo thứ tự>], \"evidence\": [\"path.py:symbol\"]},\n  \"cycle_error\": {\"type\": <tên class dạng string>, \"message\": <string>, \"evidence\": [\"path.py:symbol\"]},\n  \"mutation\": {\"value\": <boolean>, \"evidence\": [\"path.py:symbol\"]}\n}\n\nMỗi evidence là đường dẫn tương đối và symbol có thật trong code hỗ trợ câu trả lời đó; không dùng số dòng. Mỗi câu đúng nội dung được 1 điểm và có evidence phù hợp được 1 điểm, tổng10. Success cần10/10, đúng phạm vi và CLI hoàn tất. Không cài package hoặc truy cập Internet. Dùng python3/stdlib nếu cần. Public schema check dự kiến: python3 -B -m unittest -v test_public.\n"
+  ],
+  "validity": "valid",
+  "reasons": [],
+  "execution": {
+    "supervisor_host_pid": 29404,
+    "exit_code": 0,
+    "timed_out": false,
+    "output_limit_exceeded": false,
+    "duration_ms": 171830,
+    "outer_started_monotonic": 812.247990347,
+    "outer_finished_monotonic": 984.077958459,
+    "broker_deadline_monotonic": 1712.247990347,
+    "outer_watchdog_deadline_monotonic": 1712.247990347,
+    "native_clock": {
+      "started_monotonic": 812.328398104,
+      "finished_monotonic": 983.908561603,
+      "duration_ms": 171580
+    },
+    "witness": {
+      "project_writable": true,
+      "immutable_readonly": {
+        "aliases.py": true,
+        "defaults.py": true,
+        "resolver.py": true,
+        "test_public.py": true
+      },
+      "hidden_absent": true,
+      "home_hidden": true,
+      "net_namespace": "net:[4026532632]",
+      "provider_key_env_absent": true
+    }
+  },
+  "grading": {
+    "task_id": "B-01",
+    "scope_ok": true,
+    "changed_files": [
+      "answer.json"
+    ],
+    "invalid_paths": [],
+    "snapshot_sha256": {
+      "resolver.py": "f38fa2ca2b30092f9a2f2147376274237009b3104c44baf058ce6ca3dcd07613",
+      "aliases.py": "4fa0637ab55f32469c101d45d1a23d110e95e1f890a4dd3398e4d70c861f5da6",
+      "test_public.py": "1c8f8eec89298be555ea8aa30b57e8e7e58ca9ef4244fdca4db5d2af1e3de04e",
+      "answer.json": "7f5a260ec55bd1450a134ca6af8f52210b3f16962c04154f64e1b152e7e78a3a",
+      "defaults.py": "dee8dba860bf81ba208cad957eaeb64ab897b475cc00990c94e7a93fde7816e0"
+    },
+    "suites": {
+      "public": {
+        "exit_code": 0,
+        "timed_out": false,
+        "output_limit_exceeded": false,
+        "duration_ms": 115,
+        "stdout": "",
+        "stderr": "test_schema (test_public.PublicTests.test_schema) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+      },
+      "hidden": {
+        "exit_code": 1,
+        "timed_out": false,
+        "output_limit_exceeded": false,
+        "duration_ms": 116,
+        "stdout": "RUBRIC_JSON={\"scores\": {\"default\": 2, \"precedence\": 2, \"alias_trace\": 2, \"cycle_error\": 2, \"mutation\": 1}, \"total\": 9, \"maximum\": 10}\n",
+        "stderr": "test_rubric (__main__.AcceptanceTests.test_rubric) ... FAIL\n\n======================================================================\nFAIL: test_rubric (__main__.AcceptanceTests.test_rubric)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 31, in test_rubric\n    self.assertEqual(sum(scores.values()), 10)\nAssertionError: 9 != 10\n\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nFAILED (failures=1)\n"
+      }
+    },
+    "rubric": {
+      "scores": {
+        "default": 2,
+        "precedence": 2,
+        "alias_trace": 2,
+        "cycle_error": 2,
+        "mutation": 1
+      },
+      "total": 9,
+      "maximum": 10
+    },
+    "grader_duration_ms": 240,
+    "pass": false
+  },
+  "requests": [
+    {
+      "started_at_utc": "2026-11-10T13:58:57.923561+00:00",
+      "request_index": 1,
+      "original_body_sha256": "05c32a2d6dc44a76378578b485aa474656e889696847f94f06d8a17df5b18538",
+      "requested_max_output_tokens": 2048,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "read",
+        "bash",
+        "edit",
+        "write"
+      ],
+      "forwarded_protocol_header_names": [
+        "user-agent",
+        "x-client-request-id"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 876.725338,
+      "pacing_wait_seconds": 22.703605,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "attribution": {
+            "items": {
+              "fc_0173d815df1065dc016af32325338487d085c54bd85938a4d8": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 39
+              },
+              "msg_0173d815df1065dc016af32323a31887d08cf5cb8263f6ba13": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 39,
+                "output_tokens": 0
+              },
+              "msg_0173d815df1065dc016af32323a31887d0b6ff9adb78e3b68f": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 501,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 501,
+                "output_tokens": 0
+              },
+              "msg_0173d815df1065dc016af32323a31887d0bf4a615f70c5c891": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 455,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 455,
+                "output_tokens": 0
+              }
+            },
+            "request_fields": {
+              "tools": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 479,
+                "output_tokens": 0
+              }
+            }
+          },
+          "input_tokens": 1476,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 39,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1515
+        },
+        "uncached_input_tokens": 1476,
+        "components": {
+          "uncached_input_usd": "0.0070848",
+          "cached_input_usd": "0.00",
+          "output_usd": "0.000702"
+        },
+        "estimated_cost_usd": "0.0077868",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 23051,
+      "finished_at_utc": "2026-11-10T13:59:01.914426+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T13:59:31.915503+00:00",
+      "request_index": 2,
+      "original_body_sha256": "35413e6ef1e667eee750b101479ed327d9c094357a654dc0ea225c0763adda66",
+      "requested_max_output_tokens": 2048,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "read",
+        "bash",
+        "edit",
+        "write"
+      ],
+      "forwarded_protocol_header_names": [
+        "user-agent",
+        "x-client-request-id"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null,
+        "function_call",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 842.733373,
+      "pacing_wait_seconds": 29.945667,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "attribution": {
+            "items": {
+              "fc_0173d815df1065dc016af32325338487d085c54bd85938a4d8": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 41,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af32345814887d09f6215d64d3c91f9": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 38,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 38,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af32347517887d0a5c81ed423dae3cd": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 42
+              },
+              "fc_0173d815df1065dc016af323493cf887d094fcb16e9e83a1fe": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 0,
+                "output_tokens": 25
+              },
+              "fc_0173d815df1065dc016af323493cf887d09b95bfac3070723f": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 0,
+                "output_tokens": 23
+              },
+              "fc_0173d815df1065dc016af323493cf887d0b78d81f49a3ae8d2": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 0,
+                "output_tokens": 23
+              },
+              "msg_0173d815df1065dc016af32345814887d08fad6c565790ec7e": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 501,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 501,
+                "output_tokens": 0
+              },
+              "msg_0173d815df1065dc016af32345814887d09fe0b29fc3fab24d": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 455,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 455,
+                "output_tokens": 0
+              },
+              "msg_0173d815df1065dc016af32345814887d0a4102180ed935549": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 39,
+                "output_tokens": 0
+              }
+            },
+            "request_fields": {
+              "tools": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 479,
+                "output_tokens": 0
+              }
+            }
+          },
+          "input_tokens": 1555,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 113,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1668
+        },
+        "uncached_input_tokens": 1555,
+        "components": {
+          "uncached_input_usd": "0.007464",
+          "cached_input_usd": "0.00",
+          "output_usd": "0.002034"
+        },
+        "estimated_cost_usd": "0.009498",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 20850,
+      "finished_at_utc": "2026-11-10T13:59:37.838450+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T14:00:07.839378+00:00",
+      "request_index": 3,
+      "original_body_sha256": "0e4d9c4e7feea06103e99fc769c2189d6e093896a26b142a690023a96b2948fa",
+      "requested_max_output_tokens": 2048,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "read",
+        "bash",
+        "edit",
+        "write"
+      ],
+      "forwarded_protocol_header_names": [
+        "user-agent",
+        "x-client-request-id"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null,
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output",
+        "function_call_output",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 806.809561,
+      "pacing_wait_seconds": 29.987321,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "attribution": {
+            "items": {
+              "fc_0173d815df1065dc016af32325338487d085c54bd85938a4d8": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 41,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af32347517887d0a5c81ed423dae3cd": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 44,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323493cf887d094fcb16e9e83a1fe": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 25,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323493cf887d09b95bfac3070723f": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 23,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323493cf887d0b78d81f49a3ae8d2": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 23,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af3236b433087d083ddc44ae6345feb": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 101,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 101,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af3236b433087d08c30c197795a2224": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 38,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 38,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af3236b433087d0985037f075835c12": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 77,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 77,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af3236b433087d09e4b0b00163e3468": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 31,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 31,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af3236b433087d0ae76092707cb3459": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 461,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 461,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af3236da62c87d084ed725e783f3add": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 250
+              },
+              "msg_0173d815df1065dc016af3236b433087d0a8d3953cdbf9c395": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 39,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 39,
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 39,
+                "output_tokens": 0
+              },
+              "msg_0173d815df1065dc016af3236b433087d0b93aa11a677d9328": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 389,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 389,
+                    "input_tokens": 455,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 455,
+                "output_tokens": 0
+              },
+              "msg_0173d815df1065dc016af3236b433087d0bdcdc521aa167c6a": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 501,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 501,
+                    "input_tokens": 501,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 501,
+                "output_tokens": 0
+              }
+            },
+            "request_fields": {
+              "tools": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 479,
+                "input_tokens": 479,
+                "output_tokens": 0
+              }
+            }
+          },
+          "input_tokens": 2340,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 1408
+          },
+          "output_tokens": 250,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2590
+        },
+        "uncached_input_tokens": 932,
+        "components": {
+          "uncached_input_usd": "0.0044736",
+          "cached_input_usd": "0.00033792",
+          "output_usd": "0.0045"
+        },
+        "estimated_cost_usd": "0.00931152",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 80909,
+      "finished_at_utc": "2026-11-10T14:00:19.430083+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T14:00:49.431440+00:00",
+      "request_index": 4,
+      "original_body_sha256": "115fa673bc8be1e12ab7871d69d82ce754a517a6f7fe4d96485780386ada6249",
+      "requested_max_output_tokens": 2048,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "read",
+        "bash",
+        "edit",
+        "write"
+      ],
+      "forwarded_protocol_header_names": [
+        "user-agent",
+        "x-client-request-id"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null,
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output",
+        "function_call_output",
+        "function_call_output",
+        "function_call",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 765.217279,
+      "pacing_wait_seconds": 29.987772,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "attribution": {
+            "items": {
+              "fc_0173d815df1065dc016af32325338487d085c54bd85938a4d8": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 41,
+                "input_tokens": 41,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af32347517887d0a5c81ed423dae3cd": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 44,
+                "input_tokens": 44,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323493cf887d094fcb16e9e83a1fe": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 25,
+                "input_tokens": 25,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323493cf887d09b95bfac3070723f": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 23,
+                "input_tokens": 23,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323493cf887d0b78d81f49a3ae8d2": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 23,
+                "input_tokens": 23,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af3236da62c87d084ed725e783f3add": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 94,
+                "input_tokens": 252,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af3239276c887d08bd08be1550635af": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 31,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 31,
+                    "input_tokens": 31,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 31,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af3239276c887d09407478a9fa59ad6": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 101,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 101,
+                    "input_tokens": 101,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 101,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af3239276c887d09a0f5719b8641e98": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 38,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 38,
+                    "input_tokens": 38,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 38,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af3239276c887d0a1c711e66b0d018c": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 13,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 13,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af3239276c887d0a29684829234af7d": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 461,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 461,
+                    "input_tokens": 461,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 461,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af3239276c887d0b07a36a3ea8e10e7": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 77,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 77,
+                    "input_tokens": 77,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 77,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af32394572c87d08ba7986c12df7e30": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 32
+              },
+              "msg_0173d815df1065dc016af3239276c887d084bb83ffa21685c1": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 501,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 501,
+                    "input_tokens": 501,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 501,
+                "output_tokens": 0
+              },
+              "msg_0173d815df1065dc016af3239276c887d0911e7977dce2d85a": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 39,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 39,
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 39,
+                "output_tokens": 0
+              },
+              "msg_0173d815df1065dc016af3239276c887d0a851b404e4271682": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 455,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 455,
+                    "input_tokens": 455,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 455,
+                "output_tokens": 0
+              }
+            },
+            "request_fields": {
+              "tools": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 479,
+                "input_tokens": 479,
+                "output_tokens": 0
+              }
+            }
+          },
+          "input_tokens": 2605,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 2432
+          },
+          "output_tokens": 32,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2637
+        },
+        "uncached_input_tokens": 173,
+        "components": {
+          "uncached_input_usd": "0.0008304",
+          "cached_input_usd": "0.00058368",
+          "output_usd": "0.000576"
+        },
+        "estimated_cost_usd": "0.00199008",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 23482,
+      "finished_at_utc": "2026-11-10T14:00:52.831785+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T14:01:22.833120+00:00",
+      "request_index": 5,
+      "original_body_sha256": "6e6b26dcea1032652e54a483a2b831b49349412300e1cbc023e874c6a12c9d07",
+      "requested_max_output_tokens": 2048,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "read",
+        "bash",
+        "edit",
+        "write"
+      ],
+      "forwarded_protocol_header_names": [
+        "user-agent",
+        "x-client-request-id"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null,
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output",
+        "function_call_output",
+        "function_call_output",
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 731.81528,
+      "pacing_wait_seconds": 29.909439,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "attribution": {
+            "items": {
+              "fc_0173d815df1065dc016af32325338487d085c54bd85938a4d8": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 41,
+                "input_tokens": 41,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af32347517887d0a5c81ed423dae3cd": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 44,
+                "input_tokens": 44,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323493cf887d094fcb16e9e83a1fe": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 25,
+                "input_tokens": 25,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323493cf887d09b95bfac3070723f": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 23,
+                "input_tokens": 23,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323493cf887d0b78d81f49a3ae8d2": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 23,
+                "input_tokens": 23,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af3236da62c87d084ed725e783f3add": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 94,
+                "input_tokens": 252,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af32394572c87d08ba7986c12df7e30": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 34,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323b4167c87d08bfee33fb72f2a15": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 461,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 461,
+                    "input_tokens": 461,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 461,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323b4167c87d0932d23b73bc4087d": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 77,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 77,
+                    "input_tokens": 77,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 77,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323b4167c87d0943b0009fa32d080": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 101,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 101,
+                    "input_tokens": 101,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 101,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323b4167c87d099f7f8be50bd8a70": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 37,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 37,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323b4167c87d0a4c380fef47e92a9": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 38,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 38,
+                    "input_tokens": 38,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 38,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323b4167c87d0a5f8076a18688d16": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 31,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 31,
+                    "input_tokens": 31,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 31,
+                "output_tokens": 0
+              },
+              "fc_0173d815df1065dc016af323b4167c87d0b3ab34e3d342115e": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 13,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 13,
+                "output_tokens": 0
+              },
+              "msg_0173d815df1065dc016af323b4167c87d0804539b1c47b5b86": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 39,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 39,
+                    "input_tokens": 39,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 39,
+                "output_tokens": 0
+              },
+              "msg_0173d815df1065dc016af323b4167c87d0a8df72dcd01e7db8": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 455,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 455,
+                    "input_tokens": 455,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 455,
+                "output_tokens": 0
+              },
+              "msg_0173d815df1065dc016af323b4167c87d0b477ba2f612cc5b7": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 501,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 501,
+                    "input_tokens": 501,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 501,
+                "output_tokens": 0
+              },
+              "msg_0173d815df1065dc016af323b60ac487d0ab3a083b8f6bad74": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 2,
+                    "output_tokens": 4
+                  }
+                ],
+                "input_tokens": 2,
+                "output_tokens": 4
+              }
+            },
+            "request_fields": {
+              "tools": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 479,
+                "input_tokens": 479,
+                "output_tokens": 0
+              }
+            }
+          },
+          "input_tokens": 2676,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 2432
+          },
+          "output_tokens": 4,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2680
+        },
+        "uncached_input_tokens": 244,
+        "components": {
+          "uncached_input_usd": "0.0011712",
+          "cached_input_usd": "0.00058368",
+          "output_usd": "0.000072"
+        },
+        "estimated_cost_usd": "0.00182688",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 18911,
+      "finished_at_utc": "2026-11-10T14:01:26.297469+00:00"
+    }
+  ],
+  "synthetic_usage": false,
+  "preflight_events": null,
+  "provider_requests": 5,
+  "supervisor_pid_absent": true,
+  "broker_socket_absent": true
+}

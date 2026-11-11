@@ -1,0 +1,6 @@
+Resolving dependencies
+Resolved, downloaded and extracted [1443]
+error: ENOTDIR
+
+note: error occurred while resolving /home/tts/Project/agent-cli-report/.local/demo-sdk-2.2.5/bunfig.toml
+error: /home/tts/Project/agent-cli-report/.local/demo-sdk-2.2.5/bunfig.toml failed to resolve

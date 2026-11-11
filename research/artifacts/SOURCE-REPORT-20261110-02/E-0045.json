@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0045",
+    "comparison_axis": "api",
+    "tool": "OpenCode v2",
+    "version": "2.2.5",
+    "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+    "claim": "SSE subscribe phát server.connected rồi concat live feed",
+    "file": "packages/server/src/handlers/event.ts",
+    "line_start": "11",
+    "line_end": "33",
+    "symbol": "EventHandler event.subscribe",
+    "permalink": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/server/src/handlers/event.ts#L11-L33",
+    "evidence_status": "both",
+    "runtime_artifact": "demos/artifacts/OFFLINE-API-20261106-01/opencode-v2/result.json",
+    "limitations": "Đã nhận connected trước create rồi session.created khớp ID; chưa replay/reconnect/prompt completion"
+  },
+  "source_sha256": "07d163a142fba915b3b34028f8b3de74679d476f108a0a734b0ac6b863ad1698",
+  "excerpt": "    return handlers.handleRaw(\"event.subscribe\", (ctx) =>\n      Effect.gen(function* () {\n        const connected = {\n          id: Event.ID.create(),\n          type: \"server.connected\",\n          data: {},\n        } as const\n        const output = Stream.unwrap(\n          feed\n            .subscribe(ctx.query.types)\n            .pipe(Effect.map((live) => Stream.make(EventFeed.frame(connected)).pipe(Stream.concat(live)))),\n        )\n        const heartbeat = Stream.tick(\"15 seconds\").pipe(Stream.map(() => \": heartbeat\\n\\n\"))\n        return HttpServerResponse.stream(\n          output.pipe(Stream.merge(heartbeat, { haltStrategy: \"left\" }), Stream.encodeText),\n          {\n            contentType: \"text/event-stream\",\n            headers: {\n              \"Cache-Control\": \"no-cache, no-transform\",\n              \"X-Accel-Buffering\": \"no\",\n              \"X-Content-Type-Options\": \"nosniff\",\n            },\n          },"
+}

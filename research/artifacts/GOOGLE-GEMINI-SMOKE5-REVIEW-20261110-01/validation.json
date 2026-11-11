@@ -1,0 +1,42 @@
+{
+  "status": "pass",
+  "scope": "Offline postcheck of Google-direct smoke; no new provider/API/key-content read",
+  "artifact": "demos/artifacts/GOOGLE-GEMINI-SMOKE5-20261110-01",
+  "executed_requests": 1,
+  "passes": 0,
+  "not_run": 4,
+  "http_status": 503,
+  "google_error_status": "UNAVAILABLE",
+  "google_error_message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+  "cause_evidence_status": "provider-reported high demand; no independent global outage or model-identity proof",
+  "duration_ms": 846,
+  "usage": null,
+  "estimated_cost_usd": null,
+  "measured_charge_usd": null,
+  "input_snapshot_hashes": "pass before postcheck profile/status edits",
+  "raw_artifact_sha256": {
+    "result.json": "f8b5d0c565b067d17449923d6e0e829ea822d782c8f4b19daee9da3e5c4ceea2",
+    "approval.json": "2a2f6b613c271ea4f94540c1f563d010fd92da964bd9445ca9d97e6d3dd26f61",
+    "source/demos/test_google_gemini_smoke5.py": "b3977105d69a288942a8f80bbb9925e45bfe8023ac6710c1c3e78a1ebea1ab3d",
+    "source/demos/GOOGLE_GEMINI.md": "aa9ee16abe1c4b5bd71f3e9685f6e08fb12ed3e4037b7d8148d84b83594aac2d",
+    "source/demos/google_gemini_smoke5.py": "0c574f9fab0057282e92d9162a96ff22cf2407a6a1e7a1eb0d481c618fdaef91",
+    "source/demos/provider_probe.py": "92507bfc713c543d8f056523ff115e35bfb42f92683b1aa40cb6df65aec9f5c8",
+    "source/research/model-profiles/google-gemini-3.8-flash.json": "2eb07b3a7f49f0bb6dad7fad1dbab394f1a41aab19be4d5dbf1ad9b2528234a1"
+  },
+  "prior_raw_retention": {
+    "CONTINUE43-REVIEW-20261110-01": "all raw hashes match",
+    "GEMINI-SMOKE5-REVIEW-20261110-01": "all raw hashes match"
+  },
+  "frozen_sol_pilot": "PASS: frozen outputs, ledger, review, fixture/dependency/binary and source hashes; offline only\n",
+  "registry_unchanged": [
+    "R-0222",
+    "C-0323"
+  ],
+  "key_metadata": "owner regular file600; content not read by audit",
+  "key_used_only_in_approved_runtime": true,
+  "extra_network_probes": 0,
+  "new_provider_requests_by_audit": 0,
+  "auto_retry_fallback_or_benchmark_authorized": false,
+  "native4cli_acceptance": "unverified",
+  "secret_pattern_scan": "heuristic pass only; key excluded from artifacts, not a full publication/PII review"
+}

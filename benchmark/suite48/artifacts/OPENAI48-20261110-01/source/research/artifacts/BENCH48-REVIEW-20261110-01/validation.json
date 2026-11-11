@@ -1,0 +1,100 @@
+{
+  "scope": "Offline postcheck of completed paid batch; no new provider/credential calls",
+  "checked_at_utc": "2026-11-10T03:19:37.598076+00:00",
+  "batch": "benchmark/suite48/artifacts/BENCH48-20261110-01",
+  "status": "stopped_infra_error_pending_review",
+  "run_id": "R-0039",
+  "slot": "D48-001",
+  "tool": "opencode-v1",
+  "task": "B-01",
+  "inference_attempts": 1,
+  "planned_slots": 48,
+  "not_run_slots": 47,
+  "reserved_run_range": [
+    "R-0039",
+    "R-0086"
+  ],
+  "reserved_config_range": [
+    "C-0140",
+    "C-0187"
+  ],
+  "next_registry_ids": [
+    "R-0087",
+    "C-0188"
+  ],
+  "upstream_requests": 5,
+  "completed_with_usage": 4,
+  "unpriced_requests": 1,
+  "known_estimate_usd": "0.06853344",
+  "estimated_total_usd": null,
+  "measured_charge_usd": null,
+  "historical_pilot_known_estimate_not_in_new_guard": "1.10640264",
+  "historical_pilot_unpriced_requests_not_in_new_guard": 6,
+  "request5": "TimeoutError before HTTP status/terminal/usage; receipt/backend cause unverified",
+  "local503": "native retry rejected by host broker latch; NOT evidence of upstream HTTP503/overload",
+  "local_error_evidence_line": 14,
+  "local_retry_count": "at least1 rejected; exact internal retry count not instrumented",
+  "duration_ms": 278237,
+  "wall_timed_out": false,
+  "gap_seconds": [
+    30.001775,
+    30.001444,
+    30.001664,
+    30.001182
+  ],
+  "all_four_gaps_ge30": true,
+  "min_remaining_at_dispatch_seconds": 734.670317,
+  "native_primary_deadline_match": true,
+  "isolation_ok": true,
+  "scope_ok": true,
+  "changed_files": [
+    "answer.json"
+  ],
+  "public_pass": true,
+  "raw_hidden_pass": false,
+  "raw_rubric_score": 9,
+  "rubric_maximum": 10,
+  "answer_value_matches_by_question": {
+    "default": true,
+    "precedence": true,
+    "alias_trace": true,
+    "cycle_error": true,
+    "mutation": true
+  },
+  "rejected_extra_evidence": [
+    "aliases.py:ALIASES"
+  ],
+  "rubric_review_status": "pending: aliases.py:ALIASES defines cycle graph and is a plausible supporting extra reference; hidden allowlist rejects it, prompt does not expose allowlist; do not change sealed grading or raw score post hoc",
+  "classification_note": "Preserve infra_error/pending_review, not task failure or success; snapshot existed before provider interruption; grading design risk reported separately",
+  "hashes_source_protocol_fixture_binary_input_resource": "pass",
+  "supervisor_pid_absent": true,
+  "broker_socket_absent": true,
+  "unrun_config_roots_absent": true,
+  "benchmark_csv_single_attempt": "pass",
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "secret_pattern_scan": "pass; heuristic only; no credential read in this audit",
+  "auto_retry_or_resume_authorized": false,
+  "raw_artifact_sha256": {
+    "D48-001/config.json": "79b63dfd8c6fe5db256df85fa21154be01e58f18b976b0e49b22587d771886a2",
+    "D48-001/execution.json": "a2d1007ada612a0184cd3fd99c6f68e5e79d025d5b2eeae089b66b8d8b5a1a93",
+    "D48-001/grader/grading.json": "0581271f0815717b36b39dd16cac2c68182925e8d4992a283647c6a594e3e91d",
+    "D48-001/grader/patch.diff": "075b1516b96708a9ca5821622583088d3983b27ee2ffa3983c28831b0ec2343f",
+    "D48-001/grader/snapshot/aliases.py": "4fa0637ab55f32469c101d45d1a23d110e95e1f890a4dd3398e4d70c861f5da6",
+    "D48-001/grader/snapshot/answer.json": "6c30f535ccc19e7382d00f55d581faf4d2784f89e6663508768ad516aadf7e3c",
+    "D48-001/grader/snapshot/defaults.py": "dee8dba860bf81ba208cad957eaeb64ab897b475cc00990c94e7a93fde7816e0",
+    "D48-001/grader/snapshot/resolver.py": "f38fa2ca2b30092f9a2f2147376274237009b3104c44baf058ce6ca3dcd07613",
+    "D48-001/grader/snapshot/test_public.py": "1c8f8eec89298be555ea8aa30b57e8e7e58ca9ef4244fdca4db5d2af1e3de04e",
+    "D48-001/result.json": "b0d1031030b830ee2bdbad2dd411c9bef205745c3420934c148f5d716bfbd13e",
+    "D48-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D48-001/stdout.jsonl": "c797ec994bb0854a137ef53ab77caee2ad26a8184c1abe259e30ac9268fbc4f1",
+    "approval.json": "a95d6050013dac8c397dc1d88685f2e005a93436f03835858d1b91a43e6acf00",
+    "plan.json": "7d7fe5edf4153da954e5fa8895a8728837abe4b246deaa10ae7b47bccdbc699a",
+    "reserved.json": "5134ae963cb08059ea7be5f64d80d411cc3434d7d30500dc7ae5b7e8d9d2c410",
+    "result.json": "330f8e8f92cc748b4feaf24057658e7d5e43092172c30bf0013f6ab326e14168"
+  }
+}

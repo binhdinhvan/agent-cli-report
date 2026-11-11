@@ -1,0 +1,11 @@
+# Một retry R89 rồi continuation44 — rubric r2
+
+Người dùng yêu cầu **“retry chạy tiếp”** sau khi đã biết continuation trước dừng tại R89. Phạm vi thực hiện: đúng **1 retry OpenCode v2/B-01 của R-0089**, session/config/run mới, sau đó44slot D48-005…D48-048 chưa chạy theo order cũ. Không retry R39, CodexR87 hoặc PiR88. Không retry thêm nếu batch này gặp lỗi; provider/usage/infra stop vẫn dừng toàn batch. Task failure/timeout hợp lệ được giữ và tiếp theo stop policy cũ, không chọn lọc kết quả.
+
+Kế thừa [protocol continuation r2](PROTOCOL_47_CONTINUE_R2.md) và r1 về fixture/prompt/rubric, native settings/model/provider, isolation, pacing≥30s xuyên CLI, cap900s/reserve60s, request8/output2048, duration và classification. **Không sửa rubric r2 sau kết quả Pi9/10**; caveat evidence mutation giữ riêng. R89 vẫn infra_error/pending_review trong first-attempt table; retry là supplementary attempt, không thay bằng success nếu đạt. Báo unique slots và số attempts riêng, không gọi retry là independent repetition.
+
+Hai batch cũ có known estimate **0.21341376USD**, **2requestunpriced**; tổng charge unknown. Guard tổng vẫn **16USD estimate**, phần known-estimate còn **15.78658624USD**, áp ngay tại broker và slot gate. Không top-up hoặc tăng cap. Việc user explicit yêu cầu retry/continue cho phép mở latch của batch mới, không đổi missingusage cũ thành0. Nếu mới thiếu usage/provider lỗi thì stop, tổng charge tiếp tục null; không probe/gọi thử ngoài45attempts được duyệt.
+
+Reserve45IDs mới từ registry dưới lock; dự kiến R134–178/C235–279 nếu counters chưa đổi. Giữ toàn bộ reserved/not_run IDs hai batch cũ. Row đầu có `retry_of=R-0089`;44row suffix có lineage tới reserved/not_run của continuation trước. Sốslot unique vẫn48; tối đa49attempts toànbenchmark nếu chạy đủ45lượt mới. Không tái sử dụng ID/runtime hoặc nạp history/lời giải cũ.
+
+`retry_continue48.py` tái dùng nguyên `continue48.dispatch/context` và `batch48.run_batch`; chỉ thêm reviewed mixed schedule/approval/reservation/carry. Plan bind source/seal/prior raw/resource/order/counters. Offline tests và16native synthetic task×CLI acceptance trước approval; approval riêng bind scope/planhash/guard/unknown. Credential chỉ đọc sau validate, lock, fresh reserve. Sau lần reserve thứ3 runner từ chối tự mở lại schedule này; mọi attempt sau lỗi cần quyết định mới.

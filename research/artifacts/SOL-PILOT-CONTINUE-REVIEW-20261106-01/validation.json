@@ -1,0 +1,127 @@
+{
+  "runs": [
+    {
+      "run_id": "R-0018",
+      "tool": "codex",
+      "status": "success",
+      "validity": "valid",
+      "requests": 5,
+      "known_usage_estimated_cost_usd": "0.27390552",
+      "unpriced_requests": 0,
+      "scope_pass": true,
+      "public_pass": true,
+      "hidden_pass": true,
+      "changed_files": [
+        "intervals.py"
+      ]
+    },
+    {
+      "run_id": "R-0019",
+      "tool": "opencode-v2",
+      "status": "timeout",
+      "validity": "valid",
+      "requests": 5,
+      "known_usage_estimated_cost_usd": "0.0249816",
+      "unpriced_requests": 1,
+      "scope_pass": true,
+      "public_pass": true,
+      "hidden_pass": false,
+      "changed_files": []
+    }
+  ],
+  "gaps": [
+    {
+      "previous_run": "R-0018",
+      "next_run": "R-0018",
+      "seconds": 30.002031
+    },
+    {
+      "previous_run": "R-0018",
+      "next_run": "R-0018",
+      "seconds": 30.002639
+    },
+    {
+      "previous_run": "R-0018",
+      "next_run": "R-0018",
+      "seconds": 30.001985
+    },
+    {
+      "previous_run": "R-0018",
+      "next_run": "R-0018",
+      "seconds": 30.002476
+    },
+    {
+      "previous_run": "R-0018",
+      "next_run": "R-0019",
+      "seconds": 30.003446
+    },
+    {
+      "previous_run": "R-0019",
+      "next_run": "R-0019",
+      "seconds": 30.000737
+    },
+    {
+      "previous_run": "R-0019",
+      "next_run": "R-0019",
+      "seconds": 30.000981
+    },
+    {
+      "previous_run": "R-0019",
+      "next_run": "R-0019",
+      "seconds": 30.001139
+    },
+    {
+      "previous_run": "R-0019",
+      "next_run": "R-0019",
+      "seconds": 30.001309
+    }
+  ],
+  "all_gaps_ge_30": true,
+  "cross_cli_live_gap_seconds": [
+    30.003446
+  ],
+  "completed_responses": 9,
+  "requests_with_missing_terminal_usage": 1,
+  "remaining_slots_not_run": 5,
+  "stop_reason": "usage_missing",
+  "provider_stop_reason": "provider_failure",
+  "overload_evidence": "No explicit overload observed; final request TimeoutError/missing terminal at run deadline, root cause not established",
+  "reviewed_timeout": "R-0019 timeout under 300s including pacing; pending interpretation of environment/provider latency, not evidence of incorrect solution",
+  "environment_evidence": "R-0019 stdout tool_use glob: ripgrep execution failed; read/shell find recovered; no source edits",
+  "known_usage_estimated_cost_usd": "0.29888712",
+  "cumulative_known_usage_estimated_cost_usd": "0.40389912",
+  "cumulative_unpriced_requests": 2,
+  "estimated_total_usd": null,
+  "measured_charge_usd": null,
+  "source_protocol_pricing_seal_chain_binary_hashes_match": true,
+  "key_scan_pass": true,
+  "supervisor_pids_absent": true,
+  "broker_sockets_absent": true,
+  "matching_runtime_process_pids": [],
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "raw_artifact_sha256": {
+    "result.json": "2aef394a248850104579cac4821cebaf906ff6ae8da92f60ebc1fa02b6328030",
+    "protocol.json": "0bb1fe021a547d0b8f57b095c85fb84eeaf04f2c113b62e7c996b36835862f1c",
+    "R-0018/stdout.jsonl": "09cc440de92872bf72b0bc463efe2c9d7878927508daa5a387aaa1ee0a84271b",
+    "R-0018/result.json": "75f7d9d73c0fa276b9f66288935abf17aa766a7d0afe93ffab58276dd34ed2ae",
+    "R-0018/config.json": "a1101976b77db49cadd8b8d3dc761a2c42a1b650a16df760c41351eece66a483",
+    "R-0018/stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+    "R-0019/stdout.jsonl": "fb7b5e4eab268578c2f1487ebbaefa3e780708d88f743da5c2b1585feff8bc36",
+    "R-0019/result.json": "be1557f0677c40c3bc0885903723bd417ab6bce9d03dce50aec489c54267013e",
+    "R-0019/config.json": "cdc7150c44b0589ef98af4fed7719d5ce1635c801b9bafd47db6e1191ae4003b",
+    "R-0019/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "R-0018/grader/grading.json": "5996f82c88328bd9b8a660279442e54422ab63b1cad78b1868817659a2c27864",
+    "R-0018/grader/patch.diff": "695945302914d32c1de45efd46c29b9f1e07fe3a5b4feb0abe5fd36f8d2c8f1e",
+    "R-0018/grader/snapshot/intervals.py": "5004e99daa6aedadaedb36b9c312452cf8946fdde8f2dffee70fa8e9445139ec",
+    "R-0018/grader/snapshot/test_public.py": "8eb40ed38a8653c191c77eefa3a269efbd90a123775a9adb12d24cdd062661d6",
+    "R-0019/grader/grading.json": "9de884efd81308e85445cd747b1f2baceaa59e0583159deb68d2a2018c7bc046",
+    "R-0019/grader/patch.diff": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "R-0019/grader/snapshot/intervals.py": "c8de9a5897a04521f2f381cfab2ca073d98fde3a90f25546d25719348d612148",
+    "R-0019/grader/snapshot/test_public.py": "8eb40ed38a8653c191c77eefa3a269efbd90a123775a9adb12d24cdd062661d6"
+  }
+}

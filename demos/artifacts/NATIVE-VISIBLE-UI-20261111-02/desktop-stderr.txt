@@ -1,0 +1,13 @@
+[33:1111/143925.348325:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[33:1111/143925.348424:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[33:1111/143926.091007:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[33:1111/143926.091041:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+
+DevTools listening on ws://127.0.0.1:9333/devtools/browser/40dadbe9-2b70-4c6a-91a4-27ff276b91e2
+[33:1111/143926.115558:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[33:1111/143926.128961:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[33:1111/143926.129013:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[33:1111/143926.148214:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+Cannot open directory /etc/ssl/certs to load OpenSSL certificates.
+
+(ai.opencode:33): IBUS-WARNING **: 14:39:26.513: Unable to load /var/lib/dbus/machine-id: Failed to open file “/var/lib/dbus/machine-id”: No such file or directory

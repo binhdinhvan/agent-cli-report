@@ -1,0 +1,33 @@
+{
+  "task_id": "B-02",
+  "scope_ok": true,
+  "changed_files": [
+    "pagination.py"
+  ],
+  "invalid_paths": [],
+  "snapshot_sha256": {
+    "test_public.py": "18f4ea89162fcfc9762a059b4de6f9d01fbf22adf158393cde6cde316ddbf8e9",
+    "pagination.py": "d3626b5bda14443099b1217ad640ccdaea8ff9deb67d3c5f0572dd2aace7f401"
+  },
+  "suites": {
+    "public": {
+      "exit_code": 0,
+      "timed_out": false,
+      "output_limit_exceeded": false,
+      "duration_ms": 65,
+      "stdout": "",
+      "stderr": "test_distinct_records (test_public.PublicTests.test_distinct_records) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+    },
+    "hidden": {
+      "exit_code": 1,
+      "timed_out": false,
+      "output_limit_exceeded": false,
+      "duration_ms": 64,
+      "stdout": "",
+      "stderr": "test_duplicate_replaces_not_merges (__main__.AcceptanceTests.test_duplicate_replaces_not_merges) ... FAIL\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_no_mutation_and_shallow_copy (__main__.AcceptanceTests.test_no_mutation_and_shallow_copy) ... ok\ntest_one_shot (__main__.AcceptanceTests.test_one_shot) ... ok\ntest_randomized_contract (__main__.AcceptanceTests.test_randomized_contract) ... ok\n\n======================================================================\nFAIL: test_duplicate_replaces_not_merges (__main__.AcceptanceTests.test_duplicate_replaces_not_merges)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 13, in test_duplicate_replaces_not_merges\n    self.assertEqual(merge_pages([[{\"id\": \"b\", \"old\": 0}, {\"id\": \"a\"}, {\"id\": \"b\", \"new\": 1}],\nAssertionError: Lists differ: [{'id': 'b', 'old': 0, 'new': 1}, {'id': 'a', 'v': 3}, {'id': 'c'}] != [{'id': 'b', 'new': 1}, {'id': 'a', 'v': 3}, {'id': 'c'}]\n\nFirst differing element 0:\n{'id': 'b', 'old': 0, 'new': 1}\n{'id': 'b', 'new': 1}\n\n- [{'id': 'b', 'new': 1, 'old': 0}, {'id': 'a', 'v': 3}, {'id': 'c'}]\n?                      ----------\n\n+ [{'id': 'b', 'new': 1}, {'id': 'a', 'v': 3}, {'id': 'c'}]\n\n----------------------------------------------------------------------\nRan 5 tests in 0.002s\n\nFAILED (failures=1)\n"
+    }
+  },
+  "rubric": null,
+  "grader_duration_ms": 130,
+  "pass": false
+}

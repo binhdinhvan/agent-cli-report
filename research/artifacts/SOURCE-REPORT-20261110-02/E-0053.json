@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0053",
+    "comparison_axis": "architecture",
+    "tool": "OpenCode v2",
+    "version": "2.2.5",
+    "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+    "claim": "Promise SDK tạo EmbeddedHost và client với host.fetch; alias sessions/events và close/asyncDispose",
+    "file": "packages/sdk/src/promise.ts",
+    "line_start": "34",
+    "line_end": "68",
+    "symbol": "PromiseSdk.create",
+    "permalink": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/sdk/src/promise.ts#L34-L68",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Chỉ truy vết đường ghép SDK; chưa thực thi embedded host"
+  },
+  "source_sha256": "24b7100811827828d0e131b67b642254bc9cc808a0f911a9c165f28e9cd6c026",
+  "excerpt": "export async function create(options: CreateOptions = {}, embed: EmbeddedHost.EmbedOptions = {}): Promise<Interface> {\n  const { plugins, instances, ...hostOptions } = options\n  const host = await Effect.runPromise(\n    EmbeddedHost.create(\n      {\n        ...hostOptions,\n        plugins: await adaptPlugins(plugins),\n        instances: instances\n          ? {\n              key: (session) => instances.key(Schema.encodeSync(Session.Info)(session)),\n              configure: (key) =>\n                Effect.gen(function* () {\n                  const { PluginPromise } = yield* Effect.promise(() => import(\"@opencode/core/plugin/promise\"))\n                  const configuration = yield* Effect.tryPromise(async () => instances.configure(key))\n                  return { plugins: configuration.plugins.map(PluginPromise.fromPromise) }\n                }),\n            }\n          : undefined,\n      },\n      embed,\n    ),\n  )\n  const client = OpenCode.make({ baseUrl: \"http://opencode.local\", fetch: host.fetch })\n  const register = async (plugin: Plugin.Plugin) => {\n    const { PluginPromise } = await import(\"@opencode/core/plugin/promise\")\n    return host.runtime.runPromise(host.plugins.register(PluginPromise.fromPromise(plugin)))\n  }\n  return {\n    ...client,\n    sessions: client.session,\n    events: client.event,\n    plugin: Object.assign(register, client.plugin),\n    close: host.close,\n    [Symbol.asyncDispose]: host.close,\n  }"
+}

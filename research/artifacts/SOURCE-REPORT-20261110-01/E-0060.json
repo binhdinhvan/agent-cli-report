@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0060",
+    "comparison_axis": "provider",
+    "tool": "Codex CLI",
+    "version": "0.167.0",
+    "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+    "claim": "Nhánh Responses Lite đưa additional_tools vào input và không dùng field tools top-level",
+    "file": "codex-rs/core/src/client.rs",
+    "line_start": "1051",
+    "line_end": "1085",
+    "symbol": "build_responses_request",
+    "permalink": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/client.rs#L1051-L1085",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Chỉ giữ bằng chứng source; runtime model cũ đã xóa theo yêu cầu; không suy runtime support của sol từ source"
+  },
+  "source_sha256": "662cf64d10f4b0d7eaf3ad046e53b1eb6dcf8dfb3cb5a425a3c8c222adc05da5",
+  "excerpt": "        let is_openai = self.state.provider.info().is_openai();\n        // These prompt-only items are rebuilt on every request. Hash their visible payloads\n        // within the thread so retries and resumed sessions preserve their identity.\n        let prefix_namespace = Uuid::new_v5(\n            &Uuid::NAMESPACE_OID,\n            self.state.thread_id.to_string().as_bytes(),\n        );\n        let mut prefix = Vec::new();\n        let tools = if model_info.use_responses_lite {\n            if !prompt.tools.is_empty() {\n                let tools = create_tools_json_for_responses_lite(&prompt.tools)?;\n                prefix.push(ResponseItem::AdditionalTools {\n                    id: Some(ResponseItemId::with_suffix(\n                        \"at\",\n                        Uuid::new_v5(&prefix_namespace, &serde_json::to_vec(&tools)?),\n                    )),\n                    role: \"developer\".to_string(),\n                    tools: Arc::from(tools),\n                });\n            }\n            None\n        } else {\n            Some(create_tools_raw_json_for_responses_api(&prompt.tools)?.into())\n        };\n        if !prompt.base_instructions.text.is_empty() {\n            let mut instructions = ContextualUserFragment::into(BaseInstructionsFragment(\n                prompt.base_instructions.text.clone(),\n            ));\n            instructions.set_id(Some(ResponseItemId::with_suffix(\n                \"msg\",\n                Uuid::new_v5(&prefix_namespace, prompt.base_instructions.text.as_bytes()),\n            )));\n            prefix.push(instructions);\n        }\n        input.splice(0..0, prefix);"
+}

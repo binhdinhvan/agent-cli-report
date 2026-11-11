@@ -1,0 +1,29 @@
+{
+  "supervisor_host_pid": 85011,
+  "exit_code": 0,
+  "timed_out": false,
+  "output_limit_exceeded": false,
+  "duration_ms": 6231,
+  "outer_started_monotonic": 8411.083927082,
+  "outer_finished_monotonic": 8417.314535049,
+  "broker_deadline_monotonic": 9311.083927082,
+  "outer_watchdog_deadline_monotonic": 8501.083927082,
+  "native_clock": {
+    "started_monotonic": 8411.16283572,
+    "finished_monotonic": 8416.860502616,
+    "duration_ms": 5698
+  },
+  "witness": {
+    "project_writable": true,
+    "immutable_readonly": {
+      "aliases.py": true,
+      "defaults.py": true,
+      "resolver.py": true,
+      "test_public.py": true
+    },
+    "hidden_absent": true,
+    "home_hidden": true,
+    "net_namespace": "net:[4026533828]",
+    "provider_key_env_absent": true
+  }
+}

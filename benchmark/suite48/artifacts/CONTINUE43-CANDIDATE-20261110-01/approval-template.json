@@ -1,0 +1,11 @@
+{
+  "launch_authorized": false,
+  "plan_sha256": "06dd6a62cdd0deb2ea436b2426f2e811e34b7202d7b2ebb03ba635c26022742c",
+  "scope": "43-not-run-slots-only-no-retry-R135-rubric-r2",
+  "budget_estimate_usd": "16",
+  "prior_unpriced_acknowledged": false,
+  "retries_authorized": false,
+  "rubric_revision": "b01-evidence-r2",
+  "approved_by": null,
+  "approved_at_utc": null
+}

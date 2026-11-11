@@ -1,0 +1,2731 @@
+{
+  "mode": "subagent",
+  "requests": [
+    {
+      "model": "gpt-6.1-sol",
+      "input": [
+        {
+          "role": "developer",
+          "content": "You are an AI agent powered by OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available.\n\n# Harness\n- Responses are rendered as GitHub-flavored Markdown.\n- `<system-reminder>` blocks are harness instructions, not user-authored content. Read and follow them.\n- Prefer parallelizing independent tool calls.\n- Do not use a skill based solely on keywords, superficial relevance, or its availability. Avoid re-reading skills already available in the conversation unless needed.\n- Prefer dedicated tools over shell commands; fall back to the shell when a tool cannot do what you need.\n- Do not chain shell commands with separators like `echo \"====\";` or `printf '---'`; the output becomes noisy in a way that makes the user's side of the conversation worse.\n\n# Communication\n\nState the main point clearly and early. Keep responses clear and concise, and avoid unnecessary technical jargon. Use only as much structure as needed, and include technical detail only when it helps the conversation. Use clear file paths when referring to files.\n\nWhen describing your work, avoid adding what you won't do, what will remain unchanged, or how you'll separate or categorize results. Do not introduce unprompted alternatives through framing such as \"X, not Y\" or \"This isn't about X. It's about Y.\"\n\n## Autonomy\n\nInfer the user's intent and your task scope from their instructions and the prior conversation context. You should bias towards action and carry out the user's intended task until it is completed. If the intent is unclear, progress towards the goal using the available information and ask for clarification while continuing independent work when possible.\n\nWhen the user's prompt indicates a request for action, such as \"can you...\", \"I want to...\", \"help me...\" and similar expressions, treat these as instructions to take action. Do not stop at acknowledging capability (e.g. \"Yes…\"), proposing a plan, or offering to continue. Do not settle for a partial or \"helpful enough\" solution to save time, effort, or tokens. Continue until the user's intended goal is fulfilled, even when it requires sustained work.\n\n## Intermediate Commentary\n\nAs you work, you send messages to the commentary channel. These are how you collaborate with the user while you work: stating assumptions and providing updates. Keep them concise and quickly scannable, and send them only when they add real information, such as a discovery, a tradeoff, or a blocker. Do not narrate routine reads, searches, or edits.\n\nBy default, treat new messages received during ongoing work as steering the active task rather than replacing it. Incorporate corrections and constraints, and answer questions briefly in commentary before continuing. Replace the task only when the user clearly cancels it or requests an incompatible objective.\n\nDo not put a final response, such as a blocking or clarifying question, in the commentary channel. The final answer must always be fully self-contained.\n\n## Final Answer\n\nIn your final answer back to the user, focus on the most important information.\n\n# Working in codebases\n\n- Keep changes consistent with the structure, naming, style, and patterns of the surrounding code.\n- Treat unfamiliar files or changes as potential user work and investigate before deleting or overwriting them.\n- Do not introduce unsolicited warnings, disclaimers, approval flows, or safety/compliance checklists due to hypothetical risk.\n- Do not write tests for reversible, low-impact changes or that mirror the implementation. If you do choose to verify your work with tests, make sure that the tests are meaningful and necessary to verify implementation.\n- Run tests appropriate to the change and complete required checks. Once those pass, broaden or repeat testing only when new changes, failures, or unresolved concerns justify it; otherwise, continue toward completing the task.\n\n\n# Delegation\n\nDo not spawn subagents unless the user or applicable AGENTS.md/skill instructions explicitly ask for subagents, delegation, or parallel agent work.\n\nYou are powered by the model named gpt-6.1-sol. The exact model ID is openai/gpt-6.1-sol\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project\n  Workspace root folder: /\n  Is directory a git repo: no\n  Platform: linux\n  Today's date: Wed Nov 11 2026\n</env>"
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Launch scripted child in background then return parent marker."
+            }
+          ]
+        }
+      ],
+      "store": false,
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "prompt_cache_key": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+      "tools": [
+        {
+          "type": "function",
+          "name": "bash",
+          "description": "Executes a given bash command in a persistent shell session with optional timeout, ensuring proper handling and security measures.\n\nBe aware: OS: linux, Shell: sh\n\nAll commands run in the current working directory by default. Use the `workdir` parameter if you need to run a command in a different directory. AVOID using `cd <directory> && <command>` patterns - use `workdir` instead.\n\nUse `/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/tmp/opencode` for temporary work outside the workspace. This directory has already been created, already exists, and is pre-approved for external directory access.\n\nIMPORTANT: This tool is for terminal operations like git, npm, docker, etc. DO NOT use it for file operations (reading, writing, editing, searching, finding files) - use the specialized tools for this instead.\n\nBefore executing the command, please follow these steps:\n\n1. Directory Verification:\n   - If the command will create new directories or files, first use `ls` to verify the parent directory exists and is the correct location\n   - For example, before running \"mkdir foo/bar\", first use `ls foo` to check that \"foo\" exists and is the intended parent directory\n\n2. Command Execution:\n   - Always quote file paths that contain spaces with double quotes (e.g., rm \"path with spaces/file.txt\")\n   - Examples of proper quoting:\n     - mkdir \"/Users/name/My Documents\" (correct)\n     - mkdir /Users/name/My Documents (incorrect - will fail)\n     - python \"/path/with spaces/script.py\" (correct)\n     - python /path/with spaces/script.py (incorrect - will fail)\n   - After ensuring proper quoting, execute the command.\n   - Capture the output of the command.\n\nUsage notes:\n  - The command argument is required.\n  - You can specify an optional timeout in milliseconds. If not specified, commands will time out after 120000ms.\n  - If the output exceeds 2000 lines or 51200 bytes, it will be truncated and the full output will be written to a file. You can use Read with offset/limit to read specific sections or Grep to search the full content. Do NOT use `head`, `tail`, or other truncation commands to limit output; the full output will already be captured to a file for more precise searching.\n\n  - Avoid using Bash with the `find`, `grep`, `cat`, `head`, `tail`, `sed`, `awk`, or `echo` commands, unless explicitly instructed or when these commands are truly necessary for the task. Instead, always prefer using the dedicated tools for these commands:\n    - File search: Use Glob (NOT find or ls)\n    - Content search: Use Grep (NOT grep or rg)\n    - Read files: Use Read (NOT cat/head/tail)\n    - Edit files: Use Edit (NOT sed/awk)\n    - Write files: Use Write (NOT echo >/cat <<EOF)\n    - Communication: Output text directly (NOT echo/printf)\n  - When issuing multiple commands:\n    - If the commands are independent and can run in parallel, make multiple bash tool calls in a single message. For example, if you need to run \"git status\" and \"git diff\", send a single message with two bash tool calls in parallel.\n    - If the commands depend on each other and must run sequentially, use a single Bash call with '&&' to chain them together (e.g., `git add . && git commit -m \"message\" && git push`). For instance, if one operation must complete before another starts (like mkdir before cp, Write before Bash for git operations, or git add before git commit), run these operations sequentially instead.\n    - Use ';' only when you need to run commands sequentially but don't care if earlier commands fail\n    - DO NOT use newlines to separate commands (newlines are ok in quoted strings)\n  - AVOID using `cd <directory> && <command>`. Use the `workdir` parameter to change directories instead.\n    <good-example>\n    Use workdir=\"/foo/bar\" with command: pytest tests\n    </good-example>\n    <bad-example>\n    cd /foo/bar && pytest tests\n    </bad-example>\n\n# Git and GitHub\n- Only commit, amend, push, or create PRs when explicitly requested.\n- Before committing, inspect `git status`, `git diff`, and `git log --oneline -10`; stage only intended files and never commit secrets.\n- Write a concise commit message that matches the repo style.\n- Do not update git config, skip hooks, use interactive `-i`, force-push, or create empty commits unless explicitly requested.\n- If a commit fails or hooks reject it, fix the issue and create a new commit; do not amend the failed commit.\n- Before creating a PR, inspect status, diff, remote tracking, recent commits, and the diff from the base branch.\n- Review all commits included in the PR, not just the latest commit.\n- Use `gh` for GitHub tasks, including PRs, issues, checks, and releases; return the PR URL when done.\n",
+          "parameters": {
+            "properties": {
+              "command": {
+                "description": "The command to execute",
+                "type": "string"
+              },
+              "timeout": {
+                "description": "Optional timeout in milliseconds",
+                "type": "integer"
+              },
+              "workdir": {
+                "description": "The working directory to run the command in. Defaults to the current directory. Use this instead of 'cd' commands.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "command"
+            ],
+            "type": "object"
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "task",
+          "description": "Launch a new agent to handle complex, multistep tasks autonomously.\n\nWhen using the Task tool, you must specify a subagent_type parameter to select which agent type to use.\n\nWhen NOT to use the Task tool:\n- If you want to read a specific file path, use the Read or Glob tool instead of the Task tool, to find the match more quickly\n- If you are searching for a specific class definition like \"class Foo\", use the Grep tool instead, to find the match more quickly\n- If you are searching for code within a specific file or set of 2-3 files, use the Read tool instead of the Task tool, to find the match more quickly\n- If no available agent is a good fit for the task, use other tools directly\n\n\nUsage notes:\n1. Launch multiple agents concurrently whenever possible, to maximize performance; to do that, use a single message with multiple tool uses\n2. Once you have delegated work to an agent, do not duplicate that work yourself. Continue with non-overlapping tasks, or wait for the result. For background tasks, you will be notified automatically when the result is ready.\n3. When the agent is done, it will return a single message back to you. The result returned by the agent is not visible to the user. To show the user the result, you should send a text message back to the user with a concise summary of the result. The output includes a task_id you can reuse later to continue the same subagent session.\n4. Each agent invocation starts with a fresh context unless you provide task_id to resume the same subagent session (which continues with its previous messages and tool outputs). When starting fresh, your prompt should contain a highly detailed task description for the agent to perform autonomously and you should specify exactly what information the agent should return back to you in its final and only message to you.\n5. The agent's outputs should generally be trusted\n6. Clearly tell the agent whether you expect it to write code or just to do research (search, file reads, web fetches, etc.), since it is not aware of the user's intent. Tell it how to verify its work if possible (e.g., relevant test commands).\n7. If the agent description mentions that it should be used proactively, then you should try your best to use it without the user having to ask for it first. Use your judgement.\n\n\nBackground mode: background=true launches the subagent asynchronously and returns immediately. Foreground is the default; use it when you need the result before continuing. Use background only for independent work that can run while you continue elsewhere. You will be notified automatically when it finishes.\nAvailable agent types and the tools they have access to:\n- explore: Fast agent specialized for exploring codebases. Use this when you need to quickly find files by patterns (eg. \"src/components/**/*.tsx\"), search code for keywords (eg. \"API endpoints\"), or answer questions about the codebase (eg. \"how do API endpoints work?\"). When calling this agent, specify the desired thoroughness level: \"quick\" for basic searches, \"medium\" for moderate exploration, or \"very thorough\" for comprehensive analysis across multiple locations and naming conventions.\n- general: General-purpose agent for researching complex questions and executing multi-step tasks. Use this agent to execute multiple units of work in parallel.\n- report_child: Bounded research child",
+          "parameters": {
+            "properties": {
+              "description": {
+                "description": "A short (3-5 words) description of the task",
+                "type": "string"
+              },
+              "prompt": {
+                "description": "The task for the agent to perform",
+                "type": "string"
+              },
+              "subagent_type": {
+                "description": "The type of specialized agent to use for this task",
+                "type": "string"
+              },
+              "task_id": {
+                "description": "This should only be set if you mean to resume a previous task (you can pass a prior task_id and the task will continue the same subagent session as before instead of creating a fresh one)",
+                "type": "string"
+              },
+              "command": {
+                "description": "The command that triggered this task",
+                "type": "string"
+              },
+              "background": {
+                "description": "Run the agent in the background. You will be notified when it completes. DO NOT sleep, poll, or proactively check on its progress",
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "description",
+              "prompt",
+              "subagent_type"
+            ],
+            "type": "object"
+          },
+          "strict": false
+        }
+      ],
+      "tool_choice": "auto",
+      "stream": true
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "input": [
+        {
+          "role": "developer",
+          "content": "You are an AI agent powered by OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available.\n\n# Harness\n- Responses are rendered as GitHub-flavored Markdown.\n- `<system-reminder>` blocks are harness instructions, not user-authored content. Read and follow them.\n- Prefer parallelizing independent tool calls.\n- Do not use a skill based solely on keywords, superficial relevance, or its availability. Avoid re-reading skills already available in the conversation unless needed.\n- Prefer dedicated tools over shell commands; fall back to the shell when a tool cannot do what you need.\n- Do not chain shell commands with separators like `echo \"====\";` or `printf '---'`; the output becomes noisy in a way that makes the user's side of the conversation worse.\n\n# Communication\n\nState the main point clearly and early. Keep responses clear and concise, and avoid unnecessary technical jargon. Use only as much structure as needed, and include technical detail only when it helps the conversation. Use clear file paths when referring to files.\n\nWhen describing your work, avoid adding what you won't do, what will remain unchanged, or how you'll separate or categorize results. Do not introduce unprompted alternatives through framing such as \"X, not Y\" or \"This isn't about X. It's about Y.\"\n\n## Autonomy\n\nInfer the user's intent and your task scope from their instructions and the prior conversation context. You should bias towards action and carry out the user's intended task until it is completed. If the intent is unclear, progress towards the goal using the available information and ask for clarification while continuing independent work when possible.\n\nWhen the user's prompt indicates a request for action, such as \"can you...\", \"I want to...\", \"help me...\" and similar expressions, treat these as instructions to take action. Do not stop at acknowledging capability (e.g. \"Yes…\"), proposing a plan, or offering to continue. Do not settle for a partial or \"helpful enough\" solution to save time, effort, or tokens. Continue until the user's intended goal is fulfilled, even when it requires sustained work.\n\n## Intermediate Commentary\n\nAs you work, you send messages to the commentary channel. These are how you collaborate with the user while you work: stating assumptions and providing updates. Keep them concise and quickly scannable, and send them only when they add real information, such as a discovery, a tradeoff, or a blocker. Do not narrate routine reads, searches, or edits.\n\nBy default, treat new messages received during ongoing work as steering the active task rather than replacing it. Incorporate corrections and constraints, and answer questions briefly in commentary before continuing. Replace the task only when the user clearly cancels it or requests an incompatible objective.\n\nDo not put a final response, such as a blocking or clarifying question, in the commentary channel. The final answer must always be fully self-contained.\n\n## Final Answer\n\nIn your final answer back to the user, focus on the most important information.\n\n# Working in codebases\n\n- Keep changes consistent with the structure, naming, style, and patterns of the surrounding code.\n- Treat unfamiliar files or changes as potential user work and investigate before deleting or overwriting them.\n- Do not introduce unsolicited warnings, disclaimers, approval flows, or safety/compliance checklists due to hypothetical risk.\n- Do not write tests for reversible, low-impact changes or that mirror the implementation. If you do choose to verify your work with tests, make sure that the tests are meaningful and necessary to verify implementation.\n- Run tests appropriate to the change and complete required checks. Once those pass, broaden or repeat testing only when new changes, failures, or unresolved concerns justify it; otherwise, continue toward completing the task.\n\n\n# Delegation\n\nDo not spawn subagents unless the user or applicable AGENTS.md/skill instructions explicitly ask for subagents, delegation, or parallel agent work.\n\nYou are powered by the model named gpt-6.1-sol. The exact model ID is openai/gpt-6.1-sol\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project\n  Workspace root folder: /\n  Is directory a git repo: no\n  Platform: linux\n  Today's date: Wed Nov 11 2026\n</env>"
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Launch scripted child in background then return parent marker."
+            }
+          ]
+        },
+        {
+          "type": "function_call",
+          "call_id": "call_v1_6",
+          "name": "task",
+          "arguments": "{\"description\":\"Research child marker\",\"prompt\":\"REPORT_V1_CHILD_SEED\",\"subagent_type\":\"report_child\",\"background\":true}"
+        },
+        {
+          "type": "function_call_output",
+          "call_id": "call_v1_6",
+          "output": "<task id=\"ses_e378cab5dffenORR6SGCQaMfJa\" state=\"running\">\n<summary>Background task started</summary>\n<task_result>\nThe task is working in the background. You will be notified automatically when it finishes.\nDO NOT sleep, poll for progress, ask the task for status, or duplicate this task's work — avoid working with the same files or topics it is using.\nWork on non-overlapping tasks, or briefly tell the user what you launched and end your response.\n</task_result>\n</task>"
+        }
+      ],
+      "store": false,
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "prompt_cache_key": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+      "tools": [
+        {
+          "type": "function",
+          "name": "bash",
+          "description": "Executes a given bash command in a persistent shell session with optional timeout, ensuring proper handling and security measures.\n\nBe aware: OS: linux, Shell: sh\n\nAll commands run in the current working directory by default. Use the `workdir` parameter if you need to run a command in a different directory. AVOID using `cd <directory> && <command>` patterns - use `workdir` instead.\n\nUse `/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/tmp/opencode` for temporary work outside the workspace. This directory has already been created, already exists, and is pre-approved for external directory access.\n\nIMPORTANT: This tool is for terminal operations like git, npm, docker, etc. DO NOT use it for file operations (reading, writing, editing, searching, finding files) - use the specialized tools for this instead.\n\nBefore executing the command, please follow these steps:\n\n1. Directory Verification:\n   - If the command will create new directories or files, first use `ls` to verify the parent directory exists and is the correct location\n   - For example, before running \"mkdir foo/bar\", first use `ls foo` to check that \"foo\" exists and is the intended parent directory\n\n2. Command Execution:\n   - Always quote file paths that contain spaces with double quotes (e.g., rm \"path with spaces/file.txt\")\n   - Examples of proper quoting:\n     - mkdir \"/Users/name/My Documents\" (correct)\n     - mkdir /Users/name/My Documents (incorrect - will fail)\n     - python \"/path/with spaces/script.py\" (correct)\n     - python /path/with spaces/script.py (incorrect - will fail)\n   - After ensuring proper quoting, execute the command.\n   - Capture the output of the command.\n\nUsage notes:\n  - The command argument is required.\n  - You can specify an optional timeout in milliseconds. If not specified, commands will time out after 120000ms.\n  - If the output exceeds 2000 lines or 51200 bytes, it will be truncated and the full output will be written to a file. You can use Read with offset/limit to read specific sections or Grep to search the full content. Do NOT use `head`, `tail`, or other truncation commands to limit output; the full output will already be captured to a file for more precise searching.\n\n  - Avoid using Bash with the `find`, `grep`, `cat`, `head`, `tail`, `sed`, `awk`, or `echo` commands, unless explicitly instructed or when these commands are truly necessary for the task. Instead, always prefer using the dedicated tools for these commands:\n    - File search: Use Glob (NOT find or ls)\n    - Content search: Use Grep (NOT grep or rg)\n    - Read files: Use Read (NOT cat/head/tail)\n    - Edit files: Use Edit (NOT sed/awk)\n    - Write files: Use Write (NOT echo >/cat <<EOF)\n    - Communication: Output text directly (NOT echo/printf)\n  - When issuing multiple commands:\n    - If the commands are independent and can run in parallel, make multiple bash tool calls in a single message. For example, if you need to run \"git status\" and \"git diff\", send a single message with two bash tool calls in parallel.\n    - If the commands depend on each other and must run sequentially, use a single Bash call with '&&' to chain them together (e.g., `git add . && git commit -m \"message\" && git push`). For instance, if one operation must complete before another starts (like mkdir before cp, Write before Bash for git operations, or git add before git commit), run these operations sequentially instead.\n    - Use ';' only when you need to run commands sequentially but don't care if earlier commands fail\n    - DO NOT use newlines to separate commands (newlines are ok in quoted strings)\n  - AVOID using `cd <directory> && <command>`. Use the `workdir` parameter to change directories instead.\n    <good-example>\n    Use workdir=\"/foo/bar\" with command: pytest tests\n    </good-example>\n    <bad-example>\n    cd /foo/bar && pytest tests\n    </bad-example>\n\n# Git and GitHub\n- Only commit, amend, push, or create PRs when explicitly requested.\n- Before committing, inspect `git status`, `git diff`, and `git log --oneline -10`; stage only intended files and never commit secrets.\n- Write a concise commit message that matches the repo style.\n- Do not update git config, skip hooks, use interactive `-i`, force-push, or create empty commits unless explicitly requested.\n- If a commit fails or hooks reject it, fix the issue and create a new commit; do not amend the failed commit.\n- Before creating a PR, inspect status, diff, remote tracking, recent commits, and the diff from the base branch.\n- Review all commits included in the PR, not just the latest commit.\n- Use `gh` for GitHub tasks, including PRs, issues, checks, and releases; return the PR URL when done.\n",
+          "parameters": {
+            "properties": {
+              "command": {
+                "description": "The command to execute",
+                "type": "string"
+              },
+              "timeout": {
+                "description": "Optional timeout in milliseconds",
+                "type": "integer"
+              },
+              "workdir": {
+                "description": "The working directory to run the command in. Defaults to the current directory. Use this instead of 'cd' commands.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "command"
+            ],
+            "type": "object"
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "task",
+          "description": "Launch a new agent to handle complex, multistep tasks autonomously.\n\nWhen using the Task tool, you must specify a subagent_type parameter to select which agent type to use.\n\nWhen NOT to use the Task tool:\n- If you want to read a specific file path, use the Read or Glob tool instead of the Task tool, to find the match more quickly\n- If you are searching for a specific class definition like \"class Foo\", use the Grep tool instead, to find the match more quickly\n- If you are searching for code within a specific file or set of 2-3 files, use the Read tool instead of the Task tool, to find the match more quickly\n- If no available agent is a good fit for the task, use other tools directly\n\n\nUsage notes:\n1. Launch multiple agents concurrently whenever possible, to maximize performance; to do that, use a single message with multiple tool uses\n2. Once you have delegated work to an agent, do not duplicate that work yourself. Continue with non-overlapping tasks, or wait for the result. For background tasks, you will be notified automatically when the result is ready.\n3. When the agent is done, it will return a single message back to you. The result returned by the agent is not visible to the user. To show the user the result, you should send a text message back to the user with a concise summary of the result. The output includes a task_id you can reuse later to continue the same subagent session.\n4. Each agent invocation starts with a fresh context unless you provide task_id to resume the same subagent session (which continues with its previous messages and tool outputs). When starting fresh, your prompt should contain a highly detailed task description for the agent to perform autonomously and you should specify exactly what information the agent should return back to you in its final and only message to you.\n5. The agent's outputs should generally be trusted\n6. Clearly tell the agent whether you expect it to write code or just to do research (search, file reads, web fetches, etc.), since it is not aware of the user's intent. Tell it how to verify its work if possible (e.g., relevant test commands).\n7. If the agent description mentions that it should be used proactively, then you should try your best to use it without the user having to ask for it first. Use your judgement.\n\n\nBackground mode: background=true launches the subagent asynchronously and returns immediately. Foreground is the default; use it when you need the result before continuing. Use background only for independent work that can run while you continue elsewhere. You will be notified automatically when it finishes.\nAvailable agent types and the tools they have access to:\n- explore: Fast agent specialized for exploring codebases. Use this when you need to quickly find files by patterns (eg. \"src/components/**/*.tsx\"), search code for keywords (eg. \"API endpoints\"), or answer questions about the codebase (eg. \"how do API endpoints work?\"). When calling this agent, specify the desired thoroughness level: \"quick\" for basic searches, \"medium\" for moderate exploration, or \"very thorough\" for comprehensive analysis across multiple locations and naming conventions.\n- general: General-purpose agent for researching complex questions and executing multi-step tasks. Use this agent to execute multiple units of work in parallel.\n- report_child: Bounded research child",
+          "parameters": {
+            "properties": {
+              "description": {
+                "description": "A short (3-5 words) description of the task",
+                "type": "string"
+              },
+              "prompt": {
+                "description": "The task for the agent to perform",
+                "type": "string"
+              },
+              "subagent_type": {
+                "description": "The type of specialized agent to use for this task",
+                "type": "string"
+              },
+              "task_id": {
+                "description": "This should only be set if you mean to resume a previous task (you can pass a prior task_id and the task will continue the same subagent session as before instead of creating a fresh one)",
+                "type": "string"
+              },
+              "command": {
+                "description": "The command that triggered this task",
+                "type": "string"
+              },
+              "background": {
+                "description": "Run the agent in the background. You will be notified when it completes. DO NOT sleep, poll, or proactively check on its progress",
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "description",
+              "prompt",
+              "subagent_type"
+            ],
+            "type": "object"
+          },
+          "strict": false
+        }
+      ],
+      "tool_choice": "auto",
+      "stream": true
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "input": [
+        {
+          "role": "developer",
+          "content": "REPORT_V1_CHILD_SYSTEM: return fixed child marker without tools.\nYou are powered by the model named gpt-6.1-sol. The exact model ID is openai/gpt-6.1-sol\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project\n  Workspace root folder: /\n  Is directory a git repo: no\n  Platform: linux\n  Today's date: Wed Nov 11 2026\n</env>"
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "REPORT_V1_CHILD_SEED"
+            }
+          ]
+        }
+      ],
+      "store": false,
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "prompt_cache_key": "ses_e378cab5dffenORR6SGCQaMfJa",
+      "stream": true
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_1c8735202001xXzZPLYlExqmgF",
+      "type": "server.connected",
+      "properties": {}
+    },
+    {
+      "id": "evt_1c8735208002wirdArxstQhyTQ",
+      "type": "session.created",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "slug": "gentle-sailor",
+          "version": "1.19.5",
+          "projectID": "global",
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "path": "tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "title": "report-v1-native-subagent",
+          "cost": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "reasoning": 0,
+            "cache": {
+              "read": 0,
+              "write": 0
+            }
+          },
+          "time": {
+            "created": 1794364363272,
+            "updated": 1794364363272
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c873521c001nFLYEgLBYkzlAl",
+      "type": "session.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "slug": "gentle-sailor",
+          "projectID": "global",
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "path": "tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "title": "report-v1-native-subagent",
+          "agent": "build",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "version": "1.19.5",
+          "cost": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "reasoning": 0,
+            "cache": {
+              "read": 0,
+              "write": 0
+            }
+          },
+          "time": {
+            "created": 1794364363272,
+            "updated": 1794364363291
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c873521f001EE6VhmUx8wddzk",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "msg_1c873521b001DmXsqVzecfNNJr",
+          "role": "user",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "time": {
+            "created": 1794364363291
+          },
+          "agent": "build",
+          "model": {
+            "providerID": "openai",
+            "modelID": "gpt-6.1-sol"
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735221001y9jJlFJWYBx6kF",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "part": {
+          "type": "text",
+          "text": "Launch scripted child in background then return parent marker.",
+          "messageID": "msg_1c873521b001DmXsqVzecfNNJr",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "id": "prt_1c873521f001xDph4G9dAScQZP"
+        },
+        "time": 1794364363297
+      }
+    },
+    {
+      "id": "evt_1c8735223001t31fGzZrkSbVFR",
+      "type": "session.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "slug": "gentle-sailor",
+          "projectID": "global",
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "path": "tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "title": "report-v1-native-subagent",
+          "agent": "build",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "version": "1.19.5",
+          "cost": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "reasoning": 0,
+            "cache": {
+              "read": 0,
+              "write": 0
+            }
+          },
+          "time": {
+            "created": 1794364363272,
+            "updated": 1794364363298
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735226001nAgd9XktAXS0nK",
+      "type": "session.status",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "status": {
+          "type": "busy"
+        }
+      }
+    },
+    {
+      "id": "evt_1c87353e4001Q5MZytWIVXT8Zl",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "msg_1c87353e4001kZDr9038C1ZPQs",
+          "parentID": "msg_1c873521b001DmXsqVzecfNNJr",
+          "role": "assistant",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+            "root": "/"
+          },
+          "cost": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "reasoning": 0,
+            "cache": {
+              "read": 0,
+              "write": 0
+            }
+          },
+          "modelID": "gpt-6.1-sol",
+          "providerID": "openai",
+          "time": {
+            "created": 1794364363748
+          },
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5"
+        }
+      }
+    },
+    {
+      "id": "evt_1c87353f4001emfNXZACUcBlr7",
+      "type": "session.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "slug": "gentle-sailor",
+          "projectID": "global",
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "path": "tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "title": "report-v1-native-subagent",
+          "agent": "build",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "version": "1.19.5",
+          "summary": {
+            "additions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "cost": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "reasoning": 0,
+            "cache": {
+              "read": 0,
+              "write": 0
+            }
+          },
+          "time": {
+            "created": 1794364363272,
+            "updated": 1794364363763
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c87353f5001sPcpDJ71Y600GX",
+      "type": "session.diff",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "diff": []
+      }
+    },
+    {
+      "id": "evt_1c87353f6001MzN6YXezzOP2UA",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "role": "user",
+          "time": {
+            "created": 1794364363291
+          },
+          "agent": "build",
+          "model": {
+            "providerID": "openai",
+            "modelID": "gpt-6.1-sol"
+          },
+          "id": "msg_1c873521b001DmXsqVzecfNNJr",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "summary": {
+            "diffs": []
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735406001W5A2xBaloolrBD",
+      "type": "plugin.added",
+      "properties": {
+        "id": "core/config-reference"
+      }
+    },
+    {
+      "id": "evt_1c8735407001REyDXHyXS77Yr7",
+      "type": "plugin.added",
+      "properties": {
+        "id": "agent"
+      }
+    },
+    {
+      "id": "evt_1c8735407002aPVMzAK9VJuN0W",
+      "type": "plugin.added",
+      "properties": {
+        "id": "command"
+      }
+    },
+    {
+      "id": "evt_1c8735408001ML6z2sE6wsJfGs",
+      "type": "plugin.added",
+      "properties": {
+        "id": "skill"
+      }
+    },
+    {
+      "id": "evt_1c8735409001mXIpK64EUoBuTq",
+      "type": "plugin.added",
+      "properties": {
+        "id": "models-dev"
+      }
+    },
+    {
+      "id": "evt_1c8735409002j3hMQXtljmTD1d",
+      "type": "plugin.added",
+      "properties": {
+        "id": "config-agent"
+      }
+    },
+    {
+      "id": "evt_1c8735409003ynQQ4yg4iUpTWt",
+      "type": "plugin.added",
+      "properties": {
+        "id": "config-command"
+      }
+    },
+    {
+      "id": "evt_1c873540a001pJrqUjZ7tBvCNT",
+      "type": "plugin.added",
+      "properties": {
+        "id": "config-skill"
+      }
+    },
+    {
+      "id": "evt_1c873540a002TWxH5a67nzfUGY",
+      "type": "plugin.added",
+      "properties": {
+        "id": "alibaba"
+      }
+    },
+    {
+      "id": "evt_1c873540a003fkdL2ayA0kzpqK",
+      "type": "plugin.added",
+      "properties": {
+        "id": "amazon-bedrock"
+      }
+    },
+    {
+      "id": "evt_1c873540b001Z1owv2IxQG7P7A",
+      "type": "plugin.added",
+      "properties": {
+        "id": "anthropic"
+      }
+    },
+    {
+      "id": "evt_1c873540b00201FrQdODSlePT6",
+      "type": "plugin.added",
+      "properties": {
+        "id": "azure-cognitive-services"
+      }
+    },
+    {
+      "id": "evt_1c873540f001lVNSdGa7mS8bu0",
+      "type": "plugin.added",
+      "properties": {
+        "id": "azure"
+      }
+    },
+    {
+      "id": "evt_1c873540f002DUXUQckSchoVaL",
+      "type": "plugin.added",
+      "properties": {
+        "id": "cerebras"
+      }
+    },
+    {
+      "id": "evt_1c87354100017U6C5cKxZ07Z1I",
+      "type": "plugin.added",
+      "properties": {
+        "id": "cloudflare-ai-gateway"
+      }
+    },
+    {
+      "id": "evt_1c8735410002AmD6dPin1eL81E",
+      "type": "plugin.added",
+      "properties": {
+        "id": "cloudflare-workers-ai"
+      }
+    },
+    {
+      "id": "evt_1c8735410003AJJtBSLHsxMjly",
+      "type": "plugin.added",
+      "properties": {
+        "id": "cohere"
+      }
+    },
+    {
+      "id": "evt_1c8735411001aZpeAauswSGOh7",
+      "type": "plugin.added",
+      "properties": {
+        "id": "deepinfra"
+      }
+    },
+    {
+      "id": "evt_1c8735411002gmCvswhMoCFvpR",
+      "type": "plugin.added",
+      "properties": {
+        "id": "gateway"
+      }
+    },
+    {
+      "id": "evt_1c8735411003u5SIXIj1Plz74V",
+      "type": "plugin.added",
+      "properties": {
+        "id": "github-copilot"
+      }
+    },
+    {
+      "id": "evt_1c8735411004CREfvyVnAy6lXG",
+      "type": "plugin.added",
+      "properties": {
+        "id": "gitlab"
+      }
+    },
+    {
+      "id": "evt_1c8735412001drPifk26UNVjbr",
+      "type": "plugin.added",
+      "properties": {
+        "id": "google"
+      }
+    },
+    {
+      "id": "evt_1c87354120027t6XMiVzHlokr7",
+      "type": "plugin.added",
+      "properties": {
+        "id": "google-vertex-anthropic"
+      }
+    },
+    {
+      "id": "evt_1c8735412003Ra6RIVvIQlLD3E",
+      "type": "plugin.added",
+      "properties": {
+        "id": "google-vertex"
+      }
+    },
+    {
+      "id": "evt_1c8735412004YPTfjRUzuBh40J",
+      "type": "plugin.added",
+      "properties": {
+        "id": "groq"
+      }
+    },
+    {
+      "id": "evt_1c8735422001PES4J615YmngnK",
+      "type": "plugin.added",
+      "properties": {
+        "id": "kilo"
+      }
+    },
+    {
+      "id": "evt_1c8735423001eDyAkm0UsJHAMM",
+      "type": "plugin.added",
+      "properties": {
+        "id": "llmgateway"
+      }
+    },
+    {
+      "id": "evt_1c8735423002BpUBkaKToz5Knl",
+      "type": "plugin.added",
+      "properties": {
+        "id": "mistral"
+      }
+    },
+    {
+      "id": "evt_1c8735423003W21d5TB7Eyklu1",
+      "type": "plugin.added",
+      "properties": {
+        "id": "nvidia"
+      }
+    },
+    {
+      "id": "evt_1c87354240019GQ55e8mF7ObG1",
+      "type": "plugin.added",
+      "properties": {
+        "id": "opencode"
+      }
+    },
+    {
+      "id": "evt_1c8735425001SyXg9PY1H6oQha",
+      "type": "plugin.added",
+      "properties": {
+        "id": "snowflake-cortex"
+      }
+    },
+    {
+      "id": "evt_1c8735425002cSQ2h57WKcdFuU",
+      "type": "plugin.added",
+      "properties": {
+        "id": "openai-compatible"
+      }
+    },
+    {
+      "id": "evt_1c8735425003IpmbCJRwY5uq44",
+      "type": "plugin.added",
+      "properties": {
+        "id": "openai"
+      }
+    },
+    {
+      "id": "evt_1c8735426001P50x8w8tztwZoj",
+      "type": "plugin.added",
+      "properties": {
+        "id": "openrouter"
+      }
+    },
+    {
+      "id": "evt_1c8735426002G6VDvZknsnJl6y",
+      "type": "plugin.added",
+      "properties": {
+        "id": "perplexity"
+      }
+    },
+    {
+      "id": "evt_1c8735426003XQ6Difs45yBrEi",
+      "type": "plugin.added",
+      "properties": {
+        "id": "sap-ai-core"
+      }
+    },
+    {
+      "id": "evt_1c8735426004nsWxj1leLmdIxY",
+      "type": "plugin.added",
+      "properties": {
+        "id": "togetherai"
+      }
+    },
+    {
+      "id": "evt_1c8735426005c42eyde3UlLeqk",
+      "type": "plugin.added",
+      "properties": {
+        "id": "vercel"
+      }
+    },
+    {
+      "id": "evt_1c873547a001L7yGFR99pQe5Fj",
+      "type": "catalog.updated",
+      "properties": {}
+    },
+    {
+      "id": "evt_1c873547a002U9ehdspUBgVDnV",
+      "type": "plugin.added",
+      "properties": {
+        "id": "venice"
+      }
+    },
+    {
+      "id": "evt_1c873547a003KKeta27psUruCn",
+      "type": "plugin.added",
+      "properties": {
+        "id": "xai"
+      }
+    },
+    {
+      "id": "evt_1c873547a0045XWLuZZm6N427p",
+      "type": "plugin.added",
+      "properties": {
+        "id": "zenmux"
+      }
+    },
+    {
+      "id": "evt_1c873547b00185e79XK9ewu5FG",
+      "type": "plugin.added",
+      "properties": {
+        "id": "dynamic-provider"
+      }
+    },
+    {
+      "id": "evt_1c873547c001Ng90bvssytXXm1",
+      "type": "plugin.added",
+      "properties": {
+        "id": "config-plugin"
+      }
+    },
+    {
+      "id": "evt_1c873547c002n07A5R7eA4OBaW",
+      "type": "plugin.added",
+      "properties": {
+        "id": "config-provider"
+      }
+    },
+    {
+      "id": "evt_1c873547c0031OB2Gnkz9wYI8y",
+      "type": "plugin.added",
+      "properties": {
+        "id": "variant"
+      }
+    },
+    {
+      "id": "evt_1c873547d001Bx3z3nNbmas1bT",
+      "type": "reference.updated",
+      "properties": {}
+    },
+    {
+      "id": "evt_1c8735480001IVtfd5wW85IY5r",
+      "type": "session.status",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "status": {
+          "type": "busy"
+        }
+      }
+    },
+    {
+      "id": "evt_1c873549b001VzxV42eQZHJJwa",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "part": {
+          "id": "prt_1c873549b001FI8RHo3oHqGY2C",
+          "messageID": "msg_1c87353e4001kZDr9038C1ZPQs",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "type": "step-start"
+        },
+        "time": 1794364363931
+      }
+    },
+    {
+      "id": "evt_1c873549d001b521sclf0pZjaS",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "part": {
+          "id": "prt_1c873549d001BqVMnk56OEaQ94",
+          "messageID": "msg_1c87353e4001kZDr9038C1ZPQs",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "type": "tool",
+          "tool": "task",
+          "callID": "call_v1_6",
+          "state": {
+            "status": "pending",
+            "input": {},
+            "raw": ""
+          }
+        },
+        "time": 1794364363933
+      }
+    },
+    {
+      "id": "evt_1c87354a2002yV8pt6Z1ymp8wd",
+      "type": "session.created",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "info": {
+          "id": "ses_e378cab5dffenORR6SGCQaMfJa",
+          "slug": "clever-eagle",
+          "version": "1.19.5",
+          "projectID": "global",
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "path": "tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "parentID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "title": "Research child marker (@report_child subagent)",
+          "agent": "report_child",
+          "permission": [
+            {
+              "permission": "todowrite",
+              "pattern": "*",
+              "action": "deny"
+            }
+          ],
+          "cost": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "reasoning": 0,
+            "cache": {
+              "read": 0,
+              "write": 0
+            }
+          },
+          "time": {
+            "created": 1794364363938,
+            "updated": 1794364363938
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c87354a4001yAfMOs18AsPg1s",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "part": {
+          "type": "tool",
+          "tool": "task",
+          "callID": "call_v1_6",
+          "state": {
+            "title": "Research child marker",
+            "metadata": {
+              "parentSessionId": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+              "sessionId": "ses_e378cab5dffenORR6SGCQaMfJa",
+              "model": {
+                "modelID": "gpt-6.1-sol",
+                "providerID": "openai"
+              },
+              "background": true
+            },
+            "status": "running",
+            "input": {
+              "description": "Research child marker",
+              "prompt": "REPORT_V1_CHILD_SEED",
+              "subagent_type": "report_child",
+              "background": true
+            },
+            "time": {
+              "start": 1794364363940
+            }
+          },
+          "id": "prt_1c873549d001BqVMnk56OEaQ94",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87353e4001kZDr9038C1ZPQs"
+        },
+        "time": 1794364363940
+      }
+    },
+    {
+      "id": "evt_1c87354a70010hm96l1Fk0Awbk",
+      "type": "session.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "info": {
+          "id": "ses_e378cab5dffenORR6SGCQaMfJa",
+          "slug": "clever-eagle",
+          "projectID": "global",
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "path": "tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "parentID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "title": "Research child marker (@report_child subagent)",
+          "agent": "report_child",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "version": "1.19.5",
+          "cost": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "reasoning": 0,
+            "cache": {
+              "read": 0,
+              "write": 0
+            }
+          },
+          "permission": [
+            {
+              "permission": "todowrite",
+              "pattern": "*",
+              "action": "deny"
+            }
+          ],
+          "time": {
+            "created": 1794364363938,
+            "updated": 1794364363942
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c87354a8001KeblhL2hyKLUo4",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "info": {
+          "id": "msg_1c87354a6001UAdjGvK6ZtirNu",
+          "role": "user",
+          "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+          "time": {
+            "created": 1794364363942
+          },
+          "agent": "report_child",
+          "model": {
+            "providerID": "openai",
+            "modelID": "gpt-6.1-sol"
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c87354a8002zrAzItbK1p12ob",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "part": {
+          "type": "text",
+          "text": "REPORT_V1_CHILD_SEED",
+          "messageID": "msg_1c87354a6001UAdjGvK6ZtirNu",
+          "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+          "id": "prt_1c87354a8001aF5TQ0UG8n4gLH"
+        },
+        "time": 1794364363944
+      }
+    },
+    {
+      "id": "evt_1c87354a9001ZbSi9LfEsedxfO",
+      "type": "session.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "info": {
+          "id": "ses_e378cab5dffenORR6SGCQaMfJa",
+          "slug": "clever-eagle",
+          "projectID": "global",
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "path": "tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "parentID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "title": "Research child marker (@report_child subagent)",
+          "agent": "report_child",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "version": "1.19.5",
+          "cost": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "reasoning": 0,
+            "cache": {
+              "read": 0,
+              "write": 0
+            }
+          },
+          "permission": [
+            {
+              "permission": "todowrite",
+              "pattern": "*",
+              "action": "deny"
+            }
+          ],
+          "time": {
+            "created": 1794364363938,
+            "updated": 1794364363945
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c87354ab001EFln1Q0OxeyICb",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "part": {
+          "type": "tool",
+          "tool": "task",
+          "callID": "call_v1_6",
+          "state": {
+            "title": "Research child marker",
+            "metadata": {
+              "parentSessionId": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+              "sessionId": "ses_e378cab5dffenORR6SGCQaMfJa",
+              "model": {
+                "modelID": "gpt-6.1-sol",
+                "providerID": "openai"
+              },
+              "background": true
+            },
+            "status": "running",
+            "input": {
+              "description": "Research child marker",
+              "prompt": "REPORT_V1_CHILD_SEED",
+              "subagent_type": "report_child",
+              "background": true
+            },
+            "time": {
+              "start": 1794364363940
+            }
+          },
+          "id": "prt_1c873549d001BqVMnk56OEaQ94",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87353e4001kZDr9038C1ZPQs",
+          "metadata": {
+            "openai": {
+              "itemId": "fc_v1_6"
+            }
+          }
+        },
+        "time": 1794364363947
+      }
+    },
+    {
+      "id": "evt_1c87354ad001Epnjmtm1UFVZxV",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "part": {
+          "type": "tool",
+          "tool": "task",
+          "callID": "call_v1_6",
+          "state": {
+            "status": "completed",
+            "input": {
+              "description": "Research child marker",
+              "prompt": "REPORT_V1_CHILD_SEED",
+              "subagent_type": "report_child",
+              "background": true
+            },
+            "output": "<task id=\"ses_e378cab5dffenORR6SGCQaMfJa\" state=\"running\">\n<summary>Background task started</summary>\n<task_result>\nThe task is working in the background. You will be notified automatically when it finishes.\nDO NOT sleep, poll for progress, ask the task for status, or duplicate this task's work — avoid working with the same files or topics it is using.\nWork on non-overlapping tasks, or briefly tell the user what you launched and end your response.\n</task_result>\n</task>",
+            "metadata": {
+              "parentSessionId": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+              "sessionId": "ses_e378cab5dffenORR6SGCQaMfJa",
+              "model": {
+                "modelID": "gpt-6.1-sol",
+                "providerID": "openai"
+              },
+              "background": true,
+              "jobId": "ses_e378cab5dffenORR6SGCQaMfJa",
+              "truncated": false
+            },
+            "title": "Research child marker",
+            "time": {
+              "start": 1794364363940,
+              "end": 1794364363949
+            }
+          },
+          "metadata": {
+            "openai": {
+              "itemId": "fc_v1_6"
+            }
+          },
+          "id": "prt_1c873549d001BqVMnk56OEaQ94",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87353e4001kZDr9038C1ZPQs"
+        },
+        "time": 1794364363949
+      }
+    },
+    {
+      "id": "evt_1c87354b00014QNWQLksxv0BqD",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "part": {
+          "id": "prt_1c87354b0001jKnv2DqjMLMhhj",
+          "reason": "tool-calls",
+          "messageID": "msg_1c87353e4001kZDr9038C1ZPQs",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "type": "step-finish",
+          "tokens": {
+            "total": 110,
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 20
+            }
+          },
+          "cost": 0.000262
+        },
+        "time": 1794364363952
+      }
+    },
+    {
+      "id": "evt_1c87354b1001N67ZECI2P5pc0p",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "msg_1c87353e4001kZDr9038C1ZPQs",
+          "parentID": "msg_1c873521b001DmXsqVzecfNNJr",
+          "role": "assistant",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+            "root": "/"
+          },
+          "cost": 0.000262,
+          "tokens": {
+            "total": 110,
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 20
+            }
+          },
+          "modelID": "gpt-6.1-sol",
+          "providerID": "openai",
+          "time": {
+            "created": 1794364363748,
+            "completed": 1794364363955
+          },
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "finish": "tool-calls"
+        }
+      }
+    },
+    {
+      "id": "evt_1c87354b3001ofnabnh2rVgi1d",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "msg_1c87353e4001kZDr9038C1ZPQs",
+          "parentID": "msg_1c873521b001DmXsqVzecfNNJr",
+          "role": "assistant",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+            "root": "/"
+          },
+          "cost": 0.000262,
+          "tokens": {
+            "total": 110,
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 20
+            }
+          },
+          "modelID": "gpt-6.1-sol",
+          "providerID": "openai",
+          "time": {
+            "created": 1794364363748,
+            "completed": 1794364363955
+          },
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "finish": "tool-calls"
+        }
+      }
+    },
+    {
+      "id": "evt_1c87354b4001aXfWtAc6RbcnNu",
+      "type": "session.status",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "status": {
+          "type": "busy"
+        }
+      }
+    },
+    {
+      "id": "evt_1c87354b5001fXw8DpB4w7ql56",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "msg_1c87354b50014wIHrJA2siKQ3l",
+          "parentID": "msg_1c873521b001DmXsqVzecfNNJr",
+          "role": "assistant",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+            "root": "/"
+          },
+          "cost": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "reasoning": 0,
+            "cache": {
+              "read": 0,
+              "write": 0
+            }
+          },
+          "modelID": "gpt-6.1-sol",
+          "providerID": "openai",
+          "time": {
+            "created": 1794364363957
+          },
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5"
+        }
+      }
+    },
+    {
+      "id": "evt_1c87354b9001EGNsJkDQFVzrb9",
+      "type": "integration.updated",
+      "properties": {}
+    },
+    {
+      "id": "evt_1c873550d001Hb2QIZtVqR4AQh",
+      "type": "catalog.updated",
+      "properties": {}
+    },
+    {
+      "id": "evt_1c873550e001yMARj5EscdrKcL",
+      "type": "session.status",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "status": {
+          "type": "busy"
+        }
+      }
+    },
+    {
+      "id": "evt_1c873550e002XndqyzQ8iwgrJy",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "info": {
+          "id": "msg_1c873550e001Ps4CVypVkh1cLn",
+          "parentID": "msg_1c87354a6001UAdjGvK6ZtirNu",
+          "role": "assistant",
+          "mode": "report_child",
+          "agent": "report_child",
+          "path": {
+            "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+            "root": "/"
+          },
+          "cost": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "reasoning": 0,
+            "cache": {
+              "read": 0,
+              "write": 0
+            }
+          },
+          "modelID": "gpt-6.1-sol",
+          "providerID": "openai",
+          "time": {
+            "created": 1794364364046
+          },
+          "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa"
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735511001ELqn6cbhH2zqRb",
+      "type": "session.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "slug": "gentle-sailor",
+          "projectID": "global",
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "path": "tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "title": "report-v1-native-subagent",
+          "agent": "build",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "version": "1.19.5",
+          "summary": {
+            "additions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "cost": 0.000262,
+          "tokens": {
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "read": 20,
+              "write": 0
+            }
+          },
+          "time": {
+            "created": 1794364363272,
+            "updated": 1794364364048
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c873551200131ubOl9Vrf0zpb",
+      "type": "session.diff",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "diff": []
+      }
+    },
+    {
+      "id": "evt_1c8735512002th1ygGWeeaNfw1",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "role": "user",
+          "time": {
+            "created": 1794364363291
+          },
+          "agent": "build",
+          "model": {
+            "providerID": "openai",
+            "modelID": "gpt-6.1-sol"
+          },
+          "summary": {
+            "diffs": []
+          },
+          "id": "msg_1c873521b001DmXsqVzecfNNJr",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5"
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735514001ijmvHMp2cHsoo2",
+      "type": "session.status",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "status": {
+          "type": "busy"
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735517001AJ0GCWHdXOD6SN",
+      "type": "session.status",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "status": {
+          "type": "busy"
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735518001tPA6C7YHLTw4L7",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "part": {
+          "id": "prt_1c87355180019w85J8eRT9WEI7",
+          "messageID": "msg_1c87354b50014wIHrJA2siKQ3l",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "type": "step-start"
+        },
+        "time": 1794364364056
+      }
+    },
+    {
+      "id": "evt_1c8735519001QAuAQaFI20Hw0B",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "part": {
+          "id": "prt_1c8735519001Y3fwB20aQNOtEx",
+          "messageID": "msg_1c87354b50014wIHrJA2siKQ3l",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "type": "text",
+          "text": "",
+          "time": {
+            "start": 1794364364057
+          },
+          "metadata": {
+            "openai": {
+              "itemId": "msg_v1_fixture"
+            }
+          }
+        },
+        "time": 1794364364057
+      }
+    },
+    {
+      "id": "evt_1c873551a001dOgz77y83qpY9k",
+      "type": "message.part.delta",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "messageID": "msg_1c87354b50014wIHrJA2siKQ3l",
+        "partID": "prt_1c8735519001Y3fwB20aQNOtEx",
+        "field": "text",
+        "delta": "REPORT_V1_PARENT_MARKER"
+      }
+    },
+    {
+      "id": "evt_1c873551b001zbOJ9e1xDI52lF",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "part": {
+          "id": "prt_1c8735519001Y3fwB20aQNOtEx",
+          "messageID": "msg_1c87354b50014wIHrJA2siKQ3l",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "type": "text",
+          "text": "REPORT_V1_PARENT_MARKER",
+          "time": {
+            "start": 1794364364057,
+            "end": 1794364364059
+          },
+          "metadata": {
+            "openai": {
+              "itemId": "msg_v1_fixture"
+            }
+          }
+        },
+        "time": 1794364364059
+      }
+    },
+    {
+      "id": "evt_1c873551c001RSikMbnGB858DU",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "part": {
+          "id": "prt_1c873551c001ynZsMFGNckKkdV",
+          "reason": "stop",
+          "messageID": "msg_1c87354b50014wIHrJA2siKQ3l",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "type": "step-finish",
+          "tokens": {
+            "total": 110,
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 20
+            }
+          },
+          "cost": 0.000262
+        },
+        "time": 1794364364060
+      }
+    },
+    {
+      "id": "evt_1c873551d001DKUVzhqjbjXHZ4",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "msg_1c87354b50014wIHrJA2siKQ3l",
+          "parentID": "msg_1c873521b001DmXsqVzecfNNJr",
+          "role": "assistant",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+            "root": "/"
+          },
+          "cost": 0.000262,
+          "tokens": {
+            "total": 110,
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 20
+            }
+          },
+          "modelID": "gpt-6.1-sol",
+          "providerID": "openai",
+          "time": {
+            "created": 1794364363957,
+            "completed": 1794364364062
+          },
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "finish": "stop"
+        }
+      }
+    },
+    {
+      "id": "evt_1c873551e0017CE2KIDY8g0y2G",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "msg_1c87354b50014wIHrJA2siKQ3l",
+          "parentID": "msg_1c873521b001DmXsqVzecfNNJr",
+          "role": "assistant",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+            "root": "/"
+          },
+          "cost": 0.000262,
+          "tokens": {
+            "total": 110,
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 20
+            }
+          },
+          "modelID": "gpt-6.1-sol",
+          "providerID": "openai",
+          "time": {
+            "created": 1794364363957,
+            "completed": 1794364364062
+          },
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "finish": "stop"
+        }
+      }
+    },
+    {
+      "id": "evt_1c873551f0019qXI6XnJTe6SK1",
+      "type": "session.status",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "status": {
+          "type": "busy"
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735520001rp6a4u5idqdul4",
+      "type": "session.status",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "status": {
+          "type": "idle"
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735520002IjeVTnIW0SHE5a",
+      "type": "session.idle",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5"
+      }
+    },
+    {
+      "id": "evt_1c8735522001XNmgzPsZdQYSBX",
+      "type": "session.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "info": {
+          "id": "ses_e378cab5dffenORR6SGCQaMfJa",
+          "slug": "clever-eagle",
+          "projectID": "global",
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "path": "tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "parentID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "title": "Research child marker (@report_child subagent)",
+          "agent": "report_child",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "version": "1.19.5",
+          "summary": {
+            "additions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "cost": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "reasoning": 0,
+            "cache": {
+              "read": 0,
+              "write": 0
+            }
+          },
+          "permission": [
+            {
+              "permission": "todowrite",
+              "pattern": "*",
+              "action": "deny"
+            }
+          ],
+          "time": {
+            "created": 1794364363938,
+            "updated": 1794364364066
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735523001TxHGGBpCIXEubm",
+      "type": "session.diff",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "diff": []
+      }
+    },
+    {
+      "id": "evt_1c8735524001bcEZy21dL74dMy",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "info": {
+          "role": "user",
+          "time": {
+            "created": 1794364363942
+          },
+          "agent": "report_child",
+          "model": {
+            "providerID": "openai",
+            "modelID": "gpt-6.1-sol"
+          },
+          "id": "msg_1c87354a6001UAdjGvK6ZtirNu",
+          "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+          "summary": {
+            "diffs": []
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735524002Z0oADj0sQRn1Vi",
+      "type": "session.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "slug": "gentle-sailor",
+          "projectID": "global",
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "path": "tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "title": "report-v1-native-subagent",
+          "agent": "build",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "version": "1.19.5",
+          "summary": {
+            "additions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "cost": 0.000524,
+          "tokens": {
+            "input": 160,
+            "output": 20,
+            "reasoning": 0,
+            "cache": {
+              "read": 40,
+              "write": 0
+            }
+          },
+          "time": {
+            "created": 1794364363272,
+            "updated": 1794364364068
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735525001MfCKWpF1zLVS3f",
+      "type": "session.diff",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "diff": []
+      }
+    },
+    {
+      "id": "evt_1c8735525002Z7hEUAa8YgNeEh",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "role": "user",
+          "time": {
+            "created": 1794364363291
+          },
+          "agent": "build",
+          "model": {
+            "providerID": "openai",
+            "modelID": "gpt-6.1-sol"
+          },
+          "summary": {
+            "diffs": []
+          },
+          "id": "msg_1c873521b001DmXsqVzecfNNJr",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5"
+        }
+      }
+    },
+    {
+      "id": "evt_1c873590b001ee9bgukzR7TSy7",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "part": {
+          "id": "prt_1c873590b0013mkSrpuHWx1eSz",
+          "messageID": "msg_1c873550e001Ps4CVypVkh1cLn",
+          "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+          "type": "step-start"
+        },
+        "time": 1794364365067
+      }
+    },
+    {
+      "id": "evt_1c873590d001OHULuIIpLdD4LY",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "part": {
+          "id": "prt_1c873590d001c6x0Qcjfr2dCDw",
+          "messageID": "msg_1c873550e001Ps4CVypVkh1cLn",
+          "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+          "type": "text",
+          "text": "",
+          "time": {
+            "start": 1794364365069
+          },
+          "metadata": {
+            "openai": {
+              "itemId": "msg_v1_fixture"
+            }
+          }
+        },
+        "time": 1794364365069
+      }
+    },
+    {
+      "id": "evt_1c873590e001jLBM17f2zrhNS2",
+      "type": "message.part.delta",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "messageID": "msg_1c873550e001Ps4CVypVkh1cLn",
+        "partID": "prt_1c873590d001c6x0Qcjfr2dCDw",
+        "field": "text",
+        "delta": "REPORT_V1_CHILD_MARKER"
+      }
+    },
+    {
+      "id": "evt_1c873590f001V4dqJP3LkOoqgE",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "part": {
+          "id": "prt_1c873590d001c6x0Qcjfr2dCDw",
+          "messageID": "msg_1c873550e001Ps4CVypVkh1cLn",
+          "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+          "type": "text",
+          "text": "REPORT_V1_CHILD_MARKER",
+          "time": {
+            "start": 1794364365069,
+            "end": 1794364365071
+          },
+          "metadata": {
+            "openai": {
+              "itemId": "msg_v1_fixture"
+            }
+          }
+        },
+        "time": 1794364365071
+      }
+    },
+    {
+      "id": "evt_1c8735910001UkFEHbyRu7ZrMW",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "part": {
+          "id": "prt_1c8735910001WTVGY43MYt3eY3",
+          "reason": "stop",
+          "messageID": "msg_1c873550e001Ps4CVypVkh1cLn",
+          "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+          "type": "step-finish",
+          "tokens": {
+            "total": 110,
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 20
+            }
+          },
+          "cost": 0.000262
+        },
+        "time": 1794364365072
+      }
+    },
+    {
+      "id": "evt_1c8735911001i4FSNswFRzO0I1",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "info": {
+          "id": "msg_1c873550e001Ps4CVypVkh1cLn",
+          "parentID": "msg_1c87354a6001UAdjGvK6ZtirNu",
+          "role": "assistant",
+          "mode": "report_child",
+          "agent": "report_child",
+          "path": {
+            "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+            "root": "/"
+          },
+          "cost": 0.000262,
+          "tokens": {
+            "total": 110,
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 20
+            }
+          },
+          "modelID": "gpt-6.1-sol",
+          "providerID": "openai",
+          "time": {
+            "created": 1794364364046,
+            "completed": 1794364365074
+          },
+          "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+          "finish": "stop"
+        }
+      }
+    },
+    {
+      "id": "evt_1c87359120017FcT6Ce67k14uv",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "info": {
+          "id": "msg_1c873550e001Ps4CVypVkh1cLn",
+          "parentID": "msg_1c87354a6001UAdjGvK6ZtirNu",
+          "role": "assistant",
+          "mode": "report_child",
+          "agent": "report_child",
+          "path": {
+            "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+            "root": "/"
+          },
+          "cost": 0.000262,
+          "tokens": {
+            "total": 110,
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 20
+            }
+          },
+          "modelID": "gpt-6.1-sol",
+          "providerID": "openai",
+          "time": {
+            "created": 1794364364046,
+            "completed": 1794364365074
+          },
+          "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+          "finish": "stop"
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735913001IL5Cx7KUZ1sSAp",
+      "type": "session.status",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "status": {
+          "type": "busy"
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735914001DVw5bJMVK8a7xm",
+      "type": "session.status",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "status": {
+          "type": "idle"
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735914002mM2I8yHolxewaS",
+      "type": "session.idle",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa"
+      }
+    },
+    {
+      "id": "evt_1c8735916001vrYU6Op7oFSLse",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "msg_1c8735916001GDj2doCKVSTiel",
+          "role": "user",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "time": {
+            "created": 1794364365078
+          },
+          "agent": "build",
+          "model": {
+            "providerID": "openai",
+            "modelID": "gpt-6.1-sol"
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c8735917001se1DAhRmB2Ntrc",
+      "type": "message.part.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "part": {
+          "type": "text",
+          "synthetic": true,
+          "text": "<task id=\"ses_e378cab5dffenORR6SGCQaMfJa\" state=\"completed\">\n<summary>Background task completed: Research child marker</summary>\n<task_result>\nREPORT_V1_CHILD_MARKER\n</task_result>\n</task>",
+          "messageID": "msg_1c8735916001GDj2doCKVSTiel",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "id": "prt_1c8735916002ZW3StcgWXqmazD"
+        },
+        "time": 1794364365079
+      }
+    },
+    {
+      "id": "evt_1c8735918001egqh2db5smwHOg",
+      "type": "session.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "slug": "gentle-sailor",
+          "projectID": "global",
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "path": "tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "title": "report-v1-native-subagent",
+          "agent": "build",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "version": "1.19.5",
+          "summary": {
+            "additions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "cost": 0.000524,
+          "tokens": {
+            "input": 160,
+            "output": 20,
+            "reasoning": 0,
+            "cache": {
+              "read": 40,
+              "write": 0
+            }
+          },
+          "time": {
+            "created": 1794364363272,
+            "updated": 1794364365080
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c873591a001Y71KNz7CbXGlTA",
+      "type": "session.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "info": {
+          "id": "ses_e378cab5dffenORR6SGCQaMfJa",
+          "slug": "clever-eagle",
+          "projectID": "global",
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "path": "tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "parentID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "title": "Research child marker (@report_child subagent)",
+          "agent": "report_child",
+          "model": {
+            "id": "gpt-6.1-sol",
+            "providerID": "openai",
+            "variant": "default"
+          },
+          "version": "1.19.5",
+          "summary": {
+            "additions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "cost": 0.000262,
+          "tokens": {
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "read": 20,
+              "write": 0
+            }
+          },
+          "permission": [
+            {
+              "permission": "todowrite",
+              "pattern": "*",
+              "action": "deny"
+            }
+          ],
+          "time": {
+            "created": 1794364363938,
+            "updated": 1794364365082
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c873591b001cm3cEXy54a2Gpj",
+      "type": "session.diff",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "diff": []
+      }
+    },
+    {
+      "id": "evt_1c873591b002zpZi4WBJm57BlX",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa",
+        "info": {
+          "role": "user",
+          "time": {
+            "created": 1794364363942
+          },
+          "agent": "report_child",
+          "model": {
+            "providerID": "openai",
+            "modelID": "gpt-6.1-sol"
+          },
+          "summary": {
+            "diffs": []
+          },
+          "id": "msg_1c87354a6001UAdjGvK6ZtirNu",
+          "sessionID": "ses_e378cab5dffenORR6SGCQaMfJa"
+        }
+      }
+    },
+    {
+      "id": "evt_1c873591c001yZ7tLo1qYxYZlQ",
+      "type": "session.status",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "status": {
+          "type": "busy"
+        }
+      }
+    },
+    {
+      "id": "evt_1c873591d001831CY3jh3CQWd9",
+      "type": "message.updated",
+      "properties": {
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "info": {
+          "id": "msg_1c873591d001c0t5xqpkH4IEVD",
+          "parentID": "msg_1c8735916001GDj2doCKVSTiel",
+          "role": "assistant",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+            "root": "/"
+          },
+          "cost": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "reasoning": 0,
+            "cache": {
+              "read": 0,
+              "write": 0
+            }
+          },
+          "modelID": "gpt-6.1-sol",
+          "providerID": "openai",
+          "time": {
+            "created": 1794364365085
+          },
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5"
+        }
+      }
+    }
+  ],
+  "turns": [],
+  "checks": {
+    "subscribed_before_prompt": true,
+    "native_background_task_returned": true,
+    "child_completion_in_parent": true,
+    "parent_continues_before_child": true
+  },
+  "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+  "parent_response": {
+    "info": {
+      "parentID": "msg_1c873521b001DmXsqVzecfNNJr",
+      "role": "assistant",
+      "mode": "build",
+      "agent": "build",
+      "path": {
+        "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+        "root": "/"
+      },
+      "cost": 0.000262,
+      "tokens": {
+        "total": 110,
+        "input": 80,
+        "output": 10,
+        "reasoning": 0,
+        "cache": {
+          "write": 0,
+          "read": 20
+        }
+      },
+      "modelID": "gpt-6.1-sol",
+      "providerID": "openai",
+      "time": {
+        "created": 1794364363957,
+        "completed": 1794364364062
+      },
+      "finish": "stop",
+      "id": "msg_1c87354b50014wIHrJA2siKQ3l",
+      "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5"
+    },
+    "parts": [
+      {
+        "type": "step-start",
+        "id": "prt_1c87355180019w85J8eRT9WEI7",
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "messageID": "msg_1c87354b50014wIHrJA2siKQ3l"
+      },
+      {
+        "type": "text",
+        "text": "REPORT_V1_PARENT_MARKER",
+        "time": {
+          "start": 1794364364057,
+          "end": 1794364364059
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "msg_v1_fixture"
+          }
+        },
+        "id": "prt_1c8735519001Y3fwB20aQNOtEx",
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "messageID": "msg_1c87354b50014wIHrJA2siKQ3l"
+      },
+      {
+        "reason": "stop",
+        "type": "step-finish",
+        "tokens": {
+          "total": 110,
+          "input": 80,
+          "output": 10,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 20
+          }
+        },
+        "cost": 0.000262,
+        "id": "prt_1c873551c001ynZsMFGNckKkdV",
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "messageID": "msg_1c87354b50014wIHrJA2siKQ3l"
+      }
+    ]
+  },
+  "parent_marker_at": 1598.184537,
+  "parent_messages_before": [
+    {
+      "info": {
+        "id": "msg_1c873521b001DmXsqVzecfNNJr",
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "role": "user",
+        "time": {
+          "created": 1794364363291
+        },
+        "summary": {
+          "diffs": []
+        },
+        "agent": "build",
+        "model": {
+          "providerID": "openai",
+          "modelID": "gpt-6.1-sol"
+        }
+      },
+      "parts": [
+        {
+          "id": "prt_1c873521f001xDph4G9dAScQZP",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c873521b001DmXsqVzecfNNJr",
+          "type": "text",
+          "text": "Launch scripted child in background then return parent marker."
+        }
+      ]
+    },
+    {
+      "info": {
+        "id": "msg_1c87353e4001kZDr9038C1ZPQs",
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "role": "assistant",
+        "time": {
+          "created": 1794364363748,
+          "completed": 1794364363955
+        },
+        "parentID": "msg_1c873521b001DmXsqVzecfNNJr",
+        "modelID": "gpt-6.1-sol",
+        "providerID": "openai",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "root": "/"
+        },
+        "cost": 0.000262,
+        "tokens": {
+          "total": 110,
+          "input": 80,
+          "output": 10,
+          "reasoning": 0,
+          "cache": {
+            "read": 20,
+            "write": 0
+          }
+        },
+        "finish": "tool-calls"
+      },
+      "parts": [
+        {
+          "id": "prt_1c873549b001FI8RHo3oHqGY2C",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87353e4001kZDr9038C1ZPQs",
+          "type": "step-start"
+        },
+        {
+          "id": "prt_1c873549d001BqVMnk56OEaQ94",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87353e4001kZDr9038C1ZPQs",
+          "type": "tool",
+          "callID": "call_v1_6",
+          "tool": "task",
+          "state": {
+            "status": "completed",
+            "input": {
+              "description": "Research child marker",
+              "prompt": "REPORT_V1_CHILD_SEED",
+              "subagent_type": "report_child",
+              "background": true
+            },
+            "output": "<task id=\"ses_e378cab5dffenORR6SGCQaMfJa\" state=\"running\">\n<summary>Background task started</summary>\n<task_result>\nThe task is working in the background. You will be notified automatically when it finishes.\nDO NOT sleep, poll for progress, ask the task for status, or duplicate this task's work — avoid working with the same files or topics it is using.\nWork on non-overlapping tasks, or briefly tell the user what you launched and end your response.\n</task_result>\n</task>",
+            "title": "Research child marker",
+            "metadata": {
+              "parentSessionId": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+              "sessionId": "ses_e378cab5dffenORR6SGCQaMfJa",
+              "model": {
+                "modelID": "gpt-6.1-sol",
+                "providerID": "openai"
+              },
+              "background": true,
+              "jobId": "ses_e378cab5dffenORR6SGCQaMfJa",
+              "truncated": false
+            },
+            "time": {
+              "start": 1794364363940,
+              "end": 1794364363949
+            }
+          },
+          "metadata": {
+            "openai": {
+              "itemId": "fc_v1_6"
+            }
+          }
+        },
+        {
+          "id": "prt_1c87354b0001jKnv2DqjMLMhhj",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87353e4001kZDr9038C1ZPQs",
+          "type": "step-finish",
+          "reason": "tool-calls",
+          "cost": 0.000262,
+          "tokens": {
+            "total": 110,
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "read": 20,
+              "write": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "id": "msg_1c87354b50014wIHrJA2siKQ3l",
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "role": "assistant",
+        "time": {
+          "created": 1794364363957,
+          "completed": 1794364364062
+        },
+        "parentID": "msg_1c873521b001DmXsqVzecfNNJr",
+        "modelID": "gpt-6.1-sol",
+        "providerID": "openai",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "root": "/"
+        },
+        "cost": 0.000262,
+        "tokens": {
+          "total": 110,
+          "input": 80,
+          "output": 10,
+          "reasoning": 0,
+          "cache": {
+            "read": 20,
+            "write": 0
+          }
+        },
+        "finish": "stop"
+      },
+      "parts": [
+        {
+          "id": "prt_1c87355180019w85J8eRT9WEI7",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87354b50014wIHrJA2siKQ3l",
+          "type": "step-start"
+        },
+        {
+          "id": "prt_1c8735519001Y3fwB20aQNOtEx",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87354b50014wIHrJA2siKQ3l",
+          "type": "text",
+          "text": "REPORT_V1_PARENT_MARKER",
+          "time": {
+            "start": 1794364364057,
+            "end": 1794364364059
+          },
+          "metadata": {
+            "openai": {
+              "itemId": "msg_v1_fixture"
+            }
+          }
+        },
+        {
+          "id": "prt_1c873551c001ynZsMFGNckKkdV",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87354b50014wIHrJA2siKQ3l",
+          "type": "step-finish",
+          "reason": "stop",
+          "cost": 0.000262,
+          "tokens": {
+            "total": 110,
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "read": 20,
+              "write": 0
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "child_response_at": 2593.561572,
+  "messages": [
+    {
+      "info": {
+        "id": "msg_1c873521b001DmXsqVzecfNNJr",
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "role": "user",
+        "time": {
+          "created": 1794364363291
+        },
+        "summary": {
+          "diffs": []
+        },
+        "agent": "build",
+        "model": {
+          "providerID": "openai",
+          "modelID": "gpt-6.1-sol"
+        }
+      },
+      "parts": [
+        {
+          "id": "prt_1c873521f001xDph4G9dAScQZP",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c873521b001DmXsqVzecfNNJr",
+          "type": "text",
+          "text": "Launch scripted child in background then return parent marker."
+        }
+      ]
+    },
+    {
+      "info": {
+        "id": "msg_1c87353e4001kZDr9038C1ZPQs",
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "role": "assistant",
+        "time": {
+          "created": 1794364363748,
+          "completed": 1794364363955
+        },
+        "parentID": "msg_1c873521b001DmXsqVzecfNNJr",
+        "modelID": "gpt-6.1-sol",
+        "providerID": "openai",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "root": "/"
+        },
+        "cost": 0.000262,
+        "tokens": {
+          "total": 110,
+          "input": 80,
+          "output": 10,
+          "reasoning": 0,
+          "cache": {
+            "read": 20,
+            "write": 0
+          }
+        },
+        "finish": "tool-calls"
+      },
+      "parts": [
+        {
+          "id": "prt_1c873549b001FI8RHo3oHqGY2C",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87353e4001kZDr9038C1ZPQs",
+          "type": "step-start"
+        },
+        {
+          "id": "prt_1c873549d001BqVMnk56OEaQ94",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87353e4001kZDr9038C1ZPQs",
+          "type": "tool",
+          "callID": "call_v1_6",
+          "tool": "task",
+          "state": {
+            "status": "completed",
+            "input": {
+              "description": "Research child marker",
+              "prompt": "REPORT_V1_CHILD_SEED",
+              "subagent_type": "report_child",
+              "background": true
+            },
+            "output": "<task id=\"ses_e378cab5dffenORR6SGCQaMfJa\" state=\"running\">\n<summary>Background task started</summary>\n<task_result>\nThe task is working in the background. You will be notified automatically when it finishes.\nDO NOT sleep, poll for progress, ask the task for status, or duplicate this task's work — avoid working with the same files or topics it is using.\nWork on non-overlapping tasks, or briefly tell the user what you launched and end your response.\n</task_result>\n</task>",
+            "title": "Research child marker",
+            "metadata": {
+              "parentSessionId": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+              "sessionId": "ses_e378cab5dffenORR6SGCQaMfJa",
+              "model": {
+                "modelID": "gpt-6.1-sol",
+                "providerID": "openai"
+              },
+              "background": true,
+              "jobId": "ses_e378cab5dffenORR6SGCQaMfJa",
+              "truncated": false
+            },
+            "time": {
+              "start": 1794364363940,
+              "end": 1794364363949
+            }
+          },
+          "metadata": {
+            "openai": {
+              "itemId": "fc_v1_6"
+            }
+          }
+        },
+        {
+          "id": "prt_1c87354b0001jKnv2DqjMLMhhj",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87353e4001kZDr9038C1ZPQs",
+          "type": "step-finish",
+          "reason": "tool-calls",
+          "cost": 0.000262,
+          "tokens": {
+            "total": 110,
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "read": 20,
+              "write": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "id": "msg_1c87354b50014wIHrJA2siKQ3l",
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "role": "assistant",
+        "time": {
+          "created": 1794364363957,
+          "completed": 1794364364062
+        },
+        "parentID": "msg_1c873521b001DmXsqVzecfNNJr",
+        "modelID": "gpt-6.1-sol",
+        "providerID": "openai",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "root": "/"
+        },
+        "cost": 0.000262,
+        "tokens": {
+          "total": 110,
+          "input": 80,
+          "output": 10,
+          "reasoning": 0,
+          "cache": {
+            "read": 20,
+            "write": 0
+          }
+        },
+        "finish": "stop"
+      },
+      "parts": [
+        {
+          "id": "prt_1c87355180019w85J8eRT9WEI7",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87354b50014wIHrJA2siKQ3l",
+          "type": "step-start"
+        },
+        {
+          "id": "prt_1c8735519001Y3fwB20aQNOtEx",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87354b50014wIHrJA2siKQ3l",
+          "type": "text",
+          "text": "REPORT_V1_PARENT_MARKER",
+          "time": {
+            "start": 1794364364057,
+            "end": 1794364364059
+          },
+          "metadata": {
+            "openai": {
+              "itemId": "msg_v1_fixture"
+            }
+          }
+        },
+        {
+          "id": "prt_1c873551c001ynZsMFGNckKkdV",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c87354b50014wIHrJA2siKQ3l",
+          "type": "step-finish",
+          "reason": "stop",
+          "cost": 0.000262,
+          "tokens": {
+            "total": 110,
+            "input": 80,
+            "output": 10,
+            "reasoning": 0,
+            "cache": {
+              "read": 20,
+              "write": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "id": "msg_1c8735916001GDj2doCKVSTiel",
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "role": "user",
+        "time": {
+          "created": 1794364365078
+        },
+        "summary": {
+          "diffs": []
+        },
+        "agent": "build",
+        "model": {
+          "providerID": "openai",
+          "modelID": "gpt-6.1-sol"
+        }
+      },
+      "parts": [
+        {
+          "id": "prt_1c8735916002ZW3StcgWXqmazD",
+          "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+          "messageID": "msg_1c8735916001GDj2doCKVSTiel",
+          "type": "text",
+          "text": "<task id=\"ses_e378cab5dffenORR6SGCQaMfJa\" state=\"completed\">\n<summary>Background task completed: Research child marker</summary>\n<task_result>\nREPORT_V1_CHILD_MARKER\n</task_result>\n</task>",
+          "synthetic": true
+        }
+      ]
+    },
+    {
+      "info": {
+        "id": "msg_1c873591d001c0t5xqpkH4IEVD",
+        "sessionID": "ses_e378cadf7ffeQcl5xXdU55ggO5",
+        "role": "assistant",
+        "time": {
+          "created": 1794364365085
+        },
+        "parentID": "msg_1c8735916001GDj2doCKVSTiel",
+        "modelID": "gpt-6.1-sol",
+        "providerID": "openai",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-V1-3e5a68e8a6c4ffc0b5ca/project",
+          "root": "/"
+        },
+        "cost": 0,
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        }
+      },
+      "parts": []
+    }
+  ],
+  "status": "pass",
+  "server_exit": 143
+}

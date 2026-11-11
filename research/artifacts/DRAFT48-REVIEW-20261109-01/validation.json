@@ -1,0 +1,97 @@
+{
+  "scope": "offline draft specification/order/cost arithmetic; NOT fixture acceptance or inference",
+  "tests": [
+    {
+      "suite": "demos/test_timing_policy.py",
+      "tests_passed": 6,
+      "exit_code": 0,
+      "log": "test_timing_policy.txt"
+    },
+    {
+      "suite": "demos/test_environment_profile.py",
+      "tests_passed": 4,
+      "exit_code": 0,
+      "log": "test_environment_profile.txt"
+    },
+    {
+      "suite": "benchmark/test_pilot.py",
+      "tests_passed": 19,
+      "exit_code": 0,
+      "log": "test_pilot.txt"
+    },
+    {
+      "suite": "demos/test_provider_stop.py",
+      "tests_passed": 4,
+      "exit_code": 0,
+      "log": "test_provider_stop.txt"
+    },
+    {
+      "suite": "demos/test_pacing.py",
+      "tests_passed": 5,
+      "exit_code": 0,
+      "log": "test_pacing.txt"
+    },
+    {
+      "suite": "demos/test_model_smoke.py",
+      "tests_passed": 7,
+      "exit_code": 0,
+      "log": "test_model_smoke.txt"
+    },
+    {
+      "suite": "demos/test_provider_pricing.py",
+      "tests_passed": 5,
+      "exit_code": 0,
+      "log": "test_provider_pricing.txt"
+    },
+    {
+      "suite": "benchmark/test_freeze_pilot.py",
+      "tests_passed": 3,
+      "exit_code": 0,
+      "log": "test_freeze_pilot.txt"
+    },
+    {
+      "suite": "benchmark/test_plan48.py",
+      "tests_passed": 5,
+      "exit_code": 0,
+      "log": "test_plan48.txt"
+    }
+  ],
+  "tests_passed": 58,
+  "frozen_pilot_verify": "pass; raw/CSV/baseline unchanged",
+  "draft48_verify": "pass",
+  "documentation_links": "pass",
+  "new_artifact_secret_pattern_scan": "pass; heuristic only; no key read",
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "planned_slots": 48,
+  "run_ids_reserved": false,
+  "next_run_and_config_ids_unchanged": [
+    "R-0039",
+    "C-0140"
+  ],
+  "paid_runs_authorized": false,
+  "budget_approved_usd": null,
+  "fixture_acceptance_ready": false,
+  "draft_input_sha256": {
+    "benchmark/suite48/manifest.json": "71a5392951294d1b469b5cbc228646d3bc15dd310f05674197856a6cf949a90f",
+    "benchmark/artifacts/PILOT-FREEZE-20261109-01/summary.json": "ace207bcac065b772c7b4b0c1148980a944d3bdeff2f52c3cfbc2d4e4f5675d9",
+    "benchmark/artifacts/PILOT-FREEZE-20261109-01/baseline.json": "f430dfa96d231d1c26728d57e0602147f7caf4a1fd969254677b31d86e5ecba2",
+    "research/provider-pricing.json": "0a779dd0480a5703d7e3668f613f6d2139186dd86ef2aebb55b5ff0e4ec7dd1f",
+    "benchmark/plan48.py": "e664f6d5d9ef2b9771d2096ed3a438c334fc3a7100eb75c564de2226f8f05944",
+    "benchmark/test_plan48.py": "a7f5c6ee276c17106b9eff266a2dedd8efe0792a00f1314dd5b2d71b22e0a94b",
+    "benchmark/PROTOCOL_48_DRAFT.md": "715d7e1b3fc67b1acf876d7177c314e0b42c5b5fd7be44eb1e1c9662c291020d",
+    "benchmark/suite48/README.md": "10501fcb30c150d9cb9fca0ceeefe557f1e90bfe2b6a46ad79abae8e27ed109b",
+    "benchmark/suite48/B-01/prompt.txt": "ad7713320df724e0bede0ea39d42d3263667888a092905f85363be52eef66d04",
+    "benchmark/suite48/B-02/prompt.txt": "ff075958a70ce29228138ae5c3caa0cabc0aa2b0454aa1ae455418b7e53547f6",
+    "benchmark/suite48/B-03/prompt.txt": "b847ebc3353340c78cabeec2dafbd45fc8dd6a6a39a659e922f0628d42c5f554",
+    "benchmark/suite48/B-04/prompt.txt": "a1bc0d06b22a33957c1fa5babab4df289ddbc069e77364f7d823b57f422b5ae3"
+  },
+  "draft_output_sha256": {
+    "order.csv": "a78a375af039a44839ca283df34c305e8df2f6039aeaf79006586e0bd4f6512a",
+    "planning.json": "98364f5ab35e76d43f4b2eb3fbb30476e74720364dcd37eee9e57de5c79f781b"
+  }
+}

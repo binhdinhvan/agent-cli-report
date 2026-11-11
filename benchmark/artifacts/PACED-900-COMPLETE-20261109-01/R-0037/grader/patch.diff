@@ -1,0 +1,40 @@
+--- before/scheduler.py
++++ after/scheduler.py
+@@ -8,4 +8,36 @@
+ 
+ def execution_order(jobs):
+     """Return dependency order, breaking ties by the smallest available name."""
+-    raise NotImplementedError("Dependency ordering is not implemented yet")
++    if not jobs:
++        return []
++
++    names = set(jobs)
++    # Build prerequisite counts and reverse edges from unique prerequisites so
++    # duplicate entries do not affect readiness or decrement counts twice.
++    remaining = {}
++    dependents = {name: [] for name in names}
++    for name, prerequisites in jobs.items():
++        unique_prerequisites = set(prerequisites)
++        unknown = unique_prerequisites - names
++        if unknown:
++            raise ValueError(f"unknown prerequisite: {min(unknown)!r}")
++        remaining[name] = len(unique_prerequisites)
++        for prerequisite in unique_prerequisites:
++            dependents[prerequisite].append(name)
++
++    available = sorted(name for name, count in remaining.items() if count == 0)
++    order = []
++    while available:
++        name = available.pop(0)
++        order.append(name)
++        for dependent in dependents[name]:
++            remaining[dependent] -= 1
++            if remaining[dependent] == 0:
++                # Keep the available set sorted for deterministic tie-breaking.
++                from bisect import insort
++
++                insort(available, dependent)
++
++    if len(order) != len(names):
++        raise ValueError("dependency cycle detected")
++    return order

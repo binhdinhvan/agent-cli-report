@@ -1,0 +1,32 @@
+{
+  "protocol": "MODEL_SMOKE.md sol rev1",
+  "started_at_utc": "2026-11-06T09:09:51.882682+00:00",
+  "prompt": "Use a local tool to read smoke-marker.txt in the current working directory. Do not modify any file. Reply with only the complete marker found in that file.",
+  "marker": "SMOKE_LOCAL_READ_7c28e36bd41a",
+  "model": "gpt-6.1-sol",
+  "provider": "https://api.shopaikey.com/v1",
+  "budget_guard_usd_estimate": "0.50",
+  "pricing_sha256": "0a779dd0480a5703d7e3668f613f6d2139186dd86ef2aebb55b5ff0e4ec7dd1f",
+  "protocol_sha256": "b0662e686956291d840f06e0851dea2e2f354089b746e55f8afee96861e003ae",
+  "request_gap_seconds_after_response": 30,
+  "plan": [
+    {
+      "tool": "opencode-v1",
+      "status": "not_run"
+    },
+    {
+      "tool": "opencode-v2",
+      "status": "not_run"
+    },
+    {
+      "tool": "codex",
+      "status": "not_run"
+    }
+  ],
+  "script_sha256": {
+    "model_smoke.py": "d0e83edd48b44607059bd92412dc5280dd31ec75e58ba1fbe11d02ebc69c121b",
+    "model_smoke_inside.py": "476636ec1d7d029c4b6306831074c7cc83bc0ea71937b19c976613f39fcda29e",
+    "proxy_headers.py": "b3896d199fd807902d8bccb105d1feb1f7755fb00816577c3c0e7949a678048d"
+  },
+  "runs": []
+}

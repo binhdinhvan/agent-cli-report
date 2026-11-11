@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0083",
+    "comparison_axis": "agent-loop",
+    "tool": "Codex CLI",
+    "version": "0.167.0",
+    "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+    "claim": "run_turn gọi run_sampling_request rồi hợp model_needs_follow_up với pending input và chọn phase async compaction",
+    "file": "codex-rs/core/src/session/turn.rs",
+    "line_start": "594",
+    "line_end": "650",
+    "symbol": "run_turn/SamplingRequestResult",
+    "permalink": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/session/turn.rs#L594-L650",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Không đồng nhất sampling completion với kết thúc task; không đo latency hoặc chất lượng giải task"
+  },
+  "source_sha256": "cd2f3c0f347641afc1a11ac720c5779dd5ec373dd872c6c8b9174436181c6408",
+  "excerpt": "            run_sampling_request(\n                Arc::clone(&sess),\n                Arc::clone(&step_context),\n                Arc::clone(&turn_context.extension_data),\n                Arc::clone(&turn_diff_tracker),\n                &mut client_session,\n                sampling_request_input,\n                cancellation_token.child_token(),\n            )\n            .await\n        }\n        .await;\n        match sampling_request_result {\n            Ok((sampling_request_output, notify_messages)) => {\n                guardian_budget_compacted = false;\n                let SamplingRequestResult {\n                    needs_follow_up: model_needs_follow_up,\n                    last_agent_message: sampling_request_last_agent_message,\n                } = sampling_request_output;\n                if model_needs_follow_up {\n                    sess.input_queue\n                        .accept_mailbox_delivery_for_current_turn(\n                            &sess.active_turn,\n                            &turn_context.sub_id,\n                        )\n                        .await;\n                }\n                can_drain_pending_input = true;\n                // Process async hooks only after sampling and its tools have finished.\n                drain_async_hook_results(&sess, &turn_context, /*before_user_prompt*/ false).await;\n                let (has_pending_input, token_status) = async {\n                    let has_pending_input =\n                        sess.input_queue.has_pending_input(&sess.active_turn).await;\n                    let token_status = super::context_window::context_window_token_status(\n                        sess.as_ref(),\n                        turn_context.as_ref(),\n                    )\n                    .await;\n                    (has_pending_input, token_status)\n                }\n                .instrument(trace_span!(\"run_turn.collect_post_sampling_state\"))\n                .await;\n                let needs_follow_up = model_needs_follow_up || has_pending_input;\n                let token_limit_reached = token_status.token_limit_reached;\n\n                super::async_compaction::maybe_start(\n                    &sess,\n                    &step_context,\n                    &world_state,\n                    if needs_follow_up {\n                        CompactionPhase::MidTurn\n                    } else {\n                        CompactionPhase::PostTurn\n                    },\n                    &cancellation_token,\n                    &token_status,\n                    client_session.turn_state_with_auth_owner(),"
+}

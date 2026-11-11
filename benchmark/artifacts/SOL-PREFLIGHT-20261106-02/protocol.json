@@ -1,0 +1,55 @@
+{
+  "protocol": "PILOT_SOL.md rev1",
+  "mode": "offline-preflight",
+  "started_at_utc": "2026-11-06T09:27:45.517087+00:00",
+  "budget_approved_usd_estimate": null,
+  "budget_guard_usd_estimate": "3",
+  "script_sha256": {
+    "benchmark/pilot.py": "75f964d7c2c46a76755443dfec4a0aca79365beeb91714a80221095112a315bd",
+    "benchmark/pilot_inside.py": "db91620643437070de1cec3eae0b3b25c27a3e09d6265a86fed5a0b9c3ffd29c",
+    "demos/model_smoke.py": "12a9d0d27ead9ec6971929c6ca558d9ad01ea62e2e0b1c83445ea7f96d682a03",
+    "demos/model_smoke_inside.py": "476636ec1d7d029c4b6306831074c7cc83bc0ea71937b19c976613f39fcda29e",
+    "demos/proxy_headers.py": "b3896d199fd807902d8bccb105d1feb1f7755fb00816577c3c0e7949a678048d",
+    "benchmark/verify_pilot_fixtures.py": "f8a4e20b4bec596a2ef7338184ec96ef8d7e5dd057235c1739e8591d67cad3e0"
+  },
+  "model": "gpt-6.1-sol",
+  "provider": "https://api.shopaikey.com/v1",
+  "pricing_sha256": null,
+  "request_gap_seconds_after_response": 30,
+  "fixture_seal": "benchmark/artifacts/PILOT-PREP-20261106-02/preparation.json",
+  "fixture_seal_sha256": "81c75a5523db04cb12b10d56cbf0938e8d9f3e3bb652ec7650b222bf128e937e",
+  "protocol_sha256": "28e31e3c35eee693b248d3a2700d2afc585ef3dd5d09d16158162b557c5e672a",
+  "prior_known_usage_estimated_cost_usd": "0",
+  "prior_unpriced_request_count": 0,
+  "remaining_known_estimate_guard_usd": "3",
+  "environment": {
+    "platform": "Linux-6.17.0-1033-oem-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "cpu_count": 16,
+    "cpu_model": "Intel(R) Core(TM) 7 240H",
+    "mem_total": "MemTotal:       15845056 kB"
+  },
+  "plan": [
+    {
+      "task": "P-01",
+      "tool": "pi",
+      "status": "not_run"
+    },
+    {
+      "task": "P-01",
+      "tool": "codex",
+      "status": "not_run"
+    },
+    {
+      "task": "P-01",
+      "tool": "opencode-v2",
+      "status": "not_run"
+    },
+    {
+      "task": "P-01",
+      "tool": "opencode-v1",
+      "status": "not_run"
+    }
+  ],
+  "runs": []
+}

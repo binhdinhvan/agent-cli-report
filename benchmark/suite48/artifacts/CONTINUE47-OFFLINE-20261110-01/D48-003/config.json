@@ -1,0 +1,3 @@
+{
+  "agent/models.json": "{\n  \"providers\": {\n    \"shopaikey\": {\n      \"baseUrl\": \"http://127.0.0.1:8765/v1\",\n      \"apiKey\": \"[LOCAL-PROXY-TOKEN]\",\n      \"api\": \"openai-responses\",\n      \"models\": [\n        {\n          \"id\": \"gpt-6.1-sol\",\n          \"name\": \"gpt-6.1-sol\",\n          \"reasoning\": false,\n          \"input\": [\n            \"text\"\n          ],\n          \"contextWindow\": 128000,\n          \"maxTokens\": 2048\n        }\n      ]\n    }\n  }\n}\n"
+}

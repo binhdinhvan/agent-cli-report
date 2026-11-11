@@ -1,0 +1,195 @@
+{
+  "runs": [
+    {
+      "run_id": "R-0036",
+      "tool": "opencode-v1",
+      "status": "success",
+      "requests": 7,
+      "scope_public_hidden_pass": true,
+      "changed_files": [
+        "scheduler.py"
+      ],
+      "duration_ms": 223735,
+      "estimated_cost_usd": "0.10021872",
+      "minimum_remaining_seconds_at_dispatch": 680.959355
+    },
+    {
+      "run_id": "R-0037",
+      "tool": "codex",
+      "status": "success",
+      "requests": 6,
+      "scope_public_hidden_pass": true,
+      "changed_files": [
+        "scheduler.py"
+      ],
+      "duration_ms": 286901,
+      "estimated_cost_usd": "0.10290408",
+      "minimum_remaining_seconds_at_dispatch": 638.351587
+    },
+    {
+      "run_id": "R-0038",
+      "tool": "pi",
+      "status": "success",
+      "requests": 7,
+      "scope_public_hidden_pass": true,
+      "changed_files": [
+        "scheduler.py"
+      ],
+      "duration_ms": 278457,
+      "estimated_cost_usd": "0.13778760",
+      "minimum_remaining_seconds_at_dispatch": 633.661532
+    }
+  ],
+  "http200_completed_requests": 20,
+  "gaps": [
+    {
+      "previous_run": "R-0036",
+      "next_run": "R-0036",
+      "seconds": 30.001845
+    },
+    {
+      "previous_run": "R-0036",
+      "next_run": "R-0036",
+      "seconds": 30.001361
+    },
+    {
+      "previous_run": "R-0036",
+      "next_run": "R-0036",
+      "seconds": 30.001087
+    },
+    {
+      "previous_run": "R-0036",
+      "next_run": "R-0036",
+      "seconds": 30.00173
+    },
+    {
+      "previous_run": "R-0036",
+      "next_run": "R-0036",
+      "seconds": 30.001615
+    },
+    {
+      "previous_run": "R-0036",
+      "next_run": "R-0036",
+      "seconds": 30.00151
+    },
+    {
+      "previous_run": "R-0036",
+      "next_run": "R-0037",
+      "seconds": 30.008372
+    },
+    {
+      "previous_run": "R-0037",
+      "next_run": "R-0037",
+      "seconds": 30.002217
+    },
+    {
+      "previous_run": "R-0037",
+      "next_run": "R-0037",
+      "seconds": 30.001831
+    },
+    {
+      "previous_run": "R-0037",
+      "next_run": "R-0037",
+      "seconds": 30.002341
+    },
+    {
+      "previous_run": "R-0037",
+      "next_run": "R-0037",
+      "seconds": 30.002358
+    },
+    {
+      "previous_run": "R-0037",
+      "next_run": "R-0037",
+      "seconds": 30.001583
+    },
+    {
+      "previous_run": "R-0037",
+      "next_run": "R-0038",
+      "seconds": 30.000807
+    },
+    {
+      "previous_run": "R-0038",
+      "next_run": "R-0038",
+      "seconds": 30.00153
+    },
+    {
+      "previous_run": "R-0038",
+      "next_run": "R-0038",
+      "seconds": 30.00151
+    },
+    {
+      "previous_run": "R-0038",
+      "next_run": "R-0038",
+      "seconds": 30.001352
+    },
+    {
+      "previous_run": "R-0038",
+      "next_run": "R-0038",
+      "seconds": 30.00152
+    },
+    {
+      "previous_run": "R-0038",
+      "next_run": "R-0038",
+      "seconds": 30.001144
+    },
+    {
+      "previous_run": "R-0038",
+      "next_run": "R-0038",
+      "seconds": 30.001638
+    }
+  ],
+  "all_gaps_ge_30": true,
+  "cross_cli_gaps_seconds": [
+    30.008372,
+    30.000807
+  ],
+  "timing_guard_live_triggered": false,
+  "estimated_cost_usd": "0.34091040",
+  "cumulative_known_usage_estimated_cost_usd": "1.10640264",
+  "cumulative_unpriced_requests": 6,
+  "cumulative_estimated_total_usd": null,
+  "measured_charge_usd": null,
+  "pilot_task_cli_pairs_with_at_least_one_success": 8,
+  "completed_inference_attempts_in_both_csvs": 14,
+  "upstream_requests_in_pilot_ledger": 76,
+  "comparison_limit": "Coverage includes retries and environment/timing revisions; not an8/8 single-condition success rate or tool ranking",
+  "hashes_source_protocol_manifest_pricing_seal_chain_binary": "pass",
+  "key_scan": "pass",
+  "supervisor_pids_absent": true,
+  "broker_sockets_absent": true,
+  "old_raw_unchanged": true,
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "raw_artifact_sha256": {
+    "result.json": "e53ca8c7e16a0ca73099fee5973d59520abac4b0091f7152d69b577297034ae6",
+    "protocol.json": "51b0432b7a14a8705b8662737f73ed1468fd1b5996624ef8e2897c2af49c56c3",
+    "R-0036/stdout.jsonl": "47ab4fe073e4d5fb6e6246a3e3f29609dcfcdb4f6167afe772b51d046cbc54cb",
+    "R-0036/result.json": "b979eaecf31777f5491f3443812de77ffafb189bda1af18b77f33db200ab823e",
+    "R-0036/config.json": "4a30adf470525e34b25c31a6889a5163449afaafec96c2d1fa0135d118f78a1a",
+    "R-0036/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "R-0037/stdout.jsonl": "e2036a0d1f81849bb9be8ca5d221ed63147fa96b663838bb3699d6009728398a",
+    "R-0037/result.json": "05c520c3283431018821e466232734c3349dea110c35fa8e43ba77ecd6b2d45e",
+    "R-0037/config.json": "a1101976b77db49cadd8b8d3dc761a2c42a1b650a16df760c41351eece66a483",
+    "R-0037/stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+    "R-0038/stdout.jsonl": "33f236599543f8c27804f2389481a59484057c3e0cdc16a8ffc0229c33bbf199",
+    "R-0038/result.json": "4a0cc28919d69679cd730a3e7a74c346731e0f5dd71e15fed4752ef2c9ab84d2",
+    "R-0038/config.json": "6e719b648e2736191ad4a532200059be6734029e42f2d8f642b34186c87144a3",
+    "R-0038/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "R-0036/grader/grading.json": "29f7c175a79d53b4e10e1966e036b4c94ace02af26d98e3125e2aa1e8103837d",
+    "R-0036/grader/patch.diff": "107483914c21041b336086f4c82e3d5381d60b020e754b840a7d3382a31786b9",
+    "R-0036/grader/snapshot/test_public.py": "cdb577452e0e2f399f00c8766787fa7974583cff9e386cfc1d62db728bb09931",
+    "R-0036/grader/snapshot/scheduler.py": "0ba61d407fe3e634db25dc60e5ec78312d7e3c16b57873a10693f970d1ad4c1d",
+    "R-0037/grader/grading.json": "5eb3eea3cd88298c505b9d2aab4544a654e61233d3f8bb088f67c53d594e763d",
+    "R-0037/grader/patch.diff": "d81518c995f355851e827f25f24a6ee17103c4cebbe0c4079c68a8457f81f915",
+    "R-0037/grader/snapshot/test_public.py": "cdb577452e0e2f399f00c8766787fa7974583cff9e386cfc1d62db728bb09931",
+    "R-0037/grader/snapshot/scheduler.py": "f9f1fd72004e3381d5fb80468a0bca62aa55a6a7935e5b3a08c99389d008f074",
+    "R-0038/grader/grading.json": "ac2050c7b700f56177982d1d3a3505f2452062c04728e7e9fe2b4bab41c0f413",
+    "R-0038/grader/patch.diff": "588858f6fbc43572811530f5111148a03d98cb52f166763ca5960868d84ff18e",
+    "R-0038/grader/snapshot/test_public.py": "cdb577452e0e2f399f00c8766787fa7974583cff9e386cfc1d62db728bb09931",
+    "R-0038/grader/snapshot/scheduler.py": "91c80843c54b0d5da987c42aa97f6fb77bf6be49d8fe69cf4976762eaa16e823"
+  }
+}

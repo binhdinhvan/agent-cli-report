@@ -1,0 +1,1 @@
+{"status":"pass","checks":{"subscribed_before_prompt":true,"native_background_task_returned":true,"child_completion_in_parent":true,"parent_continues_before_child":true}}

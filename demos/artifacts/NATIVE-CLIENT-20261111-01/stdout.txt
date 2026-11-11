@@ -1,0 +1,1 @@
+{"status":"pass","checks":{"subscribed_before_prompt":true,"assistant_marker":true,"user_message":true,"native_model_requests_observed":true,"private_server_pid_changed":true,"transcript_after_restart":true,"resume_request_contains_prior_context":true}}

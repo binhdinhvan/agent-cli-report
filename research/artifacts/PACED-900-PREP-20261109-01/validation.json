@@ -1,0 +1,42 @@
+{
+  "verified_at_utc": "2026-11-09T14:40:07.076873+00:00",
+  "scope": "new timing policy offline regression/preflight only, no key/generation",
+  "timing_policy": "paced-900",
+  "wall_seconds_all_four_clis": 900,
+  "minimum_request_window_seconds_after_pacing": 60,
+  "request_limit": 8,
+  "output_limit": 2048,
+  "request_gap_seconds": 30,
+  "tests_passed": 48,
+  "config_isolation_preflight": "4/4 pass",
+  "policy_grouping": "explicit timing recheck required; never pool with legacy300",
+  "old_timeout_raw_unchanged": true,
+  "legacy_csv_rows": 4,
+  "search_r2_csv_rows": 6,
+  "native_preflight_pids_sockets_absent": true,
+  "fixture_dependency_binary_source_protocol_hashes": "pass",
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "new_generation_requests": 0,
+  "new_policy_live": "unverified",
+  "source_sha256": {
+    "benchmark/pilot.py": "fa0d25271adee07eff28e9e0e873315d53d3f8802a72bcff6baf95ce19c4762e",
+    "benchmark/pilot_inside.py": "db91620643437070de1cec3eae0b3b25c27a3e09d6265a86fed5a0b9c3ffd29c",
+    "demos/model_smoke.py": "0fe899d4bc87c12f8920d76e54443d130f8c5ad76117d987db84066569a173f3",
+    "demos/model_smoke_inside.py": "476636ec1d7d029c4b6306831074c7cc83bc0ea71937b19c976613f39fcda29e",
+    "demos/proxy_headers.py": "b3896d199fd807902d8bccb105d1feb1f7755fb00816577c3c0e7949a678048d",
+    "benchmark/verify_pilot_fixtures.py": "f8a4e20b4bec596a2ef7338184ec96ef8d7e5dd057235c1739e8591d67cad3e0",
+    "demos/preflight.py": "38205244a47a9d65568827fd95050408ecccf0e9c59616187fcc48175bc2f95f",
+    "demos/environment_profile.py": "7df32c7e4c1e5042e3fcf1778ee3ffcd9e5505e1ffc551cfec9ea1d1fee4d4f3",
+    "demos/timing_policy.py": "0084098fe16cc3ca10b6392be521b5cbe44ea5c08ca60be5fd62bf618a69623f",
+    "benchmark/TIMING_POLICY_R2.md": "1922e75661b7874e28ab94f7f087d307c9eea2129b27c2cea07b2e66e094dae0",
+    "benchmark/test_pilot.py": "94b7526c75739b0b3dd2b0fb2fedf57aa2d69af2d767b9c29a0f20274f2adab5",
+    "demos/test_timing_policy.py": "5d3ae4dde3d65e0f2c85cea4987b83a92c74aff124140dcf524120004d7b7b07",
+    "research/environment-profiles/search-r2.json": "a4ab709b8fd82afc2225c5895ea551333964234d4e28f1ddbaca5699765d8913"
+  },
+  "preflight_result_sha256": "1e7c87d8ffa74be47d9b8810eea3296ff1fe4aeb9bc41a8556cc46da0867368f"
+}

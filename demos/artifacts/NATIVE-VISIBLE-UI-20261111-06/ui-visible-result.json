@@ -1,0 +1,180 @@
+{
+  "scope": "fresh isolated Xvfb; real Desktop window, standalone Chrome toolbar and xterm TUI; no prompt",
+  "checks": {
+    "private_xvfb_ready": true,
+    "owned_service_registration": true,
+    "private_service_ready": true,
+    "desktop-boot-diagnostic_screen_capture": true,
+    "desktop_shared_session": true,
+    "owned_desktop_window_raised": false,
+    "failure-screen_screen_capture": true
+  },
+  "screenshots": {
+    "desktop-boot-diagnostic": {
+      "method": "Pillow ImageGrab / XCB root screen, not CDP viewport or fabricated chrome",
+      "display": ":91",
+      "at": "2026-11-11T14:43:18.069Z"
+    },
+    "failure-screen": {
+      "method": "Pillow ImageGrab / XCB root screen, not CDP viewport or fabricated chrome",
+      "display": ":91",
+      "at": "2026-11-11T14:43:18.744Z"
+    }
+  },
+  "timeline": [
+    {
+      "stage": "spawn",
+      "name": "xvfb",
+      "pid": 7,
+      "args": [
+        "/opt/research/ui-tools/usr/bin/Xvfb",
+        ":91",
+        "-screen",
+        "0",
+        "1600x1050x24",
+        "-nolisten",
+        "tcp",
+        "-ac"
+      ],
+      "at": "2026-11-11T14:43:16.506Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "twm",
+      "pid": 11,
+      "args": [
+        "/opt/research/ui-tools/usr/bin/twm",
+        "-f",
+        "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-fea14966671ceba3bdf2/twmrc"
+      ],
+      "at": "2026-11-11T14:43:16.520Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "service",
+      "pid": 12,
+      "args": [
+        "/opt/agent-cli-report/BP48-VIS-fea14966671ceba3bdf2/opencode",
+        "serve",
+        "--service",
+        "--hostname",
+        "127.0.0.1",
+        "--port",
+        "0"
+      ],
+      "at": "2026-11-11T14:43:16.521Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "desktop",
+      "pid": 34,
+      "args": [
+        "/opt/research/desktop/ai.opencode",
+        "--ozone-platform=x11",
+        "--no-sandbox",
+        "--disable-gpu",
+        "--disable-dev-shm-usage",
+        "--password-store=basic",
+        "--remote-debugging-port=9333"
+      ],
+      "at": "2026-11-11T14:43:17.179Z"
+    }
+  ],
+  "health": [
+    503,
+    200
+  ],
+  "service_before": {
+    "version": "2.2.5",
+    "pid": 12,
+    "hostname": "VSF-PF64PCNX-L",
+    "urls": [
+      "http://127.0.0.1:44387"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-fea14966671ceba3bdf2/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "session": {
+    "data": {
+      "id": "ses_e34efd3d1ffeAjadkBExv6hXWF",
+      "projectID": "86ec40aa2850d973ca92b2ffbdb1d4ea033e150f",
+      "cost": 0,
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794408197172,
+        "updated": 1794408197172
+      },
+      "title": "REPORT_SHARED_UI_MARKER",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-fea14966671ceba3bdf2/project"
+      }
+    }
+  },
+  "last_cdp": {
+    "port": 9333,
+    "method": "Runtime.evaluate",
+    "at": "2026-11-11T14:43:18.616Z"
+  },
+  "desktop_boot_document": {
+    "result": {
+      "type": "string",
+      "value": "{\"url\":\"oc://renderer/index.html\",\"ready\":\"interactive\",\"windowID\":\"5798a66a-4b02-4ab8-b1b7-2f7578090718\"}"
+    }
+  },
+  "browser_errors": [
+    {
+      "port": 9333,
+      "method": "Network.loadingFailed",
+      "params": {
+        "requestId": "92.224",
+        "timestamp": 3559.068355,
+        "type": "Fetch",
+        "errorText": "net::ERR_INTERNET_DISCONNECTED",
+        "canceled": false
+      }
+    }
+  ],
+  "desktop_document": {
+    "result": {
+      "type": "object",
+      "value": {
+        "url": "oc://renderer/index.html",
+        "title": "REPORT_SHARED_UI_MARKER · OpenCode",
+        "text": "P\nREPORT_SHARED_UI_MARKER\nP\nproject\nREPORT_SHARED_UI_MARKER\nAsk anything, / for commands, @ for context…"
+      }
+    }
+  },
+  "desktop_window_action_error": "X Error of failed request:  BadMatch (invalid parameter attributes)\n  Major opcode of failed request:  42 (X_SetInputFocus)\n  Serial number of failed request:  39\n  Current serial number in output stream:  40\n",
+  "status": "error",
+  "error": "Error: owned_desktop_window_raised",
+  "cleanup": [
+    {
+      "pid": 34,
+      "exit": 130
+    },
+    {
+      "pid": 12,
+      "exit": 130
+    },
+    {
+      "pid": 11,
+      "exit": 0
+    },
+    {
+      "pid": 7,
+      "exit": 0
+    }
+  ]
+}

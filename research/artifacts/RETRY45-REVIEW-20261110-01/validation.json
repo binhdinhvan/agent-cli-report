@@ -1,0 +1,89 @@
+{
+  "status": "pass",
+  "checked_at_utc": "2026-11-10T14:23:27.363070+00:00",
+  "batch": "benchmark/suite48/artifacts/BENCH45-RETRY-CONTINUE-20261110-01",
+  "executed_attempts": 2,
+  "new_unique_slots_attempted": 1,
+  "remaining_unique_slots_not_run": 43,
+  "retry": "R134 success/valid10/10 supplementary retry_ofR89; original R89infra_error unchanged",
+  "stop": "R135Codex/B02 request1TimeoutError before HTTP/terminal/usage, no edits; no wall timeout; root cause unverified",
+  "provider_requests": 7,
+  "completed_with_usage": 6,
+  "unpriced_requests": 1,
+  "known_estimate_usd": "0.03844560",
+  "benchmark_cumulative_known_usd": "0.25185936",
+  "benchmark_cumulative_unpriced": 3,
+  "benchmark_total_charge_usd": null,
+  "all_benchmark_attempts": 6,
+  "all_benchmark_unique_slots_attempted": 5,
+  "first_attempt_counts": {
+    "success": 1,
+    "failure": 1,
+    "infra_error": 3
+  },
+  "supplementary_retry_counts": {
+    "success": 1
+  },
+  "duration_ms": {
+    "R-0134": 224706,
+    "R-0135": 73499
+  },
+  "gaps_seconds": [
+    30.001052,
+    30.001182,
+    30.001179,
+    30.001926,
+    30.001451,
+    30.001893
+  ],
+  "all_gaps_ge30": true,
+  "cross_batch_gap_seconds": 777.050667,
+  "minimum_remaining_seconds_at_dispatch": 681.474727,
+  "cleanup": {
+    "R-0134": "PID/socket absent; isolation witness pass",
+    "R-0135": "PID/socket absent; isolation witness pass"
+  },
+  "unrun_runtime_roots_absent": true,
+  "input_resource_hashes": "pass",
+  "source_git_status": {
+    "opencode-v1": "clean",
+    "opencode-v2": "clean",
+    "pi": "clean",
+    "codex": "clean"
+  },
+  "frozen_pilot": "PASS: frozen outputs, ledger, review, fixture/dependency/binary and source hashes; offline only\n",
+  "raw_artifact_sha256": {
+    "plan.json": "0f03f47e77b7e7b3325ec71a0357fe78f9987e7e2b3ce608bb356fa1cf392a99",
+    "result.json": "65fa19339138e4c6cfbad6cd2755fa3b825177b37f1c46013b3c3a27d27dd95f",
+    "reserved.json": "fce7081b01a6c9a41fde9ec81666667caa92fb36ac243a409230b388cd911779",
+    "approval.json": "6ad627140fadb6a7c1f69314a86ddb00463892b661bde9c2e59b0e63c46793bd",
+    "D48-004/stdout.jsonl": "6cf49182e07c8581d804de59a128866c9cc56ff043e74cf448cf9c658136837d",
+    "D48-004/result.json": "c1b1fcd527057ae8cece482785c584db48d5eedf0aa6f79f86c816e451639284",
+    "D48-004/execution.json": "e95f4a41823dc8e9f750de7dd00ceff9990ac6337e68972184b083ed34b894f4",
+    "D48-004/config.json": "1275f28a9ac85bc3db6b662f1faa9618aabd810bbcc9846796701fcb5b60f7bc",
+    "D48-004/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D48-005/stdout.jsonl": "6b8952442e99a9cda3484b624abb957a2ec37330477c1942eb9c2326b2435293",
+    "D48-005/result.json": "b02185d287794a4eae0555cedcae20537a8f4e02618cee5db9e6fc0c2bca13bd",
+    "D48-005/execution.json": "150cba9d3d7c869489e4afe35ab2a4e5723cb4b2a7f1be2cd994010614176ec9",
+    "D48-005/config.json": "a1101976b77db49cadd8b8d3dc761a2c42a1b650a16df760c41351eece66a483",
+    "D48-005/stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+    "D48-004/grader/grading.json": "92498078ff51baf34279914d6994e3275566ea092627467d7698d01eb6a49848",
+    "D48-004/grader/patch.diff": "075b1516b96708a9ca5821622583088d3983b27ee2ffa3983c28831b0ec2343f",
+    "D48-004/grader/snapshot/resolver.py": "f38fa2ca2b30092f9a2f2147376274237009b3104c44baf058ce6ca3dcd07613",
+    "D48-004/grader/snapshot/aliases.py": "4fa0637ab55f32469c101d45d1a23d110e95e1f890a4dd3398e4d70c861f5da6",
+    "D48-004/grader/snapshot/test_public.py": "1c8f8eec89298be555ea8aa30b57e8e7e58ca9ef4244fdca4db5d2af1e3de04e",
+    "D48-004/grader/snapshot/answer.json": "6c30f535ccc19e7382d00f55d581faf4d2784f89e6663508768ad516aadf7e3c",
+    "D48-004/grader/snapshot/defaults.py": "dee8dba860bf81ba208cad957eaeb64ab897b475cc00990c94e7a93fde7816e0",
+    "D48-005/grader/grading.json": "d16346e6510f692bd605743b421819343aa0c0fec2489bd6ac3088c3d4711e71",
+    "D48-005/grader/patch.diff": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D48-005/grader/snapshot/test_public.py": "18f4ea89162fcfc9762a059b4de6f9d01fbf22adf158393cde6cde316ddbf8e9",
+    "D48-005/grader/snapshot/pagination.py": "539d4697695b7ccc77317f032199cff92832a115bf4392622ffff474502a2801"
+  },
+  "secret_pattern_scan": "heuristic pass; not a full publication/PII audit",
+  "next_registry_ids": [
+    "R-0179",
+    "C-0280"
+  ],
+  "new_provider_requests_by_audit": 0,
+  "auto_retry_or_resume_authorized": false
+}

@@ -1,0 +1,10 @@
+{
+  "status": "incomplete_test_environment_collision",
+  "tests_run": 69,
+  "tests_passed": 68,
+  "errors": 1,
+  "test": "test_continue48.ContinuationTests.test_atomic_suffix_reservation_preserves_predecessor_and_refuses_second",
+  "error": "ValueError: ID already indexed",
+  "explanation": "Legacy sealed test uses fixed R87/C188 which are now real indexed runs. Runtime root was isolated but legacy test still consulted real CSV. Correct duplicate guard refused; no real IDs or data changed. Preserve sealed sources; rerun with prior verified lineage and isolated index root for that one legacy test.",
+  "provider_requests": 0
+}

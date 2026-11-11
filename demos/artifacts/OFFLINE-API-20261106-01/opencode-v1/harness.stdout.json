@@ -1,0 +1,293 @@
+{
+  "tool": "opencode-v1",
+  "demo_id": "OFFLINE-API-20261106-01-opencode-v1",
+  "started_at_utc": "2026-11-06T04:07:18.284146+00:00",
+  "scope": "HTTP metadata only; no model, prompt, tool execution or shared host service",
+  "checks": {
+    "host_home_hidden": true,
+    "private_network_namespace": true,
+    "no_provider_credentials": true,
+    "cwd_inside_runtime": true,
+    "auth_missing_rejected": true,
+    "auth_wrong_rejected": true,
+    "health_authorized": true,
+    "health_version": true,
+    "openapi_contract": true,
+    "sse_ready_before_create": true,
+    "session_created": true,
+    "title_matches": true,
+    "session_created_event": true,
+    "session_get": true,
+    "session_list": true,
+    "first_child_stopped": true,
+    "new_process_on_restart": true,
+    "metadata_survives_restart": true,
+    "file_database_created": true
+  },
+  "requests": [
+    {
+      "started_at_utc": "2026-11-06T04:07:18.902226+00:00",
+      "finished_at_utc": "2026-11-06T04:07:18.909886+00:00",
+      "method": "GET",
+      "path": "/session",
+      "auth_case": "missing",
+      "status": 401,
+      "payload": null,
+      "response": ""
+    },
+    {
+      "started_at_utc": "2026-11-06T04:07:18.909931+00:00",
+      "finished_at_utc": "2026-11-06T04:07:18.911884+00:00",
+      "method": "GET",
+      "path": "/session",
+      "auth_case": "wrong",
+      "status": 401,
+      "payload": null,
+      "response": ""
+    },
+    {
+      "started_at_utc": "2026-11-06T04:07:18.911926+00:00",
+      "finished_at_utc": "2026-11-06T04:07:18.920980+00:00",
+      "method": "GET",
+      "path": "/global/health",
+      "auth_case": "correct",
+      "status": 200,
+      "payload": null,
+      "response": {
+        "healthy": true,
+        "version": "1.19.5"
+      }
+    },
+    {
+      "started_at_utc": "2026-11-06T04:07:18.921034+00:00",
+      "finished_at_utc": "2026-11-06T04:07:19.730816+00:00",
+      "method": "GET",
+      "path": "/doc",
+      "auth_case": "correct",
+      "status": 200,
+      "payload": null,
+      "response": {
+        "sha256": "eebb56042880e07c354e0ad0a31f70aab45f536adf5b40b6b1fd5abf4663417b",
+        "size": 479667,
+        "openapi": "3.1.0"
+      }
+    },
+    {
+      "started_at_utc": "2026-11-06T04:07:19.875202+00:00",
+      "finished_at_utc": "2026-11-06T04:07:19.882877+00:00",
+      "method": "POST",
+      "path": "/session",
+      "auth_case": "correct",
+      "status": 200,
+      "payload": {
+        "title": "offline-api-OFFLINE-API-20261106-01-opencode-v1"
+      },
+      "response": {
+        "id": "ses_e50f5dbbaffejFiw0xaBOgdsoQ",
+        "slug": "quick-pixel",
+        "projectID": "global",
+        "directory": "/tmp/opencode/agent-cli-report/smoke/C-0001/project",
+        "path": "tmp/opencode/agent-cli-report/smoke/C-0001/project",
+        "cost": 0,
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "title": "offline-api-OFFLINE-API-20261106-01-opencode-v1",
+        "version": "1.19.5",
+        "time": {
+          "created": 1793938039877,
+          "updated": 1793938039877
+        }
+      }
+    },
+    {
+      "started_at_utc": "2026-11-06T04:07:19.883710+00:00",
+      "finished_at_utc": "2026-11-06T04:07:19.887428+00:00",
+      "method": "GET",
+      "path": "/session/ses_e50f5dbbaffejFiw0xaBOgdsoQ",
+      "auth_case": "correct",
+      "status": 200,
+      "payload": null,
+      "response": {
+        "id": "ses_e50f5dbbaffejFiw0xaBOgdsoQ",
+        "slug": "quick-pixel",
+        "projectID": "global",
+        "directory": "/tmp/opencode/agent-cli-report/smoke/C-0001/project",
+        "path": "tmp/opencode/agent-cli-report/smoke/C-0001/project",
+        "cost": 0,
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "title": "offline-api-OFFLINE-API-20261106-01-opencode-v1",
+        "version": "1.19.5",
+        "time": {
+          "created": 1793938039877,
+          "updated": 1793938039877
+        }
+      }
+    },
+    {
+      "started_at_utc": "2026-11-06T04:07:19.887473+00:00",
+      "finished_at_utc": "2026-11-06T04:07:19.889356+00:00",
+      "method": "GET",
+      "path": "/session?limit=10",
+      "auth_case": "correct",
+      "status": 200,
+      "payload": null,
+      "response": [
+        {
+          "id": "ses_e50f5dbbaffejFiw0xaBOgdsoQ",
+          "slug": "quick-pixel",
+          "projectID": "global",
+          "directory": "/tmp/opencode/agent-cli-report/smoke/C-0001/project",
+          "path": "tmp/opencode/agent-cli-report/smoke/C-0001/project",
+          "cost": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "reasoning": 0,
+            "cache": {
+              "read": 0,
+              "write": 0
+            }
+          },
+          "title": "offline-api-OFFLINE-API-20261106-01-opencode-v1",
+          "version": "1.19.5",
+          "time": {
+            "created": 1793938039877,
+            "updated": 1793938039877
+          }
+        }
+      ]
+    },
+    {
+      "started_at_utc": "2026-11-06T04:07:20.519370+00:00",
+      "finished_at_utc": "2026-11-06T04:07:20.561052+00:00",
+      "method": "GET",
+      "path": "/session/ses_e50f5dbbaffejFiw0xaBOgdsoQ",
+      "auth_case": "correct",
+      "status": 200,
+      "payload": null,
+      "response": {
+        "id": "ses_e50f5dbbaffejFiw0xaBOgdsoQ",
+        "slug": "quick-pixel",
+        "projectID": "global",
+        "directory": "/tmp/opencode/agent-cli-report/smoke/C-0001/project",
+        "path": "tmp/opencode/agent-cli-report/smoke/C-0001/project",
+        "cost": 0,
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "title": "offline-api-OFFLINE-API-20261106-01-opencode-v1",
+        "version": "1.19.5",
+        "time": {
+          "created": 1793938039877,
+          "updated": 1793938039877
+        }
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_1af0a24410010tYQfj49N7qUXR",
+      "type": "server.connected",
+      "properties": {}
+    },
+    {
+      "id": "evt_1af0a24460018hgqT44OE3nOTX",
+      "type": "session.created",
+      "properties": {
+        "sessionID": "ses_e50f5dbbaffejFiw0xaBOgdsoQ",
+        "info": {
+          "id": "ses_e50f5dbbaffejFiw0xaBOgdsoQ",
+          "slug": "quick-pixel",
+          "version": "1.19.5",
+          "projectID": "global",
+          "directory": "/tmp/opencode/agent-cli-report/smoke/C-0001/project",
+          "path": "tmp/opencode/agent-cli-report/smoke/C-0001/project",
+          "title": "offline-api-OFFLINE-API-20261106-01-opencode-v1",
+          "cost": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "reasoning": 0,
+            "cache": {
+              "read": 0,
+              "write": 0
+            }
+          },
+          "time": {
+            "created": 1793938039877,
+            "updated": 1793938039877
+          }
+        }
+      }
+    }
+  ],
+  "server_cycles": [
+    {
+      "started_at_utc": "2026-11-06T04:07:18.284351+00:00",
+      "args": [
+        "/opt/agent-cli-report/C-0001/opencode",
+        "serve",
+        "--hostname",
+        "127.0.0.1",
+        "--port",
+        "0"
+      ],
+      "pid_inside_namespace": 3,
+      "endpoint": "http://127.0.0.1:4096",
+      "ready_at_utc": "2026-11-06T04:07:18.902075+00:00",
+      "stop_requested": "SIGTERM_exact_child",
+      "exit_code": -15,
+      "stopped_at_utc": "2026-11-06T04:07:19.904764+00:00",
+      "stdout": [
+        "opencode server listening on http://127.0.0.1:4096"
+      ],
+      "stderr": []
+    },
+    {
+      "started_at_utc": "2026-11-06T04:07:19.904815+00:00",
+      "args": [
+        "/opt/agent-cli-report/C-0001/opencode",
+        "serve",
+        "--hostname",
+        "127.0.0.1",
+        "--port",
+        "0"
+      ],
+      "pid_inside_namespace": 21,
+      "endpoint": "http://127.0.0.1:4096",
+      "ready_at_utc": "2026-11-06T04:07:20.519326+00:00",
+      "stop_requested": "SIGTERM_exact_child",
+      "exit_code": -15,
+      "stopped_at_utc": "2026-11-06T04:07:20.576586+00:00",
+      "stdout": [
+        "opencode server listening on http://127.0.0.1:4096"
+      ],
+      "stderr": []
+    }
+  ],
+  "subscription_ready_at_utc": "2026-11-06T04:07:19.875153+00:00",
+  "session_id": "ses_e50f5dbbaffejFiw0xaBOgdsoQ",
+  "status": "offline_api_pass",
+  "finished_at_utc": "2026-11-06T04:07:20.576600+00:00"
+}

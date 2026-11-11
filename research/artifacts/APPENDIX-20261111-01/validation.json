@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "scope": "appendix derivation/render validation; not new native experiments or full runtime re-audit",
+  "pages": 3,
+  "pdf_sha256": "126e95f0ab817d57a3c75f2be0079c6f913d01cef71e2a47fd040bbb8534b11f",
+  "html_sha256": "6de5eeb6796abf5bdf0cfb81b334aa26f3980baa6a9576dbe27784972c2a67cb",
+  "raw_input_hashes_unchanged": 58,
+  "original_png_bytes_embedded_unchanged": 2,
+  "svg_charts": 3,
+  "pdf_text_checks": "pass",
+  "pdf_file_url_links": 0,
+  "render_preview_pages_reviewed": 3,
+  "renderer": "Chrome headless; fresh HOME/profile/tmp; bwrap network and PID namespaces; read-only root",
+  "limitations": "existing screenshots reused; feature logs are selected raw fields, not terminal screenshots; no main PDF supplied, no merge; no repository publishing or submission bundle claim"
+}

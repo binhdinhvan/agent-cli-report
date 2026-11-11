@@ -1,0 +1,100 @@
+{
+  "status": "pass",
+  "scope": "new visible-window UI acceptance, not model benchmark or all-OS proof",
+  "accepted_artifact": "demos/artifacts/NATIVE-VISIBLE-UI-20261111-07",
+  "sessionID": "ses_e34ef23f6ffek2g8YsPzUztvXw",
+  "service_pid_before": 12,
+  "service_pid_after": 12,
+  "service_url": "http://127.0.0.1:35407",
+  "checks": {
+    "private_xvfb_ready": true,
+    "owned_service_registration": true,
+    "private_service_ready": true,
+    "desktop-boot-diagnostic_screen_capture": true,
+    "desktop_shared_session": true,
+    "owned_desktop_window_raised": true,
+    "desktop-window_screen_capture": true,
+    "desktop_keeps_service_pid": true,
+    "standalone_browser_shared_session": true,
+    "web-browser_screen_capture": true,
+    "tui_shared_session": true,
+    "tui-terminal_screen_capture": true,
+    "all_clients_keep_service_pid": true,
+    "same_endpoint": true
+  },
+  "images": {
+    "desktop-window.png": {
+      "size": [
+        1600,
+        1050
+      ],
+      "sha256": "8cba4a407594d1ee9b28ab4620ec80070441550121c03d894c10690cb2e2d2a4",
+      "visual_review": "actual native window/frame inspected"
+    },
+    "web-browser.png": {
+      "size": [
+        1600,
+        1050
+      ],
+      "sha256": "c102edcfb3629f69200333d0cc5d6fd158701abdb24ddd1605bb507ac55cf9db",
+      "visual_review": "actual native window/frame inspected"
+    },
+    "tui-terminal.png": {
+      "size": [
+        1600,
+        1050
+      ],
+      "sha256": "8061ea90d4ac52d5b721de8397c7c4f5d1f91898f5e46d1b3387a6b84c90f4f9",
+      "visual_review": "actual native window/frame inspected"
+    }
+  },
+  "raw_manifest_sha256": "b24ff5ab6a45847fbfac5a00ccac770f748d21dc6893f98fcd7231c76be46dbc",
+  "cleanup": "all owned handles awaited; outer namespace supervisor absent",
+  "network": "bwrap unshare-net, no user display/home/config mounts, no prompt, no provider calls",
+  "prior_appendix_input_hashes_unchanged": 58,
+  "attempt_lineage": [
+    {
+      "artifact": "demos/artifacts/NATIVE-VISIBLE-UI-20261111-01",
+      "raw_status": "error",
+      "review": "error",
+      "error": "Error: CDP deadline Runtime.evaluate"
+    },
+    {
+      "artifact": "demos/artifacts/NATIVE-VISIBLE-UI-20261111-02",
+      "raw_status": "error",
+      "review": "error",
+      "error": "Error: CDP deadline Runtime.evaluate"
+    },
+    {
+      "artifact": "demos/artifacts/NATIVE-VISIBLE-UI-20261111-03",
+      "raw_status": "error",
+      "review": "error",
+      "error": "Error: {\"code\":-32601,\"message\":\"'Browser.getWindowForTarget' wasn't found\"}"
+    },
+    {
+      "artifact": "demos/artifacts/NATIVE-VISIBLE-UI-20261111-04",
+      "raw_status": "error",
+      "review": "error",
+      "error": "Error: no page target on private port 9444"
+    },
+    {
+      "artifact": "demos/artifacts/NATIVE-VISIBLE-UI-20261111-05",
+      "raw_status": "checks_passed_pending_review",
+      "review": "checks passed, visual desktop screenshot black; not accepted as full visual proof",
+      "error": null
+    },
+    {
+      "artifact": "demos/artifacts/NATIVE-VISIBLE-UI-20261111-06",
+      "raw_status": "error",
+      "review": "error",
+      "error": "Error: owned_desktop_window_raised"
+    },
+    {
+      "artifact": "demos/artifacts/NATIVE-VISIBLE-UI-20261111-07",
+      "raw_status": "checks_passed_pending_review",
+      "review": "checks_passed_pending_review",
+      "error": null
+    }
+  ],
+  "limitations": "twm window decorations are virtual X display; Chrome --no-sandbox inside outer bwrap; no UI prompt or model execution; private D-Bus/short TMPDIR readiness fixes are harness changes"
+}

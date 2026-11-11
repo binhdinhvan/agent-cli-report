@@ -1,0 +1,95 @@
+{
+  "scope": "Offline fixture/reference/mutant/sandbox acceptance; no key read, provider/native CLI calls or paid inference",
+  "tests": [
+    {
+      "suite": "demos/test_timing_policy.py",
+      "tests_passed": 6,
+      "exit_code": 0,
+      "log": "test_timing_policy.txt"
+    },
+    {
+      "suite": "demos/test_environment_profile.py",
+      "tests_passed": 4,
+      "exit_code": 0,
+      "log": "test_environment_profile.txt"
+    },
+    {
+      "suite": "benchmark/test_pilot.py",
+      "tests_passed": 19,
+      "exit_code": 0,
+      "log": "test_pilot.txt"
+    },
+    {
+      "suite": "demos/test_provider_stop.py",
+      "tests_passed": 4,
+      "exit_code": 0,
+      "log": "test_provider_stop.txt"
+    },
+    {
+      "suite": "demos/test_pacing.py",
+      "tests_passed": 5,
+      "exit_code": 0,
+      "log": "test_pacing.txt"
+    },
+    {
+      "suite": "demos/test_model_smoke.py",
+      "tests_passed": 7,
+      "exit_code": 0,
+      "log": "test_model_smoke.txt"
+    },
+    {
+      "suite": "demos/test_provider_pricing.py",
+      "tests_passed": 5,
+      "exit_code": 0,
+      "log": "test_provider_pricing.txt"
+    },
+    {
+      "suite": "benchmark/test_freeze_pilot.py",
+      "tests_passed": 3,
+      "exit_code": 0,
+      "log": "test_freeze_pilot.txt"
+    },
+    {
+      "suite": "benchmark/test_plan48.py",
+      "tests_passed": 5,
+      "exit_code": 0,
+      "log": "test_plan48.txt"
+    },
+    {
+      "suite": "benchmark/test_suite48.py",
+      "tests_passed": 7,
+      "exit_code": 0,
+      "log": "test_suite48.txt"
+    }
+  ],
+  "regression_tests_passed": 65,
+  "offline_variant_checks_passed": 44,
+  "seal": "benchmark/suite48/artifacts/PREP48-20261110-02/preparation.json",
+  "seal_sha256": "c764030de720d528fad2e6ae8e5ccfaacad776786fb3fe22f843c3531cfad3c6",
+  "sealed_input_files": 27,
+  "sealed_artifact_files": 388,
+  "tampered_artifact_and_unexpected_file_rejected": true,
+  "first_revision_source_and_raw_preserved": true,
+  "frozen_pilot_verify": "pass; raw/CSV/baseline unchanged",
+  "draft48_verify": "pass; order/planning unchanged",
+  "documentation_links": "pass",
+  "secret_pattern_scan": "pass; heuristic only, not publication safety guarantee",
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "new_inference_authorized": false,
+  "native_paid_runner_integration_ready": false,
+  "budget_approved_usd": null,
+  "run_ids_reserved": false,
+  "next_run_config_ids_unchanged": [
+    "R-0039",
+    "C-0140"
+  ],
+  "metadata_sha256": {
+    "benchmark/suite48/implementation-r1.json": "dc9f3712b2796d9c41f2bb03b13b4ad8116bc10b27e165643d38c30ba66b4592",
+    "benchmark/suite48/IMPLEMENTATION.md": "3459392ac1b5564564aa1219e55439043ca4d56c02cd9719dbf7634e02bd5c18"
+  }
+}

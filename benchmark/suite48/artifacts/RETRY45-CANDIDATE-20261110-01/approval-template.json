@@ -1,0 +1,11 @@
+{
+  "launch_authorized": false,
+  "plan_sha256": "0f03f47e77b7e7b3325ec71a0357fe78f9987e7e2b3ce608bb356fa1cf392a99",
+  "scope": "one-retry-R0089-then44-not-run-no-auto-retry-rubric-r2",
+  "budget_estimate_usd": "16",
+  "prior_unpriced_acknowledged": false,
+  "retry_of": "R-0089",
+  "rubric_revision": "b01-evidence-r2",
+  "approved_by": null,
+  "approved_at_utc": null
+}

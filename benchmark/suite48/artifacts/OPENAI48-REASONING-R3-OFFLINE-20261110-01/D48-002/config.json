@@ -1,0 +1,3 @@
+{
+  "codex-home/config.toml": "model = \"gpt-6.1-sol\"\nmodel_provider = \"openaidirect\"\napproval_policy = \"never\"\nsandbox_mode = \"workspace-write\"\nmodel_reasoning_effort = \"low\"\n[model_providers.openaidirect]\nname = \"Smoke broker\"\nbase_url = \"http://127.0.0.1:8765/v1\"\nenv_key = \"SMOKE_PROXY_TOKEN\"\nwire_api = \"responses\"\nrequires_openai_auth = false\nrequest_max_retries = 0\nstream_max_retries = 0\n"
+}

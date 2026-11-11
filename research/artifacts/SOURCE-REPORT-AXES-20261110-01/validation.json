@@ -1,0 +1,6 @@
+{
+  "status": "incomplete_audit_script_error",
+  "reason": "Raw benchmark hash paths are relative to batch directory, not workspace root; audit raised FileNotFoundError on D48-001/config.json after source snapshots and structural/frozen checks",
+  "source_or_runtime_failure": false,
+  "retained": "Pinned snapshots from this attempt are preserved; corrected audit uses revision02"
+}

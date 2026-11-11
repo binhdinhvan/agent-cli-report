@@ -1,0 +1,34 @@
+[
+  {
+    "package": "xvfb",
+    "version": "2:21.1.12-1ubuntu1.9",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/universe/x/xorg-server/xvfb_21.1.12-1ubuntu1.9_amd64.deb",
+    "sha256": "2011271eabcc2eb460e99995c5ef26e46633e87d04f570e305b62f178f7b452c",
+    "size": 877038,
+    "status": "downloaded_hash_verified_extracted_only"
+  },
+  {
+    "package": "xterm",
+    "version": "390-1ubuntu3",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/universe/x/xterm/xterm_390-1ubuntu3_amd64.deb",
+    "sha256": "3541b6956d6c4be71db7b66ec91985bd5eb128fb130e806f1c879f9d94a97c72",
+    "size": 883484,
+    "status": "downloaded_hash_verified_extracted_only"
+  },
+  {
+    "package": "twm",
+    "version": "1:1.0.10-1build2",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/universe/t/twm/twm_1.0.10-1build2_amd64.deb",
+    "sha256": "29517224de67d2dcd27be2e4cde9394e9aad5d3507491b053c2b3b4f895af9c2",
+    "size": 110280,
+    "status": "downloaded_hash_verified_extracted_only"
+  },
+  {
+    "package": "libutempter0",
+    "version": "1.2.1-3build1",
+    "url": "https://archive.ubuntu.com/ubuntu/pool/main/libu/libutempter/libutempter0_1.2.1-3build1_amd64.deb",
+    "sha256": "46c0dfbfeca19ba0773398d654b7e7225b178f26b414f0e2f8250519551bfb32",
+    "size": 9606,
+    "status": "downloaded_hash_verified_extracted_only"
+  }
+]

@@ -1,0 +1,230 @@
+{
+  "scope": "offline synthetic SSE/native tool verification and read-only existing rg mount control",
+  "provider_requests": 0,
+  "credential_reads": 0,
+  "cases": [
+    {
+      "artifact": "demos/artifacts/SEARCH-ENV-OFFLINE-20261109-01",
+      "control": false,
+      "rows": [
+        {
+          "tool": "opencode-v1",
+          "config_id": "C-0081",
+          "glob": {
+            "status": "error",
+            "output": null,
+            "error": "ripgrep execution failed"
+          },
+          "native_shell_inventory": {
+            "PATH": "/usr/bin:/bin",
+            "which": {
+              "rg": null,
+              "python": null,
+              "python3": "/usr/bin/python3",
+              "bash": "/usr/bin/bash",
+              "find": "/usr/bin/find",
+              "ls": "/usr/bin/ls"
+            },
+            "rg_version": null
+          },
+          "whole_cli_exit_is_intentional_mock_stop_not_tool_verdict": 1,
+          "max_mock_requests_satisfied": true
+        },
+        {
+          "tool": "opencode-v2",
+          "config_id": "C-0082",
+          "glob": {
+            "status": "error",
+            "output": null,
+            "error": "ripgrep execution failed"
+          },
+          "native_shell_inventory": {
+            "PATH": "/usr/bin:/bin",
+            "which": {
+              "rg": null,
+              "python": null,
+              "python3": "/usr/bin/python3",
+              "bash": "/usr/bin/bash",
+              "find": "/usr/bin/find",
+              "ls": "/usr/bin/ls"
+            },
+            "rg_version": null
+          },
+          "whole_cli_exit_is_intentional_mock_stop_not_tool_verdict": 1,
+          "max_mock_requests_satisfied": true
+        },
+        {
+          "tool": "pi",
+          "config_id": "C-0083",
+          "glob": null,
+          "native_shell_inventory": {
+            "PATH": "/tmp/opencode/agent-cli-report/smoke/C-0083/agent/bin:/usr/bin:/bin",
+            "which": {
+              "rg": null,
+              "python": null,
+              "python3": "/usr/bin/python3",
+              "bash": "/usr/bin/bash",
+              "find": "/usr/bin/find",
+              "ls": "/usr/bin/ls"
+            },
+            "rg_version": null
+          },
+          "whole_cli_exit_is_intentional_mock_stop_not_tool_verdict": 0,
+          "max_mock_requests_satisfied": true
+        },
+        {
+          "tool": "codex",
+          "config_id": "C-0084",
+          "glob": null,
+          "native_shell_inventory": {
+            "PATH": "/opt/agent-cli-report/C-0084/codex-path:/tmp/opencode/agent-cli-report/smoke/C-0084/codex-home/tmp/arg0-linux/codex-arg0xebBVc:/opt/agent-cli-report/C-0084/codex-path:/usr/bin:/bin",
+            "which": {
+              "rg": "/opt/agent-cli-report/C-0084/codex-path/rg",
+              "python": null,
+              "python3": "/usr/bin/python3",
+              "bash": "/usr/bin/bash",
+              "find": "/usr/bin/find",
+              "ls": "/usr/bin/ls"
+            },
+            "rg_version": "ripgrep 15.2.0 (rev e89fff89ac)\n\nfeatures:+pcre2\nsimd(compile):+SSE2,-SSSE3,-AVX2\nsimd(runtime):+SSE2,+SSSE3,+AVX2\n\nPCRE2 10.45 is available (JIT is available)\n"
+          },
+          "whole_cli_exit_is_intentional_mock_stop_not_tool_verdict": 1,
+          "max_mock_requests_satisfied": true
+        }
+      ],
+      "raw_sha256": {
+        "result.json": "facd52fd41aa1b2a1dcf83c6c1d446e8f4537f56f3e99666e3a3d79dbd289a40",
+        "C-0081/stdout.jsonl": "aa89eb1248d5cc040e6323e990df2b84120f4d0c59edbff780874804fa2ad904",
+        "C-0081/mock-requests.json": "7b130eb27e39cef950480173688ca827897b3c970acdbbd776bc0376c1a99ee7",
+        "C-0081/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "C-0084/stdout.jsonl": "5df22996db519b655bb58d516e5804251d53f794fe6193e0c6c209d8b8981410",
+        "C-0084/mock-requests.json": "79bd0a4852c6b578df094ce7f1093022749e29c0042ca1c0951d0b7eddf98285",
+        "C-0084/stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+        "C-0083/stdout.jsonl": "bb1bea0f16de456b894e6e30587bc3fd06215301605aae11c9a20456dbe5b016",
+        "C-0083/mock-requests.json": "23d275783803ff8c3157bfc263960b2989ce989f11c1b4811982c95832183369",
+        "C-0083/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "C-0082/stdout.jsonl": "47d1df88687fbf62984d6a5bd5cb7b4f4b49777a94d07daaa0d6e7f11c0e2ea6",
+        "C-0082/mock-requests.json": "bd66dc93237f1c7e3b1c6edc34b3d36a94676b8042f39f493197ab5c7a2e9611",
+        "C-0082/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "artifact": "demos/artifacts/SEARCH-ENV-CONTROL-20261109-01",
+      "control": true,
+      "rows": [
+        {
+          "tool": "opencode-v1",
+          "config_id": "C-0085",
+          "glob": {
+            "status": "completed",
+            "output": "/tmp/opencode/agent-cli-report/smoke/C-0085/project/audit.txt",
+            "error": null
+          },
+          "native_shell_inventory": {
+            "PATH": "/opt/audit-bin:/usr/bin:/bin",
+            "which": {
+              "rg": "/opt/audit-bin/rg",
+              "python": null,
+              "python3": "/usr/bin/python3",
+              "bash": "/usr/bin/bash",
+              "find": "/usr/bin/find",
+              "ls": "/usr/bin/ls"
+            },
+            "rg_version": "ripgrep 15.2.0 (rev e89fff89ac)\n\nfeatures:+pcre2\nsimd(compile):+SSE2,-SSSE3,-AVX2\nsimd(runtime):+SSE2,+SSSE3,+AVX2\n\nPCRE2 10.45 is available (JIT is available)\n"
+          },
+          "whole_cli_exit_is_intentional_mock_stop_not_tool_verdict": 1,
+          "max_mock_requests_satisfied": true
+        },
+        {
+          "tool": "opencode-v2",
+          "config_id": "C-0086",
+          "glob": {
+            "status": "completed",
+            "output": "/tmp/opencode/agent-cli-report/smoke/C-0086/project/audit.txt",
+            "error": null
+          },
+          "native_shell_inventory": {
+            "PATH": "/opt/audit-bin:/usr/bin:/bin",
+            "which": {
+              "rg": "/opt/audit-bin/rg",
+              "python": null,
+              "python3": "/usr/bin/python3",
+              "bash": "/usr/bin/bash",
+              "find": "/usr/bin/find",
+              "ls": "/usr/bin/ls"
+            },
+            "rg_version": "ripgrep 15.2.0 (rev e89fff89ac)\n\nfeatures:+pcre2\nsimd(compile):+SSE2,-SSSE3,-AVX2\nsimd(runtime):+SSE2,+SSSE3,+AVX2\n\nPCRE2 10.45 is available (JIT is available)\n"
+          },
+          "whole_cli_exit_is_intentional_mock_stop_not_tool_verdict": 1,
+          "max_mock_requests_satisfied": true
+        },
+        {
+          "tool": "pi",
+          "config_id": "C-0087",
+          "glob": null,
+          "native_shell_inventory": {
+            "PATH": "/tmp/opencode/agent-cli-report/smoke/C-0087/agent/bin:/opt/audit-bin:/usr/bin:/bin",
+            "which": {
+              "rg": "/opt/audit-bin/rg",
+              "python": null,
+              "python3": "/usr/bin/python3",
+              "bash": "/usr/bin/bash",
+              "find": "/usr/bin/find",
+              "ls": "/usr/bin/ls"
+            },
+            "rg_version": "ripgrep 15.2.0 (rev e89fff89ac)\n\nfeatures:+pcre2\nsimd(compile):+SSE2,-SSSE3,-AVX2\nsimd(runtime):+SSE2,+SSSE3,+AVX2\n\nPCRE2 10.45 is available (JIT is available)\n"
+          },
+          "whole_cli_exit_is_intentional_mock_stop_not_tool_verdict": 0,
+          "max_mock_requests_satisfied": true
+        },
+        {
+          "tool": "codex",
+          "config_id": "C-0088",
+          "glob": null,
+          "native_shell_inventory": {
+            "PATH": "/opt/agent-cli-report/C-0088/codex-path:/tmp/opencode/agent-cli-report/smoke/C-0088/codex-home/tmp/arg0-linux/codex-arg05vyMer:/opt/agent-cli-report/C-0088/codex-path:/opt/audit-bin:/usr/bin:/bin",
+            "which": {
+              "rg": "/opt/agent-cli-report/C-0088/codex-path/rg",
+              "python": null,
+              "python3": "/usr/bin/python3",
+              "bash": "/usr/bin/bash",
+              "find": "/usr/bin/find",
+              "ls": "/usr/bin/ls"
+            },
+            "rg_version": "ripgrep 15.2.0 (rev e89fff89ac)\n\nfeatures:+pcre2\nsimd(compile):+SSE2,-SSSE3,-AVX2\nsimd(runtime):+SSE2,+SSSE3,+AVX2\n\nPCRE2 10.45 is available (JIT is available)\n"
+          },
+          "whole_cli_exit_is_intentional_mock_stop_not_tool_verdict": 1,
+          "max_mock_requests_satisfied": true
+        }
+      ],
+      "raw_sha256": {
+        "result.json": "5c0a96c97b7bd476ede66d4dc532dc2ac373677b716d42db3d7bc6cf3507e2f8",
+        "C-0086/stdout.jsonl": "f0ebd10af12dfc6a981a3e01726a91367fad4c0a3b23bda1743ae683b1e0a859",
+        "C-0086/mock-requests.json": "d5f91ec91014f1249f16757a15c9698fbdbbe5c16efae9dbdba9ecd97291756d",
+        "C-0086/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "C-0088/stdout.jsonl": "857e228f55c51c733804421e9cb887437e9409d81a0105002d00237cb65325bd",
+        "C-0088/mock-requests.json": "79c6b05fa3b03522ef84e5ec137b5fe7b85519e25a069c1be7906dd234dc76dd",
+        "C-0088/stderr.txt": "1aa26269eb1cc57f86b235a03cda53c004edb5b1e9fc99d4da4f00843293d721",
+        "C-0085/stdout.jsonl": "5314b1b324ef295644efa325ab48e7b6c23111a6bd4d0bf7ac2d671eaf588b50",
+        "C-0085/mock-requests.json": "ad4e3b9924df79084c31f3faefc4ae0a2c457db9a16812ff79b0fd661f573581",
+        "C-0085/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "C-0087/stdout.jsonl": "86d819d28f62dcc4f62f795c509059590037fc5560244bec2e43b3589946e212",
+        "C-0087/mock-requests.json": "937ca74c753c2ea323cd447f79548ba1188cba39f3364f02a2e3b640e0826dd2",
+        "C-0087/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "old_pilot_raw_unchanged": true,
+  "pilot_environment_modified": false,
+  "host_dependencies_installed": false,
+  "fresh_sandbox_pids_sockets_absent": true,
+  "first_audit_mock_failure_retained": true,
+  "root_cause_limit": "Dependency/path explains reproduced glob failure, not entire R-0019 timeout",
+  "conclusion": "Do not continue unchanged environment; agree new environment revision before paid runs"
+}

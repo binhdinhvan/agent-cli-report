@@ -1,0 +1,292 @@
+[
+  {
+    "model": "gpt-6.1-sol",
+    "input": [
+      {
+        "role": "developer",
+        "content": "You are a coding assistant running inside pi, a coding agent harness. Help users inspect files, run commands, and modify code.\n\n<tools>\n- read: Read file contents\n- bash: Execute bash commands (ls, grep, find, etc.)\n- edit: Make precise file edits with exact text replacement, including multiple disjoint edits in one call\n- write: Create or overwrite files\n\nAdditional tools may be available.\n</tools>\n\n<rules>\n- Use bash for file operations like ls, rg, find\n- Use read to examine files instead of cat or sed.\n- You can inspect PI_* environment variables for current model and session details.\n- Use edit for targeted changes. Batch changes to one file in a single call.\n- Each edits[].oldText must exactly and uniquely match the original file. Keep matches short and non-overlapping; merge nearby changes without including large unchanged regions.\n- Use write only for new files or complete rewrites.\n- Be concise in your responses\n- Show file paths clearly when working with files\n</rules>\n\n<docs>\nPi documentation (read only when the user asks about the harness itself, its SDK, extensions, themes, skills, or TUI):\n- Main documentation: /opt/agent-cli-report/BP48-OPENAI48-REASONING-R3-OFFLINE-20261110-01-D48-009/pi/README.md\n- Additional docs: /opt/agent-cli-report/BP48-OPENAI48-REASONING-R3-OFFLINE-20261110-01-D48-009/pi/docs\n- Examples: /opt/agent-cli-report/BP48-OPENAI48-REASONING-R3-OFFLINE-20261110-01-D48-009/pi/examples (extensions, custom tools, SDK)\n- When reading pi docs or examples, resolve docs/... under Additional docs and examples/... under Examples, not the current working directory\n- When asked about: extensions (docs/extensions.md, examples/extensions/), themes (docs/themes.md), skills (docs/skills.md), prompt templates (docs/prompt-templates.md), TUI components (docs/tui.md), keybindings (docs/keybindings.md), SDK integrations (docs/sdk.md), custom providers (docs/custom-provider.md), adding models (docs/models.md), packages (docs/packages.md), environment variables (docs/environment-variables.md), MCP servers (docs/mcp.md), codemode scripts and non-LLM models such as classifiers and image models (docs/codemode.md)\n- Before implementing harness changes, read the relevant docs and examples in full, following related cross-references.\n</docs>\n\n<cwd>\n/tmp/opencode/agent-cli-report/smoke/BP48-OPENAI48-REASONING-R3-OFFLINE-20261110-01-D48-009/project\n</cwd>"
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "Hoàn thiện TTLCache trong cache.py. Chỉ sửa cache.py; không sửa test hoặc thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh). Dùng standard library, không cài package hoặc truy cập Internet.\n\nGiữ API:\nTTLCache(capacity, clock)\nset(key, value, ttl=None) -> None\nget(key, default=None) -> value hoặc default\ndelete(key) -> bool\nlen(cache) -> số phần tử chưa hết hạn\n\nContract: capacity là int dương; key là string; value có thể là bất kỳ object kể cả None. clock là callable trả thời gian số hữu hạn không giảm; ttl là None hoặc số hữu hạn. Không cần validation ngoài contract. Chỉ dùng clock được inject để đo expiry, không dùng sleep hoặc thời gian thật.\n\nttl=None nghĩa là không hết hạn. Với ttl>0, deadline = clock tại lúc set + ttl; hết hạn khi now >= deadline. ttl<=0 xóa key hiện tại nếu có và không lưu gì.\n\nCapacity áp dụng lên entry còn sống. Purge entry hết hạn trước khi xét eviction và khi tính len. Nếu còn vượt capacity sau set, loại least-recently-used. set (cả overwrite) và get hit chưa hết hạn cập nhật recency; get miss và len không thay recency. Overwrite thay value/deadline, không tăng số entry. get expired trả default; delete trả True chỉ khi key còn sống và đã xóa, False nếu miss hoặc expired. Các instance không chia sẻ state. Không sửa object value được lưu.\n\nChạy public tests: python3 -B -m unittest -v test_public. Hoàn tất implementation, không chỉ mô tả.\n"
+          }
+        ]
+      }
+    ],
+    "stream": true,
+    "prompt_cache_key": "01a1c653-e0c7-714d-a0b7-db07dedf50c8",
+    "store": false,
+    "max_output_tokens": 2048,
+    "tools": [
+      {
+        "type": "function",
+        "name": "read",
+        "description": "Read the contents of a file. Supports text files and images (jpg, png, gif, webp, bmp). Images are sent as attachments. For text files, output is truncated to 2000 lines or 50KB (whichever is hit first). Use offset/limit for large files. When you need the full file, continue with offset until complete.",
+        "parameters": {
+          "type": "object",
+          "required": [
+            "path"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Path to the file to read (relative or absolute)"
+            },
+            "offset": {
+              "type": "number",
+              "description": "Line number to start reading from (1-indexed)"
+            },
+            "limit": {
+              "type": "number",
+              "description": "Maximum number of lines to read"
+            }
+          }
+        }
+      },
+      {
+        "type": "function",
+        "name": "bash",
+        "description": "Execute a bash command in the current working directory. Returns stdout and stderr. Output is truncated to last 2000 lines or 50KB (whichever is hit first). If truncated, full output is saved to a temp file. Optionally provide a timeout in seconds.",
+        "parameters": {
+          "type": "object",
+          "required": [
+            "command"
+          ],
+          "properties": {
+            "command": {
+              "type": "string",
+              "description": "Shell command to execute"
+            },
+            "timeout": {
+              "type": "number",
+              "description": "Timeout in seconds (optional, no default timeout)"
+            }
+          }
+        }
+      },
+      {
+        "type": "function",
+        "name": "edit",
+        "description": "Edit a single file using exact text replacement. Every edits[].oldText must match a unique, non-overlapping region of the original file. If two changes affect the same block or nearby lines, merge them into one edit instead of emitting overlapping edits. Do not include large unchanged regions just to connect distant changes.",
+        "parameters": {
+          "type": "object",
+          "required": [
+            "path",
+            "edits"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Path to the file to edit (relative or absolute)"
+            },
+            "edits": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "oldText",
+                  "newText"
+                ],
+                "properties": {
+                  "oldText": {
+                    "type": "string",
+                    "description": "Exact text for one targeted replacement. It must be unique in the original file and must not overlap with any other edits[].oldText in the same call."
+                  },
+                  "newText": {
+                    "type": "string",
+                    "description": "Replacement text for this targeted edit."
+                  }
+                }
+              },
+              "description": "One or more targeted replacements. Each edit is matched against the original file, not incrementally. Do not include overlapping or nested edits. If two changes touch the same block or nearby lines, merge them into one edit instead."
+            }
+          }
+        }
+      },
+      {
+        "type": "function",
+        "name": "write",
+        "description": "Write content to a file. Creates the file if it doesn't exist, overwrites if it does. Automatically creates parent directories.",
+        "parameters": {
+          "type": "object",
+          "required": [
+            "path",
+            "content"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Path to the file to write (relative or absolute)"
+            },
+            "content": {
+              "type": "string",
+              "description": "Content to write to the file"
+            }
+          }
+        }
+      }
+    ],
+    "reasoning": {
+      "effort": "low",
+      "summary": "auto"
+    },
+    "include": [
+      "reasoning.encrypted_content"
+    ],
+    "service_tier": "default"
+  },
+  {
+    "model": "gpt-6.1-sol",
+    "input": [
+      {
+        "role": "developer",
+        "content": "You are a coding assistant running inside pi, a coding agent harness. Help users inspect files, run commands, and modify code.\n\n<tools>\n- read: Read file contents\n- bash: Execute bash commands (ls, grep, find, etc.)\n- edit: Make precise file edits with exact text replacement, including multiple disjoint edits in one call\n- write: Create or overwrite files\n\nAdditional tools may be available.\n</tools>\n\n<rules>\n- Use bash for file operations like ls, rg, find\n- Use read to examine files instead of cat or sed.\n- You can inspect PI_* environment variables for current model and session details.\n- Use edit for targeted changes. Batch changes to one file in a single call.\n- Each edits[].oldText must exactly and uniquely match the original file. Keep matches short and non-overlapping; merge nearby changes without including large unchanged regions.\n- Use write only for new files or complete rewrites.\n- Be concise in your responses\n- Show file paths clearly when working with files\n</rules>\n\n<docs>\nPi documentation (read only when the user asks about the harness itself, its SDK, extensions, themes, skills, or TUI):\n- Main documentation: /opt/agent-cli-report/BP48-OPENAI48-REASONING-R3-OFFLINE-20261110-01-D48-009/pi/README.md\n- Additional docs: /opt/agent-cli-report/BP48-OPENAI48-REASONING-R3-OFFLINE-20261110-01-D48-009/pi/docs\n- Examples: /opt/agent-cli-report/BP48-OPENAI48-REASONING-R3-OFFLINE-20261110-01-D48-009/pi/examples (extensions, custom tools, SDK)\n- When reading pi docs or examples, resolve docs/... under Additional docs and examples/... under Examples, not the current working directory\n- When asked about: extensions (docs/extensions.md, examples/extensions/), themes (docs/themes.md), skills (docs/skills.md), prompt templates (docs/prompt-templates.md), TUI components (docs/tui.md), keybindings (docs/keybindings.md), SDK integrations (docs/sdk.md), custom providers (docs/custom-provider.md), adding models (docs/models.md), packages (docs/packages.md), environment variables (docs/environment-variables.md), MCP servers (docs/mcp.md), codemode scripts and non-LLM models such as classifiers and image models (docs/codemode.md)\n- Before implementing harness changes, read the relevant docs and examples in full, following related cross-references.\n</docs>\n\n<cwd>\n/tmp/opencode/agent-cli-report/smoke/BP48-OPENAI48-REASONING-R3-OFFLINE-20261110-01-D48-009/project\n</cwd>"
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "Hoàn thiện TTLCache trong cache.py. Chỉ sửa cache.py; không sửa test hoặc thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh). Dùng standard library, không cài package hoặc truy cập Internet.\n\nGiữ API:\nTTLCache(capacity, clock)\nset(key, value, ttl=None) -> None\nget(key, default=None) -> value hoặc default\ndelete(key) -> bool\nlen(cache) -> số phần tử chưa hết hạn\n\nContract: capacity là int dương; key là string; value có thể là bất kỳ object kể cả None. clock là callable trả thời gian số hữu hạn không giảm; ttl là None hoặc số hữu hạn. Không cần validation ngoài contract. Chỉ dùng clock được inject để đo expiry, không dùng sleep hoặc thời gian thật.\n\nttl=None nghĩa là không hết hạn. Với ttl>0, deadline = clock tại lúc set + ttl; hết hạn khi now >= deadline. ttl<=0 xóa key hiện tại nếu có và không lưu gì.\n\nCapacity áp dụng lên entry còn sống. Purge entry hết hạn trước khi xét eviction và khi tính len. Nếu còn vượt capacity sau set, loại least-recently-used. set (cả overwrite) và get hit chưa hết hạn cập nhật recency; get miss và len không thay recency. Overwrite thay value/deadline, không tăng số entry. get expired trả default; delete trả True chỉ khi key còn sống và đã xóa, False nếu miss hoặc expired. Các instance không chia sẻ state. Không sửa object value được lưu.\n\nChạy public tests: python3 -B -m unittest -v test_public. Hoàn tất implementation, không chỉ mô tả.\n"
+          }
+        ]
+      },
+      {
+        "type": "function_call",
+        "id": "fc_of48",
+        "call_id": "call_of48",
+        "name": "bash",
+        "arguments": "{\"command\":\"python3 -B -c 'import pathlib\\nfiles = {'\\\"'\\\"'cache.py'\\\"'\\\"': '\\\"'\\\"'from collections import OrderedDict\\\\n\\\\nclass TTLCache:\\\\n    def __init__(self, capacity, clock):\\\\n        self.capacity = capacity\\\\n        self.clock = clock\\\\n        self.entries = OrderedDict()\\\\n\\\\n    def _purge(self):\\\\n        now = self.clock()\\\\n        for key, (_, deadline) in list(self.entries.items()):\\\\n            if deadline is not None and now >= deadline:\\\\n                del self.entries[key]\\\\n\\\\n    def set(self, key, value, ttl=None):\\\\n        self._purge()\\\\n        self.entries.pop(key, None)\\\\n        if ttl is not None and ttl <= 0:\\\\n            return None\\\\n        deadline = None if ttl is None else self.clock() + ttl\\\\n        self.entries[key] = (value, deadline)\\\\n        while len(self.entries) > self.capacity:\\\\n            self.entries.popitem(last=False)\\\\n        return None\\\\n\\\\n    def get(self, key, default=None):\\\\n        self._purge()\\\\n        if key not in self.entries:\\\\n            return default\\\\n        self.entries.move_to_end(key)\\\\n        return self.entries[key][0]\\\\n\\\\n    def delete(self, key):\\\\n        self._purge()\\\\n        if key not in self.entries:\\\\n            return False\\\\n        del self.entries[key]\\\\n        return True\\\\n\\\\n    def __len__(self):\\\\n        self._purge()\\\\n        return len(self.entries)\\\\n'\\\"'\\\"'}\\nfor name, content in files.items():\\n    path = pathlib.Path(name)\\n    path.parent.mkdir(parents=True, exist_ok=True)\\n    path.write_text(content)\\n\\nprint('\\\"'\\\"'OFF48_NATIVE_APPLY_DONE'\\\"'\\\"')\\n'\"}"
+      },
+      {
+        "type": "function_call_output",
+        "call_id": "call_of48",
+        "output": "OFF48_NATIVE_APPLY_DONE\n"
+      }
+    ],
+    "stream": true,
+    "prompt_cache_key": "01a1c653-e0c7-714d-a0b7-db07dedf50c8",
+    "store": false,
+    "max_output_tokens": 2048,
+    "tools": [
+      {
+        "type": "function",
+        "name": "read",
+        "description": "Read the contents of a file. Supports text files and images (jpg, png, gif, webp, bmp). Images are sent as attachments. For text files, output is truncated to 2000 lines or 50KB (whichever is hit first). Use offset/limit for large files. When you need the full file, continue with offset until complete.",
+        "parameters": {
+          "type": "object",
+          "required": [
+            "path"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Path to the file to read (relative or absolute)"
+            },
+            "offset": {
+              "type": "number",
+              "description": "Line number to start reading from (1-indexed)"
+            },
+            "limit": {
+              "type": "number",
+              "description": "Maximum number of lines to read"
+            }
+          }
+        }
+      },
+      {
+        "type": "function",
+        "name": "bash",
+        "description": "Execute a bash command in the current working directory. Returns stdout and stderr. Output is truncated to last 2000 lines or 50KB (whichever is hit first). If truncated, full output is saved to a temp file. Optionally provide a timeout in seconds.",
+        "parameters": {
+          "type": "object",
+          "required": [
+            "command"
+          ],
+          "properties": {
+            "command": {
+              "type": "string",
+              "description": "Shell command to execute"
+            },
+            "timeout": {
+              "type": "number",
+              "description": "Timeout in seconds (optional, no default timeout)"
+            }
+          }
+        }
+      },
+      {
+        "type": "function",
+        "name": "edit",
+        "description": "Edit a single file using exact text replacement. Every edits[].oldText must match a unique, non-overlapping region of the original file. If two changes affect the same block or nearby lines, merge them into one edit instead of emitting overlapping edits. Do not include large unchanged regions just to connect distant changes.",
+        "parameters": {
+          "type": "object",
+          "required": [
+            "path",
+            "edits"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Path to the file to edit (relative or absolute)"
+            },
+            "edits": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "oldText",
+                  "newText"
+                ],
+                "properties": {
+                  "oldText": {
+                    "type": "string",
+                    "description": "Exact text for one targeted replacement. It must be unique in the original file and must not overlap with any other edits[].oldText in the same call."
+                  },
+                  "newText": {
+                    "type": "string",
+                    "description": "Replacement text for this targeted edit."
+                  }
+                }
+              },
+              "description": "One or more targeted replacements. Each edit is matched against the original file, not incrementally. Do not include overlapping or nested edits. If two changes touch the same block or nearby lines, merge them into one edit instead."
+            }
+          }
+        }
+      },
+      {
+        "type": "function",
+        "name": "write",
+        "description": "Write content to a file. Creates the file if it doesn't exist, overwrites if it does. Automatically creates parent directories.",
+        "parameters": {
+          "type": "object",
+          "required": [
+            "path",
+            "content"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Path to the file to write (relative or absolute)"
+            },
+            "content": {
+              "type": "string",
+              "description": "Content to write to the file"
+            }
+          }
+        }
+      }
+    ],
+    "reasoning": {
+      "effort": "low",
+      "summary": "auto"
+    },
+    "include": [
+      "reasoning.encrypted_content"
+    ],
+    "service_tier": "default"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "run_id": "R-0026",
+  "retry_of": "R-0025",
+  "environment_revision": "search-r2",
+  "status": "infra_error",
+  "validity": "pending_review",
+  "upstream_requests": 1,
+  "error_type": "TimeoutError",
+  "http_status_received": false,
+  "task_tool_execution": "not reached",
+  "locally_blocked_requests": 11,
+  "upstream_overload": "unverified; CLI HTTP503 comes from local latch",
+  "new_cost_estimate_usd": null,
+  "cumulative_known_usage_estimated_cost_usd": "0.40389912",
+  "cumulative_unpriced_requests": 4,
+  "cumulative_estimated_total_usd": null,
+  "measured_charge_usd": null,
+  "hashes_source_protocol_manifest_pricing_seal_binary": "pass",
+  "prior_raw_unchanged": true,
+  "key_scan": "pass",
+  "supervisor_pid_absent": true,
+  "broker_socket_absent": true,
+  "r2_csv_separate": true,
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "raw_artifact_sha256": {
+    "result.json": "64ab5791f877ac4b810c58d9dbd55954765cdd41b93d488b71e48135e4654def",
+    "protocol.json": "16a966794ed27012b270bd4d940ca27825709b3c72367b2fa32f2c0053e82d75",
+    "R-0026/stdout.jsonl": "c9b6f3db96de2de724ff410abbc15ffe01d7b5a85ee18e59dfb2bc7f2bb553af",
+    "R-0026/result.json": "dc8d16392ca675803f53559b3c44b19b3119d4cc2cfd8efa58d18de5ffdf8228",
+    "R-0026/config.json": "cdc7150c44b0589ef98af4fed7719d5ce1635c801b9bafd47db6e1191ae4003b",
+    "R-0026/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "R-0026/grader/grading.json": "19600dabcf2edef4bf7916cb97f9b162cc03343f2a179a512c363a6fe642d3b5",
+    "R-0026/grader/patch.diff": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "R-0026/grader/snapshot/intervals.py": "c8de9a5897a04521f2f381cfab2ca073d98fde3a90f25546d25719348d612148",
+    "R-0026/grader/snapshot/test_public.py": "8eb40ed38a8653c191c77eefa3a269efbd90a123775a9adb12d24cdd062661d6"
+  }
+}

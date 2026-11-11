@@ -1,0 +1,28 @@
+E...<frozen importlib._bootstrap_external>:753: ResourceWarning: unclosed <socket.socket fd=4, family=1, type=1, proto=0, raddr=/tmp/opencode/smoke-guard-xc7hwcd2/broker.sock>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+...
+======================================================================
+ERROR: test_broker_guards_and_clamp (__main__.SmokeTests.test_broker_guards_and_clamp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tts/Project/agent-cli-report/demos/test_model_smoke.py", line 153, in test_broker_guards_and_clamp
+    self.assertEqual(call(payload, endpoint="/v1/chat/completions")[0], 403)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tts/Project/agent-cli-report/demos/test_model_smoke.py", line 144, in call
+    connection.request("POST", endpoint, json.dumps(body), {"Authorization": "Bearer " + token})
+  File "/usr/lib/python3.12/http/client.py", line 1365, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1411, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1360, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1159, in _send_output
+    self.send(chunk)
+  File "/usr/lib/python3.12/http/client.py", line 1084, in send
+    self.sock.sendall(data)
+BrokenPipeError: [Errno 32] Broken pipe
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.530s
+
+FAILED (errors=1)

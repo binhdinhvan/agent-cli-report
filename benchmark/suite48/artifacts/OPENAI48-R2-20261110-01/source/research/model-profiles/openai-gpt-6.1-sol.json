@@ -1,0 +1,34 @@
+{
+  "revision": "openai-direct-gpt-6.1-sol-check-r1",
+  "model": "gpt-6.1-sol",
+  "provider_base_url": "https://api.openai.com/v1",
+  "credential_file": ".local/credentials/openai.key",
+  "documentation": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+  "pricing_source": "https://developers.openai.com/api/docs/pricing",
+  "pricing_status": "official published standard short-context prices observed2026-11-10; not invoice-confirmed; not Shopaikey rates",
+  "pricing_usd_per_million": {
+    "input_uncached": "2",
+    "input_cached": "0.10",
+    "cache_write_30m": "2.50",
+    "cache_write_12h": "5",
+    "output": "10"
+  },
+  "smoke": {
+    "max_catalog_requests": 1,
+    "max_generation_requests": 1,
+    "endpoint": "/responses",
+    "max_output_tokens": 1024,
+    "reasoning_effort": "low",
+    "minimum_gap_seconds": 30,
+    "socket_timeout_seconds": 45,
+    "wall_cap_seconds_per_request": 90,
+    "automatic_retry_fallback": false
+  },
+  "model_selection_status": "runtime-confirmed scoped catalog200 and short Responses SSE generation200/completed; not stability or native4CLI acceptance",
+  "runtime_result": "demos/OPENAI_DIRECT_RESULTS.md",
+  "postcheck": "research/artifacts/OPENAI-DIRECT-CHECK-REVIEW-20261110-01/validation.json",
+  "approval_status": "scope consumed; artifact snapshot retains approved pre-run profile; current profile records post-run status",
+  "benchmark_authorized": false,
+  "native4cli_acceptance": "unverified",
+  "cohort": "OpenAI-direct only; never pool with Shopaikey alias or Google/Gemini results"
+}

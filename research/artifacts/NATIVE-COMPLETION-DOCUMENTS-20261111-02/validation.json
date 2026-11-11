@@ -1,0 +1,54 @@
+{
+  "status": "pass",
+  "errors": [],
+  "evidence_ids": 147,
+  "pinned_source_ranges_checked": 147,
+  "local_links_checked": 243,
+  "secret_pattern_scan_files": 87,
+  "secret_pattern_hits": [],
+  "source_repositories": {
+    "opencode-v1": {
+      "exit_code": 0,
+      "clean": true
+    },
+    "opencode-v2": {
+      "exit_code": 0,
+      "clean": true
+    },
+    "pi": {
+      "exit_code": 0,
+      "clean": true
+    },
+    "codex": {
+      "exit_code": 0,
+      "clean": true
+    }
+  },
+  "native_round2_raw_unchanged": true,
+  "benchmark48_raw_unchanged": true,
+  "tests": {
+    "python_demo": 73,
+    "python_benchmark": 118,
+    "bun": 3,
+    "total": 194,
+    "legacy_test_isolation": "two reservation tests mock csv.DictReader only inside tempstate methods; no sealedsource edits"
+  },
+  "registry": [
+    "R-0378",
+    "C-0479"
+  ],
+  "real_provider_requests": 0,
+  "credential_file_reads": 0,
+  "document_sha256": {
+    "REPORT.md": "091adb27832ffd9f988f1e9fc25f102992e76c14815390b14b02a09642dcd22d",
+    "README.md": "329ecac5ab61965629e7061a5a0cba3a01db56ac001fbb0ecf0fb128ecde8edb",
+    "PLAN.md": "453be6d5011b0ffbce3d0da2e33e50d1edaab8e0ff70669601082b4063bbb899",
+    "demos/README.md": "aa874bdd1c7e8133d56141c276c5a2b0e32b1adaddc570e2c144d53cdb1a491d",
+    "demos/NATIVE_RUNTIME_RESULTS.md": "6241902581e927320130d4b6ea87187dbf8846fdb9b0aba26d48b2baa409e328",
+    "demos/NATIVE_COMPLETION_R2_RESULTS.md": "d5ce6315ce1fbc0443bf69e74f9e5eb710ae18ee5bda2d810fc319fc97ec52a4",
+    "demos/OFFLINE_DEMO_PLAN.md": "b6437df5bbc8a4018813a6ea73b9b3b056e43a1b058aca0173629937a28ef858",
+    "research/REQUIREMENTS_ACCEPTANCE.md": "921034d56d3b0dc01d83a7e0a4c99010ab7045a58618ae04483f00af068a02a6",
+    "research/artifacts/OPENAI48-DISPERSION-20261111-01/SUMMARY.md": "9ccfbbcf4c4a770586daf568bce8bcb8e363c2d317e6981b7172b77ef9b81ad9"
+  },
+  "evidence_csv_sha256": "9a93e198c939470f4c291200bd6051dc75ddc9c55bceeb6620bd60e392d53570"
+}

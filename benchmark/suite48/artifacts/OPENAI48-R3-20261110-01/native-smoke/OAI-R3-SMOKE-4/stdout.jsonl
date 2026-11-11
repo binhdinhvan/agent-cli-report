@@ -1,0 +1,7 @@
+{"type":"thread.started","thread_id":"01a1c667-4a39-70f1-ae70-b80fdd2fc680"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"I’ll run the exact command now.\n"}}
+{"type":"item.started","item":{"id":"item_1","type":"command_execution","command":"/usr/bin/bash -lc \"python3 -c 'print(\\\"OFF48_NATIVE_APPLY_DONE\\\")'\"","aggregated_output":"","exit_code":null,"status":"in_progress"}}
+{"type":"item.completed","item":{"id":"item_1","type":"command_execution","command":"/usr/bin/bash -lc \"python3 -c 'print(\\\"OFF48_NATIVE_APPLY_DONE\\\")'\"","aggregated_output":"OFF48_NATIVE_APPLY_DONE\n","exit_code":0,"status":"completed"}}
+{"type":"item.completed","item":{"id":"item_2","type":"agent_message","text":"OFF48_NATIVE_APPLY_DONE"}}
+{"type":"turn.completed","usage":{"input_tokens":22182,"cached_input_tokens":11029,"cache_write_input_tokens":11147,"output_tokens":66,"reasoning_output_tokens":0}}

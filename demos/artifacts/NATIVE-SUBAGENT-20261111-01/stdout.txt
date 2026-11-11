@@ -1,0 +1,1 @@
+{"status":"error","checks":{"subscribed_before_prompt":true,"background_subagent_session_returned":true,"subagent_parent_lineage":true,"child_marker_returned":false},"error":"Error: child_marker_returned"}

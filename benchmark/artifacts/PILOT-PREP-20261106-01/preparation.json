@@ -1,0 +1,196 @@
+{
+  "created_at_utc": "2026-11-06T05:26:52.238585+00:00",
+  "scope": "Offline fixture self-test with supervisor-authored reference/mutants; no agent/model benchmark runs",
+  "script_sha256": "201de15af5fd928c33f697e014bc17da92ee2636a8045ffe78346ec2b8b028e1",
+  "tasks": [
+    {
+      "task_id": "P-01",
+      "fixture_version": 1,
+      "files": {
+        "acceptance.py": "09d1ff577cd509337d26e079632eb7853d98d4465d9d4843151de2013ed6a724",
+        "fixture/intervals.py": "c8de9a5897a04521f2f381cfab2ca073d98fde3a90f25546d25719348d612148",
+        "fixture/test_public.py": "8eb40ed38a8653c191c77eefa3a269efbd90a123775a9adb12d24cdd062661d6",
+        "prompt.txt": "14d7d00ee0032bba4db6f7f9b6d74413fa9ab92bede25eaaf956f41a13cc79a2",
+        "task.json": "6aa4e9013e22e151cf3eacbb501e6db0b8fe3d19afb3305802ea11eefe2e362e"
+      },
+      "checks": [
+        {
+          "variant": "baseline",
+          "suite": "public",
+          "expected_pass": true,
+          "expectation_met": true,
+          "exit_code": 0,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_overlap (test_public.PublicTests.test_overlap) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+        },
+        {
+          "variant": "baseline",
+          "suite": "hidden",
+          "expected_pass": false,
+          "expectation_met": true,
+          "exit_code": 1,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_duplicates (__main__.AcceptanceTests.test_duplicates) ... FAIL\ntest_empty (__main__.AcceptanceTests.test_empty) ... ERROR\ntest_invalid (__main__.AcceptanceTests.test_invalid) ... \n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[2, 2]]) ... FAIL\n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[3, 1]]) ... FAIL\n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[1]]) ... FAIL\n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[1, 2, 3]]) ... FAIL\n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[['1', 2]]) ... FAIL\n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[1.5, 3]]) ... FAIL\n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[None]) ... ERROR\n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[4]) ... ERROR\ntest_iterator_and_tuples (__main__.AcceptanceTests.test_iterator_and_tuples) ... ERROR\ntest_nested_and_unsorted (__main__.AcceptanceTests.test_nested_and_unsorted) ... ok\ntest_no_mutation (__main__.AcceptanceTests.test_no_mutation) ... FAIL\ntest_touching_is_not_overlap (__main__.AcceptanceTests.test_touching_is_not_overlap) ... FAIL\n\n======================================================================\nERROR: test_empty (__main__.AcceptanceTests.test_empty)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 9, in test_empty\n    self.assertEqual(merge_intervals([]), [])\n                     ^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/intervals.py\", line 7, in merge_intervals\n    merged = [intervals[0]]\n              ~~~~~~~~~^^^\nIndexError: list index out of range\n\n======================================================================\nERROR: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[None])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 33, in test_invalid\n    merge_intervals(value)\n  File \"/workspace/intervals.py\", line 13, in merge_intervals\n    return [tuple(interval) for interval in merged]\n            ^^^^^^^^^^^^^^^\nTypeError: 'NoneType' object is not iterable\n\n======================================================================\nERROR: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[4])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 33, in test_invalid\n    merge_intervals(value)\n  File \"/workspace/intervals.py\", line 13, in merge_intervals\n    return [tuple(interval) for interval in merged]\n            ^^^^^^^^^^^^^^^\nTypeError: 'int' object is not iterable\n\n======================================================================\nERROR: test_iterator_and_tuples (__main__.AcceptanceTests.test_iterator_and_tuples)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 25, in test_iterator_and_tuples\n    self.assertEqual(merge_intervals(iter([(3, 6), (1, 4)])), [(1, 6)])\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/intervals.py\", line 6, in merge_intervals\n    intervals.sort()\n    ^^^^^^^^^^^^^^\nAttributeError: 'list_iterator' object has no attribute 'sort'\n\n======================================================================\nFAIL: test_duplicates (__main__.AcceptanceTests.test_duplicates)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 28, in test_duplicates\n    self.assertEqual(merge_intervals([[1, 3], [1, 3], [3, 4]]), [(1, 3), (3, 4)])\nAssertionError: Lists differ: [(1, 4)] != [(1, 3), (3, 4)]\n\nFirst differing element 0:\n(1, 4)\n(1, 3)\n\nSecond list contains 1 additional elements.\nFirst extra element 1:\n(3, 4)\n\n- [(1, 4)]\n+ [(1, 3), (3, 4)]\n\n======================================================================\nFAIL: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[2, 2]])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 32, in test_invalid\n    with self.subTest(value=value), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[3, 1]])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 32, in test_invalid\n    with self.subTest(value=value), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[1]])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 32, in test_invalid\n    with self.subTest(value=value), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[1, 2, 3]])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 32, in test_invalid\n    with self.subTest(value=value), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[['1', 2]])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 32, in test_invalid\n    with self.subTest(value=value), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[1.5, 3]])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 32, in test_invalid\n    with self.subTest(value=value), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_no_mutation (__main__.AcceptanceTests.test_no_mutation)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 21, in test_no_mutation\n    self.assertEqual(value, original)\nAssertionError: Lists differ: [[1, 7], [2, 7], [9, 11]] != [[9, 11], [1, 5], [2, 7]]\n\nFirst differing element 0:\n[1, 7]\n[9, 11]\n\n- [[1, 7], [2, 7], [9, 11]]\n+ [[9, 11], [1, 5], [2, 7]]\n\n======================================================================\nFAIL: test_touching_is_not_overlap (__main__.AcceptanceTests.test_touching_is_not_overlap)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 12, in test_touching_is_not_overlap\n    self.assertEqual(merge_intervals([[0, 2], [2, 4]]), [(0, 2), (2, 4)])\nAssertionError: Lists differ: [(0, 4)] != [(0, 2), (2, 4)]\n\nFirst differing element 0:\n(0, 4)\n(0, 2)\n\nSecond list contains 1 additional elements.\nFirst extra element 1:\n(2, 4)\n\n- [(0, 4)]\n+ [(0, 2), (2, 4)]\n\n----------------------------------------------------------------------\nRan 7 tests in 0.002s\n\nFAILED (failures=9, errors=4)\n"
+        },
+        {
+          "variant": "reference",
+          "suite": "public",
+          "expected_pass": true,
+          "expectation_met": true,
+          "exit_code": 0,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_overlap (test_public.PublicTests.test_overlap) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+        },
+        {
+          "variant": "reference",
+          "suite": "hidden",
+          "expected_pass": true,
+          "expectation_met": true,
+          "exit_code": 0,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_duplicates (__main__.AcceptanceTests.test_duplicates) ... ok\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_invalid (__main__.AcceptanceTests.test_invalid) ... ok\ntest_iterator_and_tuples (__main__.AcceptanceTests.test_iterator_and_tuples) ... ok\ntest_nested_and_unsorted (__main__.AcceptanceTests.test_nested_and_unsorted) ... ok\ntest_no_mutation (__main__.AcceptanceTests.test_no_mutation) ... ok\ntest_touching_is_not_overlap (__main__.AcceptanceTests.test_touching_is_not_overlap) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.000s\n\nOK\n"
+        },
+        {
+          "variant": "touching_overlap",
+          "suite": "public",
+          "expected_pass": true,
+          "expectation_met": true,
+          "exit_code": 0,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_overlap (test_public.PublicTests.test_overlap) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+        },
+        {
+          "variant": "touching_overlap",
+          "suite": "hidden",
+          "expected_pass": false,
+          "expectation_met": true,
+          "exit_code": 1,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_duplicates (__main__.AcceptanceTests.test_duplicates) ... FAIL\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_invalid (__main__.AcceptanceTests.test_invalid) ... ok\ntest_iterator_and_tuples (__main__.AcceptanceTests.test_iterator_and_tuples) ... ok\ntest_nested_and_unsorted (__main__.AcceptanceTests.test_nested_and_unsorted) ... ok\ntest_no_mutation (__main__.AcceptanceTests.test_no_mutation) ... ok\ntest_touching_is_not_overlap (__main__.AcceptanceTests.test_touching_is_not_overlap) ... FAIL\n\n======================================================================\nFAIL: test_duplicates (__main__.AcceptanceTests.test_duplicates)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 28, in test_duplicates\n    self.assertEqual(merge_intervals([[1, 3], [1, 3], [3, 4]]), [(1, 3), (3, 4)])\nAssertionError: Lists differ: [(1, 4)] != [(1, 3), (3, 4)]\n\nFirst differing element 0:\n(1, 4)\n(1, 3)\n\nSecond list contains 1 additional elements.\nFirst extra element 1:\n(3, 4)\n\n- [(1, 4)]\n+ [(1, 3), (3, 4)]\n\n======================================================================\nFAIL: test_touching_is_not_overlap (__main__.AcceptanceTests.test_touching_is_not_overlap)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 12, in test_touching_is_not_overlap\n    self.assertEqual(merge_intervals([[0, 2], [2, 4]]), [(0, 2), (2, 4)])\nAssertionError: Lists differ: [(0, 4)] != [(0, 2), (2, 4)]\n\nFirst differing element 0:\n(0, 4)\n(0, 2)\n\nSecond list contains 1 additional elements.\nFirst extra element 1:\n(2, 4)\n\n- [(0, 4)]\n+ [(0, 2), (2, 4)]\n\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nFAILED (failures=2)\n"
+        },
+        {
+          "variant": "input_mutation",
+          "suite": "public",
+          "expected_pass": true,
+          "expectation_met": true,
+          "exit_code": 0,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_overlap (test_public.PublicTests.test_overlap) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+        },
+        {
+          "variant": "input_mutation",
+          "suite": "hidden",
+          "expected_pass": false,
+          "expectation_met": true,
+          "exit_code": 1,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_duplicates (__main__.AcceptanceTests.test_duplicates) ... ok\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_invalid (__main__.AcceptanceTests.test_invalid) ... ok\ntest_iterator_and_tuples (__main__.AcceptanceTests.test_iterator_and_tuples) ... ok\ntest_nested_and_unsorted (__main__.AcceptanceTests.test_nested_and_unsorted) ... ok\ntest_no_mutation (__main__.AcceptanceTests.test_no_mutation) ... FAIL\ntest_touching_is_not_overlap (__main__.AcceptanceTests.test_touching_is_not_overlap) ... ok\n\n======================================================================\nFAIL: test_no_mutation (__main__.AcceptanceTests.test_no_mutation)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 21, in test_no_mutation\n    self.assertEqual(value, original)\nAssertionError: Lists differ: [[1, 5], [2, 7], [9, 11]] != [[9, 11], [1, 5], [2, 7]]\n\nFirst differing element 0:\n[1, 5]\n[9, 11]\n\n- [[1, 5], [2, 7], [9, 11]]\n+ [[9, 11], [1, 5], [2, 7]]\n\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nFAILED (failures=1)\n"
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "task_id": "P-02",
+      "fixture_version": 1,
+      "files": {
+        "acceptance.py": "97ceee32bb06471c4b598a638f80d5ffbcf74721d9d9274a3263f3781bb33c72",
+        "fixture/scheduler.py": "522e92fa4ed1180c7299e14a70adfb8ba0ac058ea2a39f06dc92a58fd57b4b94",
+        "fixture/test_public.py": "cdb577452e0e2f399f00c8766787fa7974583cff9e386cfc1d62db728bb09931",
+        "prompt.txt": "0a7a63392fc63f6ee67a0cb9922c0bb577823dc8b21e27f2ff05f09fbb40e9fa",
+        "task.json": "b5273918ef99323c38f88c0f07ef8663574512400c4719859676e50a76c1d92b"
+      },
+      "checks": [
+        {
+          "variant": "baseline",
+          "suite": "public",
+          "expected_pass": true,
+          "expectation_met": true,
+          "exit_code": 0,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_task_names (test_public.PublicTests.test_task_names) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+        },
+        {
+          "variant": "baseline",
+          "suite": "hidden",
+          "expected_pass": false,
+          "expectation_met": true,
+          "exit_code": 1,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_available_tie_break (__main__.AcceptanceTests.test_available_tie_break) ... ERROR\ntest_chain (__main__.AcceptanceTests.test_chain) ... ERROR\ntest_cycles (__main__.AcceptanceTests.test_cycles) ... \n  test_cycles (__main__.AcceptanceTests.test_cycles) (jobs={'a': ['a']}) ... ERROR\n  test_cycles (__main__.AcceptanceTests.test_cycles) (jobs={'a': ['b'], 'b': ['a']}) ... ERROR\n  test_cycles (__main__.AcceptanceTests.test_cycles) (jobs={'free': [], 'a': ['b'], 'b': ['a']}) ... ERROR\ntest_diamond (__main__.AcceptanceTests.test_diamond) ... ERROR\ntest_duplicates (__main__.AcceptanceTests.test_duplicates) ... ERROR\ntest_empty (__main__.AcceptanceTests.test_empty) ... ERROR\ntest_existing_api (__main__.AcceptanceTests.test_existing_api) ... ok\ntest_no_mutation (__main__.AcceptanceTests.test_no_mutation) ... ERROR\ntest_unknown (__main__.AcceptanceTests.test_unknown) ... ERROR\n\n======================================================================\nERROR: test_available_tie_break (__main__.AcceptanceTests.test_available_tie_break)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 15, in test_available_tie_break\n    self.assertEqual(execution_order({\"z\": [], \"b\": [], \"a\": [\"b\"]}), [\"b\", \"a\", \"z\"])\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scheduler.py\", line 11, in execution_order\n    raise NotImplementedError(\"Dependency ordering is not implemented yet\")\nNotImplementedError: Dependency ordering is not implemented yet\n\n======================================================================\nERROR: test_chain (__main__.AcceptanceTests.test_chain)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 12, in test_chain\n    self.assertEqual(execution_order({\"test\": [\"build\"], \"fetch\": [], \"build\": [\"fetch\"]}), [\"fetch\", \"build\", \"test\"])\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scheduler.py\", line 11, in execution_order\n    raise NotImplementedError(\"Dependency ordering is not implemented yet\")\nNotImplementedError: Dependency ordering is not implemented yet\n\n======================================================================\nERROR: test_cycles (__main__.AcceptanceTests.test_cycles) (jobs={'a': ['a']})\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 30, in test_cycles\n    execution_order(jobs)\n  File \"/workspace/scheduler.py\", line 11, in execution_order\n    raise NotImplementedError(\"Dependency ordering is not implemented yet\")\nNotImplementedError: Dependency ordering is not implemented yet\n\n======================================================================\nERROR: test_cycles (__main__.AcceptanceTests.test_cycles) (jobs={'a': ['b'], 'b': ['a']})\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 30, in test_cycles\n    execution_order(jobs)\n  File \"/workspace/scheduler.py\", line 11, in execution_order\n    raise NotImplementedError(\"Dependency ordering is not implemented yet\")\nNotImplementedError: Dependency ordering is not implemented yet\n\n======================================================================\nERROR: test_cycles (__main__.AcceptanceTests.test_cycles) (jobs={'free': [], 'a': ['b'], 'b': ['a']})\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 30, in test_cycles\n    execution_order(jobs)\n  File \"/workspace/scheduler.py\", line 11, in execution_order\n    raise NotImplementedError(\"Dependency ordering is not implemented yet\")\nNotImplementedError: Dependency ordering is not implemented yet\n\n======================================================================\nERROR: test_diamond (__main__.AcceptanceTests.test_diamond)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 18, in test_diamond\n    self.assertEqual(execution_order({\"d\": [\"b\", \"c\"], \"c\": [\"a\"], \"b\": [\"a\"], \"a\": []}), [\"a\", \"b\", \"c\", \"d\"])\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scheduler.py\", line 11, in execution_order\n    raise NotImplementedError(\"Dependency ordering is not implemented yet\")\nNotImplementedError: Dependency ordering is not implemented yet\n\n======================================================================\nERROR: test_duplicates (__main__.AcceptanceTests.test_duplicates)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 21, in test_duplicates\n    self.assertEqual(execution_order({\"b\": [\"a\", \"a\"], \"a\": []}), [\"a\", \"b\"])\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scheduler.py\", line 11, in execution_order\n    raise NotImplementedError(\"Dependency ordering is not implemented yet\")\nNotImplementedError: Dependency ordering is not implemented yet\n\n======================================================================\nERROR: test_empty (__main__.AcceptanceTests.test_empty)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 9, in test_empty\n    self.assertEqual(execution_order({}), [])\n                     ^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scheduler.py\", line 11, in execution_order\n    raise NotImplementedError(\"Dependency ordering is not implemented yet\")\nNotImplementedError: Dependency ordering is not implemented yet\n\n======================================================================\nERROR: test_no_mutation (__main__.AcceptanceTests.test_no_mutation)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 35, in test_no_mutation\n    self.assertEqual(execution_order(jobs), [\"a\", \"b\", \"c\"])\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scheduler.py\", line 11, in execution_order\n    raise NotImplementedError(\"Dependency ordering is not implemented yet\")\nNotImplementedError: Dependency ordering is not implemented yet\n\n======================================================================\nERROR: test_unknown (__main__.AcceptanceTests.test_unknown)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 25, in test_unknown\n    execution_order({\"a\": [\"missing\"]})\n  File \"/workspace/scheduler.py\", line 11, in execution_order\n    raise NotImplementedError(\"Dependency ordering is not implemented yet\")\nNotImplementedError: Dependency ordering is not implemented yet\n\n----------------------------------------------------------------------\nRan 9 tests in 0.001s\n\nFAILED (errors=10)\n"
+        },
+        {
+          "variant": "reference",
+          "suite": "public",
+          "expected_pass": true,
+          "expectation_met": true,
+          "exit_code": 0,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_task_names (test_public.PublicTests.test_task_names) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+        },
+        {
+          "variant": "reference",
+          "suite": "hidden",
+          "expected_pass": true,
+          "expectation_met": true,
+          "exit_code": 0,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_available_tie_break (__main__.AcceptanceTests.test_available_tie_break) ... ok\ntest_chain (__main__.AcceptanceTests.test_chain) ... ok\ntest_cycles (__main__.AcceptanceTests.test_cycles) ... ok\ntest_diamond (__main__.AcceptanceTests.test_diamond) ... ok\ntest_duplicates (__main__.AcceptanceTests.test_duplicates) ... ok\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_existing_api (__main__.AcceptanceTests.test_existing_api) ... ok\ntest_no_mutation (__main__.AcceptanceTests.test_no_mutation) ... ok\ntest_unknown (__main__.AcceptanceTests.test_unknown) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.000s\n\nOK\n"
+        },
+        {
+          "variant": "wrong_tie_break",
+          "suite": "public",
+          "expected_pass": true,
+          "expectation_met": true,
+          "exit_code": 0,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_task_names (test_public.PublicTests.test_task_names) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+        },
+        {
+          "variant": "wrong_tie_break",
+          "suite": "hidden",
+          "expected_pass": false,
+          "expectation_met": true,
+          "exit_code": 1,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_available_tie_break (__main__.AcceptanceTests.test_available_tie_break) ... FAIL\ntest_chain (__main__.AcceptanceTests.test_chain) ... ok\ntest_cycles (__main__.AcceptanceTests.test_cycles) ... ok\ntest_diamond (__main__.AcceptanceTests.test_diamond) ... FAIL\ntest_duplicates (__main__.AcceptanceTests.test_duplicates) ... ok\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_existing_api (__main__.AcceptanceTests.test_existing_api) ... ok\ntest_no_mutation (__main__.AcceptanceTests.test_no_mutation) ... FAIL\ntest_unknown (__main__.AcceptanceTests.test_unknown) ... ok\n\n======================================================================\nFAIL: test_available_tie_break (__main__.AcceptanceTests.test_available_tie_break)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 15, in test_available_tie_break\n    self.assertEqual(execution_order({\"z\": [], \"b\": [], \"a\": [\"b\"]}), [\"b\", \"a\", \"z\"])\nAssertionError: Lists differ: ['z', 'b', 'a'] != ['b', 'a', 'z']\n\nFirst differing element 0:\n'z'\n'b'\n\n- ['z', 'b', 'a']\n+ ['b', 'a', 'z']\n\n======================================================================\nFAIL: test_diamond (__main__.AcceptanceTests.test_diamond)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 18, in test_diamond\n    self.assertEqual(execution_order({\"d\": [\"b\", \"c\"], \"c\": [\"a\"], \"b\": [\"a\"], \"a\": []}), [\"a\", \"b\", \"c\", \"d\"])\nAssertionError: Lists differ: ['a', 'c', 'b', 'd'] != ['a', 'b', 'c', 'd']\n\nFirst differing element 1:\n'c'\n'b'\n\n- ['a', 'c', 'b', 'd']\n?            -----\n\n+ ['a', 'b', 'c', 'd']\n?       +++++\n\n\n======================================================================\nFAIL: test_no_mutation (__main__.AcceptanceTests.test_no_mutation)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 35, in test_no_mutation\n    self.assertEqual(execution_order(jobs), [\"a\", \"b\", \"c\"])\nAssertionError: Lists differ: ['b', 'a', 'c'] != ['a', 'b', 'c']\n\nFirst differing element 0:\n'b'\n'a'\n\n- ['b', 'a', 'c']\n+ ['a', 'b', 'c']\n\n----------------------------------------------------------------------\nRan 9 tests in 0.001s\n\nFAILED (failures=3)\n"
+        },
+        {
+          "variant": "silent_cycle",
+          "suite": "public",
+          "expected_pass": true,
+          "expectation_met": true,
+          "exit_code": 0,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_task_names (test_public.PublicTests.test_task_names) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+        },
+        {
+          "variant": "silent_cycle",
+          "suite": "hidden",
+          "expected_pass": false,
+          "expectation_met": true,
+          "exit_code": 1,
+          "timed_out": false,
+          "stdout": "",
+          "stderr": "test_available_tie_break (__main__.AcceptanceTests.test_available_tie_break) ... ok\ntest_chain (__main__.AcceptanceTests.test_chain) ... ok\ntest_cycles (__main__.AcceptanceTests.test_cycles) ... \n  test_cycles (__main__.AcceptanceTests.test_cycles) (jobs={'a': ['a']}) ... FAIL\n  test_cycles (__main__.AcceptanceTests.test_cycles) (jobs={'a': ['b'], 'b': ['a']}) ... FAIL\n  test_cycles (__main__.AcceptanceTests.test_cycles) (jobs={'free': [], 'a': ['b'], 'b': ['a']}) ... FAIL\ntest_diamond (__main__.AcceptanceTests.test_diamond) ... ok\ntest_duplicates (__main__.AcceptanceTests.test_duplicates) ... ok\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_existing_api (__main__.AcceptanceTests.test_existing_api) ... ok\ntest_no_mutation (__main__.AcceptanceTests.test_no_mutation) ... ok\ntest_unknown (__main__.AcceptanceTests.test_unknown) ... ok\n\n======================================================================\nFAIL: test_cycles (__main__.AcceptanceTests.test_cycles) (jobs={'a': ['a']})\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 29, in test_cycles\n    with self.subTest(jobs=jobs), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_cycles (__main__.AcceptanceTests.test_cycles) (jobs={'a': ['b'], 'b': ['a']})\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 29, in test_cycles\n    with self.subTest(jobs=jobs), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_cycles (__main__.AcceptanceTests.test_cycles) (jobs={'free': [], 'a': ['b'], 'b': ['a']})\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 29, in test_cycles\n    with self.subTest(jobs=jobs), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 9 tests in 0.001s\n\nFAILED (failures=3)\n"
+        }
+      ],
+      "status": "pass"
+    }
+  ],
+  "status": "pass"
+}

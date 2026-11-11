@@ -1,0 +1,145 @@
+{
+  "runs": [
+    {
+      "run_id": "R-0029",
+      "tool": "opencode-v1",
+      "task_id": "P-01",
+      "status": "success",
+      "duration_ms": 224527,
+      "changed_files": [
+        "intervals.py"
+      ],
+      "scope_public_hidden_pass": true,
+      "known_usage_estimated_cost_usd": "0.08659104",
+      "unpriced_requests": 0,
+      "last_request_started_seconds_into_run": 218.899604,
+      "tool_errors": []
+    },
+    {
+      "run_id": "R-0030",
+      "tool": "opencode-v2",
+      "task_id": "P-02",
+      "status": "timeout",
+      "duration_ms": 300039,
+      "changed_files": [
+        "scheduler.py"
+      ],
+      "scope_public_hidden_pass": true,
+      "known_usage_estimated_cost_usd": "0.06105024",
+      "unpriced_requests": 1,
+      "last_request_started_seconds_into_run": 299.393594,
+      "tool_errors": []
+    }
+  ],
+  "gaps": [
+    {
+      "previous_run": "R-0029",
+      "next_run": "R-0029",
+      "seconds": 30.001452
+    },
+    {
+      "previous_run": "R-0029",
+      "next_run": "R-0029",
+      "seconds": 30.001892
+    },
+    {
+      "previous_run": "R-0029",
+      "next_run": "R-0029",
+      "seconds": 30.00121
+    },
+    {
+      "previous_run": "R-0029",
+      "next_run": "R-0029",
+      "seconds": 30.001482
+    },
+    {
+      "previous_run": "R-0029",
+      "next_run": "R-0029",
+      "seconds": 30.001287
+    },
+    {
+      "previous_run": "R-0029",
+      "next_run": "R-0029",
+      "seconds": 30.001309
+    },
+    {
+      "previous_run": "R-0029",
+      "next_run": "R-0030",
+      "seconds": 30.000826
+    },
+    {
+      "previous_run": "R-0030",
+      "next_run": "R-0030",
+      "seconds": 30.001324
+    },
+    {
+      "previous_run": "R-0030",
+      "next_run": "R-0030",
+      "seconds": 30.001514
+    },
+    {
+      "previous_run": "R-0030",
+      "next_run": "R-0030",
+      "seconds": 30.001765
+    },
+    {
+      "previous_run": "R-0030",
+      "next_run": "R-0030",
+      "seconds": 30.00147
+    },
+    {
+      "previous_run": "R-0030",
+      "next_run": "R-0030",
+      "seconds": 30.001996
+    },
+    {
+      "previous_run": "R-0030",
+      "next_run": "R-0030",
+      "seconds": 30.001969
+    }
+  ],
+  "all_gaps_ge_30": true,
+  "cross_cli_gap_seconds": [
+    30.000826
+  ],
+  "unrun_slots": 3,
+  "stop_reason": "usage_missing",
+  "last_request_error": "BrokenPipeError with HTTP200, no terminal/usage near supervisor300s deadline; not proof of provider overload",
+  "snapshot_correctness_vs_completion": "R-0030 scope/public/hidden pass but CLI timed out; retain timeout, do not upgrade to success",
+  "known_usage_estimated_cost_usd": "0.14764128",
+  "cumulative_known_usage_estimated_cost_usd": "0.61870440",
+  "cumulative_unpriced_requests": 5,
+  "estimated_total_usd": null,
+  "measured_charge_usd": null,
+  "hashes_source_protocol_manifest_pricing_seal_chain_binary": "pass",
+  "key_scan": "pass",
+  "supervisor_pids_absent": true,
+  "broker_sockets_absent": true,
+  "prior_raw_unchanged": true,
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "raw_artifact_sha256": {
+    "result.json": "2ffa90bb383e4f48bcad7b6bccb3989060eebcfa6a8e4fd2b60e92704de4f34f",
+    "protocol.json": "e28e03291110f936b38bf06bb88fe484c0f4e3ef5fba45db5623545485a9c098",
+    "R-0029/stdout.jsonl": "b9c01f6225eab6db20f90eef4c7f9765de0ae181bd12c25fc2309c3b46b5d443",
+    "R-0029/result.json": "ee7668b807f0b1572e61f1d16fb074b32ff306013c7a8aad25fb61b8394ece0f",
+    "R-0029/config.json": "4a30adf470525e34b25c31a6889a5163449afaafec96c2d1fa0135d118f78a1a",
+    "R-0029/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "R-0030/stdout.jsonl": "d34fbeca45200644a517484e18eaa8c54ad4b5deac7ee70ceddb4889d10d4534",
+    "R-0030/result.json": "c119c0d545698de3e02e03ba9f5a4926d25b930af59c6d1fa2562c465143f7e9",
+    "R-0030/config.json": "cdc7150c44b0589ef98af4fed7719d5ce1635c801b9bafd47db6e1191ae4003b",
+    "R-0030/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "R-0029/grader/grading.json": "4e36ed536cdc8d835929010f68716e1abcdf144719fd196f762a4aa0271c040b",
+    "R-0029/grader/patch.diff": "6874c7adb9cd82d4fb913ad4466ab04e77dcb5ea7a7864a05fbad8c1b41528cb",
+    "R-0029/grader/snapshot/intervals.py": "19552bd22cdc2c9bbef6080a36b7082c2c86182d58864dc9afd39e9fd54c9f61",
+    "R-0029/grader/snapshot/test_public.py": "8eb40ed38a8653c191c77eefa3a269efbd90a123775a9adb12d24cdd062661d6",
+    "R-0030/grader/grading.json": "45e9c25f1f9a60a10c914b58d0e7008f38ee8a6759d81f7053409d6786dfc48c",
+    "R-0030/grader/patch.diff": "4006e67d72575ca68ed9b897ad7b5f0c882b647b1675d57ec27e377005a6f0c1",
+    "R-0030/grader/snapshot/test_public.py": "cdb577452e0e2f399f00c8766787fa7974583cff9e386cfc1d62db728bb09931",
+    "R-0030/grader/snapshot/scheduler.py": "f2545a7c5dcd3c5a6883a99bf9d9c37ca8d504675f597bcec87466faf942a653"
+  }
+}

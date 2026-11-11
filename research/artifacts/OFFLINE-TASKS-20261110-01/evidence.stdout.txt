@@ -1,0 +1,2 @@
+PASS: 124 evidence IDs; commit/file/line ranges và permalinks hợp lệ.
+Không kiểm chứng semantics claim, URL availability hoặc runtime bằng phép kiểm tra này.

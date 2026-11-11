@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0084",
+    "comparison_axis": "tools",
+    "tool": "Codex CLI",
+    "version": "0.167.0",
+    "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+    "claim": "ToolRouter dựng ToolInvocation gồm session/step context/cancellation rồi chuyển registry.dispatch_any_with_state",
+    "file": "codex-rs/core/src/tools/router.rs",
+    "line_start": "390",
+    "line_end": "427",
+    "symbol": "dispatch_tool_call_with_code_mode_result_inner",
+    "permalink": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/tools/router.rs#L390-L427",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Chưa kiểm toàn policy hoặc mọi handler; dispatcher không tự chứng minh sandbox an toàn"
+  },
+  "source_sha256": "e6a7ef92ce0455ace849927c6431334af984e144c8d008af65887c8db5ef7fec",
+  "excerpt": "    async fn dispatch_tool_call_with_code_mode_result_inner(\n        &self,\n        session: Arc<Session>,\n        step_context: Arc<StepContext>,\n        cancellation_token: CancellationToken,\n        tracker: SharedTurnDiffTracker,\n        call: ToolCall,\n        source: ToolCallSource,\n        call_state: Option<Arc<ToolCallState>>,\n    ) -> Result<AnyToolResult, FunctionCallError> {\n        let ToolCall {\n            tool_name,\n            call_id,\n            payload,\n            native_call,\n            ..\n        } = call;\n\n        // Keep the legacy ToolInvocation.turn field tied to the same request state until handlers migrate.\n        let turn = Arc::clone(&step_context.turn);\n        let invocation = ToolInvocation {\n            session,\n            turn,\n            step_context,\n            cancellation_token,\n            tracker,\n            call_id,\n            tool_name,\n            source,\n            payload,\n            native_call,\n            environments: Default::default(),\n        };\n\n        self.registry\n            .dispatch_any_with_state(invocation, call_state)\n            .await\n    }"
+}

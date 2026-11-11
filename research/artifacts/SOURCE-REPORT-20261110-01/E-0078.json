@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0078",
+    "comparison_axis": "agent-loop",
+    "tool": "Pi",
+    "version": "1.5.0",
+    "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+    "claim": "runLoop stream assistant rồi xử lý tool calls và thêm tool results; error/aborted dừng; steering và follow-up có thể tiếp lượt",
+    "file": "packages/agent/src/agent-loop.ts",
+    "line_start": "250",
+    "line_end": "329",
+    "symbol": "runLoop",
+    "permalink": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/agent/src/agent-loop.ts#L250-L329",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Không đo throughput/retry/completion của mọi provider; source flow không phải runtime test"
+  },
+  "source_sha256": "9d7589b5071ea3b8b3e3c624f9cfc09a976ebf7436024a58213837de4645167d",
+  "excerpt": "\t\t\t// Stream assistant response\n\t\t\tconst message = await streamAssistantResponse(currentContext, config, signal, emit, streamFunction);\n\t\t\tnewMessages.push(message);\n\n\t\t\tif (message.stopReason === \"error\" || message.stopReason === \"aborted\") {\n\t\t\t\tlastCompletedTurn = {\n\t\t\t\t\tmessage,\n\t\t\t\t\ttoolResults: [],\n\t\t\t\t\tcontext: currentContext,\n\t\t\t\t\tnewMessages,\n\t\t\t\t};\n\t\t\t\tawait config.finishTurn?.(lastCompletedTurn, signal);\n\t\t\t\tawait emit({ type: \"turn_end\", message, toolResults: [] });\n\t\t\t\tawait emit({ type: \"agent_end\", messages: newMessages });\n\t\t\t\treturn;\n\t\t\t}\n\n\t\t\t// Check for tool calls\n\t\t\tconst toolCalls = message.content.filter((c) => c.type === \"toolCall\");\n\n\t\t\tconst toolResults: ToolResultMessage[] = [];\n\t\t\thasMoreToolCalls = false;\n\t\t\tif (toolCalls.length > 0) {\n\t\t\t\t// A \"length\" stop means the output was cut off by the token limit, so\n\t\t\t\t// every tool call in the message may carry truncated arguments. Fail\n\t\t\t\t// them all instead of executing potentially borked calls.\n\t\t\t\tconst executedToolBatch =\n\t\t\t\t\tmessage.stopReason === \"length\"\n\t\t\t\t\t\t? await failToolCallsFromTruncatedMessage(toolCalls, emit)\n\t\t\t\t\t\t: await executeToolCalls(currentContext, message, config, signal, emit);\n\t\t\t\ttoolResults.push(...executedToolBatch.messages);\n\t\t\t\thasMoreToolCalls = !executedToolBatch.terminate;\n\n\t\t\t\tfor (const result of toolResults) {\n\t\t\t\t\tcurrentContext.messages.push(result);\n\t\t\t\t\tnewMessages.push(result);\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tlastCompletedTurn = {\n\t\t\t\tmessage,\n\t\t\t\ttoolResults,\n\t\t\t\tcontext: currentContext,\n\t\t\t\tnewMessages,\n\t\t\t};\n\t\t\tconst decision = await config.finishTurn?.(lastCompletedTurn, signal);\n\t\t\tawait emit({ type: \"turn_end\", message, toolResults });\n\n\t\t\tif (decision?.action === \"end\") {\n\t\t\t\tawait emit({ type: \"agent_end\", messages: newMessages });\n\t\t\t\treturn;\n\t\t\t}\n\n\t\t\texplicitContinuation = decision?.action === \"continue\";\n\t\t\tpendingMessages = (await config.getSteeringMessages?.()) || [];\n\t\t\tif (hasMoreToolCalls || pendingMessages.length > 0) {\n\t\t\t\texplicitContinuation = false;\n\t\t\t}\n\t\t}\n\n\t\t// Agent would stop here. Check for follow-up messages.\n\t\tconst followUpMessages = (await config.getFollowUpMessages?.()) || [];\n\t\tif (followUpMessages.length > 0) {\n\t\t\t// Set as pending so inner loop processes them\n\t\t\texplicitContinuation = false;\n\t\t\tpendingMessages = followUpMessages;\n\t\t\tcontinue;\n\t\t}\n\n\t\t// No natural request was selected, so fulfill the continuation decision with one context-only turn.\n\t\tif (explicitContinuation) {\n\t\t\texplicitContinuation = false;\n\t\t\tcontinue;\n\t\t}\n\n\t\t// No more messages, exit\n\t\tbreak;\n\t}\n\n\tawait emit({ type: \"agent_end\", messages: newMessages });"
+}

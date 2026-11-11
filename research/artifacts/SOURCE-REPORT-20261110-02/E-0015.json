@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0015",
+    "comparison_axis": "launch",
+    "tool": "OpenCode v2",
+    "version": "2.2.5",
+    "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+    "claim": "Standalone spawn serve --stdio --port 0 với credential ngẫu nhiên và scoped child process",
+    "file": "packages/cli/src/services/standalone.ts",
+    "line_start": "17",
+    "line_end": "58",
+    "symbol": "Standalone.start",
+    "permalink": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/cli/src/services/standalone.ts#L17-L58",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Chưa gọi Standalone.start qua CLI flag; serve stdio EOF có runtime test riêng E-0043"
+  },
+  "source_sha256": "dc8197da471d3d213acf51ef809bb1c05a7cf697bce1f0795e49fdd4c0165cf9",
+  "excerpt": "function command(password: string, options: Options) {\n  const [executable, ...args] = options.command ?? [...selfCommand(), \"serve\"]\n  if (!executable) throw new Error(\"Failed to resolve standalone server command\")\n  return ChildProcess.make(executable, [...args, \"--stdio\", \"--port\", \"0\"], {\n    cwd: startupDirectory,\n    // Explicit entry wins over anything inherited, so a user-exported\n    // OPENCODE_PASSWORD cannot shadow the child's lease credential.\n    env: { OPENCODE_PASSWORD: password },\n    extendEnv: true,\n    // The server treats EOF on this pipe as the end of its ownership lease.\n    // The OS closes it even when the TUI is killed before Effect finalizers run.\n    stdin: \"pipe\",\n    stderr: process.env.OPENCODE_PRINT_LOGS === \"1\" ? \"inherit\" : \"ignore\",\n    killSignal: \"SIGTERM\",\n    forceKillAfter: \"3 seconds\",\n  })\n}\n\nconst makeEndpoint = Effect.fn(\"cli.standalone.endpoint\")(\n  function* (options: Options) {\n    const password = randomBytes(32).toString(\"base64url\")\n    const spawner = yield* ChildProcessSpawner.ChildProcessSpawner\n    const proc = yield* spawner.spawn(command(password, options))\n    const readyLine = yield* Deferred.make<string, Error>()\n    // Keep draining stdout after readiness so later server writes cannot hit EPIPE.\n    yield* proc.stdout.pipe(\n      Stream.decodeText(),\n      Stream.splitLines,\n      Stream.runForEach((line) => Deferred.succeed(readyLine, line)),\n      Effect.ensuring(Deferred.fail(readyLine, new Error(\"Standalone server exited before reporting readiness\"))),\n      Effect.forkScoped,\n    )\n    const output = yield* Deferred.await(readyLine)\n    const ready = yield* Effect.tryPromise(() => decodeReady(output))\n    return {\n      url: ready.url,\n      auth: { type: \"basic\" as const, username: \"opencode\", password },\n      pid: proc.pid,\n      exited: proc.exitCode,\n    }\n  },\n  Effect.provide(LayerNode.compile(CrossSpawnSpawner.node)),"
+}

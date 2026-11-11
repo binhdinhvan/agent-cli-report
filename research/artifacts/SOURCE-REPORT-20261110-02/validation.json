@@ -1,0 +1,233 @@
+{
+  "scope": "Offline source comparison/report; no provider, network probe, tool binary, dependency install or repo modifications",
+  "checked_at_utc": "2026-11-10T03:35:49.044415+00:00",
+  "new_evidence_ids": [
+    "E-0077",
+    "E-0078",
+    "E-0079",
+    "E-0080",
+    "E-0081",
+    "E-0082",
+    "E-0083",
+    "E-0084",
+    "E-0085",
+    "E-0086"
+  ],
+  "evidence_ids_total": 86,
+  "structural_evidence_validator": "pass; does not prove semantics, URL availability or runtime",
+  "manual_source_claim_review": "Read cited pinned source excerpts; source-confirmed only for new10claims",
+  "expanded_report_sections": [
+    "3.1 architecture",
+    "3.2 agent loop",
+    "3.3 tools",
+    "4.1 v1/v2 hosting/lifecycle",
+    "4.2 HTTP/Client/embedded SDK boundaries"
+  ],
+  "pending": [
+    "3.4 permission/sandbox enforcement",
+    "3.5 context/session comparison",
+    "3.6 extension compatibility",
+    "4.3 defaults/precedence",
+    "4.4 background/subagent demo",
+    "4.5 plugin port/runtime",
+    "Client/SDK prompt runtime and real shared GUI service demo"
+  ],
+  "sources": [
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/cli/src/services/server-connection.ts",
+      "sha256": "161524ef2525a04bedea305dbfc9df61bd951c69b55a13bc0dca6445f16880b3",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/cli/src/services/server-connection.ts"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/cli/src/services/standalone.ts",
+      "sha256": "dc8197da471d3d213acf51ef809bb1c05a7cf697bce1f0795e49fdd4c0165cf9",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/cli/src/services/standalone.ts"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/sdk/src/promise.ts",
+      "sha256": "24b7100811827828d0e131b67b642254bc9cc808a0f911a9c165f28e9cd6c026",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/sdk/src/promise.ts"
+    },
+    {
+      "repo": "codex",
+      "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+      "file": "codex-rs/exec/src/lib.rs",
+      "sha256": "53e0d7cac90466dc088dd5457c72813ef8c0a8c56fe6466eb602c85b8f45a6f3",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/codex/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/exec/src/lib.rs"
+    },
+    {
+      "repo": "pi",
+      "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+      "file": "packages/coding-agent/src/cli/args.ts",
+      "sha256": "05471cfd210c08ffad9ea58c334849c94de260137efa6b1b0eecfcd355d630e7",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/pi/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/cli/args.ts"
+    },
+    {
+      "repo": "codex",
+      "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+      "file": "codex-rs/core/src/client.rs",
+      "sha256": "662cf64d10f4b0d7eaf3ad046e53b1eb6dcf8dfb3cb5a425a3c8c222adc05da5",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/codex/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/client.rs"
+    },
+    {
+      "repo": "opencode-v1",
+      "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+      "file": "packages/opencode/src/cli/cmd/run.ts",
+      "sha256": "e040e90d4c81cdd59b9568ee90a53c0209cd9ddf1b8b207d1a8685b2e26d57d0",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v1/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/cli/cmd/run.ts"
+    },
+    {
+      "repo": "opencode-v1",
+      "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+      "file": "packages/opencode/src/cli/cmd/serve.ts",
+      "sha256": "4cdec5fb55b58a3215aec3d58c6e15a3ef0db75dd6f613180c901214be67983f",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v1/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/cli/cmd/serve.ts"
+    },
+    {
+      "repo": "opencode-v1",
+      "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+      "file": "packages/opencode/src/server/routes/instance/httpapi/groups/session.ts",
+      "sha256": "3fd2ae22b6bbc211adc45011243a42fa869862355ad08c086c591792d8fa91dc",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v1/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/server/routes/instance/httpapi/groups/session.ts"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/protocol/src/groups/session.ts",
+      "sha256": "5ee372848c93750bc7cd60e1b13464d4841b1c2e6e2ca93777c53ae8ffd6eea7",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/protocol/src/groups/session.ts"
+    },
+    {
+      "repo": "opencode-v1",
+      "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+      "file": "packages/opencode/src/server/routes/instance/httpapi/handlers/event.ts",
+      "sha256": "64985bf2d4d5e1002bdef7b3f64217cdd830c8b0dadfe3faf84ad0dffc5c5ba6",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v1/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/server/routes/instance/httpapi/handlers/event.ts"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/server/src/handlers/event.ts",
+      "sha256": "07d163a142fba915b3b34028f8b3de74679d476f108a0a734b0ac6b863ad1698",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/server/src/handlers/event.ts"
+    },
+    {
+      "repo": "opencode-v1",
+      "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+      "file": "packages/opencode/src/server/auth.ts",
+      "sha256": "01c45e05eecac32628acc263be84a563386c39c78a33aa67d9a8114f86a57a41",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v1/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/server/auth.ts"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/server/src/middleware/authorization.ts",
+      "sha256": "4bc548ca3d011a78cc0c921d5965403b55c3dbefc0fd7f80dac99a103ce209a0",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/server/src/middleware/authorization.ts"
+    },
+    {
+      "repo": "opencode-v1",
+      "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+      "file": "packages/opencode/src/session/session.ts",
+      "sha256": "0c56ae3535e29cae0de51156eaba2842c0896309f1d6b12525566b4a8ba4c7f2",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v1/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/session/session.ts"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/core/src/session.ts",
+      "sha256": "e221f3800c065c2ec8c834e6e91b6f1b624120a52d5f3da3711ee1877cd9b2d1",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session.ts"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/client/package.json",
+      "sha256": "552c4e8b0296657641c295b12de740c76f6b9fcbd4ebbe97f3ecd9225ab35bc9",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/client/package.json"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/client/src/promise/service.ts",
+      "sha256": "1ef755d6f42257b8bea855c1fd359b68e2736d9a2f3fb015066d155a37191868",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/client/src/promise/service.ts"
+    },
+    {
+      "repo": "pi",
+      "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+      "file": "packages/coding-agent/src/core/sdk.ts",
+      "sha256": "f0f6f2b14a61c5c3ebb31d40c97b3f73296a2f0334d582072383302d693714c8",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/pi/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/sdk.ts"
+    },
+    {
+      "repo": "pi",
+      "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+      "file": "packages/agent/src/agent-loop.ts",
+      "sha256": "9d7589b5071ea3b8b3e3c624f9cfc09a976ebf7436024a58213837de4645167d",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/pi/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/agent/src/agent-loop.ts"
+    },
+    {
+      "repo": "pi",
+      "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+      "file": "packages/coding-agent/src/core/tools/index.ts",
+      "sha256": "3c66ea1e03530fb85436ee639f35add8bf72718ac6e76b738a1f41be58a2b472",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/pi/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/tools/index.ts"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/core/src/session/runner/llm.ts",
+      "sha256": "606619006b4ec1a4ec7bd88b2f2f1defa007c7f5891aff0f4481626a2c3a209e",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session/runner/llm.ts"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/core/src/tool/runtime.ts",
+      "sha256": "0026f12d690ded356c117b66302cf12cdfeb763a22ea5991b65d7de9af7c4f05",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/tool/runtime.ts"
+    },
+    {
+      "repo": "codex",
+      "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+      "file": "codex-rs/core/src/session/turn.rs",
+      "sha256": "cd2f3c0f347641afc1a11ac720c5779dd5ec373dd872c6c8b9174436181c6408",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/codex/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/session/turn.rs"
+    },
+    {
+      "repo": "codex",
+      "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+      "file": "codex-rs/core/src/tools/router.rs",
+      "sha256": "e6a7ef92ce0455ace849927c6431334af984e144c8d008af65887c8db5ef7fec",
+      "snapshot": "research/artifacts/SOURCE-REPORT-20261110-02/source/codex/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/tools/router.rs"
+    }
+  ],
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "local_links": "pass; external URLs not fetched",
+  "report_history_details_balanced": true,
+  "raw_benchmark_retained": true,
+  "frozen_pilot_hashes": "pass",
+  "benchmark_pause": "explicit user request; corporate-network reason user-reported; wait for user at home",
+  "new_provider_requests": 0,
+  "network_probes": 0,
+  "real_id_registry_unchanged": [
+    "R-0087",
+    "C-0188"
+  ],
+  "prior_audit_attempt": "SOURCE-REPORT-20261110-01 incomplete due NameError in audit pattern-scan generator, not a source finding; artifacts kept",
+  "report_sha256": "013a6e9e0a2f09138d3061d1d53dc9377e091ce1da353f5e16ee6875d4e25562",
+  "evidence_csv_sha256": "f4c4a0895d97162e2288ef0a39a42f275a0b0ae5eb26c3699a5ee4c20403b26a",
+  "secret_pattern_scan": "pass; heuristic only"
+}

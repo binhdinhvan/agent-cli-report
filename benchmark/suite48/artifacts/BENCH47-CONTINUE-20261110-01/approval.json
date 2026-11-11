@@ -1,0 +1,15 @@
+{
+  "launch_authorized": true,
+  "plan_sha256": "9deec512a41d22f1f6f0afa4715fb339b60cc81d7494fdbe19dd8e34cef59e86",
+  "scope": "47-not-run-slots-continuation-no-retry-rubric-r2",
+  "budget_estimate_usd": "16",
+  "prior_unpriced_acknowledged": true,
+  "rubric_revision": "b01-evidence-r2",
+  "approved_by": "user explicit: chạy tiếp api; Tiếp tục47slot; Review và sửa có revision",
+  "approved_at_utc": "2026-11-10T13:55:59.339250+00:00",
+  "offline_acceptance_sha256": "2d5263d9510ff5eae96044329741af5df1b86419a5341212054993251b3ca829",
+  "prior_known_usd": "0.06853344",
+  "prior_unpriced_requests": 1,
+  "remaining_known_guard_usd": "15.93146656",
+  "no_auto_retry_or_resume": true
+}

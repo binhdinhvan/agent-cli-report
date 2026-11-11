@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "checked_at_utc": "2026-11-10T15:20:06.802572+00:00",
+  "scope": "google-direct-chat-sse-five-unpriced-no-retry",
+  "model": "gemini-3.8-flash",
+  "provider": "https://generativelanguage.googleapis.com/v1beta/openai/",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+  "offline_tests_passed": 58,
+  "credential_metadata": "owner regular nonsymlink nonempty600; content not read in approval",
+  "approval": "demos/approvals/GOOGLE-GEMINI-SMOKE5-20261110-01.json",
+  "approval_sha256": "2a2f6b613c271ea4f94540c1f563d010fd92da964bd9445ca9d97e6d3dd26f61",
+  "input_sha256": {
+    "demos/google_gemini_smoke5.py": "0c574f9fab0057282e92d9162a96ff22cf2407a6a1e7a1eb0d481c618fdaef91",
+    "demos/test_google_gemini_smoke5.py": "b3977105d69a288942a8f80bbb9925e45bfe8023ac6710c1c3e78a1ebea1ab3d",
+    "demos/GOOGLE_GEMINI.md": "aa9ee16abe1c4b5bd71f3e9685f6e08fb12ed3e4037b7d8148d84b83594aac2d",
+    "demos/provider_probe.py": "92507bfc713c543d8f056523ff115e35bfb42f92683b1aa40cb6df65aec9f5c8",
+    "research/model-profiles/google-gemini-3.8-flash.json": "2eb07b3a7f49f0bb6dad7fad1dbab394f1a41aab19be4d5dbf1ad9b2528234a1"
+  },
+  "provider_requests_by_prelaunch": 0,
+  "extra_network_probes": 0,
+  "cost_estimate_usd": null,
+  "no_sol_or_shopaikey_rates": true,
+  "prior_raw_retention": true,
+  "sol_frozen_pilot": "PASS: frozen outputs, ledger, review, fixture/dependency/binary and source hashes; offline only\n",
+  "registry_unchanged": [
+    "R-0222",
+    "C-0323"
+  ],
+  "limits": {
+    "max_requests": 5,
+    "max_tokens": 256,
+    "gap_seconds": 30,
+    "socket_timeout_seconds": 45,
+    "wall_seconds_per_request": 90,
+    "no_retry_or_fallback": true
+  },
+  "native4cli_acceptance": "unverified",
+  "full_benchmark_authorized": false
+}

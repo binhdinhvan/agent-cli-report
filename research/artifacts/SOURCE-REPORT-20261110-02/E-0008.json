@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0008",
+    "comparison_axis": "launch",
+    "tool": "OpenCode v1",
+    "version": "1.19.5",
+    "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+    "claim": "run không attach dùng SDK với custom fetch gọi Server.Default().app.fetch trong process",
+    "file": "packages/opencode/src/cli/cmd/run.ts",
+    "line_start": "933",
+    "line_end": "951",
+    "symbol": "RunCommand",
+    "permalink": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/cli/cmd/run.ts#L933-L951",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Chỉ nhánh run không attach; không kết luận cho mọi client v1"
+  },
+  "source_sha256": "e040e90d4c81cdd59b9568ee90a53c0209cd9ddf1b8b207d1a8685b2e26d57d0",
+  "excerpt": "      if (args.attach) {\n        const sdk = attachSDK(directory)\n        return await execute(sdk)\n      }\n\n      const fetchFn = (async (input: RequestInfo | URL, init?: RequestInit) => {\n        const { Server } = await import(\"@/server/server\")\n        const request = new Request(input, init)\n        const headers = new Headers(request.headers)\n        const auth = ServerAuth.header()\n        if (auth) headers.set(\"Authorization\", auth)\n        return Server.Default().app.fetch(new Request(request, { headers }))\n      }) as typeof globalThis.fetch\n      const sdk = createOpencodeClient({\n        baseUrl: \"http://opencode.internal\",\n        fetch: fetchFn,\n        directory,\n      })\n      await execute(sdk)"
+}

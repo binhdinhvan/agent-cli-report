@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "evidence_ids": 134,
+  "new_pinned_source_ranges_checked": 10,
+  "local_links_checked": 191,
+  "native_raw_from_first_audit_unchanged": true,
+  "registry": [
+    "R-0378",
+    "C-0479"
+  ],
+  "real_provider_requests": 0,
+  "document_sha256": {
+    "REPORT.md": "c3a0f352364282ad6618ebe8eab445218ec0498eaa4a20717158c41407b3834b",
+    "README.md": "191c434fc5600cf9da6160dd85b08cc13bba1cc46f47b32f19ae00ea98221c45",
+    "PLAN.md": "777f3d823b72f226861187c288c26b47937af32fe22dc9263d5b74581e73f7e1",
+    "demos/README.md": "1bd5c5c35076d46c955b10deadbfa3fb1d4e3a381e7c4ad3baa6731c17199d6a",
+    "demos/NATIVE_RUNTIME_RESULTS.md": "820966f9990a0c5973adbb9145c7c913209f4f66a3a6e173b484d49a9db2d550",
+    "demos/OFFLINE_DEMO_PLAN.md": "34975a293c546a435effb83492d1e3831b0ec907cc6c057ac83b1362d61a7dc5"
+  }
+}

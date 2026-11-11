@@ -1,0 +1,16 @@
+{
+  "id": "search-r2",
+  "schema_version": 1,
+  "common_bin": ".local/environments/search-r2/bin",
+  "sandbox_bin": "/opt/agent-cli-report-deps/search-r2/bin",
+  "executables": {
+    "rg": {
+      "version": "15.2.0",
+      "sha256": "e62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849",
+      "source": ".local/binaries/codex-0.167.0/payload/codex-path/rg"
+    }
+  },
+  "python_policy": "Use existing /usr/bin/python3 stdlib; no python alias added",
+  "native_path_policy": "Common bin prepended; native CLI PATH modifications preserved; effective rg bytes must match for all four CLIs",
+  "legacy_results_policy": "Separate environment revision; never silently pool with legacy results"
+}

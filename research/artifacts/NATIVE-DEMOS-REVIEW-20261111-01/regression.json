@@ -1,0 +1,10 @@
+{
+  "demo_tests": 73,
+  "demo_pass": true,
+  "benchmark_tests": 118,
+  "benchmark_pass": true,
+  "initial_unisolated_benchmark_errors": 2,
+  "initial_error": "Legacy reservation tests use historical IDs now present in real CSV; ID already indexed",
+  "isolation": "Only two legacy reservation test methods mock csv.DictReader to empty; temp state remains isolated; no product/test source modified",
+  "real_provider_requests": 0
+}

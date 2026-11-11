@@ -1,0 +1,21 @@
+{
+  "id": "search-r2",
+  "schema_version": 1,
+  "status": "prepared_pending_offline_preflight",
+  "group": "environment-r2-not-comparable-as-identical-to-legacy",
+  "scope": "experiment sandbox only; no host install, no model/config/provider change",
+  "common_bin": ".local/environments/search-r2/bin",
+  "sandbox_bin": "/opt/agent-cli-report-deps/search-r2/bin",
+  "executables": {
+    "rg": {
+      "version": "15.2.0",
+      "sha256": "e62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849",
+      "source": ".local/binaries/codex-0.167.0/payload/codex-path/rg",
+      "provenance": "existing Codex rust-v0.167.0 release package, original archive/checksum in demos/artifacts/PREP-20261106-01/preparation.json"
+    }
+  },
+  "python_policy": "Use existing /usr/bin/python3 stdlib; no python alias added",
+  "native_path_policy": "common bin prepended to baseline PATH; native CLI PATH modifications preserved; Codex bundled rg must match same digest",
+  "network_policy": "unshare-net unchanged; dependencies preprovided read-only, no download from agent",
+  "legacy_results_policy": "raw artifacts preserved; no silent pooling across revisions"
+}

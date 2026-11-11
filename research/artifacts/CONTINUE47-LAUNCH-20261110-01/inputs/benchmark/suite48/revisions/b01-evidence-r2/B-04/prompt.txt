@@ -1,0 +1,9 @@
+Refactor dispatcher trong router.py thành các module, giữ nguyên hành vi/API hiện có. Đọc router.py, models.py và service.py trước khi sửa.
+
+Chỉ được sửa router.py và tạo/sửa routing/__init__.py, routing/validation.py, routing/handlers.py. Không sửa models.py, service.py, public tests hoặc thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh).
+
+Giữ router.dispatch(command, payload) và import path cũ. Tách phần validation hiện có vào routing.validation.validate_payload; tách logic create/update/delete vào routing.handlers.handle_create, handle_update, handle_delete. Các hàm mới phải có thể import/call trực tiếp và dispatcher phải thật sự delegate cho chúng, không chỉ thêm module không dùng hoặc copy implementation rồi giữ toàn bộ logic ở router.py.
+
+Giữ output, loại/message exception, thứ tự validation, quy tắc mutation và side effects của implementation cũ cho input mà fixture hiện hỗ trợ, gồm unknown command và payload lỗi. Không mở rộng nghiệp vụ hoặc thay đổi validation để làm test dễ hơn. Các module mới không được có side effect khi import. Giữ signature các hàm được mô tả trong docstrings fixture; không thêm dependency ngoài standard library.
+
+Public command: python3 -B -m unittest -v test_public. Không cài package hoặc truy cập Internet. Success cần public/hidden behavior regression và structural/delegation checks đều pass, đúng phạm vi, CLI hoàn tất.

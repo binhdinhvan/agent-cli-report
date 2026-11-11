@@ -1,0 +1,18 @@
+{
+  "scope": "Read-only unauthenticated transport diagnostics only",
+  "network_result_sha256": "fc4c0a32def69bf5126fccb89e1ec2af86b9930ab1c706e905278a5a6ae66983",
+  "script_sha256": "3e59f4d2f9cda03a3749df5f7c3b7cee6944a76186412bc738819debe6068b2a",
+  "dns_tcp_tls_http_pass": true,
+  "models_no_auth_status": 401,
+  "root_no_auth_status": 200,
+  "generation_requests": 0,
+  "credential_reads": 0,
+  "prior_pilot_raw_unchanged": true,
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "authenticated_responses_backend": "unverified"
+}

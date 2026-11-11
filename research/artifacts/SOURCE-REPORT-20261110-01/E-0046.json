@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0046",
+    "comparison_axis": "api",
+    "tool": "OpenCode v1",
+    "version": "1.19.5",
+    "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+    "claim": "SSE listener đăng ký eager; envelope dùng properties và có server.connected",
+    "file": "packages/opencode/src/server/routes/instance/httpapi/handlers/event.ts",
+    "line_start": "25",
+    "line_end": "84",
+    "symbol": "eventResponse",
+    "permalink": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/server/routes/instance/httpapi/handlers/event.ts#L25-L84",
+    "evidence_status": "both",
+    "runtime_artifact": "demos/artifacts/OFFLINE-API-20261106-01/opencode-v1/result.json",
+    "limitations": "Đã nhận connected và session.created tại một directory; chưa kiểm chứng mọi directory/workspace"
+  },
+  "source_sha256": "64985bf2d4d5e1002bdef7b3f64217cdd830c8b0dadfe3faf84ad0dffc5c5ba6",
+  "excerpt": "function eventResponse(events: EventV2.Interface) {\n  return Effect.gen(function* () {\n    const instance = yield* InstanceState.context\n    const workspaceID = yield* InstanceState.workspaceID\n    // Listener registration is eager, so events published after this point cannot\n    // be lost while the HTTP body fiber is starting or emitting server.connected.\n    const queue = yield* Queue.unbounded<EventV2.Payload>()\n    const unsubscribe = yield* events.listen((event) => Effect.sync(() => Queue.offerUnsafe(queue, event)))\n    yield* Effect.addFinalizer(() => unsubscribe)\n    const stream = Stream.fromQueue(queue).pipe(\n      Stream.filter(\n        (event) =>\n          event.location?.directory === instance.directory &&\n          (event.location.workspaceID === undefined || event.location.workspaceID === workspaceID),\n      ),\n      Stream.map((event) => ({ id: event.id, type: event.type, properties: event.data })),\n    )\n    const disposed = Stream.callback<{ id: string; type: string; properties: unknown }>((queue) => {\n      const listener = (event: {\n        directory?: string\n        payload: { id?: string; type?: string; properties?: unknown }\n      }) => {\n        if (event.directory !== instance.directory || event.payload.type !== \"server.instance.disposed\") return\n        Queue.offerUnsafe(queue, {\n          id: event.payload.id ?? eventID(),\n          type: \"server.instance.disposed\",\n          properties: event.payload.properties ?? {},\n        })\n      }\n      return Effect.acquireRelease(\n        Effect.sync(() => GlobalBus.on(\"event\", listener)),\n        () => Effect.sync(() => GlobalBus.off(\"event\", listener)),\n      )\n    })\n    const output = stream.pipe(\n      Stream.merge(disposed, { haltStrategy: \"left\" }),\n      Stream.takeUntil((event) => event.type === \"server.instance.disposed\"),\n    )\n    const heartbeat = Stream.tick(\"10 seconds\").pipe(\n      Stream.drop(1),\n      Stream.map(() => ({ id: eventID(), type: \"server.heartbeat\", properties: {} })),\n    )\n\n    yield* Effect.logInfo(\"event connected\")\n    return HttpServerResponse.stream(\n      Stream.make({ id: eventID(), type: \"server.connected\", properties: {} }).pipe(\n        Stream.concat(output.pipe(Stream.merge(heartbeat, { haltStrategy: \"left\" }))),\n        Stream.map(eventData),\n        Stream.pipeThroughChannel(Sse.encode()),\n        Stream.encodeText,\n        Stream.ensuring(Effect.logInfo(\"event disconnected\")),\n      ),\n      {\n        contentType: \"text/event-stream\",\n        headers: {\n          \"Cache-Control\": \"no-cache, no-transform\",\n          \"X-Accel-Buffering\": \"no\",\n          \"X-Content-Type-Options\": \"nosniff\",\n        },\n      },"
+}

@@ -1,0 +1,4 @@
+--- before/answer.json
++++ after/answer.json
+@@ -0,0 +1 @@
++{"x": 1, "x": 2}

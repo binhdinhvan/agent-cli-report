@@ -1,0 +1,439 @@
+{
+  "run_id": "PREFLIGHT-02",
+  "task_id": "P-01",
+  "tool": "codex",
+  "spec": {
+    "tool": "codex",
+    "version": "0.167.0",
+    "config_id": "C-0103",
+    "repository": "openai/codex",
+    "tag": "rust-v0.167.0",
+    "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+    "asset": "codex-package-x86_64-unknown-linux-musl.tar.gz",
+    "size": 200178910,
+    "sha256": "3bbf75e83de6b58aed28f2cf6e33ad423ec31fd4700a1457b94be557ea5a7c6e",
+    "binary_names": [
+      "codex",
+      "codex-x86_64-unknown-linux-musl"
+    ],
+    "started_at_utc": "2026-11-06T03:49:40.826312+00:00",
+    "status": "prepared_not_executed",
+    "release_api": "https://api.github.com/repos/openai/codex/releases/tags/rust-v0.167.0",
+    "release_url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
+    "asset_url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-x86_64-unknown-linux-musl.tar.gz",
+    "archive_sha256_verified": "3bbf75e83de6b58aed28f2cf6e33ad423ec31fd4700a1457b94be557ea5a7c6e",
+    "archive_members": [
+      {
+        "name": "bin",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "bin/codex",
+        "size": 320575976,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "bin/codex-code-mode-host",
+        "size": 79209744,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "bin/codex-exec-server",
+        "size": 81940392,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-package.json",
+        "size": 246,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-path",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "codex-path/rg",
+        "size": 5408904,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/bwrap",
+        "size": 529776,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/NOTICE.md",
+        "size": 2403,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/bin",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/bin/codex-voice-host",
+        "size": 40487744,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0/libgstapp.so",
+        "size": 6488,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0/libgstaudioconvert.so",
+        "size": 41040,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0/libgstaudioresample.so",
+        "size": 35264,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0/libgstcoreelements.so",
+        "size": 479848,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0/libgstopus.so",
+        "size": 73464,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0/libgstrtp.so",
+        "size": 757800,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0/libgstrtpmanager.so",
+        "size": 564072,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libffi.so.8",
+        "size": 63096,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgio-2.0.so.0",
+        "size": 2338512,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libglib-2.0.so.0",
+        "size": 1521616,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgmodule-2.0.so.0",
+        "size": 15720,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgobject-2.0.so.0",
+        "size": 454720,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstallocators-1.0.so.0",
+        "size": 30416,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstapp-1.0.so.0",
+        "size": 106144,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstaudio-1.0.so.0",
+        "size": 636544,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstbase-1.0.so.0",
+        "size": 573072,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstnet-1.0.so.0",
+        "size": 74192,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstpbutils-1.0.so.0",
+        "size": 321880,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstreamer-1.0.so.0",
+        "size": 1582088,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstrtp-1.0.so.0",
+        "size": 211744,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgsttag-1.0.so.0",
+        "size": 273976,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstvideo-1.0.so.0",
+        "size": 1004720,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libintl.so.8",
+        "size": 6304,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libopus.so.0",
+        "size": 565744,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libpcre2-8.so.0",
+        "size": 442424,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libz.so.1",
+        "size": 109296,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses/LGPL-2.1.txt",
+        "size": 26431,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses/Opus.txt",
+        "size": 1945,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses/PCRE2.md",
+        "size": 4011,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses/libffi.txt",
+        "size": 1132,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses/proxy-libintl.txt",
+        "size": 25292,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses/sljit.txt",
+        "size": 1444,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses/zlib.txt",
+        "size": 1002,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/manifest.json",
+        "size": 4768,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/runtime.json",
+        "size": 13941,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/sources.json",
+        "size": 4911,
+        "type": "0",
+        "linkname": ""
+      }
+    ],
+    "binary": "/home/tts/Project/agent-cli-report/.local/binaries/codex-0.167.0/payload/bin/codex",
+    "binary_sha256": "cdcb45aaa01d0f14e298985e09465aebccd47f64ecd298aea44814af7b62bbda",
+    "payload": "/home/tts/Project/agent-cli-report/.local/binaries/codex-0.167.0/payload",
+    "runtime_root": "/tmp/opencode/agent-cli-report/smoke/C-0103",
+    "finished_at_utc": "2026-11-06T03:52:54.962622+00:00",
+    "environment_revision": "search-r2"
+  },
+  "cli": [
+    "/opt/agent-cli-report/C-0103/bin/codex",
+    "exec",
+    "--json",
+    "--skip-git-repo-check",
+    "Fix merge_intervals in intervals.py. Intervals are half-open [start, end), so intervals that only touch must stay separate. Accept an iterable of pairs of integers with start < end; reject invalid pairs with ValueError. Return a sorted list of tuples that merges overlapping intervals, including nested intervals. Handle empty input and do not mutate the input or its nested lists. Keep the existing API. Only modify intervals.py; do not add or remove files or modify test files. Automatically generated __pycache__ files are allowed. Use only the Python standard library. Run the available tests and summarize the change."
+  ],
+  "environment_revision": "search-r2",
+  "environment_manifest_sha256": "a4ab709b8fd82afc2225c5895ea551333964234d4e28f1ddbaca5699765d8913",
+  "started_at_utc": "2026-11-09T02:46:13.003962+00:00",
+  "finished_at_utc": "2026-11-09T02:46:14.402398+00:00",
+  "status": "preflight_pass",
+  "validity": "pending_review",
+  "generation_group": "codex-explicit-none",
+  "execution": {
+    "supervisor_host_pid": 20987,
+    "exit_code": 1,
+    "timed_out": false,
+    "duration_ms": 798,
+    "witness": {
+      "project_writable": true,
+      "public_test_read_only": true,
+      "hidden_grader_absent": true,
+      "real_home_hidden": true,
+      "net_namespace": "net:[4026533304]"
+    }
+  },
+  "isolation_ok": true,
+  "grading": {
+    "scope_ok": true,
+    "changed_files": [],
+    "invalid_paths": [],
+    "snapshot_sha256": {
+      "intervals.py": "c8de9a5897a04521f2f381cfab2ca073d98fde3a90f25546d25719348d612148",
+      "test_public.py": "8eb40ed38a8653c191c77eefa3a269efbd90a123775a9adb12d24cdd062661d6"
+    },
+    "suites": {
+      "public": {
+        "exit_code": 0,
+        "timed_out": false,
+        "stdout": "",
+        "stderr": "test_overlap (test_public.PublicTests.test_overlap) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+      },
+      "hidden": {
+        "exit_code": 1,
+        "timed_out": false,
+        "stdout": "",
+        "stderr": "test_duplicates (__main__.AcceptanceTests.test_duplicates) ... FAIL\ntest_empty (__main__.AcceptanceTests.test_empty) ... ERROR\ntest_invalid (__main__.AcceptanceTests.test_invalid) ... \n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[2, 2]]) ... FAIL\n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[3, 1]]) ... FAIL\n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[1]]) ... FAIL\n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[1, 2, 3]]) ... FAIL\n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[['1', 2]]) ... FAIL\n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[1.5, 3]]) ... FAIL\n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[None]) ... ERROR\n  test_invalid (__main__.AcceptanceTests.test_invalid) (value=[4]) ... ERROR\ntest_iterator_and_tuples (__main__.AcceptanceTests.test_iterator_and_tuples) ... ERROR\ntest_nested_and_unsorted (__main__.AcceptanceTests.test_nested_and_unsorted) ... ok\ntest_no_mutation (__main__.AcceptanceTests.test_no_mutation) ... FAIL\ntest_touching_is_not_overlap (__main__.AcceptanceTests.test_touching_is_not_overlap) ... FAIL\n\n======================================================================\nERROR: test_empty (__main__.AcceptanceTests.test_empty)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 9, in test_empty\n    self.assertEqual(merge_intervals([]), [])\n                     ^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/intervals.py\", line 7, in merge_intervals\n    merged = [intervals[0]]\n              ~~~~~~~~~^^^\nIndexError: list index out of range\n\n======================================================================\nERROR: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[None])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 33, in test_invalid\n    merge_intervals(value)\n  File \"/workspace/intervals.py\", line 13, in merge_intervals\n    return [tuple(interval) for interval in merged]\n            ^^^^^^^^^^^^^^^\nTypeError: 'NoneType' object is not iterable\n\n======================================================================\nERROR: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[4])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 33, in test_invalid\n    merge_intervals(value)\n  File \"/workspace/intervals.py\", line 13, in merge_intervals\n    return [tuple(interval) for interval in merged]\n            ^^^^^^^^^^^^^^^\nTypeError: 'int' object is not iterable\n\n======================================================================\nERROR: test_iterator_and_tuples (__main__.AcceptanceTests.test_iterator_and_tuples)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 25, in test_iterator_and_tuples\n    self.assertEqual(merge_intervals(iter([(3, 6), (1, 4)])), [(1, 6)])\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/intervals.py\", line 6, in merge_intervals\n    intervals.sort()\n    ^^^^^^^^^^^^^^\nAttributeError: 'list_iterator' object has no attribute 'sort'\n\n======================================================================\nFAIL: test_duplicates (__main__.AcceptanceTests.test_duplicates)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 28, in test_duplicates\n    self.assertEqual(merge_intervals([[1, 3], [1, 3], [3, 4]]), [(1, 3), (3, 4)])\nAssertionError: Lists differ: [(1, 4)] != [(1, 3), (3, 4)]\n\nFirst differing element 0:\n(1, 4)\n(1, 3)\n\nSecond list contains 1 additional elements.\nFirst extra element 1:\n(3, 4)\n\n- [(1, 4)]\n+ [(1, 3), (3, 4)]\n\n======================================================================\nFAIL: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[2, 2]])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 32, in test_invalid\n    with self.subTest(value=value), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[3, 1]])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 32, in test_invalid\n    with self.subTest(value=value), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[1]])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 32, in test_invalid\n    with self.subTest(value=value), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[1, 2, 3]])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 32, in test_invalid\n    with self.subTest(value=value), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[['1', 2]])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 32, in test_invalid\n    with self.subTest(value=value), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_invalid (__main__.AcceptanceTests.test_invalid) (value=[[1.5, 3]])\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 32, in test_invalid\n    with self.subTest(value=value), self.assertRaises(ValueError):\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_no_mutation (__main__.AcceptanceTests.test_no_mutation)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 21, in test_no_mutation\n    self.assertEqual(value, original)\nAssertionError: Lists differ: [[1, 7], [2, 7], [9, 11]] != [[9, 11], [1, 5], [2, 7]]\n\nFirst differing element 0:\n[1, 7]\n[9, 11]\n\n- [[1, 7], [2, 7], [9, 11]]\n+ [[9, 11], [1, 5], [2, 7]]\n\n======================================================================\nFAIL: test_touching_is_not_overlap (__main__.AcceptanceTests.test_touching_is_not_overlap)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 12, in test_touching_is_not_overlap\n    self.assertEqual(merge_intervals([[0, 2], [2, 4]]), [(0, 2), (2, 4)])\nAssertionError: Lists differ: [(0, 4)] != [(0, 2), (2, 4)]\n\nFirst differing element 0:\n(0, 4)\n(0, 2)\n\nSecond list contains 1 additional elements.\nFirst extra element 1:\n(2, 4)\n\n- [(0, 4)]\n+ [(0, 2), (2, 4)]\n\n----------------------------------------------------------------------\nRan 7 tests in 0.002s\n\nFAILED (failures=9, errors=4)\n"
+      }
+    },
+    "duration_ms": 106,
+    "pass": false
+  },
+  "provider_requests": [],
+  "offline_request_metadata": [
+    {
+      "model": "gpt-6.1-sol",
+      "stream": true,
+      "reasoning": {
+        "effort": "none",
+        "context": "all_turns"
+      },
+      "max_output_tokens": null,
+      "header_names": [
+        "Accept-Encoding",
+        "Authorization",
+        "Content-Length",
+        "Content-Type",
+        "Host",
+        "originator",
+        "session-id",
+        "thread-id",
+        "user-agent",
+        "x-client-request-id",
+        "x-codex-beta-features",
+        "x-codex-turn-metadata",
+        "x-codex-window-id",
+        "x-openai-internal-codex-responses-lite"
+      ],
+      "responses_lite": "true",
+      "tools": [],
+      "input_types": [
+        "additional_tools",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message"
+      ]
+    }
+  ],
+  "retry_of": null
+}

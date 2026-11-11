@@ -1,0 +1,8 @@
+{
+  "status": "harness_error_before_native_process",
+  "error": "OSError: AF_UNIX path too long",
+  "source": "retained shell completion traceback in conversation; receipt reconstructed, not a raw process log",
+  "repair": "Short hashed config ID instead of artifact name plus full case ID",
+  "retry_artifact": "NATIVE-DEMO-PERMISSION-20261111-02",
+  "real_provider_requests": 0
+}

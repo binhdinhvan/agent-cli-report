@@ -1,0 +1,15 @@
+{
+  "authorized": true,
+  "scope": "openai-direct-4-native-smoke-then48-new-slots-no-retry",
+  "plan_sha256": "d394418bf93eabc0871e7492c2fb7112cb01e38dcd4bcaaea6b34849405624f0",
+  "offline_sha256": "8aa1fcd7846f36f9a5662779f9aaa3f2299855847c094af41a0107eccf794e1f",
+  "budget_estimate_usd": "16",
+  "retries_authorized": false,
+  "prior_unpriced_acknowledged": true,
+  "approved_by": "user: chạy benmark đi; new OpenAI cohort, existing16USD estimated guard retained with old known carry; no auto retry/topup",
+  "approved_at_utc": "2026-11-10T16:07:09.101821+00:00",
+  "provider": "https://api.openai.com/v1",
+  "model": "gpt-6.1-sol",
+  "artifact": "benchmark/suite48/artifacts/OPENAI48-20261110-01",
+  "offline_tests_passed": 149
+}

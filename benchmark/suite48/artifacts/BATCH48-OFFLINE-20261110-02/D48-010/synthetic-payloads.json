@@ -1,0 +1,467 @@
+[
+  {
+    "model": "gpt-6.1-sol",
+    "input": [
+      {
+        "type": "message",
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "Here is the first message of the conversation:\n\n<message>\n\"Hoàn thiện TTLCache trong cache.py. Chỉ sửa cache.py; không sửa test hoặc thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh). Dùng standard library, không cài package hoặc truy cập Internet.\n\nGiữ API:\nTTLCache(capacity, clock)\nset(key, value, ttl=None) -> None\nget(key, default=None) -> value hoặc default\ndelete(key) -> bool\nlen(cache) -> số phần tử chưa hết hạn\n\nContract: capacity là int dương; key là string; value có thể là bất kỳ object kể cả None. clock là callable trả thời gian số hữu hạn không giảm; ttl là None hoặc số hữu hạn. Không cần validation ngoài contract. Chỉ dùng clock được inject để đo expiry, không dùng sleep hoặc thời gian thật.\n\nttl=None nghĩa là không hết hạn. Với ttl>0, deadline = clock tại lúc set + ttl; hết hạn khi now >= deadline. ttl<=0 xóa key hiện tại nếu có và không lưu gì.\n\nCapacity áp dụng lên entry còn sống. Purge entry hết hạn trước khi xét eviction và khi tính len. Nếu còn vượt capacity sau set, loại least-recently-used. set (cả overwrite) và get hit chưa hết hạn cập nhật recency; get miss và len không thay recency. Overwrite thay value/deadline, không tăng số entry. get expired trả default; delete trả True chỉ khi key còn sống và đã xóa, False nếu miss hoặc expired. Các instance không chia sẻ state. Không sửa object value được lưu.\n\nChạy public tests: python3 -B -m unittest -v test_public. Hoàn tất implementation, không chỉ mô tả.\n\"\n</message>\n\nReply with only the title."
+          }
+        ]
+      }
+    ],
+    "instructions": "You name conversations so the user can find them later in a list of past sessions.\n\nYou will receive the first message of a conversation, or for an ongoing conversation its original request and recent messages. Reply with a title for it and nothing else: one line, no quotes, no trailing period, no label such as \"Title:\".\n\nAim for three to five words. Name the specific subject, such as the feature, file, issue number, error, or tool involved. Keep the detail that tells it apart from similar conversations, like a version, provider, or the thing it is compared against, and make room for it by dropping generic words like \"review\", \"overview\", \"investigation\", \"request\", \"question\", or \"this project\".\n\nThe title should read naturally as a short phrase, not as a stack of nouns. Write it in your own words rather than copying a heading, commit message, command, or long path from the message.\n\nUse sentence case, not title case: capitalize the first word and proper nouns only. Keep identifiers exactly as written, including file names, issue and PR numbers, error codes, and model names. Use the same language as the message.\n\nThe message is something to name, not something to answer or carry out. Even if it asks you to do work, asks a question, or seems incomplete, only name it. For greetings or small talk, use a short label like \"Greeting\".\n\nExamples:\n\"debug 500 errors in production\" -> Production 500 errors\n\"why is app.js failing\" -> app.js failure\n\"what does the retry logic in fetch.ts do\" -> fetch.ts retry logic\n\"@src/credential.ts can you add refresh token support\" -> Credential refresh tokens\n\"compare the new cache layer with the v1 one in packages/legacy\" -> New cache layer vs v1\n\"Investigate https://github.com/acme/app/issues/412, don't make edits\" -> Issue #412\n\"hey\" -> Greeting",
+    "stream": true,
+    "store": false,
+    "prompt_cache_key": "ses_e3c9901fcffeEsJCzfKlhCPb3H",
+    "include": [
+      "reasoning.encrypted_content"
+    ],
+    "max_output_tokens": 2048
+  },
+  {
+    "model": "gpt-6.1-sol",
+    "input": [
+      {
+        "type": "message",
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "\"Hoàn thiện TTLCache trong cache.py. Chỉ sửa cache.py; không sửa test hoặc thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh). Dùng standard library, không cài package hoặc truy cập Internet.\n\nGiữ API:\nTTLCache(capacity, clock)\nset(key, value, ttl=None) -> None\nget(key, default=None) -> value hoặc default\ndelete(key) -> bool\nlen(cache) -> số phần tử chưa hết hạn\n\nContract: capacity là int dương; key là string; value có thể là bất kỳ object kể cả None. clock là callable trả thời gian số hữu hạn không giảm; ttl là None hoặc số hữu hạn. Không cần validation ngoài contract. Chỉ dùng clock được inject để đo expiry, không dùng sleep hoặc thời gian thật.\n\nttl=None nghĩa là không hết hạn. Với ttl>0, deadline = clock tại lúc set + ttl; hết hạn khi now >= deadline. ttl<=0 xóa key hiện tại nếu có và không lưu gì.\n\nCapacity áp dụng lên entry còn sống. Purge entry hết hạn trước khi xét eviction và khi tính len. Nếu còn vượt capacity sau set, loại least-recently-used. set (cả overwrite) và get hit chưa hết hạn cập nhật recency; get miss và len không thay recency. Overwrite thay value/deadline, không tăng số entry. get expired trả default; delete trả True chỉ khi key còn sống và đã xóa, False nếu miss hoặc expired. Các instance không chia sẻ state. Không sửa object value được lưu.\n\nChạy public tests: python3 -B -m unittest -v test_public. Hoàn tất implementation, không chỉ mô tả.\n\""
+          }
+        ]
+      }
+    ],
+    "instructions": "You are an AI agent running in OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available.\n\n# Harness\n- Responses are rendered as GitHub-flavored Markdown.\n- `<system-reminder>` blocks are harness instructions, not user-authored content. Read and follow them.\n- Prefer parallelizing independent tool calls.\n- Prefer dedicated tools over shell commands; fall back to the shell when a tool cannot do what you need.\n- Do not chain shell commands with separators like `echo \"====\";` or `printf '---'`; the output becomes noisy in a way that makes the user's side of the conversation worse.\n\n# Communication\n\nUse clear file paths when referring to files. Keep responses clear and concise, and avoid unnecessary technical jargon.\n\n## Intermediate Commentary\n\nAs you work, you send messages to the commentary channel. These are how you collaborate with the user while you work: stating assumptions and providing updates. Keep them concise and quickly scannable, and send them only when they add real information, such as a discovery, a tradeoff, or a blocker. Do not narrate routine reads, searches, or edits.\n\nBy default, treat new messages received during ongoing work as steering the active task rather than replacing it. Incorporate corrections and constraints, and answer questions briefly in commentary before continuing. Replace the task only when the user clearly cancels it or requests an incompatible objective.\n\nDo not put a final response, such as a blocking or clarifying question, in the commentary channel. The final answer must always be fully self-contained.\n\n## Final Answer\n\nIn the final answer, lead with the outcome, not the steps you took to reach it. Cover the most important information, use only as much structure as the answer needs, and avoid long-winded explanations unless necessary. Include technical detail only where it helps.\n\n# Working in codebases\n- Keep changes consistent with the structure, naming, style, and patterns of the surrounding code.\n- Treat unfamiliar files or changes as potential user work and investigate before deleting or overwriting them.\n\n# Delegation\n\nDo not spawn subagents unless the user or applicable AGENTS.md/skill instructions explicitly ask for subagents, delegation, or parallel agent work.\n\n# Destructive actions\n\nDo not revert, reset, or discard changes you did not make. Never run destructive commands such as `git reset --hard`, `git checkout --`, or recursive deletes on broad paths unless the user clearly asked for that operation; if the target or scope is unclear, ask first. Prefer non-interactive git commands.\n\n# Autonomy\n\nDo not infer authorization for work beyond the user's request. Assumptions that help you make progress are fine as long as they stay within the user's intent and the scope of the task.\n\n# Your Model\n- Name: gpt-6.1-sol\n- Provider ID: shopaikey\n- Model ID: gpt-6.1-sol\n# Code Mode\n\nThe tools listed below cannot be called directly: they only work as JavaScript inside the `execute` tool. Every other tool you have is a normal tool call: call it directly, never inside `execute`.\n\nThe catalog is complete. Do not guess tool names.\n\n## Code Mode tools (call only inside `execute`)\n\n- opencode (1 tool) // Tools for managing OpenCode itself, such as working with sessions and worktrees, searching the available models, and reading MCP resources.\n  - tools.opencode.worktree_remove({\n  /** Absolute path of the worktree to remove. @minLength 1 */\n  directory: string,\n  /** Discard modified and untracked files. Only set this when the user has confirmed forced removal. */\n  force?: boolean,\n}): Promise<{\n  directory: string,\n  removed: boolean,\n}> // Remove a worktree. The repository location selects configuration; directory identifies the worktree to remove.\n\nToday's date: Tue Nov 10 2026\n\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/BP48-BATCH48-OFFLINE-20261110-02-D48-010/project\n  Workspace root folder: /tmp/opencode/agent-cli-report/smoke/BP48-BATCH48-OFFLINE-20261110-02-D48-010/project\n  Is directory a git repo: no\n  Platform: linux\n  Prefer /tmp/opencode/agent-cli-report/smoke/BP48-BATCH48-OFFLINE-20261110-02-D48-010/tmp/opencode over generic system temporary directories such as /tmp; it is pre-created and approved for external access.\n</env>\nWhen you create a worktree outside the current working directory and intend to use it as your primary working directory, consider using `execute` to call `tools.opencode.session_move` and make the worktree the session's working directory.",
+    "stream": true,
+    "max_output_tokens": 2048,
+    "store": false,
+    "prompt_cache_key": "ses_e3c9901fcffeEsJCzfKlhCPb3H",
+    "include": [
+      "reasoning.encrypted_content"
+    ],
+    "tools": [
+      {
+        "type": "function",
+        "name": "glob",
+        "description": "Search file paths using a glob pattern (examples: \"**/*.ts\", \"src/**/*.tsx\").",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "description": "Glob pattern to match files against"
+            },
+            "path": {
+              "type": "string",
+              "description": "Directory to search. Defaults to the current working directory."
+            },
+            "hidden": {
+              "type": "boolean",
+              "description": "Include hidden files and directories (default: false)."
+            },
+            "limit": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "description": "Maximum number of matching files to return (default: 100)"
+            }
+          },
+          "required": [
+            "pattern"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "grep",
+        "description": "Search file contents using ripgrep's regular expression syntax or literal text matching. Use it to locate specific code, symbols, or text patterns, and narrow searches with `path` or `include`. Returns matching file paths, line numbers, and line previews.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Regular expression or literal text to match in file contents."
+            },
+            "path": {
+              "type": "string",
+              "description": "File or directory to search. Defaults to the current working directory."
+            },
+            "include": {
+              "type": "string",
+              "description": "Glob pattern to filter files (for example, \"*.js\" or \"*.{ts,tsx}\")"
+            },
+            "literal": {
+              "type": "boolean",
+              "description": "Treat `pattern` as exact text instead of a regular expression (default: false)."
+            },
+            "caseSensitive": {
+              "type": "boolean",
+              "description": "Use case-sensitive matching (default: true)."
+            },
+            "limit": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "description": "Maximum number of matching lines to return (default: 100)"
+            }
+          },
+          "required": [
+            "pattern"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "patch",
+        "description": "Use the `patch` tool to edit files. Your patch language is a stripped‑down, file‑oriented diff format designed to be easy to parse and safe to apply. You can think of it as a high‑level envelope:\n\n*** Begin Patch\n[ one or more file sections ]\n*** End Patch\n\nWithin that envelope, you get a sequence of file operations.\nYou MUST include a header to specify the action you are taking.\nEach operation starts with one of three headers:\n\n*** Add File: <path> - create a new file. Every following line is a + line (the initial contents).\n*** Delete File: <path> - remove an existing file. Nothing follows.\n*** Update File: <path> - patch an existing file in place (optionally with a rename).\n\nExample patch:\n\n```\n*** Begin Patch\n*** Add File: hello.txt\n+Hello world\n*** Update File: src/app.py\n*** Move to: src/main.py\n@@ def greet():\n-print(\"Hi\")\n+print(\"Hello, world!\")\n*** Delete File: obsolete.txt\n*** End Patch\n```\n\nIt is important to remember:\n\n- You must include a header with your intended action (Add/Delete/Update)\n- You must prefix new lines with `+` even when creating a new file\n",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "patchText": {
+              "type": "string",
+              "description": "The full patch text describing add, update, and delete operations"
+            }
+          },
+          "required": [
+            "patchText"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "read",
+        "description": "Read the contents of a file or directory. Supports text files, images, and PDFs. Images and PDFs are presented directly to the model. Each text line is prefixed by its 1-based line number as <line>: <content>. The prefix is for reference and is not part of the file content. Directory entries are returned one per line. Use offset and limit to read large files or directories in sections. Prefer one larger read over many small slices, and use grep to find specific content in large files.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "File or directory to read"
+            },
+            "offset": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "The line or directory entry to start reading from (1-based)"
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "The maximum number of lines or directory entries to read (defaults to and capped at 2000)"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "shell",
+        "description": "Execute a shell command and return its output. Commands run on Linux using sh. Quote file paths containing spaces or special characters. Prefer dedicated tools over shell commands when possible. When output is large, the full result is saved to a file and a truncated preview is returned. Rely on automatic truncation unless filtering the output is more useful. Commands accept an optional timeout, background commands have no timeout by default. Background commands return immediately, and you will be notified when they complete.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "command": {
+              "type": "string",
+              "description": "Shell command string to execute"
+            },
+            "workdir": {
+              "type": "string",
+              "description": "Working directory to execute the command in. Defaults to the current working directory. When possible, avoid changing directories in the command and set the working directory here instead."
+            },
+            "timeout": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Timeout in milliseconds. Set to 0 to disable the timeout. Defaults to 120000 for foreground commands. Background commands have no timeout by default."
+            },
+            "background": {
+              "type": "boolean",
+              "description": "Run the command in the background and return immediately (useful for dev servers and long-running builds). You do not need to use '&' at the end of the command when using this parameter. You will be notified when it completes. DO NOT poll for completion."
+            }
+          },
+          "required": [
+            "command"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "skill",
+        "description": "Load a specialized skill's instructions and resources into the current conversation when the task at hand matches its description.\n\nThe skill ID must match an available skill or a skill explicitly referenced by the user.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "The ID of an available skill or a skill explicitly referenced by the user"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "execute",
+        "description": "Run JavaScript in a confined Code Mode runtime to script tool calls and HTTP requests and compose their results.\n`fetch` is available for HTTP requests. Imports, direct filesystem access, and timers are unavailable: there is no `setTimeout` or sleep. All other external access goes through `tools`.\nWithin `{ code }`, the only callable tools are those explicitly listed in the Code Mode catalog instructions or returned by the `search` function. Inside `{ code }`, ignore tools shown outside the Code Mode catalog. They are not available in the Code Mode runtime.\nCall tools through `tools` using only exact paths and signatures from the catalog. Do not infer or normalize tool names; preserve bracket notation such as `tools.<namespace>[\"tool-name\"](input)`.\nPrefer an explicit `return`; if omitted, the final top-level expression becomes the result.\nAwait every call whose completion matters; pending calls are interrupted when execution ends. Run independent calls concurrently with `Promise.allSettled`.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "code"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      }
+    ]
+  },
+  {
+    "model": "gpt-6.1-sol",
+    "input": [
+      {
+        "type": "message",
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "\"Hoàn thiện TTLCache trong cache.py. Chỉ sửa cache.py; không sửa test hoặc thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh). Dùng standard library, không cài package hoặc truy cập Internet.\n\nGiữ API:\nTTLCache(capacity, clock)\nset(key, value, ttl=None) -> None\nget(key, default=None) -> value hoặc default\ndelete(key) -> bool\nlen(cache) -> số phần tử chưa hết hạn\n\nContract: capacity là int dương; key là string; value có thể là bất kỳ object kể cả None. clock là callable trả thời gian số hữu hạn không giảm; ttl là None hoặc số hữu hạn. Không cần validation ngoài contract. Chỉ dùng clock được inject để đo expiry, không dùng sleep hoặc thời gian thật.\n\nttl=None nghĩa là không hết hạn. Với ttl>0, deadline = clock tại lúc set + ttl; hết hạn khi now >= deadline. ttl<=0 xóa key hiện tại nếu có và không lưu gì.\n\nCapacity áp dụng lên entry còn sống. Purge entry hết hạn trước khi xét eviction và khi tính len. Nếu còn vượt capacity sau set, loại least-recently-used. set (cả overwrite) và get hit chưa hết hạn cập nhật recency; get miss và len không thay recency. Overwrite thay value/deadline, không tăng số entry. get expired trả default; delete trả True chỉ khi key còn sống và đã xóa, False nếu miss hoặc expired. Các instance không chia sẻ state. Không sửa object value được lưu.\n\nChạy public tests: python3 -B -m unittest -v test_public. Hoàn tất implementation, không chỉ mô tả.\n\""
+          }
+        ]
+      },
+      {
+        "type": "function_call",
+        "id": "fc_of48",
+        "call_id": "call_of48",
+        "name": "shell",
+        "arguments": "{\"command\":\"python3 -B -c 'import pathlib\\nfiles = {'\\\"'\\\"'cache.py'\\\"'\\\"': '\\\"'\\\"'from collections import OrderedDict\\\\n\\\\nclass TTLCache:\\\\n    def __init__(self, capacity, clock):\\\\n        self.capacity = capacity\\\\n        self.clock = clock\\\\n        self.entries = OrderedDict()\\\\n\\\\n    def _purge(self):\\\\n        now = self.clock()\\\\n        for key, (_, deadline) in list(self.entries.items()):\\\\n            if deadline is not None and now >= deadline:\\\\n                del self.entries[key]\\\\n\\\\n    def set(self, key, value, ttl=None):\\\\n        self._purge()\\\\n        self.entries.pop(key, None)\\\\n        if ttl is not None and ttl <= 0:\\\\n            return None\\\\n        deadline = None if ttl is None else self.clock() + ttl\\\\n        self.entries[key] = (value, deadline)\\\\n        while len(self.entries) > self.capacity:\\\\n            self.entries.popitem(last=False)\\\\n        return None\\\\n\\\\n    def get(self, key, default=None):\\\\n        self._purge()\\\\n        if key not in self.entries:\\\\n            return default\\\\n        self.entries.move_to_end(key)\\\\n        return self.entries[key][0]\\\\n\\\\n    def delete(self, key):\\\\n        self._purge()\\\\n        if key not in self.entries:\\\\n            return False\\\\n        del self.entries[key]\\\\n        return True\\\\n\\\\n    def __len__(self):\\\\n        self._purge()\\\\n        return len(self.entries)\\\\n'\\\"'\\\"'}\\nfor name, content in files.items():\\n    path = pathlib.Path(name)\\n    path.parent.mkdir(parents=True, exist_ok=True)\\n    path.write_text(content)\\n\\nprint('\\\"'\\\"'OFF48_NATIVE_APPLY_DONE'\\\"'\\\"')\\n'\"}"
+      },
+      {
+        "type": "function_call_output",
+        "call_id": "call_of48",
+        "output": "OFF48_NATIVE_APPLY_DONE\n"
+      }
+    ],
+    "instructions": "You are an AI agent running in OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available.\n\n# Harness\n- Responses are rendered as GitHub-flavored Markdown.\n- `<system-reminder>` blocks are harness instructions, not user-authored content. Read and follow them.\n- Prefer parallelizing independent tool calls.\n- Prefer dedicated tools over shell commands; fall back to the shell when a tool cannot do what you need.\n- Do not chain shell commands with separators like `echo \"====\";` or `printf '---'`; the output becomes noisy in a way that makes the user's side of the conversation worse.\n\n# Communication\n\nUse clear file paths when referring to files. Keep responses clear and concise, and avoid unnecessary technical jargon.\n\n## Intermediate Commentary\n\nAs you work, you send messages to the commentary channel. These are how you collaborate with the user while you work: stating assumptions and providing updates. Keep them concise and quickly scannable, and send them only when they add real information, such as a discovery, a tradeoff, or a blocker. Do not narrate routine reads, searches, or edits.\n\nBy default, treat new messages received during ongoing work as steering the active task rather than replacing it. Incorporate corrections and constraints, and answer questions briefly in commentary before continuing. Replace the task only when the user clearly cancels it or requests an incompatible objective.\n\nDo not put a final response, such as a blocking or clarifying question, in the commentary channel. The final answer must always be fully self-contained.\n\n## Final Answer\n\nIn the final answer, lead with the outcome, not the steps you took to reach it. Cover the most important information, use only as much structure as the answer needs, and avoid long-winded explanations unless necessary. Include technical detail only where it helps.\n\n# Working in codebases\n- Keep changes consistent with the structure, naming, style, and patterns of the surrounding code.\n- Treat unfamiliar files or changes as potential user work and investigate before deleting or overwriting them.\n\n# Delegation\n\nDo not spawn subagents unless the user or applicable AGENTS.md/skill instructions explicitly ask for subagents, delegation, or parallel agent work.\n\n# Destructive actions\n\nDo not revert, reset, or discard changes you did not make. Never run destructive commands such as `git reset --hard`, `git checkout --`, or recursive deletes on broad paths unless the user clearly asked for that operation; if the target or scope is unclear, ask first. Prefer non-interactive git commands.\n\n# Autonomy\n\nDo not infer authorization for work beyond the user's request. Assumptions that help you make progress are fine as long as they stay within the user's intent and the scope of the task.\n\n# Your Model\n- Name: gpt-6.1-sol\n- Provider ID: shopaikey\n- Model ID: gpt-6.1-sol\n# Code Mode\n\nThe tools listed below cannot be called directly: they only work as JavaScript inside the `execute` tool. Every other tool you have is a normal tool call: call it directly, never inside `execute`.\n\nThe catalog is complete. Do not guess tool names.\n\n## Code Mode tools (call only inside `execute`)\n\n- opencode (1 tool) // Tools for managing OpenCode itself, such as working with sessions and worktrees, searching the available models, and reading MCP resources.\n  - tools.opencode.worktree_remove({\n  /** Absolute path of the worktree to remove. @minLength 1 */\n  directory: string,\n  /** Discard modified and untracked files. Only set this when the user has confirmed forced removal. */\n  force?: boolean,\n}): Promise<{\n  directory: string,\n  removed: boolean,\n}> // Remove a worktree. The repository location selects configuration; directory identifies the worktree to remove.\n\nToday's date: Tue Nov 10 2026\n\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/BP48-BATCH48-OFFLINE-20261110-02-D48-010/project\n  Workspace root folder: /tmp/opencode/agent-cli-report/smoke/BP48-BATCH48-OFFLINE-20261110-02-D48-010/project\n  Is directory a git repo: no\n  Platform: linux\n  Prefer /tmp/opencode/agent-cli-report/smoke/BP48-BATCH48-OFFLINE-20261110-02-D48-010/tmp/opencode over generic system temporary directories such as /tmp; it is pre-created and approved for external access.\n</env>\nWhen you create a worktree outside the current working directory and intend to use it as your primary working directory, consider using `execute` to call `tools.opencode.session_move` and make the worktree the session's working directory.",
+    "stream": true,
+    "max_output_tokens": 2048,
+    "store": false,
+    "prompt_cache_key": "ses_e3c9901fcffeEsJCzfKlhCPb3H",
+    "include": [
+      "reasoning.encrypted_content"
+    ],
+    "tools": [
+      {
+        "type": "function",
+        "name": "glob",
+        "description": "Search file paths using a glob pattern (examples: \"**/*.ts\", \"src/**/*.tsx\").",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "description": "Glob pattern to match files against"
+            },
+            "path": {
+              "type": "string",
+              "description": "Directory to search. Defaults to the current working directory."
+            },
+            "hidden": {
+              "type": "boolean",
+              "description": "Include hidden files and directories (default: false)."
+            },
+            "limit": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "description": "Maximum number of matching files to return (default: 100)"
+            }
+          },
+          "required": [
+            "pattern"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "grep",
+        "description": "Search file contents using ripgrep's regular expression syntax or literal text matching. Use it to locate specific code, symbols, or text patterns, and narrow searches with `path` or `include`. Returns matching file paths, line numbers, and line previews.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Regular expression or literal text to match in file contents."
+            },
+            "path": {
+              "type": "string",
+              "description": "File or directory to search. Defaults to the current working directory."
+            },
+            "include": {
+              "type": "string",
+              "description": "Glob pattern to filter files (for example, \"*.js\" or \"*.{ts,tsx}\")"
+            },
+            "literal": {
+              "type": "boolean",
+              "description": "Treat `pattern` as exact text instead of a regular expression (default: false)."
+            },
+            "caseSensitive": {
+              "type": "boolean",
+              "description": "Use case-sensitive matching (default: true)."
+            },
+            "limit": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "description": "Maximum number of matching lines to return (default: 100)"
+            }
+          },
+          "required": [
+            "pattern"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "patch",
+        "description": "Use the `patch` tool to edit files. Your patch language is a stripped‑down, file‑oriented diff format designed to be easy to parse and safe to apply. You can think of it as a high‑level envelope:\n\n*** Begin Patch\n[ one or more file sections ]\n*** End Patch\n\nWithin that envelope, you get a sequence of file operations.\nYou MUST include a header to specify the action you are taking.\nEach operation starts with one of three headers:\n\n*** Add File: <path> - create a new file. Every following line is a + line (the initial contents).\n*** Delete File: <path> - remove an existing file. Nothing follows.\n*** Update File: <path> - patch an existing file in place (optionally with a rename).\n\nExample patch:\n\n```\n*** Begin Patch\n*** Add File: hello.txt\n+Hello world\n*** Update File: src/app.py\n*** Move to: src/main.py\n@@ def greet():\n-print(\"Hi\")\n+print(\"Hello, world!\")\n*** Delete File: obsolete.txt\n*** End Patch\n```\n\nIt is important to remember:\n\n- You must include a header with your intended action (Add/Delete/Update)\n- You must prefix new lines with `+` even when creating a new file\n",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "patchText": {
+              "type": "string",
+              "description": "The full patch text describing add, update, and delete operations"
+            }
+          },
+          "required": [
+            "patchText"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "read",
+        "description": "Read the contents of a file or directory. Supports text files, images, and PDFs. Images and PDFs are presented directly to the model. Each text line is prefixed by its 1-based line number as <line>: <content>. The prefix is for reference and is not part of the file content. Directory entries are returned one per line. Use offset and limit to read large files or directories in sections. Prefer one larger read over many small slices, and use grep to find specific content in large files.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "File or directory to read"
+            },
+            "offset": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "The line or directory entry to start reading from (1-based)"
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "The maximum number of lines or directory entries to read (defaults to and capped at 2000)"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "shell",
+        "description": "Execute a shell command and return its output. Commands run on Linux using sh. Quote file paths containing spaces or special characters. Prefer dedicated tools over shell commands when possible. When output is large, the full result is saved to a file and a truncated preview is returned. Rely on automatic truncation unless filtering the output is more useful. Commands accept an optional timeout, background commands have no timeout by default. Background commands return immediately, and you will be notified when they complete.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "command": {
+              "type": "string",
+              "description": "Shell command string to execute"
+            },
+            "workdir": {
+              "type": "string",
+              "description": "Working directory to execute the command in. Defaults to the current working directory. When possible, avoid changing directories in the command and set the working directory here instead."
+            },
+            "timeout": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Timeout in milliseconds. Set to 0 to disable the timeout. Defaults to 120000 for foreground commands. Background commands have no timeout by default."
+            },
+            "background": {
+              "type": "boolean",
+              "description": "Run the command in the background and return immediately (useful for dev servers and long-running builds). You do not need to use '&' at the end of the command when using this parameter. You will be notified when it completes. DO NOT poll for completion."
+            }
+          },
+          "required": [
+            "command"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "skill",
+        "description": "Load a specialized skill's instructions and resources into the current conversation when the task at hand matches its description.\n\nThe skill ID must match an available skill or a skill explicitly referenced by the user.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "The ID of an available skill or a skill explicitly referenced by the user"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      },
+      {
+        "type": "function",
+        "name": "execute",
+        "description": "Run JavaScript in a confined Code Mode runtime to script tool calls and HTTP requests and compose their results.\n`fetch` is available for HTTP requests. Imports, direct filesystem access, and timers are unavailable: there is no `setTimeout` or sleep. All other external access goes through `tools`.\nWithin `{ code }`, the only callable tools are those explicitly listed in the Code Mode catalog instructions or returned by the `search` function. Inside `{ code }`, ignore tools shown outside the Code Mode catalog. They are not available in the Code Mode runtime.\nCall tools through `tools` using only exact paths and signatures from the catalog. Do not infer or normalize tool names; preserve bracket notation such as `tools.<namespace>[\"tool-name\"](input)`.\nPrefer an explicit `return`; if omitted, the final top-level expression becomes the result.\nAwait every call whose completion matters; pending calls are interrupted when execution ends. Run independent calls concurrently with `Promise.allSettled`.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "code"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      }
+    ]
+  }
+]

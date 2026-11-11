@@ -1,0 +1,768 @@
+[
+  {
+    "slot": "D48-004",
+    "repetition": "1",
+    "block": "1",
+    "task_id": "B-01",
+    "position_in_block": "4",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-004",
+      "run_id": "R-0089",
+      "config_id": "C-0190"
+    },
+    "retry_of": "R-0089",
+    "attempt_kind": "explicit_retry",
+    "run_id": "R-0134",
+    "config_id": "C-0235"
+  },
+  {
+    "slot": "D48-005",
+    "repetition": "1",
+    "block": "2",
+    "task_id": "B-02",
+    "position_in_block": "1",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-005",
+      "run_id": "R-0090",
+      "config_id": "C-0191"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0135",
+    "config_id": "C-0236"
+  },
+  {
+    "slot": "D48-006",
+    "repetition": "1",
+    "block": "2",
+    "task_id": "B-02",
+    "position_in_block": "2",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-006",
+      "run_id": "R-0091",
+      "config_id": "C-0192"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0136",
+    "config_id": "C-0237"
+  },
+  {
+    "slot": "D48-007",
+    "repetition": "1",
+    "block": "2",
+    "task_id": "B-02",
+    "position_in_block": "3",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-007",
+      "run_id": "R-0092",
+      "config_id": "C-0193"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0137",
+    "config_id": "C-0238"
+  },
+  {
+    "slot": "D48-008",
+    "repetition": "1",
+    "block": "2",
+    "task_id": "B-02",
+    "position_in_block": "4",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-008",
+      "run_id": "R-0093",
+      "config_id": "C-0194"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0138",
+    "config_id": "C-0239"
+  },
+  {
+    "slot": "D48-009",
+    "repetition": "1",
+    "block": "3",
+    "task_id": "B-03",
+    "position_in_block": "1",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-009",
+      "run_id": "R-0094",
+      "config_id": "C-0195"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0139",
+    "config_id": "C-0240"
+  },
+  {
+    "slot": "D48-010",
+    "repetition": "1",
+    "block": "3",
+    "task_id": "B-03",
+    "position_in_block": "2",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-010",
+      "run_id": "R-0095",
+      "config_id": "C-0196"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0140",
+    "config_id": "C-0241"
+  },
+  {
+    "slot": "D48-011",
+    "repetition": "1",
+    "block": "3",
+    "task_id": "B-03",
+    "position_in_block": "3",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-011",
+      "run_id": "R-0096",
+      "config_id": "C-0197"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0141",
+    "config_id": "C-0242"
+  },
+  {
+    "slot": "D48-012",
+    "repetition": "1",
+    "block": "3",
+    "task_id": "B-03",
+    "position_in_block": "4",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-012",
+      "run_id": "R-0097",
+      "config_id": "C-0198"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0142",
+    "config_id": "C-0243"
+  },
+  {
+    "slot": "D48-013",
+    "repetition": "1",
+    "block": "4",
+    "task_id": "B-04",
+    "position_in_block": "1",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-013",
+      "run_id": "R-0098",
+      "config_id": "C-0199"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0143",
+    "config_id": "C-0244"
+  },
+  {
+    "slot": "D48-014",
+    "repetition": "1",
+    "block": "4",
+    "task_id": "B-04",
+    "position_in_block": "2",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-014",
+      "run_id": "R-0099",
+      "config_id": "C-0200"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0144",
+    "config_id": "C-0245"
+  },
+  {
+    "slot": "D48-015",
+    "repetition": "1",
+    "block": "4",
+    "task_id": "B-04",
+    "position_in_block": "3",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-015",
+      "run_id": "R-0100",
+      "config_id": "C-0201"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0145",
+    "config_id": "C-0246"
+  },
+  {
+    "slot": "D48-016",
+    "repetition": "1",
+    "block": "4",
+    "task_id": "B-04",
+    "position_in_block": "4",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-016",
+      "run_id": "R-0101",
+      "config_id": "C-0202"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0146",
+    "config_id": "C-0247"
+  },
+  {
+    "slot": "D48-017",
+    "repetition": "2",
+    "block": "5",
+    "task_id": "B-04",
+    "position_in_block": "1",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-017",
+      "run_id": "R-0102",
+      "config_id": "C-0203"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0147",
+    "config_id": "C-0248"
+  },
+  {
+    "slot": "D48-018",
+    "repetition": "2",
+    "block": "5",
+    "task_id": "B-04",
+    "position_in_block": "2",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-018",
+      "run_id": "R-0103",
+      "config_id": "C-0204"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0148",
+    "config_id": "C-0249"
+  },
+  {
+    "slot": "D48-019",
+    "repetition": "2",
+    "block": "5",
+    "task_id": "B-04",
+    "position_in_block": "3",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-019",
+      "run_id": "R-0104",
+      "config_id": "C-0205"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0149",
+    "config_id": "C-0250"
+  },
+  {
+    "slot": "D48-020",
+    "repetition": "2",
+    "block": "5",
+    "task_id": "B-04",
+    "position_in_block": "4",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-020",
+      "run_id": "R-0105",
+      "config_id": "C-0206"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0150",
+    "config_id": "C-0251"
+  },
+  {
+    "slot": "D48-021",
+    "repetition": "2",
+    "block": "6",
+    "task_id": "B-02",
+    "position_in_block": "1",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-021",
+      "run_id": "R-0106",
+      "config_id": "C-0207"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0151",
+    "config_id": "C-0252"
+  },
+  {
+    "slot": "D48-022",
+    "repetition": "2",
+    "block": "6",
+    "task_id": "B-02",
+    "position_in_block": "2",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-022",
+      "run_id": "R-0107",
+      "config_id": "C-0208"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0152",
+    "config_id": "C-0253"
+  },
+  {
+    "slot": "D48-023",
+    "repetition": "2",
+    "block": "6",
+    "task_id": "B-02",
+    "position_in_block": "3",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-023",
+      "run_id": "R-0108",
+      "config_id": "C-0209"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0153",
+    "config_id": "C-0254"
+  },
+  {
+    "slot": "D48-024",
+    "repetition": "2",
+    "block": "6",
+    "task_id": "B-02",
+    "position_in_block": "4",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-024",
+      "run_id": "R-0109",
+      "config_id": "C-0210"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0154",
+    "config_id": "C-0255"
+  },
+  {
+    "slot": "D48-025",
+    "repetition": "2",
+    "block": "7",
+    "task_id": "B-03",
+    "position_in_block": "1",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-025",
+      "run_id": "R-0110",
+      "config_id": "C-0211"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0155",
+    "config_id": "C-0256"
+  },
+  {
+    "slot": "D48-026",
+    "repetition": "2",
+    "block": "7",
+    "task_id": "B-03",
+    "position_in_block": "2",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-026",
+      "run_id": "R-0111",
+      "config_id": "C-0212"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0156",
+    "config_id": "C-0257"
+  },
+  {
+    "slot": "D48-027",
+    "repetition": "2",
+    "block": "7",
+    "task_id": "B-03",
+    "position_in_block": "3",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-027",
+      "run_id": "R-0112",
+      "config_id": "C-0213"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0157",
+    "config_id": "C-0258"
+  },
+  {
+    "slot": "D48-028",
+    "repetition": "2",
+    "block": "7",
+    "task_id": "B-03",
+    "position_in_block": "4",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-028",
+      "run_id": "R-0113",
+      "config_id": "C-0214"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0158",
+    "config_id": "C-0259"
+  },
+  {
+    "slot": "D48-029",
+    "repetition": "2",
+    "block": "8",
+    "task_id": "B-01",
+    "position_in_block": "1",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-029",
+      "run_id": "R-0114",
+      "config_id": "C-0215"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0159",
+    "config_id": "C-0260"
+  },
+  {
+    "slot": "D48-030",
+    "repetition": "2",
+    "block": "8",
+    "task_id": "B-01",
+    "position_in_block": "2",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-030",
+      "run_id": "R-0115",
+      "config_id": "C-0216"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0160",
+    "config_id": "C-0261"
+  },
+  {
+    "slot": "D48-031",
+    "repetition": "2",
+    "block": "8",
+    "task_id": "B-01",
+    "position_in_block": "3",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-031",
+      "run_id": "R-0116",
+      "config_id": "C-0217"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0161",
+    "config_id": "C-0262"
+  },
+  {
+    "slot": "D48-032",
+    "repetition": "2",
+    "block": "8",
+    "task_id": "B-01",
+    "position_in_block": "4",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-032",
+      "run_id": "R-0117",
+      "config_id": "C-0218"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0162",
+    "config_id": "C-0263"
+  },
+  {
+    "slot": "D48-033",
+    "repetition": "3",
+    "block": "9",
+    "task_id": "B-04",
+    "position_in_block": "1",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-033",
+      "run_id": "R-0118",
+      "config_id": "C-0219"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0163",
+    "config_id": "C-0264"
+  },
+  {
+    "slot": "D48-034",
+    "repetition": "3",
+    "block": "9",
+    "task_id": "B-04",
+    "position_in_block": "2",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-034",
+      "run_id": "R-0119",
+      "config_id": "C-0220"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0164",
+    "config_id": "C-0265"
+  },
+  {
+    "slot": "D48-035",
+    "repetition": "3",
+    "block": "9",
+    "task_id": "B-04",
+    "position_in_block": "3",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-035",
+      "run_id": "R-0120",
+      "config_id": "C-0221"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0165",
+    "config_id": "C-0266"
+  },
+  {
+    "slot": "D48-036",
+    "repetition": "3",
+    "block": "9",
+    "task_id": "B-04",
+    "position_in_block": "4",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-036",
+      "run_id": "R-0121",
+      "config_id": "C-0222"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0166",
+    "config_id": "C-0267"
+  },
+  {
+    "slot": "D48-037",
+    "repetition": "3",
+    "block": "10",
+    "task_id": "B-02",
+    "position_in_block": "1",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-037",
+      "run_id": "R-0122",
+      "config_id": "C-0223"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0167",
+    "config_id": "C-0268"
+  },
+  {
+    "slot": "D48-038",
+    "repetition": "3",
+    "block": "10",
+    "task_id": "B-02",
+    "position_in_block": "2",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-038",
+      "run_id": "R-0123",
+      "config_id": "C-0224"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0168",
+    "config_id": "C-0269"
+  },
+  {
+    "slot": "D48-039",
+    "repetition": "3",
+    "block": "10",
+    "task_id": "B-02",
+    "position_in_block": "3",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-039",
+      "run_id": "R-0124",
+      "config_id": "C-0225"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0169",
+    "config_id": "C-0270"
+  },
+  {
+    "slot": "D48-040",
+    "repetition": "3",
+    "block": "10",
+    "task_id": "B-02",
+    "position_in_block": "4",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-040",
+      "run_id": "R-0125",
+      "config_id": "C-0226"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0170",
+    "config_id": "C-0271"
+  },
+  {
+    "slot": "D48-041",
+    "repetition": "3",
+    "block": "11",
+    "task_id": "B-01",
+    "position_in_block": "1",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-041",
+      "run_id": "R-0126",
+      "config_id": "C-0227"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0171",
+    "config_id": "C-0272"
+  },
+  {
+    "slot": "D48-042",
+    "repetition": "3",
+    "block": "11",
+    "task_id": "B-01",
+    "position_in_block": "2",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-042",
+      "run_id": "R-0127",
+      "config_id": "C-0228"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0172",
+    "config_id": "C-0273"
+  },
+  {
+    "slot": "D48-043",
+    "repetition": "3",
+    "block": "11",
+    "task_id": "B-01",
+    "position_in_block": "3",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-043",
+      "run_id": "R-0128",
+      "config_id": "C-0229"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0173",
+    "config_id": "C-0274"
+  },
+  {
+    "slot": "D48-044",
+    "repetition": "3",
+    "block": "11",
+    "task_id": "B-01",
+    "position_in_block": "4",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-044",
+      "run_id": "R-0129",
+      "config_id": "C-0230"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0174",
+    "config_id": "C-0275"
+  },
+  {
+    "slot": "D48-045",
+    "repetition": "3",
+    "block": "12",
+    "task_id": "B-03",
+    "position_in_block": "1",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-045",
+      "run_id": "R-0130",
+      "config_id": "C-0231"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0175",
+    "config_id": "C-0276"
+  },
+  {
+    "slot": "D48-046",
+    "repetition": "3",
+    "block": "12",
+    "task_id": "B-03",
+    "position_in_block": "2",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-046",
+      "run_id": "R-0131",
+      "config_id": "C-0232"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0176",
+    "config_id": "C-0277"
+  },
+  {
+    "slot": "D48-047",
+    "repetition": "3",
+    "block": "12",
+    "task_id": "B-03",
+    "position_in_block": "3",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-047",
+      "run_id": "R-0132",
+      "config_id": "C-0233"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0177",
+    "config_id": "C-0278"
+  },
+  {
+    "slot": "D48-048",
+    "repetition": "3",
+    "block": "12",
+    "task_id": "B-03",
+    "position_in_block": "4",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-048",
+      "run_id": "R-0133",
+      "config_id": "C-0234"
+    },
+    "attempt_kind": "first_attempt_of_unrun_slot",
+    "run_id": "R-0178",
+    "config_id": "C-0279"
+  }
+]

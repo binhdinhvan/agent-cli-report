@@ -1,0 +1,24 @@
+{
+  "authorized": true,
+  "scope": "openai-direct-one-catalog-one-responses-no-retry",
+  "provider": "https://api.openai.com/v1",
+  "model": "gpt-6.1-sol",
+  "max_catalog_requests": 1,
+  "max_generation_requests": 1,
+  "retries_authorized": false,
+  "approved_by": "user says key may be used internally for API/report but must never be disclosed; requests retry/check OpenAI after funding",
+  "approved_at_utc": "2026-11-10T15:53:27.864470+00:00",
+  "input_sha256": {
+    "demos/openai_direct_check.py": "49c7bcce2db97b731be158421e91fdb2ca042a5b7d96fe48b78369ca2a707986",
+    "demos/test_openai_direct_check.py": "858fb859dbaf3e09aad806e9ceed8d33abd0acd43469687be1ef23a1706ef959",
+    "demos/OPENAI_DIRECT_CHECK.md": "6f96e86cdf687974415ea51750f23a5cae8697e84f52ff55dc5e7fa667473699",
+    "demos/provider_probe.py": "92507bfc713c543d8f056523ff115e35bfb42f92683b1aa40cb6df65aec9f5c8",
+    "demos/gemini_smoke5.py": "02ee8503962886546ac77f1680bd74f67b46cf27d64f88a1c82bc897ebd2172d",
+    "research/model-profiles/openai-gpt-6.1-sol.json": "e1bd469f7465b5da07f019fc3a42053c252f4da74f4de13943d0e687e29afa2b"
+  },
+  "max_output_tokens": 1024,
+  "reasoning_effort": "low",
+  "service_tier": "default",
+  "native4cli_or_benchmark_authorized": false,
+  "artifact": "demos/artifacts/OPENAI-DIRECT-CHECK-20261110-01"
+}

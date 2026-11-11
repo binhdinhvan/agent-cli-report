@@ -1,0 +1,1 @@
+{"status":"pass","checks":{"subscribed_before_prompt":true,"background_subagent_session_returned":true,"subagent_parent_lineage":true,"child_marker_returned":true,"parent_continues_before_child_complete":true,"child_completion_delivered_to_parent":true}}

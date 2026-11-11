@@ -1,0 +1,33 @@
+{
+  "task_id": "B-03",
+  "scope_ok": true,
+  "changed_files": [
+    "cache.py"
+  ],
+  "invalid_paths": [],
+  "snapshot_sha256": {
+    "test_public.py": "0bd741a682765b9d049ef3f590897e7f3dd24368f4bee00ef30a4056ae7a31bb",
+    "cache.py": "f8326d5f0421c9cf2b9e8c0ba4051e80524562d25111df03bfc8a87ed5ae6379"
+  },
+  "suites": {
+    "public": {
+      "exit_code": 0,
+      "timed_out": false,
+      "output_limit_exceeded": false,
+      "duration_ms": 115,
+      "stdout": "",
+      "stderr": "test_basic_api (test_public.PublicTests.test_basic_api) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+    },
+    "hidden": {
+      "exit_code": 1,
+      "timed_out": false,
+      "output_limit_exceeded": false,
+      "duration_ms": 115,
+      "stdout": "",
+      "stderr": "test_deadline_replaced_and_zero_ttl (__main__.AcceptanceTests.test_deadline_replaced_and_zero_ttl) ... ok\ntest_expired_purged_before_eviction (__main__.AcceptanceTests.test_expired_purged_before_eviction) ... ok\ntest_expiry_boundary (__main__.AcceptanceTests.test_expiry_boundary) ... ok\ntest_len_miss_do_not_refresh (__main__.AcceptanceTests.test_len_miss_do_not_refresh) ... ok\ntest_lru_hit_and_overwrite (__main__.AcceptanceTests.test_lru_hit_and_overwrite) ... FAIL\ntest_none_default_delete_and_instances (__main__.AcceptanceTests.test_none_default_delete_and_instances) ... ok\ntest_state_machine (__main__.AcceptanceTests.test_state_machine) ... ok\n\n======================================================================\nFAIL: test_lru_hit_and_overwrite (__main__.AcceptanceTests.test_lru_hit_and_overwrite)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 33, in test_lru_hit_and_overwrite\n    self.assertIsNone(self.cache.get(\"b\"))\nAssertionError: 'b' is not None\n\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nFAILED (failures=1)\n"
+    }
+  },
+  "rubric": null,
+  "grader_duration_ms": 234,
+  "pass": false
+}

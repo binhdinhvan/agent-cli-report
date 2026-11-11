@@ -1,0 +1,24 @@
+{
+  "authorized": true,
+  "scope": "gemini-provider-only-five-requests-unpriced-explicit-no-retry",
+  "model": "gemini-3.8-flash",
+  "provider": "https://api.shopaikey.com/v1",
+  "max_requests": 5,
+  "allow_unpriced_for_this_smoke_only": true,
+  "approved_by": "user: Vẫn dùng Shopaikey; giá chạy đi lát tôi bổ xung; chạy lại không nối2model; chạy thử5cái trước",
+  "approved_at_utc": "2026-11-10T14:59:24.791126+00:00",
+  "input_sha256": {
+    "demos/gemini_smoke5.py": "02ee8503962886546ac77f1680bd74f67b46cf27d64f88a1c82bc897ebd2172d",
+    "demos/test_gemini_smoke5.py": "391bdb2be63d4807c93749486a64cd1839b2a0b4c7b93cfddefbe23ae02be7a2",
+    "demos/GEMINI_SMOKE5.md": "69b3d4868f5d92b21d7e9b8d820676c4e21877fc2e426690954ff1408250e10c",
+    "demos/provider_probe.py": "92507bfc713c543d8f056523ff115e35bfb42f92683b1aa40cb6df65aec9f5c8",
+    "research/model-profiles/gemini-3.8-flash.json": "7934bd949885e88f116a887ea2d46f82e17e7d724d2d64e38e907740c079c39d"
+  },
+  "estimated_cost_usd": null,
+  "measured_charge_usd": null,
+  "price_status": "pending user rates; explicit scoped exception",
+  "max_output_tokens": 256,
+  "minimum_gap_seconds": 30,
+  "retry_allowed": false,
+  "benchmark48_authorized": false
+}

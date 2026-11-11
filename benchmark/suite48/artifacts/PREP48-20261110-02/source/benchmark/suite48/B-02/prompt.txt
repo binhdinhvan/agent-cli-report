@@ -1,0 +1,9 @@
+Sửa merge_pages(pages) trong pagination.py. Chỉ sửa pagination.py; không sửa test hoặc thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh).
+
+Contract: pages là iterable các page; mỗi page là iterable các dict, mỗi dict có id kiểu string. Cả hai mức có thể là generator chỉ duyệt một lần. Chỉ cần xử lý input đúng contract, không cần thêm validation cho kiểu khác.
+
+Trả list các dict, một dict cho mỗi id. Thứ tự đầu ra theo lần đầu id xuất hiện trong toàn bộ input; nếu id xuất hiện lại, toàn bộ record cuối cùng thay thế record cũ nhưng giữ vị trí đầu tiên. Không merge các field của record cũ với record mới. Empty input/pages hợp lệ.
+
+Không thay đổi input hoặc dictionary gốc. Mỗi output record phải là shallow copy độc lập với dict input; không yêu cầu deep-copy giá trị nested. Không giữ state giữa các lần gọi. Giữ nguyên tên hàm/signature/API hiện có. Public tests phải tiếp tục pass; kiểm cả duplicate trong cùng page và khác page.
+
+Chạy test bằng python3 -B -m unittest -v test_public. Chỉ dùng standard library, không cài package hoặc truy cập Internet. Hoàn tất bằng code đã sửa, không chỉ mô tả giải pháp.

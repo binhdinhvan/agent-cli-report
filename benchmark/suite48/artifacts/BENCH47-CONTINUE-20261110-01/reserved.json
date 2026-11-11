@@ -1,0 +1,754 @@
+[
+  {
+    "slot": "D48-002",
+    "repetition": "1",
+    "block": "1",
+    "task_id": "B-01",
+    "position_in_block": "2",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-002",
+      "run_id": "R-0040",
+      "config_id": "C-0141"
+    },
+    "run_id": "R-0087",
+    "config_id": "C-0188"
+  },
+  {
+    "slot": "D48-003",
+    "repetition": "1",
+    "block": "1",
+    "task_id": "B-01",
+    "position_in_block": "3",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-003",
+      "run_id": "R-0041",
+      "config_id": "C-0142"
+    },
+    "run_id": "R-0088",
+    "config_id": "C-0189"
+  },
+  {
+    "slot": "D48-004",
+    "repetition": "1",
+    "block": "1",
+    "task_id": "B-01",
+    "position_in_block": "4",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-004",
+      "run_id": "R-0042",
+      "config_id": "C-0143"
+    },
+    "run_id": "R-0089",
+    "config_id": "C-0190"
+  },
+  {
+    "slot": "D48-005",
+    "repetition": "1",
+    "block": "2",
+    "task_id": "B-02",
+    "position_in_block": "1",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-005",
+      "run_id": "R-0043",
+      "config_id": "C-0144"
+    },
+    "run_id": "R-0090",
+    "config_id": "C-0191"
+  },
+  {
+    "slot": "D48-006",
+    "repetition": "1",
+    "block": "2",
+    "task_id": "B-02",
+    "position_in_block": "2",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-006",
+      "run_id": "R-0044",
+      "config_id": "C-0145"
+    },
+    "run_id": "R-0091",
+    "config_id": "C-0192"
+  },
+  {
+    "slot": "D48-007",
+    "repetition": "1",
+    "block": "2",
+    "task_id": "B-02",
+    "position_in_block": "3",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-007",
+      "run_id": "R-0045",
+      "config_id": "C-0146"
+    },
+    "run_id": "R-0092",
+    "config_id": "C-0193"
+  },
+  {
+    "slot": "D48-008",
+    "repetition": "1",
+    "block": "2",
+    "task_id": "B-02",
+    "position_in_block": "4",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-008",
+      "run_id": "R-0046",
+      "config_id": "C-0147"
+    },
+    "run_id": "R-0093",
+    "config_id": "C-0194"
+  },
+  {
+    "slot": "D48-009",
+    "repetition": "1",
+    "block": "3",
+    "task_id": "B-03",
+    "position_in_block": "1",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-009",
+      "run_id": "R-0047",
+      "config_id": "C-0148"
+    },
+    "run_id": "R-0094",
+    "config_id": "C-0195"
+  },
+  {
+    "slot": "D48-010",
+    "repetition": "1",
+    "block": "3",
+    "task_id": "B-03",
+    "position_in_block": "2",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-010",
+      "run_id": "R-0048",
+      "config_id": "C-0149"
+    },
+    "run_id": "R-0095",
+    "config_id": "C-0196"
+  },
+  {
+    "slot": "D48-011",
+    "repetition": "1",
+    "block": "3",
+    "task_id": "B-03",
+    "position_in_block": "3",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-011",
+      "run_id": "R-0049",
+      "config_id": "C-0150"
+    },
+    "run_id": "R-0096",
+    "config_id": "C-0197"
+  },
+  {
+    "slot": "D48-012",
+    "repetition": "1",
+    "block": "3",
+    "task_id": "B-03",
+    "position_in_block": "4",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-012",
+      "run_id": "R-0050",
+      "config_id": "C-0151"
+    },
+    "run_id": "R-0097",
+    "config_id": "C-0198"
+  },
+  {
+    "slot": "D48-013",
+    "repetition": "1",
+    "block": "4",
+    "task_id": "B-04",
+    "position_in_block": "1",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-013",
+      "run_id": "R-0051",
+      "config_id": "C-0152"
+    },
+    "run_id": "R-0098",
+    "config_id": "C-0199"
+  },
+  {
+    "slot": "D48-014",
+    "repetition": "1",
+    "block": "4",
+    "task_id": "B-04",
+    "position_in_block": "2",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-014",
+      "run_id": "R-0052",
+      "config_id": "C-0153"
+    },
+    "run_id": "R-0099",
+    "config_id": "C-0200"
+  },
+  {
+    "slot": "D48-015",
+    "repetition": "1",
+    "block": "4",
+    "task_id": "B-04",
+    "position_in_block": "3",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-015",
+      "run_id": "R-0053",
+      "config_id": "C-0154"
+    },
+    "run_id": "R-0100",
+    "config_id": "C-0201"
+  },
+  {
+    "slot": "D48-016",
+    "repetition": "1",
+    "block": "4",
+    "task_id": "B-04",
+    "position_in_block": "4",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-016",
+      "run_id": "R-0054",
+      "config_id": "C-0155"
+    },
+    "run_id": "R-0101",
+    "config_id": "C-0202"
+  },
+  {
+    "slot": "D48-017",
+    "repetition": "2",
+    "block": "5",
+    "task_id": "B-04",
+    "position_in_block": "1",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-017",
+      "run_id": "R-0055",
+      "config_id": "C-0156"
+    },
+    "run_id": "R-0102",
+    "config_id": "C-0203"
+  },
+  {
+    "slot": "D48-018",
+    "repetition": "2",
+    "block": "5",
+    "task_id": "B-04",
+    "position_in_block": "2",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-018",
+      "run_id": "R-0056",
+      "config_id": "C-0157"
+    },
+    "run_id": "R-0103",
+    "config_id": "C-0204"
+  },
+  {
+    "slot": "D48-019",
+    "repetition": "2",
+    "block": "5",
+    "task_id": "B-04",
+    "position_in_block": "3",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-019",
+      "run_id": "R-0057",
+      "config_id": "C-0158"
+    },
+    "run_id": "R-0104",
+    "config_id": "C-0205"
+  },
+  {
+    "slot": "D48-020",
+    "repetition": "2",
+    "block": "5",
+    "task_id": "B-04",
+    "position_in_block": "4",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-020",
+      "run_id": "R-0058",
+      "config_id": "C-0159"
+    },
+    "run_id": "R-0105",
+    "config_id": "C-0206"
+  },
+  {
+    "slot": "D48-021",
+    "repetition": "2",
+    "block": "6",
+    "task_id": "B-02",
+    "position_in_block": "1",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-021",
+      "run_id": "R-0059",
+      "config_id": "C-0160"
+    },
+    "run_id": "R-0106",
+    "config_id": "C-0207"
+  },
+  {
+    "slot": "D48-022",
+    "repetition": "2",
+    "block": "6",
+    "task_id": "B-02",
+    "position_in_block": "2",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-022",
+      "run_id": "R-0060",
+      "config_id": "C-0161"
+    },
+    "run_id": "R-0107",
+    "config_id": "C-0208"
+  },
+  {
+    "slot": "D48-023",
+    "repetition": "2",
+    "block": "6",
+    "task_id": "B-02",
+    "position_in_block": "3",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-023",
+      "run_id": "R-0061",
+      "config_id": "C-0162"
+    },
+    "run_id": "R-0108",
+    "config_id": "C-0209"
+  },
+  {
+    "slot": "D48-024",
+    "repetition": "2",
+    "block": "6",
+    "task_id": "B-02",
+    "position_in_block": "4",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-024",
+      "run_id": "R-0062",
+      "config_id": "C-0163"
+    },
+    "run_id": "R-0109",
+    "config_id": "C-0210"
+  },
+  {
+    "slot": "D48-025",
+    "repetition": "2",
+    "block": "7",
+    "task_id": "B-03",
+    "position_in_block": "1",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-025",
+      "run_id": "R-0063",
+      "config_id": "C-0164"
+    },
+    "run_id": "R-0110",
+    "config_id": "C-0211"
+  },
+  {
+    "slot": "D48-026",
+    "repetition": "2",
+    "block": "7",
+    "task_id": "B-03",
+    "position_in_block": "2",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-026",
+      "run_id": "R-0064",
+      "config_id": "C-0165"
+    },
+    "run_id": "R-0111",
+    "config_id": "C-0212"
+  },
+  {
+    "slot": "D48-027",
+    "repetition": "2",
+    "block": "7",
+    "task_id": "B-03",
+    "position_in_block": "3",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-027",
+      "run_id": "R-0065",
+      "config_id": "C-0166"
+    },
+    "run_id": "R-0112",
+    "config_id": "C-0213"
+  },
+  {
+    "slot": "D48-028",
+    "repetition": "2",
+    "block": "7",
+    "task_id": "B-03",
+    "position_in_block": "4",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-028",
+      "run_id": "R-0066",
+      "config_id": "C-0167"
+    },
+    "run_id": "R-0113",
+    "config_id": "C-0214"
+  },
+  {
+    "slot": "D48-029",
+    "repetition": "2",
+    "block": "8",
+    "task_id": "B-01",
+    "position_in_block": "1",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-029",
+      "run_id": "R-0067",
+      "config_id": "C-0168"
+    },
+    "run_id": "R-0114",
+    "config_id": "C-0215"
+  },
+  {
+    "slot": "D48-030",
+    "repetition": "2",
+    "block": "8",
+    "task_id": "B-01",
+    "position_in_block": "2",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-030",
+      "run_id": "R-0068",
+      "config_id": "C-0169"
+    },
+    "run_id": "R-0115",
+    "config_id": "C-0216"
+  },
+  {
+    "slot": "D48-031",
+    "repetition": "2",
+    "block": "8",
+    "task_id": "B-01",
+    "position_in_block": "3",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-031",
+      "run_id": "R-0069",
+      "config_id": "C-0170"
+    },
+    "run_id": "R-0116",
+    "config_id": "C-0217"
+  },
+  {
+    "slot": "D48-032",
+    "repetition": "2",
+    "block": "8",
+    "task_id": "B-01",
+    "position_in_block": "4",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-032",
+      "run_id": "R-0070",
+      "config_id": "C-0171"
+    },
+    "run_id": "R-0117",
+    "config_id": "C-0218"
+  },
+  {
+    "slot": "D48-033",
+    "repetition": "3",
+    "block": "9",
+    "task_id": "B-04",
+    "position_in_block": "1",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-033",
+      "run_id": "R-0071",
+      "config_id": "C-0172"
+    },
+    "run_id": "R-0118",
+    "config_id": "C-0219"
+  },
+  {
+    "slot": "D48-034",
+    "repetition": "3",
+    "block": "9",
+    "task_id": "B-04",
+    "position_in_block": "2",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-034",
+      "run_id": "R-0072",
+      "config_id": "C-0173"
+    },
+    "run_id": "R-0119",
+    "config_id": "C-0220"
+  },
+  {
+    "slot": "D48-035",
+    "repetition": "3",
+    "block": "9",
+    "task_id": "B-04",
+    "position_in_block": "3",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-035",
+      "run_id": "R-0073",
+      "config_id": "C-0174"
+    },
+    "run_id": "R-0120",
+    "config_id": "C-0221"
+  },
+  {
+    "slot": "D48-036",
+    "repetition": "3",
+    "block": "9",
+    "task_id": "B-04",
+    "position_in_block": "4",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-036",
+      "run_id": "R-0074",
+      "config_id": "C-0175"
+    },
+    "run_id": "R-0121",
+    "config_id": "C-0222"
+  },
+  {
+    "slot": "D48-037",
+    "repetition": "3",
+    "block": "10",
+    "task_id": "B-02",
+    "position_in_block": "1",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-037",
+      "run_id": "R-0075",
+      "config_id": "C-0176"
+    },
+    "run_id": "R-0122",
+    "config_id": "C-0223"
+  },
+  {
+    "slot": "D48-038",
+    "repetition": "3",
+    "block": "10",
+    "task_id": "B-02",
+    "position_in_block": "2",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-038",
+      "run_id": "R-0076",
+      "config_id": "C-0177"
+    },
+    "run_id": "R-0123",
+    "config_id": "C-0224"
+  },
+  {
+    "slot": "D48-039",
+    "repetition": "3",
+    "block": "10",
+    "task_id": "B-02",
+    "position_in_block": "3",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-039",
+      "run_id": "R-0077",
+      "config_id": "C-0178"
+    },
+    "run_id": "R-0124",
+    "config_id": "C-0225"
+  },
+  {
+    "slot": "D48-040",
+    "repetition": "3",
+    "block": "10",
+    "task_id": "B-02",
+    "position_in_block": "4",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-040",
+      "run_id": "R-0078",
+      "config_id": "C-0179"
+    },
+    "run_id": "R-0125",
+    "config_id": "C-0226"
+  },
+  {
+    "slot": "D48-041",
+    "repetition": "3",
+    "block": "11",
+    "task_id": "B-01",
+    "position_in_block": "1",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-041",
+      "run_id": "R-0079",
+      "config_id": "C-0180"
+    },
+    "run_id": "R-0126",
+    "config_id": "C-0227"
+  },
+  {
+    "slot": "D48-042",
+    "repetition": "3",
+    "block": "11",
+    "task_id": "B-01",
+    "position_in_block": "2",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-042",
+      "run_id": "R-0080",
+      "config_id": "C-0181"
+    },
+    "run_id": "R-0127",
+    "config_id": "C-0228"
+  },
+  {
+    "slot": "D48-043",
+    "repetition": "3",
+    "block": "11",
+    "task_id": "B-01",
+    "position_in_block": "3",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-043",
+      "run_id": "R-0081",
+      "config_id": "C-0182"
+    },
+    "run_id": "R-0128",
+    "config_id": "C-0229"
+  },
+  {
+    "slot": "D48-044",
+    "repetition": "3",
+    "block": "11",
+    "task_id": "B-01",
+    "position_in_block": "4",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-044",
+      "run_id": "R-0082",
+      "config_id": "C-0183"
+    },
+    "run_id": "R-0129",
+    "config_id": "C-0230"
+  },
+  {
+    "slot": "D48-045",
+    "repetition": "3",
+    "block": "12",
+    "task_id": "B-03",
+    "position_in_block": "1",
+    "tool": "pi",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-045",
+      "run_id": "R-0083",
+      "config_id": "C-0184"
+    },
+    "run_id": "R-0130",
+    "config_id": "C-0231"
+  },
+  {
+    "slot": "D48-046",
+    "repetition": "3",
+    "block": "12",
+    "task_id": "B-03",
+    "position_in_block": "2",
+    "tool": "codex",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-046",
+      "run_id": "R-0084",
+      "config_id": "C-0185"
+    },
+    "run_id": "R-0131",
+    "config_id": "C-0232"
+  },
+  {
+    "slot": "D48-047",
+    "repetition": "3",
+    "block": "12",
+    "task_id": "B-03",
+    "position_in_block": "3",
+    "tool": "opencode-v2",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-047",
+      "run_id": "R-0085",
+      "config_id": "C-0186"
+    },
+    "run_id": "R-0132",
+    "config_id": "C-0233"
+  },
+  {
+    "slot": "D48-048",
+    "repetition": "3",
+    "block": "12",
+    "task_id": "B-03",
+    "position_in_block": "4",
+    "tool": "opencode-v1",
+    "status": "not_run",
+    "continuation_of": {
+      "slot": "D48-048",
+      "run_id": "R-0086",
+      "config_id": "C-0187"
+    },
+    "run_id": "R-0133",
+    "config_id": "C-0234"
+  }
+]

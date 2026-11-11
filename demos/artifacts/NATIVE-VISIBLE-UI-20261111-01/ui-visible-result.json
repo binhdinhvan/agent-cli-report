@@ -1,0 +1,128 @@
+{
+  "scope": "fresh isolated Xvfb; real Desktop window, standalone Chrome toolbar and xterm TUI; no prompt",
+  "checks": {
+    "private_xvfb_ready": true,
+    "owned_service_registration": true,
+    "private_service_ready": true
+  },
+  "screenshots": {},
+  "timeline": [
+    {
+      "stage": "spawn",
+      "name": "xvfb",
+      "pid": 5,
+      "args": [
+        "/opt/research/ui-tools/usr/bin/Xvfb",
+        ":91",
+        "-screen",
+        "0",
+        "1600x1050x24",
+        "-nolisten",
+        "tcp",
+        "-ac"
+      ],
+      "at": "2026-11-11T14:38:19.480Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "twm",
+      "pid": 9,
+      "args": [
+        "/opt/research/ui-tools/usr/bin/twm",
+        "-f",
+        "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-21139ca75abefe8a7916/twmrc"
+      ],
+      "at": "2026-11-11T14:38:19.496Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "service",
+      "pid": 10,
+      "args": [
+        "/opt/agent-cli-report/BP48-VIS-21139ca75abefe8a7916/opencode",
+        "serve",
+        "--service",
+        "--hostname",
+        "127.0.0.1",
+        "--port",
+        "0"
+      ],
+      "at": "2026-11-11T14:38:19.496Z"
+    },
+    {
+      "stage": "spawn",
+      "name": "desktop",
+      "pid": 32,
+      "args": [
+        "/opt/research/desktop/ai.opencode",
+        "--ozone-platform=x11",
+        "--no-sandbox",
+        "--disable-gpu",
+        "--remote-debugging-port=9333"
+      ],
+      "at": "2026-11-11T14:38:20.149Z"
+    }
+  ],
+  "health": [
+    503,
+    200
+  ],
+  "service_before": {
+    "version": "2.2.5",
+    "pid": 10,
+    "hostname": "VSF-PF64PCNX-L",
+    "urls": [
+      "http://127.0.0.1:35237"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-21139ca75abefe8a7916/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "session": {
+    "data": {
+      "id": "ses_e34f45c11ffeJLSDXqFqflx6DS",
+      "projectID": "9d26fd2b5ca7b84db4b4ab6ea632934065965c4f",
+      "cost": 0,
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794407900145,
+        "updated": 1794407900145
+      },
+      "title": "REPORT_SHARED_UI_MARKER",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-VIS-21139ca75abefe8a7916/project"
+      }
+    }
+  },
+  "status": "error",
+  "error": "Error: CDP deadline Runtime.evaluate",
+  "cleanup": [
+    {
+      "pid": 32,
+      "exit": 137
+    },
+    {
+      "pid": 10,
+      "exit": 130
+    },
+    {
+      "pid": 9,
+      "exit": 0
+    },
+    {
+      "pid": 5,
+      "exit": 0
+    }
+  ]
+}

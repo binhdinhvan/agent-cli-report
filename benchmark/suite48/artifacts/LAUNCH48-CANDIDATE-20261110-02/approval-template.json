@@ -1,0 +1,8 @@
+{
+  "launch_authorized": false,
+  "plan_sha256": "b5cf12009dde013388ae3a4039deffdc32329c08300f8a6e3800fea3f2ac900d",
+  "budget_estimate_usd": "16",
+  "scope": "48-first-attempt-slots-no-auto-retry",
+  "approved_by": null,
+  "approved_at_utc": null
+}

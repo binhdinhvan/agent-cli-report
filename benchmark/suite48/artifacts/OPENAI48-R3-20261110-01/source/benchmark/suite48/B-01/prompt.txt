@@ -1,0 +1,19 @@
+Đọc code của resolver cấu hình trong workspace. Không sửa code nguồn hoặc test. Chỉ được tạo answer.json ở thư mục gốc; không thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh).
+
+Trả lời năm câu hỏi từ implementation hiện có, không suy từ tên hàm:
+1. Khi gọi resolve("timeout", cli={}, env={}, config={}), giá trị mặc định là gì?
+2. Khi cả cli, env, config và defaults đều có cùng key, thứ tự ưu tiên cao xuống thấp là gì? Dùng tên "cli", "env", "config", "defaults".
+3. Khi canonical_name("quick") được gọi, chuỗi tên nào được duyệt theo thứ tự, gồm cả tên ban đầu và tên canonical cuối?
+4. Khi canonical_name("loop_a") được gọi, exception class và message chính xác là gì?
+5. resolve có sửa dictionary config được truyền vào không? Ghi boolean.
+
+answer.json phải là JSON object đúng năm trường sau, không Markdown hoặc lời giải ngoài schema:
+{
+  "default": {"value": <giá trị JSON>, "evidence": ["path.py:symbol"]},
+  "precedence": {"value": [<tên nguồn theo thứ tự>], "evidence": ["path.py:symbol"]},
+  "alias_trace": {"value": [<tên theo thứ tự>], "evidence": ["path.py:symbol"]},
+  "cycle_error": {"type": <tên class dạng string>, "message": <string>, "evidence": ["path.py:symbol"]},
+  "mutation": {"value": <boolean>, "evidence": ["path.py:symbol"]}
+}
+
+Mỗi evidence là đường dẫn tương đối và symbol có thật trong code hỗ trợ câu trả lời đó; không dùng số dòng. Mỗi câu đúng nội dung được 1 điểm và có evidence phù hợp được 1 điểm, tổng10. Success cần10/10, đúng phạm vi và CLI hoàn tất. Không cài package hoặc truy cập Internet. Dùng python3/stdlib nếu cần. Public schema check dự kiến: python3 -B -m unittest -v test_public.

@@ -1,0 +1,61 @@
+{
+  "status": "failed",
+  "errors": [
+    "permalink E-0001",
+    "permalink E-0002",
+    "permalink E-0003",
+    "permalink E-0004",
+    "permalink E-0039",
+    "permalink E-0040"
+  ],
+  "evidence_ids": 147,
+  "pinned_source_ranges_checked": 147,
+  "local_links_checked": 241,
+  "secret_pattern_scan_files": 87,
+  "secret_pattern_hits": [],
+  "source_repositories": {
+    "opencode-v1": {
+      "exit_code": 0,
+      "clean": true
+    },
+    "opencode-v2": {
+      "exit_code": 0,
+      "clean": true
+    },
+    "pi": {
+      "exit_code": 0,
+      "clean": true
+    },
+    "codex": {
+      "exit_code": 0,
+      "clean": true
+    }
+  },
+  "native_round2_raw_unchanged": true,
+  "benchmark48_raw_unchanged": true,
+  "tests": {
+    "python_demo": 73,
+    "python_benchmark": 118,
+    "bun": 3,
+    "total": 194,
+    "legacy_test_isolation": "two reservation tests mock csv.DictReader only inside tempstate methods; no sealedsource edits"
+  },
+  "registry": [
+    "R-0378",
+    "C-0479"
+  ],
+  "real_provider_requests": 0,
+  "credential_file_reads": 0,
+  "document_sha256": {
+    "REPORT.md": "091adb27832ffd9f988f1e9fc25f102992e76c14815390b14b02a09642dcd22d",
+    "README.md": "b5bd07a4c0f4467ac4a4b05b0316ba7b8f1162d069fb8e49d319712981ce1e08",
+    "PLAN.md": "7f9763fe55ab65e7a36b54858a166125e542e93d987e0089d2610c466296c18c",
+    "demos/README.md": "aa874bdd1c7e8133d56141c276c5a2b0e32b1adaddc570e2c144d53cdb1a491d",
+    "demos/NATIVE_RUNTIME_RESULTS.md": "6241902581e927320130d4b6ea87187dbf8846fdb9b0aba26d48b2baa409e328",
+    "demos/NATIVE_COMPLETION_R2_RESULTS.md": "d5ce6315ce1fbc0443bf69e74f9e5eb710ae18ee5bda2d810fc319fc97ec52a4",
+    "demos/OFFLINE_DEMO_PLAN.md": "b6437df5bbc8a4018813a6ea73b9b3b056e43a1b058aca0173629937a28ef858",
+    "research/REQUIREMENTS_ACCEPTANCE.md": "a4a17e34aa0a6adedcd59a422ff5e63784ec3d2b82a28c783dcc12762c6ae244",
+    "research/artifacts/OPENAI48-DISPERSION-20261111-01/SUMMARY.md": "9ccfbbcf4c4a770586daf568bce8bcb8e363c2d317e6981b7172b77ef9b81ad9"
+  },
+  "evidence_csv_sha256": "9a93e198c939470f4c291200bd6051dc75ddc9c55bceeb6620bd60e392d53570"
+}

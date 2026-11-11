@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0068",
+    "comparison_axis": "cli",
+    "tool": "Pi",
+    "version": "1.5.0",
+    "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+    "claim": "CLI parse tools allowlist và thinking level có validation",
+    "file": "packages/coding-agent/src/cli/args.ts",
+    "line_start": "151",
+    "line_end": "175",
+    "symbol": "parseArgs/tools/thinking",
+    "permalink": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/cli/args.ts#L151-L175",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Chỉ giữ bằng chứng source; runtime model cũ đã xóa theo yêu cầu; không suy runtime support của sol từ source"
+  },
+  "source_sha256": "05471cfd210c08ffad9ea58c334849c94de260137efa6b1b0eecfcd355d630e7",
+  "excerpt": "\t\t} else if ((arg === \"--tools\" || arg === \"-t\") && i + 1 < args.length) {\n\t\t\tconst tools = args[++i]\n\t\t\t\t.split(\",\")\n\t\t\t\t.map((s) => s.trim())\n\t\t\t\t.filter((name) => name.length > 0);\n\t\t\tconst error = getToolListError(tools);\n\t\t\tif (error) {\n\t\t\t\tresult.diagnostics.push({ type: \"error\", message: `${arg}: ${error}` });\n\t\t\t} else {\n\t\t\t\tresult.tools = tools;\n\t\t\t}\n\t\t} else if ((arg === \"--exclude-tools\" || arg === \"-xt\") && i + 1 < args.length) {\n\t\t\tresult.excludeTools = args[++i]\n\t\t\t\t.split(\",\")\n\t\t\t\t.map((s) => s.trim())\n\t\t\t\t.filter((name) => name.length > 0);\n\t\t} else if (arg === \"--thinking\" && i + 1 < args.length) {\n\t\t\tconst level = args[++i];\n\t\t\tif (isValidThinkingLevel(level)) {\n\t\t\t\tresult.thinking = level;\n\t\t\t} else {\n\t\t\t\tresult.diagnostics.push({\n\t\t\t\t\ttype: \"warning\",\n\t\t\t\t\tmessage: `Invalid thinking level \"${level}\". Valid values: ${VALID_THINKING_LEVELS.join(\", \")}`,\n\t\t\t\t});"
+}

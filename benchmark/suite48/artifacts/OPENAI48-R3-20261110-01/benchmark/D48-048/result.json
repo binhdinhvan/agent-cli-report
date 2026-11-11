@@ -1,0 +1,747 @@
+{
+  "slot": "D48-048",
+  "repetition": "3",
+  "block": "12",
+  "task_id": "B-03",
+  "position_in_block": "4",
+  "tool": "opencode-v1",
+  "status": "success",
+  "run_id": "R-0377",
+  "config_id": "C-0478",
+  "spec": {
+    "tool": "opencode-v1",
+    "version": "1.19.5",
+    "config_id": "C-0478",
+    "repository": "anomalyco/opencode",
+    "tag": "v1.19.5",
+    "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+    "asset": "opencode-linux-x64-baseline.tar.gz",
+    "size": 79651821,
+    "sha256": "17c200fd4b2289954cc01552559f9b6d03ec157b2ddfb5eb54144f491656333d",
+    "binary_names": [
+      "opencode"
+    ],
+    "started_at_utc": "2026-11-06T03:49:40.824147+00:00",
+    "status": "prepared_not_executed",
+    "release_api": "https://api.github.com/repos/anomalyco/opencode/releases/tags/v1.19.5",
+    "release_url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.5",
+    "asset_url": "https://github.com/anomalyco/opencode/releases/download/v1.19.5/opencode-linux-x64-baseline.tar.gz",
+    "archive_sha256_verified": "17c200fd4b2289954cc01552559f9b6d03ec157b2ddfb5eb54144f491656333d",
+    "archive_members": [
+      {
+        "name": "opencode",
+        "size": 214386864,
+        "type": "0",
+        "linkname": ""
+      }
+    ],
+    "binary": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v1-1.19.5/payload/opencode",
+    "binary_sha256": "7df4e4136301f16589b0f30bf91a61380fca5f8ef22dd36570f5ebe1d4ec802c",
+    "payload": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v1-1.19.5/payload",
+    "runtime_root": "/tmp/opencode/agent-cli-report/smoke/C-0478",
+    "finished_at_utc": "2026-11-06T03:51:02.265910+00:00",
+    "environment_revision": "search-r2"
+  },
+  "cli": [
+    "/opt/agent-cli-report/C-0478/opencode",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "openai/gpt-6.1-sol",
+    "Hoàn thiện TTLCache trong cache.py. Chỉ sửa cache.py; không sửa test hoặc thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh). Dùng standard library, không cài package hoặc truy cập Internet.\n\nGiữ API:\nTTLCache(capacity, clock)\nset(key, value, ttl=None) -> None\nget(key, default=None) -> value hoặc default\ndelete(key) -> bool\nlen(cache) -> số phần tử chưa hết hạn\n\nContract: capacity là int dương; key là string; value có thể là bất kỳ object kể cả None. clock là callable trả thời gian số hữu hạn không giảm; ttl là None hoặc số hữu hạn. Không cần validation ngoài contract. Chỉ dùng clock được inject để đo expiry, không dùng sleep hoặc thời gian thật.\n\nttl=None nghĩa là không hết hạn. Với ttl>0, deadline = clock tại lúc set + ttl; hết hạn khi now >= deadline. ttl<=0 xóa key hiện tại nếu có và không lưu gì.\n\nCapacity áp dụng lên entry còn sống. Purge entry hết hạn trước khi xét eviction và khi tính len. Nếu còn vượt capacity sau set, loại least-recently-used. set (cả overwrite) và get hit chưa hết hạn cập nhật recency; get miss và len không thay recency. Overwrite thay value/deadline, không tăng số entry. get expired trả default; delete trả True chỉ khi key còn sống và đã xóa, False nếu miss hoặc expired. Các instance không chia sẻ state. Không sửa object value được lưu.\n\nChạy public tests: python3 -B -m unittest -v test_public. Hoàn tất implementation, không chỉ mô tả.\n"
+  ],
+  "validity": "valid",
+  "reasons": [],
+  "execution": {
+    "supervisor_host_pid": 167161,
+    "exit_code": 0,
+    "timed_out": false,
+    "output_limit_exceeded": false,
+    "duration_ms": 197250,
+    "outer_started_monotonic": 21090.093673833,
+    "outer_finished_monotonic": 21287.343424257,
+    "broker_deadline_monotonic": 21990.093673833,
+    "outer_watchdog_deadline_monotonic": 21990.093673833,
+    "native_clock": {
+      "started_monotonic": 21090.138307569,
+      "finished_monotonic": 21286.932939385,
+      "duration_ms": 196795
+    },
+    "witness": {
+      "project_writable": true,
+      "immutable_readonly": {
+        "test_public.py": true
+      },
+      "hidden_absent": true,
+      "home_hidden": true,
+      "net_namespace": "net:[4026533258]",
+      "provider_key_env_absent": true
+    }
+  },
+  "grading": {
+    "task_id": "B-03",
+    "scope_ok": true,
+    "changed_files": [
+      "cache.py"
+    ],
+    "invalid_paths": [],
+    "snapshot_sha256": {
+      "test_public.py": "0bd741a682765b9d049ef3f590897e7f3dd24368f4bee00ef30a4056ae7a31bb",
+      "cache.py": "ae8dd310288b7762295131292686ffa80aaf9956854b003addaa20139cd7c755"
+    },
+    "suites": {
+      "public": {
+        "exit_code": 0,
+        "timed_out": false,
+        "output_limit_exceeded": false,
+        "duration_ms": 114,
+        "stdout": "",
+        "stderr": "test_basic_api (test_public.PublicTests.test_basic_api) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+      },
+      "hidden": {
+        "exit_code": 0,
+        "timed_out": false,
+        "output_limit_exceeded": false,
+        "duration_ms": 64,
+        "stdout": "",
+        "stderr": "test_deadline_replaced_and_zero_ttl (__main__.AcceptanceTests.test_deadline_replaced_and_zero_ttl) ... ok\ntest_expired_purged_before_eviction (__main__.AcceptanceTests.test_expired_purged_before_eviction) ... ok\ntest_expiry_boundary (__main__.AcceptanceTests.test_expiry_boundary) ... ok\ntest_len_miss_do_not_refresh (__main__.AcceptanceTests.test_len_miss_do_not_refresh) ... ok\ntest_lru_hit_and_overwrite (__main__.AcceptanceTests.test_lru_hit_and_overwrite) ... ok\ntest_none_default_delete_and_instances (__main__.AcceptanceTests.test_none_default_delete_and_instances) ... ok\ntest_state_machine (__main__.AcceptanceTests.test_state_machine) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nOK\n"
+      }
+    },
+    "rubric": null,
+    "grader_duration_ms": 181,
+    "pass": true
+  },
+  "requests": [
+    {
+      "started_at_utc": "2026-11-10T19:37:00.936934+00:00",
+      "request_index": 1,
+      "original_body_sha256": "d40b83e07f3fe80ada1802a5cea1246f78e06da53a16ca31cd372dd54038c3b9",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null,
+        null
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {
+        "reasoning": {
+          "effort": "low",
+          "summary": "auto"
+        }
+      },
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 871.557822,
+      "pacing_wait_seconds": 27.17344,
+      "effective_max_output_tokens": 2048,
+      "native_requested_settings": {
+        "reasoning": {
+          "effort": "low",
+          "summary": "auto"
+        },
+        "service_tier": null
+      },
+      "effective_settings": {
+        "reasoning": {
+          "effort": "low",
+          "summary": "auto"
+        },
+        "service_tier": "default",
+        "store": false
+      },
+      "provider": "https://api.openai.com/v1",
+      "reasoning_normalizer_revision": "preserve-native-fields-r3",
+      "http_status": 200,
+      "response_protocol_header_names": [
+        "x-request-id"
+      ],
+      "provider_request_id": "req_ef69830533ef4a959d1026ae8aa7d428",
+      "response_service_tier": "default",
+      "response_output_types": [
+        "message"
+      ],
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "revision": "openai-cache-cost-r2",
+        "usage": {
+          "input_tokens": 879,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 12,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 891
+        },
+        "estimated_cost_usd": "0.001878",
+        "measured_charge_usd": null,
+        "estimate_status": "published OpenAI tariff estimate from reported lifetime counts",
+        "components": {
+          "ordinary_input_usd": "0.001758",
+          "cached_input_usd": "0.00",
+          "cache_write_30m_usd": "0.00",
+          "cache_write_12h_usd": "0",
+          "output_usd": "0.00012"
+        },
+        "ordinary_input_tokens": 879,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "billed_30m_write_tokens": 0,
+        "billed_12h_write_tokens": 0,
+        "guard_30m_write_tokens": 0,
+        "guard_12h_write_tokens": 0,
+        "cache_write_lifetime_status": "reported_breakdown_or_zero_writes",
+        "conservative_upper_bound": false,
+        "published_tariff_lower_usd": "0.001878",
+        "published_tariff_upper_usd": "0.001878",
+        "limitations": "not invoice-confirmed; not an invoice cap; excludes unreported fees; reasoning included in output, not added again"
+      },
+      "captured_response_bytes": 7743,
+      "finished_at_utc": "2026-11-10T19:37:02.677145+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T19:37:32.677722+00:00",
+      "request_index": 2,
+      "original_body_sha256": "aeb8fb8cc21658db5fadb88e1b2f5b7256346212b2bb93a75ddc7ce8e2923ef0",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "apply_patch",
+        "bash",
+        "glob",
+        "grep",
+        "read"
+      ],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {
+        "reasoning": {
+          "effort": "low"
+        }
+      },
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 839.817027,
+      "pacing_wait_seconds": 30.000008,
+      "effective_max_output_tokens": 2048,
+      "native_requested_settings": {
+        "reasoning": {
+          "effort": "low"
+        },
+        "service_tier": null
+      },
+      "effective_settings": {
+        "reasoning": {
+          "effort": "low"
+        },
+        "service_tier": "default",
+        "store": false
+      },
+      "provider": "https://api.openai.com/v1",
+      "reasoning_normalizer_revision": "preserve-native-fields-r3",
+      "http_status": 200,
+      "response_protocol_header_names": [
+        "x-request-id"
+      ],
+      "provider_request_id": "req_005544db23214e8ead071157d71d9a01",
+      "response_service_tier": "default",
+      "response_output_types": [
+        "function_call"
+      ],
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "revision": "openai-cache-cost-r2",
+        "usage": {
+          "input_tokens": 3423,
+          "input_tokens_details": {
+            "cache_write_tokens": 3420,
+            "cached_tokens": 0
+          },
+          "output_tokens": 33,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3456
+        },
+        "estimated_cost_usd": "0.017436",
+        "measured_charge_usd": null,
+        "estimate_status": "conservative published-tariff upper estimate; unknown write lifetime charged at12h guard rate",
+        "components": {
+          "ordinary_input_usd": "0.000006",
+          "cached_input_usd": "0.00",
+          "cache_write_30m_usd": "0.00",
+          "cache_write_12h_usd": "0.0171",
+          "output_usd": "0.00033"
+        },
+        "ordinary_input_tokens": 3,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 3420,
+        "billed_30m_write_tokens": null,
+        "billed_12h_write_tokens": null,
+        "guard_30m_write_tokens": 0,
+        "guard_12h_write_tokens": 3420,
+        "cache_write_lifetime_status": "unknown_bounded_at_12h_rate",
+        "conservative_upper_bound": true,
+        "published_tariff_lower_usd": "0.008886",
+        "published_tariff_upper_usd": "0.017436",
+        "limitations": "not invoice-confirmed; not an invoice cap; excludes unreported fees; reasoning included in output, not added again"
+      },
+      "captured_response_bytes": 41845,
+      "finished_at_utc": "2026-11-10T19:37:34.849473+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T19:38:04.849967+00:00",
+      "request_index": 3,
+      "original_body_sha256": "f37295aeedde618ce75285116436bd6cff7170c033cf1488b93b2416e0d64976",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "apply_patch",
+        "bash",
+        "glob",
+        "grep",
+        "read"
+      ],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null,
+        "function_call",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {
+        "reasoning": {
+          "effort": "low"
+        }
+      },
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 807.64478,
+      "pacing_wait_seconds": 29.975048,
+      "effective_max_output_tokens": 2048,
+      "native_requested_settings": {
+        "reasoning": {
+          "effort": "low"
+        },
+        "service_tier": null
+      },
+      "effective_settings": {
+        "reasoning": {
+          "effort": "low"
+        },
+        "service_tier": "default",
+        "store": false
+      },
+      "provider": "https://api.openai.com/v1",
+      "reasoning_normalizer_revision": "preserve-native-fields-r3",
+      "http_status": 200,
+      "response_protocol_header_names": [
+        "x-request-id"
+      ],
+      "provider_request_id": "req_5f57507e847e4139b672db0c8808ec65",
+      "response_service_tier": "default",
+      "response_output_types": [
+        "function_call",
+        "function_call"
+      ],
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "revision": "openai-cache-cost-r2",
+        "usage": {
+          "input_tokens": 3511,
+          "input_tokens_details": {
+            "cache_write_tokens": 88,
+            "cached_tokens": 3420
+          },
+          "output_tokens": 83,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3594
+        },
+        "estimated_cost_usd": "0.001618",
+        "measured_charge_usd": null,
+        "estimate_status": "conservative published-tariff upper estimate; unknown write lifetime charged at12h guard rate",
+        "components": {
+          "ordinary_input_usd": "0.000006",
+          "cached_input_usd": "0.000342",
+          "cache_write_30m_usd": "0.00",
+          "cache_write_12h_usd": "0.00044",
+          "output_usd": "0.00083"
+        },
+        "ordinary_input_tokens": 3,
+        "cached_input_tokens": 3420,
+        "cache_write_tokens": 88,
+        "billed_30m_write_tokens": null,
+        "billed_12h_write_tokens": null,
+        "guard_30m_write_tokens": 0,
+        "guard_12h_write_tokens": 88,
+        "cache_write_lifetime_status": "unknown_bounded_at_12h_rate",
+        "conservative_upper_bound": true,
+        "published_tariff_lower_usd": "0.001398",
+        "published_tariff_upper_usd": "0.001618",
+        "limitations": "not invoice-confirmed; not an invoice cap; excludes unreported fees; reasoning included in output, not added again"
+      },
+      "captured_response_bytes": 38509,
+      "finished_at_utc": "2026-11-10T19:38:07.041187+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T19:38:37.041900+00:00",
+      "request_index": 4,
+      "original_body_sha256": "66a20e23bbf4f167c567ad21c65682a1822a7d66c65b4692b8b3967d4c57193c",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "apply_patch",
+        "bash",
+        "glob",
+        "grep",
+        "read"
+      ],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null,
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {
+        "reasoning": {
+          "effort": "low"
+        }
+      },
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 775.452768,
+      "pacing_wait_seconds": 29.986184,
+      "effective_max_output_tokens": 2048,
+      "native_requested_settings": {
+        "reasoning": {
+          "effort": "low"
+        },
+        "service_tier": null
+      },
+      "effective_settings": {
+        "reasoning": {
+          "effort": "low"
+        },
+        "service_tier": "default",
+        "store": false
+      },
+      "provider": "https://api.openai.com/v1",
+      "reasoning_normalizer_revision": "preserve-native-fields-r3",
+      "http_status": 200,
+      "response_protocol_header_names": [
+        "x-request-id"
+      ],
+      "provider_request_id": "req_3d50fba9ee364017b530a0242584e93c",
+      "response_service_tier": "default",
+      "response_output_types": [
+        "function_call"
+      ],
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "revision": "openai-cache-cost-r2",
+        "usage": {
+          "input_tokens": 4038,
+          "input_tokens_details": {
+            "cache_write_tokens": 527,
+            "cached_tokens": 3508
+          },
+          "output_tokens": 510,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4548
+        },
+        "estimated_cost_usd": "0.0080918",
+        "measured_charge_usd": null,
+        "estimate_status": "conservative published-tariff upper estimate; unknown write lifetime charged at12h guard rate",
+        "components": {
+          "ordinary_input_usd": "0.000006",
+          "cached_input_usd": "0.0003508",
+          "cache_write_30m_usd": "0.00",
+          "cache_write_12h_usd": "0.002635",
+          "output_usd": "0.0051"
+        },
+        "ordinary_input_tokens": 3,
+        "cached_input_tokens": 3508,
+        "cache_write_tokens": 527,
+        "billed_30m_write_tokens": null,
+        "billed_12h_write_tokens": null,
+        "guard_30m_write_tokens": 0,
+        "guard_12h_write_tokens": 527,
+        "cache_write_lifetime_status": "unknown_bounded_at_12h_rate",
+        "conservative_upper_bound": true,
+        "published_tariff_lower_usd": "0.0067743",
+        "published_tariff_upper_usd": "0.0080918",
+        "limitations": "not invoice-confirmed; not an invoice cap; excludes unreported fees; reasoning included in output, not added again"
+      },
+      "captured_response_bytes": 167720,
+      "finished_at_utc": "2026-11-10T19:38:42.835840+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T19:39:12.836611+00:00",
+      "request_index": 5,
+      "original_body_sha256": "eca2fa3562d3eebbc5ecdd01d3fff91e6c693ec61d6522712e98322dc7e9b91c",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "apply_patch",
+        "bash",
+        "glob",
+        "grep",
+        "read"
+      ],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null,
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output",
+        "function_call",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {
+        "reasoning": {
+          "effort": "low"
+        }
+      },
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 739.658052,
+      "pacing_wait_seconds": 29.963625,
+      "effective_max_output_tokens": 2048,
+      "native_requested_settings": {
+        "reasoning": {
+          "effort": "low"
+        },
+        "service_tier": null
+      },
+      "effective_settings": {
+        "reasoning": {
+          "effort": "low"
+        },
+        "service_tier": "default",
+        "store": false
+      },
+      "provider": "https://api.openai.com/v1",
+      "reasoning_normalizer_revision": "preserve-native-fields-r3",
+      "http_status": 200,
+      "response_protocol_header_names": [
+        "x-request-id"
+      ],
+      "provider_request_id": "req_79c68bedf3a149f4a8f08cec32cd5636",
+      "response_service_tier": "default",
+      "response_output_types": [
+        "function_call"
+      ],
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "revision": "openai-cache-cost-r2",
+        "usage": {
+          "input_tokens": 4584,
+          "input_tokens_details": {
+            "cache_write_tokens": 546,
+            "cached_tokens": 4035
+          },
+          "output_tokens": 48,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4632
+        },
+        "estimated_cost_usd": "0.0036195",
+        "measured_charge_usd": null,
+        "estimate_status": "conservative published-tariff upper estimate; unknown write lifetime charged at12h guard rate",
+        "components": {
+          "ordinary_input_usd": "0.000006",
+          "cached_input_usd": "0.0004035",
+          "cache_write_30m_usd": "0.00",
+          "cache_write_12h_usd": "0.00273",
+          "output_usd": "0.00048"
+        },
+        "ordinary_input_tokens": 3,
+        "cached_input_tokens": 4035,
+        "cache_write_tokens": 546,
+        "billed_30m_write_tokens": null,
+        "billed_12h_write_tokens": null,
+        "guard_30m_write_tokens": 0,
+        "guard_12h_write_tokens": 546,
+        "cache_write_lifetime_status": "unknown_bounded_at_12h_rate",
+        "conservative_upper_bound": true,
+        "published_tariff_lower_usd": "0.0022545",
+        "published_tariff_upper_usd": "0.0036195",
+        "limitations": "not invoice-confirmed; not an invoice cap; excludes unreported fees; reasoning included in output, not added again"
+      },
+      "captured_response_bytes": 45524,
+      "finished_at_utc": "2026-11-10T19:39:14.615367+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T19:39:44.616156+00:00",
+      "request_index": 6,
+      "original_body_sha256": "ef6c690e19bd28affd1748add7412842f36babfd0d21fcf7564bc2fb3671e94b",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "apply_patch",
+        "bash",
+        "glob",
+        "grep",
+        "read"
+      ],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null,
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output",
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {
+        "reasoning": {
+          "effort": "low"
+        }
+      },
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 707.878504,
+      "pacing_wait_seconds": 29.912116,
+      "effective_max_output_tokens": 2048,
+      "native_requested_settings": {
+        "reasoning": {
+          "effort": "low"
+        },
+        "service_tier": null
+      },
+      "effective_settings": {
+        "reasoning": {
+          "effort": "low"
+        },
+        "service_tier": "default",
+        "store": false
+      },
+      "provider": "https://api.openai.com/v1",
+      "reasoning_normalizer_revision": "preserve-native-fields-r3",
+      "http_status": 200,
+      "response_protocol_header_names": [
+        "x-request-id"
+      ],
+      "provider_request_id": "req_73ef97950cac47ada18afd6999cb29aa",
+      "response_service_tier": "default",
+      "response_output_types": [
+        "message"
+      ],
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "revision": "openai-cache-cost-r2",
+        "usage": {
+          "input_tokens": 4673,
+          "input_tokens_details": {
+            "cache_write_tokens": 89,
+            "cached_tokens": 4581
+          },
+          "output_tokens": 70,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4743
+        },
+        "estimated_cost_usd": "0.0016091",
+        "measured_charge_usd": null,
+        "estimate_status": "conservative published-tariff upper estimate; unknown write lifetime charged at12h guard rate",
+        "components": {
+          "ordinary_input_usd": "0.000006",
+          "cached_input_usd": "0.0004581",
+          "cache_write_30m_usd": "0.00",
+          "cache_write_12h_usd": "0.000445",
+          "output_usd": "0.0007"
+        },
+        "ordinary_input_tokens": 3,
+        "cached_input_tokens": 4581,
+        "cache_write_tokens": 89,
+        "billed_30m_write_tokens": null,
+        "billed_12h_write_tokens": null,
+        "guard_30m_write_tokens": 0,
+        "guard_12h_write_tokens": 89,
+        "cache_write_lifetime_status": "unknown_bounded_at_12h_rate",
+        "conservative_upper_bound": true,
+        "published_tariff_lower_usd": "0.0013866",
+        "published_tariff_upper_usd": "0.0016091",
+        "limitations": "not invoice-confirmed; not an invoice cap; excludes unreported fees; reasoning included in output, not added again"
+      },
+      "captured_response_bytes": 55209,
+      "finished_at_utc": "2026-11-10T19:39:49.286334+00:00"
+    }
+  ],
+  "synthetic_usage": false,
+  "preflight_events": null,
+  "provider_requests": 6,
+  "supervisor_pid_absent": true,
+  "broker_socket_absent": true
+}

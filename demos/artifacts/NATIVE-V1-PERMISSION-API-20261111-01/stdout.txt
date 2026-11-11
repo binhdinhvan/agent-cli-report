@@ -1,0 +1,1 @@
+{"status":"pass","checks":{"subscribed_before_prompt":true,"turn_0_witness":true,"turn_0_ask_scope":true,"turn_1_witness":true,"turn_1_ask_scope":true,"turn_2_witness":true,"turn_2_ask_scope":true,"turn_3_witness":true,"turn_3_ask_scope":true,"turn_4_witness":true,"turn_4_ask_scope":true,"turn_5_witness":true,"turn_5_ask_scope":true,"all_pending_settled":true}}

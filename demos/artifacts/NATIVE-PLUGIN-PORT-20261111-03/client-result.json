@@ -1,0 +1,2986 @@
+{
+  "scope": "native TypeScript Client/private server with scripted SSE, not embedded SDK or model quality",
+  "checks": {
+    "subscribed_before_prompt": true,
+    "assistant_marker": true,
+    "user_message": true,
+    "native_model_requests_observed": true,
+    "ported_plugin_active": true,
+    "ported_plugin_tool_invoked": true,
+    "shell_start_returns_running": true,
+    "parent_continues_before_shell_end": true,
+    "shell_exit7_observed": true,
+    "cancel_does_not_kill_sibling": true,
+    "shell_survives_client_disconnect": true,
+    "private_server_pid_changed": true,
+    "transcript_after_restart": true,
+    "resume_request_contains_prior_context": true
+  },
+  "events": [
+    {
+      "id": "evt_1c84c97c300169L8Ck75lF2zZW",
+      "type": "server.connected",
+      "data": {}
+    },
+    {
+      "id": "evt_1c84c97cb001eNi2oFeVBNXBdA",
+      "created": 1794361825227,
+      "type": "session.created",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "slug": "nimble-squid",
+        "version": "2.2.5",
+        "projectID": "552afbbf483570bd0bacd536e5a15e12d155015e",
+        "location": {
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+        },
+        "subpath": "",
+        "title": "native-client-demo"
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 0,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c97d90018ASuBdLnScrYnJ",
+      "created": 1794361825241,
+      "type": "project.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "id": "552afbbf483570bd0bacd536e5a15e12d155015e",
+        "canonical": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project",
+        "time": {
+          "created": 1794361825226,
+          "updated": 1794361825226,
+          "active": 1794361825240
+        },
+        "sandboxes": []
+      }
+    },
+    {
+      "id": "evt_1c84c9a46001gmwvEUvEpB17Fq",
+      "created": 1794361825862,
+      "type": "integration.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84c9a4c001q2yL4vNMjRXOvB",
+      "created": 1794361825868,
+      "type": "provider.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84c9a54001VMqsoRz5AO3yyW",
+      "created": 1794361825876,
+      "type": "model.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84c9a57001VQmZsdzt91AkcT",
+      "created": 1794361825879,
+      "type": "agent.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84c9a58001Evm4oQj8E15PFC",
+      "created": 1794361825880,
+      "type": "command.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84c9a580028wnvFU4EFVNnfu",
+      "created": 1794361825880,
+      "type": "skill.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84c9a5b001L3BQnv7nk3W2d0",
+      "created": 1794361825883,
+      "type": "websearch.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84c9a76002WPhxTpXC01pI0o",
+      "created": 1794361825910,
+      "type": "reference.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84c9a77001jQPqblLsiRikz7",
+      "created": 1794361825911,
+      "type": "plugin.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c84c9a93001tVl3Y2jhQ4o7NF",
+      "created": 1794361825939,
+      "type": "session.inbox.enqueued",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "inboxID": "msg_1c84c9a91001npR5afRM5zoQEd",
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "item": {
+          "type": "user",
+          "payload": {
+            "text": "REPORT_CLIENT_USER_SEED"
+          },
+          "delivery": "steer"
+        }
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 1,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9a97001f8eHC8GPaEcl28",
+      "created": 1794361825943,
+      "type": "session.execution.started",
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r"
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 2,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9aa400189wUFZOCBM7wBe",
+      "created": 1794361825956,
+      "metadata": {
+        "instructions": {
+          "initial": true
+        }
+      },
+      "type": "session.instructions.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "delta": {
+          "core/codemode": "e41c3a904c1c93c952e0ac3cbd4c90316bdbaa73aa3225e5c411ed46f7bdbb10",
+          "core/date": "8fda1d364fef8b5fbcccb039ef94b1ebe3705b3b3a6d558d6d10f92e84ff9e33",
+          "core/environment": "3afa58ebfb3c8c753d9102298863962dc486f782f5a4a23eb6c15717d7ff76f3"
+        }
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 3,
+        "version": 2
+      }
+    },
+    {
+      "id": "evt_1c84c9aa7001alw5K3snEoaUBT",
+      "created": 1794361825959,
+      "type": "session.inbox.delivered",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "inboxID": "msg_1c84c9a91001npR5afRM5zoQEd"
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 4,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9acd001LF4cSGqcGHn8Af",
+      "created": 1794361825997,
+      "type": "session.step.started",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "agent": "build",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "shopaikey"
+        },
+        "assistantMessageID": "msg_1c84c9ab6001PofFio0d2ugqtO",
+        "started": 1794361825984
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 5,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9ad1001rnwxkH6R35yTRo",
+      "created": 1794361826002,
+      "type": "session.tool.input.started",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "assistantMessageID": "msg_1c84c9ab6001PofFio0d2ugqtO",
+        "id": "call_client_plugin",
+        "name": "execute"
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 6,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9ad6001YhjEHpWq6kWWJ4",
+      "created": 1794361826006,
+      "type": "session.tool.input.ended",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "assistantMessageID": "msg_1c84c9ab6001PofFio0d2ugqtO",
+        "id": "call_client_plugin",
+        "text": "{\"code\": \"return await tools.report_marker()\"}"
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 7,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9ad9001oa1YVWSVOUpkkh",
+      "created": 1794361826009,
+      "type": "session.tool.called",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "assistantMessageID": "msg_1c84c9ab6001PofFio0d2ugqtO",
+        "id": "call_client_plugin",
+        "input": {
+          "code": "return await tools.report_marker()"
+        },
+        "executed": false,
+        "native": {
+          "itemId": "fc_client_plugin"
+        }
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 8,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9add001mzi6ekDBEM1Q1I",
+      "created": 1794361826013,
+      "type": "session.step.streamed",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "assistantMessageID": "msg_1c84c9ab6001PofFio0d2ugqtO"
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 9,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9ae40013wruxDlgbzac76",
+      "created": 1794361826020,
+      "type": "session.tool.progress",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "assistantMessageID": "msg_1c84c9ab6001PofFio0d2ugqtO",
+        "id": "call_client_plugin",
+        "metadata": {
+          "toolCalls": [
+            {
+              "tool": "report_marker",
+              "status": "running"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "evt_1c84c9ae5001y8AHhsx6g9DTBn",
+      "created": 1794361826021,
+      "type": "session.tool.success",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "assistantMessageID": "msg_1c84c9ab6001PofFio0d2ugqtO",
+        "id": "call_client_plugin",
+        "content": [
+          {
+            "type": "text",
+            "text": "REPORT_PLUGIN_MARKER"
+          }
+        ],
+        "metadata": {
+          "toolCalls": [
+            {
+              "tool": "report_marker",
+              "status": "completed"
+            }
+          ],
+          "truncated": false
+        },
+        "executed": false
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 10,
+        "version": 2
+      }
+    },
+    {
+      "id": "evt_1c84c9ae8001Uyh8mDZbNWT7MR",
+      "created": 1794361826024,
+      "type": "session.step.ended",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "assistantMessageID": "msg_1c84c9ab6001PofFio0d2ugqtO",
+        "finish": "tool-calls",
+        "native": {
+          "responseId": "resp_of48_3"
+        },
+        "tokens": {
+          "input": 80,
+          "output": 10,
+          "reasoning": 0,
+          "cache": {
+            "read": 20,
+            "write": 0
+          }
+        },
+        "cost": 0
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 11,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9aeb001j2rFYI9RSrEvp5",
+      "created": 1794361826027,
+      "type": "session.usage.updated",
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "cost": 0,
+        "tokens": {
+          "input": 80,
+          "output": 10,
+          "reasoning": 0,
+          "cache": {
+            "read": 20,
+            "write": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c84c9afc001qFjThUpN8aAqYk",
+      "created": 1794361826044,
+      "type": "session.step.started",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "agent": "build",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "shopaikey"
+        },
+        "assistantMessageID": "msg_1c84c9af2001Sf9lZ66oBPDR9g",
+        "started": 1794361826038
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 12,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9afe0013TRUvochPxgbvw",
+      "created": 1794361826046,
+      "type": "session.text.started",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "assistantMessageID": "msg_1c84c9af2001Sf9lZ66oBPDR9g",
+        "ordinal": 0
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 13,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9b000011AGtRbqmtdC2N3",
+      "created": 1794361826048,
+      "type": "session.text.delta",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "assistantMessageID": "msg_1c84c9af2001Sf9lZ66oBPDR9g",
+        "ordinal": 0,
+        "delta": "REPORT_CLIENT_ASSISTANT_MARKER"
+      }
+    },
+    {
+      "id": "evt_1c84c9b00002YPy6z6Gzxxd9zY",
+      "created": 1794361826048,
+      "type": "session.text.ended",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "assistantMessageID": "msg_1c84c9af2001Sf9lZ66oBPDR9g",
+        "ordinal": 0,
+        "text": "REPORT_CLIENT_ASSISTANT_MARKER",
+        "native": {
+          "itemId": "msg_client_demo"
+        }
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 14,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9b030012PF73FN53os1E4",
+      "created": 1794361826051,
+      "type": "session.step.streamed",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "assistantMessageID": "msg_1c84c9af2001Sf9lZ66oBPDR9g"
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 15,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9b05001e1O6LwLQvjzE8i",
+      "created": 1794361826053,
+      "type": "session.step.ended",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "assistantMessageID": "msg_1c84c9af2001Sf9lZ66oBPDR9g",
+        "finish": "stop",
+        "native": {
+          "responseId": "resp_of48_1"
+        },
+        "tokens": {
+          "input": 80,
+          "output": 10,
+          "reasoning": 0,
+          "cache": {
+            "read": 20,
+            "write": 0
+          }
+        },
+        "cost": 0
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 16,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9b0700143vqSV3q2xjCst",
+      "created": 1794361826055,
+      "type": "session.usage.updated",
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "cost": 0,
+        "tokens": {
+          "input": 160,
+          "output": 20,
+          "reasoning": 0,
+          "cache": {
+            "read": 40,
+            "write": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c84c9b08001aX5owE3wmxZOD2",
+      "created": 1794361826056,
+      "type": "session.execution.succeeded",
+      "data": {
+        "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r"
+      },
+      "durable": {
+        "aggregateID": "ses_e37b36838ffe4admdEqRMcWs3r",
+        "seq": 17,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c84c9b13001GKyyavRQXlGUL8",
+      "created": 1794361826067,
+      "type": "shell.created",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "info": {
+          "id": "sh_1c84c9b10001DoCgZLIcMP4yr4",
+          "status": "running",
+          "command": "python3 -u /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/background_worker.py --steps 12",
+          "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project",
+          "shell": "/bin/sh",
+          "file": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/xdg-data/opencode/shell/552afbbf483570bd0bacd536e5a15e12d155015e/sh_1c84c9b10001DoCgZLIcMP4yr4.out",
+          "metadata": {},
+          "time": {
+            "started": 1794361826064
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c84c9fe4001dGcVBYO6UaV1wj",
+      "created": 1794361827300,
+      "type": "shell.exited",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "id": "sh_1c84c9b10001DoCgZLIcMP4yr4",
+        "exit": 0,
+        "status": "exited"
+      }
+    },
+    {
+      "id": "evt_1c84c9fee001E8K0V3XRD6jqo1",
+      "created": 1794361827310,
+      "type": "shell.created",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "info": {
+          "id": "sh_1c84c9feb001hRYwp3H38nnjdg",
+          "status": "running",
+          "command": "python3 -u /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/background_worker.py --mode error --steps 2",
+          "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project",
+          "shell": "/bin/sh",
+          "file": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/xdg-data/opencode/shell/552afbbf483570bd0bacd536e5a15e12d155015e/sh_1c84c9feb001hRYwp3H38nnjdg.out",
+          "metadata": {},
+          "time": {
+            "started": 1794361827307
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c84ca0d3001P9Nh4Go8KhMyok",
+      "created": 1794361827539,
+      "type": "shell.exited",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "id": "sh_1c84c9feb001hRYwp3H38nnjdg",
+        "exit": 7,
+        "status": "exited"
+      }
+    },
+    {
+      "id": "evt_1c84ca0d7001WKkXBIScFTajxh",
+      "created": 1794361827543,
+      "type": "shell.created",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "info": {
+          "id": "sh_1c84ca0d6001L7mVbYXHc9mSRY",
+          "status": "running",
+          "command": "python3 -u /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/background_worker.py --steps 20",
+          "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project",
+          "shell": "/bin/sh",
+          "file": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/xdg-data/opencode/shell/552afbbf483570bd0bacd536e5a15e12d155015e/sh_1c84ca0d6001L7mVbYXHc9mSRY.out",
+          "metadata": {},
+          "time": {
+            "started": 1794361827542
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c84ca0da001ga1pRJYR9xOvMN",
+      "created": 1794361827546,
+      "type": "shell.created",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "info": {
+          "id": "sh_1c84ca0d8001RW5EpCp6LX2RpC",
+          "status": "running",
+          "command": "python3 -u /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/background_worker.py --steps 30",
+          "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project",
+          "shell": "/bin/sh",
+          "file": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/xdg-data/opencode/shell/552afbbf483570bd0bacd536e5a15e12d155015e/sh_1c84ca0d8001RW5EpCp6LX2RpC.out",
+          "metadata": {},
+          "time": {
+            "started": 1794361827544
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c84ca0db001xCmeg14M5pgM4M",
+      "created": 1794361827547,
+      "type": "shell.exited",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "id": "sh_1c84ca0d8001RW5EpCp6LX2RpC",
+        "status": "killed"
+      }
+    },
+    {
+      "id": "evt_1c84ca0db002LSBj5XQEMn1kBq",
+      "created": 1794361827547,
+      "type": "shell.deleted",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "id": "sh_1c84ca0d8001RW5EpCp6LX2RpC"
+      }
+    },
+    {
+      "id": "evt_1c84ca8c5001jadDctwoGQVwoL",
+      "created": 1794361829573,
+      "type": "shell.exited",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "id": "sh_1c84ca0d6001L7mVbYXHc9mSRY",
+        "exit": 0,
+        "status": "exited"
+      }
+    },
+    {
+      "id": "evt_1c84ca8ce001wV9orZDPIqX3U9",
+      "type": "server.connected",
+      "data": {}
+    },
+    {
+      "id": "evt_1c84cab4300190fd81LflyrxlR",
+      "created": 1794361830211,
+      "type": "shell.exited",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "id": "sh_1c84ca8c70016PHs0LZukOoMJ4",
+        "exit": 0,
+        "status": "exited"
+      }
+    }
+  ],
+  "requests": [
+    {
+      "model": "gpt-6.1-sol",
+      "input": [
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "REPORT_CLIENT_USER_SEED"
+            }
+          ]
+        }
+      ],
+      "instructions": "You are an AI agent running in OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available.\n\n# Harness\n- Responses are rendered as GitHub-flavored Markdown.\n- `<system-reminder>` blocks are harness instructions, not user-authored content. Read and follow them.\n- Prefer parallelizing independent tool calls.\n- Prefer dedicated tools over shell commands; fall back to the shell when a tool cannot do what you need.\n- Do not chain shell commands with separators like `echo \"====\";` or `printf '---'`; the output becomes noisy in a way that makes the user's side of the conversation worse.\n\n# Communication\n\nUse clear file paths when referring to files. Keep responses clear and concise, and avoid unnecessary technical jargon.\n\n## Intermediate Commentary\n\nAs you work, you send messages to the commentary channel. These are how you collaborate with the user while you work: stating assumptions and providing updates. Keep them concise and quickly scannable, and send them only when they add real information, such as a discovery, a tradeoff, or a blocker. Do not narrate routine reads, searches, or edits.\n\nBy default, treat new messages received during ongoing work as steering the active task rather than replacing it. Incorporate corrections and constraints, and answer questions briefly in commentary before continuing. Replace the task only when the user clearly cancels it or requests an incompatible objective.\n\nDo not put a final response, such as a blocking or clarifying question, in the commentary channel. The final answer must always be fully self-contained.\n\n## Final Answer\n\nIn the final answer, lead with the outcome, not the steps you took to reach it. Cover the most important information, use only as much structure as the answer needs, and avoid long-winded explanations unless necessary. Include technical detail only where it helps.\n\n# Working in codebases\n- Keep changes consistent with the structure, naming, style, and patterns of the surrounding code.\n- Treat unfamiliar files or changes as potential user work and investigate before deleting or overwriting them.\n\n# Delegation\n\nDo not spawn subagents unless the user or applicable AGENTS.md/skill instructions explicitly ask for subagents, delegation, or parallel agent work.\n\n# Destructive actions\n\nDo not revert, reset, or discard changes you did not make. Never run destructive commands such as `git reset --hard`, `git checkout --`, or recursive deletes on broad paths unless the user clearly asked for that operation; if the target or scope is unclear, ask first. Prefer non-interactive git commands.\n\n# Autonomy\n\nDo not infer authorization for work beyond the user's request. Assumptions that help you make progress are fine as long as they stay within the user's intent and the scope of the task.\n\n# Your Model\n- Name: gpt-6.1-sol\n- Provider ID: shopaikey\n- Model ID: gpt-6.1-sol\n# Code Mode\n\nThe tools listed below cannot be called directly: they only work as JavaScript inside the `execute` tool. Every other tool you have is a normal tool call: call it directly, never inside `execute`.\n\nThe catalog is complete. Do not guess tool names.\n\n## Code Mode tools (call only inside `execute`)\n\n- opencode (1 tool) // Tools for managing OpenCode itself, such as working with sessions and worktrees, searching the available models, and reading MCP resources.\n  - tools.opencode.worktree_remove({\n  /** Absolute path of the worktree to remove. @minLength 1 */\n  directory: string,\n  /** Discard modified and untracked files. Only set this when the user has confirmed forced removal. */\n  force?: boolean,\n}): Promise<{\n  directory: string,\n  removed: boolean,\n}> // Remove a worktree. The repository location selects configuration; directory identifies the worktree to remove.\n- report_marker (1 tool)\n  - tools.report_marker(): Promise<string | null> // Return the fixed research marker; no file, environment, credential or network access.\n\nToday's date: Wed Nov 11 2026\n\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project\n  Workspace root folder: /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project\n  Is directory a git repo: no\n  Platform: linux\n  Prefer /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/tmp/opencode over generic system temporary directories such as /tmp; it is pre-created and approved for external access.\n</env>\nWhen you create a worktree outside the current working directory and intend to use it as your primary working directory, consider using `execute` to call `tools.opencode.session_move` and make the worktree the session's working directory.",
+      "stream": true,
+      "max_output_tokens": 2048,
+      "store": false,
+      "prompt_cache_key": "ses_e37b36838ffe4admdEqRMcWs3r",
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "name": "glob",
+          "description": "Search file paths using a glob pattern (examples: \"**/*.ts\", \"src/**/*.tsx\").",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "description": "Glob pattern to match files against"
+              },
+              "path": {
+                "type": "string",
+                "description": "Directory to search. Defaults to the current working directory."
+              },
+              "hidden": {
+                "type": "boolean",
+                "description": "Include hidden files and directories (default: false)."
+              },
+              "limit": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "description": "Maximum number of matching files to return (default: 100)"
+              }
+            },
+            "required": [
+              "pattern"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "grep",
+          "description": "Search file contents using ripgrep's regular expression syntax or literal text matching. Use it to locate specific code, symbols, or text patterns, and narrow searches with `path` or `include`. Returns matching file paths, line numbers, and line previews.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Regular expression or literal text to match in file contents."
+              },
+              "path": {
+                "type": "string",
+                "description": "File or directory to search. Defaults to the current working directory."
+              },
+              "include": {
+                "type": "string",
+                "description": "Glob pattern to filter files (for example, \"*.js\" or \"*.{ts,tsx}\")"
+              },
+              "literal": {
+                "type": "boolean",
+                "description": "Treat `pattern` as exact text instead of a regular expression (default: false)."
+              },
+              "caseSensitive": {
+                "type": "boolean",
+                "description": "Use case-sensitive matching (default: true)."
+              },
+              "limit": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "description": "Maximum number of matching lines to return (default: 100)"
+              }
+            },
+            "required": [
+              "pattern"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "patch",
+          "description": "Use the `patch` tool to edit files. Your patch language is a stripped‑down, file‑oriented diff format designed to be easy to parse and safe to apply. You can think of it as a high‑level envelope:\n\n*** Begin Patch\n[ one or more file sections ]\n*** End Patch\n\nWithin that envelope, you get a sequence of file operations.\nYou MUST include a header to specify the action you are taking.\nEach operation starts with one of three headers:\n\n*** Add File: <path> - create a new file. Every following line is a + line (the initial contents).\n*** Delete File: <path> - remove an existing file. Nothing follows.\n*** Update File: <path> - patch an existing file in place (optionally with a rename).\n\nExample patch:\n\n```\n*** Begin Patch\n*** Add File: hello.txt\n+Hello world\n*** Update File: src/app.py\n*** Move to: src/main.py\n@@ def greet():\n-print(\"Hi\")\n+print(\"Hello, world!\")\n*** Delete File: obsolete.txt\n*** End Patch\n```\n\nIt is important to remember:\n\n- You must include a header with your intended action (Add/Delete/Update)\n- You must prefix new lines with `+` even when creating a new file\n",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patchText": {
+                "type": "string",
+                "description": "The full patch text describing add, update, and delete operations"
+              }
+            },
+            "required": [
+              "patchText"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "read",
+          "description": "Read the contents of a file or directory. Supports text files, images, and PDFs. Images and PDFs are presented directly to the model. Each text line is prefixed by its 1-based line number as <line>: <content>. The prefix is for reference and is not part of the file content. Directory entries are returned one per line. Use offset and limit to read large files or directories in sections. Prefer one larger read over many small slices, and use grep to find specific content in large files.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "description": "File or directory to read"
+              },
+              "offset": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "The line or directory entry to start reading from (1-based)"
+              },
+              "limit": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "The maximum number of lines or directory entries to read (defaults to and capped at 2000)"
+              }
+            },
+            "required": [
+              "path"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "shell",
+          "description": "Execute a shell command and return its output. Commands run on Linux using sh. Quote file paths containing spaces or special characters. Prefer dedicated tools over shell commands when possible. When output is large, the full result is saved to a file and a truncated preview is returned. Rely on automatic truncation unless filtering the output is more useful. Commands accept an optional timeout, background commands have no timeout by default. Background commands return immediately, and you will be notified when they complete.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "command": {
+                "type": "string",
+                "description": "Shell command string to execute"
+              },
+              "workdir": {
+                "type": "string",
+                "description": "Working directory to execute the command in. Defaults to the current working directory. When possible, avoid changing directories in the command and set the working directory here instead."
+              },
+              "timeout": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Timeout in milliseconds. Set to 0 to disable the timeout. Defaults to 120000 for foreground commands. Background commands have no timeout by default."
+              },
+              "background": {
+                "type": "boolean",
+                "description": "Run the command in the background and return immediately (useful for dev servers and long-running builds). You do not need to use '&' at the end of the command when using this parameter. You will be notified when it completes. DO NOT poll for completion."
+              }
+            },
+            "required": [
+              "command"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "skill",
+          "description": "Load a specialized skill's instructions and resources into the current conversation when the task at hand matches its description.\n\nThe skill ID must match an available skill or a skill explicitly referenced by the user.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "The ID of an available skill or a skill explicitly referenced by the user"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "execute",
+          "description": "Run JavaScript in a confined Code Mode runtime to script tool calls and HTTP requests and compose their results.\n`fetch` is available for HTTP requests. Imports, direct filesystem access, and timers are unavailable: there is no `setTimeout` or sleep. All other external access goes through `tools`.\nWithin `{ code }`, the only callable tools are those explicitly listed in the Code Mode catalog instructions or returned by the `search` function. Inside `{ code }`, ignore tools shown outside the Code Mode catalog. They are not available in the Code Mode runtime.\nCall tools through `tools` using only exact paths and signatures from the catalog. Do not infer or normalize tool names; preserve bracket notation such as `tools.<namespace>[\"tool-name\"](input)`.\nPrefer an explicit `return`; if omitted, the final top-level expression becomes the result.\nAwait every call whose completion matters; pending calls are interrupted when execution ends. Run independent calls concurrently with `Promise.allSettled`.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        }
+      ]
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "input": [
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "REPORT_CLIENT_USER_SEED"
+            }
+          ]
+        },
+        {
+          "type": "function_call",
+          "id": "fc_client_plugin",
+          "call_id": "call_client_plugin",
+          "name": "execute",
+          "arguments": "{\"code\":\"return await tools.report_marker()\"}"
+        },
+        {
+          "type": "function_call_output",
+          "call_id": "call_client_plugin",
+          "output": "REPORT_PLUGIN_MARKER"
+        }
+      ],
+      "instructions": "You are an AI agent running in OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available.\n\n# Harness\n- Responses are rendered as GitHub-flavored Markdown.\n- `<system-reminder>` blocks are harness instructions, not user-authored content. Read and follow them.\n- Prefer parallelizing independent tool calls.\n- Prefer dedicated tools over shell commands; fall back to the shell when a tool cannot do what you need.\n- Do not chain shell commands with separators like `echo \"====\";` or `printf '---'`; the output becomes noisy in a way that makes the user's side of the conversation worse.\n\n# Communication\n\nUse clear file paths when referring to files. Keep responses clear and concise, and avoid unnecessary technical jargon.\n\n## Intermediate Commentary\n\nAs you work, you send messages to the commentary channel. These are how you collaborate with the user while you work: stating assumptions and providing updates. Keep them concise and quickly scannable, and send them only when they add real information, such as a discovery, a tradeoff, or a blocker. Do not narrate routine reads, searches, or edits.\n\nBy default, treat new messages received during ongoing work as steering the active task rather than replacing it. Incorporate corrections and constraints, and answer questions briefly in commentary before continuing. Replace the task only when the user clearly cancels it or requests an incompatible objective.\n\nDo not put a final response, such as a blocking or clarifying question, in the commentary channel. The final answer must always be fully self-contained.\n\n## Final Answer\n\nIn the final answer, lead with the outcome, not the steps you took to reach it. Cover the most important information, use only as much structure as the answer needs, and avoid long-winded explanations unless necessary. Include technical detail only where it helps.\n\n# Working in codebases\n- Keep changes consistent with the structure, naming, style, and patterns of the surrounding code.\n- Treat unfamiliar files or changes as potential user work and investigate before deleting or overwriting them.\n\n# Delegation\n\nDo not spawn subagents unless the user or applicable AGENTS.md/skill instructions explicitly ask for subagents, delegation, or parallel agent work.\n\n# Destructive actions\n\nDo not revert, reset, or discard changes you did not make. Never run destructive commands such as `git reset --hard`, `git checkout --`, or recursive deletes on broad paths unless the user clearly asked for that operation; if the target or scope is unclear, ask first. Prefer non-interactive git commands.\n\n# Autonomy\n\nDo not infer authorization for work beyond the user's request. Assumptions that help you make progress are fine as long as they stay within the user's intent and the scope of the task.\n\n# Your Model\n- Name: gpt-6.1-sol\n- Provider ID: shopaikey\n- Model ID: gpt-6.1-sol\n# Code Mode\n\nThe tools listed below cannot be called directly: they only work as JavaScript inside the `execute` tool. Every other tool you have is a normal tool call: call it directly, never inside `execute`.\n\nThe catalog is complete. Do not guess tool names.\n\n## Code Mode tools (call only inside `execute`)\n\n- opencode (1 tool) // Tools for managing OpenCode itself, such as working with sessions and worktrees, searching the available models, and reading MCP resources.\n  - tools.opencode.worktree_remove({\n  /** Absolute path of the worktree to remove. @minLength 1 */\n  directory: string,\n  /** Discard modified and untracked files. Only set this when the user has confirmed forced removal. */\n  force?: boolean,\n}): Promise<{\n  directory: string,\n  removed: boolean,\n}> // Remove a worktree. The repository location selects configuration; directory identifies the worktree to remove.\n- report_marker (1 tool)\n  - tools.report_marker(): Promise<string | null> // Return the fixed research marker; no file, environment, credential or network access.\n\nToday's date: Wed Nov 11 2026\n\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project\n  Workspace root folder: /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project\n  Is directory a git repo: no\n  Platform: linux\n  Prefer /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/tmp/opencode over generic system temporary directories such as /tmp; it is pre-created and approved for external access.\n</env>\nWhen you create a worktree outside the current working directory and intend to use it as your primary working directory, consider using `execute` to call `tools.opencode.session_move` and make the worktree the session's working directory.",
+      "stream": true,
+      "max_output_tokens": 2048,
+      "store": false,
+      "prompt_cache_key": "ses_e37b36838ffe4admdEqRMcWs3r",
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "name": "glob",
+          "description": "Search file paths using a glob pattern (examples: \"**/*.ts\", \"src/**/*.tsx\").",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "description": "Glob pattern to match files against"
+              },
+              "path": {
+                "type": "string",
+                "description": "Directory to search. Defaults to the current working directory."
+              },
+              "hidden": {
+                "type": "boolean",
+                "description": "Include hidden files and directories (default: false)."
+              },
+              "limit": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "description": "Maximum number of matching files to return (default: 100)"
+              }
+            },
+            "required": [
+              "pattern"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "grep",
+          "description": "Search file contents using ripgrep's regular expression syntax or literal text matching. Use it to locate specific code, symbols, or text patterns, and narrow searches with `path` or `include`. Returns matching file paths, line numbers, and line previews.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Regular expression or literal text to match in file contents."
+              },
+              "path": {
+                "type": "string",
+                "description": "File or directory to search. Defaults to the current working directory."
+              },
+              "include": {
+                "type": "string",
+                "description": "Glob pattern to filter files (for example, \"*.js\" or \"*.{ts,tsx}\")"
+              },
+              "literal": {
+                "type": "boolean",
+                "description": "Treat `pattern` as exact text instead of a regular expression (default: false)."
+              },
+              "caseSensitive": {
+                "type": "boolean",
+                "description": "Use case-sensitive matching (default: true)."
+              },
+              "limit": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "description": "Maximum number of matching lines to return (default: 100)"
+              }
+            },
+            "required": [
+              "pattern"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "patch",
+          "description": "Use the `patch` tool to edit files. Your patch language is a stripped‑down, file‑oriented diff format designed to be easy to parse and safe to apply. You can think of it as a high‑level envelope:\n\n*** Begin Patch\n[ one or more file sections ]\n*** End Patch\n\nWithin that envelope, you get a sequence of file operations.\nYou MUST include a header to specify the action you are taking.\nEach operation starts with one of three headers:\n\n*** Add File: <path> - create a new file. Every following line is a + line (the initial contents).\n*** Delete File: <path> - remove an existing file. Nothing follows.\n*** Update File: <path> - patch an existing file in place (optionally with a rename).\n\nExample patch:\n\n```\n*** Begin Patch\n*** Add File: hello.txt\n+Hello world\n*** Update File: src/app.py\n*** Move to: src/main.py\n@@ def greet():\n-print(\"Hi\")\n+print(\"Hello, world!\")\n*** Delete File: obsolete.txt\n*** End Patch\n```\n\nIt is important to remember:\n\n- You must include a header with your intended action (Add/Delete/Update)\n- You must prefix new lines with `+` even when creating a new file\n",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patchText": {
+                "type": "string",
+                "description": "The full patch text describing add, update, and delete operations"
+              }
+            },
+            "required": [
+              "patchText"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "read",
+          "description": "Read the contents of a file or directory. Supports text files, images, and PDFs. Images and PDFs are presented directly to the model. Each text line is prefixed by its 1-based line number as <line>: <content>. The prefix is for reference and is not part of the file content. Directory entries are returned one per line. Use offset and limit to read large files or directories in sections. Prefer one larger read over many small slices, and use grep to find specific content in large files.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "description": "File or directory to read"
+              },
+              "offset": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "The line or directory entry to start reading from (1-based)"
+              },
+              "limit": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "The maximum number of lines or directory entries to read (defaults to and capped at 2000)"
+              }
+            },
+            "required": [
+              "path"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "shell",
+          "description": "Execute a shell command and return its output. Commands run on Linux using sh. Quote file paths containing spaces or special characters. Prefer dedicated tools over shell commands when possible. When output is large, the full result is saved to a file and a truncated preview is returned. Rely on automatic truncation unless filtering the output is more useful. Commands accept an optional timeout, background commands have no timeout by default. Background commands return immediately, and you will be notified when they complete.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "command": {
+                "type": "string",
+                "description": "Shell command string to execute"
+              },
+              "workdir": {
+                "type": "string",
+                "description": "Working directory to execute the command in. Defaults to the current working directory. When possible, avoid changing directories in the command and set the working directory here instead."
+              },
+              "timeout": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Timeout in milliseconds. Set to 0 to disable the timeout. Defaults to 120000 for foreground commands. Background commands have no timeout by default."
+              },
+              "background": {
+                "type": "boolean",
+                "description": "Run the command in the background and return immediately (useful for dev servers and long-running builds). You do not need to use '&' at the end of the command when using this parameter. You will be notified when it completes. DO NOT poll for completion."
+              }
+            },
+            "required": [
+              "command"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "skill",
+          "description": "Load a specialized skill's instructions and resources into the current conversation when the task at hand matches its description.\n\nThe skill ID must match an available skill or a skill explicitly referenced by the user.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "The ID of an available skill or a skill explicitly referenced by the user"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "execute",
+          "description": "Run JavaScript in a confined Code Mode runtime to script tool calls and HTTP requests and compose their results.\n`fetch` is available for HTTP requests. Imports, direct filesystem access, and timers are unavailable: there is no `setTimeout` or sleep. All other external access goes through `tools`.\nWithin `{ code }`, the only callable tools are those explicitly listed in the Code Mode catalog instructions or returned by the `search` function. Inside `{ code }`, ignore tools shown outside the Code Mode catalog. They are not available in the Code Mode runtime.\nCall tools through `tools` using only exact paths and signatures from the catalog. Do not infer or normalize tool names; preserve bracket notation such as `tools.<namespace>[\"tool-name\"](input)`.\nPrefer an explicit `return`; if omitted, the final top-level expression becomes the result.\nAwait every call whose completion matters; pending calls are interrupted when execution ends. Run independent calls concurrently with `Promise.allSettled`.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        }
+      ]
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "input": [
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "REPORT_CLIENT_USER_SEED"
+            }
+          ]
+        },
+        {
+          "type": "function_call",
+          "id": "fc_client_plugin",
+          "call_id": "call_client_plugin",
+          "name": "execute",
+          "arguments": "{\"code\":\"return await tools.report_marker()\"}"
+        },
+        {
+          "type": "function_call_output",
+          "call_id": "call_client_plugin",
+          "output": "REPORT_PLUGIN_MARKER"
+        },
+        {
+          "type": "message",
+          "id": "msg_client_demo",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "REPORT_CLIENT_ASSISTANT_MARKER"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Continue the existing session and return the fixed marker."
+            }
+          ]
+        }
+      ],
+      "instructions": "You are an AI agent running in OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available.\n\n# Harness\n- Responses are rendered as GitHub-flavored Markdown.\n- `<system-reminder>` blocks are harness instructions, not user-authored content. Read and follow them.\n- Prefer parallelizing independent tool calls.\n- Prefer dedicated tools over shell commands; fall back to the shell when a tool cannot do what you need.\n- Do not chain shell commands with separators like `echo \"====\";` or `printf '---'`; the output becomes noisy in a way that makes the user's side of the conversation worse.\n\n# Communication\n\nUse clear file paths when referring to files. Keep responses clear and concise, and avoid unnecessary technical jargon.\n\n## Intermediate Commentary\n\nAs you work, you send messages to the commentary channel. These are how you collaborate with the user while you work: stating assumptions and providing updates. Keep them concise and quickly scannable, and send them only when they add real information, such as a discovery, a tradeoff, or a blocker. Do not narrate routine reads, searches, or edits.\n\nBy default, treat new messages received during ongoing work as steering the active task rather than replacing it. Incorporate corrections and constraints, and answer questions briefly in commentary before continuing. Replace the task only when the user clearly cancels it or requests an incompatible objective.\n\nDo not put a final response, such as a blocking or clarifying question, in the commentary channel. The final answer must always be fully self-contained.\n\n## Final Answer\n\nIn the final answer, lead with the outcome, not the steps you took to reach it. Cover the most important information, use only as much structure as the answer needs, and avoid long-winded explanations unless necessary. Include technical detail only where it helps.\n\n# Working in codebases\n- Keep changes consistent with the structure, naming, style, and patterns of the surrounding code.\n- Treat unfamiliar files or changes as potential user work and investigate before deleting or overwriting them.\n\n# Delegation\n\nDo not spawn subagents unless the user or applicable AGENTS.md/skill instructions explicitly ask for subagents, delegation, or parallel agent work.\n\n# Destructive actions\n\nDo not revert, reset, or discard changes you did not make. Never run destructive commands such as `git reset --hard`, `git checkout --`, or recursive deletes on broad paths unless the user clearly asked for that operation; if the target or scope is unclear, ask first. Prefer non-interactive git commands.\n\n# Autonomy\n\nDo not infer authorization for work beyond the user's request. Assumptions that help you make progress are fine as long as they stay within the user's intent and the scope of the task.\n\n# Your Model\n- Name: gpt-6.1-sol\n- Provider ID: shopaikey\n- Model ID: gpt-6.1-sol\n# Code Mode\n\nThe tools listed below cannot be called directly: they only work as JavaScript inside the `execute` tool. Every other tool you have is a normal tool call: call it directly, never inside `execute`.\n\nThe catalog is complete. Do not guess tool names.\n\n## Code Mode tools (call only inside `execute`)\n\n- opencode (1 tool) // Tools for managing OpenCode itself, such as working with sessions and worktrees, searching the available models, and reading MCP resources.\n  - tools.opencode.worktree_remove({\n  /** Absolute path of the worktree to remove. @minLength 1 */\n  directory: string,\n  /** Discard modified and untracked files. Only set this when the user has confirmed forced removal. */\n  force?: boolean,\n}): Promise<{\n  directory: string,\n  removed: boolean,\n}> // Remove a worktree. The repository location selects configuration; directory identifies the worktree to remove.\n- report_marker (1 tool)\n  - tools.report_marker(): Promise<string | null> // Return the fixed research marker; no file, environment, credential or network access.\n\nToday's date: Wed Nov 11 2026\n\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project\n  Workspace root folder: /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project\n  Is directory a git repo: no\n  Platform: linux\n  Prefer /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/tmp/opencode over generic system temporary directories such as /tmp; it is pre-created and approved for external access.\n</env>\nWhen you create a worktree outside the current working directory and intend to use it as your primary working directory, consider using `execute` to call `tools.opencode.session_move` and make the worktree the session's working directory.",
+      "stream": true,
+      "max_output_tokens": 2048,
+      "store": false,
+      "prompt_cache_key": "ses_e37b36838ffe4admdEqRMcWs3r",
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "name": "glob",
+          "description": "Search file paths using a glob pattern (examples: \"**/*.ts\", \"src/**/*.tsx\").",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "description": "Glob pattern to match files against"
+              },
+              "path": {
+                "type": "string",
+                "description": "Directory to search. Defaults to the current working directory."
+              },
+              "hidden": {
+                "type": "boolean",
+                "description": "Include hidden files and directories (default: false)."
+              },
+              "limit": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "description": "Maximum number of matching files to return (default: 100)"
+              }
+            },
+            "required": [
+              "pattern"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "grep",
+          "description": "Search file contents using ripgrep's regular expression syntax or literal text matching. Use it to locate specific code, symbols, or text patterns, and narrow searches with `path` or `include`. Returns matching file paths, line numbers, and line previews.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Regular expression or literal text to match in file contents."
+              },
+              "path": {
+                "type": "string",
+                "description": "File or directory to search. Defaults to the current working directory."
+              },
+              "include": {
+                "type": "string",
+                "description": "Glob pattern to filter files (for example, \"*.js\" or \"*.{ts,tsx}\")"
+              },
+              "literal": {
+                "type": "boolean",
+                "description": "Treat `pattern` as exact text instead of a regular expression (default: false)."
+              },
+              "caseSensitive": {
+                "type": "boolean",
+                "description": "Use case-sensitive matching (default: true)."
+              },
+              "limit": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "description": "Maximum number of matching lines to return (default: 100)"
+              }
+            },
+            "required": [
+              "pattern"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "patch",
+          "description": "Use the `patch` tool to edit files. Your patch language is a stripped‑down, file‑oriented diff format designed to be easy to parse and safe to apply. You can think of it as a high‑level envelope:\n\n*** Begin Patch\n[ one or more file sections ]\n*** End Patch\n\nWithin that envelope, you get a sequence of file operations.\nYou MUST include a header to specify the action you are taking.\nEach operation starts with one of three headers:\n\n*** Add File: <path> - create a new file. Every following line is a + line (the initial contents).\n*** Delete File: <path> - remove an existing file. Nothing follows.\n*** Update File: <path> - patch an existing file in place (optionally with a rename).\n\nExample patch:\n\n```\n*** Begin Patch\n*** Add File: hello.txt\n+Hello world\n*** Update File: src/app.py\n*** Move to: src/main.py\n@@ def greet():\n-print(\"Hi\")\n+print(\"Hello, world!\")\n*** Delete File: obsolete.txt\n*** End Patch\n```\n\nIt is important to remember:\n\n- You must include a header with your intended action (Add/Delete/Update)\n- You must prefix new lines with `+` even when creating a new file\n",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patchText": {
+                "type": "string",
+                "description": "The full patch text describing add, update, and delete operations"
+              }
+            },
+            "required": [
+              "patchText"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "read",
+          "description": "Read the contents of a file or directory. Supports text files, images, and PDFs. Images and PDFs are presented directly to the model. Each text line is prefixed by its 1-based line number as <line>: <content>. The prefix is for reference and is not part of the file content. Directory entries are returned one per line. Use offset and limit to read large files or directories in sections. Prefer one larger read over many small slices, and use grep to find specific content in large files.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "description": "File or directory to read"
+              },
+              "offset": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "The line or directory entry to start reading from (1-based)"
+              },
+              "limit": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "The maximum number of lines or directory entries to read (defaults to and capped at 2000)"
+              }
+            },
+            "required": [
+              "path"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "shell",
+          "description": "Execute a shell command and return its output. Commands run on Linux using sh. Quote file paths containing spaces or special characters. Prefer dedicated tools over shell commands when possible. When output is large, the full result is saved to a file and a truncated preview is returned. Rely on automatic truncation unless filtering the output is more useful. Commands accept an optional timeout, background commands have no timeout by default. Background commands return immediately, and you will be notified when they complete.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "command": {
+                "type": "string",
+                "description": "Shell command string to execute"
+              },
+              "workdir": {
+                "type": "string",
+                "description": "Working directory to execute the command in. Defaults to the current working directory. When possible, avoid changing directories in the command and set the working directory here instead."
+              },
+              "timeout": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Timeout in milliseconds. Set to 0 to disable the timeout. Defaults to 120000 for foreground commands. Background commands have no timeout by default."
+              },
+              "background": {
+                "type": "boolean",
+                "description": "Run the command in the background and return immediately (useful for dev servers and long-running builds). You do not need to use '&' at the end of the command when using this parameter. You will be notified when it completes. DO NOT poll for completion."
+              }
+            },
+            "required": [
+              "command"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "skill",
+          "description": "Load a specialized skill's instructions and resources into the current conversation when the task at hand matches its description.\n\nThe skill ID must match an available skill or a skill explicitly referenced by the user.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "The ID of an available skill or a skill explicitly referenced by the user"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "execute",
+          "description": "Run JavaScript in a confined Code Mode runtime to script tool calls and HTTP requests and compose their results.\n`fetch` is available for HTTP requests. Imports, direct filesystem access, and timers are unavailable: there is no `setTimeout` or sleep. All other external access goes through `tools`.\nWithin `{ code }`, the only callable tools are those explicitly listed in the Code Mode catalog instructions or returned by the `search` function. Inside `{ code }`, ignore tools shown outside the Code Mode catalog. They are not available in the Code Mode runtime.\nCall tools through `tools` using only exact paths and signatures from the catalog. Do not infer or normalize tool names; preserve bracket notation such as `tools.<namespace>[\"tool-name\"](input)`.\nPrefer an explicit `return`; if omitted, the final top-level expression becomes the result.\nAwait every call whose completion matters; pending calls are interrupted when execution ends. Run independent calls concurrently with `Promise.allSettled`.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        }
+      ]
+    }
+  ],
+  "cycles": [
+    {
+      "pid": 16,
+      "url": "http://127.0.0.1:40071",
+      "exit": 0
+    },
+    {
+      "pid": 52,
+      "url": "http://127.0.0.1:33707",
+      "exit": 0
+    }
+  ],
+  "sessionID": "ses_e37b36838ffe4admdEqRMcWs3r",
+  "plugin_list": {
+    "location": {
+      "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+    },
+    "data": []
+  },
+  "config_plugins": [
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/xdg-config/opencode/opencode.json",
+      "plugins": [
+        "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/plugins/marker"
+      ]
+    }
+  ],
+  "plugin_inventory_event": {
+    "id": "evt_1c84c9a77001jQPqblLsiRikz7",
+    "created": 1794361825911,
+    "type": "plugin.updated",
+    "location": {
+      "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+    },
+    "data": {}
+  },
+  "plugin_list_after_wait": {
+    "location": {
+      "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+    },
+    "data": [
+      {
+        "id": "opencode.tool.input.repair",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.worktree",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.mcp",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.mcp.codemode.defaults",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.wellknown",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.vcs.git",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.agent",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.plan",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.command",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.goal",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.skill",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.vcs.hg",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.models.dev",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.amazon.bedrock",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.azure",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.cerebras",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.chatgpt",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.cloudflare.ai.gateway",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.cloudflare.workers.ai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.databricks",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.digitalocean",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.github.copilot",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.gitlab",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.google.vertex",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.kilo",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.llmgateway",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.lmstudio",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.modal",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.neon",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.nvidia",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.ollama",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.opencode",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.snowflake.cortex",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.openai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.openai-context-caps",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.openrouter",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.poe",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.prompt-cache-key",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.sap.ai.core",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.vllm",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.xai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.zenmux",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.claude-agent",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.exa",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.firecrawl",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.parallel",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.tavily",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.tinyfish",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.patch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.openai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.anthropic",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.kimi",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.arcee",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.meta",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.verbosity",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.identity",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.edit",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.glob",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.grep",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.image-generate",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tools",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tools.mcp-resources",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.question",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.read",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.artifact",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.schedule",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.shell",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.skill",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.subagent",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.todo",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.webfetch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.websearch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.write",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.warming",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "report.marker",
+        "source": {
+          "type": "local",
+          "path": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/plugins/marker"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.instruction",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.reference",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.agent",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.browser",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.command",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.compaction",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.formatter",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.image",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.location-watcher",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.shell",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.snapshot",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.tool-output",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.compatibility",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.skill",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.provider",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.dynamic",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.websearch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.policy",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      }
+    ]
+  },
+  "parent_marker_received_at": 1150.534079,
+  "context_before_restart": [
+    {
+      "id": "msg_1c84c9a91001npR5afRM5zoQEd",
+      "time": {
+        "created": 1794361825959
+      },
+      "text": "REPORT_CLIENT_USER_SEED",
+      "type": "user"
+    },
+    {
+      "id": "msg_1c84c9ab6001PofFio0d2ugqtO",
+      "time": {
+        "created": 1794361825984,
+        "streamed": 1794361826013,
+        "completed": 1794361826024
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "shopaikey"
+      },
+      "content": [
+        {
+          "type": "tool",
+          "id": "call_client_plugin",
+          "name": "execute",
+          "executed": false,
+          "native": {
+            "itemId": "fc_client_plugin"
+          },
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "return await tools.report_marker()"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "REPORT_PLUGIN_MARKER"
+              }
+            ],
+            "metadata": {
+              "toolCalls": [
+                {
+                  "tool": "report_marker",
+                  "status": "completed"
+                }
+              ],
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1794361826002,
+            "ran": 1794361826009,
+            "completed": 1794361826021
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "native": {
+        "responseId": "resp_of48_3"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 80,
+        "output": 10,
+        "reasoning": 0,
+        "cache": {
+          "read": 20,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1c84c9af2001Sf9lZ66oBPDR9g",
+      "time": {
+        "created": 1794361826038,
+        "streamed": 1794361826051,
+        "completed": 1794361826053
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "shopaikey"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "REPORT_CLIENT_ASSISTANT_MARKER",
+          "native": {
+            "itemId": "msg_client_demo"
+          }
+        }
+      ],
+      "finish": "stop",
+      "native": {
+        "responseId": "resp_of48_1"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 80,
+        "output": 10,
+        "reasoning": 0,
+        "cache": {
+          "read": 20,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1c84c9b08001aX5owE3wmxZOD2",
+      "time": {
+        "created": 1794361826056
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ],
+  "shell_start": {
+    "id": "sh_1c84c9b10001DoCgZLIcMP4yr4",
+    "status": "running",
+    "command": "python3 -u /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/background_worker.py --steps 12",
+    "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project",
+    "shell": "/bin/sh",
+    "file": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/xdg-data/opencode/shell/552afbbf483570bd0bacd536e5a15e12d155015e/sh_1c84c9b10001DoCgZLIcMP4yr4.out",
+    "pid": 42,
+    "metadata": {},
+    "time": {
+      "started": 1794361826064
+    }
+  },
+  "shell_success": {
+    "event": {
+      "id": "evt_1c84c9fe4001dGcVBYO6UaV1wj",
+      "created": 1794361827300,
+      "type": "shell.exited",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "id": "sh_1c84c9b10001DoCgZLIcMP4yr4",
+        "exit": 0,
+        "status": "exited"
+      }
+    },
+    "return_ms": 5.2039599999998245,
+    "parent_ms": 5.210127999999941,
+    "complete_ms": 1238.017536,
+    "info": {
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "id": "sh_1c84c9b10001DoCgZLIcMP4yr4",
+        "status": "exited",
+        "command": "python3 -u /tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/background_worker.py --steps 12",
+        "cwd": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project",
+        "shell": "/bin/sh",
+        "file": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/xdg-data/opencode/shell/552afbbf483570bd0bacd536e5a15e12d155015e/sh_1c84c9b10001DoCgZLIcMP4yr4.out",
+        "pid": 42,
+        "exit": 0,
+        "metadata": {},
+        "time": {
+          "started": 1794361826064,
+          "completed": 1794361827299
+        }
+      }
+    },
+    "output": {
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "output": "{\"fixture\": \"background-worker-r1\", \"seq\": 0, \"event\": \"ready\", \"elapsed_ms\": 0}\n{\"fixture\": \"background-worker-r1\", \"seq\": 1, \"event\": \"progress\", \"elapsed_ms\": 100, \"step\": 1}\n{\"fixture\": \"background-worker-r1\", \"seq\": 2, \"event\": \"progress\", \"elapsed_ms\": 200, \"step\": 2}\n{\"fixture\": \"background-worker-r1\", \"seq\": 3, \"event\": \"progress\", \"elapsed_ms\": 300, \"step\": 3}\n{\"fixture\": \"background-worker-r1\", \"seq\": 4, \"event\": \"progress\", \"elapsed_ms\": 400, \"step\": 4}\n{\"fixture\": \"background-worker-r1\", \"seq\": 5, \"event\": \"progress\", \"elapsed_ms\": 500, \"step\": 5}\n{\"fixture\": \"background-worker-r1\", \"seq\": 6, \"event\": \"progress\", \"elapsed_ms\": 601, \"step\": 6}\n{\"fixture\": \"background-worker-r1\", \"seq\": 7, \"event\": \"progress\", \"elapsed_ms\": 701, \"step\": 7}\n{\"fixture\": \"background-worker-r1\", \"seq\": 8, \"event\": \"progress\", \"elapsed_ms\": 801, \"step\": 8}\n{\"fixture\": \"background-worker-r1\", \"seq\": 9, \"event\": \"progress\", \"elapsed_ms\": 901, \"step\": 9}\n{\"fixture\": \"background-worker-r1\", \"seq\": 10, \"event\": \"progress\", \"elapsed_ms\": 1001, \"step\": 10}\n{\"fixture\": \"background-worker-r1\", \"seq\": 11, \"event\": \"progress\", \"elapsed_ms\": 1101, \"step\": 11}\n{\"fixture\": \"background-worker-r1\", \"seq\": 12, \"event\": \"progress\", \"elapsed_ms\": 1202, \"step\": 12}\n{\"fixture\": \"background-worker-r1\", \"seq\": 13, \"event\": \"completed\", \"elapsed_ms\": 1202, \"marker\": \"fixture-r1\"}\n",
+        "cursor": 1367,
+        "size": 1367,
+        "truncated": false
+      }
+    }
+  },
+  "shell_error": {
+    "event": {
+      "id": "evt_1c84ca0d3001P9Nh4Go8KhMyok",
+      "created": 1794361827539,
+      "type": "shell.exited",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "id": "sh_1c84c9feb001hRYwp3H38nnjdg",
+        "exit": 7,
+        "status": "exited"
+      }
+    },
+    "output": {
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "output": "{\"fixture\": \"background-worker-r1\", \"seq\": 0, \"event\": \"ready\", \"elapsed_ms\": 0}\n{\"fixture\": \"background-worker-r1\", \"seq\": 1, \"event\": \"progress\", \"elapsed_ms\": 100, \"step\": 1}\n{\"fixture\": \"background-worker-r1\", \"seq\": 2, \"event\": \"progress\", \"elapsed_ms\": 200, \"step\": 2}\n{\"fixture\": \"background-worker-r1\", \"seq\": 3, \"event\": \"error\", \"elapsed_ms\": 200, \"marker\": \"fixture-r1\"}\n",
+        "cursor": 382,
+        "size": 382,
+        "truncated": false
+      }
+    }
+  },
+  "shell_cancel": {
+    "cancelledID": "sh_1c84ca0d8001RW5EpCp6LX2RpC",
+    "siblingID": "sh_1c84ca0d6001L7mVbYXHc9mSRY",
+    "sibling": {
+      "id": "evt_1c84ca8c5001jadDctwoGQVwoL",
+      "created": 1794361829573,
+      "type": "shell.exited",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "id": "sh_1c84ca0d6001L7mVbYXHc9mSRY",
+        "exit": 0,
+        "status": "exited"
+      }
+    }
+  },
+  "shell_disconnect": {
+    "event": {
+      "id": "evt_1c84cab4300190fd81LflyrxlR",
+      "created": 1794361830211,
+      "type": "shell.exited",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "id": "sh_1c84ca8c70016PHs0LZukOoMJ4",
+        "exit": 0,
+        "status": "exited"
+      }
+    },
+    "output": {
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-2e893d6ba93ebd9b4663/project"
+      },
+      "data": {
+        "output": "{\"fixture\": \"background-worker-r1\", \"seq\": 0, \"event\": \"ready\", \"elapsed_ms\": 0}\n{\"fixture\": \"background-worker-r1\", \"seq\": 1, \"event\": \"progress\", \"elapsed_ms\": 100, \"step\": 1}\n{\"fixture\": \"background-worker-r1\", \"seq\": 2, \"event\": \"progress\", \"elapsed_ms\": 200, \"step\": 2}\n{\"fixture\": \"background-worker-r1\", \"seq\": 3, \"event\": \"progress\", \"elapsed_ms\": 300, \"step\": 3}\n{\"fixture\": \"background-worker-r1\", \"seq\": 4, \"event\": \"progress\", \"elapsed_ms\": 400, \"step\": 4}\n{\"fixture\": \"background-worker-r1\", \"seq\": 5, \"event\": \"progress\", \"elapsed_ms\": 500, \"step\": 5}\n{\"fixture\": \"background-worker-r1\", \"seq\": 6, \"event\": \"progress\", \"elapsed_ms\": 600, \"step\": 6}\n{\"fixture\": \"background-worker-r1\", \"seq\": 7, \"event\": \"completed\", \"elapsed_ms\": 600, \"marker\": \"fixture-r1\"}\n",
+        "cursor": 774,
+        "size": 774,
+        "truncated": false
+      }
+    }
+  },
+  "context_after_restart": [
+    {
+      "id": "msg_1c84c9a91001npR5afRM5zoQEd",
+      "time": {
+        "created": 1794361825959
+      },
+      "text": "REPORT_CLIENT_USER_SEED",
+      "type": "user"
+    },
+    {
+      "id": "msg_1c84c9ab6001PofFio0d2ugqtO",
+      "time": {
+        "created": 1794361825984,
+        "streamed": 1794361826013,
+        "completed": 1794361826024
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "shopaikey"
+      },
+      "content": [
+        {
+          "type": "tool",
+          "id": "call_client_plugin",
+          "name": "execute",
+          "executed": false,
+          "native": {
+            "itemId": "fc_client_plugin"
+          },
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "return await tools.report_marker()"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "REPORT_PLUGIN_MARKER"
+              }
+            ],
+            "metadata": {
+              "toolCalls": [
+                {
+                  "tool": "report_marker",
+                  "status": "completed"
+                }
+              ],
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1794361826002,
+            "ran": 1794361826009,
+            "completed": 1794361826021
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "native": {
+        "responseId": "resp_of48_3"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 80,
+        "output": 10,
+        "reasoning": 0,
+        "cache": {
+          "read": 20,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1c84c9af2001Sf9lZ66oBPDR9g",
+      "time": {
+        "created": 1794361826038,
+        "streamed": 1794361826051,
+        "completed": 1794361826053
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "shopaikey"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "REPORT_CLIENT_ASSISTANT_MARKER",
+          "native": {
+            "itemId": "msg_client_demo"
+          }
+        }
+      ],
+      "finish": "stop",
+      "native": {
+        "responseId": "resp_of48_1"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 80,
+        "output": 10,
+        "reasoning": 0,
+        "cache": {
+          "read": 20,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1c84c9b08001aX5owE3wmxZOD2",
+      "time": {
+        "created": 1794361826056
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ],
+  "status": "pass"
+}

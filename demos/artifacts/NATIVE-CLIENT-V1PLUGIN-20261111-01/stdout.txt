@@ -1,0 +1,1 @@
+{"status":"error","checks":{"subscribed_before_prompt":true,"assistant_marker":true,"user_message":true,"native_model_requests_observed":true,"shell_start_returns_running":false},"error":"Error: shell_start_returns_running"}

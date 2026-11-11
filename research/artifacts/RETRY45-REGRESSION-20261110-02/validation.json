@@ -1,0 +1,9 @@
+{
+  "status": "incomplete_test_harness_path_mapping",
+  "benchmark_tests_run": 69,
+  "benchmark_tests_passed": 68,
+  "demo_tests_passed": 37,
+  "errors": 1,
+  "explanation": "Legacy reservation test CSV root was isolated, but its protocol path still pointed outside that replacement root; relative_to refused. Only temporary registry code was reached; no provider/real reservation. Correct protocol metadata path mapping along with root before rerun.",
+  "provider_requests": 0
+}

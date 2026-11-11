@@ -1,0 +1,7 @@
+{
+  "status": "harness_assertion_before_native_ui_process",
+  "error": "Expected opencode-desktop executable; verified packaged Linux filename is ai.opencode",
+  "source": "Retained shell completion traceback; receipt reconstructed, not raw process log",
+  "retry_artifact": "NATIVE-SHARED-UI-20261111-02",
+  "real_provider_requests": 0
+}

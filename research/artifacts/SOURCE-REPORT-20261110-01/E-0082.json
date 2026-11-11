@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0082",
+    "comparison_axis": "tools",
+    "tool": "OpenCode v2",
+    "version": "2.2.5",
+    "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+    "claim": "Tool runtime tạo model definition từ schema và đi qua decodeInput/execute/encodeOutput; typed failure lạ được chuẩn hóa Tool.Error",
+    "file": "packages/core/src/tool/runtime.ts",
+    "line_start": "21",
+    "line_end": "61",
+    "symbol": "definition/execute",
+    "permalink": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/tool/runtime.ts#L21-L61",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Không bảo đảm mọi JSON schema được validate như nhau; không phải permission engine hoặc OS sandbox; chưa chạy plugin test"
+  },
+  "source_sha256": "0026f12d690ded356c117b66302cf12cdfeb763a22ea5991b65d7de9af7c4f05",
+  "excerpt": "export const definition = (tool: Tool.Info<any, any>): ToolDefinition => ({\n  type: \"tool\",\n  name: effectiveName(tool),\n  description: tool.description,\n  inputSchema: inputJsonSchema(tool.input),\n  ...(tool.output === undefined ? {} : { outputSchema: outputJsonSchema(tool.output) }),\n})\n\nexport const execute = (tool: Tool.Info<any, any>, input: unknown, context: Tool.Context) =>\n  Effect.gen(function* () {\n    const decoded = yield* decodeInput(tool, input)\n    // Tool implementations declare `Tool.Error` but plugins can fail with anything at\n    // runtime. A foreign typed failure would slip past every `catchTag(\"Tool.Error\")`\n    // downstream and leave its call permanently unsettled, so the declared contract is\n    // enforced here at the untrusted boundary. Declines tunnel through as defects and\n    // interrupts are not errors; neither is touched.\n    const result = yield* tool.execute(decoded, context).pipe(\n      Effect.mapError((error: unknown) =>\n        error instanceof Tool.Error\n          ? error\n          : new Tool.Error({\n              message: error instanceof globalThis.Error ? error.message : String(error),\n            }),\n      ),\n    )\n    if (tool.output === undefined) {\n      if (\"output\" in result) return yield* Effect.die(\"Tool result declared output without an output schema\")\n      return {\n        output: undefined,\n        content: normalizeContent(result.content),\n        ...(result.metadata === undefined ? {} : { metadata: result.metadata }),\n      }\n    }\n    if (!(\"output\" in result)) return yield* new Tool.Error({ message: \"Tool did not return its declared output\" })\n    const output = yield* encodeOutput(tool.output, result.output)\n    return {\n      output,\n      content: normalizeContent(result.content, output),\n      ...(result.metadata === undefined ? {} : { metadata: result.metadata }),\n    }\n  })"
+}

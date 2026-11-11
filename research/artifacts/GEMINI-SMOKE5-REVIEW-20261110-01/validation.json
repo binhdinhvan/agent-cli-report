@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "scope": "Offline postcheck only, no new API requests",
+  "artifact": "demos/artifacts/GEMINI-SMOKE5-20261110-01",
+  "executed_requests": 1,
+  "passes": 0,
+  "not_run": 4,
+  "http_status": 500,
+  "provider_error_code": "internal_error",
+  "provider_request_id": "202611101459589934124828268d9d6U0vIvuL3",
+  "duration_ms": 676,
+  "usage": null,
+  "estimated_cost_usd": null,
+  "measured_charge_usd": null,
+  "model_alias_verified": false,
+  "native_cli_acceptance": "unverified",
+  "root_cause": "unverified; cannot infer model outage or protocol incompatibility from generic500",
+  "input_snapshot_hashes": "pass against approval before profile/status edits",
+  "raw_artifact_sha256": {
+    "result.json": "d3946811521856108ce8b59360091411e0585df7ba39dc5e366588d90294986d",
+    "approval.json": "3677bd12129540f5ebd06b92e91e59611a5afd9413e8da637f273b597160b0d4",
+    "source/demos/GEMINI_SMOKE5.md": "69b3d4868f5d92b21d7e9b8d820676c4e21877fc2e426690954ff1408250e10c",
+    "source/demos/test_gemini_smoke5.py": "391bdb2be63d4807c93749486a64cd1839b2a0b4c7b93cfddefbe23ae02be7a2",
+    "source/demos/gemini_smoke5.py": "02ee8503962886546ac77f1680bd74f67b46cf27d64f88a1c82bc897ebd2172d",
+    "source/demos/provider_probe.py": "92507bfc713c543d8f056523ff115e35bfb42f92683b1aa40cb6df65aec9f5c8",
+    "source/research/model-profiles/gemini-3.8-flash.json": "7934bd949885e88f116a887ea2d46f82e17e7d724d2d64e38e907740c079c39d"
+  },
+  "prior_sol_raw_retained": true,
+  "frozen_sol_pilot": "PASS: frozen outputs, ledger, review, fixture/dependency/binary and source hashes; offline only\n",
+  "registry_unchanged": [
+    "R-0222",
+    "C-0323"
+  ],
+  "network_or_provider_requests_by_audit": 0,
+  "auto_retry_or_fallback_authorized": false,
+  "secret_pattern_scan": "heuristic only; not full publication/PII review"
+}

@@ -1,0 +1,56 @@
+{
+  "run_id": "R-0035",
+  "timing_recheck_of": "R-0034",
+  "environment_revision": "search-r2",
+  "timing_policy": "paced-900",
+  "experiment_group": "search-r2:paced-900:recheck",
+  "status": "success",
+  "validity": "valid",
+  "duration_ms": 234718,
+  "scope_public_hidden_pass": true,
+  "changed_files": [
+    "scheduler.py"
+  ],
+  "http200_completed_requests": 7,
+  "gap_seconds": [
+    30.001173,
+    30.001181,
+    30.001567,
+    30.001926,
+    30.001833,
+    30.001415
+  ],
+  "minimum_remaining_seconds_at_dispatch": 671.370163,
+  "minimum_request_window_seconds": 60,
+  "timing_guard_live_triggered": false,
+  "causal_limit": "Run completed below300s; success does not isolate timeout increase as cause or prove provider stability",
+  "estimated_cost_usd": "0.07580592",
+  "cumulative_known_usage_estimated_cost_usd": "0.76549224",
+  "cumulative_unpriced_requests": 6,
+  "cumulative_estimated_total_usd": null,
+  "measured_charge_usd": null,
+  "hashes_source_protocol_manifest_pricing_seal_binary": "pass",
+  "old_timeouts_raw_unchanged": true,
+  "key_scan": "pass",
+  "supervisor_pid_absent": true,
+  "broker_socket_absent": true,
+  "csv_timing_group_explicit": true,
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "raw_artifact_sha256": {
+    "result.json": "174c99262269df41bde19293509c7691ec0cbd8607ce24f50b30b65a5d86a89c",
+    "protocol.json": "1c40eb79095dec36b455f51ef1bfcd259718f7ee87629059a8130d7dce0e10c7",
+    "R-0035/stdout.jsonl": "ec8fc3d79a4e655024582af18456a084a0466a27361c3dc3231bed466dbf46c0",
+    "R-0035/result.json": "766febfe200c76aab84a620c0f5b04e1949a366f8bd7f7ee43f3a72c60d39242",
+    "R-0035/config.json": "cdc7150c44b0589ef98af4fed7719d5ce1635c801b9bafd47db6e1191ae4003b",
+    "R-0035/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "R-0035/grader/grading.json": "076391e4f711fc41279f4e7fd0d7134c24b62bf8f1959b1751645afc66eb0aa0",
+    "R-0035/grader/patch.diff": "234fad049a77ba781838984a6c3bc9daad44ac094f9146162cd22485626f38a5",
+    "R-0035/grader/snapshot/test_public.py": "cdb577452e0e2f399f00c8766787fa7974583cff9e386cfc1d62db728bb09931",
+    "R-0035/grader/snapshot/scheduler.py": "4d3b58e3cdc5a3d61560eed09fb772c49c5f911c69cdc2ba0290e1408ad2706b"
+  }
+}

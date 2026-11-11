@@ -1,0 +1,11 @@
+test_cancel_own_child (test_background_fixture.BackgroundFixtureTests.test_cancel_own_child) ... ok
+test_error_is_intentional (test_background_fixture.BackgroundFixtureTests.test_error_is_intentional) ... ok
+test_mode_rejected (test_background_fixture.BackgroundFixtureTests.test_mode_rejected) ... ok
+test_success_and_order (test_background_fixture.BackgroundFixtureTests.test_success_and_order) ... ok
+test_unbounded_steps_rejected (test_background_fixture.BackgroundFixtureTests.test_unbounded_steps_rejected) ... ok
+test_zero_steps_rejected (test_background_fixture.BackgroundFixtureTests.test_zero_steps_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.680s
+
+OK

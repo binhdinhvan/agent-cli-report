@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "revision": 4,
+  "pages": 3,
+  "change": "added explicit review receipt path and status=pass below shared-service box",
+  "review_receipt": "research/artifacts/NATIVE-VISIBLE-UI-REVIEW-20261111-01/validation.json",
+  "images_and_crops_unchanged_from_revision3": true,
+  "input_hashes_verified": 60,
+  "chrome_warning_preserved": true,
+  "pdf_sha256": "dd1238f1b655ee3d6a44ab6ee413c88a3ea1ccd7e65e57a973186b4b0b9800aa",
+  "html_sha256": "f3a5ff5a56840047fb99fff8bc3224c352939470a8fd31a534a4020150fa28e9",
+  "scope": "document-only re-export in isolated Chrome; no native demo or benchmark rerun"
+}

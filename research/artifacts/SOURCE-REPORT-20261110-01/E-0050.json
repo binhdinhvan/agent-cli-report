@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0050",
+    "comparison_axis": "persistence",
+    "tool": "OpenCode v1",
+    "version": "1.19.5",
+    "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+    "claim": "Session rỗng giữ ID/title khi GET lại từ process mới cùng DB sau SIGTERM child trước",
+    "file": "packages/opencode/src/session/session.ts",
+    "line_start": "667",
+    "line_end": "688",
+    "symbol": "Session.create",
+    "permalink": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/session/session.ts#L667-L688",
+    "evidence_status": "runtime-confirmed",
+    "runtime_artifact": "demos/artifacts/OFFLINE-API-20261106-01/opencode-v1/result.json",
+    "limitations": "Chỉ persistence metadata; không phải resume transcript hoặc khôi phục LLM execution"
+  },
+  "source_sha256": "0c56ae3535e29cae0de51156eaba2842c0896309f1d6b12525566b4a8ba4c7f2",
+  "excerpt": "    const create = Effect.fn(\"Session.create\")(function* (input?: {\n      parentID?: SessionID\n      title?: string\n      agent?: string\n      model?: Schema.Schema.Type<typeof Model>\n      metadata?: typeof Metadata.Type\n      permission?: PermissionV1.Ruleset\n      workspaceID?: WorkspaceV2.ID\n    }) {\n      const ctx = yield* InstanceState.context\n      const workspace = yield* InstanceState.workspaceID\n      return yield* createNext({\n        parentID: input?.parentID,\n        directory: ctx.directory,\n        path: sessionPath(ctx.worktree, ctx.directory),\n        title: input?.title,\n        agent: input?.agent,\n        model: input?.model,\n        metadata: input?.metadata,\n        permission: input?.permission,\n        workspaceID: input?.workspaceID ?? workspace,\n      })"
+}

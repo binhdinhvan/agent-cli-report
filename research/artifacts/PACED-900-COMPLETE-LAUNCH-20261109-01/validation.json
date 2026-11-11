@@ -1,0 +1,99 @@
+{
+  "scope": "offline launch gates, no key/provider calls",
+  "tests": [
+    {
+      "suite": "demos/test_timing_policy.py",
+      "exit_code": 0,
+      "log": "test_timing_policy.txt"
+    },
+    {
+      "suite": "demos/test_environment_profile.py",
+      "exit_code": 0,
+      "log": "test_environment_profile.txt"
+    },
+    {
+      "suite": "benchmark/test_pilot.py",
+      "exit_code": 0,
+      "log": "test_pilot.txt"
+    },
+    {
+      "suite": "demos/test_provider_stop.py",
+      "exit_code": 0,
+      "log": "test_provider_stop.txt"
+    },
+    {
+      "suite": "demos/test_pacing.py",
+      "exit_code": 0,
+      "log": "test_pacing.txt"
+    },
+    {
+      "suite": "demos/test_model_smoke.py",
+      "exit_code": 0,
+      "log": "test_model_smoke.txt"
+    },
+    {
+      "suite": "demos/test_provider_pricing.py",
+      "exit_code": 0,
+      "log": "test_provider_pricing.txt"
+    }
+  ],
+  "tests_passed": 50,
+  "plan": [
+    [
+      "P-02",
+      "opencode-v1"
+    ],
+    [
+      "P-02",
+      "codex"
+    ],
+    [
+      "P-02",
+      "pi"
+    ]
+  ],
+  "timing": {
+    "id": "paced-900",
+    "wall_seconds": 900,
+    "minimum_request_window_seconds": 60,
+    "request_limit": 8,
+    "output_limit": 2048,
+    "pacing_counts_in_wall_time": true
+  },
+  "same_source_environment_and_timing": true,
+  "prior_known_usage_estimated_cost_usd": "0.76549224",
+  "prior_unpriced_requests": 6,
+  "remaining_known_estimate_guard_usd": "2.23450776",
+  "fresh_run_ids": [
+    "R-0036",
+    "R-0037",
+    "R-0038"
+  ],
+  "fresh_config_ids": [
+    "C-0137",
+    "C-0138",
+    "C-0139"
+  ],
+  "prior_raw_unchanged": true,
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "source_sha256": {
+    "benchmark/pilot.py": "6f355301b980dcfe732876e4750357d8cfe838b03099dd06818aa561248f04b0",
+    "benchmark/pilot_inside.py": "db91620643437070de1cec3eae0b3b25c27a3e09d6265a86fed5a0b9c3ffd29c",
+    "demos/model_smoke.py": "0fe899d4bc87c12f8920d76e54443d130f8c5ad76117d987db84066569a173f3",
+    "demos/model_smoke_inside.py": "476636ec1d7d029c4b6306831074c7cc83bc0ea71937b19c976613f39fcda29e",
+    "demos/proxy_headers.py": "b3896d199fd807902d8bccb105d1feb1f7755fb00816577c3c0e7949a678048d",
+    "benchmark/verify_pilot_fixtures.py": "f8a4e20b4bec596a2ef7338184ec96ef8d7e5dd057235c1739e8591d67cad3e0",
+    "demos/preflight.py": "38205244a47a9d65568827fd95050408ecccf0e9c59616187fcc48175bc2f95f",
+    "demos/environment_profile.py": "7df32c7e4c1e5042e3fcf1778ee3ffcd9e5505e1ffc551cfec9ea1d1fee4d4f3",
+    "demos/timing_policy.py": "0084098fe16cc3ca10b6392be521b5cbe44ea5c08ca60be5fd62bf618a69623f",
+    "benchmark/test_pilot.py": "f1f3207cff0b7383b00e8312deded2c9ce2f09164aedd29921919753de71ab32",
+    "benchmark/PILOT_PACED_900_COMPLETE.md": "05718164adf9b390dd73d2b45127f9062888f8d872d50d4dba43b9aee88d06c3",
+    "research/environment-profiles/search-r2.json": "a4ab709b8fd82afc2225c5895ea551333964234d4e28f1ddbaca5699765d8913",
+    "research/provider-pricing.json": "0a779dd0480a5703d7e3668f613f6d2139186dd86ef2aebb55b5ff0e4ec7dd1f"
+  }
+}

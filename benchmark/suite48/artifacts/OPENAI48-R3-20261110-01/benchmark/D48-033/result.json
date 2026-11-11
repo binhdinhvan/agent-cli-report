@@ -1,0 +1,1025 @@
+{
+  "slot": "D48-033",
+  "repetition": "3",
+  "block": "9",
+  "task_id": "B-04",
+  "position_in_block": "1",
+  "tool": "codex",
+  "status": "success",
+  "run_id": "R-0362",
+  "config_id": "C-0463",
+  "spec": {
+    "tool": "codex",
+    "version": "0.167.0",
+    "config_id": "C-0463",
+    "repository": "openai/codex",
+    "tag": "rust-v0.167.0",
+    "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+    "asset": "codex-package-x86_64-unknown-linux-musl.tar.gz",
+    "size": 200178910,
+    "sha256": "3bbf75e83de6b58aed28f2cf6e33ad423ec31fd4700a1457b94be557ea5a7c6e",
+    "binary_names": [
+      "codex",
+      "codex-x86_64-unknown-linux-musl"
+    ],
+    "started_at_utc": "2026-11-06T03:49:40.826312+00:00",
+    "status": "prepared_not_executed",
+    "release_api": "https://api.github.com/repos/openai/codex/releases/tags/rust-v0.167.0",
+    "release_url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
+    "asset_url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-x86_64-unknown-linux-musl.tar.gz",
+    "archive_sha256_verified": "3bbf75e83de6b58aed28f2cf6e33ad423ec31fd4700a1457b94be557ea5a7c6e",
+    "archive_members": [
+      {
+        "name": "bin",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "bin/codex",
+        "size": 320575976,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "bin/codex-code-mode-host",
+        "size": 79209744,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "bin/codex-exec-server",
+        "size": 81940392,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-package.json",
+        "size": 246,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-path",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "codex-path/rg",
+        "size": 5408904,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/bwrap",
+        "size": 529776,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/NOTICE.md",
+        "size": 2403,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/bin",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/bin/codex-voice-host",
+        "size": 40487744,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0/libgstapp.so",
+        "size": 6488,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0/libgstaudioconvert.so",
+        "size": 41040,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0/libgstaudioresample.so",
+        "size": 35264,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0/libgstcoreelements.so",
+        "size": 479848,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0/libgstopus.so",
+        "size": 73464,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0/libgstrtp.so",
+        "size": 757800,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/gstreamer-1.0/libgstrtpmanager.so",
+        "size": 564072,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libffi.so.8",
+        "size": 63096,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgio-2.0.so.0",
+        "size": 2338512,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libglib-2.0.so.0",
+        "size": 1521616,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgmodule-2.0.so.0",
+        "size": 15720,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgobject-2.0.so.0",
+        "size": 454720,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstallocators-1.0.so.0",
+        "size": 30416,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstapp-1.0.so.0",
+        "size": 106144,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstaudio-1.0.so.0",
+        "size": 636544,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstbase-1.0.so.0",
+        "size": 573072,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstnet-1.0.so.0",
+        "size": 74192,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstpbutils-1.0.so.0",
+        "size": 321880,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstreamer-1.0.so.0",
+        "size": 1582088,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstrtp-1.0.so.0",
+        "size": 211744,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgsttag-1.0.so.0",
+        "size": 273976,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libgstvideo-1.0.so.0",
+        "size": 1004720,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libintl.so.8",
+        "size": 6304,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libopus.so.0",
+        "size": 565744,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libpcre2-8.so.0",
+        "size": 442424,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/lib/libz.so.1",
+        "size": 109296,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses/LGPL-2.1.txt",
+        "size": 26431,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses/Opus.txt",
+        "size": 1945,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses/PCRE2.md",
+        "size": 4011,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses/libffi.txt",
+        "size": 1132,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses/proxy-libintl.txt",
+        "size": 25292,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses/sljit.txt",
+        "size": 1444,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/licenses/zlib.txt",
+        "size": 1002,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/manifest.json",
+        "size": 4768,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/runtime.json",
+        "size": 13941,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "codex-resources/voice/sources.json",
+        "size": 4911,
+        "type": "0",
+        "linkname": ""
+      }
+    ],
+    "binary": "/home/tts/Project/agent-cli-report/.local/binaries/codex-0.167.0/payload/bin/codex",
+    "binary_sha256": "cdcb45aaa01d0f14e298985e09465aebccd47f64ecd298aea44814af7b62bbda",
+    "payload": "/home/tts/Project/agent-cli-report/.local/binaries/codex-0.167.0/payload",
+    "runtime_root": "/tmp/opencode/agent-cli-report/smoke/C-0463",
+    "finished_at_utc": "2026-11-06T03:52:54.962622+00:00",
+    "environment_revision": "search-r2"
+  },
+  "cli": [
+    "/opt/agent-cli-report/C-0463/bin/codex",
+    "exec",
+    "--json",
+    "--skip-git-repo-check",
+    "Refactor dispatcher trong router.py thành các module, giữ nguyên hành vi/API hiện có. Đọc router.py, models.py và service.py trước khi sửa.\n\nChỉ được sửa router.py và tạo/sửa routing/__init__.py, routing/validation.py, routing/handlers.py. Không sửa models.py, service.py, public tests hoặc thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh).\n\nGiữ router.dispatch(command, payload) và import path cũ. Tách phần validation hiện có vào routing.validation.validate_payload; tách logic create/update/delete vào routing.handlers.handle_create, handle_update, handle_delete. Các hàm mới phải có thể import/call trực tiếp và dispatcher phải thật sự delegate cho chúng, không chỉ thêm module không dùng hoặc copy implementation rồi giữ toàn bộ logic ở router.py.\n\nGiữ output, loại/message exception, thứ tự validation, quy tắc mutation và side effects của implementation cũ cho input mà fixture hiện hỗ trợ, gồm unknown command và payload lỗi. Không mở rộng nghiệp vụ hoặc thay đổi validation để làm test dễ hơn. Các module mới không được có side effect khi import. Giữ signature các hàm được mô tả trong docstrings fixture; không thêm dependency ngoài standard library.\n\nPublic command: python3 -B -m unittest -v test_public. Không cài package hoặc truy cập Internet. Success cần public/hidden behavior regression và structural/delegation checks đều pass, đúng phạm vi, CLI hoàn tất.\n"
+  ],
+  "validity": "valid",
+  "reasons": [],
+  "execution": {
+    "supervisor_host_pid": 155794,
+    "exit_code": 0,
+    "timed_out": false,
+    "output_limit_exceeded": false,
+    "duration_ms": 190159,
+    "outer_started_monotonic": 18189.358692418,
+    "outer_finished_monotonic": 18379.517507204,
+    "broker_deadline_monotonic": 19089.358692418,
+    "outer_watchdog_deadline_monotonic": 19089.358692418,
+    "native_clock": {
+      "started_monotonic": 18189.405504558,
+      "finished_monotonic": 18379.440152955,
+      "duration_ms": 190035
+    },
+    "witness": {
+      "project_writable": true,
+      "immutable_readonly": {
+        "models.py": true,
+        "service.py": true,
+        "test_public.py": true
+      },
+      "hidden_absent": true,
+      "home_hidden": true,
+      "net_namespace": "net:[4026533256]",
+      "provider_key_env_absent": true
+    }
+  },
+  "grading": {
+    "task_id": "B-04",
+    "scope_ok": true,
+    "changed_files": [
+      "router.py",
+      "routing/__init__.py",
+      "routing/handlers.py",
+      "routing/validation.py"
+    ],
+    "invalid_paths": [],
+    "snapshot_sha256": {
+      "models.py": "3bac8b1c1cc5d4ac5f93d9399e514c88949c2b58fd38b05b568e30842026b78d",
+      "router.py": "0c5de66ace88e761d31c772e57b45f9eda92c95e14c1943cf12ab9c2e2b1559a",
+      "test_public.py": "26b690f8646bc983bb0970d52749dafab6071ea7cce5ceed96fe9e5658616a07",
+      "service.py": "5a207c28e902611a16b1aebcdc862bc4432193fcd05549f99b432a9d9457b7a8",
+      "routing/validation.py": "ab34acdea5c77aadea245e16f114c7d23bc3af48e09a3896d58e2fc3df0c52b0",
+      "routing/handlers.py": "84202766d243596f5e83a8337b9049a02968bc9629c71b28f96249725e2432b3",
+      "routing/__init__.py": "ef4ea151595361af6500571e0fafea8d845972f04e3a9ea55defb5c830bb04aa"
+    },
+    "suites": {
+      "public": {
+        "exit_code": 0,
+        "timed_out": false,
+        "output_limit_exceeded": false,
+        "duration_ms": 64,
+        "stdout": "",
+        "stderr": "test_create (test_public.PublicTests.test_create) ... ok\ntest_delete (test_public.PublicTests.test_delete) ... ok\ntest_update (test_public.PublicTests.test_update) ... ok\ntest_validation (test_public.PublicTests.test_validation) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n"
+      },
+      "hidden": {
+        "exit_code": 0,
+        "timed_out": false,
+        "output_limit_exceeded": false,
+        "duration_ms": 64,
+        "stdout": "",
+        "stderr": "test_behavior_corpus (__main__.AcceptanceTests.test_behavior_corpus) ... ok\ntest_delegation_not_unused_modules (__main__.AcceptanceTests.test_delegation_not_unused_modules) ... ok\ntest_extracted_functions (__main__.AcceptanceTests.test_extracted_functions) ... ok\ntest_module_structure_and_import_quiet (__main__.AcceptanceTests.test_module_structure_and_import_quiet) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.002s\n\nOK\n"
+      }
+    },
+    "rubric": null,
+    "grader_duration_ms": 131,
+    "pass": true
+  },
+  "requests": [
+    {
+      "started_at_utc": "2026-11-10T18:48:40.531728+00:00",
+      "request_index": 1,
+      "original_body_sha256": "6b7b4a004e26a32858c8204c0c53ffb4a24c34f04a280c7d35086e3d0048fd01",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "thread-id",
+        "user-agent",
+        "x-client-request-id",
+        "x-codex-beta-features",
+        "x-codex-turn-metadata",
+        "x-codex-window-id",
+        "x-openai-internal-codex-responses-lite"
+      ],
+      "responses_lite": "true",
+      "input_types": [
+        "additional_tools",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "text": {
+          "verbosity": "low"
+        }
+      },
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 871.227757,
+      "pacing_wait_seconds": 28.54811,
+      "effective_max_output_tokens": 2048,
+      "native_requested_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "service_tier": null
+      },
+      "effective_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "service_tier": "default",
+        "store": false
+      },
+      "provider": "https://api.openai.com/v1",
+      "reasoning_normalizer_revision": "preserve-native-fields-r3",
+      "http_status": 200,
+      "response_protocol_header_names": [
+        "x-request-id"
+      ],
+      "provider_request_id": "req_1f38886a94e6443db08382336a6aaff3",
+      "response_service_tier": "default",
+      "response_output_types": [
+        "message",
+        "custom_tool_call"
+      ],
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "revision": "openai-cache-cost-r2",
+        "usage": {
+          "input_tokens": 11293,
+          "input_tokens_details": {
+            "cache_write_tokens": 11290,
+            "cached_tokens": 0
+          },
+          "output_tokens": 115,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 11408
+        },
+        "estimated_cost_usd": "0.057606",
+        "measured_charge_usd": null,
+        "estimate_status": "conservative published-tariff upper estimate; unknown write lifetime charged at12h guard rate",
+        "components": {
+          "ordinary_input_usd": "0.000006",
+          "cached_input_usd": "0.00",
+          "cache_write_30m_usd": "0.00",
+          "cache_write_12h_usd": "0.05645",
+          "output_usd": "0.00115"
+        },
+        "ordinary_input_tokens": 3,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 11290,
+        "billed_30m_write_tokens": null,
+        "billed_12h_write_tokens": null,
+        "guard_30m_write_tokens": 0,
+        "guard_12h_write_tokens": 11290,
+        "cache_write_lifetime_status": "unknown_bounded_at_12h_rate",
+        "conservative_upper_bound": true,
+        "published_tariff_lower_usd": "0.029381",
+        "published_tariff_upper_usd": "0.057606",
+        "limitations": "not invoice-confirmed; not an invoice cap; excludes unreported fees; reasoning included in output, not added again"
+      },
+      "captured_response_bytes": 109332,
+      "finished_at_utc": "2026-11-10T18:48:43.979842+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T18:49:13.980745+00:00",
+      "request_index": 2,
+      "original_body_sha256": "42fae33a436194eeac6be89e552701a383f4af50f692649eb79aca6f4c522e3b",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "thread-id",
+        "user-agent",
+        "x-client-request-id",
+        "x-codex-beta-features",
+        "x-codex-turn-metadata",
+        "x-codex-window-id",
+        "x-openai-internal-codex-responses-lite"
+      ],
+      "responses_lite": "true",
+      "input_types": [
+        "additional_tools",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message",
+        "custom_tool_call",
+        "custom_tool_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "text": {
+          "verbosity": "low"
+        }
+      },
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 837.778703,
+      "pacing_wait_seconds": 29.822996,
+      "effective_max_output_tokens": 2048,
+      "native_requested_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "service_tier": null
+      },
+      "effective_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "service_tier": "default",
+        "store": false
+      },
+      "provider": "https://api.openai.com/v1",
+      "reasoning_normalizer_revision": "preserve-native-fields-r3",
+      "http_status": 200,
+      "response_protocol_header_names": [
+        "x-request-id"
+      ],
+      "provider_request_id": "req_e8fd00beace94cb58cec32c9a86d8a22",
+      "response_service_tier": "default",
+      "response_output_types": [
+        "custom_tool_call"
+      ],
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "revision": "openai-cache-cost-r2",
+        "usage": {
+          "input_tokens": 11987,
+          "input_tokens_details": {
+            "cache_write_tokens": 694,
+            "cached_tokens": 11290
+          },
+          "output_tokens": 141,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 12128
+        },
+        "estimated_cost_usd": "0.006015",
+        "measured_charge_usd": null,
+        "estimate_status": "conservative published-tariff upper estimate; unknown write lifetime charged at12h guard rate",
+        "components": {
+          "ordinary_input_usd": "0.000006",
+          "cached_input_usd": "0.001129",
+          "cache_write_30m_usd": "0.00",
+          "cache_write_12h_usd": "0.00347",
+          "output_usd": "0.00141"
+        },
+        "ordinary_input_tokens": 3,
+        "cached_input_tokens": 11290,
+        "cache_write_tokens": 694,
+        "billed_30m_write_tokens": null,
+        "billed_12h_write_tokens": null,
+        "guard_30m_write_tokens": 0,
+        "guard_12h_write_tokens": 694,
+        "cache_write_lifetime_status": "unknown_bounded_at_12h_rate",
+        "conservative_upper_bound": true,
+        "published_tariff_lower_usd": "0.00428",
+        "published_tariff_upper_usd": "0.006015",
+        "limitations": "not invoice-confirmed; not an invoice cap; excludes unreported fees; reasoning included in output, not added again"
+      },
+      "captured_response_bytes": 114894,
+      "finished_at_utc": "2026-11-10T18:49:17.214411+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T18:49:47.215136+00:00",
+      "request_index": 3,
+      "original_body_sha256": "0cc9395b24d2ebdaa09c130b71ffea20550f367c0f04a2fcb74f668509180923",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "thread-id",
+        "user-agent",
+        "x-client-request-id",
+        "x-codex-beta-features",
+        "x-codex-turn-metadata",
+        "x-codex-window-id",
+        "x-openai-internal-codex-responses-lite"
+      ],
+      "responses_lite": "true",
+      "input_types": [
+        "additional_tools",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message",
+        "custom_tool_call",
+        "custom_tool_call_output",
+        "custom_tool_call",
+        "custom_tool_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "text": {
+          "verbosity": "low"
+        }
+      },
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 804.544415,
+      "pacing_wait_seconds": 29.845588,
+      "effective_max_output_tokens": 2048,
+      "native_requested_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "service_tier": null
+      },
+      "effective_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "service_tier": "default",
+        "store": false
+      },
+      "provider": "https://api.openai.com/v1",
+      "reasoning_normalizer_revision": "preserve-native-fields-r3",
+      "http_status": 200,
+      "response_protocol_header_names": [
+        "x-request-id"
+      ],
+      "provider_request_id": "req_e6990a9f8c474a6dae22325fb32388e0",
+      "response_service_tier": "default",
+      "response_output_types": [
+        "reasoning",
+        "message",
+        "custom_tool_call"
+      ],
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "revision": "openai-cache-cost-r2",
+        "usage": {
+          "input_tokens": 12766,
+          "input_tokens_details": {
+            "cache_write_tokens": 779,
+            "cached_tokens": 11984
+          },
+          "output_tokens": 1085,
+          "output_tokens_details": {
+            "reasoning_tokens": 109
+          },
+          "total_tokens": 13851
+        },
+        "estimated_cost_usd": "0.0159494",
+        "measured_charge_usd": null,
+        "estimate_status": "conservative published-tariff upper estimate; unknown write lifetime charged at12h guard rate",
+        "components": {
+          "ordinary_input_usd": "0.000006",
+          "cached_input_usd": "0.0011984",
+          "cache_write_30m_usd": "0.00",
+          "cache_write_12h_usd": "0.003895",
+          "output_usd": "0.01085"
+        },
+        "ordinary_input_tokens": 3,
+        "cached_input_tokens": 11984,
+        "cache_write_tokens": 779,
+        "billed_30m_write_tokens": null,
+        "billed_12h_write_tokens": null,
+        "guard_30m_write_tokens": 0,
+        "guard_12h_write_tokens": 779,
+        "cache_write_lifetime_status": "unknown_bounded_at_12h_rate",
+        "conservative_upper_bound": true,
+        "published_tariff_lower_usd": "0.0140019",
+        "published_tariff_upper_usd": "0.0159494",
+        "limitations": "not invoice-confirmed; not an invoice cap; excludes unreported fees; reasoning included in output, not added again"
+      },
+      "captured_response_bytes": 348897,
+      "finished_at_utc": "2026-11-10T18:49:59.745066+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T18:50:29.746088+00:00",
+      "request_index": 4,
+      "original_body_sha256": "3aadcbf375aa0d19ac21d567658be4cedb477c49f0af07c4840d87a56871a570",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "thread-id",
+        "user-agent",
+        "x-client-request-id",
+        "x-codex-beta-features",
+        "x-codex-turn-metadata",
+        "x-codex-window-id",
+        "x-openai-internal-codex-responses-lite"
+      ],
+      "responses_lite": "true",
+      "input_types": [
+        "additional_tools",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message",
+        "custom_tool_call",
+        "custom_tool_call_output",
+        "custom_tool_call",
+        "custom_tool_call_output",
+        "reasoning",
+        "message",
+        "custom_tool_call",
+        "custom_tool_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "text": {
+          "verbosity": "low"
+        }
+      },
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 762.013316,
+      "pacing_wait_seconds": 29.599623,
+      "effective_max_output_tokens": 2048,
+      "native_requested_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "service_tier": null
+      },
+      "effective_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "service_tier": "default",
+        "store": false
+      },
+      "provider": "https://api.openai.com/v1",
+      "reasoning_normalizer_revision": "preserve-native-fields-r3",
+      "http_status": 200,
+      "response_protocol_header_names": [
+        "x-request-id"
+      ],
+      "provider_request_id": "req_2979628ecd6c46028e582868482c6c16",
+      "response_service_tier": "default",
+      "response_output_types": [
+        "reasoning",
+        "custom_tool_call"
+      ],
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "revision": "openai-cache-cost-r2",
+        "usage": {
+          "input_tokens": 13979,
+          "input_tokens_details": {
+            "cache_write_tokens": 1213,
+            "cached_tokens": 12763
+          },
+          "output_tokens": 826,
+          "output_tokens_details": {
+            "reasoning_tokens": 16
+          },
+          "total_tokens": 14805
+        },
+        "estimated_cost_usd": "0.0156073",
+        "measured_charge_usd": null,
+        "estimate_status": "conservative published-tariff upper estimate; unknown write lifetime charged at12h guard rate",
+        "components": {
+          "ordinary_input_usd": "0.000006",
+          "cached_input_usd": "0.0012763",
+          "cache_write_30m_usd": "0.00",
+          "cache_write_12h_usd": "0.006065",
+          "output_usd": "0.00826"
+        },
+        "ordinary_input_tokens": 3,
+        "cached_input_tokens": 12763,
+        "cache_write_tokens": 1213,
+        "billed_30m_write_tokens": null,
+        "billed_12h_write_tokens": null,
+        "guard_30m_write_tokens": 0,
+        "guard_12h_write_tokens": 1213,
+        "cache_write_lifetime_status": "unknown_bounded_at_12h_rate",
+        "conservative_upper_bound": true,
+        "published_tariff_lower_usd": "0.0125748",
+        "published_tariff_upper_usd": "0.0156073",
+        "limitations": "not invoice-confirmed; not an invoice cap; excludes unreported fees; reasoning included in output, not added again"
+      },
+      "captured_response_bytes": 300298,
+      "finished_at_utc": "2026-11-10T18:50:39.211975+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T18:51:09.213140+00:00",
+      "request_index": 5,
+      "original_body_sha256": "26c8a378f9225d722aa0f78a4cd50eeb44daa4754b107bd5a70e2fa6897cd06a",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "thread-id",
+        "user-agent",
+        "x-client-request-id",
+        "x-codex-beta-features",
+        "x-codex-turn-metadata",
+        "x-codex-window-id",
+        "x-openai-internal-codex-responses-lite"
+      ],
+      "responses_lite": "true",
+      "input_types": [
+        "additional_tools",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message",
+        "message",
+        "custom_tool_call",
+        "custom_tool_call_output",
+        "custom_tool_call",
+        "custom_tool_call_output",
+        "reasoning",
+        "message",
+        "custom_tool_call",
+        "custom_tool_call_output",
+        "reasoning",
+        "custom_tool_call",
+        "custom_tool_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "text": {
+          "verbosity": "low"
+        }
+      },
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 722.546207,
+      "pacing_wait_seconds": 29.841696,
+      "effective_max_output_tokens": 2048,
+      "native_requested_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "service_tier": null
+      },
+      "effective_settings": {
+        "reasoning": {
+          "effort": "low",
+          "context": "all_turns"
+        },
+        "service_tier": "default",
+        "store": false
+      },
+      "provider": "https://api.openai.com/v1",
+      "reasoning_normalizer_revision": "preserve-native-fields-r3",
+      "http_status": 200,
+      "response_protocol_header_names": [
+        "x-request-id"
+      ],
+      "provider_request_id": "req_87c1b207dedc4e5aaed07c7e8532532e",
+      "response_service_tier": "default",
+      "response_output_types": [
+        "message"
+      ],
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "revision": "openai-cache-cost-r2",
+        "usage": {
+          "input_tokens": 14876,
+          "input_tokens_details": {
+            "cache_write_tokens": 897,
+            "cached_tokens": 13976
+          },
+          "output_tokens": 100,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 14976
+        },
+        "estimated_cost_usd": "0.0068886",
+        "measured_charge_usd": null,
+        "estimate_status": "conservative published-tariff upper estimate; unknown write lifetime charged at12h guard rate",
+        "components": {
+          "ordinary_input_usd": "0.000006",
+          "cached_input_usd": "0.0013976",
+          "cache_write_30m_usd": "0.00",
+          "cache_write_12h_usd": "0.004485",
+          "output_usd": "0.001"
+        },
+        "ordinary_input_tokens": 3,
+        "cached_input_tokens": 13976,
+        "cache_write_tokens": 897,
+        "billed_30m_write_tokens": null,
+        "billed_12h_write_tokens": null,
+        "guard_30m_write_tokens": 0,
+        "guard_12h_write_tokens": 897,
+        "cache_write_lifetime_status": "unknown_bounded_at_12h_rate",
+        "conservative_upper_bound": true,
+        "published_tariff_lower_usd": "0.0046461",
+        "published_tariff_upper_usd": "0.0068886",
+        "limitations": "not invoice-confirmed; not an invoice cap; excludes unreported fees; reasoning included in output, not added again"
+      },
+      "captured_response_bytes": 108295,
+      "finished_at_utc": "2026-11-10T18:51:12.494861+00:00"
+    }
+  ],
+  "synthetic_usage": false,
+  "preflight_events": null,
+  "provider_requests": 5,
+  "supervisor_pid_absent": true,
+  "broker_socket_absent": true
+}

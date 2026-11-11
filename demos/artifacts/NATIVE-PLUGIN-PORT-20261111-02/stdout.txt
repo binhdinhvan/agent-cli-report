@@ -1,0 +1,1 @@
+{"status":"error","checks":{"subscribed_before_prompt":true,"assistant_marker":true,"user_message":true,"native_model_requests_observed":true,"ported_plugin_active":true,"ported_plugin_tool_invoked":false},"error":"Error: ported_plugin_tool_invoked"}

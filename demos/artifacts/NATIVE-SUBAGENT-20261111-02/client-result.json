@@ -1,0 +1,2322 @@
+{
+  "scope": "native TypeScript Client/private server with scripted SSE, not embedded SDK or model quality",
+  "checks": {
+    "subscribed_before_prompt": true,
+    "background_subagent_session_returned": true,
+    "subagent_parent_lineage": true,
+    "child_marker_returned": true,
+    "parent_continues_before_child_complete": true,
+    "child_completion_delivered_to_parent": true
+  },
+  "events": [
+    {
+      "id": "evt_1c853c3ee001vTSsmwlvMhLFmK",
+      "type": "server.connected",
+      "data": {}
+    },
+    {
+      "id": "evt_1c853c3f9001ToQd0EdtrivbdC",
+      "created": 1794362295289,
+      "type": "session.created",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "slug": "jolly-wolf",
+        "version": "2.2.5",
+        "projectID": "0f4631d2736c7ae1dc497df06ea65ed3fd3f5829",
+        "location": {
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+        },
+        "subpath": "",
+        "title": "native-client-demo"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 0,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c405001lM7x89Qgv3GSY9",
+      "created": 1794362295301,
+      "type": "project.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "id": "0f4631d2736c7ae1dc497df06ea65ed3fd3f5829",
+        "canonical": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project",
+        "time": {
+          "created": 1794362295288,
+          "updated": 1794362295288,
+          "active": 1794362295300
+        },
+        "sandboxes": []
+      }
+    },
+    {
+      "id": "evt_1c853c598001R4yiRfWtSRqTLL",
+      "created": 1794362295704,
+      "type": "integration.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c853c59c001WBU5vw8dQS5KXp",
+      "created": 1794362295708,
+      "type": "provider.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c853c5a20015LQ45s3s1a7KyM",
+      "created": 1794362295714,
+      "type": "model.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c853c5a4001yl7lKVUoBk92KL",
+      "created": 1794362295716,
+      "type": "agent.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c853c5a4002vvlM1fisLJB4V5",
+      "created": 1794362295716,
+      "type": "command.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c853c5a4003YgNPkf2VfRW7TO",
+      "created": 1794362295716,
+      "type": "skill.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c853c5a6001VNBd8i4RIU1Wrw",
+      "created": 1794362295718,
+      "type": "websearch.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c853c5b7001NoRs66iAaIZZI1",
+      "created": 1794362295735,
+      "type": "reference.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c853c5b7002aW07npSHvtI6Pf",
+      "created": 1794362295735,
+      "type": "plugin.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c853c5b80015Z0VLmgO0R4w9V",
+      "created": 1794362295736,
+      "type": "session.inbox.enqueued",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "inboxID": "msg_1c853c547001BBy2EnKl6eYnJc",
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "item": {
+          "type": "user",
+          "payload": {
+            "text": "Launch one independent scripted child in the background and continue immediately."
+          },
+          "delivery": "steer"
+        }
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 1,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c5ba001M6k14BAAoJTFMg",
+      "created": 1794362295738,
+      "type": "session.execution.started",
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 2,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c5bf001VBR260aReZTFq3",
+      "created": 1794362295743,
+      "metadata": {
+        "instructions": {
+          "initial": true
+        }
+      },
+      "type": "session.instructions.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "delta": {
+          "core/codemode": "65af0d536e66ceb2a8e99cabbfc0c2a3f13951105d2688221dc9b48cf5160207",
+          "core/date": "8fda1d364fef8b5fbcccb039ef94b1ebe3705b3b3a6d558d6d10f92e84ff9e33",
+          "core/environment": "8e212f6f59d545501c73033ccb6cdb513304aab792fad7a7f8ee1ed530735524"
+        }
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 3,
+        "version": 2
+      }
+    },
+    {
+      "id": "evt_1c853c5c0001Zzjjgsk1w50L5Q",
+      "created": 1794362295744,
+      "type": "session.inbox.delivered",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "inboxID": "msg_1c853c547001BBy2EnKl6eYnJc"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 4,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c5db0014IzXtT7pA1BbL8",
+      "created": 1794362295771,
+      "type": "session.step.started",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "agent": "build",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "shopaikey"
+        },
+        "assistantMessageID": "msg_1c853c5c6001C6lc19LVI7dFei",
+        "started": 1794362295754
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 5,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c5dd001TbEH0W1i461iZ4",
+      "created": 1794362295773,
+      "type": "session.tool.input.started",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853c5c6001C6lc19LVI7dFei",
+        "id": "call_client_plugin",
+        "name": "subagent"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 6,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c5e0001tblWG6foqhJz0i",
+      "created": 1794362295776,
+      "type": "session.tool.input.ended",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853c5c6001C6lc19LVI7dFei",
+        "id": "call_client_plugin",
+        "text": "{\"agent\": \"report_child\", \"description\": \"Scripted independent child\", \"prompt\": \"REPORT_SUBAGENT_CHILD_SEED\", \"background\": true}"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 7,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c5e2001qheMN6TwEIzEmg",
+      "created": 1794362295778,
+      "type": "session.tool.called",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853c5c6001C6lc19LVI7dFei",
+        "id": "call_client_plugin",
+        "input": {
+          "agent": "report_child",
+          "description": "Scripted independent child",
+          "prompt": "REPORT_SUBAGENT_CHILD_SEED",
+          "background": true
+        },
+        "executed": false,
+        "native": {
+          "itemId": "fc_client_plugin"
+        }
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 8,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c5e4001B4ZtWieuSL2EUC",
+      "created": 1794362295780,
+      "type": "session.step.streamed",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853c5c6001C6lc19LVI7dFei"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 9,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c5e90011voITgwzO64Zis",
+      "created": 1794362295785,
+      "type": "session.created",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "slug": "gentle-sailor",
+        "version": "2.2.5",
+        "projectID": "0f4631d2736c7ae1dc497df06ea65ed3fd3f5829",
+        "parentID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "location": {
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+        },
+        "subpath": "",
+        "title": "Scripted independent child",
+        "agent": "report_child"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "seq": 0,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c5ea001yVtyz0ee9YGsr7",
+      "created": 1794362295786,
+      "type": "session.tool.progress",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853c5c6001C6lc19LVI7dFei",
+        "id": "call_client_plugin",
+        "metadata": {
+          "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+          "status": "running"
+        }
+      }
+    },
+    {
+      "id": "evt_1c853c5eb002hf5p4oM8HE1gkE",
+      "created": 1794362295787,
+      "type": "session.inbox.enqueued",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "inboxID": "msg_1c853c5eb001aAgMUL6kvawAO5",
+        "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "item": {
+          "type": "user",
+          "payload": {
+            "text": "You are a subagent spawned by another session.\nREPORT_SUBAGENT_CHILD_SEED"
+          },
+          "delivery": "steer"
+        }
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "seq": 1,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c5ed0022lmLy0lNl62YFj",
+      "created": 1794362295789,
+      "type": "session.tool.success",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853c5c6001C6lc19LVI7dFei",
+        "id": "call_client_plugin",
+        "content": [
+          {
+            "type": "text",
+            "text": "The subagent is working in the background (sessionID: ses_e37ac3a18ffehQqROmOdM1D99p). You will be notified automatically when it finishes.\nDO NOT sleep, poll for progress, ask the subagent for status, or duplicate this subagent's work; avoid working with the same files or topics it is using.\nWork on non-overlapping tasks, or briefly tell the user what you launched and end your response.\nTo send it follow-ups or change its instructions while it runs, call subagent again with this sessionID."
+          }
+        ],
+        "metadata": {
+          "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+          "status": "running",
+          "truncated": false
+        },
+        "executed": false
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 10,
+        "version": 2
+      }
+    },
+    {
+      "id": "evt_1c853c5ef001U9WJqc2xsYiroT",
+      "created": 1794362295791,
+      "type": "session.step.ended",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853c5c6001C6lc19LVI7dFei",
+        "finish": "tool-calls",
+        "native": {
+          "responseId": "resp_of48_6"
+        },
+        "tokens": {
+          "input": 80,
+          "output": 10,
+          "reasoning": 0,
+          "cache": {
+            "read": 20,
+            "write": 0
+          }
+        },
+        "cost": 0
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 11,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c5f1001vgDThZgTfN5yNE",
+      "created": 1794362295793,
+      "type": "session.usage.updated",
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "cost": 0,
+        "tokens": {
+          "input": 80,
+          "output": 10,
+          "reasoning": 0,
+          "cache": {
+            "read": 20,
+            "write": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c853c5fc0016W3Nf9nga7puKs",
+      "created": 1794362295804,
+      "type": "session.execution.started",
+      "data": {
+        "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "seq": 2,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c5fe001yXlNn77s9UtgJr",
+      "created": 1794362295806,
+      "metadata": {
+        "instructions": {
+          "initial": true
+        }
+      },
+      "type": "session.instructions.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "delta": {
+          "core/date": "8fda1d364fef8b5fbcccb039ef94b1ebe3705b3b3a6d558d6d10f92e84ff9e33",
+          "core/environment": "8e212f6f59d545501c73033ccb6cdb513304aab792fad7a7f8ee1ed530735524"
+        }
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "seq": 3,
+        "version": 2
+      }
+    },
+    {
+      "id": "evt_1c853c5ff001dP2pKM9E7JAR6U",
+      "created": 1794362295807,
+      "type": "session.inbox.delivered",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "inboxID": "msg_1c853c5eb001aAgMUL6kvawAO5"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "seq": 4,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c607001QyocpLMgHTQWs4",
+      "created": 1794362295815,
+      "type": "session.step.started",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "agent": "build",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "shopaikey"
+        },
+        "assistantMessageID": "msg_1c853c5f6001bfnxxV43WpKvSp",
+        "started": 1794362295801
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 12,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c6080016Cw6fbe6mEIgBu",
+      "created": 1794362295816,
+      "type": "session.text.started",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853c5f6001bfnxxV43WpKvSp",
+        "ordinal": 0
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 13,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c60a001006IJoCC7B59u0",
+      "created": 1794362295818,
+      "type": "session.text.delta",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853c5f6001bfnxxV43WpKvSp",
+        "ordinal": 0,
+        "delta": "REPORT_CLIENT_ASSISTANT_MARKER"
+      }
+    },
+    {
+      "id": "evt_1c853c60a002QFEiOc2OzVa6f1",
+      "created": 1794362295818,
+      "type": "session.text.ended",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853c5f6001bfnxxV43WpKvSp",
+        "ordinal": 0,
+        "text": "REPORT_CLIENT_ASSISTANT_MARKER",
+        "native": {
+          "itemId": "msg_client_demo"
+        }
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 14,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c60c001QeVhk0PsOGLXgt",
+      "created": 1794362295820,
+      "type": "session.step.streamed",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853c5f6001bfnxxV43WpKvSp"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 15,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c60d001OFCnitLWjhX47n",
+      "created": 1794362295821,
+      "type": "session.step.ended",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853c5f6001bfnxxV43WpKvSp",
+        "finish": "stop",
+        "native": {
+          "responseId": "resp_of48_1"
+        },
+        "tokens": {
+          "input": 80,
+          "output": 10,
+          "reasoning": 0,
+          "cache": {
+            "read": 20,
+            "write": 0
+          }
+        },
+        "cost": 0
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 16,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c60e001pGGjB0LSTYksgj",
+      "created": 1794362295822,
+      "type": "session.usage.updated",
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "cost": 0,
+        "tokens": {
+          "input": 160,
+          "output": 20,
+          "reasoning": 0,
+          "cache": {
+            "read": 40,
+            "write": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c853c60f001D41sE7f7drodQu",
+      "created": 1794362295823,
+      "type": "session.execution.succeeded",
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 17,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c9ef001gnwzGiPFWz6t4a",
+      "created": 1794362296815,
+      "type": "session.step.started",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "agent": "report_child",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "shopaikey"
+        },
+        "assistantMessageID": "msg_1c853c602001AEymr6moJV9tjf",
+        "started": 1794362295812
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "seq": 5,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c9f10019BXoWhKIu18ov5",
+      "created": 1794362296817,
+      "type": "session.text.started",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "assistantMessageID": "msg_1c853c602001AEymr6moJV9tjf",
+        "ordinal": 0
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "seq": 6,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c9f3001K043YGzKeOS4a7",
+      "created": 1794362296819,
+      "type": "session.text.delta",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "assistantMessageID": "msg_1c853c602001AEymr6moJV9tjf",
+        "ordinal": 0,
+        "delta": "REPORT_SUBAGENT_CHILD_MARKER"
+      }
+    },
+    {
+      "id": "evt_1c853c9f3002zPef11Wcniy4X3",
+      "created": 1794362296819,
+      "type": "session.text.ended",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "assistantMessageID": "msg_1c853c602001AEymr6moJV9tjf",
+        "ordinal": 0,
+        "text": "REPORT_SUBAGENT_CHILD_MARKER",
+        "native": {
+          "itemId": "msg_child_fixture"
+        }
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "seq": 7,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c9f5001OreYO2erhjOf3O",
+      "created": 1794362296821,
+      "type": "session.step.streamed",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "assistantMessageID": "msg_1c853c602001AEymr6moJV9tjf"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "seq": 8,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c9f6001JhhkxGE4j3m83d",
+      "created": 1794362296822,
+      "type": "session.step.ended",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "assistantMessageID": "msg_1c853c602001AEymr6moJV9tjf",
+        "finish": "stop",
+        "native": {
+          "responseId": "resp_of48_7"
+        },
+        "tokens": {
+          "input": 80,
+          "output": 10,
+          "reasoning": 0,
+          "cache": {
+            "read": 20,
+            "write": 0
+          }
+        },
+        "cost": 0
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "seq": 9,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c9f8001RC4gTfRB9YGnbt",
+      "created": 1794362296824,
+      "type": "session.usage.updated",
+      "data": {
+        "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "cost": 0,
+        "tokens": {
+          "input": 80,
+          "output": 10,
+          "reasoning": 0,
+          "cache": {
+            "read": 20,
+            "write": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c853c9f9001ZiGrQkLB53TUuE",
+      "created": 1794362296825,
+      "type": "session.execution.succeeded",
+      "data": {
+        "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "seq": 10,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c9fc0012N0qI9NPIxPJhn",
+      "created": 1794362296828,
+      "type": "session.inbox.enqueued",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "inboxID": "msg_1c853c5ed001KNUk4Sh0Na3H1j",
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "item": {
+          "type": "synthetic",
+          "payload": {
+            "text": "<subagent sessionID=\"ses_e37ac3a18ffehQqROmOdM1D99p\" state=\"completed\" description=\"Scripted independent child\">\nREPORT_SUBAGENT_CHILD_MARKER\n</subagent>",
+            "description": "Scripted independent child",
+            "metadata": {
+              "source": "subagent",
+              "childID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+              "agent": "report_child",
+              "state": "completed"
+            }
+          },
+          "delivery": "steer"
+        }
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 18,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853c9ff001Gm2h5UgqLObcf6",
+      "created": 1794362296831,
+      "type": "session.execution.started",
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 19,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853ca02001akztQZaaNuS4A2",
+      "created": 1794362296834,
+      "type": "session.inbox.delivered",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "inboxID": "msg_1c853c5ed001KNUk4Sh0Na3H1j"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 20,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853ca0b001wyB7oWZc5gaJUz",
+      "created": 1794362296843,
+      "type": "session.step.started",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "agent": "build",
+        "model": {
+          "id": "gpt-6.1-sol",
+          "providerID": "shopaikey"
+        },
+        "assistantMessageID": "msg_1c853ca05001S43TmNRO4FP2ny",
+        "started": 1794362296840
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 21,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853ca0c001g6Uo0fbKOGe2tl",
+      "created": 1794362296844,
+      "type": "session.text.started",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853ca05001S43TmNRO4FP2ny",
+        "ordinal": 0
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 22,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853ca0e001sS8IPnPzpqjvw5",
+      "created": 1794362296846,
+      "type": "session.text.delta",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853ca05001S43TmNRO4FP2ny",
+        "ordinal": 0,
+        "delta": "REPORT_CLIENT_ASSISTANT_MARKER"
+      }
+    },
+    {
+      "id": "evt_1c853ca0e002zPJ1qNnNKndxxM",
+      "created": 1794362296846,
+      "type": "session.text.ended",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853ca05001S43TmNRO4FP2ny",
+        "ordinal": 0,
+        "text": "REPORT_CLIENT_ASSISTANT_MARKER",
+        "native": {
+          "itemId": "msg_client_demo"
+        }
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 23,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853ca0f001qZKlvCjjr5FoyZ",
+      "created": 1794362296847,
+      "type": "session.step.streamed",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853ca05001S43TmNRO4FP2ny"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 24,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853ca10001ksv5MoKKmqaTye",
+      "created": 1794362296848,
+      "type": "session.step.ended",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+      },
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "assistantMessageID": "msg_1c853ca05001S43TmNRO4FP2ny",
+        "finish": "stop",
+        "native": {
+          "responseId": "resp_of48_1"
+        },
+        "tokens": {
+          "input": 80,
+          "output": 10,
+          "reasoning": 0,
+          "cache": {
+            "read": 20,
+            "write": 0
+          }
+        },
+        "cost": 0
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 25,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c853ca11001okxcbLUrx6P4Ku",
+      "created": 1794362296849,
+      "type": "session.usage.updated",
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "cost": 0,
+        "tokens": {
+          "input": 240,
+          "output": 30,
+          "reasoning": 0,
+          "cache": {
+            "read": 60,
+            "write": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "evt_1c853ca12001J8DCY2UTMMVFS4",
+      "created": 1794362296850,
+      "type": "session.execution.succeeded",
+      "data": {
+        "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc"
+      },
+      "durable": {
+        "aggregateID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+        "seq": 26,
+        "version": 1
+      }
+    }
+  ],
+  "requests": [
+    {
+      "model": "gpt-6.1-sol",
+      "input": [
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Launch one independent scripted child in the background and continue immediately."
+            }
+          ]
+        }
+      ],
+      "instructions": "You are an AI agent running in OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available.\n\n# Harness\n- Responses are rendered as GitHub-flavored Markdown.\n- `<system-reminder>` blocks are harness instructions, not user-authored content. Read and follow them.\n- Prefer parallelizing independent tool calls.\n- Prefer dedicated tools over shell commands; fall back to the shell when a tool cannot do what you need.\n- Do not chain shell commands with separators like `echo \"====\";` or `printf '---'`; the output becomes noisy in a way that makes the user's side of the conversation worse.\n\n# Communication\n\nUse clear file paths when referring to files. Keep responses clear and concise, and avoid unnecessary technical jargon.\n\n## Intermediate Commentary\n\nAs you work, you send messages to the commentary channel. These are how you collaborate with the user while you work: stating assumptions and providing updates. Keep them concise and quickly scannable, and send them only when they add real information, such as a discovery, a tradeoff, or a blocker. Do not narrate routine reads, searches, or edits.\n\nBy default, treat new messages received during ongoing work as steering the active task rather than replacing it. Incorporate corrections and constraints, and answer questions briefly in commentary before continuing. Replace the task only when the user clearly cancels it or requests an incompatible objective.\n\nDo not put a final response, such as a blocking or clarifying question, in the commentary channel. The final answer must always be fully self-contained.\n\n## Final Answer\n\nIn the final answer, lead with the outcome, not the steps you took to reach it. Cover the most important information, use only as much structure as the answer needs, and avoid long-winded explanations unless necessary. Include technical detail only where it helps.\n\n# Working in codebases\n- Keep changes consistent with the structure, naming, style, and patterns of the surrounding code.\n- Treat unfamiliar files or changes as potential user work and investigate before deleting or overwriting them.\n\n# Delegation\n\nDo not spawn subagents unless the user or applicable AGENTS.md/skill instructions explicitly ask for subagents, delegation, or parallel agent work.\n\n# Destructive actions\n\nDo not revert, reset, or discard changes you did not make. Never run destructive commands such as `git reset --hard`, `git checkout --`, or recursive deletes on broad paths unless the user clearly asked for that operation; if the target or scope is unclear, ask first. Prefer non-interactive git commands.\n\n# Autonomy\n\nDo not infer authorization for work beyond the user's request. Assumptions that help you make progress are fine as long as they stay within the user's intent and the scope of the task.\n\n# Your Model\n- Name: gpt-6.1-sol\n- Provider ID: shopaikey\n- Model ID: gpt-6.1-sol\n# Code Mode\n\nThe tools listed below cannot be called directly: they only work as JavaScript inside the `execute` tool. Every other tool you have is a normal tool call: call it directly, never inside `execute`.\n\nThe catalog is complete. Do not guess tool names.\n\n## Code Mode tools (call only inside `execute`)\n\n- opencode (1 tool) // Tools for managing OpenCode itself, such as working with sessions and worktrees, searching the available models, and reading MCP resources.\n  - tools.opencode.worktree_remove({\n  /** Absolute path of the worktree to remove. @minLength 1 */\n  directory: string,\n  /** Discard modified and untracked files. Only set this when the user has confirmed forced removal. */\n  force?: boolean,\n}): Promise<{\n  directory: string,\n  removed: boolean,\n}> // Remove a worktree. The repository location selects configuration; directory identifies the worktree to remove.\n\nToday's date: Wed Nov 11 2026\n\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project\n  Workspace root folder: /tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project\n  Is directory a git repo: no\n  Platform: linux\n  Prefer /tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/tmp/opencode over generic system temporary directories such as /tmp; it is pre-created and approved for external access.\n</env>\nWhen you create a worktree outside the current working directory and intend to use it as your primary working directory, consider using `execute` to call `tools.opencode.session_move` and make the worktree the session's working directory.",
+      "stream": true,
+      "max_output_tokens": 2048,
+      "store": false,
+      "prompt_cache_key": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "name": "glob",
+          "description": "Search file paths using a glob pattern (examples: \"**/*.ts\", \"src/**/*.tsx\").",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "description": "Glob pattern to match files against"
+              },
+              "path": {
+                "type": "string",
+                "description": "Directory to search. Defaults to the current working directory."
+              },
+              "hidden": {
+                "type": "boolean",
+                "description": "Include hidden files and directories (default: false)."
+              },
+              "limit": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "description": "Maximum number of matching files to return (default: 100)"
+              }
+            },
+            "required": [
+              "pattern"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "grep",
+          "description": "Search file contents using ripgrep's regular expression syntax or literal text matching. Use it to locate specific code, symbols, or text patterns, and narrow searches with `path` or `include`. Returns matching file paths, line numbers, and line previews.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Regular expression or literal text to match in file contents."
+              },
+              "path": {
+                "type": "string",
+                "description": "File or directory to search. Defaults to the current working directory."
+              },
+              "include": {
+                "type": "string",
+                "description": "Glob pattern to filter files (for example, \"*.js\" or \"*.{ts,tsx}\")"
+              },
+              "literal": {
+                "type": "boolean",
+                "description": "Treat `pattern` as exact text instead of a regular expression (default: false)."
+              },
+              "caseSensitive": {
+                "type": "boolean",
+                "description": "Use case-sensitive matching (default: true)."
+              },
+              "limit": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "description": "Maximum number of matching lines to return (default: 100)"
+              }
+            },
+            "required": [
+              "pattern"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "patch",
+          "description": "Use the `patch` tool to edit files. Your patch language is a stripped‑down, file‑oriented diff format designed to be easy to parse and safe to apply. You can think of it as a high‑level envelope:\n\n*** Begin Patch\n[ one or more file sections ]\n*** End Patch\n\nWithin that envelope, you get a sequence of file operations.\nYou MUST include a header to specify the action you are taking.\nEach operation starts with one of three headers:\n\n*** Add File: <path> - create a new file. Every following line is a + line (the initial contents).\n*** Delete File: <path> - remove an existing file. Nothing follows.\n*** Update File: <path> - patch an existing file in place (optionally with a rename).\n\nExample patch:\n\n```\n*** Begin Patch\n*** Add File: hello.txt\n+Hello world\n*** Update File: src/app.py\n*** Move to: src/main.py\n@@ def greet():\n-print(\"Hi\")\n+print(\"Hello, world!\")\n*** Delete File: obsolete.txt\n*** End Patch\n```\n\nIt is important to remember:\n\n- You must include a header with your intended action (Add/Delete/Update)\n- You must prefix new lines with `+` even when creating a new file\n",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patchText": {
+                "type": "string",
+                "description": "The full patch text describing add, update, and delete operations"
+              }
+            },
+            "required": [
+              "patchText"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "read",
+          "description": "Read the contents of a file or directory. Supports text files, images, and PDFs. Images and PDFs are presented directly to the model. Each text line is prefixed by its 1-based line number as <line>: <content>. The prefix is for reference and is not part of the file content. Directory entries are returned one per line. Use offset and limit to read large files or directories in sections. Prefer one larger read over many small slices, and use grep to find specific content in large files.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "description": "File or directory to read"
+              },
+              "offset": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "The line or directory entry to start reading from (1-based)"
+              },
+              "limit": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "The maximum number of lines or directory entries to read (defaults to and capped at 2000)"
+              }
+            },
+            "required": [
+              "path"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "shell",
+          "description": "Execute a shell command and return its output. Commands run on Linux using sh. Quote file paths containing spaces or special characters. Prefer dedicated tools over shell commands when possible. When output is large, the full result is saved to a file and a truncated preview is returned. Rely on automatic truncation unless filtering the output is more useful. Commands accept an optional timeout, background commands have no timeout by default. Background commands return immediately, and you will be notified when they complete.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "command": {
+                "type": "string",
+                "description": "Shell command string to execute"
+              },
+              "workdir": {
+                "type": "string",
+                "description": "Working directory to execute the command in. Defaults to the current working directory. When possible, avoid changing directories in the command and set the working directory here instead."
+              },
+              "timeout": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Timeout in milliseconds. Set to 0 to disable the timeout. Defaults to 120000 for foreground commands. Background commands have no timeout by default."
+              },
+              "background": {
+                "type": "boolean",
+                "description": "Run the command in the background and return immediately (useful for dev servers and long-running builds). You do not need to use '&' at the end of the command when using this parameter. You will be notified when it completes. DO NOT poll for completion."
+              }
+            },
+            "required": [
+              "command"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "skill",
+          "description": "Load a specialized skill's instructions and resources into the current conversation when the task at hand matches its description.\n\nThe skill ID must match an available skill or a skill explicitly referenced by the user.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "The ID of an available skill or a skill explicitly referenced by the user"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "subagent",
+          "description": "Spawns an agent in a child session to work on the specified task.\nThe output includes a sessionID you can pass back later to continue that specific conversation with the subagent.\nNew child sessions start with fresh context, so include all relevant context and instructions when you don't pass a sessionID.\nForeground (default) runs the subagent to completion and returns its final response.\nBackground mode (background=true) launches it asynchronously and returns immediately; you are notified when it finishes.\nUse background only for independent work that can run while you continue elsewhere.\n\nAvailable subagents:\n- explore: Fast agent specialized for exploring codebases. Use this when you need to quickly find files by patterns (eg. \"src/components/**/*.tsx\"), search code for keywords (eg. \"API endpoints\"), or answer questions about the codebase (eg. \"how do API endpoints work?\"). When calling this agent, specify the desired thoroughness level: \"quick\" for basic searches, \"medium\" for moderate exploration, or \"very thorough\" for comprehensive analysis across multiple locations and naming conventions.\n- general: General-purpose agent for researching complex questions and executing multi-step tasks. Use this agent to execute multiple units of work in parallel.\n- report_child: Bounded scripted research child",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "agent": {
+                "type": "string",
+                "description": "The type of specialized agent to use for this task. If the user asks for a subagent by a name that is not one of the available subagents, they most likely mean a model: pick a suitable agent and pass the name through the model parameter instead."
+              },
+              "description": {
+                "type": "string",
+                "description": "A short 3-5 word label for the task, displayed to the user"
+              },
+              "prompt": {
+                "type": "string",
+                "description": "The task for the subagent to perform"
+              },
+              "model": {
+                "type": "string",
+                "description": "NEVER set this unless the user explicitly asks for a particular model or variant. It must be a chat model; image and decision models can't run subagents. The value is written as \"providerID/modelID\", or \"providerID/modelID#variant\" to include a variant. Do not guess the ID: look the model up with the models tool, filtering to your own provider first."
+              },
+              "sessionID": {
+                "type": "string",
+                "pattern": "^ses",
+                "description": "Send a follow-up to an existing subagent, running or finished. Omit to start a new one."
+              },
+              "background": {
+                "type": "boolean",
+                "description": "Run the subagent in the background and return immediately. You will be notified when it completes. DO NOT sleep, poll, or proactively check on its progress."
+              }
+            },
+            "required": [
+              "agent",
+              "description",
+              "prompt"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "execute",
+          "description": "Run JavaScript in a confined Code Mode runtime to script tool calls and HTTP requests and compose their results.\n`fetch` is available for HTTP requests. Imports, direct filesystem access, and timers are unavailable: there is no `setTimeout` or sleep. All other external access goes through `tools`.\nWithin `{ code }`, the only callable tools are those explicitly listed in the Code Mode catalog instructions or returned by the `search` function. Inside `{ code }`, ignore tools shown outside the Code Mode catalog. They are not available in the Code Mode runtime.\nCall tools through `tools` using only exact paths and signatures from the catalog. Do not infer or normalize tool names; preserve bracket notation such as `tools.<namespace>[\"tool-name\"](input)`.\nPrefer an explicit `return`; if omitted, the final top-level expression becomes the result.\nAwait every call whose completion matters; pending calls are interrupted when execution ends. Run independent calls concurrently with `Promise.allSettled`.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        }
+      ]
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "input": [
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Launch one independent scripted child in the background and continue immediately."
+            }
+          ]
+        },
+        {
+          "type": "function_call",
+          "id": "fc_client_plugin",
+          "call_id": "call_client_plugin",
+          "name": "subagent",
+          "arguments": "{\"agent\":\"report_child\",\"description\":\"Scripted independent child\",\"prompt\":\"REPORT_SUBAGENT_CHILD_SEED\",\"background\":true}"
+        },
+        {
+          "type": "function_call_output",
+          "call_id": "call_client_plugin",
+          "output": "The subagent is working in the background (sessionID: ses_e37ac3a18ffehQqROmOdM1D99p). You will be notified automatically when it finishes.\nDO NOT sleep, poll for progress, ask the subagent for status, or duplicate this subagent's work; avoid working with the same files or topics it is using.\nWork on non-overlapping tasks, or briefly tell the user what you launched and end your response.\nTo send it follow-ups or change its instructions while it runs, call subagent again with this sessionID."
+        }
+      ],
+      "instructions": "You are an AI agent running in OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available.\n\n# Harness\n- Responses are rendered as GitHub-flavored Markdown.\n- `<system-reminder>` blocks are harness instructions, not user-authored content. Read and follow them.\n- Prefer parallelizing independent tool calls.\n- Prefer dedicated tools over shell commands; fall back to the shell when a tool cannot do what you need.\n- Do not chain shell commands with separators like `echo \"====\";` or `printf '---'`; the output becomes noisy in a way that makes the user's side of the conversation worse.\n\n# Communication\n\nUse clear file paths when referring to files. Keep responses clear and concise, and avoid unnecessary technical jargon.\n\n## Intermediate Commentary\n\nAs you work, you send messages to the commentary channel. These are how you collaborate with the user while you work: stating assumptions and providing updates. Keep them concise and quickly scannable, and send them only when they add real information, such as a discovery, a tradeoff, or a blocker. Do not narrate routine reads, searches, or edits.\n\nBy default, treat new messages received during ongoing work as steering the active task rather than replacing it. Incorporate corrections and constraints, and answer questions briefly in commentary before continuing. Replace the task only when the user clearly cancels it or requests an incompatible objective.\n\nDo not put a final response, such as a blocking or clarifying question, in the commentary channel. The final answer must always be fully self-contained.\n\n## Final Answer\n\nIn the final answer, lead with the outcome, not the steps you took to reach it. Cover the most important information, use only as much structure as the answer needs, and avoid long-winded explanations unless necessary. Include technical detail only where it helps.\n\n# Working in codebases\n- Keep changes consistent with the structure, naming, style, and patterns of the surrounding code.\n- Treat unfamiliar files or changes as potential user work and investigate before deleting or overwriting them.\n\n# Delegation\n\nDo not spawn subagents unless the user or applicable AGENTS.md/skill instructions explicitly ask for subagents, delegation, or parallel agent work.\n\n# Destructive actions\n\nDo not revert, reset, or discard changes you did not make. Never run destructive commands such as `git reset --hard`, `git checkout --`, or recursive deletes on broad paths unless the user clearly asked for that operation; if the target or scope is unclear, ask first. Prefer non-interactive git commands.\n\n# Autonomy\n\nDo not infer authorization for work beyond the user's request. Assumptions that help you make progress are fine as long as they stay within the user's intent and the scope of the task.\n\n# Your Model\n- Name: gpt-6.1-sol\n- Provider ID: shopaikey\n- Model ID: gpt-6.1-sol\n# Code Mode\n\nThe tools listed below cannot be called directly: they only work as JavaScript inside the `execute` tool. Every other tool you have is a normal tool call: call it directly, never inside `execute`.\n\nThe catalog is complete. Do not guess tool names.\n\n## Code Mode tools (call only inside `execute`)\n\n- opencode (1 tool) // Tools for managing OpenCode itself, such as working with sessions and worktrees, searching the available models, and reading MCP resources.\n  - tools.opencode.worktree_remove({\n  /** Absolute path of the worktree to remove. @minLength 1 */\n  directory: string,\n  /** Discard modified and untracked files. Only set this when the user has confirmed forced removal. */\n  force?: boolean,\n}): Promise<{\n  directory: string,\n  removed: boolean,\n}> // Remove a worktree. The repository location selects configuration; directory identifies the worktree to remove.\n\nToday's date: Wed Nov 11 2026\n\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project\n  Workspace root folder: /tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project\n  Is directory a git repo: no\n  Platform: linux\n  Prefer /tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/tmp/opencode over generic system temporary directories such as /tmp; it is pre-created and approved for external access.\n</env>\nWhen you create a worktree outside the current working directory and intend to use it as your primary working directory, consider using `execute` to call `tools.opencode.session_move` and make the worktree the session's working directory.",
+      "stream": true,
+      "max_output_tokens": 2048,
+      "store": false,
+      "prompt_cache_key": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "name": "glob",
+          "description": "Search file paths using a glob pattern (examples: \"**/*.ts\", \"src/**/*.tsx\").",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "description": "Glob pattern to match files against"
+              },
+              "path": {
+                "type": "string",
+                "description": "Directory to search. Defaults to the current working directory."
+              },
+              "hidden": {
+                "type": "boolean",
+                "description": "Include hidden files and directories (default: false)."
+              },
+              "limit": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "description": "Maximum number of matching files to return (default: 100)"
+              }
+            },
+            "required": [
+              "pattern"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "grep",
+          "description": "Search file contents using ripgrep's regular expression syntax or literal text matching. Use it to locate specific code, symbols, or text patterns, and narrow searches with `path` or `include`. Returns matching file paths, line numbers, and line previews.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Regular expression or literal text to match in file contents."
+              },
+              "path": {
+                "type": "string",
+                "description": "File or directory to search. Defaults to the current working directory."
+              },
+              "include": {
+                "type": "string",
+                "description": "Glob pattern to filter files (for example, \"*.js\" or \"*.{ts,tsx}\")"
+              },
+              "literal": {
+                "type": "boolean",
+                "description": "Treat `pattern` as exact text instead of a regular expression (default: false)."
+              },
+              "caseSensitive": {
+                "type": "boolean",
+                "description": "Use case-sensitive matching (default: true)."
+              },
+              "limit": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "description": "Maximum number of matching lines to return (default: 100)"
+              }
+            },
+            "required": [
+              "pattern"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "patch",
+          "description": "Use the `patch` tool to edit files. Your patch language is a stripped‑down, file‑oriented diff format designed to be easy to parse and safe to apply. You can think of it as a high‑level envelope:\n\n*** Begin Patch\n[ one or more file sections ]\n*** End Patch\n\nWithin that envelope, you get a sequence of file operations.\nYou MUST include a header to specify the action you are taking.\nEach operation starts with one of three headers:\n\n*** Add File: <path> - create a new file. Every following line is a + line (the initial contents).\n*** Delete File: <path> - remove an existing file. Nothing follows.\n*** Update File: <path> - patch an existing file in place (optionally with a rename).\n\nExample patch:\n\n```\n*** Begin Patch\n*** Add File: hello.txt\n+Hello world\n*** Update File: src/app.py\n*** Move to: src/main.py\n@@ def greet():\n-print(\"Hi\")\n+print(\"Hello, world!\")\n*** Delete File: obsolete.txt\n*** End Patch\n```\n\nIt is important to remember:\n\n- You must include a header with your intended action (Add/Delete/Update)\n- You must prefix new lines with `+` even when creating a new file\n",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patchText": {
+                "type": "string",
+                "description": "The full patch text describing add, update, and delete operations"
+              }
+            },
+            "required": [
+              "patchText"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "read",
+          "description": "Read the contents of a file or directory. Supports text files, images, and PDFs. Images and PDFs are presented directly to the model. Each text line is prefixed by its 1-based line number as <line>: <content>. The prefix is for reference and is not part of the file content. Directory entries are returned one per line. Use offset and limit to read large files or directories in sections. Prefer one larger read over many small slices, and use grep to find specific content in large files.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "description": "File or directory to read"
+              },
+              "offset": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "The line or directory entry to start reading from (1-based)"
+              },
+              "limit": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "The maximum number of lines or directory entries to read (defaults to and capped at 2000)"
+              }
+            },
+            "required": [
+              "path"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "shell",
+          "description": "Execute a shell command and return its output. Commands run on Linux using sh. Quote file paths containing spaces or special characters. Prefer dedicated tools over shell commands when possible. When output is large, the full result is saved to a file and a truncated preview is returned. Rely on automatic truncation unless filtering the output is more useful. Commands accept an optional timeout, background commands have no timeout by default. Background commands return immediately, and you will be notified when they complete.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "command": {
+                "type": "string",
+                "description": "Shell command string to execute"
+              },
+              "workdir": {
+                "type": "string",
+                "description": "Working directory to execute the command in. Defaults to the current working directory. When possible, avoid changing directories in the command and set the working directory here instead."
+              },
+              "timeout": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Timeout in milliseconds. Set to 0 to disable the timeout. Defaults to 120000 for foreground commands. Background commands have no timeout by default."
+              },
+              "background": {
+                "type": "boolean",
+                "description": "Run the command in the background and return immediately (useful for dev servers and long-running builds). You do not need to use '&' at the end of the command when using this parameter. You will be notified when it completes. DO NOT poll for completion."
+              }
+            },
+            "required": [
+              "command"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "skill",
+          "description": "Load a specialized skill's instructions and resources into the current conversation when the task at hand matches its description.\n\nThe skill ID must match an available skill or a skill explicitly referenced by the user.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "The ID of an available skill or a skill explicitly referenced by the user"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "subagent",
+          "description": "Spawns an agent in a child session to work on the specified task.\nThe output includes a sessionID you can pass back later to continue that specific conversation with the subagent.\nNew child sessions start with fresh context, so include all relevant context and instructions when you don't pass a sessionID.\nForeground (default) runs the subagent to completion and returns its final response.\nBackground mode (background=true) launches it asynchronously and returns immediately; you are notified when it finishes.\nUse background only for independent work that can run while you continue elsewhere.\n\nAvailable subagents:\n- explore: Fast agent specialized for exploring codebases. Use this when you need to quickly find files by patterns (eg. \"src/components/**/*.tsx\"), search code for keywords (eg. \"API endpoints\"), or answer questions about the codebase (eg. \"how do API endpoints work?\"). When calling this agent, specify the desired thoroughness level: \"quick\" for basic searches, \"medium\" for moderate exploration, or \"very thorough\" for comprehensive analysis across multiple locations and naming conventions.\n- general: General-purpose agent for researching complex questions and executing multi-step tasks. Use this agent to execute multiple units of work in parallel.\n- report_child: Bounded scripted research child",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "agent": {
+                "type": "string",
+                "description": "The type of specialized agent to use for this task. If the user asks for a subagent by a name that is not one of the available subagents, they most likely mean a model: pick a suitable agent and pass the name through the model parameter instead."
+              },
+              "description": {
+                "type": "string",
+                "description": "A short 3-5 word label for the task, displayed to the user"
+              },
+              "prompt": {
+                "type": "string",
+                "description": "The task for the subagent to perform"
+              },
+              "model": {
+                "type": "string",
+                "description": "NEVER set this unless the user explicitly asks for a particular model or variant. It must be a chat model; image and decision models can't run subagents. The value is written as \"providerID/modelID\", or \"providerID/modelID#variant\" to include a variant. Do not guess the ID: look the model up with the models tool, filtering to your own provider first."
+              },
+              "sessionID": {
+                "type": "string",
+                "pattern": "^ses",
+                "description": "Send a follow-up to an existing subagent, running or finished. Omit to start a new one."
+              },
+              "background": {
+                "type": "boolean",
+                "description": "Run the subagent in the background and return immediately. You will be notified when it completes. DO NOT sleep, poll, or proactively check on its progress."
+              }
+            },
+            "required": [
+              "agent",
+              "description",
+              "prompt"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "execute",
+          "description": "Run JavaScript in a confined Code Mode runtime to script tool calls and HTTP requests and compose their results.\n`fetch` is available for HTTP requests. Imports, direct filesystem access, and timers are unavailable: there is no `setTimeout` or sleep. All other external access goes through `tools`.\nWithin `{ code }`, the only callable tools are those explicitly listed in the Code Mode catalog instructions or returned by the `search` function. Inside `{ code }`, ignore tools shown outside the Code Mode catalog. They are not available in the Code Mode runtime.\nCall tools through `tools` using only exact paths and signatures from the catalog. Do not infer or normalize tool names; preserve bracket notation such as `tools.<namespace>[\"tool-name\"](input)`.\nPrefer an explicit `return`; if omitted, the final top-level expression becomes the result.\nAwait every call whose completion matters; pending calls are interrupted when execution ends. Run independent calls concurrently with `Promise.allSettled`.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        }
+      ]
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "input": [
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "You are a subagent spawned by another session.\nREPORT_SUBAGENT_CHILD_SEED"
+            }
+          ]
+        }
+      ],
+      "instructions": "Return the fixed research child marker; do not use tools.\n# Your Model\n- Name: gpt-6.1-sol\n- Provider ID: shopaikey\n- Model ID: gpt-6.1-sol\nToday's date: Wed Nov 11 2026\n\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project\n  Workspace root folder: /tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project\n  Is directory a git repo: no\n  Platform: linux\n  Prefer /tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/tmp/opencode over generic system temporary directories such as /tmp; it is pre-created and approved for external access.\n</env>\nWhen you create a worktree outside the current working directory and intend to use it as your primary working directory, consider using `execute` to call `tools.opencode.session_move` and make the worktree the session's working directory.",
+      "stream": true,
+      "max_output_tokens": 2048,
+      "store": false,
+      "prompt_cache_key": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "name": "skill",
+          "description": "Load a specialized skill's instructions and resources into the current conversation when the task at hand matches its description.\n\nThe skill ID must match an available skill or a skill explicitly referenced by the user.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "The ID of an available skill or a skill explicitly referenced by the user"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        }
+      ]
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "input": [
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Launch one independent scripted child in the background and continue immediately."
+            }
+          ]
+        },
+        {
+          "type": "function_call",
+          "id": "fc_client_plugin",
+          "call_id": "call_client_plugin",
+          "name": "subagent",
+          "arguments": "{\"agent\":\"report_child\",\"description\":\"Scripted independent child\",\"prompt\":\"REPORT_SUBAGENT_CHILD_SEED\",\"background\":true}"
+        },
+        {
+          "type": "function_call_output",
+          "call_id": "call_client_plugin",
+          "output": "The subagent is working in the background (sessionID: ses_e37ac3a18ffehQqROmOdM1D99p). You will be notified automatically when it finishes.\nDO NOT sleep, poll for progress, ask the subagent for status, or duplicate this subagent's work; avoid working with the same files or topics it is using.\nWork on non-overlapping tasks, or briefly tell the user what you launched and end your response.\nTo send it follow-ups or change its instructions while it runs, call subagent again with this sessionID."
+        },
+        {
+          "type": "message",
+          "id": "msg_client_demo",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "REPORT_CLIENT_ASSISTANT_MARKER"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "<subagent sessionID=\"ses_e37ac3a18ffehQqROmOdM1D99p\" state=\"completed\" description=\"Scripted independent child\">\nREPORT_SUBAGENT_CHILD_MARKER\n</subagent>"
+            }
+          ]
+        }
+      ],
+      "instructions": "You are an AI agent running in OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available.\n\n# Harness\n- Responses are rendered as GitHub-flavored Markdown.\n- `<system-reminder>` blocks are harness instructions, not user-authored content. Read and follow them.\n- Prefer parallelizing independent tool calls.\n- Prefer dedicated tools over shell commands; fall back to the shell when a tool cannot do what you need.\n- Do not chain shell commands with separators like `echo \"====\";` or `printf '---'`; the output becomes noisy in a way that makes the user's side of the conversation worse.\n\n# Communication\n\nUse clear file paths when referring to files. Keep responses clear and concise, and avoid unnecessary technical jargon.\n\n## Intermediate Commentary\n\nAs you work, you send messages to the commentary channel. These are how you collaborate with the user while you work: stating assumptions and providing updates. Keep them concise and quickly scannable, and send them only when they add real information, such as a discovery, a tradeoff, or a blocker. Do not narrate routine reads, searches, or edits.\n\nBy default, treat new messages received during ongoing work as steering the active task rather than replacing it. Incorporate corrections and constraints, and answer questions briefly in commentary before continuing. Replace the task only when the user clearly cancels it or requests an incompatible objective.\n\nDo not put a final response, such as a blocking or clarifying question, in the commentary channel. The final answer must always be fully self-contained.\n\n## Final Answer\n\nIn the final answer, lead with the outcome, not the steps you took to reach it. Cover the most important information, use only as much structure as the answer needs, and avoid long-winded explanations unless necessary. Include technical detail only where it helps.\n\n# Working in codebases\n- Keep changes consistent with the structure, naming, style, and patterns of the surrounding code.\n- Treat unfamiliar files or changes as potential user work and investigate before deleting or overwriting them.\n\n# Delegation\n\nDo not spawn subagents unless the user or applicable AGENTS.md/skill instructions explicitly ask for subagents, delegation, or parallel agent work.\n\n# Destructive actions\n\nDo not revert, reset, or discard changes you did not make. Never run destructive commands such as `git reset --hard`, `git checkout --`, or recursive deletes on broad paths unless the user clearly asked for that operation; if the target or scope is unclear, ask first. Prefer non-interactive git commands.\n\n# Autonomy\n\nDo not infer authorization for work beyond the user's request. Assumptions that help you make progress are fine as long as they stay within the user's intent and the scope of the task.\n\n# Your Model\n- Name: gpt-6.1-sol\n- Provider ID: shopaikey\n- Model ID: gpt-6.1-sol\n# Code Mode\n\nThe tools listed below cannot be called directly: they only work as JavaScript inside the `execute` tool. Every other tool you have is a normal tool call: call it directly, never inside `execute`.\n\nThe catalog is complete. Do not guess tool names.\n\n## Code Mode tools (call only inside `execute`)\n\n- opencode (1 tool) // Tools for managing OpenCode itself, such as working with sessions and worktrees, searching the available models, and reading MCP resources.\n  - tools.opencode.worktree_remove({\n  /** Absolute path of the worktree to remove. @minLength 1 */\n  directory: string,\n  /** Discard modified and untracked files. Only set this when the user has confirmed forced removal. */\n  force?: boolean,\n}): Promise<{\n  directory: string,\n  removed: boolean,\n}> // Remove a worktree. The repository location selects configuration; directory identifies the worktree to remove.\n\nToday's date: Wed Nov 11 2026\n\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project\n  Workspace root folder: /tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project\n  Is directory a git repo: no\n  Platform: linux\n  Prefer /tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/tmp/opencode over generic system temporary directories such as /tmp; it is pre-created and approved for external access.\n</env>\nWhen you create a worktree outside the current working directory and intend to use it as your primary working directory, consider using `execute` to call `tools.opencode.session_move` and make the worktree the session's working directory.",
+      "stream": true,
+      "max_output_tokens": 2048,
+      "store": false,
+      "prompt_cache_key": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "name": "glob",
+          "description": "Search file paths using a glob pattern (examples: \"**/*.ts\", \"src/**/*.tsx\").",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "description": "Glob pattern to match files against"
+              },
+              "path": {
+                "type": "string",
+                "description": "Directory to search. Defaults to the current working directory."
+              },
+              "hidden": {
+                "type": "boolean",
+                "description": "Include hidden files and directories (default: false)."
+              },
+              "limit": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "description": "Maximum number of matching files to return (default: 100)"
+              }
+            },
+            "required": [
+              "pattern"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "grep",
+          "description": "Search file contents using ripgrep's regular expression syntax or literal text matching. Use it to locate specific code, symbols, or text patterns, and narrow searches with `path` or `include`. Returns matching file paths, line numbers, and line previews.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Regular expression or literal text to match in file contents."
+              },
+              "path": {
+                "type": "string",
+                "description": "File or directory to search. Defaults to the current working directory."
+              },
+              "include": {
+                "type": "string",
+                "description": "Glob pattern to filter files (for example, \"*.js\" or \"*.{ts,tsx}\")"
+              },
+              "literal": {
+                "type": "boolean",
+                "description": "Treat `pattern` as exact text instead of a regular expression (default: false)."
+              },
+              "caseSensitive": {
+                "type": "boolean",
+                "description": "Use case-sensitive matching (default: true)."
+              },
+              "limit": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "description": "Maximum number of matching lines to return (default: 100)"
+              }
+            },
+            "required": [
+              "pattern"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "patch",
+          "description": "Use the `patch` tool to edit files. Your patch language is a stripped‑down, file‑oriented diff format designed to be easy to parse and safe to apply. You can think of it as a high‑level envelope:\n\n*** Begin Patch\n[ one or more file sections ]\n*** End Patch\n\nWithin that envelope, you get a sequence of file operations.\nYou MUST include a header to specify the action you are taking.\nEach operation starts with one of three headers:\n\n*** Add File: <path> - create a new file. Every following line is a + line (the initial contents).\n*** Delete File: <path> - remove an existing file. Nothing follows.\n*** Update File: <path> - patch an existing file in place (optionally with a rename).\n\nExample patch:\n\n```\n*** Begin Patch\n*** Add File: hello.txt\n+Hello world\n*** Update File: src/app.py\n*** Move to: src/main.py\n@@ def greet():\n-print(\"Hi\")\n+print(\"Hello, world!\")\n*** Delete File: obsolete.txt\n*** End Patch\n```\n\nIt is important to remember:\n\n- You must include a header with your intended action (Add/Delete/Update)\n- You must prefix new lines with `+` even when creating a new file\n",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "patchText": {
+                "type": "string",
+                "description": "The full patch text describing add, update, and delete operations"
+              }
+            },
+            "required": [
+              "patchText"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "read",
+          "description": "Read the contents of a file or directory. Supports text files, images, and PDFs. Images and PDFs are presented directly to the model. Each text line is prefixed by its 1-based line number as <line>: <content>. The prefix is for reference and is not part of the file content. Directory entries are returned one per line. Use offset and limit to read large files or directories in sections. Prefer one larger read over many small slices, and use grep to find specific content in large files.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "description": "File or directory to read"
+              },
+              "offset": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "The line or directory entry to start reading from (1-based)"
+              },
+              "limit": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "The maximum number of lines or directory entries to read (defaults to and capped at 2000)"
+              }
+            },
+            "required": [
+              "path"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "shell",
+          "description": "Execute a shell command and return its output. Commands run on Linux using sh. Quote file paths containing spaces or special characters. Prefer dedicated tools over shell commands when possible. When output is large, the full result is saved to a file and a truncated preview is returned. Rely on automatic truncation unless filtering the output is more useful. Commands accept an optional timeout, background commands have no timeout by default. Background commands return immediately, and you will be notified when they complete.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "command": {
+                "type": "string",
+                "description": "Shell command string to execute"
+              },
+              "workdir": {
+                "type": "string",
+                "description": "Working directory to execute the command in. Defaults to the current working directory. When possible, avoid changing directories in the command and set the working directory here instead."
+              },
+              "timeout": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Timeout in milliseconds. Set to 0 to disable the timeout. Defaults to 120000 for foreground commands. Background commands have no timeout by default."
+              },
+              "background": {
+                "type": "boolean",
+                "description": "Run the command in the background and return immediately (useful for dev servers and long-running builds). You do not need to use '&' at the end of the command when using this parameter. You will be notified when it completes. DO NOT poll for completion."
+              }
+            },
+            "required": [
+              "command"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "skill",
+          "description": "Load a specialized skill's instructions and resources into the current conversation when the task at hand matches its description.\n\nThe skill ID must match an available skill or a skill explicitly referenced by the user.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "The ID of an available skill or a skill explicitly referenced by the user"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "subagent",
+          "description": "Spawns an agent in a child session to work on the specified task.\nThe output includes a sessionID you can pass back later to continue that specific conversation with the subagent.\nNew child sessions start with fresh context, so include all relevant context and instructions when you don't pass a sessionID.\nForeground (default) runs the subagent to completion and returns its final response.\nBackground mode (background=true) launches it asynchronously and returns immediately; you are notified when it finishes.\nUse background only for independent work that can run while you continue elsewhere.\n\nAvailable subagents:\n- explore: Fast agent specialized for exploring codebases. Use this when you need to quickly find files by patterns (eg. \"src/components/**/*.tsx\"), search code for keywords (eg. \"API endpoints\"), or answer questions about the codebase (eg. \"how do API endpoints work?\"). When calling this agent, specify the desired thoroughness level: \"quick\" for basic searches, \"medium\" for moderate exploration, or \"very thorough\" for comprehensive analysis across multiple locations and naming conventions.\n- general: General-purpose agent for researching complex questions and executing multi-step tasks. Use this agent to execute multiple units of work in parallel.\n- report_child: Bounded scripted research child",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "agent": {
+                "type": "string",
+                "description": "The type of specialized agent to use for this task. If the user asks for a subagent by a name that is not one of the available subagents, they most likely mean a model: pick a suitable agent and pass the name through the model parameter instead."
+              },
+              "description": {
+                "type": "string",
+                "description": "A short 3-5 word label for the task, displayed to the user"
+              },
+              "prompt": {
+                "type": "string",
+                "description": "The task for the subagent to perform"
+              },
+              "model": {
+                "type": "string",
+                "description": "NEVER set this unless the user explicitly asks for a particular model or variant. It must be a chat model; image and decision models can't run subagents. The value is written as \"providerID/modelID\", or \"providerID/modelID#variant\" to include a variant. Do not guess the ID: look the model up with the models tool, filtering to your own provider first."
+              },
+              "sessionID": {
+                "type": "string",
+                "pattern": "^ses",
+                "description": "Send a follow-up to an existing subagent, running or finished. Omit to start a new one."
+              },
+              "background": {
+                "type": "boolean",
+                "description": "Run the subagent in the background and return immediately. You will be notified when it completes. DO NOT sleep, poll, or proactively check on its progress."
+              }
+            },
+            "required": [
+              "agent",
+              "description",
+              "prompt"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "execute",
+          "description": "Run JavaScript in a confined Code Mode runtime to script tool calls and HTTP requests and compose their results.\n`fetch` is available for HTTP requests. Imports, direct filesystem access, and timers are unavailable: there is no `setTimeout` or sleep. All other external access goes through `tools`.\nWithin `{ code }`, the only callable tools are those explicitly listed in the Code Mode catalog instructions or returned by the `search` function. Inside `{ code }`, ignore tools shown outside the Code Mode catalog. They are not available in the Code Mode runtime.\nCall tools through `tools` using only exact paths and signatures from the catalog. Do not infer or normalize tool names; preserve bracket notation such as `tools.<namespace>[\"tool-name\"](input)`.\nPrefer an explicit `return`; if omitted, the final top-level expression becomes the result.\nAwait every call whose completion matters; pending calls are interrupted when execution ends. Run independent calls concurrently with `Promise.allSettled`.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        }
+      ]
+    }
+  ],
+  "cycles": [
+    {
+      "pid": 17,
+      "url": "http://127.0.0.1:40447",
+      "exit": 0
+    }
+  ],
+  "sessionID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+  "plugin_list": {
+    "location": {
+      "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+    },
+    "data": []
+  },
+  "config_plugins": [
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/xdg-config/opencode/opencode.json"
+    }
+  ],
+  "child_request_started_at": 813.930715,
+  "parent_marker_received_at": 825.723669,
+  "subagent_parent_before": [
+    {
+      "id": "msg_1c853c547001BBy2EnKl6eYnJc",
+      "time": {
+        "created": 1794362295744
+      },
+      "text": "Launch one independent scripted child in the background and continue immediately.",
+      "type": "user"
+    },
+    {
+      "id": "msg_1c853c5c6001C6lc19LVI7dFei",
+      "time": {
+        "created": 1794362295754,
+        "streamed": 1794362295780,
+        "completed": 1794362295791
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "shopaikey"
+      },
+      "content": [
+        {
+          "type": "tool",
+          "id": "call_client_plugin",
+          "name": "subagent",
+          "executed": false,
+          "native": {
+            "itemId": "fc_client_plugin"
+          },
+          "state": {
+            "status": "completed",
+            "input": {
+              "agent": "report_child",
+              "description": "Scripted independent child",
+              "prompt": "REPORT_SUBAGENT_CHILD_SEED",
+              "background": true
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "The subagent is working in the background (sessionID: ses_e37ac3a18ffehQqROmOdM1D99p). You will be notified automatically when it finishes.\nDO NOT sleep, poll for progress, ask the subagent for status, or duplicate this subagent's work; avoid working with the same files or topics it is using.\nWork on non-overlapping tasks, or briefly tell the user what you launched and end your response.\nTo send it follow-ups or change its instructions while it runs, call subagent again with this sessionID."
+              }
+            ],
+            "metadata": {
+              "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+              "status": "running",
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1794362295773,
+            "ran": 1794362295778,
+            "completed": 1794362295789
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "native": {
+        "responseId": "resp_of48_6"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 80,
+        "output": 10,
+        "reasoning": 0,
+        "cache": {
+          "read": 20,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1c853c5f6001bfnxxV43WpKvSp",
+      "time": {
+        "created": 1794362295801,
+        "streamed": 1794362295820,
+        "completed": 1794362295821
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "shopaikey"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "REPORT_CLIENT_ASSISTANT_MARKER",
+          "native": {
+            "itemId": "msg_client_demo"
+          }
+        }
+      ],
+      "finish": "stop",
+      "native": {
+        "responseId": "resp_of48_1"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 80,
+        "output": 10,
+        "reasoning": 0,
+        "cache": {
+          "read": 20,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1c853c60f001D41sE7f7drodQu",
+      "time": {
+        "created": 1794362295823
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ],
+  "child_sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+  "child_info": {
+    "id": "ses_e37ac3a18ffehQqROmOdM1D99p",
+    "parentID": "ses_e37ac3c0bffeRbiPqxqtx24xYc",
+    "projectID": "0f4631d2736c7ae1dc497df06ea65ed3fd3f5829",
+    "agent": "report_child",
+    "cost": 0,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "time": {
+      "created": 1794362295785,
+      "updated": 1794362295787,
+      "busy": 1794362295804
+    },
+    "title": "Scripted independent child",
+    "location": {
+      "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-cad0696052564ebd1d35/project"
+    }
+  },
+  "child_response_at": 1814.073871,
+  "child_context": [
+    {
+      "id": "msg_1c853c5eb001aAgMUL6kvawAO5",
+      "time": {
+        "created": 1794362295807
+      },
+      "text": "You are a subagent spawned by another session.\nREPORT_SUBAGENT_CHILD_SEED",
+      "type": "user"
+    },
+    {
+      "id": "msg_1c853c602001AEymr6moJV9tjf",
+      "time": {
+        "created": 1794362295812,
+        "streamed": 1794362296821,
+        "completed": 1794362296822
+      },
+      "type": "assistant",
+      "agent": "report_child",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "shopaikey"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "REPORT_SUBAGENT_CHILD_MARKER",
+          "native": {
+            "itemId": "msg_child_fixture"
+          }
+        }
+      ],
+      "finish": "stop",
+      "native": {
+        "responseId": "resp_of48_7"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 80,
+        "output": 10,
+        "reasoning": 0,
+        "cache": {
+          "read": 20,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1c853c9f9001ZiGrQkLB53TUuE",
+      "time": {
+        "created": 1794362296825
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ],
+  "subagent_parent_after": [
+    {
+      "id": "msg_1c853c547001BBy2EnKl6eYnJc",
+      "time": {
+        "created": 1794362295744
+      },
+      "text": "Launch one independent scripted child in the background and continue immediately.",
+      "type": "user"
+    },
+    {
+      "id": "msg_1c853c5c6001C6lc19LVI7dFei",
+      "time": {
+        "created": 1794362295754,
+        "streamed": 1794362295780,
+        "completed": 1794362295791
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "shopaikey"
+      },
+      "content": [
+        {
+          "type": "tool",
+          "id": "call_client_plugin",
+          "name": "subagent",
+          "executed": false,
+          "native": {
+            "itemId": "fc_client_plugin"
+          },
+          "state": {
+            "status": "completed",
+            "input": {
+              "agent": "report_child",
+              "description": "Scripted independent child",
+              "prompt": "REPORT_SUBAGENT_CHILD_SEED",
+              "background": true
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "The subagent is working in the background (sessionID: ses_e37ac3a18ffehQqROmOdM1D99p). You will be notified automatically when it finishes.\nDO NOT sleep, poll for progress, ask the subagent for status, or duplicate this subagent's work; avoid working with the same files or topics it is using.\nWork on non-overlapping tasks, or briefly tell the user what you launched and end your response.\nTo send it follow-ups or change its instructions while it runs, call subagent again with this sessionID."
+              }
+            ],
+            "metadata": {
+              "sessionID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+              "status": "running",
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1794362295773,
+            "ran": 1794362295778,
+            "completed": 1794362295789
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "native": {
+        "responseId": "resp_of48_6"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 80,
+        "output": 10,
+        "reasoning": 0,
+        "cache": {
+          "read": 20,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1c853c5f6001bfnxxV43WpKvSp",
+      "time": {
+        "created": 1794362295801,
+        "streamed": 1794362295820,
+        "completed": 1794362295821
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "shopaikey"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "REPORT_CLIENT_ASSISTANT_MARKER",
+          "native": {
+            "itemId": "msg_client_demo"
+          }
+        }
+      ],
+      "finish": "stop",
+      "native": {
+        "responseId": "resp_of48_1"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 80,
+        "output": 10,
+        "reasoning": 0,
+        "cache": {
+          "read": 20,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1c853c60f001D41sE7f7drodQu",
+      "time": {
+        "created": 1794362295823
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    },
+    {
+      "id": "msg_1c853c5ed001KNUk4Sh0Na3H1j",
+      "metadata": {
+        "source": "subagent",
+        "childID": "ses_e37ac3a18ffehQqROmOdM1D99p",
+        "agent": "report_child",
+        "state": "completed"
+      },
+      "time": {
+        "created": 1794362296834
+      },
+      "text": "<subagent sessionID=\"ses_e37ac3a18ffehQqROmOdM1D99p\" state=\"completed\" description=\"Scripted independent child\">\nREPORT_SUBAGENT_CHILD_MARKER\n</subagent>",
+      "description": "Scripted independent child",
+      "type": "synthetic"
+    },
+    {
+      "id": "msg_1c853ca05001S43TmNRO4FP2ny",
+      "time": {
+        "created": 1794362296840,
+        "streamed": 1794362296847,
+        "completed": 1794362296848
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "gpt-6.1-sol",
+        "providerID": "shopaikey"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "REPORT_CLIENT_ASSISTANT_MARKER",
+          "native": {
+            "itemId": "msg_client_demo"
+          }
+        }
+      ],
+      "finish": "stop",
+      "native": {
+        "responseId": "resp_of48_1"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 80,
+        "output": 10,
+        "reasoning": 0,
+        "cache": {
+          "read": 20,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1c853ca12001J8DCY2UTMMVFS4",
+      "time": {
+        "created": 1794362296850
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ],
+  "status": "pass"
+}

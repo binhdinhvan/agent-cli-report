@@ -1,0 +1,27 @@
+{
+  "scope_ok": true,
+  "changed_files": [
+    "intervals.py"
+  ],
+  "invalid_paths": [],
+  "snapshot_sha256": {
+    "intervals.py": "5004e99daa6aedadaedb36b9c312452cf8946fdde8f2dffee70fa8e9445139ec",
+    "test_public.py": "8eb40ed38a8653c191c77eefa3a269efbd90a123775a9adb12d24cdd062661d6"
+  },
+  "suites": {
+    "public": {
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": "",
+      "stderr": "test_overlap (test_public.PublicTests.test_overlap) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+    },
+    "hidden": {
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": "",
+      "stderr": "test_duplicates (__main__.AcceptanceTests.test_duplicates) ... ok\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_invalid (__main__.AcceptanceTests.test_invalid) ... ok\ntest_iterator_and_tuples (__main__.AcceptanceTests.test_iterator_and_tuples) ... ok\ntest_nested_and_unsorted (__main__.AcceptanceTests.test_nested_and_unsorted) ... ok\ntest_no_mutation (__main__.AcceptanceTests.test_no_mutation) ... ok\ntest_touching_is_not_overlap (__main__.AcceptanceTests.test_touching_is_not_overlap) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.000s\n\nOK\n"
+    }
+  },
+  "duration_ms": 99,
+  "pass": true
+}

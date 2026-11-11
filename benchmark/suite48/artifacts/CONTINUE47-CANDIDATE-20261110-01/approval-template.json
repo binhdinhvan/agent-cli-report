@@ -1,0 +1,10 @@
+{
+  "launch_authorized": false,
+  "plan_sha256": "9deec512a41d22f1f6f0afa4715fb339b60cc81d7494fdbe19dd8e34cef59e86",
+  "scope": "47-not-run-slots-continuation-no-retry-rubric-r2",
+  "budget_estimate_usd": "16",
+  "prior_unpriced_acknowledged": false,
+  "rubric_revision": "b01-evidence-r2",
+  "approved_by": null,
+  "approved_at_utc": null
+}

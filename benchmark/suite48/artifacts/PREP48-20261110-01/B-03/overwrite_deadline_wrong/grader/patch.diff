@@ -1,0 +1,50 @@
+--- before/cache.py
++++ after/cache.py
+@@ -1,23 +1,42 @@
+-"""Cache API skeleton. Complete TTL/LRU behavior without changing signatures."""
+-
++from collections import OrderedDict
+ 
+ class TTLCache:
+     def __init__(self, capacity, clock):
+         self.capacity = capacity
+         self.clock = clock
+-        self.entries = {}
++        self.entries = OrderedDict()
++
++    def _purge(self):
++        now = self.clock()
++        for key, (_, deadline) in list(self.entries.items()):
++            if deadline is not None and now >= deadline:
++                del self.entries[key]
+ 
+     def set(self, key, value, ttl=None):
+-        self.entries[key] = value
++        self._purge()
++        self.entries.pop(key, None)
++        if ttl is not None and ttl <= 0:
++            return None
++        deadline = self.clock() + 1
++        self.entries[key] = (value, deadline)
++        while len(self.entries) > self.capacity:
++            self.entries.popitem(last=False)
++        return None
+ 
+     def get(self, key, default=None):
+-        return self.entries.get(key, default)
++        self._purge()
++        if key not in self.entries:
++            return default
++        self.entries.move_to_end(key)
++        return self.entries[key][0]
+ 
+     def delete(self, key):
++        self._purge()
+         if key not in self.entries:
+             return False
+         del self.entries[key]
+         return True
+ 
+     def __len__(self):
++        self._purge()
+         return len(self.entries)

@@ -1,0 +1,23 @@
+timestamp=2026-11-10T23:22:08.733Z level=INFO run=eb459e00 message="creating instance" directory=/tmp/opencode/agent-cli-report/smoke/BP48-DM-576747e20ea751375b26/project
+timestamp=2026-11-10T23:22:08.734Z level=INFO run=eb459e00 message=fromDirectory directory=/tmp/opencode/agent-cli-report/smoke/BP48-DM-576747e20ea751375b26/project
+timestamp=2026-11-10T23:22:08.740Z level=INFO run=eb459e00 message=bootstrapping directory=/tmp/opencode/agent-cli-report/smoke/BP48-DM-576747e20ea751375b26/project
+timestamp=2026-11-10T23:22:08.744Z level=INFO run=eb459e00 message=loading path=/tmp/opencode/agent-cli-report/smoke/BP48-DM-576747e20ea751375b26/xdg-config/opencode/config.json
+timestamp=2026-11-10T23:22:08.744Z level=INFO run=eb459e00 message=loading path=/tmp/opencode/agent-cli-report/smoke/BP48-DM-576747e20ea751375b26/xdg-config/opencode/opencode.json
+timestamp=2026-11-10T23:22:08.748Z level=INFO run=eb459e00 message=loading path=/tmp/opencode/agent-cli-report/smoke/BP48-DM-576747e20ea751375b26/xdg-config/opencode/opencode.jsonc
+timestamp=2026-11-10T23:22:08.749Z level=INFO run=eb459e00 message=loading path=/tmp/opencode/agent-cli-report/smoke/BP48-DM-576747e20ea751375b26/xdg-config/opencode/opencode.json
+timestamp=2026-11-10T23:22:08.750Z level=INFO run=eb459e00 message=loading path=/tmp/opencode/agent-cli-report/smoke/BP48-DM-576747e20ea751375b26/xdg-config/opencode/opencode.jsonc
+timestamp=2026-11-10T23:22:08.836Z level=INFO run=eb459e00 message=loading path=/tmp/opencode/agent-cli-report/smoke/BP48-DM-576747e20ea751375b26/managed/opencode.json
+timestamp=2026-11-10T23:22:08.837Z level=INFO run=eb459e00 message=loading path=/tmp/opencode/agent-cli-report/smoke/BP48-DM-576747e20ea751375b26/managed/opencode.jsonc
+timestamp=2026-11-10T23:22:08.882Z level=INFO run=eb459e00 message="all LSPs are disabled"
+timestamp=2026-11-10T23:22:08.883Z level=INFO run=eb459e00 message="all formatters are disabled"
+timestamp=2026-11-10T23:22:08.883Z level=INFO run=eb459e00 message=init
+timestamp=2026-11-10T23:22:08.977Z level=INFO run=eb459e00 message=created id=ses_e383b272effe9Clk85vqK5JUyr slug=quiet-eagle version=1.19.5 projectID=global directory=/tmp/opencode/agent-cli-report/smoke/BP48-DM-576747e20ea751375b26/project path=tmp/opencode/agent-cli-report/smoke/BP48-DM-576747e20ea751375b26/project workspaceID=undefined parentID=undefined title="New session - 2026-11-10T23:22:08.977Z" agent=undefined model=undefined metadata=undefined permission="[{\"permission\":\"question\",\"pattern\":\"*\",\"action\":\"deny\"},{\"permission\":\"plan_enter\",\"pattern\":\"*\",\"action\":\"deny\"},{\"permission\":\"plan_exit\",\"pattern\":\"*\",\"action\":\"deny\"}]" cost=0 tokens.input=0 tokens.output=0 tokens.reasoning=0 tokens.cache.read=0 tokens.cache.write=0 time.created=1794352928977 time.updated=1794352928977
+timestamp=2026-11-10T23:22:08.985Z level=INFO run=eb459e00 message="event connected"
+timestamp=2026-11-10T23:22:09.009Z level=INFO run=eb459e00 message=loop session.id=ses_e383b272effe9Clk85vqK5JUyr step=0
+timestamp=2026-11-10T23:22:09.483Z level=INFO run=eb459e00 message="shell tool using shell" shell=/bin/sh
+timestamp=2026-11-10T23:22:09.492Z level=INFO run=eb459e00 message=stream providerID=openai modelID=gpt-6.1-sol session.id=ses_e383b272effe9Clk85vqK5JUyr small=true agent=title mode=primary
+timestamp=2026-11-10T23:22:09.498Z level=INFO run=eb459e00 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=openai llm.model=gpt-6.1-sol
+timestamp=2026-11-10T23:22:09.558Z level=INFO run=eb459e00 message="watcher backend" directory=/tmp/opencode/agent-cli-report/smoke/BP48-DM-576747e20ea751375b26/project platform=linux backend=inotify
+timestamp=2026-11-10T23:22:09.566Z level=INFO run=eb459e00 message="project copy refresh started" projectID=global
+timestamp=2026-11-10T23:22:09.567Z level=INFO run=eb459e00 message="project copy refresh done" projectID=global updated=[] removed=[]
+timestamp=2026-11-10T23:22:09.580Z level=INFO run=eb459e00 message="booting location services" directory=/tmp/opencode/agent-cli-report/smoke/BP48-DM-576747e20ea751375b26/project workspaceID=undefined

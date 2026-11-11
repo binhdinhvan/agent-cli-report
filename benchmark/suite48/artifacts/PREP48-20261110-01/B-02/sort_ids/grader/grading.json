@@ -1,0 +1,33 @@
+{
+  "task_id": "B-02",
+  "scope_ok": true,
+  "changed_files": [
+    "pagination.py"
+  ],
+  "invalid_paths": [],
+  "snapshot_sha256": {
+    "test_public.py": "18f4ea89162fcfc9762a059b4de6f9d01fbf22adf158393cde6cde316ddbf8e9",
+    "pagination.py": "f3009eda271282c2c1f48d005648ee24333f1e92e0474cd62a56238d27c5b40b"
+  },
+  "suites": {
+    "public": {
+      "exit_code": 1,
+      "timed_out": false,
+      "output_limit_exceeded": false,
+      "duration_ms": 65,
+      "stdout": "",
+      "stderr": "test_distinct_records (test_public.PublicTests.test_distinct_records) ... FAIL\n\n======================================================================\nFAIL: test_distinct_records (test_public.PublicTests.test_distinct_records)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/test_public.py\", line 7, in test_distinct_records\n    self.assertEqual(merge_pages([[{\"id\": \"b\", \"v\": 2}], [{\"id\": \"a\", \"v\": 1}]]),\nAssertionError: Lists differ: [{'id': 'a', 'v': 1}, {'id': 'b', 'v': 2}] != [{'id': 'b', 'v': 2}, {'id': 'a', 'v': 1}]\n\nFirst differing element 0:\n{'id': 'a', 'v': 1}\n{'id': 'b', 'v': 2}\n\n- [{'id': 'a', 'v': 1}, {'id': 'b', 'v': 2}]\n?          ^        ^           ^        ^\n\n+ [{'id': 'b', 'v': 2}, {'id': 'a', 'v': 1}]\n?          ^        ^           ^        ^\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (failures=1)\n"
+    },
+    "hidden": {
+      "exit_code": 1,
+      "timed_out": false,
+      "output_limit_exceeded": false,
+      "duration_ms": 64,
+      "stdout": "",
+      "stderr": "test_duplicate_replaces_not_merges (__main__.AcceptanceTests.test_duplicate_replaces_not_merges) ... FAIL\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_no_mutation_and_shallow_copy (__main__.AcceptanceTests.test_no_mutation_and_shallow_copy) ... ERROR\ntest_one_shot (__main__.AcceptanceTests.test_one_shot) ... ok\ntest_randomized_contract (__main__.AcceptanceTests.test_randomized_contract) ... FAIL\n\n======================================================================\nERROR: test_no_mutation_and_shallow_copy (__main__.AcceptanceTests.test_no_mutation_and_shallow_copy)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 30, in test_no_mutation_and_shallow_copy\n    self.assertIs(result[0][\"nested\"], nested)\n                  ~~~~~~~~~^^^^^^^^^^\nKeyError: 'nested'\n\n======================================================================\nFAIL: test_duplicate_replaces_not_merges (__main__.AcceptanceTests.test_duplicate_replaces_not_merges)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 13, in test_duplicate_replaces_not_merges\n    self.assertEqual(merge_pages([[{\"id\": \"b\", \"old\": 0}, {\"id\": \"a\"}, {\"id\": \"b\", \"new\": 1}],\nAssertionError: Lists differ: [{'id': 'a', 'v': 3}, {'id': 'b', 'new': 1}, {'id': 'c'}] != [{'id': 'b', 'new': 1}, {'id': 'a', 'v': 3}, {'id': 'c'}]\n\nFirst differing element 0:\n{'id': 'a', 'v': 3}\n{'id': 'b', 'new': 1}\n\n- [{'id': 'a', 'v': 3}, {'id': 'b', 'new': 1}, {'id': 'c'}]\n?          ^    ^   ^           ^    ^^^   ^\n\n+ [{'id': 'b', 'new': 1}, {'id': 'a', 'v': 3}, {'id': 'c'}]\n?          ^    ^^^   ^           ^    ^   ^\n\n\n======================================================================\nFAIL: test_randomized_contract (__main__.AcceptanceTests.test_randomized_contract)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 49, in test_randomized_contract\n    self.assertEqual(merge_pages(pages), expected)\nAssertionError: Lists differ: [{'id': 'a', 'v': 45}, {'id': 'b', 'v': 33}, {'id'[55 chars] 72}] != [{'id': 'e', 'v': 72}, {'id': 'd', 'v': 33}, {'id'[55 chars] 33}]\n\nFirst differing element 0:\n{'id': 'a', 'v': 45}\n{'id': 'e', 'v': 72}\n\n- [{'id': 'a', 'v': 45},\n?          ^        ^^\n\n+ [{'id': 'e', 'v': 72},\n?          ^        ^^\n\n-  {'id': 'b', 'v': 33},\n?          ^\n\n+  {'id': 'd', 'v': 33},\n?          ^\n\n   {'id': 'c', 'v': 12},\n+  {'id': 'a', 'v': 45},\n-  {'id': 'd', 'v': 33},\n?          ^           ^\n\n+  {'id': 'b', 'v': 33}]\n?          ^           ^\n\n-  {'id': 'e', 'v': 72}]\n\n----------------------------------------------------------------------\nRan 5 tests in 0.001s\n\nFAILED (failures=2, errors=1)\n"
+    }
+  },
+  "rubric": null,
+  "grader_duration_ms": 132,
+  "pass": false
+}

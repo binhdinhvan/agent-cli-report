@@ -1,0 +1,100 @@
+{
+  "scope": "offline replay only;0API/credential-content-read",
+  "status": "pass",
+  "raw_result": "benchmark/suite48/artifacts/OPENAI48-20261110-01/result.json",
+  "raw_result_sha256": "aded5d70bbf1bb887b54adc6d76f1b4319eac4f0fed9b0864f6fe50e2db3552f",
+  "raw_unchanged": true,
+  "native_attempt_status_retained": "infra_error/pending_review",
+  "entries": [
+    {
+      "request_index": 1,
+      "raw_estimated_cost_usd": "0.001576",
+      "derived_r2_guard_estimate": {
+        "revision": "openai-cache-cost-r2",
+        "usage": {
+          "input_tokens": 568,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 44,
+          "output_tokens_details": {
+            "reasoning_tokens": 32
+          },
+          "total_tokens": 612
+        },
+        "estimated_cost_usd": "0.001576",
+        "measured_charge_usd": null,
+        "estimate_status": "published OpenAI tariff estimate from reported lifetime counts",
+        "components": {
+          "ordinary_input_usd": "0.001136",
+          "cached_input_usd": "0.00",
+          "cache_write_30m_usd": "0.00",
+          "cache_write_12h_usd": "0",
+          "output_usd": "0.00044"
+        },
+        "ordinary_input_tokens": 568,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 0,
+        "billed_30m_write_tokens": 0,
+        "billed_12h_write_tokens": 0,
+        "guard_30m_write_tokens": 0,
+        "guard_12h_write_tokens": 0,
+        "cache_write_lifetime_status": "reported_breakdown_or_zero_writes",
+        "conservative_upper_bound": false,
+        "published_tariff_lower_usd": "0.001576",
+        "published_tariff_upper_usd": "0.001576",
+        "limitations": "not invoice-confirmed; not an invoice cap; excludes unreported fees; reasoning included in output, not added again"
+      }
+    },
+    {
+      "request_index": 2,
+      "raw_estimated_cost_usd": null,
+      "derived_r2_guard_estimate": {
+        "revision": "openai-cache-cost-r2",
+        "usage": {
+          "input_tokens": 3112,
+          "input_tokens_details": {
+            "cache_write_tokens": 3109,
+            "cached_tokens": 0
+          },
+          "output_tokens": 32,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3144
+        },
+        "estimated_cost_usd": "0.015871",
+        "measured_charge_usd": null,
+        "estimate_status": "conservative published-tariff upper estimate; unknown write lifetime charged at12h guard rate",
+        "components": {
+          "ordinary_input_usd": "0.000006",
+          "cached_input_usd": "0.00",
+          "cache_write_30m_usd": "0.00",
+          "cache_write_12h_usd": "0.015545",
+          "output_usd": "0.00032"
+        },
+        "ordinary_input_tokens": 3,
+        "cached_input_tokens": 0,
+        "cache_write_tokens": 3109,
+        "billed_30m_write_tokens": null,
+        "billed_12h_write_tokens": null,
+        "guard_30m_write_tokens": 0,
+        "guard_12h_write_tokens": 3109,
+        "cache_write_lifetime_status": "unknown_bounded_at_12h_rate",
+        "conservative_upper_bound": true,
+        "published_tariff_lower_usd": "0.0080985",
+        "published_tariff_upper_usd": "0.015871",
+        "limitations": "not invoice-confirmed; not an invoice cap; excludes unreported fees; reasoning included in output, not added again"
+      }
+    }
+  ],
+  "pricing_source": "research/model-profiles/openai-gpt-6.1-sol.json",
+  "cache_documentation_url": "https://developers.openai.com/api/docs/guides/prompt-caching#monitor-cache-performance",
+  "documentation_snapshot": "prompt-caching.observed-20261110.md",
+  "documentation_snapshot_sha256": "58b38fa712a1bb7bdbc53b5357408903fb668dca82d141e5cacf92e672986487",
+  "documentation_observation": "captured by read-only webfetch in preceding diagnostic step2026-11-10; not a versioned provider contract",
+  "historical_tallies_unchanged": true,
+  "measured_charge_usd": null,
+  "note": "Unknown lifetime guard estimate does not reprice or overwrite raw costnull/history"
+}

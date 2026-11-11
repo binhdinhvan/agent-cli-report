@@ -1,0 +1,13 @@
+{
+  "run_id": "R-0027",
+  "config_id": "C-0116",
+  "status": "launch_error/not_run",
+  "stage": "prepare.root.mkdir before broker/CLI execution",
+  "error_type": "FileNotFoundError",
+  "missing_parent": "/tmp/opencode/agent-cli-report/smoke",
+  "upstream_requests": 0,
+  "evidence": "shell sh_1c09bcd55001q0cuTHFuFd9yWN traceback; artifact only protocol.json; runner source control flow",
+  "prior_protocol_sha256": "bbefef0837d5f43d543a6da22d4de745c42be31135ea82dcabe001266445eb02",
+  "inference_retry_consumed": false,
+  "id_reserved_do_not_reuse": true
+}

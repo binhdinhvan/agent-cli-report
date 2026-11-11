@@ -1,0 +1,27 @@
+{
+  "verified_at_utc": "2026-11-06T09:21:37.171220+00:00",
+  "scope": "offline regression only; fake clock, synthetic HTTP, no credentials/provider generation",
+  "new_provider_requests": 0,
+  "source_sha256": {
+    "demos/model_smoke.py": "12a9d0d27ead9ec6971929c6ca558d9ad01ea62e2e0b1c83445ea7f96d682a03",
+    "benchmark/pilot.py": "114a5c6af56f7795314710d3099f771d28a6954bd55900885bc6a4b484e1c14d",
+    "demos/test_pacing.py": "2411b54a7f514d939a1a1d2080816bdc791c7ea0942508c9fb8dab60f568e6fd"
+  },
+  "suites_passed": {
+    "demos/test_pacing.py": 5,
+    "demos/test_model_smoke.py": 7,
+    "benchmark/test_pilot.py": 6,
+    "demos/test_provider_pricing.py": 5
+  },
+  "raw_smoke_artifacts_unchanged": true,
+  "frozen_smoke_protocol_unchanged": true,
+  "before_smoke_source_hash_matches": true,
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "live_cross_cli_pacing_after_fix": "unverified",
+  "pilot_started": false
+}

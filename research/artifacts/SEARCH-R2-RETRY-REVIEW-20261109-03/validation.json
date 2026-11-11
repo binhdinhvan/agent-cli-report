@@ -1,0 +1,68 @@
+{
+  "run_id": "R-0028",
+  "retry_of": "R-0026",
+  "launch_recovery_of": "R-0027 (no inference)",
+  "environment_revision": "search-r2",
+  "status": "success",
+  "validity": "valid",
+  "http_200_completed_requests": 7,
+  "gap_seconds": [
+    30.000791,
+    30.001257,
+    30.001358,
+    30.0015,
+    30.001415,
+    30.001051
+  ],
+  "duration_ms": 217097,
+  "changed_files": [
+    "intervals.py"
+  ],
+  "scope_public_hidden_pass": true,
+  "native_tool_names": [
+    "read",
+    "read",
+    "read",
+    "patch",
+    "shell",
+    "shell",
+    "shell",
+    "shell"
+  ],
+  "shell_exit_codes": [
+    127,
+    127,
+    0,
+    0
+  ],
+  "rg_glob_live_in_this_run": "not exercised; native glob/grep dependency validated offline only",
+  "estimated_cost_usd": "0.06716400",
+  "cumulative_known_usage_estimated_cost_usd": "0.47106312",
+  "cumulative_unpriced_requests": 4,
+  "cumulative_estimated_total_usd": null,
+  "measured_charge_usd": null,
+  "hashes_source_protocol_manifest_pricing_seal_binary": "pass",
+  "prior_raw_unchanged": true,
+  "key_scan": "pass",
+  "supervisor_pid_absent": true,
+  "broker_socket_absent": true,
+  "r2_csv_separate": true,
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "raw_artifact_sha256": {
+    "result.json": "883288643320b1b74b84b5e702cbb9b085997bea305f4e7462029aabd523c432",
+    "protocol.json": "6a73305974a011e0297f9dd28f79cf892c13cffc2ed664cf7120cf0703697945",
+    "R-0028/stdout.jsonl": "5e2eacf9c1b1d190f2fdef774c07f40899c465aef3624a0330ded98ef2af7062",
+    "R-0028/result.json": "f46fb469b584b9c7acb0fb8ea906a9e33a9833d9f1e67c34b1ec1227412ecda2",
+    "R-0028/config.json": "cdc7150c44b0589ef98af4fed7719d5ce1635c801b9bafd47db6e1191ae4003b",
+    "R-0028/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "R-0028/grader/grading.json": "f36151f5fc88e1056e173a92057466549e1cd3519f08f9b579a4cd5639856744",
+    "R-0028/grader/patch.diff": "e7a16b77733f3c7ab85a3da2dbbd03874259cecf2363a5fc02ebc71c2f404fc6",
+    "R-0028/grader/snapshot/intervals.py": "ff24fb29a8225b46c96ee00196b5e593f70f610fb8a215fe3c3a140bd7acaf5f",
+    "R-0028/grader/snapshot/test_public.py": "8eb40ed38a8653c191c77eefa3a269efbd90a123775a9adb12d24cdd062661d6"
+  }
+}

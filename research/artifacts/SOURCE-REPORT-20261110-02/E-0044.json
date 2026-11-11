@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0044",
+    "comparison_axis": "lifecycle",
+    "tool": "OpenCode v1",
+    "version": "1.19.5",
+    "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+    "claim": "ServeCommand khởi động listener và giữ process bằng Effect.never",
+    "file": "packages/opencode/src/cli/cmd/serve.ts",
+    "line_start": "6",
+    "line_end": "24",
+    "symbol": "ServeCommand",
+    "permalink": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/cli/cmd/serve.ts#L6-L24",
+    "evidence_status": "both",
+    "runtime_artifact": "demos/artifacts/OFFLINE-API-20261106-01/opencode-v1/result.json",
+    "limitations": "Test dừng đúng child bằng SIGTERM exit -15; không gọi đây là graceful shutdown"
+  },
+  "source_sha256": "4cdec5fb55b58a3215aec3d58c6e15a3ef0db75dd6f613180c901214be67983f",
+  "excerpt": "export const ServeCommand = effectCmd({\n  command: \"serve\",\n  builder: (yargs) => withNetworkOptions(yargs),\n  describe: \"starts a headless opencode server\",\n  // Server loads instances per-request via x-opencode-directory header — no\n  // need for an ambient project InstanceContext at startup.\n  instance: false,\n  handler: Effect.fn(\"Cli.serve\")(function* (args) {\n    const { Server } = yield* Effect.promise(() => import(\"../../server/server\"))\n    if (!Flag.OPENCODE_SERVER_PASSWORD) {\n      console.log(\"Warning: OPENCODE_SERVER_PASSWORD is not set; server is unsecured.\")\n    }\n    const opts = yield* resolveNetworkOptions(args)\n    const server = yield* Effect.promise(() => Server.listen(opts))\n    console.log(`opencode server listening on http://${server.hostname}:${server.port}`)\n\n    yield* Effect.never\n  }),\n})"
+}

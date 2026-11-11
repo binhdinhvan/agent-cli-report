@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0062",
+    "comparison_axis": "provider",
+    "tool": "Codex CLI",
+    "version": "0.167.0",
+    "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+    "claim": "HTTP responses options thêm header Responses Lite theo model flag",
+    "file": "codex-rs/core/src/client.rs",
+    "line_start": "1580",
+    "line_end": "1608",
+    "symbol": "build_responses_options",
+    "permalink": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/client.rs#L1580-L1608",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Chỉ giữ bằng chứng source; runtime model cũ đã xóa theo yêu cầu; không suy runtime support của sol từ source"
+  },
+  "source_sha256": "662cf64d10f4b0d7eaf3ad046e53b1eb6dcf8dfb3cb5a425a3c8c222adc05da5",
+  "excerpt": "    async fn build_responses_options(\n        &self,\n        turn_state: &Arc<OnceLock<String>>,\n        responses_metadata: &CodexResponsesMetadata,\n        compression: Compression,\n        use_responses_lite: bool,\n    ) -> ApiResponsesOptions {\n        ApiResponsesOptions {\n            session_id: Some(self.client.responses_session_id(responses_metadata)),\n            thread_id: Some(responses_metadata.thread_id.to_string()),\n            session_source: Some(self.client.state.session_source.clone()),\n            extra_headers: {\n                let mut headers = build_responses_headers(\n                    self.client.state.beta_features_header.as_deref(),\n                    Some(turn_state),\n                );\n                add_originator_header(&mut headers, self.client.state.originator.as_str());\n                headers.extend(\n                    self.client\n                        .build_responses_compatibility_headers(responses_metadata),\n                );\n                if let Some(header_value) = self.client.generate_attestation_header_for().await {\n                    headers.insert(X_OAI_ATTESTATION_HEADER, header_value);\n                }\n                add_responses_lite_header(&mut headers, use_responses_lite);\n                headers\n            },\n            compression,\n            turn_state: Some(Arc::clone(turn_state)),"
+}

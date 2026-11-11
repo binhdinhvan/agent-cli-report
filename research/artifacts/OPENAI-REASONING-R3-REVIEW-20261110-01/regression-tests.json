@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "total_passed": 180,
+  "new_tests_included": 8,
+  "logs": {
+    "benchmark": {
+      "passed": 113,
+      "file": "benchmark-tests.txt",
+      "sha256": "b83ff370e813d67ec51edf14d1c8691e2bfdd7aa09f6196d318e4a15b1922132"
+    },
+    "demos": {
+      "passed": 67,
+      "file": "demos-tests.txt",
+      "sha256": "adceb6c774221ffe1ac05f35df864a3abdf28fa584861ebea1d42ca68d42f0ce"
+    }
+  },
+  "scope": "offline; no provider/key access"
+}

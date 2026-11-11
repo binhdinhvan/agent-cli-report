@@ -1,0 +1,18 @@
+{
+  "downgraded_evidence_ids": [
+    "E-0060",
+    "E-0061",
+    "E-0062",
+    "E-0063",
+    "E-0064",
+    "E-0068",
+    "E-0069",
+    "E-0070",
+    "E-0071",
+    "E-0072",
+    "E-0073",
+    "E-0074"
+  ],
+  "reason": "Runtime artifacts withdrawn at user request; source/permalinks retained",
+  "removed_csv_rows": 5
+}

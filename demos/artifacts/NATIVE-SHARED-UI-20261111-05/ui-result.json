@@ -1,0 +1,1754 @@
+{
+  "scope": "native packaged UI2.2.5/headless isolated service; not live user desktop",
+  "checks": {
+    "private_service_ready": true,
+    "native_desktop_renderer_created": true,
+    "desktop_renders_shared_session": true,
+    "desktop_did_not_replace_private_service": true,
+    "web_renders_same_session": true,
+    "tui_renders_same_session": true,
+    "all_clients_use_original_service_pid": true
+  },
+  "health": [
+    503,
+    200
+  ],
+  "cdpAttempts": [
+    {
+      "error": "TypeError: ECONNREFUSED: Unable to connect. Is the computer able to access the url?"
+    },
+    {
+      "error": "TypeError: ECONNREFUSED: Unable to connect. Is the computer able to access the url?"
+    },
+    {
+      "error": "TypeError: ECONNREFUSED: Unable to connect. Is the computer able to access the url?"
+    },
+    {
+      "status": 200,
+      "targets": [
+        {
+          "type": "page",
+          "url": "oc://renderer/index.html"
+        }
+      ]
+    }
+  ],
+  "server_info": {
+    "version": "2.2.5",
+    "pid": 5,
+    "hostname": "VSF-PF64PCNX-L",
+    "urls": [
+      "http://127.0.0.1:40167"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode/agent-cli-report/smoke/BP48-UI-cfcfcf6c2b4002bd7200/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "session": {
+    "data": {
+      "id": "ses_e37868d48ffe5NECni0TQSaLhK",
+      "projectID": "340f840709edf5088ca240b1631783b602639e76",
+      "cost": 0,
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "time": {
+        "created": 1794364764858,
+        "updated": 1794364764858
+      },
+      "title": "REPORT_SHARED_UI_MARKER",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-UI-cfcfcf6c2b4002bd7200/project"
+      }
+    }
+  },
+  "desktop_requests": [
+    {
+      "url": "oc://renderer/assets/main-DH32_HOX.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/rolldown-runtime-hePW80VL.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/main-CAHKFjg8.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/esm-rub_JZLD.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/tab-CYhsSvui.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/sticky-accordion-header-BmI76st6.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/UGE6PPGT-BGQugjF_.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/file-BdkB4Hh3.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/appendItems-Br6lxAL6.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/unwrapDefault-ByDmBtHB.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/line-comment-styles-DTQ2NmLf.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/hastToHtml-Byx83-2F.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/lib-DZiL5pxo.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/worker-DYmTZY_T.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/virtualizer-50u64xeC.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/parseDiffFromFile-DZH6vXBV.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/media-DLlXKv0u.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/panel-NYx2etOe.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/tabs-DuBle3rQ.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/tabs-CyGMveLx.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/panel-DpLewXRK.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/truncated-text-B32a_u1A.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/truncated-text-C0uc212h.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/location-menu-S7h2lyf9.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/diff-changes-nu0b3X0f.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/diff-changes-kktMd8h_.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/details-C9_YP5pB.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/location-workspace-B8n4cd22.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/page-DPQyyNkq.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/row-DJT889WR.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/panel-CTH1vVxy.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://o4511072101138432.ingest.us.sentry.io/api/4511210181885952/envelope/?sentry_version=7&sentry_key=2fe82e3b9e171acc7b645f73a05540a8&sentry_client=sentry.javascript.solid%2F10.71.0",
+      "method": "POST"
+    },
+    {
+      "url": "oc://renderer/assets/route-D760DMVN.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/palette-tUcOMHCm.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/search-CH_T3mwK.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/search-lrVr4suS.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/server-unavailable-panel-D76IWs6Q.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/list-Cdve67Z4.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/list-BHdRw_Na.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/settings-CD97-rma.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/line-comment-V5rPZL61.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/line-comment-CtNj53uH.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/server-unavailable-panel-NCxplJYz.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/mcp-Bm5_T5t8.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/route-CwZZCzxv.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/panel-DPlLGQVN.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/comment-DuUstQ_W.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/pierre-tree-DJ7QyCMq.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/FileTree-DFGAPl4p.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/iconResolver-LI_36__T.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/open-in-app-D3R6Ov9k.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/open-in-app-sdwqxKcO.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/tree-model--Rm7PzY6.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/browser-Sr_QEoUR.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/session-review-v2-D1HVusbI.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/session-review-v2-Cnnl1Uao.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/session-review-v2-CdgwB8DW.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/list-2Qq7jXmq.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/esm-aFsAwi3Y.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/line-comment-annotations-v2-MnLSkVye.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/line-comment-annotations-9O8a7EHl.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/preview-controls-R5R5-68t.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/preview-controls-ENoSD2dV.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/styles-Cc3gpIWu.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/resolve-link-19lmnQNw.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/panel-B-ne5_Hw.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/session-diff-Dzdjtiv7.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/parts-CB6aFY6J.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/select-WzGbYYvw.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/select-D7Q7k6cP.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/settings-DGcgBWGO.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/section-BK59cXAl.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/event",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/IBMPlexMono-Text-BtGO5jh3.woff2",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/info",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/Inter.ttf",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/migration-status-I3N9L71z.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/index.html",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/main-DH32_HOX.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/rolldown-runtime-hePW80VL.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/main-CAHKFjg8.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/Inter.ttf",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/IBMPlexMono-Text-BtGO5jh3.woff2",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/esm-rub_JZLD.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/route-23IFeZHd.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/palette-tUcOMHCm.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/search-CH_T3mwK.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/search-lrVr4suS.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/server-unavailable-panel-D76IWs6Q.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/list-Cdve67Z4.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/list-BHdRw_Na.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/settings-CD97-rma.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/line-comment-V5rPZL61.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/line-comment-CtNj53uH.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/server-unavailable-panel-NCxplJYz.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/checkbox-Bchhpxle.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/sources-DNzILzK2.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/sources-BZIk6a8l.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/row-CMYvOzRE.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/UGE6PPGT-BGQugjF_.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/diff-changes-nu0b3X0f.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/diff-changes-kktMd8h_.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/session-diff-Dzdjtiv7.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/parseDiffFromFile-DZH6vXBV.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/line-comment-styles-DTQ2NmLf.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/session-review-v2-Cnnl1Uao.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/session-review-v2-CdgwB8DW.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/esm-aFsAwi3Y.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/session-review-v2-D1HVusbI.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/worker-DYmTZY_T.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/appendItems-Br6lxAL6.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/unwrapDefault-ByDmBtHB.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/tabs-DuBle3rQ.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/tabs-CyGMveLx.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/select-WzGbYYvw.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/select-D7Q7k6cP.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/route-CeyrrorO.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/file-BdkB4Hh3.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/hastToHtml-Byx83-2F.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/lib-DZiL5pxo.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/virtualizer-50u64xeC.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/media-DLlXKv0u.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/event",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/ses_e37868d48ffe5NECni0TQSaLhK",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/info",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/migration-status-I3N9L71z.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/ses_e37868d48ffe5NECni0TQSaLhK/message?limit=40&order=desc",
+      "method": "OPTIONS"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/ses_e37868d48ffe5NECni0TQSaLhK/inbox",
+      "method": "OPTIONS"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/info",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/ses_e37868d48ffe5NECni0TQSaLhK/message?limit=40&order=desc",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/ses_e37868d48ffe5NECni0TQSaLhK/inbox",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/config?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/model-BREeFVpX.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/comment-DuUstQ_W.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/location",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/tab-CYhsSvui.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/sticky-accordion-header-BmI76st6.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/panel-NYx2etOe.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/panel-DpLewXRK.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/truncated-text-B32a_u1A.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/truncated-text-C0uc212h.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/location-menu-S7h2lyf9.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/details-C9_YP5pB.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/location-workspace-B8n4cd22.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/page-DPQyyNkq.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/row-DJT889WR.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/panel-CTH1vVxy.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/panel-DPlLGQVN.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/pierre-tree-DJ7QyCMq.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/FileTree-DFGAPl4p.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/iconResolver-LI_36__T.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/open-in-app-D3R6Ov9k.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/open-in-app-sdwqxKcO.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/tree-model--Rm7PzY6.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/browser-Sr_QEoUR.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/list-2Qq7jXmq.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/line-comment-annotations-v2-MnLSkVye.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/line-comment-annotations-9O8a7EHl.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/preview-controls-R5R5-68t.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/preview-controls-ENoSD2dV.css",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/styles-Cc3gpIWu.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/resolve-link-19lmnQNw.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/panel-B-ne5_Hw.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/parts-CB6aFY6J.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/settings-DGcgBWGO.js",
+      "method": "GET"
+    },
+    {
+      "url": "oc://renderer/assets/section-BK59cXAl.js",
+      "method": "GET"
+    },
+    {
+      "url": "https://o4511072101138432.ingest.us.sentry.io/api/4511210181885952/envelope/?sentry_version=7&sentry_key=2fe82e3b9e171acc7b645f73a05540a8&sentry_client=sentry.javascript.solid%2F10.71.0",
+      "method": "POST"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/rpc/opencode.goal/get?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "POST"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session?limit=200&order=desc&parentID=ses_e37868d48ffe5NECni0TQSaLhK",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/project",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/rpc/opencode.goal/get?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "OPTIONS"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/config?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/ses_e37868d48ffe5NECni0TQSaLhK",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/provider?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/model?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/integration?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/location?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/agent?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/shell?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/ses_e37868d48ffe5NECni0TQSaLhK/permission",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/ses_e37868d48ffe5NECni0TQSaLhK/form",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/form?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/experimental/session/ses_e37868d48ffe5NECni0TQSaLhK/terminal",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/active",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/location?location%5Bdirectory%5D=",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/vcs?location%5Bdirectory%5D=",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/project",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/info",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/vcs?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/worktree?projectID=340f840709edf5088ca240b1631783b602639e76",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/command?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/mcp?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/mcp/resource?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/reference?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/worktree/refresh",
+      "method": "POST"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/skill?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/worktree/refresh",
+      "method": "OPTIONS"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/integration?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/model?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/provider?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/agent?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/experimental/session/ses_e37868d48ffe5NECni0TQSaLhK/terminal",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/command?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/reference?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/skill?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/model?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/provider?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/server/aHR0cDovLzEyNy4wLjAuMTo0MDE2Nw/session/ses_e37868d48ffe5NECni0TQSaLhK",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/index-BDq5uAY5.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/rolldown-runtime-hePW80VL.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/solid-Csl37FmM.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/web-C8KihOh2.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/helper-CDOjM3YL.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/dist-BraPtBl5.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/eventListener-DjeYdknJ.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/dist-jenvkAuR.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/JNCCF6MP-Bqm6Ey36.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/5WXHJDCZ-DfcFoM6o.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/E53DB7BS-BCzppdZB.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/EHGSTO6V-C9J-3Je6.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/UKTBL2JL-BpKJQunH.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/dist-Dwhxzoit.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/dist-CWPSA2lg.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/dialog-DNgwWvDc.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/LP6E37CW-C_22jSRP.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/i18n-DprQkEeL.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/store-B6igxVu_.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/encode-DO9V0ZMq.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/dist-CO8qwuub.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/path-m0dFCAHb.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/desktop-native-v-cCWyjx.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/preload-helper-Czpn1I53.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/language-irfVF3cI.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/shared-events-BRO736Wd.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/promise-0JyU46SD.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/health-CIIwRQf1.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/core-BXqU3ikT.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/internal-C6j3bZo-.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/gui-B-DBUDOS.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/session-mention-CACczxAs.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/host-Br4YxjpZ.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/fuzzysort-ukaRp9PC.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/icon-DrlKCMrn.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/button-BeJeiRCa.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/dialog-COvf_1yI.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/dist-B_hYUzh0.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/text-input--jkjyzH-.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/uuid-DhWL7h7D.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/session-message-CABgqU7w.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/session-BHk51zZ2.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/persistent-pty-BQ22Ux0O.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/solid-eTxPEHmU.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/reduced-nsQJmDHw.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/toast-DnjhUMMb.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/build-DLSX5U9k.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/current-tool-state-Brzthqsm.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/current-CS21lgrW.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/motion-tuning-BWGaRYo_.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/icon-button-B7LJShep.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/loader-BUZ4B5Ak.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/loop-BI4bKJ7M.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/oc-2-COeEKe_J.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/context-D70XPWmh.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/OGE3DKII-CEHcrh9m.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/tooltip-DhAtKFfa.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/SOM3K36D-Ckn509EO.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/VI7QYH27-COFEKGET.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/menu-DO7FLGft.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/keybind-BeRPFhF5.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/markdown-Yz__20ak.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/builtin-Cn-9AMsG.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/ZZYKR3VO-BrDUtv7x.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/YFEENJN5-CK2wTJL8.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/switch-Yo36guCs.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/host-apis-2cTShqml.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/project-avatar-PlWNoERG.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/text-field-D3nnVDT9.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/progress-circle-D6v7JtcK.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/uploads-BlPOkgDi.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/spinner-B0QIKMZt.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/location-r2qyBqSN.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/icon-BDQzFLnz.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/button-CUcpBpNW.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/dialog-BUYQZsMU.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/text-input-CcEpDKKM.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/toast-H4Zvf7UO.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/current-xsQVo8-b.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/icon-button-k4-w3twm.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/loader-g3VDrgIX.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/tooltip-CLbg2OhN.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/menu-BEJ3PKY9.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/keybind-CLxpfiUC.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/switch-DFuaInmf.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/project-avatar-CR0W8oJC.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/progress-circle-K3lDN6-q.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/index-CxE-beyG.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/event",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/IBMPlexMono-Text-BtGO5jh3.woff2",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/info",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/ses_e37868d48ffe5NECni0TQSaLhK",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/route-DYUIp5Zo.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/palette-CvSk3iH2.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/search-DN01d5yG.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/search-lrVr4suS.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/server-unavailable-panel-BY__9kDF.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/use-filtered-list-D-Mw2DFx.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/list-C0c_U7Nb.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/list-BHdRw_Na.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/settings-BhrRWy5A.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/line-comment-z2REGctk.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/line-comment-CtNj53uH.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/server-unavailable-panel-NCxplJYz.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/checkbox-n3lM7Yy1.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/sources-BAa9J5Rf.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/sources-BZIk6a8l.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/row-CgiIneZH.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/UGE6PPGT-BjZBYcru.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/diff-changes-CCfjcS0s.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/diff-changes-kktMd8h_.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/session-diff--pvWAAAX.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/parseDiffFromFile-DZH6vXBV.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/line-comment-styles-DTQ2NmLf.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/session-review-v2-B_rGqfT9.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/session-review-v2-9n1sph11.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/esm-B1FBPUY1.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/session-review-v2-zFVlMZsF.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/worker-C4mIMF4p.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/appendItems-ZKfnZOLG.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/unwrapDefault-ByDmBtHB.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/tabs-DHCWNYhA.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/tabs-CyGMveLx.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/select-C_WPawCX.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/select-D7Q7k6cP.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/route-D1CArdfq.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/file-zna8lWaF.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/hastToHtml-Byx83-2F.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/lib-DZiL5pxo.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/virtualizer-50u64xeC.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/media-DLlXKv0u.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/location",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/project",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/assets/Inter.ttf",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/active",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/location?location%5Bdirectory%5D=",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/vcs?location%5Bdirectory%5D=",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/project",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/ses_e37868d48ffe5NECni0TQSaLhK/message?limit=40&order=desc",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/ses_e37868d48ffe5NECni0TQSaLhK/inbox",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/ses_e37868d48ffe5NECni0TQSaLhK",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session?limit=200&order=desc&parentID=ses_e37868d48ffe5NECni0TQSaLhK",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/rpc/opencode.goal/get?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "POST"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/config?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/info",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/provider?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/model?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/integration?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/location?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/config?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/agent?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/shell?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/ses_e37868d48ffe5NECni0TQSaLhK/permission",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/session/ses_e37868d48ffe5NECni0TQSaLhK/form",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/form?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/vcs?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/experimental/session/ses_e37868d48ffe5NECni0TQSaLhK/terminal",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/worktree?projectID=340f840709edf5088ca240b1631783b602639e76",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/command?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/mcp?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/mcp/resource?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/reference?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/worktree/refresh",
+      "method": "POST"
+    },
+    {
+      "url": "http://127.0.0.1:40167/api/skill?location%5Bdirectory%5D=%2Ftmp%2Fopencode%2Fagent-cli-report%2Fsmoke%2FBP48-UI-cfcfcf6c2b4002bd7200%2Fproject",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/tab-C5z1Ozf7.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/sticky-accordion-header-BpLucDGE.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/panel-EujWT76f.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/panel-CU2gK5eh.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/truncated-text-BPTGbvv_.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/truncated-text-C0uc212h.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/location-menu-2g9Ah6-s.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/location-workspace-C1sPR4CA.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/details-C9_YP5pB.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/panel-BWAIfmex.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/pierre-tree-C-MFhWfb.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/FileTree-DFGAPl4p.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/iconResolver-LI_36__T.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/open-in-app-CCHwK5bC.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/open-in-app-sdwqxKcO.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/tree-model--Rm7PzY6.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/browser-JCj_btCh.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/list-6-INxQ0K.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/line-comment-annotations-v2-C1E_M2DX.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/line-comment-annotations-DeFMnSDl.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/preview-controls-B8eh7aXm.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/preview-controls-ENoSD2dV.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/resolve-link-D7l79GUE.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/styles-Cc3gpIWu.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/panel-CtoQSHZc.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/parts-CfkcxyBn.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:40167/_assets/settings-BrZ9rC_i.js",
+      "method": "GET"
+    }
+  ],
+  "desktop_ready": {
+    "result": {
+      "type": "string",
+      "value": "Projects\nAdd project\nSettings\nHelp"
+    }
+  },
+  "desktop_route_setup": {
+    "result": {
+      "type": "boolean",
+      "value": true
+    }
+  },
+  "desktop_session_ready": {
+    "result": {
+      "type": "string",
+      "value": "P\nREPORT_SHARED_UI_MARKER\nP\nproject\nREPORT_SHARED_UI_MARKER\n0\n·\n$0.00\nAsk anything, / for commands, @ for context…\nSmoke broker\n/\ngpt-6.1-sol"
+    }
+  },
+  "desktop_document": {
+    "result": {
+      "type": "string",
+      "value": "{\"url\":\"oc://renderer/index.html\",\"title\":\"REPORT_SHARED_UI_MARKER · OpenCode\",\"text\":\"P\\nREPORT_SHARED_UI_MARKER\\nP\\nproject\\nREPORT_SHARED_UI_MARKER\\n0\\n·\\n$0.00\\nAsk anything, / for commands, @ for context…\\nSmoke broker\\n/\\ngpt-6.1-sol\"}"
+    }
+  },
+  "service_after_desktop": {
+    "version": "2.2.5",
+    "pid": 5,
+    "hostname": "VSF-PF64PCNX-L",
+    "urls": [
+      "http://127.0.0.1:40167"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode/agent-cli-report/smoke/BP48-UI-cfcfcf6c2b4002bd7200/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "web_session_ready": {
+    "result": {
+      "type": "string",
+      "value": "P\nREPORT_SHARED_UI_MARKER\nP\nproject\nREPORT_SHARED_UI_MARKER\n0\n·\n$0.00\nAsk anything, / for commands, @ for context…\nSmoke broker\n/\ngpt-6.1-sol"
+    }
+  },
+  "web_document": {
+    "result": {
+      "type": "string",
+      "value": "{\"url\":\"http://127.0.0.1:40167/server/aHR0cDovLzEyNy4wLjAuMTo0MDE2Nw/session/ses_e37868d48ffe5NECni0TQSaLhK\",\"title\":\"REPORT_SHARED_UI_MARKER · OpenCode\",\"text\":\"P\\nREPORT_SHARED_UI_MARKER\\nP\\nproject\\nREPORT_SHARED_UI_MARKER\\n0\\n·\\n$0.00\\nAsk anything, / for commands, @ for context…\\nSmoke broker\\n/\\ngpt-6.1-sol\"}"
+    }
+  },
+  "web_engine": "native packaged Chromium renderer navigated to service-hosted web app, not a standalone browser binary",
+  "tui_stdout": "{\"command\": [\"/opt/agent-cli-report/BP48-UI-cfcfcf6c2b4002bd7200/opencode\", \"--session\", \"ses_e37868d48ffe5NECni0TQSaLhK\"], \"pid\": 158, \"exit_code\": 130, \"session_title_observed\": true, \"bytes\": 11862, \"process_stopped\": true, \"scope\": \"native TUI default managed-service discovery in isolated PTY; no prompt\"}\n",
+  "tui_stderr": "",
+  "tui_helper_exit": 0,
+  "tui": {
+    "command": [
+      "/opt/agent-cli-report/BP48-UI-cfcfcf6c2b4002bd7200/opencode",
+      "--session",
+      "ses_e37868d48ffe5NECni0TQSaLhK"
+    ],
+    "pid": 158,
+    "exit_code": 130,
+    "session_title_observed": true,
+    "bytes": 11862,
+    "process_stopped": true,
+    "scope": "native TUI default managed-service discovery in isolated PTY; no prompt"
+  },
+  "service_after_all_clients": {
+    "version": "2.2.5",
+    "pid": 5,
+    "hostname": "VSF-PF64PCNX-L",
+    "urls": [
+      "http://127.0.0.1:40167"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode/agent-cli-report/smoke/BP48-UI-cfcfcf6c2b4002bd7200/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "status": "observed_pending_review"
+}

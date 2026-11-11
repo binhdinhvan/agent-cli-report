@@ -1,0 +1,20 @@
+{
+  "exit_code": 0,
+  "timed_out": false,
+  "output_limit_exceeded": false,
+  "duration_ms": 64,
+  "stdout": "WITNESS_JSON={\"readonly\": {\"aliases.py\": true, \"defaults.py\": true, \"resolver.py\": true, \"test_public.py\": true}, \"hidden_absent\": true, \"real_home_absent\": true, \"net_namespace\": \"net:[4026533419]\"}\n",
+  "stderr": "",
+  "witness": {
+    "readonly": {
+      "aliases.py": true,
+      "defaults.py": true,
+      "resolver.py": true,
+      "test_public.py": true
+    },
+    "hidden_absent": true,
+    "real_home_absent": true,
+    "net_namespace": "net:[4026533419]"
+  },
+  "host_net_namespace": "net:[4026531833]"
+}

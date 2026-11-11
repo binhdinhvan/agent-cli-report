@@ -1,0 +1,883 @@
+{
+  "status": "pass",
+  "checked_at_utc": "2026-11-10T07:44:16.744150+00:00",
+  "scope": "Offline source and research fixture tests only; no native tool/plugin/service execution",
+  "checks": {
+    "evidence": {
+      "exit_code": 0,
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "research/validate_evidence.py"
+      ]
+    },
+    "frozen": {
+      "exit_code": 0,
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "benchmark/freeze_pilot.py",
+        "--verify"
+      ]
+    },
+    "fixture_tests": {
+      "exit_code": 0,
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "demos",
+        "-p",
+        "test_background_fixture.py",
+        "-v"
+      ]
+    }
+  },
+  "evidence_count": 124,
+  "new_ids": [
+    "E-0118",
+    "E-0119",
+    "E-0120",
+    "E-0121",
+    "E-0122",
+    "E-0123",
+    "E-0124"
+  ],
+  "sources": [
+    {
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/core/src/session/execution/restart.ts",
+      "snapshot": "research/artifacts/OFFLINE-TASKS-20261110-01/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session/execution/restart.ts",
+      "sha256": "61b4e5844f044ec5eee98012beee938d88f7696fcd7b7dbfbd995bfb363bf30d"
+    },
+    {
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/core/src/session/store.ts",
+      "snapshot": "research/artifacts/OFFLINE-TASKS-20261110-01/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session/store.ts",
+      "sha256": "b22de3acd253ac257936e1fea1ba9802f9b1a282d641c99d18092aa6339c499e"
+    },
+    {
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/server/src/fetch.ts",
+      "snapshot": "research/artifacts/OFFLINE-TASKS-20261110-01/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/server/src/fetch.ts",
+      "sha256": "617370731c9f6c546d4e27463423ffa4513beb31f0aa1584cf742da87343682e"
+    },
+    {
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/server/src/process.ts",
+      "snapshot": "research/artifacts/OFFLINE-TASKS-20261110-01/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/server/src/process.ts",
+      "sha256": "33048eff5aeaa894bf511f4167389039b7d483e0dfb9d9429ce617ff1c160492"
+    }
+  ],
+  "workspace_sha256": {
+    "README.md": "7fe3f7714156ef1f48d39f84af5696f6b52da6a2811e8df6fc814125d889be16",
+    "PLAN.md": "c1c426f486685ad9cd86a2ae400702ad1728e1e44fce65d0dcd2cf9b9d05183f",
+    "REPORT.md": "cc5a4e755a6f4297e239ae67b8f763869316647def960534b13ce4c3f87ed383",
+    "demos/README.md": "e5b70d758de4f21b86119eb465bb599cac532d33e9d04e936e3c987490b45b98",
+    "demos/OFFLINE_DEMO_PLAN.md": "2212903874c27005a5d372e900c36822f964708abc0619605abecce572230e4c",
+    "research/evidence.csv": "f827351e242cc6b8f6ff4a6630ebbf9db399c1522671257c91ea2bd8dce20dd4",
+    "research/experiment-state.json": "7f06b965eb511681ffb5b0a1426e2b55e52aa81706cebc35f763ae9ab2701952",
+    "research/audit_offline_tasks.py": "d412b7d552b05020891894c205ac2e67bd7c85adf076e1d05de081dfe54158a0",
+    "demos/fixtures/background_worker.py": "00fb06df295db635fc5fc1697e13fb360ba55866c22ffdeb8c21887413bd116c",
+    "demos/test_background_fixture.py": "2a922321f677f748b87aa05f121cebdaafa6616733d64c14397c1b845409827e"
+  },
+  "links_checked": [
+    {
+      "document": "README.md",
+      "label": "So sánh source sáu trục",
+      "target": "REPORT.md"
+    },
+    {
+      "document": "README.md",
+      "label": "Chuẩn bị demo offline",
+      "target": "demos/OFFLINE_DEMO_PLAN.md"
+    },
+    {
+      "document": "README.md",
+      "label": "Kết quả và review rubric",
+      "target": "benchmark/suite48/BENCHMARK_RESULTS.md"
+    },
+    {
+      "document": "README.md",
+      "label": "baseline/manifest/validator",
+      "target": "benchmark/BASELINE.md"
+    },
+    {
+      "document": "README.md",
+      "label": "mọi attempt và cohort P-02",
+      "target": "benchmark/artifacts/PILOT-FREEZE-20261109-01/SUMMARY.md"
+    },
+    {
+      "document": "README.md",
+      "label": "protocol/task/order/dự toán draft",
+      "target": "benchmark/PROTOCOL_48_DRAFT.md"
+    },
+    {
+      "document": "README.md",
+      "label": "fixture/grader44checks",
+      "target": "benchmark/suite48/IMPLEMENTATION.md"
+    },
+    {
+      "document": "README.md",
+      "label": "native preflight16/16cặp task×CLI",
+      "target": "benchmark/suite48/NATIVE_PREFLIGHT.md"
+    },
+    {
+      "document": "README.md",
+      "label": "batch runner/launch candidate03",
+      "target": "benchmark/suite48/BATCH_RUNNER.md"
+    },
+    {
+      "document": "README.md",
+      "label": "PLAN.md",
+      "target": "PLAN.md"
+    },
+    {
+      "document": "README.md",
+      "label": "research/versions.md",
+      "target": "research/versions.md"
+    },
+    {
+      "document": "README.md",
+      "label": "research/evidence.csv",
+      "target": "research/evidence.csv"
+    },
+    {
+      "document": "README.md",
+      "label": "pilot 8 lượt",
+      "target": "benchmark/PILOT.md"
+    },
+    {
+      "document": "README.md",
+      "label": "protocol benchmark chính thức",
+      "target": "benchmark/PROTOCOL.md"
+    },
+    {
+      "document": "README.md",
+      "label": "REPORT.md",
+      "target": "REPORT.md"
+    },
+    {
+      "document": "README.md",
+      "label": "research/isolation.md",
+      "target": "research/isolation.md"
+    },
+    {
+      "document": "README.md",
+      "label": "demos/SMOKE_TEST.md",
+      "target": "demos/SMOKE_TEST.md"
+    },
+    {
+      "document": "README.md",
+      "label": "demos/OFFLINE_API.md",
+      "target": "demos/OFFLINE_API.md"
+    },
+    {
+      "document": "README.md",
+      "label": "demos/PROVIDER_PROBE.md",
+      "target": "demos/PROVIDER_PROBE.md"
+    },
+    {
+      "document": "README.md",
+      "label": "Pilot đã phủ đủ tám cặp task/CLI có ít nhất một lượt đạt",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "README.md",
+      "label": "Phạm vi chuyển đổi",
+      "target": "research/SOL_MIGRATION.md"
+    },
+    {
+      "document": "PLAN.md",
+      "label": "`demos/OFFLINE_DEMO_PLAN.md`",
+      "target": "demos/OFFLINE_DEMO_PLAN.md"
+    },
+    {
+      "document": "PLAN.md",
+      "label": "kết quả",
+      "target": "benchmark/suite48/BENCHMARK_RESULTS.md"
+    },
+    {
+      "document": "PLAN.md",
+      "label": "Chi tiết",
+      "target": "benchmark/suite48/BATCH_RUNNER.md"
+    },
+    {
+      "document": "PLAN.md",
+      "label": "Phạm vi/ranh giới duration và gate tiếp",
+      "target": "benchmark/suite48/NATIVE_PREFLIGHT.md"
+    },
+    {
+      "document": "PLAN.md",
+      "label": "Implementation",
+      "target": "benchmark/suite48/IMPLEMENTATION.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "Mọi attempt",
+      "target": "benchmark/artifacts/PILOT-FREEZE-20261109-01/SUMMARY.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "lịch sử đầy đủ",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "Cohort/raw references",
+      "target": "benchmark/artifacts/PILOT-FREEZE-20261109-01/summary.json"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "Manifest/pricing",
+      "target": "benchmark/artifacts/PILOT-FREEZE-20261109-01/baseline.json"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "BASELINE.md",
+      "target": "benchmark/BASELINE.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "API offline",
+      "target": "demos/OFFLINE_API.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`benchmark/MODEL_COMPARE.md`",
+      "target": "benchmark/MODEL_COMPARE.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`demos/MODEL_SMOKE_SOL_RESULTS.md`",
+      "target": "demos/MODEL_SMOKE_SOL_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`benchmark/SOL_COST.md`",
+      "target": "benchmark/SOL_COST.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`benchmark/PILOT_RESULTS.md`",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`benchmark/PILOT_RESULTS.md`",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`benchmark/PILOT_RESULTS.md`",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`research/SEARCH_ENVIRONMENT.md`",
+      "target": "research/SEARCH_ENVIRONMENT.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`research/ENVIRONMENT_R2_RESULTS.md`",
+      "target": "research/ENVIRONMENT_R2_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`benchmark/PILOT_RESULTS.md`",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`benchmark/PILOT_RESULTS.md`",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`benchmark/PILOT_RESULTS.md`",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`benchmark/PILOT_RESULTS.md`",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`benchmark/PILOT_RESULTS.md`",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`research/PACED_900_RESULTS.md`",
+      "target": "research/PACED_900_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`benchmark/PILOT_RESULTS.md`",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`benchmark/PILOT_RESULTS.md`",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`research/SOL_MIGRATION.md`",
+      "target": "research/SOL_MIGRATION.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`demos/PREPARATION.md`",
+      "target": "demos/PREPARATION.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "`demos/OFFLINE_API.md`",
+      "target": "demos/OFFLINE_API.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "acceptance matrix",
+      "target": "demos/OFFLINE_DEMO_PLAN.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0014",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/cli/src/services/server-connection.ts#L23-L58"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0015",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/cli/src/services/standalone.ts#L17-L58"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0053",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/sdk/src/promise.ts#L34-L68"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0077",
+      "target": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/sdk.ts#L403-L468"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0028",
+      "target": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/exec/src/lib.rs#L1018-L1033"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0080: drain",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session/runner/llm.ts#L209-L218"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0081: runStep",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session/runner/llm.ts#L230-L326"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0078: runLoop",
+      "target": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/agent/src/agent-loop.ts#L250-L329"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0083: run_turn",
+      "target": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/session/turn.rs#L594-L650"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0086: drain tools",
+      "target": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/session/turn.rs#L3560-L3578"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0082",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/tool/runtime.ts#L21-L61"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0079",
+      "target": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/tools/index.ts#L195-L223"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0068",
+      "target": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/cli/args.ts#L151-L175"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0084",
+      "target": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/tools/router.rs#L390-L427"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0085",
+      "target": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/tools/router.rs#L260-L264"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0060",
+      "target": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/client.rs#L1051-L1085"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0062",
+      "target": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/client.rs#L1580-L1608"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0089",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/tool/plugin/shell.ts#L114-L149"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0087",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/permission.ts#L86-L100"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0088",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/permission.ts#L151-L201"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0090",
+      "target": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/tools/bash.ts#L95-L140"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0092",
+      "target": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/agent/src/agent-loop.ts#L719-L778"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0093",
+      "target": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/protocol/src/protocol.rs#L1146-L1169"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0094",
+      "target": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/protocol/src/sandbox.rs#L27-L45"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0107",
+      "target": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/agent-session.ts#L668-L696"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0108",
+      "target": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/agent/src/agent.ts#L476-L494"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0091",
+      "target": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/extensions/runner.ts#L1249-L1267"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "harness thí nghiệm",
+      "target": "benchmark/BASELINE.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0095",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session/history.ts#L32-L53"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0096",
+      "target": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/session-manager.ts#L476-L511"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0097",
+      "target": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/session-manager.ts#L1584-L1595"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0098",
+      "target": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/context_manager/history.rs#L249-L279"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0099",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/plugin/src/promise/plugin.ts#L27-L67"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0100",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/plugin/src/promise/tool.ts#L26-L72"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0101",
+      "target": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/extensions/types.ts#L1685-L1705"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0102",
+      "target": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core-plugins/src/manifest.rs#L48-L73"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0008",
+      "target": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/cli/cmd/run.ts#L933-L951"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0044",
+      "target": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/cli/cmd/serve.ts#L6-L24"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "ServerConnection.resolve/E-0014",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/cli/src/services/server-connection.ts#L23-L58"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "Standalone.start/E-0015",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/cli/src/services/standalone.ts#L17-L58"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "PromiseSdk.create/E-0053",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/sdk/src/promise.ts#L34-L68"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0042 v1",
+      "target": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/server/routes/instance/httpapi/groups/session.ts#L203-L207"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0041 v2",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/protocol/src/groups/session.ts#L165-L185"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "Event v1/E-0046",
+      "target": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/server/routes/instance/httpapi/handlers/event.ts#L25-L84"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "event v2/E-0045",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/server/src/handlers/event.ts#L11-L33"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "auth v1/E-0048",
+      "target": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/server/auth.ts#L17-L33"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "auth v2/E-0047",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/server/src/middleware/authorization.ts#L20-L101"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "demo/log offline",
+      "target": "demos/OFFLINE_API.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0050 v1",
+      "target": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/session/session.ts#L667-L688"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0051 v2",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session.ts#L288-L338"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0052",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/client/package.json#L18-L27"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0054",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/client/src/promise/service.ts#L18-L48"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0053",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/sdk/src/promise.ts#L34-L68"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0066",
+      "target": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/core/src/v1/config/permission.ts#L5-L39"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0067",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/schema/src/permission.ts#L56-L67"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0103",
+      "target": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/permission/index.ts#L28-L106"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0087",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/permission.ts#L86-L100"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0088",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/permission.ts#L151-L201"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0105",
+      "target": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/agent/agent.ts#L119-L152"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0106",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/schema/src/agent.ts#L39-L52"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0109",
+      "target": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/tool/task.ts#L284-L350"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0111",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/tool/plugin/subagent.ts#L226-L262"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0110",
+      "target": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/tool/task.ts#L256-L264"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0112",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/tool/plugin/shell.ts#L193-L266"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0113",
+      "target": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/tool/shell/prompt.ts#L15-L26"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0112",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/tool/plugin/shell.ts#L193-L266"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0117",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/job.ts#L511-L537"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0118",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session/execution/restart.ts#L102-L165"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0119",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session/execution/restart.ts#L167-L219"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0120",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session/execution/restart.ts#L34-L100"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0124",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session/store.ts#L207-L263"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0121",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session/execution/restart.ts#L221-L259"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0122",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/server/src/process.ts#L98-L113"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0123",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/server/src/fetch.ts#L41-L53"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "OFFLINE_DEMO_PLAN.md",
+      "target": "demos/OFFLINE_DEMO_PLAN.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0104",
+      "target": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/plugin/src/index.ts#L56-L79"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0099",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/plugin/src/promise/plugin.ts#L27-L67"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0114",
+      "target": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/plugin/index.ts#L88-L124"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0115",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/plugin/module.ts#L75-L187"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "E-0116",
+      "target": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/plugin/src/promise/adapter.ts#L660-L672"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "baseline pilot",
+      "target": "benchmark/BASELINE.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "protocol r1",
+      "target": "benchmark/PROTOCOL_48_R1.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "batch runner/launch manifest",
+      "target": "benchmark/suite48/BATCH_RUNNER.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "Raw/audit/giới hạn",
+      "target": "benchmark/suite48/BENCHMARK_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "Nghiệm thu và giới hạn",
+      "target": "benchmark/suite48/BATCH_RUNNER.md"
+    },
+    {
+      "document": "REPORT.md",
+      "label": "Artifact/giới hạn",
+      "target": "benchmark/suite48/NATIVE_PREFLIGHT.md"
+    },
+    {
+      "document": "demos/README.md",
+      "label": "`OFFLINE_DEMO_PLAN.md`",
+      "target": "OFFLINE_DEMO_PLAN.md"
+    },
+    {
+      "document": "demos/README.md",
+      "label": "`../research/ENVIRONMENT_R2_RESULTS.md`",
+      "target": "../research/ENVIRONMENT_R2_RESULTS.md"
+    },
+    {
+      "document": "demos/README.md",
+      "label": "`PREPARATION.md`",
+      "target": "PREPARATION.md"
+    },
+    {
+      "document": "demos/README.md",
+      "label": "`OFFLINE_API.md`",
+      "target": "OFFLINE_API.md"
+    },
+    {
+      "document": "demos/README.md",
+      "label": "`PROVIDER_PROBE.md`",
+      "target": "PROVIDER_PROBE.md"
+    },
+    {
+      "document": "demos/README.md",
+      "label": "`MODEL_SMOKE.md`",
+      "target": "MODEL_SMOKE.md"
+    },
+    {
+      "document": "demos/README.md",
+      "label": "`MODEL_SMOKE_SOL_RESULTS.md`",
+      "target": "MODEL_SMOKE_SOL_RESULTS.md"
+    },
+    {
+      "document": "demos/README.md",
+      "label": "`CODEX_TRACE.md`",
+      "target": "CODEX_TRACE.md"
+    },
+    {
+      "document": "demos/README.md",
+      "label": "`../benchmark/MODEL_COMPARE.md`",
+      "target": "../benchmark/MODEL_COMPARE.md"
+    },
+    {
+      "document": "demos/OFFLINE_DEMO_PLAN.md",
+      "label": "`../research/evidence.csv`",
+      "target": "../research/evidence.csv"
+    },
+    {
+      "document": "demos/OFFLINE_DEMO_PLAN.md",
+      "label": "`../REPORT.md`",
+      "target": "../REPORT.md"
+    },
+    {
+      "document": "demos/OFFLINE_DEMO_PLAN.md",
+      "label": "`../research/isolation.md`",
+      "target": "../research/isolation.md"
+    },
+    {
+      "document": "demos/OFFLINE_DEMO_PLAN.md",
+      "label": "`OFFLINE_API.md`",
+      "target": "OFFLINE_API.md"
+    }
+  ],
+  "acceptance_cases": [
+    "BG-01",
+    "BG-02",
+    "BG-03",
+    "BG-04",
+    "BG-05",
+    "BG-06",
+    "BG-07",
+    "BG-08",
+    "BG-09",
+    "PL-01",
+    "PL-02",
+    "PL-03",
+    "PM-01",
+    "CT-01",
+    "SDK-01"
+  ],
+  "native_demo_acceptance": "unverified",
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "raw_benchmark_retention": "pass against prior review hashes",
+  "new_provider_requests": 0,
+  "network_probes": 0,
+  "external_urls_fetched": false,
+  "paid_gate": false,
+  "next_registry_ids": [
+    "R-0087",
+    "C-0188"
+  ],
+  "secret_scan": "heuristic docs only; not a full publication privacy audit",
+  "limitations": [
+    "6 tests cover research fixture only, not OpenCode background or recovery",
+    "Source validator checks locations/links, not runtime semantics or URL availability",
+    "Native plugin/permission/SDK/UI/context demos remain pending"
+  ]
+}

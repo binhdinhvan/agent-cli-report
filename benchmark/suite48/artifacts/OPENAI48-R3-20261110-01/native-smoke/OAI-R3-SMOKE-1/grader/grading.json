@@ -1,0 +1,31 @@
+{
+  "task_id": "B-02",
+  "scope_ok": true,
+  "changed_files": [],
+  "invalid_paths": [],
+  "snapshot_sha256": {
+    "test_public.py": "18f4ea89162fcfc9762a059b4de6f9d01fbf22adf158393cde6cde316ddbf8e9",
+    "pagination.py": "539d4697695b7ccc77317f032199cff92832a115bf4392622ffff474502a2801"
+  },
+  "suites": {
+    "public": {
+      "exit_code": 0,
+      "timed_out": false,
+      "output_limit_exceeded": false,
+      "duration_ms": 115,
+      "stdout": "",
+      "stderr": "test_distinct_records (test_public.PublicTests.test_distinct_records) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+    },
+    "hidden": {
+      "exit_code": 1,
+      "timed_out": false,
+      "output_limit_exceeded": false,
+      "duration_ms": 165,
+      "stdout": "",
+      "stderr": "test_duplicate_replaces_not_merges (__main__.AcceptanceTests.test_duplicate_replaces_not_merges) ... FAIL\ntest_empty (__main__.AcceptanceTests.test_empty) ... ok\ntest_no_mutation_and_shallow_copy (__main__.AcceptanceTests.test_no_mutation_and_shallow_copy) ... FAIL\ntest_one_shot (__main__.AcceptanceTests.test_one_shot) ... FAIL\ntest_randomized_contract (__main__.AcceptanceTests.test_randomized_contract) ... FAIL\n\n======================================================================\nFAIL: test_duplicate_replaces_not_merges (__main__.AcceptanceTests.test_duplicate_replaces_not_merges)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 13, in test_duplicate_replaces_not_merges\n    self.assertEqual(merge_pages([[{\"id\": \"b\", \"old\": 0}, {\"id\": \"a\"}, {\"id\": \"b\", \"new\": 1}],\nAssertionError: Lists differ: [{'id': 'b', 'old': 0}, {'id': 'a'}, {'id': 'c'}] != [{'id': 'b', 'new': 1}, {'id': 'a', 'v': 3}, {'id': 'c'}]\n\nFirst differing element 0:\n{'id': 'b', 'old': 0}\n{'id': 'b', 'new': 1}\n\n- [{'id': 'b', 'old': 0}, {'id': 'a'}, {'id': 'c'}]\n?               ^^^   ^\n\n+ [{'id': 'b', 'new': 1}, {'id': 'a', 'v': 3}, {'id': 'c'}]\n?               ^^^   ^             ++++++++\n\n\n======================================================================\nFAIL: test_no_mutation_and_shallow_copy (__main__.AcceptanceTests.test_no_mutation_and_shallow_copy)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 29, in test_no_mutation_and_shallow_copy\n    self.assertIsNot(result[0], data[0][0])\nAssertionError: unexpectedly identical: {'id': 'b', 'nested': []}\n\n======================================================================\nFAIL: test_one_shot (__main__.AcceptanceTests.test_one_shot)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 21, in test_one_shot\n    self.assertEqual(merge_pages(pages()), [{\"id\": \"a\", \"v\": 2}, {\"id\": \"b\"}])\nAssertionError: Lists differ: [{'id': 'a', 'v': 1}, {'id': 'b'}] != [{'id': 'a', 'v': 2}, {'id': 'b'}]\n\nFirst differing element 0:\n{'id': 'a', 'v': 1}\n{'id': 'a', 'v': 2}\n\n- [{'id': 'a', 'v': 1}, {'id': 'b'}]\n?                   ^\n\n+ [{'id': 'a', 'v': 2}, {'id': 'b'}]\n?                   ^\n\n\n======================================================================\nFAIL: test_randomized_contract (__main__.AcceptanceTests.test_randomized_contract)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 49, in test_randomized_contract\n    self.assertEqual(merge_pages(pages), expected)\nAssertionError: Lists differ: [{'id': 'e', 'v': 13}, {'id': 'd', 'v': 12}, {'id': 'c', 'v[46 chars] 33}] != [{'id': 'e', 'v': 72}, {'id': 'd', 'v': 33}, {'id': 'c', 'v[46 chars] 33}]\n\nFirst differing element 0:\n{'id': 'e', 'v': 13}\n{'id': 'e', 'v': 72}\n\n- [{'id': 'e', 'v': 13},\n?                   ^^\n\n+ [{'id': 'e', 'v': 72},\n?                   ^^\n\n+  {'id': 'd', 'v': 33},\n-  {'id': 'd', 'v': 12},\n?          ^\n\n+  {'id': 'c', 'v': 12},\n?          ^\n\n-  {'id': 'c', 'v': 35},\n?          ^        ^\n\n+  {'id': 'a', 'v': 45},\n?          ^        ^\n\n-  {'id': 'a', 'v': 81},\n   {'id': 'b', 'v': 33}]\n\n----------------------------------------------------------------------\nRan 5 tests in 0.003s\n\nFAILED (failures=4)\n"
+    }
+  },
+  "rubric": null,
+  "grader_duration_ms": 284,
+  "pass": false
+}

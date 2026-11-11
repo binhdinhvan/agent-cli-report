@@ -1,0 +1,2 @@
+{"type":"error","timestamp":1793954725671,"sessionID":"ses_e4ff74277fferJ6g6ueYJuZOcB","error":{"type":"provider.invalid-request","message":"Intentional offline preflight stop","status":400,"response":{"body":"{\"error\":{\"message\":\"Intentional offline preflight stop\"}}"}}}
+{"type":"step_start","timestamp":1793954725650,"sessionID":"ses_e4ff74277fferJ6g6ueYJuZOcB","part":{"id":"prt_1b008bf0f001XiLqpQK46PH0vc_step-start","sessionID":"ses_e4ff74277fferJ6g6ueYJuZOcB","messageID":"msg_1b008bf0f001XiLqpQK46PH0vc","type":"step-start"}}

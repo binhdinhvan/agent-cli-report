@@ -1,0 +1,1 @@
+{"status":"pass","checks":{"real_home_hidden":true,"provider_key_absent":true,"embedded_prompt_assistant_marker":true,"embedded_prompt_user_seed":true,"provider_request_observed":true,"explicit_host_close_returned":true}}

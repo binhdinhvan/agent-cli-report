@@ -1,0 +1,1 @@
+{"status":"error","checks":{"private_xvfb_ready":true,"owned_service_registration":true,"private_service_ready":true,"desktop-boot-diagnostic_screen_capture":true,"desktop_shared_session":true,"owned_desktop_window_raised":false,"failure-screen_screen_capture":true},"error":"Error: owned_desktop_window_raised"}

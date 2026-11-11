@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "native_task_cli_pairs": 16,
+  "synthetic_calls": 40,
+  "provider_requests": 0,
+  "paid_runs_authorized": false,
+  "limitations": [
+    "Synthetic reference injection is not model solving or provider compatibility acceptance",
+    "Virtual30s pacing tests policy arithmetic, not real wall gaps",
+    "Outer launcher and exact native subprocess durations kept separately; final protocol must choose primary boundary",
+    "R/C allocation, paid budget and final protocol approval still pending; no paid entrypoint here"
+  ]
+}

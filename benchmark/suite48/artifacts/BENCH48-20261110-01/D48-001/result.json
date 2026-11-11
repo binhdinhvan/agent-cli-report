@@ -1,0 +1,509 @@
+{
+  "slot": "D48-001",
+  "repetition": "1",
+  "block": "1",
+  "task_id": "B-01",
+  "position_in_block": "1",
+  "tool": "opencode-v1",
+  "status": "infra_error",
+  "run_id": "R-0039",
+  "config_id": "C-0140",
+  "spec": {
+    "tool": "opencode-v1",
+    "version": "1.19.5",
+    "config_id": "C-0140",
+    "repository": "anomalyco/opencode",
+    "tag": "v1.19.5",
+    "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+    "asset": "opencode-linux-x64-baseline.tar.gz",
+    "size": 79651821,
+    "sha256": "17c200fd4b2289954cc01552559f9b6d03ec157b2ddfb5eb54144f491656333d",
+    "binary_names": [
+      "opencode"
+    ],
+    "started_at_utc": "2026-11-06T03:49:40.824147+00:00",
+    "status": "prepared_not_executed",
+    "release_api": "https://api.github.com/repos/anomalyco/opencode/releases/tags/v1.19.5",
+    "release_url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.5",
+    "asset_url": "https://github.com/anomalyco/opencode/releases/download/v1.19.5/opencode-linux-x64-baseline.tar.gz",
+    "archive_sha256_verified": "17c200fd4b2289954cc01552559f9b6d03ec157b2ddfb5eb54144f491656333d",
+    "archive_members": [
+      {
+        "name": "opencode",
+        "size": 214386864,
+        "type": "0",
+        "linkname": ""
+      }
+    ],
+    "binary": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v1-1.19.5/payload/opencode",
+    "binary_sha256": "7df4e4136301f16589b0f30bf91a61380fca5f8ef22dd36570f5ebe1d4ec802c",
+    "payload": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v1-1.19.5/payload",
+    "runtime_root": "/tmp/opencode/agent-cli-report/smoke/C-0140",
+    "finished_at_utc": "2026-11-06T03:51:02.265910+00:00",
+    "environment_revision": "search-r2"
+  },
+  "cli": [
+    "/opt/agent-cli-report/C-0140/opencode",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "openai/gpt-6.1-sol",
+    "Đọc code của resolver cấu hình trong workspace. Không sửa code nguồn hoặc test. Chỉ được tạo answer.json ở thư mục gốc; không thêm/xóa file khác (ngoại trừ __pycache__ do Python sinh).\n\nTrả lời năm câu hỏi từ implementation hiện có, không suy từ tên hàm:\n1. Khi gọi resolve(\"timeout\", cli={}, env={}, config={}), giá trị mặc định là gì?\n2. Khi cả cli, env, config và defaults đều có cùng key, thứ tự ưu tiên cao xuống thấp là gì? Dùng tên \"cli\", \"env\", \"config\", \"defaults\".\n3. Khi canonical_name(\"quick\") được gọi, chuỗi tên nào được duyệt theo thứ tự, gồm cả tên ban đầu và tên canonical cuối?\n4. Khi canonical_name(\"loop_a\") được gọi, exception class và message chính xác là gì?\n5. resolve có sửa dictionary config được truyền vào không? Ghi boolean.\n\nanswer.json phải là JSON object đúng năm trường sau, không Markdown hoặc lời giải ngoài schema:\n{\n  \"default\": {\"value\": <giá trị JSON>, \"evidence\": [\"path.py:symbol\"]},\n  \"precedence\": {\"value\": [<tên nguồn theo thứ tự>], \"evidence\": [\"path.py:symbol\"]},\n  \"alias_trace\": {\"value\": [<tên theo thứ tự>], \"evidence\": [\"path.py:symbol\"]},\n  \"cycle_error\": {\"type\": <tên class dạng string>, \"message\": <string>, \"evidence\": [\"path.py:symbol\"]},\n  \"mutation\": {\"value\": <boolean>, \"evidence\": [\"path.py:symbol\"]}\n}\n\nMỗi evidence là đường dẫn tương đối và symbol có thật trong code hỗ trợ câu trả lời đó; không dùng số dòng. Mỗi câu đúng nội dung được 1 điểm và có evidence phù hợp được 1 điểm, tổng10. Success cần10/10, đúng phạm vi và CLI hoàn tất. Không cài package hoặc truy cập Internet. Dùng python3/stdlib nếu cần. Public schema check dự kiến: python3 -B -m unittest -v test_public.\n"
+  ],
+  "validity": "pending_review",
+  "reasons": [
+    "provider_failure",
+    "usage_missing",
+    "provider_or_usage"
+  ],
+  "execution": {
+    "supervisor_host_pid": 36832,
+    "exit_code": 1,
+    "timed_out": false,
+    "output_limit_exceeded": false,
+    "duration_ms": 278237,
+    "outer_started_monotonic": 3846.487015176,
+    "outer_finished_monotonic": 4124.723910579,
+    "broker_deadline_monotonic": 4746.487015176001,
+    "outer_watchdog_deadline_monotonic": 4746.487015176001,
+    "native_clock": {
+      "started_monotonic": 3846.539500074,
+      "finished_monotonic": 4124.260354443,
+      "duration_ms": 277721
+    },
+    "witness": {
+      "project_writable": true,
+      "immutable_readonly": {
+        "aliases.py": true,
+        "defaults.py": true,
+        "resolver.py": true,
+        "test_public.py": true
+      },
+      "hidden_absent": true,
+      "home_hidden": true,
+      "net_namespace": "net:[4026533362]",
+      "provider_key_env_absent": true
+    }
+  },
+  "grading": {
+    "task_id": "B-01",
+    "scope_ok": true,
+    "changed_files": [
+      "answer.json"
+    ],
+    "invalid_paths": [],
+    "snapshot_sha256": {
+      "resolver.py": "f38fa2ca2b30092f9a2f2147376274237009b3104c44baf058ce6ca3dcd07613",
+      "aliases.py": "4fa0637ab55f32469c101d45d1a23d110e95e1f890a4dd3398e4d70c861f5da6",
+      "test_public.py": "1c8f8eec89298be555ea8aa30b57e8e7e58ca9ef4244fdca4db5d2af1e3de04e",
+      "answer.json": "6c30f535ccc19e7382d00f55d581faf4d2784f89e6663508768ad516aadf7e3c",
+      "defaults.py": "dee8dba860bf81ba208cad957eaeb64ab897b475cc00990c94e7a93fde7816e0"
+    },
+    "suites": {
+      "public": {
+        "exit_code": 0,
+        "timed_out": false,
+        "output_limit_exceeded": false,
+        "duration_ms": 64,
+        "stdout": "",
+        "stderr": "test_schema (test_public.PublicTests.test_schema) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+      },
+      "hidden": {
+        "exit_code": 1,
+        "timed_out": false,
+        "output_limit_exceeded": false,
+        "duration_ms": 64,
+        "stdout": "RUBRIC_JSON={\"scores\": {\"default\": 2, \"precedence\": 2, \"alias_trace\": 2, \"cycle_error\": 1, \"mutation\": 2}, \"total\": 9, \"maximum\": 10}\n",
+        "stderr": "test_rubric (__main__.AcceptanceTests.test_rubric) ... FAIL\n\n======================================================================\nFAIL: test_rubric (__main__.AcceptanceTests.test_rubric)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/grader/acceptance.py\", line 25, in test_rubric\n    self.assertEqual(sum(scores.values()), 10)\nAssertionError: 9 != 10\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (failures=1)\n"
+      }
+    },
+    "rubric": {
+      "scores": {
+        "default": 2,
+        "precedence": 2,
+        "alias_trace": 2,
+        "cycle_error": 1,
+        "mutation": 2
+      },
+      "total": 9,
+      "maximum": 10
+    },
+    "grader_duration_ms": 130,
+    "pass": false
+  },
+  "requests": [
+    {
+      "started_at_utc": "2026-11-10T03:13:11.857448+00:00",
+      "request_index": 1,
+      "original_body_sha256": "54ab7c29396f87e5f31691585d0f3ae5e17bc752492ff4afd9a62136f43b8177",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null,
+        null
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {
+        "reasoning": {
+          "effort": "low",
+          "summary": "auto"
+        }
+      },
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 898.711336,
+      "pacing_wait_seconds": 0.0,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "attribution": {
+            "items": {
+              "msg_05f65c81d5771d9c016af28bda5dc487d0a033e2e047bd436b": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 11,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 11,
+                "output_tokens": 0
+              },
+              "msg_05f65c81d5771d9c016af28bda5dc487d0a6556a2cb05c3bc6": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 507,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 507,
+                "output_tokens": 0
+              },
+              "msg_05f65c81d5771d9c016af28bda5dc487d0b2adca596255a062": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 469,
+                    "output_tokens": 0
+                  }
+                ],
+                "input_tokens": 469,
+                "output_tokens": 0
+              },
+              "msg_05f65c81d5771d9c016af28bdbeeac87d09f0ed0626be13efb": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "content": [
+                  {
+                    "cache_write_tokens": 0,
+                    "cached_tokens": 0,
+                    "input_tokens": 2,
+                    "output_tokens": 13
+                  }
+                ],
+                "input_tokens": 2,
+                "output_tokens": 13
+              }
+            },
+            "request_fields": {
+              "instructions": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 4096,
+                "input_tokens": 4216,
+                "output_tokens": 0
+              }
+            }
+          },
+          "input_tokens": 5205,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 4096
+          },
+          "output_tokens": 13,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5218
+        },
+        "uncached_input_tokens": 1109,
+        "components": {
+          "uncached_input_usd": "0.0053232",
+          "cached_input_usd": "0.00098304",
+          "output_usd": "0.000234"
+        },
+        "estimated_cost_usd": "0.00654024",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 76890,
+      "finished_at_utc": "2026-11-10T03:13:33.069946+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T03:14:03.071721+00:00",
+      "request_index": 2,
+      "original_body_sha256": "56e06d504b109499de92636aadcddae4ccea5d28c175489f2de79d8f5ea1662c",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "apply_patch",
+        "bash",
+        "glob",
+        "grep",
+        "read"
+      ],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 847.496656,
+      "pacing_wait_seconds": 30.000312,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "input_tokens": 8816,
+          "input_tokens_details": {
+            "cache_write_tokens": 8813,
+            "cached_tokens": 0
+          },
+          "output_tokens": 68,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 8884
+        },
+        "uncached_input_tokens": 8816,
+        "components": {
+          "uncached_input_usd": "0.0423168",
+          "cached_input_usd": "0.00",
+          "output_usd": "0.001224"
+        },
+        "estimated_cost_usd": "0.0435408",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 117409,
+      "finished_at_utc": "2026-11-10T03:14:10.189588+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T03:14:40.191032+00:00",
+      "request_index": 3,
+      "original_body_sha256": "ae0eb2d178dff8270b4b5f1c0a7f35ffd749036936dcb0142ea83dbb38bb6c59",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "apply_patch",
+        "bash",
+        "glob",
+        "grep",
+        "read"
+      ],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null,
+        null,
+        "function_call",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 810.377445,
+      "pacing_wait_seconds": 29.97703,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "input_tokens": 8945,
+          "input_tokens_details": {
+            "cache_write_tokens": 129,
+            "cached_tokens": 8813
+          },
+          "output_tokens": 148,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9093
+        },
+        "uncached_input_tokens": 132,
+        "components": {
+          "uncached_input_usd": "0.0006336",
+          "cached_input_usd": "0.00211512",
+          "output_usd": "0.002664"
+        },
+        "estimated_cost_usd": "0.00541272",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 107765,
+      "finished_at_utc": "2026-11-10T03:14:50.964087+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T03:15:20.965751+00:00",
+      "request_index": 4,
+      "original_body_sha256": "c88e53f2d0981ca0d9cc050020c99f0756ec6eb349e31bd64281bbb2c50a5c76",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "apply_patch",
+        "bash",
+        "glob",
+        "grep",
+        "read"
+      ],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null,
+        null,
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output",
+        "function_call_output",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 769.602566,
+      "pacing_wait_seconds": 29.977065,
+      "effective_max_output_tokens": 2048,
+      "http_status": 200,
+      "response_protocol_header_names": [],
+      "provider_request_id": null,
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "input_tokens": 10109,
+          "input_tokens_details": {
+            "cache_write_tokens": 1164,
+            "cached_tokens": 8942
+          },
+          "output_tokens": 294,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 10403
+        },
+        "uncached_input_tokens": 1167,
+        "components": {
+          "uncached_input_usd": "0.0056016",
+          "cached_input_usd": "0.00214608",
+          "output_usd": "0.005292"
+        },
+        "estimated_cost_usd": "0.01303968",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 176347,
+      "finished_at_utc": "2026-11-10T03:15:25.896632+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-10T03:15:55.897814+00:00",
+      "request_index": 5,
+      "original_body_sha256": "315c16e43e2536e7b8ecf4ac1d24a53e62a58bdf0fad21fdcb0add7567232689",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "apply_patch",
+        "bash",
+        "glob",
+        "grep",
+        "read"
+      ],
+      "forwarded_protocol_header_names": [
+        "originator",
+        "session-id",
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        null,
+        null,
+        null,
+        "function_call",
+        "function_call_output",
+        "function_call",
+        "function_call",
+        "function_call",
+        "function_call",
+        "function_call_output",
+        "function_call_output",
+        "function_call_output",
+        "function_call_output",
+        "function_call",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 30,
+      "minimum_request_window_seconds": 60,
+      "deadline_remaining_seconds_at_dispatch": 734.670317,
+      "pacing_wait_seconds": 29.966221,
+      "effective_max_output_tokens": 2048,
+      "error_type": "TimeoutError"
+    }
+  ],
+  "synthetic_usage": false,
+  "preflight_events": null,
+  "provider_requests": 5,
+  "supervisor_pid_absent": true,
+  "broker_socket_absent": true
+}

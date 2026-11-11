@@ -1,0 +1,64 @@
+{
+  "status": "pass",
+  "scope": "Offline postcheck, no extraAPI or actualkeycontentread",
+  "artifact": "demos/artifacts/OPENAI-DIRECT-CHECK-20261110-01",
+  "catalog_http_status": 200,
+  "catalog_exact_model_present": true,
+  "generation_http_status": 200,
+  "generation_terminal": "response.completed",
+  "response_model": "gpt-6.1-sol",
+  "marker_matches": true,
+  "generation_duration_ms": 4377,
+  "catalog_duration_ms": 1288,
+  "gap_seconds": 30.00018086700038,
+  "usage": {
+    "input_tokens": 16,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 9,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 25
+  },
+  "requested_service_tier": "default",
+  "response_service_tier": "default",
+  "derived_standard_short_context_estimate_usd": "0.000122",
+  "estimate_source": "https://developers.openai.com/api/docs/pricing",
+  "estimate_status": "derived after raw run, not invoice-confirmed; no cachewrite/cacheread in reported usage; excludes unreported surcharges",
+  "raw_estimated_cost_usd": null,
+  "measured_charge_usd": null,
+  "provider_http_requests": 2,
+  "generation_requests": 1,
+  "extra_requests_by_audit": 0,
+  "input_snapshots": "pass before profile/status updates",
+  "raw_artifact_sha256": {
+    "result.json": "bed4cf03abea73b60545255de2bd9e92097836679c3cd9141205e795f5b768c9",
+    "approval.json": "a14deb0e3cb76c0834c749a9e08c04d52a93f772ce75d6587ad6f9ba5e8bb549",
+    "source/demos/test_openai_direct_check.py": "858fb859dbaf3e09aad806e9ceed8d33abd0acd43469687be1ef23a1706ef959",
+    "source/demos/openai_direct_check.py": "49c7bcce2db97b731be158421e91fdb2ca042a5b7d96fe48b78369ca2a707986",
+    "source/demos/OPENAI_DIRECT_CHECK.md": "6f96e86cdf687974415ea51750f23a5cae8697e84f52ff55dc5e7fa667473699",
+    "source/demos/gemini_smoke5.py": "02ee8503962886546ac77f1680bd74f67b46cf27d64f88a1c82bc897ebd2172d",
+    "source/demos/provider_probe.py": "92507bfc713c543d8f056523ff115e35bfb42f92683b1aa40cb6df65aec9f5c8",
+    "source/research/model-profiles/openai-gpt-6.1-sol.json": "e1bd469f7465b5da07f019fc3a42053c252f4da74f4de13943d0e687e29afa2b"
+  },
+  "prior_raw_retention": {
+    "CONTINUE43-REVIEW-20261110-01": "all raw hashes match",
+    "GEMINI-SMOKE5-REVIEW-20261110-01": "all raw hashes match",
+    "GOOGLE-GEMINI-SMOKE5-REVIEW-20261110-01": "all raw hashes match"
+  },
+  "frozen_sol_pilot": "PASS: frozen outputs, ledger, review, fixture/dependency/binary and source hashes; offline only\n",
+  "registry_unchanged": [
+    "R-0222",
+    "C-0323"
+  ],
+  "key_metadata": "owner regular600; key not read by audit",
+  "secret_pattern_scan": "heuristic pass only, not full publication/PII audit",
+  "limitations": [
+    "Single constant-input provider-only check, not stability benchmark or native4CLI/toolcalling acceptance",
+    "Same model alias across providers does not prove identical backend/settings"
+  ],
+  "automatic_retry_or_benchmark_authorized": false
+}

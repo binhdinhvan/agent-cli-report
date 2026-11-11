@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0085",
+    "comparison_axis": "tools",
+    "tool": "Codex CLI",
+    "version": "0.167.0",
+    "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+    "claim": "tool_supports_parallel lấy capability từ registry theo tool_name và mặc định false khi không có giá trị",
+    "file": "codex-rs/core/src/tools/router.rs",
+    "line_start": "260",
+    "line_end": "264",
+    "symbol": "tool_supports_parallel",
+    "permalink": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/tools/router.rs#L260-L264",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Không khẳng định mọi tool chạy song song hoặc benchmark được phép concurrency lớn hơn1"
+  },
+  "source_sha256": "e6a7ef92ce0455ace849927c6431334af984e144c8d008af65887c8db5ef7fec",
+  "excerpt": "    pub fn tool_supports_parallel(&self, call: &ToolCall) -> bool {\n        self.registry\n            .supports_parallel_tool_calls(&call.tool_name)\n            .unwrap_or(false)\n    }"
+}

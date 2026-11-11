@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0086",
+    "comparison_axis": "agent-loop",
+    "tool": "Codex CLI",
+    "version": "0.167.0",
+    "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+    "claim": "Nhánh còn in-flight tool futures đợi drain_in_flight trước khi phát token count cuối tương ứng",
+    "file": "codex-rs/core/src/session/turn.rs",
+    "line_start": "3560",
+    "line_end": "3578",
+    "symbol": "try_run_sampling_request/drain_in_flight",
+    "permalink": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/session/turn.rs#L3560-L3578",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Chỉ thứ tự trong nhánh đã đọc; không suy task background sống qua restart hoặc mọi tool được parallel"
+  },
+  "source_sha256": "cd2f3c0f347641afc1a11ac720c5779dd5ec373dd872c6c8b9174436181c6408",
+  "excerpt": "    if !in_flight.is_empty() {\n        let _tool_blocking_timing_guard = turn_context\n            .turn_timing_state\n            .begin_tool_blocking(tool_runtime.batch_timing());\n        let _tool_blocking_span = trace_span!(\n            \"codex.tool_blocking\",\n            codex.turn.phase = \"tool_blocking\",\n            conversation.id = %sess.thread_id,\n            turn.id = %turn_context.sub_id,\n        );\n        drain_in_flight(&mut in_flight, sess.clone(), &step_context).await?;\n    }\n\n    if should_emit_token_count {\n        // A tool call such as request_user_input can intentionally pause the turn. Emit token\n        // counts only after pending tools resolve so clients do not see progress events while the\n        // turn is waiting on the user. This also needs to happen before returning cancellation so\n        // token usage already recorded from the completed response is still persisted.\n        sess.send_token_count_event(&turn_context).await;"
+}

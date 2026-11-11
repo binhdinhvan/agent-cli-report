@@ -1,0 +1,15 @@
+{
+  "provider_base_url": "https://api.shopaikey.com/v1",
+  "model": "gpt-6.1-sol",
+  "currency": "USD",
+  "unit_tokens": 1000000,
+  "input_uncached": "4.8",
+  "input_cache_read": "0.24",
+  "output": "18",
+  "source": "Giá gpt-6.1-sol do người dùng cung cấp ngày 2026-11-06 sau chuyển đổi",
+  "verification_status": "user-reported; chưa đối soát invoice hoặc dashboard bằng quyền truy cập riêng",
+  "calculation_assumption": "cached_tokens là subset của input_tokens; reasoning đã nằm trong output_tokens khi provider báo như vậy",
+  "formula": "((input_tokens-cached_tokens)*input_uncached + cached_tokens*input_cache_read + output_tokens*output)/unit_tokens",
+  "additional_fees": null,
+  "notes": "Chỉ áp dụng đúng model/provider. Chi phí suy từ usage là estimate, không phải charge đã đối soát. Đủ giá không tự khởi chạy smoke/pilot hoặc nạp tiền."
+}

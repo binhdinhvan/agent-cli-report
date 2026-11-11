@@ -1,0 +1,17 @@
+{
+  "observed_at_utc": "2026-11-06T04:12:34.177402+00:00",
+  "visible_private_cli_processes": [],
+  "proc_exe_inspected": 111,
+  "proc_exe_unavailable": 277,
+  "repo_status": {
+    "opencode-v1": "clean",
+    "opencode-v2": "clean",
+    "pi": "clean",
+    "codex": "clean"
+  },
+  "service_registration_files_in_test_roots": {
+    "C-0001": [],
+    "C-0002": []
+  },
+  "limitations": "Only prepared CLI inodes matched; no signals sent, inaccessible processes and all helper lifetimes not fully audited."
+}

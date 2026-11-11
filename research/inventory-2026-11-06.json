@@ -1,0 +1,261 @@
+{
+  "started_at_utc": "2026-11-06T03:27:35.320131+00:00",
+  "local": {
+    "opencode-v1": {
+      "head": {
+        "exit_code": 0,
+        "stdout": "810c0eba1a7348036f8bdf61e6632d0c36c6876c"
+      },
+      "commit": {
+        "exit_code": 0,
+        "stdout": "810c0eba1a7348036f8bdf61e6632d0c36c6876c\n2026-10-28T06:17:33+00:00\nrelease: v1.19.5"
+      },
+      "branch": {
+        "exit_code": 1,
+        "stdout": ""
+      },
+      "status": {
+        "exit_code": 0,
+        "stdout": ""
+      },
+      "origin": "https://github.com/anomalyco/opencode.git",
+      "describe": {
+        "exit_code": 0,
+        "stdout": "v1.19.5"
+      },
+      "exact_tags": {
+        "exit_code": 0,
+        "stdout": "v1.19.5"
+      },
+      "manifests": {
+        "package.json": {
+          "name": "opencode",
+          "version": null,
+          "packageManager": "bun@1.4.4",
+          "engines": null
+        },
+        "packages/opencode/package.json": {
+          "name": "opencode",
+          "version": "1.19.5",
+          "packageManager": null,
+          "engines": null
+        },
+        "packages/cli/package.json": {
+          "name": "@opencode-ai/cli",
+          "version": "1.19.5",
+          "packageManager": null,
+          "engines": null
+        }
+      },
+      "root_agents_present": true
+    },
+    "opencode-v2": {
+      "head": {
+        "exit_code": 0,
+        "stdout": "9bbb8ce18c80f099e0e448775f59d965ead40a21"
+      },
+      "commit": {
+        "exit_code": 0,
+        "stdout": "9bbb8ce18c80f099e0e448775f59d965ead40a21\n2026-10-30T22:06:51+00:00\nrelease: v2.2.5"
+      },
+      "branch": {
+        "exit_code": 1,
+        "stdout": ""
+      },
+      "status": {
+        "exit_code": 0,
+        "stdout": ""
+      },
+      "origin": "https://github.com/anomalyco/opencode.git",
+      "describe": {
+        "exit_code": 0,
+        "stdout": "v2.2.5"
+      },
+      "exact_tags": {
+        "exit_code": 0,
+        "stdout": "v2.2.5"
+      },
+      "manifests": {
+        "package.json": {
+          "name": "opencode",
+          "version": "2.2.5",
+          "packageManager": "bun@1.4.4",
+          "engines": null
+        },
+        "packages/cli/package.json": {
+          "name": "@opencode/cli",
+          "version": "2.2.5",
+          "packageManager": null,
+          "engines": null
+        }
+      },
+      "root_agents_present": true
+    },
+    "pi": {
+      "head": {
+        "exit_code": 0,
+        "stdout": "2a32a605a9f18a5f0191f65358a2e764b2f69fc7"
+      },
+      "commit": {
+        "exit_code": 0,
+        "stdout": "2a32a605a9f18a5f0191f65358a2e764b2f69fc7\n2026-11-05T23:35:09+00:00\nfeat(p2): Gondolin sandbox environments"
+      },
+      "branch": {
+        "exit_code": 0,
+        "stdout": "main"
+      },
+      "status": {
+        "exit_code": 0,
+        "stdout": ""
+      },
+      "origin": "https://github.com/earendil-works/pi.git",
+      "describe": {
+        "exit_code": 0,
+        "stdout": "v1.5.0-219-g2a32a605a"
+      },
+      "exact_tags": {
+        "exit_code": 0,
+        "stdout": ""
+      },
+      "manifests": {
+        "package.json": {
+          "name": "pi-monorepo",
+          "version": "0.0.3",
+          "packageManager": null,
+          "engines": {
+            "node": ">=22.19.0"
+          }
+        },
+        "packages/coding-agent/package.json": {
+          "name": "@earendil-works/pi-coding-agent",
+          "version": "1.5.0",
+          "packageManager": null,
+          "engines": {
+            "node": ">=22.19.0"
+          }
+        }
+      },
+      "root_agents_present": true
+    },
+    "codex": {
+      "head": {
+        "exit_code": 0,
+        "stdout": "da279f6fd4a942261b3232feb515af4259922417"
+      },
+      "commit": {
+        "exit_code": 0,
+        "stdout": "da279f6fd4a942261b3232feb515af4259922417\n2026-11-06T02:42:02+00:00\nSupport optional thread IDs in hosted file uploads (#59795)"
+      },
+      "branch": {
+        "exit_code": 0,
+        "stdout": "main"
+      },
+      "status": {
+        "exit_code": 0,
+        "stdout": ""
+      },
+      "origin": "https://github.com/openai/codex.git",
+      "describe": {
+        "exit_code": 0,
+        "stdout": "libcap-v2.75-133-gda279f6fd4"
+      },
+      "exact_tags": {
+        "exit_code": 0,
+        "stdout": ""
+      },
+      "manifests": {
+        "package.json": {
+          "name": "codex-monorepo",
+          "version": null,
+          "packageManager": "pnpm@10.34.5+sha512.a4ee05f2f73658255bd6a89859c065a45c28a57daefae2c893a168ee2b73168c37b91e83e57ea67654ad03f03031746430e8bce38e362e042605fb8abc80192e",
+          "engines": {
+            "node": ">=24.22.1",
+            "pnpm": ">=10.34.5"
+          }
+        },
+        "codex-cli/package.json": {
+          "name": "@openai/codex",
+          "version": "0.0.0-dev",
+          "packageManager": "pnpm@10.34.5+sha512.a4ee05f2f73658255bd6a89859c065a45c28a57daefae2c893a168ee2b73168c37b91e83e57ea67654ad03f03031746430e8bce38e362e042605fb8abc80192e",
+          "engines": {
+            "node": ">=16"
+          }
+        }
+      },
+      "root_agents_present": false
+    }
+  },
+  "upstream": {
+    "anomalyco/opencode": {
+      "release_api": "https://api.github.com/repos/anomalyco/opencode/releases?per_page=100&page=1",
+      "releases_scanned": 100,
+      "remote_tags_exit_code": 0,
+      "selected": [
+        {
+          "pattern": "v1\\.(\\d+)\\.(\\d+)",
+          "highest_remote_stable_shaped_tag": "v1.19.5",
+          "tag_name": "v1.19.5",
+          "published_at": "2026-10-28T06:17:49Z",
+          "draft": false,
+          "prerelease": false,
+          "html_url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.5",
+          "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+          "matches_highest_remote_tag": true
+        },
+        {
+          "pattern": "v2\\.(\\d+)\\.(\\d+)",
+          "highest_remote_stable_shaped_tag": "v2.2.5",
+          "tag_name": "v2.2.5",
+          "published_at": "2026-10-30T23:17:23Z",
+          "draft": false,
+          "prerelease": false,
+          "html_url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
+          "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+          "matches_highest_remote_tag": true
+        }
+      ]
+    },
+    "earendil-works/pi": {
+      "release_api": "https://api.github.com/repos/earendil-works/pi/releases?per_page=100&page=1",
+      "releases_scanned": 100,
+      "remote_tags_exit_code": 0,
+      "selected": [
+        {
+          "pattern": "v(\\d+)\\.(\\d+)\\.(\\d+)",
+          "highest_remote_stable_shaped_tag": "v1.5.0",
+          "tag_name": "v1.5.0",
+          "published_at": "2026-11-02T11:05:31Z",
+          "draft": false,
+          "prerelease": false,
+          "html_url": "https://github.com/earendil-works/pi/releases/tag/v1.5.0",
+          "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+          "matches_highest_remote_tag": true
+        }
+      ]
+    },
+    "openai/codex": {
+      "release_api": "https://api.github.com/repos/openai/codex/releases?per_page=100&page=1",
+      "releases_scanned": 100,
+      "remote_tags_exit_code": 0,
+      "selected": [
+        {
+          "pattern": "rust-v(\\d+)\\.(\\d+)\\.(\\d+)",
+          "highest_remote_stable_shaped_tag": "rust-v0.167.0",
+          "tag_name": "rust-v0.167.0",
+          "published_at": "2026-11-06T01:40:00Z",
+          "draft": false,
+          "prerelease": false,
+          "html_url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
+          "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+          "matches_highest_remote_tag": true
+        }
+      ]
+    }
+  },
+  "environment": {
+    "os": "Linux-6.17.0-1033-oem-x86_64-with-glibc2.39",
+    "architecture": "x86_64",
+    "logical_cpus": 16
+  },
+  "finished_at_utc": "2026-11-06T03:28:41.947902+00:00"
+}

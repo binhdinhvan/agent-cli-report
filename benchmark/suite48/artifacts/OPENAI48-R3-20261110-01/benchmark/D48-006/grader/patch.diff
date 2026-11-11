@@ -1,0 +1,20 @@
+--- before/pagination.py
++++ after/pagination.py
+@@ -3,10 +3,13 @@
+ 
+ def merge_pages(pages):
+     result = []
+-    seen = set()
++    positions = {}
+     for page in pages:
+         for record in page:
+-            if record["id"] not in seen:
+-                seen.add(record["id"])
+-                result.append(record)
++            record_id = record["id"]
++            if record_id in positions:
++                result[positions[record_id]] = dict(record)
++            else:
++                positions[record_id] = len(result)
++                result.append(dict(record))
+     return result

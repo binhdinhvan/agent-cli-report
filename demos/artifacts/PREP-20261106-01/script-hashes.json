@@ -1,0 +1,9 @@
+{
+  "recorded_at_utc": "2026-11-06T03:54:14.160575+00:00",
+  "files": {
+    "demos/prepare.py": "900f1a6e3ef49544e627d1604ec9864df6b6ffd004aa730a5a2bba926df0cfe8",
+    "demos/preflight.py": "5a6d56d9eb036182aea1abbc4af8799169f84d17f10066bf5148c0d4e52533bd",
+    "demos/releases.json": "77999ed4d37780d863a113c597a5585501a84c44a1f0f5f447b8d8902b0d60e4"
+  },
+  "notes": "Scripts unchanged since their respective invocations; hashes recorded after preparation and during metadata preflight."
+}

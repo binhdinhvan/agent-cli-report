@@ -1,0 +1,1 @@
+{"status":"pass","checks":{"subscribed_before_prompt":true,"native_background_tool_returned":true,"parent_marker_before_wait":true,"background_parent_continues_before_worker_end":true,"native_worker_terminal":true}}

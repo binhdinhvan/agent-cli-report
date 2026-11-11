@@ -1,0 +1,22 @@
+--- before/pagination.py
++++ after/pagination.py
+@@ -1,12 +1,10 @@
+-"""Pagination helpers."""
+-
+-
+ def merge_pages(pages):
+-    result = []
+-    seen = set()
++    order = []
++    last = {}
+     for page in pages:
+         for record in page:
+-            if record["id"] not in seen:
+-                seen.add(record["id"])
+-                result.append(record)
+-    return result
++            key = record["id"]
++            if key not in last:
++                order.append(key)
++            last.setdefault(key, dict(record))
++    return [last[key] for key in order]

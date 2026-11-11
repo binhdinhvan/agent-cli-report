@@ -1,0 +1,42 @@
+{
+  "scope": "offline postcheck; no new generation",
+  "run_id": "R-0009",
+  "raw_status": "failure",
+  "raw_validity": "valid",
+  "reviewed_status": "infra_error",
+  "reviewed_validity": "pending_review",
+  "reason": "HTTP 200 carried response.failed; Pi event reports provider overload; missing usage stops batch",
+  "provider_error_evidence": "benchmark/artifacts/PILOT-SOL-20261106-01/R-0009/stdout.jsonl:58-59",
+  "secondary_environment_issue": "rg command not found (stdout.jsonl:49); no source modification; not proven root cause of provider failure",
+  "upstream_requests": 2,
+  "native_retry": "attempted once, blocked locally after pacing by missing-usage guard; no third upstream request",
+  "gap_seconds": 30.000943,
+  "cross_cli_live_pacing": "unverified: only one CLI ran",
+  "not_run_slots": 7,
+  "known_usage_estimated_cost_usd": "0.0280872",
+  "estimated_total_usd": null,
+  "measured_charge_usd": null,
+  "source_protocol_pricing_seal_hashes_match": true,
+  "key_scan_pass": true,
+  "supervisor_pid_absent": true,
+  "broker_socket_absent": true,
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "raw_artifact_sha256": {
+    "result.json": "d23d37c7f020b52fde21e9aa623201ac9ca04b3a2833c9c891c512b1a3071c16",
+    "protocol.json": "71bdb48e51b3d8f08e0cf069b18a54b6216e9562a60749454e21b1c78b2b738c",
+    "R-0009/stdout.jsonl": "098b984ef74b965ef5b5d42a647b76ea3ff85728ee04ee5880060fd56a5de4d7",
+    "R-0009/result.json": "b3e46eaaf6cc480d583b9dc88433d8daad1bef32452e443e7686a98a3424c9dc",
+    "R-0009/config.json": "6e719b648e2736191ad4a532200059be6734029e42f2d8f642b34186c87144a3",
+    "R-0009/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "R-0009/grader/grading.json": "f20cb81fe7959194f94e072178ae4e085797c14b8e60b0f21e9e095d70fbc322",
+    "R-0009/grader/patch.diff": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "R-0009/grader/snapshot/intervals.py": "c8de9a5897a04521f2f381cfab2ca073d98fde3a90f25546d25719348d612148",
+    "R-0009/grader/snapshot/test_public.py": "8eb40ed38a8653c191c77eefa3a269efbd90a123775a9adb12d24cdd062661d6"
+  },
+  "csv_raw_status_preserved": true
+}

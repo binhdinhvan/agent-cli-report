@@ -1,0 +1,1 @@
+{"status":"error","checks":{"subscribed_before_prompt":true,"test_agent_rules_empty":false},"error":"Error: test_agent_rules_empty"}

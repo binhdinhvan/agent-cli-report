@@ -1,0 +1,27 @@
+{
+  "status": "pass_after_independent_raw_review",
+  "raw_controller_status_unchanged": "error",
+  "harness_issue": "Regex expected exhaust/limit; native message uses interrupted repeatedly; controller assertion corrected for future runs, not rerun",
+  "raw_result_sha256": "07d738357685d184a663302d31fb4e3efcf99a764cd268b3799f9bad309fad2b",
+  "native_crashes": 11,
+  "model_requests": 11,
+  "terminal": {
+    "id": "msg_1c86f6819001x2h35Efuja3zDx",
+    "time": {
+      "created": 1794364106777
+    },
+    "type": "idle",
+    "outcome": "failed",
+    "error": {
+      "type": "aborted",
+      "message": "Execution was interrupted repeatedly and will not be resumed automatically."
+    }
+  },
+  "read_only_db_observation": {
+    "time_suspended": null,
+    "resume_attempts": 0,
+    "idle_outcome": "failed"
+  },
+  "db_mutations": 0,
+  "real_provider_requests": 0
+}

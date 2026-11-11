@@ -1,0 +1,12 @@
+{
+  "platform": "Linux-6.17.0-1033-oem-x86_64-with-glibc2.39",
+  "cpu_count": 16,
+  "cpu_model": "Intel(R) Core(TM) 7 240H",
+  "mem_total": "MemTotal:       15845060 kB",
+  "cgroup": {
+    "cpu.max": null,
+    "memory.max": null,
+    "pids.max": null
+  },
+  "cpu_exclusivity": "uncontrolled; snapshot at offline audit only; recheck before approved launch"
+}

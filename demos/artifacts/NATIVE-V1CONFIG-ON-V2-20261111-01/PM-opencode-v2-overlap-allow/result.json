@@ -1,0 +1,485 @@
+{
+  "case": {
+    "id": "PM-opencode-v2-overlap-allow",
+    "tool": "opencode-v2",
+    "permission": "overlap-allow",
+    "legacy_v1_config": true
+  },
+  "spec": {
+    "tool": "opencode-v2",
+    "version": "2.2.5",
+    "config_id": "BP48-DM-5ecce551981ff1739b00",
+    "repository": "anomalyco/opencode",
+    "tag": "v2.2.5",
+    "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+    "asset": "opencode-linux-x64-baseline.tar.gz",
+    "size": 119196162,
+    "sha256": "09f44302c10fd036912f59c81fd1aef5df45dd06f649197f9dfc9bbe2a79614e",
+    "binary_names": [
+      "opencode"
+    ],
+    "started_at_utc": "2026-11-06T03:49:40.824386+00:00",
+    "status": "prepared_not_executed",
+    "release_api": "https://api.github.com/repos/anomalyco/opencode/releases/tags/v2.2.5",
+    "release_url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
+    "asset_url": "https://github.com/anomalyco/opencode/releases/download/v2.2.5/opencode-linux-x64-baseline.tar.gz",
+    "archive_sha256_verified": "09f44302c10fd036912f59c81fd1aef5df45dd06f649197f9dfc9bbe2a79614e",
+    "archive_members": [
+      {
+        "name": "opencode",
+        "size": 252713136,
+        "type": "0",
+        "linkname": ""
+      }
+    ],
+    "binary": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v2-2.2.5/payload/opencode",
+    "binary_sha256": "8d060e1d2fbb9bb44cf09ae6ed1f3f6a7cff070b5227e2f90970132b23a92050",
+    "payload": "/home/tts/Project/agent-cli-report/.local/binaries/opencode-v2-2.2.5/payload",
+    "runtime_root": "/tmp/opencode/agent-cli-report/smoke/BP48-DM-5ecce551981ff1739b00",
+    "finished_at_utc": "2026-11-06T03:51:23.412267+00:00",
+    "environment_revision": "search-r2"
+  },
+  "config": {
+    "$schema": "https://opencode.ai/config.json",
+    "model": "shopaikey/gpt-6.1-sol",
+    "providers": {
+      "shopaikey": {
+        "name": "Smoke broker",
+        "package": "@opencode/ai/providers/openai-compatible/responses",
+        "settings": {
+          "baseURL": "http://127.0.0.1:8765/v1",
+          "apiKey": "[LOCAL-TOKEN]"
+        },
+        "models": {
+          "gpt-6.1-sol": {
+            "name": "gpt-6.1-sol",
+            "limit": {
+              "context": 128000,
+              "output": 2048
+            },
+            "modelID": "gpt-6.1-sol",
+            "capabilities": {
+              "tools": true,
+              "input": [
+                "text"
+              ],
+              "output": [
+                "text"
+              ],
+              "reasoning": {
+                "supported": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "permission": {
+      "*": "deny",
+      "bash": {
+        "*": "deny",
+        "python3 *": "allow"
+      }
+    }
+  },
+  "cli": [
+    "/opt/agent-cli-report/BP48-DM-5ecce551981ff1739b00/opencode",
+    "run",
+    "--standalone",
+    "--format",
+    "json",
+    "--model",
+    "shopaikey/gpt-6.1-sol",
+    "Execute the requested marker tool once, then reply REPORT_DEMO_DONE."
+  ],
+  "execution": {
+    "supervisor_host_pid": 58898,
+    "exit_code": 0,
+    "timed_out": false,
+    "output_limit_exceeded": false,
+    "duration_ms": 1245,
+    "duration_boundary": "outer bwrap spawn through launcher/bridge exit; startup/teardown included",
+    "outer_started_monotonic": 3841.607438604,
+    "outer_finished_monotonic": 3842.851992708,
+    "native_clock": {
+      "started_monotonic": 3841.651891111,
+      "finished_monotonic": 3842.40429082,
+      "duration_ms": 752
+    },
+    "witness": {
+      "project_writable": true,
+      "immutable_readonly": {
+        "test_public.py": true
+      },
+      "hidden_absent": true,
+      "home_hidden": true,
+      "net_namespace": "net:[4026534120]",
+      "provider_key_env_absent": true
+    }
+  },
+  "synthetic_transport": true,
+  "provider_requests": 0,
+  "synthetic_exchanges": 3,
+  "synthetic_ledger_not_real_cost": [
+    {
+      "started_at_utc": "2026-11-11T02:41:18.673680+00:00",
+      "request_index": 1,
+      "original_body_sha256": "0ddf226701152a5e3f6b4d7780bc2dbb5974f3d8f6246dcabd72f06c24bf637a",
+      "requested_max_output_tokens": null,
+      "model": "gpt-6.1-sol",
+      "tool_names": [],
+      "forwarded_protocol_header_names": [
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        "message"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 0,
+      "minimum_request_window_seconds": 0,
+      "deadline_remaining_seconds_at_dispatch": 119.332755,
+      "pacing_wait_seconds": 0,
+      "effective_max_output_tokens": 512,
+      "http_status": 200,
+      "response_protocol_header_names": [
+        "x-request-id"
+      ],
+      "provider_request_id": "offline-synthetic-not-provider",
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "input_tokens": 100,
+          "output_tokens": 10,
+          "total_tokens": 110,
+          "input_tokens_details": {
+            "cached_tokens": 20
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "uncached_input_tokens": 80,
+        "components": {
+          "uncached_input_usd": "0.000384",
+          "cached_input_usd": "0.0000048",
+          "output_usd": "0.00018"
+        },
+        "estimated_cost_usd": "0.0005688",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 1770,
+      "finished_at_utc": "2026-11-11T02:41:18.674238+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-11T02:41:18.679306+00:00",
+      "request_index": 2,
+      "original_body_sha256": "8d2e5019c8fc1c8f32a31e0e94cd5881bdad3ebdacb78c2ed1bfc5a8bb54acd2",
+      "requested_max_output_tokens": 2048,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "shell",
+        "skill"
+      ],
+      "forwarded_protocol_header_names": [
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        "message"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 0,
+      "minimum_request_window_seconds": 0,
+      "deadline_remaining_seconds_at_dispatch": 119.327098,
+      "pacing_wait_seconds": 0,
+      "effective_max_output_tokens": 512,
+      "http_status": 200,
+      "response_protocol_header_names": [
+        "x-request-id"
+      ],
+      "provider_request_id": "offline-synthetic-not-provider",
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "input_tokens": 100,
+          "output_tokens": 10,
+          "total_tokens": 110,
+          "input_tokens_details": {
+            "cached_tokens": 20
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "uncached_input_tokens": 80,
+        "components": {
+          "uncached_input_usd": "0.000384",
+          "cached_input_usd": "0.0000048",
+          "output_usd": "0.00018"
+        },
+        "estimated_cost_usd": "0.0005688",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 1992,
+      "finished_at_utc": "2026-11-11T02:41:18.680035+00:00"
+    },
+    {
+      "started_at_utc": "2026-11-11T02:41:18.744867+00:00",
+      "request_index": 3,
+      "original_body_sha256": "5cad94f4ee971ac3e263a1c78e38c878c8ab9b4cb2de1714db0a5bfabf5507a6",
+      "requested_max_output_tokens": 2048,
+      "model": "gpt-6.1-sol",
+      "tool_names": [
+        "shell",
+        "skill"
+      ],
+      "forwarded_protocol_header_names": [
+        "user-agent"
+      ],
+      "responses_lite": null,
+      "input_types": [
+        "message",
+        "function_call",
+        "function_call_output"
+      ],
+      "previous_response_id_present": false,
+      "generation_settings": {},
+      "min_interval_seconds": 0,
+      "minimum_request_window_seconds": 0,
+      "deadline_remaining_seconds_at_dispatch": 119.261545,
+      "pacing_wait_seconds": 0,
+      "effective_max_output_tokens": 512,
+      "http_status": 200,
+      "response_protocol_header_names": [
+        "x-request-id"
+      ],
+      "provider_request_id": "offline-synthetic-not-provider",
+      "terminal_type": "response.completed",
+      "response_model": "gpt-6.1-sol",
+      "cost": {
+        "usage": {
+          "input_tokens": 100,
+          "output_tokens": 10,
+          "total_tokens": 110,
+          "input_tokens_details": {
+            "cached_tokens": 20
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "uncached_input_tokens": 80,
+        "components": {
+          "uncached_input_usd": "0.000384",
+          "cached_input_usd": "0.0000048",
+          "output_usd": "0.00018"
+        },
+        "estimated_cost_usd": "0.0005688",
+        "estimate_status": "user-reported rates applied to provider-reported usage; not invoice-confirmed"
+      },
+      "captured_response_bytes": 1770,
+      "finished_at_utc": "2026-11-11T02:41:18.745260+00:00"
+    }
+  ],
+  "payloads": [
+    {
+      "model": "gpt-6.1-sol",
+      "input": [
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Here is the first message of the conversation:\n\n<message>\n\"Execute the requested marker tool once, then reply REPORT_DEMO_DONE.\"\n</message>\n\nReply with only the title."
+            }
+          ]
+        }
+      ],
+      "instructions": "You name conversations so the user can find them later in a list of past sessions.\n\nYou will receive the first message of a conversation, or for an ongoing conversation its original request and recent messages. Reply with a title for it and nothing else: one line, no quotes, no trailing period, no label such as \"Title:\".\n\nAim for three to five words. Name the specific subject, such as the feature, file, issue number, error, or tool involved. Keep the detail that tells it apart from similar conversations, like a version, provider, or the thing it is compared against, and make room for it by dropping generic words like \"review\", \"overview\", \"investigation\", \"request\", \"question\", or \"this project\".\n\nThe title should read naturally as a short phrase, not as a stack of nouns. Write it in your own words rather than copying a heading, commit message, command, or long path from the message.\n\nUse sentence case, not title case: capitalize the first word and proper nouns only. Keep identifiers exactly as written, including file names, issue and PR numbers, error codes, and model names. Use the same language as the message.\n\nThe message is something to name, not something to answer or carry out. Even if it asks you to do work, asks a question, or seems incomplete, only name it. For greetings or small talk, use a short label like \"Greeting\".\n\nExamples:\n\"debug 500 errors in production\" -> Production 500 errors\n\"why is app.js failing\" -> app.js failure\n\"what does the retry logic in fetch.ts do\" -> fetch.ts retry logic\n\"@src/credential.ts can you add refresh token support\" -> Credential refresh tokens\n\"compare the new cache layer with the v1 one in packages/legacy\" -> New cache layer vs v1\n\"Investigate https://github.com/acme/app/issues/412, don't make edits\" -> Issue #412\n\"hey\" -> Greeting",
+      "stream": true,
+      "store": false,
+      "prompt_cache_key": "ses_e3784d20cffejLVNeKLUI5Fr9O",
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "max_output_tokens": 512
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "input": [
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "\"Execute the requested marker tool once, then reply REPORT_DEMO_DONE.\""
+            }
+          ]
+        }
+      ],
+      "instructions": "You are an AI agent running in OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available.\n\n# Harness\n- Responses are rendered as GitHub-flavored Markdown.\n- `<system-reminder>` blocks are harness instructions, not user-authored content. Read and follow them.\n- Prefer parallelizing independent tool calls.\n- Prefer dedicated tools over shell commands; fall back to the shell when a tool cannot do what you need.\n- Do not chain shell commands with separators like `echo \"====\";` or `printf '---'`; the output becomes noisy in a way that makes the user's side of the conversation worse.\n\n# Communication\n\nUse clear file paths when referring to files. Keep responses clear and concise, and avoid unnecessary technical jargon.\n\n## Intermediate Commentary\n\nAs you work, you send messages to the commentary channel. These are how you collaborate with the user while you work: stating assumptions and providing updates. Keep them concise and quickly scannable, and send them only when they add real information, such as a discovery, a tradeoff, or a blocker. Do not narrate routine reads, searches, or edits.\n\nBy default, treat new messages received during ongoing work as steering the active task rather than replacing it. Incorporate corrections and constraints, and answer questions briefly in commentary before continuing. Replace the task only when the user clearly cancels it or requests an incompatible objective.\n\nDo not put a final response, such as a blocking or clarifying question, in the commentary channel. The final answer must always be fully self-contained.\n\n## Final Answer\n\nIn the final answer, lead with the outcome, not the steps you took to reach it. Cover the most important information, use only as much structure as the answer needs, and avoid long-winded explanations unless necessary. Include technical detail only where it helps.\n\n# Working in codebases\n- Keep changes consistent with the structure, naming, style, and patterns of the surrounding code.\n- Treat unfamiliar files or changes as potential user work and investigate before deleting or overwriting them.\n\n# Delegation\n\nDo not spawn subagents unless the user or applicable AGENTS.md/skill instructions explicitly ask for subagents, delegation, or parallel agent work.\n\n# Destructive actions\n\nDo not revert, reset, or discard changes you did not make. Never run destructive commands such as `git reset --hard`, `git checkout --`, or recursive deletes on broad paths unless the user clearly asked for that operation; if the target or scope is unclear, ask first. Prefer non-interactive git commands.\n\n# Autonomy\n\nDo not infer authorization for work beyond the user's request. Assumptions that help you make progress are fine as long as they stay within the user's intent and the scope of the task.\n\n# Your Model\n- Name: gpt-6.1-sol\n- Provider ID: shopaikey\n- Model ID: gpt-6.1-sol\nToday's date: Wed Nov 11 2026\n\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/BP48-DM-5ecce551981ff1739b00/project\n  Workspace root folder: /tmp/opencode/agent-cli-report/smoke/BP48-DM-5ecce551981ff1739b00/project\n  Is directory a git repo: no\n  Platform: linux\n  Prefer /tmp/opencode/agent-cli-report/smoke/BP48-DM-5ecce551981ff1739b00/tmp/opencode over generic system temporary directories such as /tmp; it is pre-created and approved for external access.\n</env>\nWhen you create a worktree outside the current working directory and intend to use it as your primary working directory, consider using `execute` to call `tools.opencode.session_move` and make the worktree the session's working directory.",
+      "stream": true,
+      "max_output_tokens": 512,
+      "store": false,
+      "prompt_cache_key": "ses_e3784d20cffejLVNeKLUI5Fr9O",
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "name": "shell",
+          "description": "Execute a shell command and return its output. Commands run on Linux using sh. Quote file paths containing spaces or special characters. Prefer dedicated tools over shell commands when possible. When output is large, the full result is saved to a file and a truncated preview is returned. Rely on automatic truncation unless filtering the output is more useful. Commands accept an optional timeout, background commands have no timeout by default. Background commands return immediately, and you will be notified when they complete.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "command": {
+                "type": "string",
+                "description": "Shell command string to execute"
+              },
+              "workdir": {
+                "type": "string",
+                "description": "Working directory to execute the command in. Defaults to the current working directory. When possible, avoid changing directories in the command and set the working directory here instead."
+              },
+              "timeout": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Timeout in milliseconds. Set to 0 to disable the timeout. Defaults to 120000 for foreground commands. Background commands have no timeout by default."
+              },
+              "background": {
+                "type": "boolean",
+                "description": "Run the command in the background and return immediately (useful for dev servers and long-running builds). You do not need to use '&' at the end of the command when using this parameter. You will be notified when it completes. DO NOT poll for completion."
+              }
+            },
+            "required": [
+              "command"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "skill",
+          "description": "Load a specialized skill's instructions and resources into the current conversation when the task at hand matches its description.\n\nThe skill ID must match an available skill or a skill explicitly referenced by the user.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "The ID of an available skill or a skill explicitly referenced by the user"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        }
+      ]
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "input": [
+        {
+          "type": "message",
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "\"Execute the requested marker tool once, then reply REPORT_DEMO_DONE.\""
+            }
+          ]
+        },
+        {
+          "type": "function_call",
+          "id": "fc_report_demo",
+          "call_id": "call_report_demo",
+          "name": "shell",
+          "arguments": "{\"command\":\"python3 -c 'from pathlib import Path; Path(\\\"report-permission-witness.txt\\\").write_text(\\\"REPORT_PERMISSION_EXECUTED\\\"); print(\\\"REPORT_PERMISSION_EXECUTED\\\")'\"}"
+        },
+        {
+          "type": "function_call_output",
+          "call_id": "call_report_demo",
+          "output": "REPORT_PERMISSION_EXECUTED\n"
+        }
+      ],
+      "instructions": "You are an AI agent running in OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available.\n\n# Harness\n- Responses are rendered as GitHub-flavored Markdown.\n- `<system-reminder>` blocks are harness instructions, not user-authored content. Read and follow them.\n- Prefer parallelizing independent tool calls.\n- Prefer dedicated tools over shell commands; fall back to the shell when a tool cannot do what you need.\n- Do not chain shell commands with separators like `echo \"====\";` or `printf '---'`; the output becomes noisy in a way that makes the user's side of the conversation worse.\n\n# Communication\n\nUse clear file paths when referring to files. Keep responses clear and concise, and avoid unnecessary technical jargon.\n\n## Intermediate Commentary\n\nAs you work, you send messages to the commentary channel. These are how you collaborate with the user while you work: stating assumptions and providing updates. Keep them concise and quickly scannable, and send them only when they add real information, such as a discovery, a tradeoff, or a blocker. Do not narrate routine reads, searches, or edits.\n\nBy default, treat new messages received during ongoing work as steering the active task rather than replacing it. Incorporate corrections and constraints, and answer questions briefly in commentary before continuing. Replace the task only when the user clearly cancels it or requests an incompatible objective.\n\nDo not put a final response, such as a blocking or clarifying question, in the commentary channel. The final answer must always be fully self-contained.\n\n## Final Answer\n\nIn the final answer, lead with the outcome, not the steps you took to reach it. Cover the most important information, use only as much structure as the answer needs, and avoid long-winded explanations unless necessary. Include technical detail only where it helps.\n\n# Working in codebases\n- Keep changes consistent with the structure, naming, style, and patterns of the surrounding code.\n- Treat unfamiliar files or changes as potential user work and investigate before deleting or overwriting them.\n\n# Delegation\n\nDo not spawn subagents unless the user or applicable AGENTS.md/skill instructions explicitly ask for subagents, delegation, or parallel agent work.\n\n# Destructive actions\n\nDo not revert, reset, or discard changes you did not make. Never run destructive commands such as `git reset --hard`, `git checkout --`, or recursive deletes on broad paths unless the user clearly asked for that operation; if the target or scope is unclear, ask first. Prefer non-interactive git commands.\n\n# Autonomy\n\nDo not infer authorization for work beyond the user's request. Assumptions that help you make progress are fine as long as they stay within the user's intent and the scope of the task.\n\n# Your Model\n- Name: gpt-6.1-sol\n- Provider ID: shopaikey\n- Model ID: gpt-6.1-sol\nToday's date: Wed Nov 11 2026\n\nHere is some useful information about the environment you are running in:\n<env>\n  Working directory: /tmp/opencode/agent-cli-report/smoke/BP48-DM-5ecce551981ff1739b00/project\n  Workspace root folder: /tmp/opencode/agent-cli-report/smoke/BP48-DM-5ecce551981ff1739b00/project\n  Is directory a git repo: no\n  Platform: linux\n  Prefer /tmp/opencode/agent-cli-report/smoke/BP48-DM-5ecce551981ff1739b00/tmp/opencode over generic system temporary directories such as /tmp; it is pre-created and approved for external access.\n</env>\nWhen you create a worktree outside the current working directory and intend to use it as your primary working directory, consider using `execute` to call `tools.opencode.session_move` and make the worktree the session's working directory.",
+      "stream": true,
+      "max_output_tokens": 512,
+      "store": false,
+      "prompt_cache_key": "ses_e3784d20cffejLVNeKLUI5Fr9O",
+      "include": [
+        "reasoning.encrypted_content"
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "name": "shell",
+          "description": "Execute a shell command and return its output. Commands run on Linux using sh. Quote file paths containing spaces or special characters. Prefer dedicated tools over shell commands when possible. When output is large, the full result is saved to a file and a truncated preview is returned. Rely on automatic truncation unless filtering the output is more useful. Commands accept an optional timeout, background commands have no timeout by default. Background commands return immediately, and you will be notified when they complete.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "command": {
+                "type": "string",
+                "description": "Shell command string to execute"
+              },
+              "workdir": {
+                "type": "string",
+                "description": "Working directory to execute the command in. Defaults to the current working directory. When possible, avoid changing directories in the command and set the working directory here instead."
+              },
+              "timeout": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Timeout in milliseconds. Set to 0 to disable the timeout. Defaults to 120000 for foreground commands. Background commands have no timeout by default."
+              },
+              "background": {
+                "type": "boolean",
+                "description": "Run the command in the background and return immediately (useful for dev servers and long-running builds). You do not need to use '&' at the end of the command when using this parameter. You will be notified when it completes. DO NOT poll for completion."
+              }
+            },
+            "required": [
+              "command"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        },
+        {
+          "type": "function",
+          "name": "skill",
+          "description": "Load a specialized skill's instructions and resources into the current conversation when the task at hand matches its description.\n\nThe skill ID must match an available skill or a skill explicitly referenced by the user.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "The ID of an available skill or a skill explicitly referenced by the user"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "strict": false
+        }
+      ]
+    }
+  ],
+  "marker_tool_completed": false,
+  "shell_witness_created": true,
+  "tool_errors": [],
+  "isolation_pass": true,
+  "supervisor_pid_absent": true,
+  "broker_socket_absent": true,
+  "status": "observed_pending_review"
+}

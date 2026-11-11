@@ -1,0 +1,41 @@
+{
+  "scope": "Prelaunch offline gates, no credential/provider calls",
+  "checked_at_utc": "2026-11-10T03:12:27.427589+00:00",
+  "explicit_user_confirmation": "ok xác nhận after assistant asked start48paidruns with16USD estimate guard",
+  "plan_sha256": "7d7fe5edf4153da954e5fa8895a8728837abe4b246deaa10ae7b47bccdbc699a",
+  "protocol_sha256": "d3af611d8d06e533c60827dd887aa74a48b20e4c74c6f2e00a50cb2e85a70e93",
+  "input_hashes_verified": 48,
+  "resource_identity": {
+    "platform": "Linux-6.17.0-1033-oem-x86_64-with-glibc2.39",
+    "cpu_count": 16,
+    "cpu_model": "Intel(R) Core(TM) 7 240H",
+    "mem_total": "MemTotal:       15845060 kB",
+    "cgroup": {
+      "cpu.max": null,
+      "memory.max": null,
+      "pids.max": null
+    },
+    "cpu_exclusivity": "uncontrolled; background load not fixed"
+  },
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "fresh_run_range": [
+    "R-0039",
+    "R-0086"
+  ],
+  "fresh_config_range": [
+    "C-0140",
+    "C-0187"
+  ],
+  "real_ids_reserved_yet": false,
+  "new_guard_usd_estimate": "16",
+  "historical_pilot_known_cost_usd_not_in_new_guard": "1.10640264",
+  "historical_unpriced_requests": 6,
+  "historical_measured_total_usd": null,
+  "retries_automatic": 0,
+  "ready_for_explicit_approved_launch": true
+}

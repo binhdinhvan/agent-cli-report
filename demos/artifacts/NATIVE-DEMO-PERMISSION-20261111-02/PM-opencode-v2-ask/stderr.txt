@@ -1,0 +1,1 @@
+[93m[1m! [0mpermission requested: shell (python3 -c 'from pathlib import Path; Path("report-permission-witness.txt").write_text("REPORT_PERMISSION_EXECUTED"); print("REPORT_PERMISSION_EXECUTED")'); auto-rejecting

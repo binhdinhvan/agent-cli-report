@@ -1,0 +1,23 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Dependencies and generated local artifacts
+node_modules/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Isolated runtime state and raw potentially sensitive logs
+.local/
+benchmark/workspaces/
+benchmark/raw/
+demos/raw/
+
+# Historical raw >100 MiB: publish its lossless .json.gz sidecar instead.
+/demos/artifacts/SEARCH-ENV-OFFLINE-20261106-01/C-0077/mock-requests.json
+
+# Keep reviewed/redacted shareable artifacts elsewhere and review before committing.

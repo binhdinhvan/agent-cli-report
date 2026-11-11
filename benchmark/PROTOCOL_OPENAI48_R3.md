@@ -1,0 +1,11 @@
+# Chạy lại benchmark OpenAI — reasoning r3
+
+Người dùng yêu cầu “chạy lại benchmark” sau bản sửa reasoningr3. Scope: **4 native smoke mới, đạt đủ4 mới chạy48slot benchmark**. Không tái dùng IDs r1/r2 hoặc lấy3smoke pass trước thay gate mới. Cả4smoke mới là supplementary retries của R274–277, không thay raw/status cũ. BenchmarkOpenAI vẫn0attempt trước scope này, giữ cohort riêng vớiShop.
+
+Kế thừa [r2protocol](PROTOCOL_OPENAI48_R2.md) và [r3fix](OPENAI_REASONING_FIX_R3.md): pinned4binary/source, fixture/order/prompt/rubricr2/search-r2/paced900, concurrency1/gap≥30 xuyênCLI, socket45/wall900/reserve60/request8/output2048, ResponsesSSE/storefalse/defaulttier, effortlow. **Giữ mọi native reasoning fields** gồmcontextall_turns/summary, giữheaders/protocol/tool schema/cache semantics. Không đổiprovider/model, khôngauto retry/fallback/topup trong scope mới. Missingusage hoặcinfra/provider/isolation lỗi dừng; validtaskfailure/timeout giữ nguyên và có thểtiếp theo policy.
+
+Guard16USD khôngtăng, **carry0.33970766USD** = historicalknown0.28655616 + oldunknownwrite conservative reserve0.015871 + r2estimatedguard0.0372805(gồmTTLupperbounds). Historicalunpriced6 vẫnunknown, khônggiả0/khôngclaimcharge. Remainingguard **15.66029234USD** gồm4smoke+48benchmark. Cachecostr2 dùngactualbreakdown hoặc conservative12hguardestimate nếuTTLunknown; khôngdoublecount vàkhônginvoicecap. Không nhập synthetictoken/cost vào phíthật.
+
+Runner `openai48_r3.py` reuse mainloopr2 qua process-localpatches, thay normalizer/plan/allocator/dispatch/state updater; **không sửa source r1/r2 đãpin**. Bind180tests/16nativeoffline/40exchanges/8ResponsesLitepreserved-context vàtestlauncher mới, source/profile/resource/registry/priorraw. Freshapproval boundexactplan/artifact/budget trướckeyread, locktrướcreserve52IDs mới từR326/C427. Keyprivate600 chỉhostruntime, khôngprint/save; giữsource snapshots/raw/config/grading/usage/failures. Smoke index cóslotOAI-R3-SMOKE vàrepetitionsmoke, không tínhđiểmbenchmark. Gap≥30s thật từsmokecuối tới benchmarkđầu, mangsmokeguardestimate sangbenchmark.
+
+Summarydurable, đóngauthorizedflag khi dừng/kếtthúc/launcherexception. Không tựresume hoặc táidùngreservednotrunIDs. Nativeoffline khôngchứngminhproviderpass saufix; chỉsmokethật mới nghiệmthu. Không camkết hoànthành48 hoặcđộổnđịnh dàihạn.

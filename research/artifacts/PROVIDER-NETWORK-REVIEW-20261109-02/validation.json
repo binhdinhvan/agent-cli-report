@@ -1,0 +1,14 @@
+{
+  "scope": "user-requested repeat of unauthenticated connectivity checks",
+  "result_sha256": "e92f77c633cc90bba7f11658eca8810806ac9d3c141808ee93a0b2ea677d601f",
+  "same_script_as_first_check": true,
+  "all_basic_checks_pass": true,
+  "http_statuses": [
+    401,
+    200
+  ],
+  "credential_reads": 0,
+  "generation_requests": 0,
+  "authenticated_responses_backend": "unverified",
+  "pilot_retried": false
+}

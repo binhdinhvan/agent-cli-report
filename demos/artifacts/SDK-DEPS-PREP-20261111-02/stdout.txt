@@ -1,0 +1,7 @@
+bun install v1.4.4 (38afee6c8)
+
++ @opencode/sdk@2.2.5 (v2.2.7 available)
+
+360 packages installed [5.31s]
+
+Blocked 1 postinstall. Run `bun pm untrusted` for details.

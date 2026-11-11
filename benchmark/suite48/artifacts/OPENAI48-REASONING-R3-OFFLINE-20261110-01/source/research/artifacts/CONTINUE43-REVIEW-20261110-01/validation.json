@@ -1,0 +1,85 @@
+{
+  "status": "pass",
+  "checked_at_utc": "2026-11-10T14:40:27.731654+00:00",
+  "batch": "benchmark/suite48/artifacts/BENCH43-CONTINUE-20261110-01",
+  "executed_attempts": 2,
+  "new_unique_slots_attempted": 2,
+  "remaining_unique_slots_not_run": 41,
+  "success": "R179Pi/B02scope/public/hidden pass; onlypagination.py changed; CLIexit0",
+  "stop": "R180v2/B02request1TimeoutError before HTTP/terminal/usage, no edits; no walltimeout; rootcauseunverified",
+  "provider_requests": 6,
+  "completed_with_usage": 5,
+  "unpriced_requests": 1,
+  "known_estimate_usd": "0.03299880",
+  "benchmark_cumulative_known_usd": "0.28485816",
+  "benchmark_cumulative_unpriced": 4,
+  "total_charge_usd": null,
+  "all_benchmark_attempts": 8,
+  "all_benchmark_unique_slots_attempted": 7,
+  "first_attempt_counts": {
+    "success": 2,
+    "failure": 1,
+    "infra_error": 4
+  },
+  "supplementary_retry_counts": {
+    "success": 1
+  },
+  "duration_ms": {
+    "R-0179": 157222,
+    "R-0180": 159194
+  },
+  "gaps_seconds": [
+    30.001177,
+    30.0007,
+    30.001344,
+    30.001366,
+    30.000777
+  ],
+  "all_gaps_ge30": true,
+  "cross_batch_gap_seconds": 713.53606,
+  "minimum_remaining_seconds_at_dispatch": 753.439768,
+  "cleanup": {
+    "R-0179": "supervisorPID/socket absent; isolation witness pass",
+    "R-0180": "supervisorPID/socket absent; isolation witness pass"
+  },
+  "unrun_runtime_roots_absent": true,
+  "input_resource_hashes": "pass",
+  "source_git_status": {
+    "opencode-v1": "clean",
+    "opencode-v2": "clean",
+    "pi": "clean",
+    "codex": "clean"
+  },
+  "frozen_pilot": "PASS: frozen outputs, ledger, review, fixture/dependency/binary and source hashes; offline only\n",
+  "raw_artifact_sha256": {
+    "plan.json": "06dd6a62cdd0deb2ea436b2426f2e811e34b7202d7b2ebb03ba635c26022742c",
+    "result.json": "d4d5d46b2db531c3d2e73ccc87a12f53d5f0dd5f10b3261fa96cb961dfe71648",
+    "reserved.json": "be1b2a8cd0d79d392e013f87aa36b8027bb4dc2ca946f916c37eca2bc7bdc26f",
+    "approval.json": "d8ca02292b3a6d1eb9473b2880548e6ef2e988e2fa59daf7e4d0685c64e5f17e",
+    "D48-006/stdout.jsonl": "7f183d42372654966eca8e733e3cbb5aa308e96b852a518c2aeb86d4c8774ced",
+    "D48-006/result.json": "40ce2aa66b1e4b407dbeea439dc509e76cd7c85d9d0da8fbdfe2c49bdaebfe28",
+    "D48-006/execution.json": "5513385d51169812e600e5de28bd0cb3c989edcb26d32070c88970dad92aea07",
+    "D48-006/config.json": "3f58a3e3d49119e8dad8b268380ca0693c772375d91f38556edda8c3e6c57444",
+    "D48-006/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D48-007/stdout.jsonl": "e9b7058af6bfa31aec783f47a06c3055429da76370038d9715a28145c504ec65",
+    "D48-007/result.json": "db76b7b4cf7ec404ff41689b60d5f21a34247092f6b191778ab29906762a1653",
+    "D48-007/execution.json": "fc120fc6ef77af59f3779122d7410d51c2fd165751eb2aa36d31518a4eb9bb2b",
+    "D48-007/config.json": "1275f28a9ac85bc3db6b662f1faa9618aabd810bbcc9846796701fcb5b60f7bc",
+    "D48-007/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D48-006/grader/grading.json": "a7abe21cc46c66b970684723c109c190d97a0eb3add64542f0500866919715df",
+    "D48-006/grader/patch.diff": "fa210c30403409f558a6f64ed9522532395e98a1ed3df6bb8724e3d73e4500e5",
+    "D48-006/grader/snapshot/test_public.py": "18f4ea89162fcfc9762a059b4de6f9d01fbf22adf158393cde6cde316ddbf8e9",
+    "D48-006/grader/snapshot/pagination.py": "ebe5a7877052854d04620952259d2dabb4d07802c904995c2f9a3fdacd90d4e1",
+    "D48-007/grader/grading.json": "fb0a144454c5f6cd42e622cca8af090673ebf7f9f4bd72e5e764407aa8ee928b",
+    "D48-007/grader/patch.diff": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D48-007/grader/snapshot/test_public.py": "18f4ea89162fcfc9762a059b4de6f9d01fbf22adf158393cde6cde316ddbf8e9",
+    "D48-007/grader/snapshot/pagination.py": "539d4697695b7ccc77317f032199cff92832a115bf4392622ffff474502a2801"
+  },
+  "secret_pattern_scan": "heuristic pass; not full publication/PII review",
+  "next_registry_ids": [
+    "R-0222",
+    "C-0323"
+  ],
+  "new_provider_requests_by_audit": 0,
+  "auto_retry_or_resume_authorized": false
+}

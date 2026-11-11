@@ -1,0 +1,59 @@
+{
+  "observed_at_utc": "2026-11-06T03:54:47.113356+00:00",
+  "private_binary_processes_still_visible": [],
+  "proc_exe_inspected": 111,
+  "proc_exe_unavailable_or_inaccessible": 284,
+  "repo_status": {
+    "opencode-v1": "clean",
+    "opencode-v2": "clean",
+    "pi": "clean",
+    "codex": "clean"
+  },
+  "runtime_files": {
+    "C-0001": [
+      {
+        "path": "codex-home/config.toml",
+        "size": 36
+      }
+    ],
+    "C-0002": [
+      {
+        "path": "tmp/.bun-1002-99cf65a7ec1d243c.so",
+        "size": 5210768
+      },
+      {
+        "path": "codex-home/config.toml",
+        "size": 36
+      },
+      {
+        "path": "xdg-data/opencode/log/opencode.log",
+        "size": 307
+      }
+    ],
+    "C-0003": [
+      {
+        "path": "agent/models-store.json",
+        "size": 2
+      },
+      {
+        "path": "agent/auth.json",
+        "size": 2
+      },
+      {
+        "path": "codex-home/config.toml",
+        "size": 36
+      }
+    ],
+    "C-0004": [
+      {
+        "path": "codex-home/config.toml",
+        "size": 36
+      },
+      {
+        "path": "codex-home/tmp/arg0-linux/codex-arg0x0FQiy/.lock",
+        "size": 0
+      }
+    ]
+  },
+  "limitations": "Process scan matches prepared CLI inode only, not every helper; inaccessible processes are not inspected. No process was signalled."
+}

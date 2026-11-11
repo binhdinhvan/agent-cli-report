@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0048",
+    "comparison_axis": "api-auth",
+    "tool": "OpenCode v1",
+    "version": "1.19.5",
+    "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+    "claim": "Server auth config nhận SERVER_PASSWORD và SERVER_USERNAME; authorized so credential",
+    "file": "packages/opencode/src/server/auth.ts",
+    "line_start": "17",
+    "line_end": "33",
+    "symbol": "ServerAuth.Config/authorized",
+    "permalink": "https://github.com/anomalyco/opencode/blob/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/server/auth.ts#L17-L33",
+    "evidence_status": "both",
+    "runtime_artifact": "demos/artifacts/OFFLINE-API-20261106-01/opencode-v1/result.json",
+    "limitations": "Test username mặc định và password tạm; HTTP auth không phải permission policy của tool"
+  },
+  "source_sha256": "01c45e05eecac32628acc263be84a563386c39c78a33aa67d9a8114f86a57a41",
+  "excerpt": "export class Config extends ConfigService.Service<Config>()(\"@opencode/ServerAuthConfig\", {\n  password: EffectConfig.string(\"OPENCODE_SERVER_PASSWORD\").pipe(EffectConfig.option),\n  username: EffectConfig.string(\"OPENCODE_SERVER_USERNAME\").pipe(EffectConfig.withDefault(\"opencode\")),\n}) {}\n\nexport type Info = Context.Service.Shape<typeof Config>\n\nexport function required(config: Info) {\n  return Option.isSome(config.password) && config.password.value !== \"\"\n}\n\nexport function authorized(credentials: DecodedCredentials, config: Info) {\n  return (\n    Option.isSome(config.password) &&\n    credentials.username === config.username &&\n    Redacted.value(credentials.password) === config.password.value\n  )"
+}

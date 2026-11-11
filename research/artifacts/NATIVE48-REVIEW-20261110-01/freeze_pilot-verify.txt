@@ -1,0 +1,1 @@
+PASS: frozen outputs, ledger, review, fixture/dependency/binary and source hashes; offline only

@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0014",
+    "comparison_axis": "launch",
+    "tool": "OpenCode v2",
+    "version": "2.2.5",
+    "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+    "claim": "ServerConnection chọn explicit server hoặc standalone trước nhánh managed service",
+    "file": "packages/cli/src/services/server-connection.ts",
+    "line_start": "23",
+    "line_end": "58",
+    "symbol": "ServerConnection.resolve",
+    "permalink": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/cli/src/services/server-connection.ts#L23-L58",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Không kết hợp --server với --standalone; standalone không tự cách ly filesystem"
+  },
+  "source_sha256": "161524ef2525a04bedea305dbfc9df61bd951c69b55a13bc0dca6445f16880b3",
+  "excerpt": "export const resolve = Effect.fn(\"cli.server-connection.resolve\")(function* (args: Args = {}) {\n  const serverFlag = yield* Effect.serviceOption(ServerFlag).pipe(Effect.map(Option.flatten))\n  const standaloneFlag = yield* Effect.serviceOption(StandaloneFlag)\n  const server = args.server ?? Option.getOrUndefined(serverFlag)\n  const standalone = args.standalone ?? Option.getOrElse(standaloneFlag, () => false)\n  if (server !== undefined && standalone)\n    return yield* Effect.fail(new Error(\"--server and --standalone cannot be combined\"))\n  if (server !== undefined) {\n    const password = yield* Env.password\n    const endpoint = {\n      url: server,\n      auth: password ? { type: \"basic\" as const, username: \"opencode\", password: Redacted.value(password) } : undefined,\n    } satisfies Endpoint\n    const client = OpenCode.make({ baseUrl: endpoint.url, headers: Service.headers(endpoint) })\n    const health = yield* Effect.tryPromise({\n      try: () => client.server.info({ signal: AbortSignal.timeout(5_000) }),\n      catch: (cause) => connectError(endpoint, cause),\n    })\n    if (health.version !== OPENCODE_VERSION)\n      process.stderr.write(\n        `Warning: Server at ${endpoint.url} has version ${health.version}; this client is ${OPENCODE_VERSION}. Continuing anyway.\\n`,\n      )\n    return { endpoint } satisfies Resolved\n  }\n  if (standalone || (yield* ServiceConfig.read()).disabled === true) {\n    return { endpoint: yield* Standalone.start() } satisfies Resolved\n  }\n\n  const mismatch = args.mismatch ?? \"ignore\"\n  const options = yield* ServiceConfig.options({ checkVersion: mismatch !== \"ignore\" })\n  return {\n    endpoint: yield* resolveManaged({ ...options, onStart: args.onStart }, mismatch),\n    service: managedService(options),\n  } satisfies Resolved\n})\n"
+}

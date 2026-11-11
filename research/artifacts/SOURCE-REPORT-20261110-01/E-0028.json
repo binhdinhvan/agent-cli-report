@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0028",
+    "comparison_axis": "launch",
+    "tool": "Codex CLI",
+    "version": "0.167.0",
+    "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+    "claim": "exec khởi tạo InProcessAppServerClient sau kiểm tra git repo",
+    "file": "codex-rs/exec/src/lib.rs",
+    "line_start": "1018",
+    "line_end": "1033",
+    "symbol": "InProcessAppServerClient.start",
+    "permalink": "https://github.com/openai/codex/blob/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/exec/src/lib.rs#L1018-L1033",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Không suy rộng cho TUI hoặc subcommand daemon"
+  },
+  "source_sha256": "53e0d7cac90466dc088dd5457c72813ef8c0a8c56fe6466eb602c85b8f45a6f3",
+  "excerpt": "    // When --yolo (dangerously_bypass_approvals_and_sandbox) is set, also skip the git repo check\n    // since the user is explicitly running in an externally sandboxed environment.\n    if !skip_git_repo_check\n        && !dangerously_bypass_approvals_and_sandbox\n        && get_git_repo_root(&default_cwd).is_none()\n    {\n        eprintln!(\"Not inside a trusted directory and --skip-git-repo-check was not specified.\");\n        std::process::exit(1);\n    }\n\n    let mut request_ids = RequestIdSequencer::new();\n    let mut client = InProcessAppServerClient::start(in_process_start_args)\n        .await\n        .map_err(|err| {\n            anyhow::anyhow!(\"failed to initialize in-process app-server client: {err}\")\n        })?;"
+}

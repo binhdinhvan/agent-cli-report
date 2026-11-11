@@ -1,0 +1,20 @@
+{
+  "evidence": {
+    "id": "E-0080",
+    "comparison_axis": "agent-loop",
+    "tool": "OpenCode v2",
+    "version": "2.2.5",
+    "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+    "claim": "drain gọi advanceToStep và chỉ chạy runStep khi Ready rồi tăng step và giữ needs-continuation cho vòng tiếp",
+    "file": "packages/core/src/session/runner/llm.ts",
+    "line_start": "209",
+    "line_end": "218",
+    "symbol": "SessionRunner.drain",
+    "permalink": "https://github.com/anomalyco/opencode/blob/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session/runner/llm.ts#L209-L218",
+    "evidence_status": "source-confirmed",
+    "runtime_artifact": "",
+    "limitations": "Đây là một đoạn vòng điều phối; không suy mọi trường hợp persistence hoặc crash recovery"
+  },
+  "source_sha256": "606619006b4ec1a4ec7bd88b2f2f1defa007c7f5891aff0f4481626a2c3a209e",
+  "excerpt": "      while (true) {\n        const next = yield* advanceToStep()\n        if (next._tag !== \"Ready\") return next\n        continuing = yield* runStep(next.context, step)\n        stepped = true\n        step++\n        force = false\n        entering = false\n      }\n    })"
+}

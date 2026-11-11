@@ -1,0 +1,50 @@
+{
+  "run_id": "R-0017",
+  "retry_of": "R-0009",
+  "status": "success",
+  "validity": "valid",
+  "requests": 7,
+  "all_http_200_completed": true,
+  "gap_seconds": [
+    30.000974,
+    30.001127,
+    30.001237,
+    30.001486,
+    30.001267,
+    30.001264
+  ],
+  "estimated_cost_usd": "0.07692480",
+  "cumulative_known_usage_estimated_cost_usd": "0.10501200",
+  "cumulative_estimated_total_usd": null,
+  "measured_charge_usd": null,
+  "changed_files": [
+    "intervals.py"
+  ],
+  "public_hidden_scope_pass": true,
+  "final_stop_reason": "stop",
+  "final_text": "Updated [intervals.py](/tmp/opencode/agent-cli-report/smoke/C-0069/project/intervals.py) while preserving the API.\n\n- Keeps touching half-open intervals separate.\n- Merges overlapping and nested intervals into sorted tuples.\n- Accepts iterables, handles empty input, and leaves input lists unchanged.\n- Raises `ValueError` for malformed pairs, non-integer endpoints, and `start >= end`.\n\nValidation: the available unittest passed, along with additional inline edge-case checks. Only `intervals.py` was modified; no test files were changed.",
+  "source_protocol_pricing_seal_binary_hashes_match": true,
+  "key_scan_pass": true,
+  "supervisor_pid_absent": true,
+  "broker_socket_absent": true,
+  "cross_cli_live_pacing": "unverified: single CLI retry",
+  "provider_failure_latch_live": "not exercised: no provider failure in this run",
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "raw_artifact_sha256": {
+    "result.json": "d364136e9a3bcdb1d3a39ab5370ae027e7f44d8672b2af7baa67224f3fce0734",
+    "protocol.json": "50ac1fb3cc1e9ca58c6bb3d5215ddd19c1e3184f2576c649f7172665ebd68186",
+    "R-0017/stdout.jsonl": "c0020d7890c81b3dac6fc8dd0613d949ad8db102e5314d5aa829ecd952c58155",
+    "R-0017/result.json": "1b66e067dcd1a89091157e67908679e8a134350348edfb01a8107b0dbc2dc176",
+    "R-0017/config.json": "6e719b648e2736191ad4a532200059be6734029e42f2d8f642b34186c87144a3",
+    "R-0017/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "R-0017/grader/grading.json": "a376c965457ac1e42614a5fabb506d89d7e22c940f9e02da11e2d7b6394eb4e2",
+    "R-0017/grader/patch.diff": "76ed9074c0e8496055d1fee4fd8649ffc753497617a84dd0ec17e006741810e4",
+    "R-0017/grader/snapshot/intervals.py": "ea358fbec27773a88e91cd1f0d94876a6f8238dda9dead4f1bd4eb229eb3dc8e",
+    "R-0017/grader/snapshot/test_public.py": "8eb40ed38a8653c191c77eefa3a269efbd90a123775a9adb12d24cdd062661d6"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "revision": "google-direct-gemini-3.8-flash-r1",
+  "model": "gemini-3.8-flash",
+  "provider": "google-ai-studio-direct",
+  "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
+  "generation_endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+  "api_protocol": "openai-compatible/chat-completions-sse",
+  "documentation": "https://ai.google.dev/gemini-api/docs/openai",
+  "documentation_status": "official documentation consulted; runtime/account/model access not verified",
+  "credential_file": ".local/credentials/google-ai.key",
+  "credential_content_status": "not read during preparation; metadata only, owner regular file, permissions tightened664to600",
+  "native_cli_acceptance": "unverified; this profile only prepares provider smoke, not all4CLI adapters",
+  "smoke": {
+    "planned_max_requests": 5,
+    "max_tokens_per_request": 256,
+    "minimum_gap_seconds": 30,
+    "request_timeout_seconds": 45,
+    "request_wall_cap_seconds": 90,
+    "retry_or_provider_fallback": false,
+    "generation_authorized": false
+  },
+  "pricing": {
+    "currency": "USD",
+    "unit_tokens": 1000000,
+    "input_uncached": null,
+    "input_cache_read": null,
+    "output": null,
+    "status": "Google rates pending; never use Shopaikey/sol rates"
+  },
+  "benchmark_scope": "new Google/Gemini cohort; never append sol or Shopaikey model results",
+  "paid_runs_ready": false
+}

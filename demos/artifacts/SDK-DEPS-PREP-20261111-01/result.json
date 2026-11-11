@@ -1,0 +1,26 @@
+{
+  "scope": "isolated dependencies only, no source repo install or lifecycle scripts/provider/key access",
+  "command": [
+    "/home/tts/.bun/bin/bun",
+    "install",
+    "--production",
+    "--ignore-scripts",
+    "--no-env-file",
+    "--no-progress",
+    "--cache-dir",
+    "/tmp/opencode/agent-cli-report/sdk-deps-20261111-01/cache",
+    "--config",
+    "/home/tts/Project/agent-cli-report/.local/demo-sdk-2.2.5/bunfig.toml",
+    "--registry",
+    "https://registry.npmjs.org",
+    "--network-concurrency",
+    "4"
+  ],
+  "exit_code": 1,
+  "sdk_version": "2.2.5",
+  "home_isolated": true,
+  "environment_cleared": true,
+  "ignore_scripts": true,
+  "registry": "https://registry.npmjs.org",
+  "lockfile_present": false
+}

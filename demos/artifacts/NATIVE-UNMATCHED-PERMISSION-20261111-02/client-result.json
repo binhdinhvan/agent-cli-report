@@ -1,0 +1,1388 @@
+{
+  "scope": "native TypeScript Client/private server with scripted SSE, not embedded SDK or model quality",
+  "checks": {
+    "subscribed_before_prompt": true,
+    "test_action_has_no_configured_match": true,
+    "unmatched_fallback_ask": true,
+    "once_does_not_persist": true,
+    "unmatched_pending_settled": true
+  },
+  "events": [
+    {
+      "id": "evt_1c881637b001Pds6ayi5yWck3w",
+      "type": "server.connected",
+      "data": {}
+    },
+    {
+      "id": "evt_1c8816380001mh2RNpCOBXmdaQ",
+      "created": 1794365285248,
+      "type": "session.created",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {
+        "sessionID": "ses_e377e9c81ffeykSvnOVixQwLun",
+        "slug": "nimble-wolf",
+        "version": "2.2.5",
+        "projectID": "549742f9bc8c34c6423cd8ea1298ec0f3a1ff54b",
+        "location": {
+          "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+        },
+        "subpath": "",
+        "title": "native-client-demo"
+      },
+      "durable": {
+        "aggregateID": "ses_e377e9c81ffeykSvnOVixQwLun",
+        "seq": 0,
+        "version": 1
+      }
+    },
+    {
+      "id": "evt_1c8816388001t9wbOV18VzgSIy",
+      "created": 1794365285256,
+      "type": "project.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {
+        "id": "549742f9bc8c34c6423cd8ea1298ec0f3a1ff54b",
+        "canonical": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project",
+        "time": {
+          "created": 1794365285248,
+          "updated": 1794365285248,
+          "active": 1794365285255
+        },
+        "sandboxes": []
+      }
+    },
+    {
+      "id": "evt_1c88164e3001Gxcxhg1dvtO7WH",
+      "created": 1794365285604,
+      "type": "integration.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c88164e7001S675Uyea17bWW6",
+      "created": 1794365285607,
+      "type": "provider.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c88164ec0017imMvqsFKpbrUb",
+      "created": 1794365285612,
+      "type": "model.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c88164ed00136aMmBaKPeplpf",
+      "created": 1794365285613,
+      "type": "agent.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c88164ed002o4oQsha9riaYAJ",
+      "created": 1794365285613,
+      "type": "command.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c88164ee0013qCFvUgldwSC7m",
+      "created": 1794365285614,
+      "type": "skill.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c88164ef001V1vaap178NgQv4",
+      "created": 1794365285615,
+      "type": "websearch.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c88164ff0022OPrSVgVlgdhhx",
+      "created": 1794365285631,
+      "type": "reference.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c88164ff003Fytm4DS9Jb7PAT",
+      "created": 1794365285631,
+      "type": "plugin.updated",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {}
+    },
+    {
+      "id": "evt_1c881650c0025z79GLxuA6mclc",
+      "created": 1794365285644,
+      "type": "permission.asked",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {
+        "id": "per_1c881650c001MBm9ZOwgjW2Cq1",
+        "sessionID": "ses_e377e9c81ffeykSvnOVixQwLun",
+        "action": "report_no_matching_rule",
+        "resources": [
+          "fixture"
+        ]
+      }
+    },
+    {
+      "id": "evt_1c881650d001aOxQTRJZoe4248",
+      "created": 1794365285645,
+      "type": "permission.replied",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {
+        "sessionID": "ses_e377e9c81ffeykSvnOVixQwLun",
+        "requestID": "per_1c881650c001MBm9ZOwgjW2Cq1",
+        "reply": "once"
+      }
+    },
+    {
+      "id": "evt_1c881650f002bc71c3X31UIpT2",
+      "created": 1794365285647,
+      "type": "permission.asked",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {
+        "id": "per_1c881650f001XxVEiAiZd103Mp",
+        "sessionID": "ses_e377e9c81ffeykSvnOVixQwLun",
+        "action": "report_no_matching_rule",
+        "resources": [
+          "fixture"
+        ]
+      }
+    },
+    {
+      "id": "evt_1c8816510001qGc1mLe560H0ku",
+      "created": 1794365285648,
+      "type": "permission.replied",
+      "location": {
+        "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+      },
+      "data": {
+        "sessionID": "ses_e377e9c81ffeykSvnOVixQwLun",
+        "requestID": "per_1c881650f001XxVEiAiZd103Mp",
+        "reply": "reject"
+      }
+    }
+  ],
+  "requests": [],
+  "cycles": [
+    {
+      "pid": 19,
+      "url": "http://127.0.0.1:39221",
+      "exit": 0
+    }
+  ],
+  "sessionID": "ses_e377e9c81ffeykSvnOVixQwLun",
+  "plugin_list": {
+    "location": {
+      "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+    },
+    "data": []
+  },
+  "config_plugins": [
+    {
+      "path": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/xdg-config/opencode/opencode.json",
+      "plugins": [
+        "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/plugins/unmatched"
+      ]
+    }
+  ],
+  "plugin_inventory_event": {
+    "id": "evt_1c88164ff003Fytm4DS9Jb7PAT",
+    "created": 1794365285631,
+    "type": "plugin.updated",
+    "location": {
+      "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+    },
+    "data": {}
+  },
+  "plugin_list_after_wait": {
+    "location": {
+      "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+    },
+    "data": [
+      {
+        "id": "opencode.tool.input.repair",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.worktree",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.mcp",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.mcp.codemode.defaults",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.wellknown",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.vcs.git",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.agent",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.plan",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.command",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.goal",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.skill",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.vcs.hg",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.models.dev",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.amazon.bedrock",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.azure",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.cerebras",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.chatgpt",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.cloudflare.ai.gateway",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.cloudflare.workers.ai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.databricks",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.digitalocean",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.github.copilot",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.gitlab",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.google.vertex",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.kilo",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.llmgateway",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.lmstudio",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.modal",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.neon",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.nvidia",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.ollama",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.opencode",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.snowflake.cortex",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.openai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.openai-context-caps",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.openrouter",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.poe",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.prompt-cache-key",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.sap.ai.core",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.vllm",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.xai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.zenmux",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.claude-agent",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.exa",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.firecrawl",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.parallel",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.tavily",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.tinyfish",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.patch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.openai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.anthropic",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.kimi",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.arcee",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.meta",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.verbosity",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.identity",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.edit",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.glob",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.grep",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.image-generate",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tools",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tools.mcp-resources",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.question",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.read",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.artifact",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.schedule",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.shell",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.skill",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.subagent",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.todo",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.webfetch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.websearch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.write",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.warming",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "report.unmatched",
+        "source": {
+          "type": "local",
+          "path": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/plugins/unmatched"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.instruction",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.reference",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.agent",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.browser",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.command",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.compaction",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.formatter",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.image",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.location-watcher",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.shell",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.snapshot",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.tool-output",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.compatibility",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.skill",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.provider",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.dynamic",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.websearch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.policy",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      }
+    ]
+  },
+  "unmatched_effective_agent": {
+    "location": {
+      "directory": "/tmp/opencode/agent-cli-report/smoke/BP48-CL-a583cfe03c659cf7eba2/project"
+    },
+    "data": {
+      "id": "build",
+      "name": "Build",
+      "request": {
+        "settings": {},
+        "headers": {},
+        "body": {}
+      },
+      "description": "The default agent. Executes tools based on configured permissions.",
+      "mode": "primary",
+      "hidden": false,
+      "permissions": [
+        {
+          "action": "browser",
+          "resource": "*",
+          "effect": "deny"
+        },
+        {
+          "action": "skill",
+          "resource": "browser",
+          "effect": "deny"
+        }
+      ]
+    }
+  },
+  "unmatched_request": {
+    "id": "per_1c881650c001MBm9ZOwgjW2Cq1",
+    "effect": "ask"
+  },
+  "status": "pass"
+}

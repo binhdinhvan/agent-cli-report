@@ -1,0 +1,16 @@
+{
+  "launch_authorized": true,
+  "plan_sha256": "06dd6a62cdd0deb2ea436b2426f2e811e34b7202d7b2ebb03ba635c26022742c",
+  "scope": "43-not-run-slots-only-no-retry-R135-rubric-r2",
+  "budget_estimate_usd": "16",
+  "prior_unpriced_acknowledged": true,
+  "retries_authorized": false,
+  "rubric_revision": "b01-evidence-r2",
+  "approved_by": "user explicit request: chạy tiếp after retry45 stopped",
+  "approved_at_utc": "2026-11-10T14:33:26.269306+00:00",
+  "prior_known_usd": "0.25185936",
+  "prior_unpriced_requests": 3,
+  "remaining_known_guard_usd": "15.74814064",
+  "offline_acceptance_sha256": "433a42a67848cab3f2e6276b8cd821187f3d1befb1acd3c87128af3f10a4590b",
+  "no_auto_retry_or_resume": true
+}

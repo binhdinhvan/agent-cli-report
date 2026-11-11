@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "total_tests_passed": 168,
+  "new_cache_tests_included": 19,
+  "logs": {
+    "benchmark-tests": {
+      "tests_passed": 101,
+      "log": "benchmark-tests.txt",
+      "sha256": "e5668bc768631cf4970f3f69b3d1416d2b7ebaf5b8b3bdd981c1e161203b8fb0"
+    },
+    "demo-tests": {
+      "tests_passed": 67,
+      "log": "demo-tests.txt",
+      "sha256": "a7316bff11553a259997db071f4e9609b30f02b595581719fedc669601370013"
+    }
+  },
+  "scope": "offline mocked tests;0realproviderrequests"
+}

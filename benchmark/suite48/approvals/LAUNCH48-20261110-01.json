@@ -1,0 +1,19 @@
+{
+  "launch_authorized": true,
+  "plan_sha256": "7d7fe5edf4153da954e5fa8895a8728837abe4b246deaa10ae7b47bccdbc699a",
+  "budget_estimate_usd": "16",
+  "scope": "48-first-attempt-slots-no-auto-retry",
+  "approved_by": "user via explicit chat confirmation: ok xác nhận",
+  "approved_at_utc": "2026-11-10T03:12:27.427589+00:00",
+  "protocol": "benchmark/PROTOCOL_48_R1.md",
+  "protocol_sha256": "d3af611d8d06e533c60827dd887aa74a48b20e4c74c6f2e00a50cb2e85a70e93",
+  "artifact": "benchmark/suite48/artifacts/BENCH48-20261110-01",
+  "guard_is_invoice_cap": false,
+  "no_automatic_retry_topup_or_resume": true,
+  "stop_on_provider_failure_missing_usage_or_known_estimate_guard": true,
+  "prior_pilot_usage_not_in_new_budget": {
+    "known_estimate_usd": "1.10640264",
+    "unpriced_requests": 6,
+    "measured_total_usd": null
+  }
+}

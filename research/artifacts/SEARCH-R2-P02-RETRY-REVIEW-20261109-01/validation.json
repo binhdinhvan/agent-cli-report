@@ -1,0 +1,61 @@
+{
+  "run_id": "R-0034",
+  "retry_of": "R-0030",
+  "status": "timeout",
+  "validity": "valid",
+  "scope_public_hidden_snapshot_pass": true,
+  "changed_files": [
+    "scheduler.py"
+  ],
+  "duration_ms": 300041,
+  "upstream_requests": 7,
+  "completed_responses": 6,
+  "unpriced_requests_this_run": 1,
+  "gap_seconds": [
+    30.000611,
+    30.001354,
+    30.001751,
+    30.001296,
+    30.001555,
+    30.001524
+  ],
+  "minimum_pacing_budget_seconds": 180,
+  "last_request_started_seconds_into_run": 295.647861,
+  "native_glob_live": "completed successfully in this run",
+  "shell_exits": [
+    127,
+    0,
+    1,
+    0
+  ],
+  "completion_note": "Snapshot correct but CLI did not complete within fixed300s including pacing; retain timeout, no success upgrade",
+  "provider_overload": "not established; final response lacked terminal/usage at deadline",
+  "known_usage_estimated_cost_usd": "0.07098192",
+  "cumulative_known_usage_estimated_cost_usd": "0.68968632",
+  "cumulative_unpriced_requests": 6,
+  "estimated_total_usd": null,
+  "measured_charge_usd": null,
+  "hashes_source_protocol_manifest_pricing_seal_binary": "pass",
+  "key_scan": "pass",
+  "supervisor_pid_absent": true,
+  "broker_socket_absent": true,
+  "prior_raw_unchanged": true,
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "raw_artifact_sha256": {
+    "result.json": "773c89e93059547e1314209912287a4d4f36d256aea2bb33700e2dcf4efc73d8",
+    "protocol.json": "0c7e19bd80546d52dff6ea6eadaf0da454068d631098c242bdee06cdc4a12686",
+    "R-0034/stdout.jsonl": "4db03473987bf7b3051348a4b9d9fd5d050f29d42047825dc0fd79c0d9cef27e",
+    "R-0034/result.json": "4131174c3e4241c35846c267de5687efd1b3409fbe26e4702e977c52bb73641d",
+    "R-0034/config.json": "cdc7150c44b0589ef98af4fed7719d5ce1635c801b9bafd47db6e1191ae4003b",
+    "R-0034/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "R-0034/grader/grading.json": "c811690e44e1f6359c86e9dd5024c651c30d15175f1b66dcf7dd5a2041dc0f76",
+    "R-0034/grader/patch.diff": "4f93ebf8ac9c4d18229dedd84bf3e3f81f0d22547715bea0d92114a80e68f926",
+    "R-0034/grader/snapshot/test_public.py": "cdb577452e0e2f399f00c8766787fa7974583cff9e386cfc1d62db728bb09931",
+    "R-0034/grader/snapshot/scheduler.py": "f9fd431424109719c6a0bb6a22130444fcd826a669e2d4b5d94509d8f839634a"
+  }
+}

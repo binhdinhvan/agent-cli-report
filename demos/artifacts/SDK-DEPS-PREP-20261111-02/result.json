@@ -1,0 +1,20 @@
+{
+  "scope": "isolated dependencies only; lifecycle scripts disabled, no provider/key access",
+  "command": [
+    "/home/tts/.bun/bin/bun",
+    "install",
+    "--production",
+    "--ignore-scripts",
+    "--no-env-file",
+    "--no-progress",
+    "--cache-dir=/tmp/opencode/agent-cli-report/sdk-deps-20261111-01/cache",
+    "--registry=https://registry.npmjs.org",
+    "--network-concurrency=4",
+    "--prefer-offline"
+  ],
+  "exit_code": 0,
+  "sdk_version": "2.2.5",
+  "lockfile_present": false,
+  "retry_of": "SDK-DEPS-PREP-20261111-01",
+  "repair": "Remove config flag accidentally interpreted as dependency; use localbunfig and explicitvalueflags"
+}

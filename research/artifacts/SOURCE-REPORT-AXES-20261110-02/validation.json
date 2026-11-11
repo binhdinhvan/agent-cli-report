@@ -1,0 +1,511 @@
+{
+  "scope": "Đọc pinned source offline; không provider/network/native binary/plugin/service",
+  "checked_at_utc": "2026-11-10T07:37:09.296513+00:00",
+  "evidence_ids_total": 117,
+  "audited_ids": [
+    "E-0087",
+    "E-0088",
+    "E-0089",
+    "E-0090",
+    "E-0091",
+    "E-0092",
+    "E-0093",
+    "E-0094",
+    "E-0095",
+    "E-0096",
+    "E-0097",
+    "E-0098",
+    "E-0099",
+    "E-0100",
+    "E-0101",
+    "E-0102",
+    "E-0103",
+    "E-0104",
+    "E-0105",
+    "E-0106",
+    "E-0107",
+    "E-0108",
+    "E-0109",
+    "E-0110",
+    "E-0111",
+    "E-0112",
+    "E-0113",
+    "E-0114",
+    "E-0115",
+    "E-0116",
+    "E-0117"
+  ],
+  "checks": {
+    "evidence_validator": "PASS: 117 evidence IDs; commit/file/line ranges và permalinks hợp lệ.\nKhông kiểm chứng semantics claim, URL availability hoặc runtime bằng phép kiểm tra này.\n",
+    "frozen_pilot": "PASS: frozen outputs, ledger, review, fixture/dependency/binary and source hashes; offline only\n"
+  },
+  "sources": [
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/core/src/permission.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/permission.ts",
+      "sha256": "04d542bf3c1f99b2bc4760d816fce5c86176bf1367c6a01b0cf9b3cb1ae43ee9"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/core/src/tool/plugin/shell.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/tool/plugin/shell.ts",
+      "sha256": "cab416efd2758e2e8377330961eb3fef4aad293a860703207483738a7473c3cc"
+    },
+    {
+      "repo": "pi",
+      "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+      "file": "packages/coding-agent/src/core/tools/bash.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/pi/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/tools/bash.ts",
+      "sha256": "4c1e12c7ffcafa11a180b4cb8df13549a43925c15d08a62b8794a4715c54c178"
+    },
+    {
+      "repo": "pi",
+      "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+      "file": "packages/coding-agent/src/core/extensions/runner.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/pi/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/extensions/runner.ts",
+      "sha256": "3cd6d1ad18e8e4c7adf722aed9291bc64f06e3a7d461755c21e3cba4819f4e5e"
+    },
+    {
+      "repo": "pi",
+      "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+      "file": "packages/agent/src/agent-loop.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/pi/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/agent/src/agent-loop.ts",
+      "sha256": "9d7589b5071ea3b8b3e3c624f9cfc09a976ebf7436024a58213837de4645167d"
+    },
+    {
+      "repo": "codex",
+      "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+      "file": "codex-rs/protocol/src/protocol.rs",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/codex/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/protocol/src/protocol.rs",
+      "sha256": "c7d307454bf2d8131ea35b6e02b2d834d12d6373a143d207af9e45cce0cb1d5e"
+    },
+    {
+      "repo": "codex",
+      "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+      "file": "codex-rs/protocol/src/sandbox.rs",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/codex/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/protocol/src/sandbox.rs",
+      "sha256": "e0abc5c511f9e4f83a03c182e784f4f673b821a5863fbe4aafffe18104ef605c"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/core/src/session/history.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/session/history.ts",
+      "sha256": "b0b6b2e98429dc952353db4c1ea9b1be61acb4a51a1c39fad20522751f790bcb"
+    },
+    {
+      "repo": "pi",
+      "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+      "file": "packages/coding-agent/src/core/session-manager.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/pi/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/session-manager.ts",
+      "sha256": "444650a737052f0d710c19f9e50e115c24b49107130059d5bef458eacf3927c7"
+    },
+    {
+      "repo": "codex",
+      "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+      "file": "codex-rs/core/src/context_manager/history.rs",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/codex/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core/src/context_manager/history.rs",
+      "sha256": "60e30e1ca546e1e186c14fe1b21a50cfea6f677f3294089c4396ca263c4322b1"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/plugin/src/promise/plugin.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/plugin/src/promise/plugin.ts",
+      "sha256": "b408afd829def2965aa0fff57b5136803f82e90bf1239f8d70a587f9985bfd08"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/plugin/src/promise/tool.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/plugin/src/promise/tool.ts",
+      "sha256": "1b6146b59b90f097fe0f8135b15ac4c51908b2e984b6186548bb8f649cad74b6"
+    },
+    {
+      "repo": "pi",
+      "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+      "file": "packages/coding-agent/src/core/extensions/types.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/pi/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/extensions/types.ts",
+      "sha256": "78cfd4937aa72c02be444354ef5cb94310b9b40e20e477969630eb81c6a7391b"
+    },
+    {
+      "repo": "codex",
+      "commit": "086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a",
+      "file": "codex-rs/core-plugins/src/manifest.rs",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/codex/086ccc833bc9cf01024ad2dd6af7dbd421b6bf9a/codex-rs/core-plugins/src/manifest.rs",
+      "sha256": "cb6cc5e8e2004d1533141a3f11f3460a1aa8c2e0295c9583ae9726c6a75b2802"
+    },
+    {
+      "repo": "opencode-v1",
+      "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+      "file": "packages/opencode/src/permission/index.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v1/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/permission/index.ts",
+      "sha256": "5b9e4aa65290a39363722b9fae4c68080188d8ed76896afa0d96cd9dbfd2821d"
+    },
+    {
+      "repo": "opencode-v1",
+      "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+      "file": "packages/plugin/src/index.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v1/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/plugin/src/index.ts",
+      "sha256": "7ce98ddab759903e6618b40a1c8beb1b621f0691f8f508ad2c07dba2041744e1"
+    },
+    {
+      "repo": "opencode-v1",
+      "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+      "file": "packages/opencode/src/agent/agent.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v1/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/agent/agent.ts",
+      "sha256": "e781c571d584fa996200e320f14c2735e32968256b8db194391e7c06aed7433e"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/schema/src/agent.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/schema/src/agent.ts",
+      "sha256": "2438abf1f8bbcc8ebad533b81035d739db4117b9df739a906d0113e851c0737e"
+    },
+    {
+      "repo": "pi",
+      "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+      "file": "packages/coding-agent/src/core/agent-session.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/pi/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/agent-session.ts",
+      "sha256": "b7c24bf1c1366e931083100d921a80d390d66bacde4acf7472a7b57af1bb69aa"
+    },
+    {
+      "repo": "pi",
+      "commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+      "file": "packages/agent/src/agent.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/pi/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/agent/src/agent.ts",
+      "sha256": "6d0e56bf4443f0cfc5c6a82ce31a3b99f15ff816075bed36403dfa0c95a609c6"
+    },
+    {
+      "repo": "opencode-v1",
+      "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+      "file": "packages/opencode/src/tool/task.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v1/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/tool/task.ts",
+      "sha256": "db09fa5868ad3ecfdd83aa2bb7243f85e9e2cd13d0b19fd6f307f7a337b2b36e"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/core/src/tool/plugin/subagent.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/tool/plugin/subagent.ts",
+      "sha256": "93589430676f924d57fa06c13cb29a70baef9beac4d85078f5523ddec9810832"
+    },
+    {
+      "repo": "opencode-v1",
+      "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+      "file": "packages/opencode/src/tool/shell/prompt.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v1/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/tool/shell/prompt.ts",
+      "sha256": "f3c6bdb216a9df2dd871d3a786b2abe3a20ea3e44b9121ce0610c648256fb2b6"
+    },
+    {
+      "repo": "opencode-v1",
+      "commit": "810c0eba1a7348036f8bdf61e6632d0c36c6876c",
+      "file": "packages/opencode/src/plugin/index.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v1/810c0eba1a7348036f8bdf61e6632d0c36c6876c/packages/opencode/src/plugin/index.ts",
+      "sha256": "47c62b7cfae891d268e6b239edb0f1c46df5cb35eb11ccfd8bd4186c156024e9"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/core/src/plugin/module.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/plugin/module.ts",
+      "sha256": "7f09f3295593d3aa78a8cfc3d64005dd4fb75a9ee7d4bc9e4a3b8708acc56918"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/plugin/src/promise/adapter.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/plugin/src/promise/adapter.ts",
+      "sha256": "e5e8603c64b3b0a8432fea05f5ff01c329dc8e3a5dde00235996ba086e2db27b"
+    },
+    {
+      "repo": "opencode-v2",
+      "commit": "9bbb8ce18c80f099e0e448775f59d965ead40a21",
+      "file": "packages/core/src/job.ts",
+      "snapshot": "research/artifacts/SOURCE-REPORT-AXES-20261110-02/source/opencode-v2/9bbb8ce18c80f099e0e448775f59d965ead40a21/packages/core/src/job.ts",
+      "sha256": "c2cab311634e6917b79bc78d214a0af21767cb18c091fa185a4ab75e0521bea5"
+    }
+  ],
+  "source_git_status": {
+    "opencode-v1": "",
+    "opencode-v2": "",
+    "pi": "",
+    "codex": ""
+  },
+  "raw_benchmark_root": "benchmark/suite48/artifacts/BENCH48-20261110-01",
+  "raw_benchmark_retained": {
+    "D48-001/config.json": "79b63dfd8c6fe5db256df85fa21154be01e58f18b976b0e49b22587d771886a2",
+    "D48-001/execution.json": "a2d1007ada612a0184cd3fd99c6f68e5e79d025d5b2eeae089b66b8d8b5a1a93",
+    "D48-001/grader/grading.json": "0581271f0815717b36b39dd16cac2c68182925e8d4992a283647c6a594e3e91d",
+    "D48-001/grader/patch.diff": "075b1516b96708a9ca5821622583088d3983b27ee2ffa3983c28831b0ec2343f",
+    "D48-001/grader/snapshot/aliases.py": "4fa0637ab55f32469c101d45d1a23d110e95e1f890a4dd3398e4d70c861f5da6",
+    "D48-001/grader/snapshot/answer.json": "6c30f535ccc19e7382d00f55d581faf4d2784f89e6663508768ad516aadf7e3c",
+    "D48-001/grader/snapshot/defaults.py": "dee8dba860bf81ba208cad957eaeb64ab897b475cc00990c94e7a93fde7816e0",
+    "D48-001/grader/snapshot/resolver.py": "f38fa2ca2b30092f9a2f2147376274237009b3104c44baf058ce6ca3dcd07613",
+    "D48-001/grader/snapshot/test_public.py": "1c8f8eec89298be555ea8aa30b57e8e7e58ca9ef4244fdca4db5d2af1e3de04e",
+    "D48-001/result.json": "b0d1031030b830ee2bdbad2dd411c9bef205745c3420934c148f5d716bfbd13e",
+    "D48-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D48-001/stdout.jsonl": "c797ec994bb0854a137ef53ab77caee2ad26a8184c1abe259e30ac9268fbc4f1",
+    "approval.json": "a95d6050013dac8c397dc1d88685f2e005a93436f03835858d1b91a43e6acf00",
+    "plan.json": "7d7fe5edf4153da954e5fa8895a8728837abe4b246deaa10ae7b47bccdbc699a",
+    "reserved.json": "5134ae963cb08059ea7be5f64d80d411cc3434d7d30500dc7ae5b7e8d9d2c410",
+    "result.json": "330f8e8f92cc748b4feaf24057658e7d5e43092172c30bf0013f6ab326e14168"
+  },
+  "local_links_checked": [
+    {
+      "document": "README.md",
+      "target": "REPORT.md"
+    },
+    {
+      "document": "README.md",
+      "target": "benchmark/suite48/BENCHMARK_RESULTS.md"
+    },
+    {
+      "document": "README.md",
+      "target": "benchmark/BASELINE.md"
+    },
+    {
+      "document": "README.md",
+      "target": "benchmark/artifacts/PILOT-FREEZE-20261109-01/SUMMARY.md"
+    },
+    {
+      "document": "README.md",
+      "target": "benchmark/PROTOCOL_48_DRAFT.md"
+    },
+    {
+      "document": "README.md",
+      "target": "benchmark/suite48/IMPLEMENTATION.md"
+    },
+    {
+      "document": "README.md",
+      "target": "benchmark/suite48/NATIVE_PREFLIGHT.md"
+    },
+    {
+      "document": "README.md",
+      "target": "benchmark/suite48/BATCH_RUNNER.md"
+    },
+    {
+      "document": "README.md",
+      "target": "PLAN.md"
+    },
+    {
+      "document": "README.md",
+      "target": "research/versions.md"
+    },
+    {
+      "document": "README.md",
+      "target": "research/evidence.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "benchmark/PILOT.md"
+    },
+    {
+      "document": "README.md",
+      "target": "benchmark/PROTOCOL.md"
+    },
+    {
+      "document": "README.md",
+      "target": "REPORT.md"
+    },
+    {
+      "document": "README.md",
+      "target": "research/isolation.md"
+    },
+    {
+      "document": "README.md",
+      "target": "demos/SMOKE_TEST.md"
+    },
+    {
+      "document": "README.md",
+      "target": "demos/OFFLINE_API.md"
+    },
+    {
+      "document": "README.md",
+      "target": "demos/PROVIDER_PROBE.md"
+    },
+    {
+      "document": "README.md",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "README.md",
+      "target": "research/SOL_MIGRATION.md"
+    },
+    {
+      "document": "PLAN.md",
+      "target": "benchmark/suite48/BENCHMARK_RESULTS.md"
+    },
+    {
+      "document": "PLAN.md",
+      "target": "benchmark/suite48/BATCH_RUNNER.md"
+    },
+    {
+      "document": "PLAN.md",
+      "target": "benchmark/suite48/NATIVE_PREFLIGHT.md"
+    },
+    {
+      "document": "PLAN.md",
+      "target": "benchmark/suite48/IMPLEMENTATION.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/artifacts/PILOT-FREEZE-20261109-01/SUMMARY.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/artifacts/PILOT-FREEZE-20261109-01/summary.json"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/artifacts/PILOT-FREEZE-20261109-01/baseline.json"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/BASELINE.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "demos/OFFLINE_API.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/MODEL_COMPARE.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "demos/MODEL_SMOKE_SOL_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/SOL_COST.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "research/SEARCH_ENVIRONMENT.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "research/ENVIRONMENT_R2_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "research/PACED_900_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/PILOT_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "research/SOL_MIGRATION.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "demos/PREPARATION.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "demos/OFFLINE_API.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/BASELINE.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "demos/OFFLINE_API.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/BASELINE.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/PROTOCOL_48_R1.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/suite48/BATCH_RUNNER.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/suite48/BENCHMARK_RESULTS.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/suite48/BATCH_RUNNER.md"
+    },
+    {
+      "document": "REPORT.md",
+      "target": "benchmark/suite48/NATIVE_PREFLIGHT.md"
+    }
+  ],
+  "previous_attempt": "SOURCE-REPORT-AXES-20261110-01 incomplete: audit relative-path error; snapshots retained",
+  "external_urls_fetched": false,
+  "new_provider_requests": 0,
+  "network_probes": 0,
+  "paused_gate_checked": true,
+  "next_registry_ids": [
+    "R-0087",
+    "C-0188"
+  ],
+  "manual_review": "Đã đọc các nhánh được dẫn; claim mới source-confirmed; không phải runtime acceptance",
+  "limitations": [
+    "Validator kiểm cấu trúc không chứng minh semantics hoặc URL availability",
+    "Chưa trace hết recovery consumer; chưa demo disconnect/restart/plugin port",
+    "Không kiểm process/service đang dùng; chỉ kiểm gates offline"
+  ],
+  "document_sha256": {
+    "README.md": "eec0fa304f0d16d1d4150c7d5e335620f09cb66bf771683a8109a517c83b7d24",
+    "PLAN.md": "abd0ba22a8870961684329b32020c4d7516dfc7ad6f6cecf81b3a74d6640a649",
+    "REPORT.md": "942d52b502b78ccd25e2f63965fe70f9aaa1db0c5e75bcb6b8c3e48922ae2972",
+    "research/evidence.csv": "4820cf4304b52f2fb693e95f42ac1031040a31f839ee217372e5752e4ca5a516",
+    "research/experiment-state.json": "3785a8c0327318967bf5a291e61f0ddd7dfdb5d8e1bce2de0daea816194d01dc",
+    "research/audit_source_axes.py": "5be2b720b2d6ca3cf0f763bd071e96551ec4b891de1c4c0deee44f3b554ab5e6"
+  }
+}
