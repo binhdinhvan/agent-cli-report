@@ -1,5 +1,9 @@
 # Kế hoạch hoàn thiện báo cáo
 
+## Biên tập bản nộp — 12/11/2026
+
+- Theo yêu cầu người dùng: bỏ khung thông tin trước tiêu đề PDF; báo cáo chính/README tập trung vào OpenAI48, chỉ liên kết lịch sử thay vì kể lại provider/ngân sách cũ. Giữ thông tin tác giả, bookmarks, hyperlinks, kết quả và toàn bộ raw/audit lịch sử; không chạy thực nghiệm mới. Export và review mới tại `research/artifacts/FINAL-SUBMISSION-20261112-01/`, không ghi đè receipts cũ.
+
 ## Biên tập sau review mentor — 11/11/2026
 
 - Bổ sung thông tin người thực hiện theo yêu cầu: Đinh Văn Bình, VSF – Data & AI, 06/11/2026–11/11/2026 ngay dưới tiêu đề; ghi chú code PDF có thể wrap, copy source từ GitHub. Thêm 13 bookmarks (9 chương, nhóm phụ lục và A/B/C), metadata tác giả; vẫn 19 trang, phụ lục/ảnh/raw/benchmark không đổi. pypdf chỉ extract riêng, không install global; receipts mới tại `research/artifacts/FINAL-SUBMISSION-20261111-02/`.

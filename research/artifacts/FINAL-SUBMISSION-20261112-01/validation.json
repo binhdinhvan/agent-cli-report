@@ -1,0 +1,126 @@
+{
+  "status": "pass_pending_visual_review",
+  "scope": "document rendering and merge, no new experiments",
+  "repository": "https://github.com/binhdinhvan/agent-cli-report",
+  "evidence_commit": "f2becc501cfc1b980b888402458bac81b8193370",
+  "report_pages": 16,
+  "appendix_pages": 3,
+  "total_pages": 19,
+  "bookmarks": [
+    {
+      "title": "1. Tóm tắt kết quả",
+      "page": 1
+    },
+    {
+      "title": "2. Phạm vi và phương pháp",
+      "page": 2
+    },
+    {
+      "title": "3. So sánh ba tool",
+      "page": 2
+    },
+    {
+      "title": "4. OpenCode v1 so với v2",
+      "page": 6
+    },
+    {
+      "title": "5. Thiết kế thực nghiệm",
+      "page": 13
+    },
+    {
+      "title": "6. Kết quả benchmark",
+      "page": 13
+    },
+    {
+      "title": "7. Hạn chế",
+      "page": 14
+    },
+    {
+      "title": "8. Kết luận và khuyến nghị",
+      "page": 15
+    },
+    {
+      "title": "9. Phụ lục và bằng chứng",
+      "page": 15
+    },
+    {
+      "title": "Phụ lục minh chứng",
+      "page": 17
+    },
+    {
+      "title": "A. Kiến trúc và shared service",
+      "page": 17
+    },
+    {
+      "title": "B. API/SDK, permission và plugin",
+      "page": 18
+    },
+    {
+      "title": "C. Benchmark OpenAI48",
+      "page": 19
+    }
+  ],
+  "author": "Đinh Văn Bình",
+  "organization": "VSF – Data & AI",
+  "study_period": "06/11/2026 – 11/11/2026",
+  "appendix_reused_unchanged": true,
+  "report_markdown_sha256": "cc669911d6ec8e4c322bb2044db6d3f315243239896f82f19b5133095c44f288",
+  "appendix_html_sha256": "12759d98f57d5760cabf4f8868504478fc7da3b5f1fb8d1956547b0a396bb32b",
+  "combined_pdf_sha256": "91804b453ae6bb3e74a46babd00b9c0e09fd6c4357441fe3a33f85d28bc030e7",
+  "appendix_pdf_sha256": "b0e9eaaa69744fde79aafb80a690e4cd61c81db8967e88071bafcd07a87003a8",
+  "converted_report_links": [
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/EXPERIMENT_HISTORY.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/PUBLISHING.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/SUBMISSION.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/benchmark/BASELINE.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/benchmark/PROTOCOL_OPENAI48_R3.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/benchmark/suite48/OPENAI_BENCHMARK_FINAL.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-014/result.json",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/benchmark/suite48/artifacts/OPENAI48-R3-20261110-01/benchmark/D48-036/result.json",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/benchmark/suite48/artifacts/OPENAI48-R3-SUMMARY-20261111-01/runs48.csv",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/NATIVE_COMPLETION_R2_RESULTS.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/NATIVE_COMPLETION_R2_RESULTS.md#1-recovery-v%C3%A0-resume-budget",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/NATIVE_COMPLETION_R2_RESULTS.md#2-permissionconfig-v1v2-v%C3%A0-background-v1",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/NATIVE_COMPLETION_R2_RESULTS.md#3-native-shared-desktopwebtui",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/NATIVE_COMPLETION_R2_RESULTS.md#4-clientsdk-error-timeout-interrupt",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/NATIVE_RUNTIME_RESULTS.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/OFFLINE_API.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/OFFLINE_DEMO_PLAN.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/PREPARATION.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/UI_RECAPTURE_RESULTS.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/artifacts/NATIVE-CLIENT-20261111-01/client-result.json",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/artifacts/NATIVE-CLIENT-V1PLUGIN-20261111-02/client-result.json",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/artifacts/NATIVE-DEMO-PERMISSION-20261111-02/summary.json",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/artifacts/NATIVE-PERMISSION-API-20261111-01/client-result.json",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/artifacts/NATIVE-PLUGIN-PORT-20261111-03/client-result.json",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/artifacts/NATIVE-PLUGIN-PORT-20261111-03/client-server.log",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/artifacts/NATIVE-SDK-20261111-01/sdk-result.json",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/artifacts/NATIVE-SHARED-UI-20261111-05/desktop.png",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/artifacts/NATIVE-SHARED-UI-20261111-05/tui-pty.ansi",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/artifacts/NATIVE-SHARED-UI-20261111-05/ui-result.json",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/artifacts/NATIVE-SHARED-UI-20261111-05/web.png",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/artifacts/NATIVE-V1-PERMISSION-API-20261111-01/v1-result.json",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/client_runtime.py",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/client_runtime_inside.ts",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/fixtures/plugin_v1.js",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/fixtures/plugin_v2.js",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/native_demo_round1.py",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/sdk_runtime.py",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/demos/sdk_runtime_inside.ts",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/research/BENCHMARK_FAIRNESS.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/research/REQUIREMENTS_ACCEPTANCE.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/research/analyze_final_cohort.py",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/research/artifacts/NATIVE-DEMOS-REVIEW-20261111-01/validation.json",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/research/artifacts/NATIVE-VISIBLE-UI-REVIEW-20261111-01/validation.json",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/research/artifacts/OPENAI48-DISPERSION-20261111-01/SUMMARY.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/research/artifacts/OPENAI48-R3-FINAL-20261111-01/validation.json",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/research/artifacts/OPENAI48-R3-LAUNCH-20261110-01/validation.json",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/research/evidence.csv",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/research/versions.md",
+    "https://github.com/binhdinhvan/agent-cli-report/blob/f2becc501cfc1b980b888402458bac81b8193370/research/versions.md#ki%E1%BB%83m-k%C3%AA-v%C3%A0-l%E1%BB%B1a-ch%E1%BB%8Dn-source-ng%C3%A0y-2026-11-06"
+  ],
+  "pdf_url_annotation_rows": 201,
+  "file_url_links": 0,
+  "temporary_render_directory": "/tmp/opencode/final-report-bi8mqzz6",
+  "limitations": "existing REPORT.md re-rendered, not editing an unavailable earlier 16-page PDF; total pages depend on layout"
+}

@@ -10,7 +10,7 @@
 
 **Ngày chốt phiên bản: 06/11/2026.** Stable release được đối chiếu upstream tại mốc này và giữ nguyên suốt nghiên cứu; không có nghĩa vẫn mới nhất ngày nộp. [Metadata và full SHA](research/versions.md#kiểm-kê-và-lựa-chọn-source-ngày-2026-11-06).
 
-Lịch sử provider, sửa harness và protocol cũ ở [EXPERIMENT_HISTORY.md](EXPERIMENT_HISTORY.md); không nhập vào cohort cuối.
+Báo cáo chỉ phân tích cohort OpenAI48; các thử nghiệm chuẩn bị trước đó không được đưa vào kết quả và được lưu riêng trong [lịch sử thực nghiệm](EXPERIMENT_HISTORY.md).
 
 ## 1. Tóm tắt kết quả
 
@@ -24,17 +24,17 @@ Lịch sử provider, sửa harness và protocol cũ ở [EXPERIMENT_HISTORY.md]
 *Tổng chi phí được tính từ số liệu gốc trước khi làm tròn từng công cụ; tổng các giá trị hiển thị có thể lệch $0,01 so với tổng chung.*
 
 - **Cohort chính:** OpenAI trực tiếp, `gpt-6.1-sol`, 4 task × 4 CLI × 3 lượt. Benchmark mất **2 giờ 37 phút 49 giây**; 278/278 upstream HTTP 200/completed, không retry để nâng điểm. Median gồm failure, startup/teardown và pacing ≥ 30 giây, không phải model latency thuần.
-- **Chi phí:** guard estimate benchmark khoảng **$2,15**, gồm mức cache-write bảo thủ khi thiếu TTL; không phải hóa đơn. Không có request unpriced mới trong cohort, nhưng sáu request unpriced lịch sử vẫn unknown. Smoke bốn CLI r3 tách riêng, khoảng $0,10. Số chính xác giữ trong artifact, không tăng độ chắc chắn của ước tính.
+- **Chi phí:** guard estimate cho 48 lượt benchmark khoảng **$2,15**, gồm mức cache-write bảo thủ khi thiếu TTL; không phải tổng hóa đơn dự án. Usage của 278 request benchmark đều được ghi nhận và định giá theo công thức đã chốt. Smoke bốn CLI được tách riêng, khoảng $0,10. Số chính xác và giới hạn ước tính giữ trong artifact.
 - **Ý nghĩa:** Codex có median thấp nhất và ít upstream nhất, Pi có estimate thấp nhất trong cohort. v2/Codex đạt 12/12, v1/Pi đạt 11/12; n = 3/task và native prompt/tool schema khác, không suy thứ hạng tổng quát hoặc quan hệ nhân quả từ bản CLI.
 - **Bằng chứng:** 147 evidence IDs theo commit cố định, tách source/runtime. Demo native permission, Client/SDK, plugin port, background/compaction plumbing, managed recovery/budget và shared UI có acceptance riêng; inference scripted local, không phải phép đo model quality. [Vòng 1](demos/NATIVE_RUNTIME_RESULTS.md), [vòng 2 và giới hạn](demos/NATIVE_COMPLETION_R2_RESULTS.md).
-- **Tái lập:** [protocol](benchmark/PROTOCOL_OPENAI48_R3.md), [toàn bộ 48 lượt và raw](benchmark/suite48/OPENAI_BENCHMARK_FINAL.md), [audit cuối](research/artifacts/OPENAI48-R3-FINAL-20261111-01/validation.json). Không trộn với pilot Shopaikey hoặc smoke Google/Gemini.
+- **Tái lập:** [protocol](benchmark/PROTOCOL_OPENAI48_R3.md), [toàn bộ 48 lượt và raw](benchmark/suite48/OPENAI_BENCHMARK_FINAL.md), [audit cuối](research/artifacts/OPENAI48-R3-FINAL-20261111-01/validation.json).
 
 ## 2. Phạm vi và phương pháp
 
 - Phiên bản/full SHA chốt ngày 06/11/2026: [research/versions.md](research/versions.md); không cập nhật pin giữa thực nghiệm hoặc thay service người dùng.
 - OpenCode v2 đại diện OpenCode trong so sánh ba tool; bốn cấu hình thực nghiệm gồm cả v1.
-- Provider/model của benchmark hoàn chỉnh: `https://api.openai.com/v1`, `gpt-6.1-sol`, Responses SSE; `effort=low`, `tier=default`, `store=false` và giữ native reasoning fields. Shopaikey alias cùng tên không chứng minh cùng backend; các cohort cũ tách riêng.
-- Giá OpenAI published standard short context dùng cho estimate/guard, không invoice-confirmed; cache-write thiếu TTL dùng conservative 12h upper bound, không cộng chồng ordinary input. Giá Shopaikey user-reported chỉ áp cohort cũ. Tách **source-confirmed / runtime-confirmed / both / unverified** và diagnostic/pilot/smoke/benchmark.
+- Provider/model của cohort benchmark: OpenAI trực tiếp tại `https://api.openai.com/v1`, `gpt-6.1-sol`, Responses SSE; `effort=low`, `tier=default`, `store=false` và giữ native reasoning fields.
+- Giá OpenAI published standard short context dùng cho estimate/guard, không invoice-confirmed; cache-write thiếu TTL dùng conservative 12h upper bound, không cộng chồng ordinary input. Tách **source-confirmed / runtime-confirmed / both / unverified** và unit test/demo/smoke/benchmark.
 - Không sửa source repos/binary/service đang dùng, không nạp session thật hoặc hiển thị key. Benchmark được duyệt dùng credential có quyền file `600` trong host memory; CLI chỉ nhận local proxy token. Config/session/workspace mới mỗi lượt, broker là đường provider duy nhất.
 
 Nguồn metadata và API offline: [preparation](demos/PREPARATION.md), [HTTP offline](demos/OFFLINE_API.md). Source claims ở [evidence.csv](research/evidence.csv) không tự chứng minh runtime với model/provider bất kỳ.
@@ -438,15 +438,15 @@ R-0343/v1/B-04 và R-0365/Pi/B-04 có snapshot đúng nhưng ghi native error/lo
 
 Guard estimate cho 48 lượt khoảng **$2,15**; khoảng tariff của phần usage đã báo là **$1,39–$2,15**. 254/278 request thiếu TTL breakdown được dùng conservative 12h upper estimate, không xác nhận actual TTL/invoice. Reasoning đã nằm trong output; cache writes tách ordinary input để tránh double count. Số chính xác, token/cache từng CLI, 48 rows và raw ở [kết quả đầy đủ](benchmark/suite48/OPENAI_BENCHMARK_FINAL.md).
 
-Smoke r3 riêng khoảng $0,10; tổng đợt r3 khoảng $2,24. Cộng guard carry/reserve cũ khoảng **$2,58**, còn khoảng $13,42 so với guard $16. Không gọi đây là tổng charge dự án: sáu request unknown lịch sử vẫn giữ, `measured_charge=null`, pilot Shopaikey có ledger riêng. Không dùng giá OpenAI để tính lại Shopaikey hoặc coi HTTP 400 thiếu usage là miễn phí.
+Smoke trước cohort có 11 request, estimate riêng khoảng $0,10; cộng với 48 lượt benchmark thành khoảng $2,24 cho đợt kiểm tra này. Các số này là ước tính theo usage và giả định tariff đã nêu, không phải charge hoặc tổng hóa đơn dự án đã đối soát (`measured_charge=null`).
 
-[Audit cuối](research/artifacts/OPENAI48-R3-FINAL-20261111-01/validation.json) kiểm slot coverage, hashes, source snapshots, caps/usage/pacing, cleanup 52 lượt và prior raw/frozen pilot; registry R378/C479, generation gate đóng, không extra API/key read. Shopaikey benchmark giữ 8 attempts/7 unique slot/41 not_run trong [ledger riêng](benchmark/suite48/BENCHMARK_RESULTS.md), không gộp vào OpenAI48.
+[Audit cuối](research/artifacts/OPENAI48-R3-FINAL-20261111-01/validation.json) kiểm slot coverage, hashes, source snapshots, caps/usage/pacing và cleanup bốn smoke cùng 48 lượt benchmark. Không chạy thêm inference hoặc retry hai failure để thay đổi kết quả báo cáo.
 
 ## 7. Hạn chế
 
 - **Ngoại suy:** bốn fixture synthetic Python nhỏ, ba lượt/task và 12 lượt/CLI; chưa đánh giá đầy đủ repository lớn, đa ngôn ngữ, long-context hoặc chất lượng production. Không khẳng định significance/winner tổng quát từ mẫu này.
 - **Confounding:** cùng model/provider nhưng native prompt/tool schema/bootstrap/số bước khác. Pacing ≥ 30 giây, cap 8 request và cache ảnh hưởng timing/cost/completion; cache state/backend revision/background load chưa được kiểm soát hoàn toàn. Không suy “bản mới nhanh hơn” theo quan hệ nhân quả chỉ từ median.
-- **Chi phí:** conservative TTL upper bounds chỉ là tariff estimate cho usage đã báo, không gồm phí không báo. Unknown usage lịch sử không bằng zero; hóa đơn/account balance chưa đối soát. Cùng alias trên gateway không chứng minh cùng backend OpenAI.
+- **Chi phí:** conservative TTL upper bounds chỉ là tariff estimate cho usage đã báo, không gồm phí không báo; TTL thực tế và hóa đơn/account balance chưa được đối soát. Tổng usage hoặc estimate không thay thế charge đã xác nhận.
 - **Bảo mật/lifecycle:** bwrap của harness không chứng minh native sandbox. [Demo native](demos/NATIVE_COMPLETION_R2_RESULTS.md) dùng scripted local inference, không model quality/semantic memory. Stdio cũ không notice không bị nâng thành pass; managed-service đạt sau sửa boot-readiness của harness. Linux headless/Chromium web engine/PTY không đại diện mọi display/OS; v1 approval qua API không phải keyboard UI. Không suy exactly-once hoặc exact SDK build → source attestation; installed-tree hash không phải lockfile.
 - **Lịch sử/classification:** giữ bootstrap/cache/adapter errors, không tính như model task failures; hai end-to-end failures vẫn giữ, không nâng snapshot pass thành success. Bằng chứng đã xóa theo yêu cầu trước đây không được phục hồi hoặc dùng lại.
 

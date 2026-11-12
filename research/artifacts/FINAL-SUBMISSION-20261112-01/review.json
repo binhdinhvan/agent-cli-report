@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "scope": "Biên tập tài liệu và xuất PDF; không chạy thực nghiệm mới",
+  "pages": 19,
+  "report_pages": 16,
+  "appendix_pages": 3,
+  "pdf_sha256": "91804b453ae6bb3e74a46babd00b9c0e09fd6c4357441fe3a33f85d28bc030e7",
+  "evidence_commit": "f2becc501cfc1b980b888402458bac81b8193370",
+  "banner_removed": true,
+  "first_content": "Tiêu đề báo cáo; tiếp theo là tác giả, đơn vị và thời gian nghiên cứu",
+  "author_metadata_verified": "Đinh Văn Bình",
+  "outline_count": 13,
+  "outline_destinations": "Tất cả đích resolve, khớp receipt; tọa độ chương lấy từ headings sau layout",
+  "historical_provider_names_absent_from_report_readme_pdf": true,
+  "historical_raw_and_audit": "Không thay đổi; chỉ giữ liên kết lịch sử trong báo cáo/README",
+  "cost_scope": "Khoảng $2,15 riêng benchmark; khoảng $0,10 smoke; không phải tổng hóa đơn dự án",
+  "appendix_html_and_pdf_hashes_unchanged": true,
+  "original_input_hashes_verified": 60,
+  "file_url_links": 0,
+  "words_outside_page": 0,
+  "visual_review": "Đã xem ảnh render trang 1 và 14: tiêu đề không còn banner, tác giả rõ, bảng và phần chi phí không bị cắt; các trang khác kiểm bounding boxes tự động",
+  "limitations": "Kiểm xuất bản tài liệu, không phải audit runtime mới; không gọi API hoặc chạy lại benchmark"
+}

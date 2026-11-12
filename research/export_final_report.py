@@ -29,7 +29,7 @@ except ModuleNotFoundError:
     from pypdf import PdfReader, PdfWriter
     from pypdf.generic import Fit
 
-ARTIFACT = ROOT / "research/artifacts/FINAL-SUBMISSION-20261111-02"
+ARTIFACT = ROOT / "research/artifacts/FINAL-SUBMISSION-20261112-01"
 PUBLIC_LINKS = set()
 
 
@@ -104,11 +104,8 @@ thead { display: table-header-group; }
 tr { break-inside: avoid; }
 td code { overflow-wrap: anywhere; }
 img { max-width: 100%; }
-.export-note { background: #edf6f8; border-left: 3px solid #147d92; padding: 2.5mm 3mm; margin-bottom: 5mm; font-size: 8pt; }
 * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-</style><body><div class="export-note">Bản nộp gồm báo cáo chính và 3 trang phụ lục minh chứng ở cuối.
-Nguồn/artifact nội bộ được chuyển thành hyperlink GitHub theo commit cố định <code>""" + EVIDENCE_COMMIT[:12] + """</code>.
-Không cần đường dẫn trên máy xuất PDF để mở bằng chứng.</div>""" + body + "</body></html>"
+</style><body>""" + body + "</body></html>"
 
 
 def render(source, output, temporary):
