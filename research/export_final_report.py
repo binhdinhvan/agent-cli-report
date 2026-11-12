@@ -198,7 +198,8 @@ def main():
                  "Một session, nhiều giao diện", "Ba góc nhìn, cùng một cohort", "638.403"]:
         assert text in pdf_text, text
     (ROOT / "APPENDIX.pdf").write_bytes(appendix.read_bytes())
-    final = ROOT / combined.name
+    final = ROOT / "report/Bao_cao_so_sanh_OpenCode_Pi_Codex_CLI.pdf"
+    final.parent.mkdir(parents=True, exist_ok=True)
     final.write_bytes(combined.read_bytes())
     ARTIFACT.mkdir(parents=True, exist_ok=True)
     receipt = {

@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "scope": "Rà và loại file không còn cần cho bản nộp; không chạy script migration/demo/benchmark",
+  "removed": [
+    {
+      "path": "research/.batch48-launch.lock",
+      "reason": "File runtime rỗng; fuser exit 1 không báo tiến trình sử dụng. Runner mở bằng chế độ a nên tự tạo lại; đã thêm ignore cho các lần sau."
+    },
+    {
+      "path": "research/transition_to_sol.py",
+      "reason": "Migration một lần đã hoàn tất; registry đã tồn tại và script tự chặn chạy lại. Trước khi dọn, không thấy tham chiếu filename trong các file text tracked đã quét, kể cả artifacts. Không xóa manifest hoặc kết quả migration."
+    }
+  ],
+  "retained": "Tài liệu lịch sử, receipts/raw, registry/pricing, script audit và script phân tích/tái tạo đang phục vụ kiểm chứng",
+  "navigation_added": "research/README.md",
+  "active_local_links_verified": 192,
+  "broken_active_local_links": 0,
+  "evidence_input_hashes_unchanged": 60,
+  "pdf_sha256_unchanged": "91804b453ae6bb3e74a46babd00b9c0e09fd6c4357441fe3a33f85d28bc030e7",
+  "existing_demos_benchmark_and_audit_files_changed": 0,
+  "research_python_syntax": "pass via ast.parse, không import/execute",
+  "git_diff_check": "pass",
+  "commit_push_performed": false,
+  "limitations": "Đánh giá file cần thiết cho bản nộp dựa trên nội dung và tham chiếu filename, không chứng minh toàn bộ runtime dependency graph. Không xóa log/artifact chỉ vì không thấy caller trực tiếp."
+}

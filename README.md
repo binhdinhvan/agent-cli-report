@@ -4,7 +4,7 @@ Workspace nghiên cứu source, demo native và benchmark; kết quả tổng h�
 
 ## Bản nộp hoàn chỉnh
 
-**[OpenCode_Comparison_Report.pdf](OpenCode_Comparison_Report.pdf)** — **19 trang**, gồm 16 trang báo cáo chính và 3 trang phụ lục. Đây là file duy nhất cần gửi mentor để đọc báo cáo; repository đi kèm để kiểm chứng raw/code. Hyperlinks bằng chứng được pin tại commit `f2becc501cfc1b980b888402458bac81b8193370`, không trỏ về filesystem máy xuất PDF.
+**[Bao_cao_so_sanh_OpenCode_Pi_Codex_CLI.pdf](report/Bao_cao_so_sanh_OpenCode_Pi_Codex_CLI.pdf)** — **19 trang**, gồm 16 trang báo cáo chính và 3 trang phụ lục. Đây là file duy nhất cần gửi mentor để đọc báo cáo; repository đi kèm để kiểm chứng raw/code. Hyperlinks bằng chứng được pin tại commit `f2becc501cfc1b980b888402458bac81b8193370`, không trỏ về filesystem máy xuất PDF.
 
 **Người thực hiện:** Đinh Văn Bình — **VSF – Data & AI**. **Thời gian nghiên cứu:** 06/11/2026 – 11/11/2026. Thông tin nằm ngay dưới tiêu đề, không thêm trang bìa; PDF có bookmarks cho chín chương và ba phụ lục.
 
@@ -33,9 +33,10 @@ Các phát biểu trong đề là nội dung cần kiểm chứng, không mặc 
 
 ## Điều hướng workspace
 
+- [report/](report/README.md): PDF cuối cùng để nộp, không chứa các bản tải trùng hoặc PDF cũ.
 - [PLAN.md](PLAN.md): kế hoạch, các mốc và checklist nghiệm thu.
 - [REPORT.md](REPORT.md): báo cáo chính và giới hạn nghiên cứu.
-- `research/`: phiên bản, source/evidence và [phương án cách ly](research/isolation.md).
+- [research/](research/README.md): phiên bản, source/evidence, script kiểm chứng và [phương án cách ly](research/isolation.md).
 - `demos/`: demo API, permission, background, plugin và UI; [HTTP offline](demos/OFFLINE_API.md), [runtime native](demos/NATIVE_RUNTIME_RESULTS.md).
 - `benchmark/`: protocol, fixture, kết quả và raw.
 - [AGENTS.md](AGENTS.md): hướng dẫn làm việc trong workspace.

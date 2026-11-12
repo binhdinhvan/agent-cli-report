@@ -1,6 +1,6 @@
 # Hướng dẫn bàn giao và kiểm chứng
 
-**File nộp chính:** [OpenCode_Comparison_Report.pdf](OpenCode_Comparison_Report.pdf), 19 trang (16 trang báo cáo + 3 trang phụ lục). PDF có hyperlink nguồn/artifact GitHub theo commit bằng chứng `f2becc501cfc1b980b888402458bac81b8193370`; không chứa link `file://`. Có thể gửi file này kèm URL repository, không cần gửi report và phụ lục thành hai PDF riêng.
+**File nộp chính:** [Bao_cao_so_sanh_OpenCode_Pi_Codex_CLI.pdf](report/Bao_cao_so_sanh_OpenCode_Pi_Codex_CLI.pdf), 19 trang (16 trang báo cáo + 3 trang phụ lục). PDF có hyperlink nguồn/artifact GitHub theo commit bằng chứng `f2becc501cfc1b980b888402458bac81b8193370`; không chứa link `file://`. Có thể gửi file này kèm URL repository, không cần gửi report và phụ lục thành hai PDF riêng.
 
 ## 1. Đọc theo chuỗi bằng chứng
 
@@ -21,6 +21,7 @@ Không gửi riêng `REPORT.md` nếu muốn kiểm chứng runtime. Giữ các 
 
 ```text
 REPORT.md / README.md / SUBMISSION.md / EXPERIMENT_HISTORY.md
+report/     # một PDF cuối cùng để nộp và hướng dẫn ngắn
 research/   # versions, evidence, acceptance, analysis scripts, audit receipts
 demos/      # launcher, TypeScript runners, fixtures, result docs, raw, screenshots/PTY
 benchmark/  # protocol, fixture/grader, runner source, CSV, all attempts/raw/audit references
@@ -37,7 +38,7 @@ benchmark/  # protocol, fixture/grader, runner source, CSV, all attempts/raw/aud
 - Đọc `runs48.csv`, theo cột `artifact` tới `result.json` từng slot; đối chiếu status, request usage, execution và grading. Hai failures được giữ ở D48-014 và D48-036 dù snapshot pass.
 - Đọc audit gốc, đối chiếu raw hashes thay vì coi chữ “pass” trong report là đủ.
 - Xem plugin before/after ở `demos/fixtures/plugin_v1.js` / `plugin_v2.js`, rồi đối chiếu raw loader failure và port marker/cleanup.
-- Xem UI05 ID/PID, ảnh Desktop/Web và PTY. Đây là Linux headless sandbox, không nghiệm thu mọi UI/OS.
+- Xem ảnh Desktop/Chrome/TUI của VISIBLE-UI07 và ID/PID trong raw cùng lượt tại [kết quả chụp UI](demos/UI_RECAPTURE_RESULTS.md). Các lượt UI cũ được giữ trong lịch sử; đây là môi trường Linux cách ly, không nghiệm thu mọi UI/OS.
 - Tái tính token/request và timing từ raw, không key/network:
 
 ```sh

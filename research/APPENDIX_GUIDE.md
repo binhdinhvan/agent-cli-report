@@ -2,7 +2,7 @@
 
 ## File để gửi
 
-- **[OpenCode_Comparison_Report.pdf](../OpenCode_Comparison_Report.pdf): bản nộp hoàn chỉnh 19 trang**, đã ghép báo cáo chính và phụ lục. Chỉ cần gửi PDF này kèm repository.
+- **[Bao_cao_so_sanh_OpenCode_Pi_Codex_CLI.pdf](../report/Bao_cao_so_sanh_OpenCode_Pi_Codex_CLI.pdf): bản nộp hoàn chỉnh 19 trang**, đã ghép báo cáo chính và phụ lục. Chỉ cần gửi PDF này kèm repository.
 - [APPENDIX.pdf](../APPENDIX.pdf): **3 trang A4**, có thể gửi riêng hoặc ghép sau PDF báo cáo chính.
 - [APPENDIX.html](../APPENDIX.html): bản tự chứa ảnh PNG và biểu đồ SVG, mở bằng browser để xem/in; không cần thư mục ảnh đi kèm để hiển thị.
 
